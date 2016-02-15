@@ -1,17 +1,21 @@
 // More info on Webpack's Node API here: https://webpack.github.io/docs/node.js-api.html
 // Allowing console calls below since this is a build file.
-/*eslint-disable no-console */
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
+
 import webpack from 'webpack';
 import webpackConfigBuilder from '../webpack.config';
 import colors from 'colors';
 import { argv as args } from 'yargs';
 
-process.env.NODE_ENV = 'production'; // this assures React is built in prod mode and that the Babel dev config doesn't apply.
+// this assures React is built in prod mode and that the Babel dev config doesn't apply.
+process.env.NODE_ENV = 'production';
 
 const webpackConfig = webpackConfigBuilder(process.env.NODE_ENV);
 
 webpack(webpackConfig).run((err, stats) => {
-  const inSilentMode = args.s; // set to true when -s is passed on the command
+  // set to true when -s is passed on the command
+  const inSilentMode = args.s;
 
   if (!inSilentMode) {
     console.log('Generating minified bundle for production use via Webpack...'.bold.blue);
@@ -39,7 +43,7 @@ webpack(webpackConfig).run((err, stats) => {
   }
 
   // if we got this far, the build succeeded.
-  console.log('Your app has been compiled in production mode and written to /dist. It\'s ready to roll!'.green.bold);
+  console.log('App has been compiled and written to /dist. It\'s ready to roll!'.green.bold);
 
   return 0;
 });
