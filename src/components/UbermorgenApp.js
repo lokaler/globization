@@ -1,18 +1,21 @@
 import React, { PropTypes } from 'react';
 
-const UbermorgenApp = function UbermorgenApp(props) {
-  const settings = props.appState;
+class UbermorgenApp extends React.Component {
 
-  return (
-    <div>
-      <h1 {...settings}>UbermorgenApp</h1>
-    </div>
-  );
-};
+  static propTypes = {
+    actions: PropTypes.object.isRequired,
+    appState: PropTypes.object.isRequired
+  };
 
-UbermorgenApp.propTypes = {
-  actions: PropTypes.object.isRequired,
-  appState: PropTypes.object.isRequired
-};
+  render() {
+    const appState = this.props.appState;
+
+    return (
+      <div>
+        <h1 {...appState}>UbermorgenApp</h1>
+      </div>
+    );
+  }
+}
 
 export default UbermorgenApp;
