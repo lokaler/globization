@@ -52,7 +52,11 @@ function getLoaders(env) {
   const prod = env === productionEnvironment;
 
   return clean([
-    { test: /\.js$/, include: root('src'), loaders: ['babel', 'eslint'] },
+    {
+      test: /\.js$/,
+      include: root('src'),
+      loaders: ['react-hot', 'babel', 'eslint']
+    },
 
     dev && {
       test: /(\.css|\.scss)$/,
