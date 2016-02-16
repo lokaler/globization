@@ -6,7 +6,7 @@ import browserSync from 'browser-sync';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import webpackConfigBuilder from '../webpack.config';
+import webpackConfigBuilder from '../webpack/config';
 
 const webpackConfig = webpackConfigBuilder('development');
 const bundler = webpack(webpackConfig);

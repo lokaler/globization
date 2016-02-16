@@ -4,7 +4,7 @@
 /* eslint-disable no-unused-vars */
 
 import webpack from 'webpack';
-import webpackConfigBuilder from '../webpack.config';
+import webpackConfigBuilder from '../webpack/config';
 import colors from 'colors';
 import { argv as args } from 'yargs';
 

@@ -1,6 +1,3 @@
-// For info about this file refer to webpack and webpack-hot-middleware documentation
-// Rather than having hard coded webpack.config.js for each environment, this
-// file generates a webpack config for the environment passed to the getConfig method.
 import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
@@ -9,11 +6,11 @@ const developmentEnvironment = 'development';
 const productionEnvironment = 'production';
 const testEnvironment = 'test';
 
-function here(p) {
-  return path.resolve(__dirname, p);
+function root(p) {
+  return path.resolve(__dirname, '..', p);
 }
 
-const getPlugins = function (env) {
+function getPlugins(env) {
   const GLOBALS = {
     'process.env.NODE_ENV': JSON.stringify(env),
     __DEV__: env === developmentEnvironment
@@ -21,7 +18,6 @@ const getPlugins = function (env) {
 
   const plugins = [
     new webpack.optimize.OccurenceOrderPlugin(),
-    // Tells React to build in prod mode. https://facebook.github.io/react/downloads.html
     new webpack.DefinePlugin(GLOBALS)
   ];
 
@@ -41,9 +37,9 @@ const getPlugins = function (env) {
   }
 
   return plugins;
-};
+}
 
-const getEntry = function (env) {
+function getEntry(env) {
   const entry = [];
 
   if (env === developmentEnvironment) {
@@ -54,11 +50,11 @@ const getEntry = function (env) {
   entry.push('./src/index');
 
   return entry;
-};
+}
 
-const getLoaders = function (env) {
+function getLoaders(env) {
   const loaders = [
-    { test: /\.js$/, include: here('src'), loaders: ['babel', 'eslint'] }
+    { test: /\.js$/, include: root('src'), loaders: ['babel', 'eslint'] }
   ];
 
   if (env === productionEnvironment) {
@@ -74,14 +70,14 @@ const getLoaders = function (env) {
   }
 
   return loaders;
-};
+}
 
 function getConfig(env) {
   return {
     debug: true,
     // more info:https://webpack.github.io/docs/build-performance.html#sourcemaps and
     // https://webpack.github.io/docs/configuration.html#devtool
-    devtool: env === productionEnvironment ? 'source-map' : 'cheap-module-eval-source-map',
+    devtool: env === productionEnvironment ? 'source-map' : 'cheap-module-source-map',
     // set to false to see a list of every file being bundled.
     noInfo: true,
     entry: getEntry(env),
@@ -89,7 +85,7 @@ function getConfig(env) {
     target: env === testEnvironment ? 'node' : 'web',
     output: {
       // Note: Physical files are only output by the production build task `npm run build`.
-      path: here('dist'),
+      path: root('dist'),
       publicPath: '',
       filename: 'bundle.js'
     },
