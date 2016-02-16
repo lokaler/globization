@@ -10,66 +10,61 @@ function root(p) {
   return path.resolve(__dirname, '..', p);
 }
 
+function clean(arr) {
+  return arr.filter(v => !!v);
+}
+
 function getPlugins(env) {
+  const dev = env === developmentEnvironment;
+  const prod = env === productionEnvironment;
+
   const GLOBALS = {
     'process.env.NODE_ENV': JSON.stringify(env),
-    __DEV__: env === developmentEnvironment
+    __DEV__: dev
   };
 
-  const plugins = [
+  return clean([
+
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.DefinePlugin(GLOBALS)
-  ];
+    new webpack.DefinePlugin(GLOBALS),
 
-  switch (env) {
-    case productionEnvironment:
-      plugins.push(new ExtractTextPlugin('styles.css'));
-      plugins.push(new webpack.optimize.DedupePlugin());
-      plugins.push(new webpack.optimize.UglifyJsPlugin());
-      break;
+    dev && new webpack.HotModuleReplacementPlugin(),
+    dev && new webpack.NoErrorsPlugin(),
 
-    case developmentEnvironment:
-      plugins.push(new webpack.HotModuleReplacementPlugin());
-      plugins.push(new webpack.NoErrorsPlugin());
-      break;
+    prod && new ExtractTextPlugin('styles.css'),
+    prod && new webpack.optimize.DedupePlugin(),
+    prod && new webpack.optimize.UglifyJsPlugin()
 
-    default:
-  }
-
-  return plugins;
+  ]);
 }
 
 function getEntry(env) {
-  const entry = [];
+  const dev = env === developmentEnvironment;
 
-  if (env === developmentEnvironment) {
-    // only want hot reloading when in dev.
-    entry.push('webpack-hot-middleware/client');
-  }
-
-  entry.push('./src/index');
-
-  return entry;
+  return clean([
+    dev && 'webpack-hot-middleware/client',
+    './src/index'
+  ]);
 }
 
 function getLoaders(env) {
-  const loaders = [
-    { test: /\.js$/, include: root('src'), loaders: ['babel', 'eslint'] }
-  ];
+  const dev = env === developmentEnvironment;
+  const prod = env === productionEnvironment;
 
-  if (env === productionEnvironment) {
-    // generate separate physical stylesheet for production build using ExtractTextPlugin.
-    // This provides separate caching and avoids a flash of unstyled content on load.
-    loaders.push(
-      { test: /(\.css|\.scss)$/, loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap') }
-    );
-  } else {
-    loaders.push(
-      { test: /(\.css|\.scss)$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap'] }
-    );
-  }
+  return clean([
+    { test: /\.js$/, include: root('src'), loaders: ['babel', 'eslint'] },
 
-  return loaders;
+    dev && {
+      test: /(\.css|\.scss)$/,
+      loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+    },
+
+    prod && {
+      test: /(\.css|\.scss)$/,
+      loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap')
+    }
+
+  ]);
 }
 
 function getConfig(env) {
