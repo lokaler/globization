@@ -19,6 +19,7 @@ const $ = cheerio.load(markup);
 // since a separate spreadsheet is only utilized for the production build,
 // need to dynamically add this here.
 $('head').prepend('<link rel="stylesheet" href="styles.css">');
+$('title').text($('title').text().replace('DEV', 'PROD'));
 
 fs.writeFileSync('dist/index.html', $.html(), 'utf8');
 
