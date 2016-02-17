@@ -4,7 +4,7 @@
 import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import UbermorgenApp from './components/UbermorgenApp';
+import UbermorgenApp from './components/Ubermorgen/Ubermorgen';
 import * as appActions from './actions/actions';
 
 
