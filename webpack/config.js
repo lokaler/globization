@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import autoprefixer from 'autoprefixer';
 
 const developmentEnvironment = 'development';
 const productionEnvironment = 'production';
@@ -60,12 +61,29 @@ function getLoaders(env) {
 
     dev && {
       test: /(\.css|\.scss)$/,
-      loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+      loaders: [
+        'style',
+        'css' +
+          '?sourceMap' +
+          '&importLoaders=1' +
+          '&localIdentName=[local]-[hash:base64:8]',
+        'sass' +
+          '?sourceMap',
+        'postcss'
+      ]
     },
 
     prod && {
       test: /(\.css|\.scss)$/,
-      loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap')
+      loader: ExtractTextPlugin.extract(
+        'css' +
+          '?sourceMap' +
+          '&importLoaders=1' +
+          '&localIdentName=[local]-[hash:base64:8]' +
+        '!sass' +
+          '?sourceMap' +
+        '!postcss'
+      )
     }
 
   ]);
@@ -91,7 +109,10 @@ function getConfig(env) {
     plugins: getPlugins(env),
     module: {
       loaders: getLoaders(env)
-    }
+    },
+    postcss: [
+      autoprefixer({ browsers: ['last 2 versions'] })
+    ]
   };
 }
 
