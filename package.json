@@ -55,6 +55,7 @@
     "file-loader": "0.8.5",
     "mocha": "2.3.4",
     "node-sass": "3.4.2",
+    "normalize.css": "3.0.3",
     "parallelshell": "2.0.0",
     "postcss-loader": "0.8.1",
     "react-css-modules": "3.7.4",
