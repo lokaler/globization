@@ -28,6 +28,9 @@ function getPlugins(env) {
 
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin(GLOBALS),
+    new webpack.ProvidePlugin({
+      fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+    }),
 
     dev && new webpack.HotModuleReplacementPlugin(),
     dev && new webpack.NoErrorsPlugin(),
