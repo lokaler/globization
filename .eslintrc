@@ -16,6 +16,8 @@
     "modules": true
   },
   "rules": {
-    "comma-dangle": 0
+    "comma-dangle": 0,
+    "no-shadow": [1, {"allow": ["args"]}],
+    "spaced-comment": 1
   }
 }
