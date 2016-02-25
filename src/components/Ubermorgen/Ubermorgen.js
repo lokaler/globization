@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './styles.scss';
+import Globe from '../Globe/Globe';
+import Questionnaire from '../Questionnaire/Questionnaire';
 
 @cssModules(styles)
 export default class UbermorgenApp extends React.Component {
@@ -11,12 +13,17 @@ export default class UbermorgenApp extends React.Component {
   };
 
   render() {
-    const appState = this.props.appState;
-
     return (
       <div>
-        <h1 styleName="h1" test="foo" {...appState}>UbermorgenApp</h1>
-        <h2 styleName="h2" {...appState}>lorem ipsum...</h2>
+        <h3 {...this.props}>UbermorgenApp</h3>
+        <div styleName="container">
+          <div styleName="left">
+            <Globe {...this.props}/>
+          </div>
+          <div styleName="right">
+            <Questionnaire {...this.props}/>
+          </div>
+        </div>
       </div>
     );
   }

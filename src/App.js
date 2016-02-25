@@ -9,19 +9,18 @@ import * as appActions from './actions/actions';
 
 
 class App extends React.Component {
-  render() {
-    const { appState, actions } = this.props;
 
+  static propTypes = {
+    actions: PropTypes.object.isRequired,
+    appState: PropTypes.object.isRequired
+  }
+
+  render() {
     return (
-        <UbermorgenApp appState={appState} actions={actions} />
+        <UbermorgenApp {...this.props} />
     );
   }
 }
-
-App.propTypes = {
-  actions: PropTypes.object.isRequired,
-  appState: PropTypes.object.isRequired
-};
 
 function mapStateToProps(state) {
   return {

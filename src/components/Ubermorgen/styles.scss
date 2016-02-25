@@ -1,7 +1,14 @@
-:local(.h1) {
-  background-color: red;
-}
+:local(.container) {
+  display: flex;
+  flex-direction: row;
 
-:local(.h2) {
-  background-color: green;
+  :local(.left) {
+    flex-grow: 1;
+    border: 1px solid green;
+  }
+
+  :local(.right) {
+    width: 200px;
+    border: 1px solid blue;
+  }
 }
