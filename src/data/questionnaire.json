@@ -1,0 +1,72 @@
+[
+  {
+    "functions": [
+      "getCountry"
+    ]
+  },
+  {
+    "text": [
+      "# Wofür geben Sie Ihr Geld aus?",
+      "",
+      "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
+      "welche Produkte uns wie viel wert sind.",
+      "",
+      "*Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
+      "beispielsweise für Lebensmittel aus?*"
+    ]
+  },
+  {
+    "input": {
+      "key": "slider",
+      "type": "slider",
+      "options": {
+        "min": 23,
+        "start": 30,
+        "max": 42
+      }
+    }
+  },
+  {
+    "input": {
+      "key": "fooo",
+      "type": "choices",
+      "options": [
+        ["never", "Nie"],
+        ["sometimes", "Manchmal"],
+        ["always", "Immer"]
+      ]
+    }
+  },
+  {
+    "answer": {
+      "answerKey": [
+        "(inputs.slider.value < 10) && 'foo'",
+        "(inputs.slider.value >= 10) && 'bar'"
+      ],
+      "answerContext": {
+        "landAusgaben": "getCountry(inputs)",
+        "wertFleisch": "inputs.slider.value * 1.25"
+      },
+      "templates": {
+        "default": [
+          "Lorem Ipsum"
+        ],
+        "foo": [
+          "Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+          "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
+          "ähnlich viel für Essen aus wie Sie."
+        ],
+        "bar": [
+          "Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+          "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
+          "ähnlich viel für Essen aus wie Sie."
+        ],
+        "meat": [
+          "Für Ihren wöchentlichen",
+          "Konsum müssten somit {{ wertFleisch }}",
+          "Kilogramm Fleisch produziert werden."
+        ]
+      }
+    }
+  }
+]
