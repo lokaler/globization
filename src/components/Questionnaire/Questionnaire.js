@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { PropTypes } from 'react';
 
 import { create } from './ItemFactory';
@@ -16,7 +15,6 @@ export default class Questionnaire extends React.Component {
 
   render() {
     const data = this.props.appState.questionData.map(create);
-    console.log(data);
     return (
       <div className="questions">
         { data }
