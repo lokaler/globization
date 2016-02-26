@@ -3,7 +3,8 @@ import React, { PropTypes } from 'react';
 export default class Choices extends React.Component {
 
   static propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
+    id: PropTypes.string.isRequired
   }
 
   render() {
@@ -11,7 +12,7 @@ export default class Choices extends React.Component {
     const debug = `*** Choices: ${JSON.stringify(options)}`;
 
     return (
-      <div>
+      <div key={this.props.id}>
         {debug}
       </div>
     );

@@ -1,7 +1,12 @@
-import { LOADING_QUESTION_DATA, RECEIVE_QUESTION_DATA } from '../constants/ActionTypes';
+/* eslint-disable */
+
+import * as ActionTypes from '../constants/ActionTypes';
 import objectAssign from 'object-assign';
 
 const initialState = {
+  activeChapter: 0,
+  activeCard: 0,
+  userInput: {},
   questionData: [],
   mapData: []
 };
@@ -25,13 +30,21 @@ function structureData(el) {
   return cleanData;
 }
 
+function createNewUserInput(state, key, value) {
+  return objectAssign({}, state.userInput, { [key]: value });
+}
+
 export default function appState(state = initialState, action) {
   switch (action.type) {
-    case RECEIVE_QUESTION_DATA: {
+    case ActionTypes.RECEIVE_QUESTION_DATA: {
       const questionData = action.data.map(structureData);
       return objectAssign({}, state, { questionData });
     }
-    case LOADING_QUESTION_DATA:
+    case ActionTypes.UPDATE_SLIDER: {
+      const newUserInput = createNewUserInput(state, action.key, action.value);
+      return objectAssign({}, state, { userInput: newUserInput });
+    }
+    case ActionTypes.LOADING_QUESTION_DATA:
       return state;
     default:
       return state;

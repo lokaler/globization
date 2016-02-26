@@ -1,18 +1,30 @@
+import 'rc-slider/assets/index.css';
 import React, { PropTypes } from 'react';
+import Rcslider from 'rc-slider';
 
 export default class Slider extends React.Component {
 
   static propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
+    actions: PropTypes.object.isRequired,
+    appState: PropTypes.object.isRequired,
+    id: PropTypes.string.isRequired
+  }
+
+  sliderChange(value) {
+    this.props.actions.updateSlider(this.props.id, value);
   }
 
   render() {
     const options = { ...this.props.data.options };
-    const debug = `*** Slider: min=${options.min}, max=${options.max}, start=${options.start}`;
+    const userInput = { ...this.props.appState.userInput };
+    const sliderChangeBind = this.sliderChange.bind(this);
+
+    options.value = userInput[this.props.id] || options.value;
 
     return (
-      <div>
-        {debug}
+      <div key={this.props.id}>
+        <Rcslider {...options} onChange={sliderChangeBind}/>
       </div>
     );
   }

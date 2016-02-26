@@ -21,7 +21,7 @@
       "type": "slider",
       "options": {
         "min": 23,
-        "start": 30,
+        "value": 30,
         "max": 42
       }
     }

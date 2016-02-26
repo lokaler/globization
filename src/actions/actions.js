@@ -1,5 +1,6 @@
 import * as types from '../constants/ActionTypes';
 
+// question data actions
 export function receiveQuestionData(jsonData) {
   return { type: types.RECEIVE_QUESTION_DATA, data: jsonData };
 }
@@ -19,5 +20,14 @@ export function requestQuestionData(url) {
       .then(res => res.json())
       .then((jsonData) => dispatch(receiveQuestionData(jsonData)))
       .catch((err) => dispatch(errorQuestionData(err)));
+  };
+}
+
+// slider actions
+export function updateSlider(key, value) {
+  return {
+    type: types.UPDATE_SLIDER,
+    key,
+    value
   };
 }
