@@ -61,6 +61,11 @@ function getLoaders(env) {
       include: root('src'),
       loaders: ['react-hot', 'babel', 'eslint']
     },
+    
+    {
+      test: /\.json$/,
+      loader: 'json'
+    },
 
     dev && {
       test: /(\.css|\.scss)$/,
