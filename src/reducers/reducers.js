@@ -6,19 +6,19 @@ const initialState = {
   mapData: []
 };
 
-function restructureData(el) {
+function structureData(el) {
   const key = Object.keys(el)[0];
-  const cleanData = { type: key, data: { } };
+  const cleanData = { type: key, data: el[key] };
 
   switch (key) {
     case 'text': {
       cleanData.data = el.text.join('\n'); break;
     }
     case 'input': {
-      cleanData.type = el.input.type;
+      cleanData.type = el.input.type; break;
     }
     default: {
-      cleanData.data = el[key];
+      // nothing to do here
     }
   }
 
@@ -28,7 +28,7 @@ function restructureData(el) {
 export default function appState(state = initialState, action) {
   switch (action.type) {
     case RECEIVE_QUESTION_DATA: {
-      const questionData = action.data.map(restructureData);
+      const questionData = action.data.map(structureData);
       return objectAssign({}, state, { questionData });
     }
     case LOADING_QUESTION_DATA:
