@@ -1,0 +1,49 @@
+Country,value,iso
+Australia,41.57,AUS
+Austria,127,AUT
+Azerbaijan,0.3,AZE
+Belgium,37.54,BEL
+Brazil,3.4,BRA
+Canada,70.95,CAN
+Chile,0.11,CHL
+China,1.78,CHN
+Costa Rica,0.31,CRI
+Croatia,25,HRV
+Cyprus,1.9,CYP
+Czech Republic,6.63,CZE
+Denmark,163.49,DNK
+Estonia,16.89,EST
+Finland,39.44,FIN
+France,68.51,FRA
+Germany,92.2,DEU
+Greece,5.3,GRC
+Hungary,2.5,HUN
+India,0.1,IND
+Ireland,22.09,IRL
+Italy,33.84,ITA
+Japan,7.84,JPN
+Kenya,0.01,KEN
+Latvia,2,LVA
+Liechtenstein,129,LIE
+Lithuania,2,LTU
+Luxembourg,157,LUX
+Mexico,0.12,MEX
+Montenegro,0.16,MNE
+Netherlands,49.91,NLD
+New Zealand,18.6,NZL
+Norway,44.41,NOR
+Peru,0.49,PER
+Poland,3.1,POL
+Portugal,2,PRT
+Romania,3.73,ROU
+Russian Federation,0.8,RUS
+Slovakia,0.73,SVK
+Slovenia,26.6,SVN
+Spain,20.9,ESP
+Sweden,106.49,SWE
+Switzerland,209.64,CHE
+Thailand,0.73,THA
+Turkey,0.05,TUR
+Ukraine,0.26,UKR
+United Kingdom,32.95,GBR
+United States of America,76.65,USA
