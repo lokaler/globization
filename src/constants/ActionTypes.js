@@ -3,5 +3,9 @@ export const LOADING_QUESTION_DATA = 'LOADING_QUESTION_DATA';
 export const RECEIVE_QUESTION_DATA = 'RECEIVE_QUESTION_DATA';
 export const ERROR_QUESTION_DATA = 'ERROR_QUESTION_DATA';
 
+export const UPDATE_SLIDER = 'UPDATE_SLIDER';
+
 export const UPDATE_POS = 'UPDATE_POS';
 export const UPDATE_PATH = 'UPDATE_PATH';
+
+export const FOO = 'FOO';

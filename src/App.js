@@ -12,7 +12,8 @@ class App extends React.Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
-    vis: PropTypes.object.isRequired
+    vis: PropTypes.object.isRequired,
+    master: PropTypes.object.isRequired
   }
 
   render() {
@@ -25,7 +26,8 @@ class App extends React.Component {
 function mapStateToProps(state) {
   return {
     questions: state.questions,
-    vis: state.vis
+    vis: state.vis,
+    master: state.master
   };
 }
 

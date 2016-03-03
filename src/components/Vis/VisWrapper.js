@@ -12,12 +12,12 @@ export default class Globe extends React.Component {
   };
 
   componentDidMount() {
-    console.log(VisUtils.calculateBlsa());
+    console.log(VisUtils.calculateBla());
     //this.props.actions.updatePos([52, 23]);
   }
 
-  changeTypeGlobe(type) {
-    console.log(type)
+  changeType(type, evt) {
+    console.log(type, evt)
     //this.props.actions.changeType(type);
   }
 
@@ -29,13 +29,17 @@ export default class Globe extends React.Component {
       Globe = <GlobeComponent {...this.props}/>;
     }
 
+    const changeGlobe = this.changeType.bind(this, 'globe');
+    const changeMap = this.changeType.bind(this, 'map');
+    const changePlot = this.changeType.bind(this, 'plot');
+
     return (
       <div>
         { Globe }
         <div>
-          <button onClick={ this.changeTypeGlobe }>Globus</button>
-          <button onClick={ this.changeTypeGlobe }>Karte</button>
-          <button onClick={ this.changeTypeGlobe }>Diagramm</button>
+          <button onClick={ changeGlobe }>Globus</button>
+          <button onClick={ changeMap }>Karte</button>
+          <button onClick={ changePlot }>Diagramm</button>
         </div>
       </div>
     );

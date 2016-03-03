@@ -2,11 +2,14 @@
 
 import * as ActionTypes from '../constants/ActionTypes';
 import objectAssign from 'object-assign';
+import worldData from '../data/world-110m.json';
 
 const initialState = {
   mapData: [],
   latlng: [0, 0],
-  paths: []
+  paths: [],
+  worldData,
+  type: 'globe'
 };
 
 export default function vis(state = initialState, action) {

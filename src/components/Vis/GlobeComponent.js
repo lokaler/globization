@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { PropTypes } from 'react';
 
 export default class GlobeComponent extends React.Component {
@@ -8,16 +10,19 @@ export default class GlobeComponent extends React.Component {
   };
 
   componentDidMount() {
-    this.props.actions.updatePaths([1, 2, 3]);
+    this.props.actions.updatePaths([1, 2, 3, 4]);
   }
 
   render() {
     const paths = this.props.vis.paths.map((p, i) => <li key={i}>{p}</li>);
 
     return (
-      <ul>
-        {paths}
-      </ul>
+      <div>
+        { this.props.master.master.length }
+        <ul>
+          {paths}
+        </ul>
+      </div>
     );
   }
 }

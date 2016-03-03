@@ -67,6 +67,11 @@ function getLoaders(env) {
       loader: 'json'
     },
 
+    {
+      test: /\.csv$/,
+      loader: 'dsv'
+    },
+
     dev && {
       test: /(\.css|\.scss)$/,
       loaders: [

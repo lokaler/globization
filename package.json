@@ -50,6 +50,7 @@
     "colors": "1.1.2",
     "cross-env": "1.0.7",
     "css-loader": "0.23.1",
+    "dsv-loader": "1.0.3",
     "eslint": "1.10.3",
     "eslint-config-airbnb": "5.0.1",
     "eslint-loader": "1.2.0",
