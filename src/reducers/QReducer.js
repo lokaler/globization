@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import * as ActionTypes from '../constants/ActionTypes';
 import objectAssign from 'object-assign';
 
@@ -7,8 +5,7 @@ const initialState = {
   activeChapter: 0,
   activeCard: 0,
   userInput: {},
-  questionData: [],
-  mapData: []
+  questionData: []
 };
 
 function structureData(el) {
@@ -34,7 +31,7 @@ function createNewUserInput(state, key, value) {
   return objectAssign({}, state.userInput, { [key]: value });
 }
 
-export default function appState(state = initialState, action) {
+export default function questions(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.RECEIVE_QUESTION_DATA: {
       const questionData = action.data.map(structureData);

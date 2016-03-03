@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import appState from './reducers';
+import questions from './QReducer';
+import vis from './VReducer';
 
 const rootReducer = combineReducers({
-  appState
+  questions,
+  vis
 });
 
 export default rootReducer;

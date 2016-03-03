@@ -31,3 +31,20 @@ export function updateSlider(key, value) {
     value
   };
 }
+
+
+// vis actions
+export function updatePos(latlng) {
+  return {
+    type: types.UPDATE_POS,
+    latlng
+  };
+}
+
+
+export function updatePaths(paths) {
+  return {
+    type: types.UPDATE_PATH,
+    paths
+  };
+}

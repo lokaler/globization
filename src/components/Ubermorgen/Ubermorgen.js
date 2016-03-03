@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './styles.scss';
-import Globe from '../Globe/Globe';
+import Vis from '../Vis/VisWrapper';
 import Questionnaire from '../Questionnaire/Questionnaire';
 
 @cssModules(styles)
@@ -9,7 +9,8 @@ export default class UbermorgenApp extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    appState: PropTypes.object.isRequired
+    questions: PropTypes.object.isRequired,
+    vis: PropTypes.object.isRequired
   };
 
   render() {
@@ -18,7 +19,7 @@ export default class UbermorgenApp extends React.Component {
         <h3 {...this.props}>UbermorgenApp</h3>
         <div styleName="container">
           <div styleName="left">
-            <Globe {...this.props}/>
+            <Vis {...this.props}/>
           </div>
           <div styleName="right">
             <Questionnaire {...this.props}/>

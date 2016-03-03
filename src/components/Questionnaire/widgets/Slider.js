@@ -7,7 +7,7 @@ export default class Slider extends React.Component {
   static propTypes = {
     data: PropTypes.object.isRequired,
     actions: PropTypes.object.isRequired,
-    appState: PropTypes.object.isRequired,
+    questions: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired
   }
 
@@ -17,7 +17,7 @@ export default class Slider extends React.Component {
 
   render() {
     const options = { ...this.props.data.options };
-    const userInput = { ...this.props.appState.userInput };
+    const userInput = { ...this.props.questions.userInput };
     const sliderChangeBind = this.sliderChange.bind(this);
 
     options.value = userInput[this.props.id] || options.value;

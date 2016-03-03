@@ -16,7 +16,7 @@ export default class Questionnaire extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    appState: PropTypes.object.isRequired
+    questions: PropTypes.object.isRequired
   }
 
   componentDidMount() {
@@ -24,14 +24,14 @@ export default class Questionnaire extends React.Component {
   }
 
   createWidgets() {
-    const appState = { ...this.props.appState };
+    const questions = { ...this.props.questions };
 
-    return appState.questionData.map((item, index) => {
+    return questions.questionData.map((item, index) => {
       if (item.type === 'functions') {
         return '';
       }
 
-      const id = `${appState.activeChapter}_${appState.activeCard}_${index}`;
+      const id = `${questions.activeChapter}_${questions.activeCard}_${index}`;
 
       return WidgetFactory[item.type]({
         data: item.data,
