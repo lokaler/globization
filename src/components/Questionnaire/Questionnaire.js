@@ -39,10 +39,8 @@ export default class Questionnaire extends React.Component {
     this.props.actions.requestQuestionData('/data/questionnaire.json');
   }
 
-  createWidgets() {
-    const questions = { ...this.props.questions };
-
-    return questions.questionData
+  createWidgets(questions) {
+    return questions.questionData[questions.activeCard]
       .filter((item) => item.type !== 'functions')
       .map((item) =>
         WidgetFactory[item.type]({
@@ -54,7 +52,12 @@ export default class Questionnaire extends React.Component {
   }
 
   render() {
-    const widgets = this.createWidgets();
+    const questions = { ...this.props.questions };
+    if (questions.questionData.length === 0) {
+      return <div />;
+    }
+
+    const widgets = this.createWidgets(questions);
     const data = __DEV__ &&
       <Data onClickLoad={ this.onClickLoad } onClickEdit={ this.onClickEdit }/>;
 

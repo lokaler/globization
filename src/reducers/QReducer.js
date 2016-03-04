@@ -12,36 +12,38 @@ function createKey(type) {
   return `${+new Date()}_${type}`;
 }
 
-function structureData(el) {
-  const key = Object.keys(el)[0];
-  const cleanData = { type: key, data: el[key] };
+function structureData(card) {
+  return card.content.map(el => {
+    const key = Object.keys(el)[0];
+    const cleanData = { type: key, data: el[key] };
 
-  switch (key) {
-    case 'text': {
-      cleanData.data = el.text.join('\n');
-      cleanData.key = createKey(cleanData.type);
-      break;
-    }
-    case 'input': {
-      cleanData.type = el.input.type;
-      cleanData.key = el.input.key;
-      break;
-    }
-    case 'answer': {
-      for (const templateKey in el.answer.templates) {
-        if (typeof el.answer.templates[templateKey] !== 'undefined') {
-          cleanData.data.templates[templateKey] = el.answer.templates[templateKey].join('\n');
-        }
+    switch (key) {
+      case 'text': {
+        cleanData.data = el.text.join('\n');
+        cleanData.key = createKey(cleanData.type);
+        break;
       }
-      cleanData.key = createKey(cleanData.type);
-      break;
+      case 'input': {
+        cleanData.type = el.input.type;
+        cleanData.key = el.input.key;
+        break;
+      }
+      case 'answer': {
+        for (const templateKey in el.answer.templates) {
+          if (typeof el.answer.templates[templateKey] !== 'undefined') {
+            cleanData.data.templates[templateKey] = el.answer.templates[templateKey].join('\n');
+          }
+        }
+        cleanData.key = createKey(cleanData.type);
+        break;
+      }
+      default: {
+        // nothing to do here
+      }
     }
-    default: {
-      // nothing to do here
-    }
-  }
 
-  return cleanData;
+    return cleanData;
+  });
 }
 
 function createNewUserInput(state, key, value) {
