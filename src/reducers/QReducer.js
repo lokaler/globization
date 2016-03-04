@@ -17,7 +17,9 @@ function structureData(el) {
       cleanData.data = el.text.join('\n'); break;
     }
     case 'input': {
-      cleanData.type = el.input.type; break;
+      cleanData.type = el.input.type;
+      cleanData.key = el.input.key;
+      break;
     }
     default: {
       // nothing to do here

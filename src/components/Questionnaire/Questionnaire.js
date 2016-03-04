@@ -33,12 +33,9 @@ export default class Questionnaire extends React.Component {
         return '';
       }
 
-      const id = `${questions.activeChapter}_${questions.activeCard}_${index}`;
-
       return WidgetFactory[item.type]({
-        data: item.data,
-        key: id,
-        id,
+        id: item.key,
+        ...item,
         ...this.props
       });
     });
