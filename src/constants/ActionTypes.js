@@ -6,3 +6,5 @@ export const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
 export const UPDATE_POS = 'UPDATE_POS';
 export const UPDATE_PATH = 'UPDATE_PATH';
 export const FOO = 'FOO';
+export const CHANGE_TYPE = 'CHANGE_TYPE';
+export const CHANGE_VIS = 'CHANGE_VIS';

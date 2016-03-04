@@ -48,10 +48,23 @@ export function updatePos(latlng) {
   };
 }
 
+export function changeType(val) {
+  return {
+    type: types.CHANGE_TYPE,
+    val
+  };
+}
 
 export function updatePaths(paths) {
   return {
     type: types.UPDATE_PATH,
     paths
+  };
+}
+
+export function changeVis(val) {
+  return {
+    type: types.CHANGE_VIS,
+    val
   };
 }
