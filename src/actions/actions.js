@@ -23,10 +23,10 @@ export function requestQuestionData(url) {
   };
 }
 
-// slider actions
-export function updateSlider(key, value) {
+// slider and chioces actions
+export function updateUserInput(key, value) {
   return {
-    type: types.UPDATE_SLIDER,
+    type: types.UPDATE_USERINPUT,
     key,
     value
   };

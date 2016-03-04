@@ -12,7 +12,7 @@ export default class Slider extends React.Component {
   }
 
   sliderChange(value) {
-    this.props.actions.updateSlider(this.props.id, value);
+    this.props.actions.updateUserInput(this.props.id, value);
   }
 
   render() {

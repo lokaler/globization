@@ -37,7 +37,7 @@ export default function questions(state = initialState, action) {
       const questionData = action.data.map(structureData);
       return objectAssign({}, state, { questionData });
     }
-    case ActionTypes.UPDATE_SLIDER: {
+    case ActionTypes.UPDATE_USERINPUT: {
       const newUserInput = createNewUserInput(state, action.key, action.value);
       return objectAssign({}, state, { userInput: newUserInput });
     }
