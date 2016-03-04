@@ -37,18 +37,31 @@
       "properties": {
         "answer": {}
       }
-    }
+    },
 
+    "card": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "oneOf": [
+          { "$ref": "#/definitions/functions" },
+          { "$ref": "#/definitions/text" },
+          { "$ref": "#/definitions/input" },
+          { "$ref": "#/definitions/answer" }
+        ]
+      }
+    }
   },
 
-  "type": "array",
+  "type":"array",
   "items": {
     "type": "object",
-    "oneOf": [
-      { "$ref": "#/definitions/functions" },
-      { "$ref": "#/definitions/text" },
-      { "$ref": "#/definitions/input" },
-      { "$ref": "#/definitions/answer" }
-    ]
+    "required": ["title", "content"],
+    "properties": {
+      "title":{"type":"string"},
+      "content":{
+        "$ref": "#/definitions/card"
+      }
+    }
   }
 }
