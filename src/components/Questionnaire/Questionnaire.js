@@ -5,6 +5,7 @@ import Text from './widgets/Text';
 import Slider from './widgets/Slider';
 import Choices from './widgets/Choices';
 import Answer from './widgets/Answer';
+import Data from './Data';
 
 const WidgetFactory = {
   text: React.createFactory(Text),
@@ -23,6 +24,18 @@ export default class Questionnaire extends React.Component {
   }
 
   componentDidMount() {
+    this.loadData();
+  }
+
+  onClickLoad = () => {
+    this.loadData();
+  }
+
+  onClickEdit = () => {
+    throw new Error('Editing is not implemented, yet!');
+  }
+
+  loadData() {
     this.props.actions.requestQuestionData('/data/questionnaire.json');
   }
 
@@ -42,9 +55,12 @@ export default class Questionnaire extends React.Component {
 
   render() {
     const widgets = this.createWidgets();
+    const data = __DEV__ &&
+      <Data onClickLoad={ this.onClickLoad } onClickEdit={ this.onClickEdit }/>;
 
     return (
       <div styleName="questions">
+        { data }
         { widgets }
       </div>
     );
