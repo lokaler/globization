@@ -1,5 +1,5 @@
 import ajv from 'ajv';
-import schema from '../data/schema.json';
+import schema from '../data/schema';
 import { cloneDeep } from 'lodash';
 
 
