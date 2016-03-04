@@ -3,17 +3,28 @@
 
   "definitions": {
 
+    "arrayOfStrings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
     "functions": {
       "required": ["functions"],
       "properties": {
-        "functions": { "type": "array" }
+        "functions": {
+          "$ref": "#/definitions/arrayOfStrings"
+        }
       }
     },
 
     "text": {
       "required": ["text"],
       "properties": {
-        "text": { "type": "array" }
+        "text": {
+          "$ref": "#/definitions/arrayOfStrings"
+        }
       }
     },
 
@@ -25,7 +36,7 @@
           "required": ["key", "type", "options"],
           "properties": {
             "key": { "type": "string" },
-            "type": { "enum": ["slider", "choices"]},
+            "type": { "enum": ["slider", "choices"] },
             "options": { "type": "object" }
           }
         }
@@ -35,7 +46,33 @@
     "answer": {
       "required": ["answer"],
       "properties": {
-        "answer": {}
+        "answer": {
+          "type": "object",
+          "properties": {
+
+            "answerKey": {
+              "$ref": "#/definitions/arrayOfStrings"
+            },
+
+            "answerContext": {
+              "type": "object",
+              "patternProperties": {
+                ".*": {
+                  "type": "string"
+                }
+              }
+            },
+
+            "templates": {
+              "patternProperties": {
+                ".*": {
+                  "$ref": "#/definitions/arrayOfStrings"
+                }
+              }
+            }
+
+          }
+        }
       }
     },
 
@@ -56,12 +93,18 @@
   "type":"array",
   "items": {
     "type": "object",
+
     "required": ["title", "content"],
     "properties": {
-      "title":{"type":"string"},
+
+      "title":{
+        "type":"string"
+      },
+
       "content":{
         "$ref": "#/definitions/card"
       }
+
     }
   }
 }
