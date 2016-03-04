@@ -18,8 +18,9 @@
   "rules": {
     "comma-dangle": 0,
     "no-shadow": [1, {"allow": ["args"]}],
-    "spaced-comment": 1,
-    "no-eval": 0,
-    "no-new-func": 0
+    "spaced-comment": 1
+  },
+  "globals": {
+    "__DEV__": true
   }
 }
