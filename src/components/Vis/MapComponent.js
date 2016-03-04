@@ -37,23 +37,23 @@ export default class MapComponent extends React.Component {
       .translate(this.props.vis.translate)
       .on("zoom", () => {
         const e = d3.event;
-
         const _scale = this.props.vis.initialScale * e.scale;
         const _rotate = [(e.translate[0]/e.scale) * this.sensetivity, -(e.translate[1]/e.scale) * this.sensetivity, 0];
-        const _zoom = e.scale;
-        const _translate = e.translate;
 
         this.projection
           .rotate(_rotate)
           .scale(_scale);
 
-        this.props.actions.changeVis({ translate: _translate, zoom: _zoom, scale: _scale, rotate: _rotate });
+        this.forceUpdate();
       })
-
-      // .on("zoomend", () => {
-      //   const e = d3.event;
-      //   this.props.actions.changeVis({ scale: e.scale, translate: e.translate });
-      // })
+      .on("zoomend", () => {
+        this.props.actions.changeVis({
+            translate: this.zoom.translate(),
+            zoom: this.zoom.scale(),
+            rotate: this.projection.rotate(),
+            scale: this.projection.scale()
+          });
+      })
 
     //d3.select(ReactDom.findDOMNode(this.refs.globeSVG)).call(zoom)
   }
