@@ -34,6 +34,7 @@
     "url": "git://github.com:lokaler/globization.git"
   },
   "devDependencies": {
+    "ajv": "3.7.1",
     "autoprefixer": "6.3.3",
     "babel-core": "^6.4.5",
     "babel-eslint": "4.1.8",

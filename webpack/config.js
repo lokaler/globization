@@ -125,7 +125,12 @@ function getConfig(env) {
     },
     postcss: [
       autoprefixer({ browsers: ['last 2 versions'] })
-    ]
+    ],
+    resolve: {
+      alias: {
+        ajv: root('node_modules/ajv/dist/ajv.bundle.js')
+      }
+    }
   };
 }
 
