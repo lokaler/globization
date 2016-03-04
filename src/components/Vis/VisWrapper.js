@@ -2,6 +2,7 @@
 
 import React, { PropTypes } from 'react';
 import GlobeComponent from './GlobeComponent';
+import MapComponent from './MapComponent';
 import VisUtils from './VisUtils';
 
 export default class Globe extends React.Component {
@@ -12,21 +13,22 @@ export default class Globe extends React.Component {
   };
 
   componentDidMount() {
-    console.log(VisUtils.calculateBla());
     //this.props.actions.updatePos([52, 23]);
   }
 
   changeType(type, evt) {
-    console.log(type, evt)
-    //this.props.actions.changeType(type);
+    this.props.actions.changeType(type);
   }
 
   render() {
 
-    let Globe = <GlobeComponent {...this.props}/>;
+    let Globe = <div></div>;
 
     if(this.props.vis.type === 'globe'){
-      Globe = <GlobeComponent {...this.props}/>;
+      Globe = <GlobeComponent {...this.props} width={700} height={500} />
+    }
+    if(this.props.vis.type === 'map'){
+      Globe = <MapComponent {...this.props} width={700} height={500} />
     }
 
     const changeGlobe = this.changeType.bind(this, 'globe');
