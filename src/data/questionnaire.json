@@ -30,11 +30,13 @@
     "input": {
       "key": "fooo",
       "type": "choices",
-      "options": [
-        ["never", "Nie"],
-        ["sometimes", "Manchmal"],
-        ["always", "Immer"]
-      ]
+      "options": {
+        "choices": [
+          ["never", "Nie"],
+          ["sometimes", "Manchmal"],
+          ["always", "Immer"]
+        ]
+      }
     }
   },
   {

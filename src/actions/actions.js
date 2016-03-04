@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import * as types from '../constants/ActionTypes';
+import { validateData } from '../logic/questionnaire';
 
 // question data actions
 export function receiveQuestionData(jsonData) {
@@ -21,7 +22,10 @@ export function requestQuestionData(url) {
     dispatch(loadingQuestionData());
     fetch(url)
       .then(res => res.json())
-      .then((jsonData) => dispatch(receiveQuestionData(jsonData)))
+      .then(jsonData => {
+        validateData(jsonData);
+        dispatch(receiveQuestionData(jsonData));
+      })
       .catch((err) => dispatch(errorQuestionData(err)));
   };
 }

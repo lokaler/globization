@@ -39,7 +39,7 @@ export default class Choices extends React.Component {
   }
 
   render() {
-    const options = [...this.props.data.options];
+    const options = [...this.props.data.options.choices];
     const Radios = options.map(this.createRadioButton.bind(this));
 
     return (
