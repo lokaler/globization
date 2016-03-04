@@ -1,5 +1,5 @@
-/* eslint-disable */
 import React, { PropTypes } from 'react';
+import cssModules from 'react-css-modules';
 
 import Text from './widgets/Text';
 import Slider from './widgets/Slider';
@@ -13,6 +13,7 @@ const WidgetFactory = {
   answer: React.createFactory(Answer)
 };
 
+@cssModules()
 export default class Questionnaire extends React.Component {
 
   static propTypes = {
@@ -28,24 +29,22 @@ export default class Questionnaire extends React.Component {
   createWidgets() {
     const questions = { ...this.props.questions };
 
-    return questions.questionData.map((item, index) => {
-      if (item.type === 'functions') {
-        return '';
-      }
-
-      return WidgetFactory[item.type]({
-        id: item.key,
-        ...item,
-        ...this.props
-      });
-    });
+    return questions.questionData
+      .filter((item) => item.type !== 'functions')
+      .map((item) =>
+        WidgetFactory[item.type]({
+          id: item.key,
+          ...item,
+          ...this.props
+        })
+      );
   }
 
   render() {
     const widgets = this.createWidgets();
 
     return (
-      <div className="questions">
+      <div styleName="questions">
         { widgets }
       </div>
     );

@@ -4,9 +4,13 @@ import objectAssign from 'object-assign';
 const initialState = {
   activeChapter: 0,
   activeCard: 0,
-  userInput: {},
+  inputs: {},
   questionData: []
 };
+
+function createKey(type) {
+  return `${+new Date()}_${type}`;
+}
 
 function structureData(el) {
   const key = Object.keys(el)[0];
@@ -14,11 +18,22 @@ function structureData(el) {
 
   switch (key) {
     case 'text': {
-      cleanData.data = el.text.join('\n'); break;
+      cleanData.data = el.text.join('\n');
+      cleanData.key = createKey(cleanData.type);
+      break;
     }
     case 'input': {
       cleanData.type = el.input.type;
       cleanData.key = el.input.key;
+      break;
+    }
+    case 'answer': {
+      for (const templateKey in el.answer.templates) {
+        if (typeof el.answer.templates[templateKey] !== 'undefined') {
+          cleanData.data.templates[templateKey] = el.answer.templates[templateKey].join('\n');
+        }
+      }
+      cleanData.key = createKey(cleanData.type);
       break;
     }
     default: {
@@ -30,7 +45,7 @@ function structureData(el) {
 }
 
 function createNewUserInput(state, key, value) {
-  return objectAssign({}, state.userInput, { [key]: value });
+  return objectAssign({}, state.inputs, { [key]: { value } });
 }
 
 export default function questions(state = initialState, action) {
@@ -41,7 +56,7 @@ export default function questions(state = initialState, action) {
     }
     case ActionTypes.UPDATE_USERINPUT: {
       const newUserInput = createNewUserInput(state, action.key, action.value);
-      return objectAssign({}, state, { userInput: newUserInput });
+      return objectAssign({}, state, { inputs: newUserInput });
     }
     case ActionTypes.LOADING_QUESTION_DATA:
       return state;

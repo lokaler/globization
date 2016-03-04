@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import * as types from '../constants/ActionTypes';
 
 // question data actions
@@ -6,6 +8,7 @@ export function receiveQuestionData(jsonData) {
 }
 
 export function errorQuestionData(err) {
+  console.log(err)
   return { type: types.ERROR_QUESTION_DATA, error: err };
 }
 

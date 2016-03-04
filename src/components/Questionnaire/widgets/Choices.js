@@ -1,7 +1,7 @@
-/* eslint-disable */
-
 import React, { PropTypes } from 'react';
+import cssModules from 'react-css-modules';
 
+@cssModules()
 export default class Choices extends React.Component {
 
   static propTypes = {
@@ -11,17 +11,19 @@ export default class Choices extends React.Component {
     questions: PropTypes.object.isRequired
   }
 
-  radioChange(activeIndex) {
+  onChange(activeIndex) {
     this.props.actions.updateUserInput(this.props.id, activeIndex);
   }
 
   isActiveRadio(index) {
-    const currUserInput = this.props.questions.userInput[this.props.id];
-    return typeof currUserInput !== 'undefined' && currUserInput === index;
+    const currUserInput = this.props.questions.inputs[this.props.id];
+    return currUserInput &&
+      typeof currUserInput.value !== 'undefined' &&
+      currUserInput.value === index;
   }
 
   createRadioButton(option, index) {
-    const boundRadioChange = this.radioChange.bind(this, index);
+    const boundRadioChange = this.onChange.bind(this, index);
     const isSelected = this.isActiveRadio(index);
 
     return (<div key={`${this.props.id}_i${index}`}>
@@ -41,7 +43,7 @@ export default class Choices extends React.Component {
     const Radios = options.map(this.createRadioButton.bind(this));
 
     return (
-      <div key={this.props.id}>
+      <div key={this.props.id} styleName="widget">
         {Radios}
       </div>
     );

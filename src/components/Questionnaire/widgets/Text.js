@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import ReactMarkdown from 'react-markdown';
+import cssModules from 'react-css-modules';
 
+@cssModules()
 export default class Text extends React.Component {
 
   static propTypes = {
@@ -10,7 +12,7 @@ export default class Text extends React.Component {
 
   render() {
     return (
-      <div className="question-widget-text" key={this.props.id}>
+      <div styleName="widget" key={this.props.id}>
         <ReactMarkdown source={this.props.data.toString()} />
       </div>
     );
