@@ -5,6 +5,7 @@ import d3 from 'd3';
 import d3_projection from './libs/d3.projection.js';
 import topojson from 'topojson';
 import ReactDom from 'react-dom';
+import utils from './VisUtils.js'
 
 export default class MapComponent extends React.Component {
 
@@ -19,7 +20,7 @@ export default class MapComponent extends React.Component {
     super(props);
     d3_projection(d3);
 
-    console.log("constructor map", this.props.vis)
+    utils.log("constructor map", this.props.vis)
 
     this.sensetivity = 0.25;
 
@@ -43,7 +44,7 @@ export default class MapComponent extends React.Component {
         this.forceUpdate();
       })
       .on("zoomend", () => {
-        console.log("zoomend")
+        utils.log("zoomend")
         this.props.actions.changeVis({
             translate: this.zoom.translate(),
             zoom: this.zoom.scale(),
@@ -66,7 +67,6 @@ export default class MapComponent extends React.Component {
     .duration(()=>{
       const t = Math.abs(this.props.vis.translate[0]) + Math.abs(this.props.vis.translate[1]);
       const z = this.props.vis.zoom - 0.7;
-      console.log(t,z)
       return t+z*200;
     })
     .call(this.zoom
@@ -76,7 +76,7 @@ export default class MapComponent extends React.Component {
     )
   }
   componentWillUnmount(){
-    console.log("UNMOUNTING")
+    utils.log("UNMOUNTING")
     this.svg.remove();
   }
 
@@ -84,10 +84,10 @@ export default class MapComponent extends React.Component {
     if(name == "random") name = _.sample(this.props.master.master).alpha3;
 
     const entry = _.find(this.props.master.master, { alpha3: name});
-    console.log(name, entry);
+    utils.log(name, entry);
     const country = _.find(this.props.vis.topojson, { id: entry.numeric*1 });
     if(!country){
-      console.log("country not found!");
+      utils.log("country not found!");
       return;
     }
 
@@ -97,7 +97,7 @@ export default class MapComponent extends React.Component {
     p[0] = -p[0]/this.sensetivity * scale;
     p[1] = p[1]/this.sensetivity * scale;
 
-    console.log(country, p)
+    utils.log(country, p)
 
     this.svg
       //.call(this.zoom.scale(this.props.vis.zoom).translate(this.props.vis.translate))
@@ -107,7 +107,7 @@ export default class MapComponent extends React.Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    console.log("shouldComponentUpdate", nextProps.vis.animation ? "no": "yes");
+    utils.log("shouldComponentUpdate", nextProps.vis.animation ? "no": "yes");
 
     const d = nextProps.vis.animation;
     if(d){
@@ -120,7 +120,7 @@ export default class MapComponent extends React.Component {
 
 
   render() {
-    console.log("render map")
+    utils.log("render map")
 
     const paths = this.props.vis.topojson.map((d, i) => <path key={i} d={this.path(d)}></path>);
 
