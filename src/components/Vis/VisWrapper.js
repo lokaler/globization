@@ -12,12 +12,26 @@ export default class Globe extends React.Component {
     vis: PropTypes.object.isRequired
   };
 
+  constructor(props) {
+    super(props);
+
+  }
+
   componentDidMount() {
     //this.props.actions.updatePos([52, 23]);
   }
 
   changeType(type, evt) {
     this.props.actions.changeType(type);
+  }
+
+  random(){
+    this.props.actions.changeVis({
+      animation: {
+        action: "zoomToCountry",
+        payload: "random"
+      }
+    });
   }
 
   render() {
@@ -34,6 +48,7 @@ export default class Globe extends React.Component {
     const changeGlobe = this.changeType.bind(this, 'globe');
     const changeMap = this.changeType.bind(this, 'map');
     const changePlot = this.changeType.bind(this, 'plot');
+    const random = this.random.bind(this);
 
     return (
       <div>
@@ -42,6 +57,7 @@ export default class Globe extends React.Component {
           <button onClick={ changeGlobe }>Globus</button>
           <button onClick={ changeMap }>Karte</button>
           <button onClick={ changePlot }>Diagramm</button>
+          <button onClick={ random }>Random</button>
         </div>
       </div>
     );

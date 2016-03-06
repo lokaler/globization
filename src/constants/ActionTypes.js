@@ -9,3 +9,4 @@ export const UPDATE_PATH = 'UPDATE_PATH';
 export const FOO = 'FOO';
 export const CHANGE_TYPE = 'CHANGE_TYPE';
 export const CHANGE_VIS = 'CHANGE_VIS';
+export const ZOOM_TO_COUNTRY = 'ZOOM_TO_COUNTRY';

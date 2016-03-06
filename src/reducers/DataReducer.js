@@ -1,7 +1,11 @@
+/* eslint-disable */
+
 import * as ActionTypes from '../constants/ActionTypes';
 
 import dataset1 from '../data/dataset1.csv';
 import master from '../data/master.csv';
+
+// const masterMap = d3.map(master, (d) => { d.alpha3 });
 
 const initialState = {
   datasets: [{
