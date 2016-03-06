@@ -19,7 +19,7 @@ export default class GlobeComponent extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log("constructor globe", this.props)
+    utils.log("constructor globe", this.props)
     this.sensetivity = 0.25;
     this.svg = null;
 
