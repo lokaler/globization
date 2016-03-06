@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { PropTypes } from 'react';
 import MicroMustache from 'micromustache';
 import cssModules from 'react-css-modules';
@@ -41,13 +40,13 @@ export default class Answer extends React.Component {
   compileContext(context, userInput) {
     const compiledContext = {};
 
-    Object.keys(context).forEach((key, i) => {
+    Object.keys(context).forEach((key) => {
       compiledContext[key] = context[key];
       try {
-          compiledContext[key] = Logic.compileExpression(context[key])(userInput);
-        } catch (e) {
+        compiledContext[key] = Logic.compileExpression(context[key])(userInput);
+      } catch (e) {
           // console.log(e);
-        }
+      }
     });
 
     return compiledContext;
@@ -59,7 +58,7 @@ export default class Answer extends React.Component {
     }
 
     const questions = { ...this.props.questions };
-    const data = { ...this.props.data }
+    const data = { ...this.props.data };
 
     const template = this.getTemplate(data.templates, questions.inputs);
     const templateContext = this.compileContext(data.answerContext, questions.inputs);
