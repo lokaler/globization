@@ -6,6 +6,7 @@ import worldData from '../data/world-110m.json';
 import topojson from 'topojson';
 
 const initialState = {
+  debug:true,
   mapData: [],
   latlng: [0, 0],
   paths: [],
@@ -15,8 +16,13 @@ const initialState = {
   rotate: [0, 0],
   topojson: topojson.feature(worldData, worldData.objects.countries).features,
   translate: [0, 0],
-  type: 'map'
+  type: 'globe',
+  animation:null
 };
+
+function findeCountry(name){
+  console.log(name);
+}
 
 export default function vis(state = initialState, action) {
   switch (action.type) {
@@ -26,6 +32,9 @@ export default function vis(state = initialState, action) {
       return objectAssign({}, state, { paths: action.paths });
     case ActionTypes.CHANGE_TYPE:
       return objectAssign({}, state, { type: action.val });
+    case ActionTypes.ZOOM_TO_COUNTRY:
+      findeCountry(action.name);
+      return objectAssign({}, state, { type: action.name });
     case ActionTypes.CHANGE_VIS:
       return objectAssign({}, state,  action.val );
     default:

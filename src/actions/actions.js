@@ -48,6 +48,13 @@ export function updatePos(latlng) {
   };
 }
 
+export function zoomToCountry(name) {
+  return {
+    type: types.ZOOM_TO_COUNTRY,
+    name
+  };
+}
+
 export function changeType(val) {
   return {
     type: types.CHANGE_TYPE,
