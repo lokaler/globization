@@ -13,16 +13,18 @@ function compileExpression(expr) {
 }
 
 function compileExpressionsInData(data) {
-  return cloneDeep(data).map(part => {
-    const answer = part.answer;
-    if (answer) {
-      const answerKey = answer.answerKey;
-      if (answerKey) {
-        answer.answerKey = answerKey.map(expr => compileExpression(expr));
+  return cloneDeep(data).map(card =>
+    card.content.map(part => {
+      const answer = part.answer;
+      if (answer) {
+        const answerKey = answer.answerKey;
+        if (answerKey) {
+          answer.answerKey = answerKey.map(expr => compileExpression(expr));
+        }
       }
-    }
-    return part;
-  });
+      return part;
+    })
+  );
 }
 
 export function validateData(data) {
@@ -36,3 +38,7 @@ export function validateData(data) {
   }
   compileExpressionsInData(data);
 }
+
+export {
+  compileExpression
+};

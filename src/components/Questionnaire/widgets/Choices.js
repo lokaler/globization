@@ -11,20 +11,20 @@ export default class Choices extends React.Component {
     questions: PropTypes.object.isRequired
   }
 
-  onChange(activeIndex) {
-    this.props.actions.updateUserInput(this.props.id, activeIndex);
+  onChange(activeValue) {
+    this.props.actions.updateUserInput(this.props.id, activeValue);
   }
 
-  isActiveRadio(index) {
+  isActiveRadio(activeValue) {
     const currUserInput = this.props.questions.inputs[this.props.id];
     return currUserInput &&
       typeof currUserInput.value !== 'undefined' &&
-      currUserInput.value === index;
+      currUserInput.value === activeValue;
   }
 
   createRadioButton(option, index) {
-    const boundRadioChange = this.onChange.bind(this, index);
-    const isSelected = this.isActiveRadio(index);
+    const boundRadioChange = this.onChange.bind(this, option[0]);
+    const isSelected = this.isActiveRadio(option[0]);
 
     return (<div key={`${this.props.id}_i${index}`}>
         <input

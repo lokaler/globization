@@ -1,7 +1,8 @@
 /* eslint-disable */
-
 import React, { PropTypes } from 'react';
+import MicroMustache from 'micromustache';
 import cssModules from 'react-css-modules';
+import * as Logic from '../../../logic/questionnaire';
 
 @cssModules()
 export default class Answer extends React.Component {
@@ -12,21 +13,61 @@ export default class Answer extends React.Component {
     questions: PropTypes.object.isRequired
   }
 
-  getTemplateKey(inputs) {
-    return 'meat';
+  getTemplate(templates, userInput) {
+    const templateKey = this.findTemplateKey(userInput);
+    return templates[templateKey];
   }
 
-  getTemplate() {
-    const templateKey = this.getTemplateKey(this.props.questions.inputs);
-    return this.props.data.templates[templateKey];
+  findTemplateKey(userInput) {
+    let templateKey = 'default';
+    this.props.data.answerKey.forEach((expr) => {
+      if (templateKey === 'default') {
+        try {
+          const result = Logic.compileExpression(expr)(userInput);
+          if (result) {
+            templateKey = result;
+          }
+        } catch (e) {
+          // console.log(e);
+        }
+      }
+    });
+
+    return templateKey;
+  }
+
+  // until now we can only handle simple expressions
+  // no function support yet
+  compileContext(context, userInput) {
+    const compiledContext = {};
+
+    Object.keys(context).forEach((key, i) => {
+      compiledContext[key] = context[key];
+      try {
+          compiledContext[key] = Logic.compileExpression(context[key])(userInput);
+        } catch (e) {
+          // console.log(e);
+        }
+    });
+
+    return compiledContext;
   }
 
   render() {
-    const Template = this.getTemplate();
+    if (typeof this.props.data === 'undefined') {
+      return <span />;
+    }
+
+    const questions = { ...this.props.questions };
+    const data = { ...this.props.data }
+
+    const template = this.getTemplate(data.templates, questions.inputs);
+    const templateContext = this.compileContext(data.answerContext, questions.inputs);
+    const answerContent = MicroMustache.render(template, templateContext);
 
     return (
-      <div key={this.props.id} styleName="widget">
-      { Template }
+      <div key={ this.props.id } styleName="widget">
+      { answerContent }
       </div>
     );
   }

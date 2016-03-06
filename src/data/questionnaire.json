@@ -22,22 +22,9 @@
           "key": "slider",
           "type": "slider",
           "options": {
-            "min": 23,
+            "min": 0,
             "value": 30,
             "max": 42
-          }
-        }
-      },
-      {
-        "input": {
-          "key": "fooo",
-          "type": "choices",
-          "options": {
-            "choices": [
-              ["never", "Nie"],
-              ["sometimes", "Manchmal"],
-              ["always", "Immer"]
-            ]
           }
         }
       },
@@ -52,23 +39,60 @@
             "wertFleisch": "inputs.slider.value * 1.25"
           },
           "templates": {
-            "default": [
-              "Lorem Ipsum"
-            ],
+            "default": [],
             "foo": [
-              "Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
+              "<10 : Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
               "ähnlich viel für Essen aus wie Sie."
             ],
             "bar": [
-              "Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
+              ">= 10: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
+              "ähnlich viel für Essen aus wie Sie."
+            ]
+          }
+        }
+      },
+      {
+        "input": {
+          "key": "choices1",
+          "type": "choices",
+          "options": {
+            "choices": [
+              ["never", "Nie"],
+              ["sometimes", "Manchmal"],
+              ["always", "Immer"]
+            ]
+          }
+        }
+      },
+      {
+        "answer": {
+          "answerKey": [
+            "(inputs.choices1.value === 'never') && 'foo'",
+            "(inputs.choices1.value === 'sometimes') && 'bar'",
+            "(inputs.choices1.value === 'always') && 'baz'"
+          ],
+          "answerContext": {
+            "landAusgaben": "getCountry(inputs)",
+            "wertFleisch": "inputs.slider.value * 1.25"
+          },
+          "templates": {
+            "default": [],
+            "foo": [
+              "NIE: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
               "ähnlich viel für Essen aus wie Sie."
             ],
-            "meat": [
-              "Für Ihren wöchentlichen",
-              "Konsum müssten somit {{ wertFleisch }}",
-              "Kilogramm Fleisch produziert werden."
+            "bar": [
+              "MANCHMAL: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
+              "ähnlich viel für Essen aus wie Sie."
+            ],
+            "baz": [
+              "Immer: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
+              "ähnlich viel für Essen aus wie Sie."
             ]
           }
         }
@@ -95,10 +119,10 @@
       },
       {
         "input": {
-          "key": "slider",
+          "key": "slider2",
           "type": "slider",
           "options": {
-            "min": 23,
+            "min": 0,
             "value": 30,
             "max": 42
           }
@@ -106,7 +130,7 @@
       },
       {
         "input": {
-          "key": "fooo",
+          "key": "fooo2",
           "type": "choices",
           "options": {
             "choices": [
@@ -120,24 +144,22 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider.value < 10) && 'foo'",
-            "(inputs.slider.value >= 10) && 'bar'"
+            "(inputs.slider2.value < 10) && 'foo'",
+            "(inputs.slider2.value >= 10) && 'bar'"
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
             "wertFleisch": "inputs.slider.value * 1.25"
           },
           "templates": {
-            "default": [
-              "Lorem Ipsum"
-            ],
+            "default": [],
             "foo": [
-              "Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "FOOO Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
               "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
               "ähnlich viel für Essen aus wie Sie."
             ],
             "bar": [
-              "Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "BAAAR Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
               "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
               "ähnlich viel für Essen aus wie Sie."
             ],

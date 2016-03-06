@@ -8,19 +8,19 @@ const initialState = {
   questionData: []
 };
 
-function createKey(type) {
-  return `${+new Date()}_${type}`;
+function createKey(type, index) {
+  return `${+new Date()}_${index}_${type}`;
 }
 
 function structureData(card) {
-  return card.content.map(el => {
+  return card.content.map((el, index) => {
     const key = Object.keys(el)[0];
     const cleanData = { type: key, data: el[key] };
 
     switch (key) {
       case 'text': {
         cleanData.data = el.text.join('\n');
-        cleanData.key = createKey(cleanData.type);
+        cleanData.key = createKey(cleanData.type, index);
         break;
       }
       case 'input': {
@@ -34,7 +34,7 @@ function structureData(card) {
             cleanData.data.templates[templateKey] = el.answer.templates[templateKey].join('\n');
           }
         }
-        cleanData.key = createKey(cleanData.type);
+        cleanData.key = createKey(cleanData.type, index);
         break;
       }
       default: {
