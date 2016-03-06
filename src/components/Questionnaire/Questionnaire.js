@@ -5,6 +5,7 @@ import Text from './widgets/Text';
 import Slider from './widgets/Slider';
 import Choices from './widgets/Choices';
 import Answer from './widgets/Answer';
+import Footer from './Footer';
 import Data from './Data';
 
 const WidgetFactory = {
@@ -62,9 +63,12 @@ export default class Questionnaire extends React.Component {
       <Data onClickLoad={ this.onClickLoad } onClickEdit={ this.onClickEdit }/>;
 
     return (
-      <div styleName="questions">
-        { data }
-        { widgets }
+      <div>
+        <div styleName="questions">
+          { data }
+          { widgets }
+        </div>
+        <Footer { ...this.props }/>
       </div>
     );
   }

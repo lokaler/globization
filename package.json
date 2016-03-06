@@ -19,6 +19,7 @@
   "author": "Sven König",
   "license": "MIT",
   "dependencies": {
+    "classnames": "2.2.3",
     "d3": "3.5.16",
     "d3-geo-projection": "0.2.16",
     "object-assign": "4.0.1",

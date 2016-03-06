@@ -30,6 +30,10 @@ export function requestQuestionData(url) {
   };
 }
 
+export function setCardIndex(i) {
+  return { type: types.SET_CARD_INDEX, index: i };
+}
+
 // slider and chioces actions
 export function updateUserInput(key, value) {
   return {
