@@ -58,10 +58,22 @@ export default class MapComponent extends React.Component {
   componentDidMount() {
     this.svg = d3.select(this.refs.mapSVG).call(this.zoom);
     this.svg.call(this.zoom
-      .scale(1)
+      .scale(this.props.vis.zoom)
       .translate(this.props.vis.translate)
       .event
-    );
+    )
+    .transition()
+    .duration(()=>{
+      const t = Math.abs(this.props.vis.translate[0]) + Math.abs(this.props.vis.translate[1]);
+      const z = this.props.vis.zoom - 0.7;
+      console.log(t,z)
+      return t+z*200;
+    })
+    .call(this.zoom
+      .scale(0.7)
+      .translate([0,0])
+      .event
+    )
   }
   componentWillUnmount(){
     console.log("UNMOUNTING")
@@ -108,7 +120,7 @@ export default class MapComponent extends React.Component {
 
 
   render() {
-    console.log("render map", this.props.vis)
+    console.log("render map")
 
     const paths = this.props.vis.topojson.map((d, i) => <path key={i} d={this.path(d)}></path>);
 

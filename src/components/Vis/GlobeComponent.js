@@ -5,6 +5,7 @@ import d3 from 'd3';
 import topojson from 'topojson';
 import ReactDom from 'react-dom';
 import _ from 'lodash';
+import utils from './VisUtils.js'
 
 export default class GlobeComponent extends React.Component {
 
@@ -43,7 +44,7 @@ export default class GlobeComponent extends React.Component {
         this.forceUpdate();
       })
       .on("zoomend", () => {
-        console.log("zoomend")
+        utils.log("zoomend")
         this.props.actions.changeVis({
             translate: this.zoom.translate(),
             zoom: this.zoom.scale(),
@@ -61,10 +62,21 @@ export default class GlobeComponent extends React.Component {
       .scale(this.props.vis.zoom)
       .translate(this.props.vis.translate)
       .event
-    );
+    )
+    .transition()
+    .duration(()=>{
+      const t = Math.abs(this.props.vis.translate[0]) + Math.abs(this.props.vis.translate[1]);
+      const z = this.props.vis.zoom - 0.7;
+      return t+z*200;
+    })
+    .call(this.zoom
+      .scale(1)
+      .translate([0,0])
+      .event
+    )
   }
   componentWillUnmount(){
-    console.log("UNMOUNTING")
+    utils.log("UNMOUNTING")
     this.svg.remove();
   }
 
@@ -72,10 +84,10 @@ export default class GlobeComponent extends React.Component {
     if(name == "random") name = _.sample(this.props.master.master).alpha3;
 
     const entry = _.find(this.props.master.master, { alpha3: name});
-    console.log(name, entry);
+    utils.log(name, entry);
     const country = _.find(this.props.vis.topojson, { id: entry.numeric*1 });
     if(!country){
-      console.log("country not found!");
+      utils.log("country not found!");
       return;
     }
 
@@ -96,7 +108,7 @@ export default class GlobeComponent extends React.Component {
 
 
   shouldComponentUpdate(nextProps) {
-    console.log("shouldComponentUpdate", nextProps.vis.animation ? "no": "yes");
+    utils.log("shouldComponentUpdate", nextProps.vis.animation ? "no": "yes");
 
     const d = nextProps.vis.animation;
     if(d){
@@ -109,7 +121,7 @@ export default class GlobeComponent extends React.Component {
 
 
   render() {
-    console.log("render globe")
+    utils.log("render globe", this.props)
 
     const paths = this.props.vis.topojson.map((d, i) => <path key={i} d={this.path(d)}></path>);
 

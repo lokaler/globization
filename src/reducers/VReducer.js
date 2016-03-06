@@ -6,6 +6,7 @@ import worldData from '../data/world-110m.json';
 import topojson from 'topojson';
 
 const initialState = {
+  debug:true,
   mapData: [],
   latlng: [0, 0],
   paths: [],
