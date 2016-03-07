@@ -37,7 +37,7 @@ export default class Questionnaire extends React.Component {
   }
 
   loadData() {
-    this.props.actions.requestQuestionData('/data/questionnaire.json');
+    this.props.actions.requestQuestionData('./data/questionnaire.json');
   }
 
   createWidgets(questions) {
