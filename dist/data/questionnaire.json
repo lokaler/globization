@@ -1,0 +1,196 @@
+[
+  {"title": "fff",
+    "content":[
+      {
+        "functions": [
+          "getCountry"
+        ]
+      },
+      {
+        "text": [
+          "# Wofür geben Sie Ihr Geld aus?",
+          "",
+          "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
+          "welche Produkte uns wie viel wert sind.",
+          "",
+          "*Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
+          "beispielsweise für Lebensmittel aus?*"
+        ]
+      },
+      {
+        "input": {
+          "key": "slider",
+          "type": "slider",
+          "options": {
+            "min": 0,
+            "value": 30,
+            "max": 42
+          }
+        }
+      },
+      {
+        "answer": {
+          "answerKey": [
+            "(inputs.slider.value < 10) && 'foo'",
+            "(inputs.slider.value >= 10) && 'bar'"
+          ],
+          "answerContext": {
+            "landAusgaben": "getCountry(inputs)",
+            "wertFleisch": "inputs.slider.value * 1.25"
+          },
+          "templates": {
+            "default": [],
+            "foo": [
+              "<10 : Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
+              "ähnlich viel für Essen aus wie Sie."
+            ],
+            "bar": [
+              ">= 10: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
+              "ähnlich viel für Essen aus wie Sie."
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {"title": "fff",
+    "content":[
+      {
+        "functions": [
+          "getCountry"
+        ]
+      },
+      {
+        "text": [
+          "# 2. Wofür geben Sie Ihr Geld aus?",
+          "",
+          "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
+          "welche Produkte uns wie viel wert sind.",
+          "",
+          "*Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
+          "beispielsweise für Lebensmittel aus?*"
+        ]
+      },
+      {
+        "input": {
+          "key": "fooo2",
+          "type": "choices",
+          "options": {
+            "choices": [
+              ["never", "Nie"],
+              ["sometimes", "Manchmal"],
+              ["always", "Immer"]
+            ]
+          }
+        }
+      },
+      {
+        "answer": {
+          "answerKey": [
+            "(inputs.slider2.value < 10) && 'foo'",
+            "(inputs.slider2.value >= 10) && 'bar'"
+          ],
+          "answerContext": {
+            "landAusgaben": "getCountry(inputs)",
+            "wertFleisch": "inputs.slider.value * 1.25"
+          },
+          "templates": {
+            "default": [],
+            "foo": [
+              "FOOO Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
+              "ähnlich viel für Essen aus wie Sie."
+            ],
+            "bar": [
+              "BAAAR Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
+              "ähnlich viel für Essen aus wie Sie."
+            ],
+            "meat": [
+              "Für Ihren wöchentlichen",
+              "Konsum müssten somit {{ wertFleisch }}",
+              "Kilogramm Fleisch produziert werden."
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {"title": "fff",
+    "content":[
+      {
+        "functions": [
+          "getCountry"
+        ]
+      },
+      {
+        "text": [
+          "# 3. Wofür geben Sie Ihr Geld aus?",
+          "",
+          "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
+          "welche Produkte uns wie viel wert sind.",
+          "",
+          "*Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
+          "beispielsweise für Lebensmittel aus?*"
+        ]
+      },
+      {
+        "input": {
+          "key": "slider2",
+          "type": "slider",
+          "options": {
+            "min": 0,
+            "value": 30,
+            "max": 42
+          }
+        }
+      },
+      {
+        "input": {
+          "key": "fooo2",
+          "type": "choices",
+          "options": {
+            "choices": [
+              ["never", "Nie"],
+              ["sometimes", "Manchmal"],
+              ["always", "Immer"]
+            ]
+          }
+        }
+      },
+      {
+        "answer": {
+          "answerKey": [
+            "(inputs.slider2.value < 10) && 'foo'",
+            "(inputs.slider2.value >= 10) && 'bar'"
+          ],
+          "answerContext": {
+            "landAusgaben": "getCountry(inputs)",
+            "wertFleisch": "inputs.slider.value * 1.25"
+          },
+          "templates": {
+            "default": [],
+            "foo": [
+              "FOOO Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
+              "ähnlich viel für Essen aus wie Sie."
+            ],
+            "bar": [
+              "BAAAR Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
+              "ähnlich viel für Essen aus wie Sie."
+            ],
+            "meat": [
+              "Für Ihren wöchentlichen",
+              "Konsum müssten somit {{ wertFleisch }}",
+              "Kilogramm Fleisch produziert werden."
+            ]
+          }
+        }
+      }
+    ]
+  }
+]
+
