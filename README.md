@@ -9,6 +9,6 @@ Differences to [react-slingshot](https://github.com/coryhouse/react-slingshot) a
 
 ## Deployment
 
-Every ten minutes a machine at SPON checks if there a new commits to the 'deploy' branch. If so, the branch gets pulled (and deployed afterwards) automatically.
+Every ten minutes a machine at SPON checks if there are new commits to the 'deploy' branch. If so, the branch gets pulled (and deployed afterwards) automatically.
 
 _(If the interval should change or a different branch should be deployed, please speak to Georg.)_ 
