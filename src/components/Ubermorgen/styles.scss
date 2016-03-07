@@ -11,24 +11,35 @@
   flex-direction: row;
 
   :local(.left) {
+    border: 1px solid #ddd;
+    border-right: none;
     flex-grow: 1;
-    border: 1px solid green;
+    width: 65%;
+    overflow: hidden;
   }
 
   :local(.right) {
-    width: 25%;
-    border: 1px solid blue;
+    width: 35%;
+    min-width: 320px;
+    border: 1px solid #ddd;
+  }
+
+  :local(.choice-label) {
+    font-size: .8em;
+    margin-left: .5em;
   }
 }
 
 :local(.questions) {
   padding:1em;
+  font-family: Verdana,Arial,Helvetica,Geneva,sans-serif;
 
   :local(.widget) {
     margin-top:1em;
 
     h1 {
       margin-top:0;
+      font-size: 1.5em;
     }
   }
 

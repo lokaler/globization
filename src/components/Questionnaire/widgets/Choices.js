@@ -34,7 +34,7 @@ export default class Choices extends React.Component {
           onChange={boundRadioChange}
           checked={isSelected}
         />
-        {option[1]}
+        <span styleName="choice-label">{option[1]}</span>
       </div>);
   }
 

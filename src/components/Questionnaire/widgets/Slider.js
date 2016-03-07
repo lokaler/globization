@@ -17,20 +17,18 @@ export default class Slider extends React.Component {
     this.props.actions.updateUserInput(this.props.id, value);
   }
 
-  getSliderValue(inputs, options) {
-    return inputs[this.props.id] && inputs[this.props.id].value || options.value;
-  }
-
   render() {
     const options = { ...this.props.data.options };
-    const inputs = { ...this.props.questions.inputs };
     const sliderChangeBind = this.onChange.bind(this);
-
-    options.value = this.getSliderValue(inputs, options);
 
     return (
       <div key={this.props.id} styleName="widget">
-        <Rcslider {...options} onChange={sliderChangeBind}/>
+        <Rcslider
+          defaultValue={options.value}
+          min={options.min}
+          max={options.max}
+          onAfterChange={sliderChangeBind}
+        />
       </div>
     );
   }

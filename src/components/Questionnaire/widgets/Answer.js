@@ -54,7 +54,7 @@ export default class Answer extends React.Component {
 
   render() {
     if (typeof this.props.data === 'undefined') {
-      return <span />;
+      return null;
     }
 
     const questions = { ...this.props.questions };
