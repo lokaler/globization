@@ -7,6 +7,7 @@ import ReactDom from 'react-dom';
 import _ from 'lodash';
 import utils from './VisUtils.js'
 import colorbrewer from './libs/colorbrewer.js'
+import Dataset from '../../logic/Dataset.js'
 
 export default class GlobeComponent extends React.Component {
 
@@ -31,11 +32,14 @@ export default class GlobeComponent extends React.Component {
     this.path = d3.geo.path()
       .projection(this.projection);
 
-    this.color = d3.scale.quantile().range(colorbrewer.Oranges[9]).domain(this.props.master.dataset.domain);
+    this.color = d3.scale.quantile()
+      .range(colorbrewer[this.props.master.dataset.colorSet][this.props.master.dataset.colorNum])
+      .domain(this.props.master.dataset.domain);
 
     // dunnow if this should be done here!
     this.props.vis.topojson.forEach((d) =>{
       d.properties.fillColor = this.getFillColor(d.id);
+      d.properties.strokeColor = "#777777";
     });
 
     this.zoom = d3.behavior.zoom()
@@ -90,7 +94,7 @@ export default class GlobeComponent extends React.Component {
 
   getFillColor(id){
     const val = this.getValueForCountry(id);
-    return val ? this.color(val) : "#EEE";
+    return val ? this.color(val) : "url(#outerPattern)";
   }
 
   getValueForCountry(id){
@@ -142,13 +146,33 @@ export default class GlobeComponent extends React.Component {
 
 
   render() {
-    utils.log("render globe", this.props)
+    // utils.log("render globe", this.props)
 
     const paths = this.props.vis.topojson.map((d, i) => <path key={i} d={this.path(d)} fill={d.properties.fillColor}></path>);
 
     return (
       <div>
         <svg ref='globeSVG' width={ this.props.width } height={ this.props.height }>
+          <defs>
+            <pattern id="pattern-stripe"
+              width="4" height="4"
+              patternUnits="userSpaceOnUse"
+              patternTransform="rotate(45)">
+              <rect width="2" height="4" transform="translate(0,0)" fill="#EEEEEE"></rect>
+            </pattern>
+            <pattern id="outerPattern"
+                x="0" y="0"  width="4" height="4"
+                patternUnits="userSpaceOnUse"
+               >
+               <rect width="100%" height="100%" fill="url(#pattern-stripe)"></rect>
+           </pattern>
+            <mask id="mask-stripe">
+              <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-stripe)" />
+            </mask>
+            <pattern id="diagonal-stripe-3" patternUnits="userSpaceOnUse" width="10" height="10">
+              <image xlinkHref="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzMnLz4KPC9zdmc+" x="0" y="0" width="10" height="10" />
+            </pattern>
+          </defs>
           <g>
             {paths}
           </g>
