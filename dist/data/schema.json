@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+  "definitions": {
+
+    "arrayOfStrings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "functions": {
+      "required": ["functions"],
+      "properties": {
+        "functions": {
+          "$ref": "#/definitions/arrayOfStrings"
+        }
+      }
+    },
+
+    "text": {
+      "required": ["text"],
+      "properties": {
+        "text": {
+          "$ref": "#/definitions/arrayOfStrings"
+        }
+      }
+    },
+
+    "input": {
+      "required": ["input"],
+      "properties": {
+        "input": {
+          "type": "object",
+          "required": ["key", "type", "options"],
+          "properties": {
+            "key": { "type": "string" },
+            "type": { "enum": ["slider", "choices"] },
+            "options": { "type": "object" }
+          }
+        }
+      }
+    },
+
+    "answer": {
+      "required": ["answer"],
+      "properties": {
+        "answer": {
+          "type": "object",
+          "properties": {
+
+            "answerKey": {
+              "$ref": "#/definitions/arrayOfStrings"
+            },
+
+            "answerContext": {
+              "type": "object",
+              "patternProperties": {
+                ".*": {
+                  "type": "string"
+                }
+              }
+            },
+
+            "templates": {
+              "patternProperties": {
+                ".*": {
+                  "$ref": "#/definitions/arrayOfStrings"
+                }
+              }
+            }
+
+          }
+        }
+      }
+    },
+
+    "card": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "oneOf": [
+          { "$ref": "#/definitions/functions" },
+          { "$ref": "#/definitions/text" },
+          { "$ref": "#/definitions/input" },
+          { "$ref": "#/definitions/answer" }
+        ]
+      }
+    }
+  },
+
+  "type":"array",
+  "items": {
+    "type": "object",
+
+    "required": ["title", "content"],
+    "properties": {
+
+      "title":{
+        "type":"string"
+      },
+
+      "content":{
+        "$ref": "#/definitions/card"
+      }
+
+    }
+  }
+}
