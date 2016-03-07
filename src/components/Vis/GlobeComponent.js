@@ -6,6 +6,7 @@ import topojson from 'topojson';
 import ReactDom from 'react-dom';
 import _ from 'lodash';
 import utils from './VisUtils.js'
+import colorbrewer from './libs/colorbrewer.js'
 
 export default class GlobeComponent extends React.Component {
 
@@ -29,6 +30,13 @@ export default class GlobeComponent extends React.Component {
 
     this.path = d3.geo.path()
       .projection(this.projection);
+
+    this.color = d3.scale.quantile().range(colorbrewer.Oranges[9]).domain(this.props.master.dataset.domain);
+
+    // dunnow if this should be done here!
+    this.props.vis.topojson.forEach((d) =>{
+      d.properties.fillColor = this.getFillColor(d.id);
+    });
 
     this.zoom = d3.behavior.zoom()
       .center([0,0])
@@ -80,6 +88,19 @@ export default class GlobeComponent extends React.Component {
     this.svg.remove();
   }
 
+  getFillColor(id){
+    const val = this.getValueForCountry(id);
+    return val ? this.color(val) : "#EEE";
+  }
+
+  getValueForCountry(id){
+    const entry = _.find(this.props.master.master, { numeric: id+""});
+    let val = undefined;
+    if(entry) val = _.find(this.props.master.dataset.data, { iso: entry.alpha3 });
+
+    return val ? val.value : undefined;
+  }
+
   zoomToCountry(name){
     if(name == "random") name = _.sample(this.props.master.master).alpha3;
 
@@ -123,7 +144,7 @@ export default class GlobeComponent extends React.Component {
   render() {
     utils.log("render globe", this.props)
 
-    const paths = this.props.vis.topojson.map((d, i) => <path key={i} d={this.path(d)}></path>);
+    const paths = this.props.vis.topojson.map((d, i) => <path key={i} d={this.path(d)} fill={d.properties.fillColor}></path>);
 
     return (
       <div>
