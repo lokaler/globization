@@ -1,6 +1,9 @@
 import _ from 'lodash';
 
 class Dataset {
+  constructor(data) {
+    this.data = data;
+  }
   setData(data) {
     this.data = data;
   }
@@ -9,6 +12,9 @@ class Dataset {
   }
   getValueForCountry() {
     return this.find({});
+  }
+  getIsoForId(id) {
+    return this.find({ numeric: id.toString() });
   }
 }
 
