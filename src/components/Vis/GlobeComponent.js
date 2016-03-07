@@ -6,7 +6,7 @@ import topojson from 'topojson';
 import ReactDom from 'react-dom';
 import _ from 'lodash';
 import utils from './VisUtils.js'
-import colorbrewer from './libs/colorbrewer.js'
+import colorbrewer from 'colorbrewer'
 import Dataset from '../../logic/Dataset.js'
 import cssModules from 'react-css-modules';
 import styles from './globe.scss';
