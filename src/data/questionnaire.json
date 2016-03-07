@@ -52,10 +52,30 @@
             ]
           }
         }
+      }
+    ]
+  },
+  {"title": "fff",
+    "content":[
+      {
+        "functions": [
+          "getCountry"
+        ]
+      },
+      {
+        "text": [
+          "# 2. Wofür geben Sie Ihr Geld aus?",
+          "",
+          "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
+          "welche Produkte uns wie viel wert sind.",
+          "",
+          "*Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
+          "beispielsweise für Lebensmittel aus?*"
+        ]
       },
       {
         "input": {
-          "key": "choices1",
+          "key": "fooo2",
           "type": "choices",
           "options": {
             "choices": [
@@ -69,9 +89,8 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.choices1.value === 'never') && 'foo'",
-            "(inputs.choices1.value === 'sometimes') && 'bar'",
-            "(inputs.choices1.value === 'always') && 'baz'"
+            "(inputs.slider2.value < 10) && 'foo'",
+            "(inputs.slider2.value >= 10) && 'bar'"
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
@@ -80,19 +99,19 @@
           "templates": {
             "default": [],
             "foo": [
-              "NIE: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
+              "FOOO Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
               "ähnlich viel für Essen aus wie Sie."
             ],
             "bar": [
-              "MANCHMAL: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
+              "BAAAR Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
               "ähnlich viel für Essen aus wie Sie."
             ],
-            "baz": [
-              "Immer: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
+            "meat": [
+              "Für Ihren wöchentlichen",
+              "Konsum müssten somit {{ wertFleisch }}",
+              "Kilogramm Fleisch produziert werden."
             ]
           }
         }
@@ -108,7 +127,7 @@
       },
       {
         "text": [
-          "# 2. Wofür geben Sie Ihr Geld aus?",
+          "# 3. Wofür geben Sie Ihr Geld aus?",
           "",
           "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
           "welche Produkte uns wie viel wert sind.",

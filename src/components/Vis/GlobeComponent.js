@@ -8,6 +8,10 @@ import _ from 'lodash';
 import utils from './VisUtils.js'
 import colorbrewer from './libs/colorbrewer.js'
 import Dataset from '../../logic/Dataset.js'
+import cssModules from 'react-css-modules';
+import styles from './globe.scss';
+
+@cssModules(styles)
 
 export default class GlobeComponent extends React.Component {
 
@@ -24,8 +28,8 @@ export default class GlobeComponent extends React.Component {
     utils.log("constructor globe", this.props)
     this.sensetivity = 0.25;
     this.svg = null;
-    // this.dataset = new Dataset(this.props.master.dataset);
 
+    this.dataset = new Dataset(this.props.master.dataset);
 
     this.projection = d3.geo.orthographic()
       .translate([this.props.width / 2, this.props.height / 2])
@@ -40,7 +44,7 @@ export default class GlobeComponent extends React.Component {
 
     // dunnow if this should be done here!
     this.props.vis.topojson.forEach((d) =>{
-      // d.properties.iso = this.dataset.getIsoForId(d.id);
+      d.properties.iso = this.dataset.getIsoForId(d.id);
       d.properties.fillColor = this.getFillColor(d.id);
       d.properties.strokeColor = "#777777";
     });
@@ -97,7 +101,8 @@ export default class GlobeComponent extends React.Component {
 
   getFillColor(id){
     const val = this.getValueForCountry(id);
-    return val ? this.color(val) : "url(#outerPattern)";
+    // return val ? this.color(val) : "url(#pattern-stripe)";
+    return val ? this.color(val) : "#EEE";
   }
 
   getValueForCountry(id){
@@ -155,26 +160,9 @@ export default class GlobeComponent extends React.Component {
 
     return (
       <div>
-        <svg ref='globeSVG' width={ this.props.width } height={ this.props.height }>
+        <svg className='globe' ref='globeSVG' width={ this.props.width } height={ this.props.height }>
           <defs>
-            <pattern id="pattern-stripe"
-              width="4" height="4"
-              patternUnits="userSpaceOnUse"
-              patternTransform="rotate(45)">
-              <rect width="2" height="4" transform="translate(0,0)" fill="#EEEEEE"></rect>
-            </pattern>
-            <pattern id="outerPattern"
-                x="0" y="0"  width="4" height="4"
-                patternUnits="userSpaceOnUse"
-               >
-               <rect width="100%" height="100%" fill="url(#pattern-stripe)"></rect>
-           </pattern>
-            <mask id="mask-stripe">
-              <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-stripe)" />
-            </mask>
-            <pattern id="diagonal-stripe-3" patternUnits="userSpaceOnUse" width="10" height="10">
-              <image xlinkHref="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzMnLz4KPC9zdmc+" x="0" y="0" width="10" height="10" />
-            </pattern>
+            { utils.svgStripePattern }
           </defs>
           <g>
             {paths}

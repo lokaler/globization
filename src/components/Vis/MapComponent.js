@@ -122,7 +122,7 @@ export default class MapComponent extends React.Component {
   render() {
     utils.log("render map")
 
-    const paths = this.props.vis.topojson.map((d, i) => <path key={i} d={this.path(d)}></path>);
+    const paths = this.props.vis.topojson.map((d, i) => <path key={i} d={this.path(d)} fill={d.properties.fillColor}></path>);
 
     return (
       <div>

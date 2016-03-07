@@ -18,4 +18,4 @@ class Dataset {
   }
 }
 
-export { Dataset };
+export default Dataset;
