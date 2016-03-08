@@ -4,6 +4,10 @@ import React, { PropTypes } from 'react';
 import GlobeComponent from './GlobeComponent';
 import MapComponent from './MapComponent';
 import VisUtils from './VisUtils';
+import cssModules from 'react-css-modules';
+import styles from './vis.scss';
+
+@cssModules(styles)
 
 export default class Globe extends React.Component {
 
@@ -14,7 +18,6 @@ export default class Globe extends React.Component {
 
   constructor(props) {
     super(props);
-
   }
 
   componentDidMount() {
@@ -51,13 +54,13 @@ export default class Globe extends React.Component {
     const random = this.random.bind(this);
 
     return (
-      <div>
+      <div className="vis">
         { Globe }
-        <div>
-          <button onClick={ changeGlobe }>Globus</button>
-          <button onClick={ changeMap }>Karte</button>
-          <button onClick={ changePlot }>Diagramm</button>
-          <button onClick={ random }>Random</button>
+        <div className="menu">
+          <div className="globe" onClick={ changeGlobe }></div>
+          <div className="map" onClick={ changeMap }></div>
+          <div className="scatter" onClick={ changePlot }></div>
+          <div onClick={ random }>R</div>
         </div>
       </div>
     );

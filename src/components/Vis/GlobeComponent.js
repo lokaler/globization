@@ -2,8 +2,6 @@
 
 import React, { PropTypes } from 'react';
 import d3 from 'd3';
-import topojson from 'topojson';
-import ReactDom from 'react-dom';
 import _ from 'lodash';
 import utils from './VisUtils.js'
 import colorbrewer from 'colorbrewer'
