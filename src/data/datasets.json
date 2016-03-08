@@ -386,7 +386,7 @@
       "decription":"Meat supply kg per capita by country 2011",
       "domain":[
          0,
-         63.23
+         3
       ],
       "skala":[
          0,
@@ -1095,8 +1095,8 @@
       "name":"Foodwaste",
       "decription":"Foodwaste auf Consumer-Ebene pro Kopf",
       "domain":[
-         0,
-         63.23
+         1.5,
+         2.7
       ],
       "skala":[
          0,
@@ -1222,7 +1222,7 @@
       "decription":"Kg Elektroschrott pro Kopf pro Land",
       "domain":[
          0,
-         63.23
+         28.3
       ],
       "skala":[
          0,
