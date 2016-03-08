@@ -23,7 +23,8 @@ export default function questions(state = initialState, action) {
       return objectAssign({}, state, { dataset: action.data[0], datasets: action.data });
     }
     case ActionTypes.SET_DATASET: {
-      return objectAssign({}, state, { dataset: state.datasets[action.id] });
+      const newDataSet = state.datasets.filter((d,i) => d.name == action.name)[0];
+      return objectAssign({}, state, { dataset: newDataSet });
     }
     default:
       return state;

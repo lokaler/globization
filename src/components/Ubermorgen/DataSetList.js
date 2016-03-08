@@ -19,13 +19,13 @@ export default class DataSetList extends React.Component {
 
   }
 
-  handleClick(id) {
-    this.props.actions.setDataSet(id);
+  handleClick(name) {
+    this.props.actions.setDataSet(name);
   }
 
   render() {
     const list = this.props.master.datasets.map((d, i) => {
-      return <li key={i} onClick={ this.handleClick.bind(this, i) }>{ d.name }</li>;
+      return <li key={i} onClick={ this.handleClick.bind(this, d.name) }>{ d.name }</li>;
     });
 
     return (

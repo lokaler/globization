@@ -62,7 +62,7 @@ export default function questions(state = initialState, action) {
     }
     case ActionTypes.LOADING_QUESTION_DATA:
       return state;
-    case ActionTypes.SET_CARD_INDEX:
+    case ActionTypes.SET_CARD:
       return objectAssign({}, state, { activeCard: action.index });
     default:
       return state;

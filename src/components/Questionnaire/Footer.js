@@ -11,9 +11,9 @@ export default class Footer extends React.Component {
   }
 
   getClickHandler(cardIndex) {
-    return (cardIndex !== this.props.questions.activeCard) ?
-    () => {
-      this.props.actions.setCardIndex(cardIndex);
+    return (cardIndex !== this.props.questions.activeCard) ? () => {
+      const dataId = 'Ewaste';
+      this.props.actions.setCard(cardIndex, dataId);
     } : null;
   }
 

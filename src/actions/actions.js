@@ -45,8 +45,11 @@ export function requestDataSets(url) {
   };
 }
 
-export function setCardIndex(i) {
-  return { type: types.SET_CARD_INDEX, index: i };
+export function setCard(index, dataId) {
+  return dispatch => {
+    dispatch(setDataSet(dataId));
+    dispatch({ type: types.SET_CARD, index: index });
+  }
 }
 
 // slider and chioces actions
@@ -59,10 +62,10 @@ export function updateUserInput(key, value) {
 }
 
 // master Datareducer
-export function setDataSet(id) {
+export function setDataSet(name) {
   return {
     type: types.SET_DATASET,
-    id
+    name
   };
 }
 
