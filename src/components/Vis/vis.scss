@@ -35,4 +35,17 @@
       background-image: url("./img/scatter.svg");
     }
   }
+
+  .legend {
+    font-size: 12px;
+    padding: 5px;
+    background: rgb(255, 255, 255);
+    clear: left;
+    bottom: 10px;
+    left: 10px;
+    position: absolute;
+    z-index: 100;
+    width: 400px;
+
+  }
 }

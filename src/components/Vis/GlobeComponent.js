@@ -37,13 +37,13 @@ export default class GlobeComponent extends React.Component {
       .projection(this.projection);
 
     this.color = d3.scale.quantile()
-      .range(colorbrewer[this.props.master.dataset.colorSet][this.props.master.dataset.colorNum])
-      .domain(this.props.master.dataset.domain);
+      // .range(colorbrewer[this.props.master.dataset.colorSet][this.props.master.dataset.colorNum])
+      // .domain(this.props.master.dataset.domain);
 
     // dunnow if this should be done here!
     this.props.vis.topojson.forEach((d) =>{
       d.properties.iso = this.dataset.getIsoForId(d.id);
-      d.properties.fillColor = this.getFillColor(d.id);
+      //d.properties.fillColor = this.getFillColor(d.id);
       d.properties.strokeColor = "#777777";
     });
 

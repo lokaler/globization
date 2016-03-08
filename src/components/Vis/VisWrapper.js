@@ -62,6 +62,9 @@ export default class Globe extends React.Component {
           <div className="scatter" onClick={ changePlot }></div>
           <div onClick={ random }>R</div>
         </div>
+        <div className="legend">
+          Legende
+        </div>
       </div>
     );
   }

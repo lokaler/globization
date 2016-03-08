@@ -3,6 +3,7 @@ import cssModules from 'react-css-modules';
 import styles from './styles.scss';
 import Vis from '../Vis/VisWrapper';
 import Questionnaire from '../Questionnaire/Questionnaire';
+import DataSetList from './DataSetList';
 
 @cssModules(styles)
 export default class UbermorgenApp extends React.Component {
@@ -29,6 +30,9 @@ export default class UbermorgenApp extends React.Component {
           <div styleName="right">
             <Questionnaire {...this.props}/>
           </div>
+        </div>
+        <div>
+          <DataSetList {...this.props}/>
         </div>
       </div>
     );
