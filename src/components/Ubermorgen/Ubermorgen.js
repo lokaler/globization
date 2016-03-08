@@ -14,6 +14,10 @@ export default class UbermorgenApp extends React.Component {
     master: PropTypes.object.isRequired
   };
 
+  componentDidMount() {
+    this.props.actions.requestDataSets('./data/datasets.json');
+  }
+
   render() {
     return (
       <div>

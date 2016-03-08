@@ -8,6 +8,10 @@ export function receiveQuestionData(jsonData) {
   return { type: types.RECEIVE_QUESTION_DATA, data: jsonData };
 }
 
+export function receiveDataSets(jsonData) {
+  return { type: types.RECEIVE_QUESTION_DATA, data: jsonData };
+}
+
 export function errorQuestionData(err) {
   console.log(err)
   return { type: types.ERROR_QUESTION_DATA, error: err };
@@ -25,6 +29,19 @@ export function requestQuestionData(url) {
       .then(jsonData => {
         validateData(jsonData);
         dispatch(receiveQuestionData(jsonData));
+      })
+      .catch((err) => dispatch(errorQuestionData(err)));
+  };
+}
+
+export function requestDataSets(url) {
+  return dispatch => {
+    dispatch(loadingQuestionData());
+    fetch(url)
+      .then(res => res.json())
+      .then(jsonData => {
+        validateData(jsonData);
+        dispatch(receiveDataSets(jsonData));
       })
       .catch((err) => dispatch(errorQuestionData(err)));
   };
