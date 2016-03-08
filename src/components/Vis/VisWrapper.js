@@ -42,10 +42,10 @@ export default class Globe extends React.Component {
     let Globe = <div></div>;
 
     if(this.props.vis.type === 'globe'){
-      Globe = <GlobeComponent {...this.props} width={700} height={500} />
+      Globe = <GlobeComponent {...this.props} width={550} height={500} />
     }
     if(this.props.vis.type === 'map'){
-      Globe = <MapComponent {...this.props} width={700} height={500} />
+      Globe = <MapComponent {...this.props} width={550} height={500} />
     }
 
     const changeGlobe = this.changeType.bind(this, 'globe');

@@ -9,6 +9,7 @@
 :local(.container) {
   display: flex;
   flex-direction: row;
+  width: 870px;
 
   :local(.left) {
     border: 1px solid #ddd;
