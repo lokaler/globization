@@ -41,11 +41,12 @@ export default class GlobeComponent extends React.Component {
       // .domain(this.props.master.dataset.domain);
 
     // dunnow if this should be done here!
-    this.props.vis.topojson.forEach((d) =>{
+    this.geometries = this.props.vis.topojson.map((d) => d);
+    this.geometries.forEach((d) => {
       d.properties.iso = this.dataset.getIsoForId(d.id);
       //d.properties.fillColor = this.getFillColor(d.id);
       d.properties.strokeColor = "#777777";
-    });
+    })
 
     this.zoom = d3.behavior.zoom()
       .center([0,0])
@@ -99,17 +100,16 @@ export default class GlobeComponent extends React.Component {
     this.svg.remove();
   }
 
-  getFillColor(id){
-    const val = this.getValueForCountry(id);
+  getFillColor(id, data){
+    const val = this.getValueForCountry(id, data);
     // return val ? this.color(val) : "url(#pattern-stripe)";
     return val ? this.color(val) : "#EEE";
   }
 
-  getValueForCountry(id){
+  getValueForCountry(id, data){
     const entry = _.find(this.props.master.master, { numeric: id+""});
     let val = undefined;
-    if(entry) val = _.find(this.props.master.dataset.data, { iso: entry.alpha3 });
-    // utils.log(entry, val)
+    if(entry) val = _.find(data, { iso: entry.alpha3 });
     return val ? val.value : undefined;
   }
 
@@ -139,6 +139,7 @@ export default class GlobeComponent extends React.Component {
 
 
   shouldComponentUpdate(nextProps) {
+    utils.log("shouldComponentUpdate", nextProps, this);
     let update = true;
 
     if(nextProps.vis.animation) {
@@ -146,14 +147,15 @@ export default class GlobeComponent extends React.Component {
       update = false;
     }
 
-    if(this.props.master.dataset) {
+    if(nextProps.master.dataset) {
       this.color
-        .range(colorbrewer[this.props.master.dataset.colorSet][this.props.master.dataset.colorNum])
-        .domain(this.props.master.dataset.domain);
+        .range(colorbrewer[nextProps.master.dataset.colorSet][nextProps.master.dataset.colorNum])
+        .domain(nextProps.master.dataset.domain);
 
-      this.props.vis.topojson.forEach((d) =>{
-        d.properties.fillColor = this.getFillColor(d.id);
-        d.properties.strokeColor = "#777777";
+      // console.log(nextProps.master.dataset, d3.extent(nextProps.master.dataset.data, (d) => d.value*1))
+
+      this.geometries.forEach((d) =>{
+        d.properties.fillColor = this.getFillColor(d.id, nextProps.master.dataset.data);
       });
     }
 
