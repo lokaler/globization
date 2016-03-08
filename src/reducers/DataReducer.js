@@ -28,7 +28,7 @@ const initialState = {
 
 export default function questions(state = initialState, action) {
   switch (action.type) {
-    case ActionTypes.RECEIVE_QUESTION_DATA: {
+    case ActionTypes.RECEIVE_DATASETS: {
       return objectAssign({}, state, { datasets: action.data });
     }
     default:

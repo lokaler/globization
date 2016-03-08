@@ -9,7 +9,7 @@ export function receiveQuestionData(jsonData) {
 }
 
 export function receiveDataSets(jsonData) {
-  return { type: types.RECEIVE_QUESTION_DATA, data: jsonData };
+  return { type: types.RECEIVE_DATASETS, data: jsonData };
 }
 
 export function errorQuestionData(err) {
@@ -36,11 +36,9 @@ export function requestQuestionData(url) {
 
 export function requestDataSets(url) {
   return dispatch => {
-    dispatch(loadingQuestionData());
     fetch(url)
       .then(res => res.json())
       .then(jsonData => {
-        validateData(jsonData);
         dispatch(receiveDataSets(jsonData));
       })
       .catch((err) => dispatch(errorQuestionData(err)));
