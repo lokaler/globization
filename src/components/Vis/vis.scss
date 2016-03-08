@@ -9,11 +9,12 @@
     left: 10px;
     position: absolute;
     z-index: 100;
-    width: 50px;
+    width: 45px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 
     div {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
       padding: 10px;
       float: left;
       background-repeat:no-repeat;
@@ -36,16 +37,26 @@
     }
   }
 
-  .legend {
+  .footer {
     font-size: 12px;
-    padding: 5px;
+    padding: 10px;
     background: rgb(255, 255, 255);
     clear: left;
     bottom: 10px;
     left: 10px;
     position: absolute;
     z-index: 100;
-    width: 400px;
+    width: 80%;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 
+    .legend {
+      float: right;
+      font-size: 10px;
+
+      div {
+        padding: 10px;
+        float: left;
+      }
+    }
   }
 }

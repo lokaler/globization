@@ -140,14 +140,14 @@ export default class GlobeComponent extends React.Component {
 
   shouldComponentUpdate(nextProps) {
     utils.log("shouldComponentUpdate", nextProps, this);
-    let update = true;
+    let update = false;
 
     if(nextProps.vis.animation) {
       this[nextProps.vis.animation.action](nextProps.vis.animation.payload);
       update = false;
     }
 
-    if(nextProps.master.dataset) {
+    if(nextProps.master.dataset != this.props.master.dataset) {
       this.color
         .range(colorbrewer[nextProps.master.dataset.colorSet][nextProps.master.dataset.colorNum])
         .domain(nextProps.master.dataset.domain);
@@ -157,6 +157,8 @@ export default class GlobeComponent extends React.Component {
       this.geometries.forEach((d) =>{
         d.properties.fillColor = this.getFillColor(d.id, nextProps.master.dataset.data);
       });
+
+      update = true;
     }
 
     utils.log("shouldComponentUpdate", update ? "yes": "no");
@@ -167,7 +169,13 @@ export default class GlobeComponent extends React.Component {
   render() {
     utils.log("render globe")
 
-    const paths = this.props.vis.topojson.map((d, i) => <path key={i} d={this.path(d)} fill={d.properties.fillColor}></path>);
+    const paths = this.props.vis.topojson.map((d, i) => <path key={ i } d={this.path(d)} fill={d.properties.fillColor}></path>);
+    const graticule = <path className="graticule" key="graticule" d={ this.path(d3.geo.graticule()()) } />;
+
+    const name = this.props.master.dataset ? this.props.master.dataset.name : "Keine Daten";
+    const legendFields = this.color.range().map((d,i) => {
+      return <div key={ i } style={{ background: d }}>{ (i/9 * this.color.domain()[1]).toFixed(2) }</div>;
+    })
 
     return (
       <div>
@@ -176,9 +184,16 @@ export default class GlobeComponent extends React.Component {
             { utils.svgStripePattern }
           </defs>
           <g>
-            {paths}
+            { graticule }
+            { paths }
           </g>
         </svg>
+        <div className="footer">
+          { name }
+           <div className="legend">
+           { legendFields }
+           </div>
+        </div>
       </div>
     );
   }
