@@ -58,6 +58,13 @@ export function updateUserInput(key, value) {
   };
 }
 
+// master Datareducer
+export function setDataSet(id) {
+  return {
+    type: types.SET_DATASET,
+    id
+  };
+}
 
 // vis actions
 export function updatePos(latlng) {

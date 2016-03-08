@@ -74,6 +74,8 @@ export default class GlobeComponent extends React.Component {
   }
 
   componentDidMount() {
+    utils.log("componentDidMount", this.props)
+
     this.svg = d3.select(this.refs.globeSVG).call(this.zoom);
     this.svg.call(this.zoom
       .scale(this.props.vis.zoom)
@@ -107,7 +109,7 @@ export default class GlobeComponent extends React.Component {
     const entry = _.find(this.props.master.master, { numeric: id+""});
     let val = undefined;
     if(entry) val = _.find(this.props.master.dataset.data, { iso: entry.alpha3 });
-
+    // utils.log(entry, val)
     return val ? val.value : undefined;
   }
 
@@ -128,8 +130,6 @@ export default class GlobeComponent extends React.Component {
     p[0] = -p[0]/this.sensetivity * scale;
     p[1] = p[1]/this.sensetivity * scale;
 
-    console.log(country, p)
-
     this.svg
       //.call(this.zoom.scale(this.props.vis.zoom).translate(this.props.vis.translate))
       .transition()
@@ -139,20 +139,31 @@ export default class GlobeComponent extends React.Component {
 
 
   shouldComponentUpdate(nextProps) {
-    utils.log("shouldComponentUpdate", nextProps.vis.animation ? "no": "yes");
+    let update = true;
 
-    const d = nextProps.vis.animation;
-    if(d){
-      this[d.action](d.payload);
-      return false;
-    } else {
-      return true;
+    if(nextProps.vis.animation) {
+      this[nextProps.vis.animation.action](nextProps.vis.animation.payload);
+      update = false;
     }
+
+    if(this.props.master.dataset) {
+      this.color
+        .range(colorbrewer[this.props.master.dataset.colorSet][this.props.master.dataset.colorNum])
+        .domain(this.props.master.dataset.domain);
+
+      this.props.vis.topojson.forEach((d) =>{
+        d.properties.fillColor = this.getFillColor(d.id);
+        d.properties.strokeColor = "#777777";
+      });
+    }
+
+    utils.log("shouldComponentUpdate", update ? "yes": "no");
+    return update;
   }
 
 
   render() {
-    // utils.log("render globe", this.props)
+    utils.log("render globe")
 
     const paths = this.props.vis.topojson.map((d, i) => <path key={i} d={this.path(d)} fill={d.properties.fillColor}></path>);
 

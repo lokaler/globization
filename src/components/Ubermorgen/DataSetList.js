@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './styles.scss';
@@ -17,11 +19,17 @@ export default class DataSetList extends React.Component {
 
   }
 
+  handleClick(id) {
+    this.props.actions.setDataSet(id);
+  }
+
   render() {
-    const list = this.props.master.datasets.map((d, i) => <li key={i} >{ d.name }</li>);
+    const list = this.props.master.datasets.map((d, i) => {
+      return <li key={i} onClick={ this.handleClick.bind(this, i) }>{ d.name }</li>;
+    });
 
     return (
-      <div>
+      <div className="DataSetList">
         <h5>DataSets</h5>
         <ul>
           { list }

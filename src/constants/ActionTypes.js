@@ -11,3 +11,4 @@ export const FOO = 'FOO';
 export const CHANGE_TYPE = 'CHANGE_TYPE';
 export const CHANGE_VIS = 'CHANGE_VIS';
 export const ZOOM_TO_COUNTRY = 'ZOOM_TO_COUNTRY';
+export const SET_DATASET = 'SET_DATASET';

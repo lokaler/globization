@@ -69,7 +69,7 @@
   :local(.pagination-item) {
     @include pagination-item;
     border-color: #ddd;
-    
+
     &:hover {
       border-color: #777;
     }
@@ -106,5 +106,11 @@
       border-color: transparent transparent transparent #8BC34A;
     }
 
+  }
+}
+
+.DataSetList {
+  li {
+    cursor: pointer;
   }
 }

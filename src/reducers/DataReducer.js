@@ -20,7 +20,10 @@ const initialState = {
 export default function questions(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.RECEIVE_DATASETS: {
-      return objectAssign({}, state, { datasets: action.data });
+      return objectAssign({}, state, { dataset: action.data[0], datasets: action.data });
+    }
+    case ActionTypes.SET_DATASET: {
+      return objectAssign({}, state, { dataset: state.datasets[action.id] });
     }
     default:
       return state;
