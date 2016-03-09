@@ -22,7 +22,6 @@ export default class UbermorgenApp extends React.Component {
   render() {
     return (
       <div>
-        <h3 {...this.props}>UbermorgenApp</h3>
         <div styleName="container">
           <div styleName="left">
             <Vis {...this.props}/>
