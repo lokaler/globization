@@ -2,8 +2,6 @@
 
 import * as ActionTypes from '../constants/ActionTypes';
 import objectAssign from 'object-assign';
-import worldData from '../data/world-110m.json';
-import topojson from 'topojson';
 
 const initialState = {
   debug:true,
@@ -14,11 +12,13 @@ const initialState = {
   scale: 245,
   zoom: 1,
   rotate: [0, 0],
-  topojson: topojson.feature(worldData, worldData.objects.countries).features,
   translate: [0, 0],
   type: 'globe',
-  animation:null
+  animation:null,
+  active:null
 };
+
+
 
 function findeCountry(name){
   console.log(name);

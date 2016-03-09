@@ -3,17 +3,29 @@
 import * as ActionTypes from '../constants/ActionTypes';
 import objectAssign from 'object-assign';
 
-// import dataset1 from '../data/dataset1.csv';
 import master from '../data/master.csv';
+import worldData from '../data/world-110m.json';
+import topojson from 'topojson';
 import d3 from 'd3';
+import _ from 'lodash';
 
 // const masterMap = d3.map(master, (d) => { d.alpha3 });
 // console.log(d3.max(dataset1, function(d){ return d.value*1; }));
 // console.log(JSON.stringify(dataset1));
 
+function makeTopoJson(){
+  const t = topojson.feature(worldData, worldData.objects.countries).features;
+  t.forEach((d)=> {
+    const e = _.find(master, { numeric: d.id+""});
+    d.properties.iso = e ? e.alpha3 : "";
+  });
+  return t;
+}
+
 const initialState = {
   dataset: null,
   datasets: [],
+  topojson: makeTopoJson(),
   master
 };
 
