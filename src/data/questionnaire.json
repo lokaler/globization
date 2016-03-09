@@ -1,10 +1,13 @@
 [
-  {"title": "fff",
+  {"title": "1. Karte",
     "content":[
       {
         "functions": [
           "getCountry"
         ]
+      },
+      {
+        "dataset": "Lebensmittelausgaben"
       },
       {
         "text": [
@@ -23,39 +26,40 @@
           "type": "slider",
           "options": {
             "min": 0,
-            "value": 30,
-            "max": 42
+            "value": 50,
+            "max": 100
           }
         }
       },
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider.value < 10) && 'foo'",
-            "(inputs.slider.value >= 10) && 'bar'"
+            "(inputs.slider.value < 15) && 'antwort_a'",
+            "(inputs.slider.value >15 && inputs.slider.value <50 && 'antwort_b'"
+            "(inputs.slider.value >= 50) && 'antwort_c'"
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
-            "wertFleisch": "inputs.slider.value * 1.25"
+            "wertLebensmittel": "inputs.slider.value * 1.25"
           },
           "templates": {
             "default": [],
-            "foo": [
-              "<10 : Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
+            "antwort_a": [
+              "Weniger als 15 Prozent: ASie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in [Land_Min], die nur [Wert_Land_Min] Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
             ],
-            "bar": [
-              ">= 10: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
-            ]
+            "antwort_b": [
+              "15 bis 50 Prozent: Menschen in [LAND_Ausgaben] geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
+              ],
+            "antwort_c": [
+                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in [Land_Max] den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich [Wert_Land_max] Prozent."
+              ],
+
           }
         }
       }
     ]
   },
-  {"title": "fff",
+  {"title": "2. Karte",
     "content":[
       {
         "functions": [
@@ -64,18 +68,16 @@
       },
       {
         "text": [
-          "# 2. Wofür geben Sie Ihr Geld aus?",
+          "# Worauf achten Sie beim Kauf?",
           "",
-          "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
-          "welche Produkte uns wie viel wert sind.",
+          "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
           "",
-          "*Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
-          "beispielsweise für Lebensmittel aus?*"
+          "*Kaufen Sie Fairtrade-Produkte?*"
         ]
       },
       {
         "input": {
-          "key": "fooo2",
+          "key": "fairtrade",
           "type": "choices",
           "options": {
             "choices": [
@@ -89,8 +91,7 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider2.value < 10) && 'foo'",
-            "(inputs.slider2.value >= 10) && 'bar'"
+            "(inputs.choices.value )"
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
@@ -98,27 +99,146 @@
           },
           "templates": {
             "default": [],
-            "foo": [
-              "FOOO Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
+            "never": [
+              "Da geht noch was – vorausgesetzt Ihr Portemonnaie erlaubt es! Würden Sie Fairtrade-Produkte kaufen, wenn Sie mehr darüber wüssten, was sich hinter dieser Bezeichnung verbirgt? Einen Überblick über verschiedene Fairtrade-, Bio- und Öko-Siegel gibt zum Beispiel die Webseite [Nachhaltiger Warenkorb](http://nachhaltiger-warenkorb.de/)"
             ],
-            "bar": [
-              "BAAAR Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
+            "sometimes": [
+              "Damit liegen Sie voll im Trend. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
             ],
-            "meat": [
-              "Für Ihren wöchentlichen",
-              "Konsum müssten somit {{ wertFleisch }}",
-              "Kilogramm Fleisch produziert werden."
+            "always": [
+              "Sie können sich zu den Trendsettern unter den Fairtrade-Käufern zählen. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
             ]
-          }
-        }
-      }
+          },
+          {
+            "text": [
+
+              "*Kaufen Sie Bio-Produkte?*"
+            ]
+          },
+          {
+            "input": {
+              "key": "bioproduct",
+              "type": "choices",
+              "options": {
+                "choices": [
+                  ["never", "Nie"],
+                  ["sometimes", "Manchmal"],
+                  ["always", "Immer"]
+                ]
+              }
+            }
+          },
+          {
+            "answer": {
+              "answerKey": [
+                "(inputs.choices.value )"
+              ],
+              "answerContext": {
+                "landAusgaben": "getCountry(inputs)",
+                "wertFleisch": "inputs.slider.value * 1.25"
+              },
+              "templates": {
+                "default": [],
+                "never": [
+                  "Damit gehören Sie zur Minderheit: Laut einer repräsentativen Umfrage aus dem Jahr 2013 kauft nur jeder vierte Deutsche nie Bio-Produkte. Rund jeder Fünfte kauft sie häufig oder fast ausschließlich. Längst werden viele davon aus dem Ausland importiert, um den Bedarf zu decken. Lesen Sie dazu auch unsere [Reportage](http://)."
+                ],
+                "sometimes": [
+                  "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere  [Reportage](http://)."
+                ],
+                "always": [
+                  "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://)."
+                ]
+              },
+              {
+                "text": [
+
+                  "*Kaufen Sie regionale Produkte?*"
+                ]
+              },
+              {
+                "input": {
+                  "key": "regionalproducts",
+                  "type": "choices",
+                  "options": {
+                    "choices": [
+                      ["never", "Nie"],
+                      ["sometimes", "Manchmal"],
+                      ["always", "Immer"]
+                    ]
+                  }
+                }
+              },
+              {
+                "answer": {
+                  "answerKey": [
+                    "(inputs.choices.value )"
+                  ],
+                  "answerContext": {
+                    "landAusgaben": "getCountry(inputs)",
+                    "wertFleisch": "inputs.slider.value * 1.25"
+                  },
+                  "templates": {
+                    "default": [],
+                    "never": [
+                      "Ganz allein sind Sie damit nicht: Rund elf Prozent der deutschen Verbraucher achten laut einer Umfrage aus dem Jahr 2013 beim Einkaufen gar nicht auf die Herkunft der Produkte. Für Spiegel-Online-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal. (Link) Erdbeeren im Winter gibt’s dann aber leider nicht und so manche Südfrucht scheidet ganz aus."
+                    ],
+                    "sometimes": [
+                      "Damit gehören Sie zur Mehrheit: Laut einer Umfrage aus dem Jahr 2013 bevorzugen gut zwei Drittel der deutschen Verbraucher regionale Lebensmittel – Frauen mit 72 Prozent noch etwas häufiger als Männer mit 63 Prozent. Für Spiegel-Online-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal. (Link)"
+                    ],
+                    "always": [
+                      "Damit gehören Sie zu den Menschen, die saisonbedingt auf bestimmte Obst- und Gemüsesorten verzichten. Laut einer repräsentativen Umfrage aus dem Jahr 2013 wären 87 Prozent der Deutschen grundsätzlich bereit, ihre Obst- und Gemüseauswahl für einige Monate im Jahr einzuschränken. Für Spiegel-Online-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal. (Link)"
+                    ]
+                  },
+                  {
+                    "text": [
+                      "Nachhaltigkeitstipp: Ein per Frachtschiff importierter Apfel aus Neuseeland ist nicht unbedingt klimaschädlicher als ein deutscher Apfel, der monatelang im Kühlhaus lagert. Der Naturschutzbund Deutschland empfiehlt jedoch, auf eingeflogene Ware zu verzichten – das sind meist schnell verderbliche Obst- und Gemüsesorten, die von außerhalb Europas importiert werden. Mindestens ebenso gewinnbringend für den Klimaschutz ist jedoch: Kurze Strecken zum Supermarkt nicht mit dem Auto zurücklegen."
+                    ]
+                  },
+                  {
+                    "text": [
+                      "Auf Überflüssiges verzichten spart Geld und Ressourcen. Schätzen Sie:",
+                      "",
+                      "*Wie viel Prozent der Kleidung in Ihrem Schrank tragen Sie so gut wie nie?*"
+                    ]
+                  },
+                  {
+                    "input": {
+                      "key": "slider2",
+                      "type": "slider",
+                      "options": {
+                        "min": 0,
+                        "value": 50,
+                        "max": 100
+                      }
+                    }
+                  },
+
+                  {
+                    "answer": {
+                      "answerKey": [
+                        "(inputs.slider.value < 50) && 'antwort_a2'"
+                        "(inputs.slider.value >= 50) && 'antwort_b2'"
+                      ],
+                      "templates": {
+                        "default": [],
+                        "antwort_a2": [
+                          "Damit liegen Sie unter dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
+                        ],
+                        "antwort_b2": [
+                          "Damit liegen Sie über dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
+                        ]
+                      },
+
+                      {
+                        "text": [
+                          "Nachhaltigkeits-Tipp: Im Netz lassen sich Kleider tauschen, leihen oder secondhand kaufen, zum Beispiel auf den Webseiten Kleiderkreisel.de oder Kleiderkorb.de."
+                        ]
+                      }
+                    }
+
     ]
   },
-  {"title": "fff",
+  {"title": "3. Karte",
     "content":[
       {
         "functions": [
@@ -126,14 +246,14 @@
         ]
       },
       {
+        "dataset": "Fleischkonsum"
+      },
+      {
         "text": [
-          "# 3. Wofür geben Sie Ihr Geld aus?",
+          "Manche Produkte verbrauchen besonders viele Ressourcen: Die Herstellung von einem Kilogramm Rindfleisch zum Beispiel beansprucht im Durchschnitt gut 50 mal mehr Wasser und rund 100 mal mehr Land als die Produktion von einem Kilo Kartoffeln.:",
           "",
-          "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
-          "welche Produkte uns wie viel wert sind.",
-          "",
-          "*Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
-          "beispielsweise für Lebensmittel aus?*"
+          "*Wie viel Fleisch essen Sie pro Woche?*",
+          "(Fleischgericht ≈ 200 Gramm, Bratwurst ≈ 100 Gramm, Wurstbrot ≈ 20 Gramm)"
         ]
       },
       {
@@ -142,29 +262,20 @@
           "type": "slider",
           "options": {
             "min": 0,
-            "value": 30,
-            "max": 42
+            "value": 3,
+            "max": 7
           }
         }
       },
-      {
-        "input": {
-          "key": "fooo2",
-          "type": "choices",
-          "options": {
-            "choices": [
-              ["never", "Nie"],
-              ["sometimes", "Manchmal"],
-              ["always", "Immer"]
-            ]
-          }
-        }
-      },
+
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider2.value < 10) && 'foo'",
-            "(inputs.slider2.value >= 10) && 'bar'"
+            "(inputs.slider.value < 1) && 'antwort_a3'",
+            "(inputs.slider.value >=1 && inputs.slider.value <2 && 'antwort_b3'",
+            "(inputs.slider.value >=2 && inputs.slider.value <5 && 'antwort_c3'",
+            "(inputs.slider.value >= 5) && 'antwort_c3'"
+
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
@@ -172,25 +283,27 @@
           },
           "templates": {
             "default": [],
-            "foo": [
-              "FOOO Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
+            "antwort_a3": [
+              "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
             ],
-            "bar": [
-              "BAAAR Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
+            "antwort_b3": [
+              "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
             ],
-            "meat": [
-              "Für Ihren wöchentlichen",
-              "Konsum müssten somit {{ wertFleisch }}",
-              "Kilogramm Fleisch produziert werden."
+            "antwort_c3": [
+              "Das entspricht etwa der pro Woche und Person verfügbaren Menge in [LAND_Fleisch]."
+            ],
+            "antwort_d3": [
+              "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
             ]
-          }
+          },
+          {
+            "text": [
+              "TIPP NUR FÜR [WERT_Fleisch] ungleich Null einblenden: Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um [Gasred= Wert_Fleisch_ges/2*3.89] kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr [Gasred*1000/249] Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."
+            ]
+          },
+
         }
       }
     ]
   }
 ]
-
