@@ -10,7 +10,8 @@ export default class Answer extends React.Component {
   static propTypes = {
     data: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired,
-    questions: PropTypes.object.isRequired
+    questions: PropTypes.object.isRequired,
+    master: PropTypes.object.isRequired
   }
 
   getTemplate(templates, userInput) {
@@ -36,35 +37,6 @@ export default class Answer extends React.Component {
     return templateKey;
   }
 
-  // until now we can only handle simple expressions
-  // no function support yet
-  compileContext(context, userInput) {
-    console.log(context);
-    const compiledContext = {};
-
-    Object.keys(context).forEach((key) => {
-      compiledContext[key] = context[key];
-
-      if(true) {
-
-      }
-
-      try {
-        compiledContext[key] = Logic.compileExpression(context[key])(userInput);
-      } catch (e) {
-          // console.log(e);
-      }
-      try {
-        compiledContext[key] = Logic.compileFunction(context[key])(userInput);
-      }
-      catch (e) {
-        console.log(e);
-      }
-    });
-    console.log(compiledContext);
-    return compiledContext;
-  }
-
   render() {
     if (typeof this.props.data === 'undefined') {
       return null;
@@ -74,7 +46,7 @@ export default class Answer extends React.Component {
     const data = { ...this.props.data };
 
     const template = this.getTemplate(data.templates, questions.inputs);
-    const templateContext = this.compileContext(data.answerContext, questions.inputs);
+    const templateContext = Logic.compileContext.bind(this)(data.answerContext, questions.inputs);
     const answerContent = MicroMustache.render(template, templateContext);
 
     return (

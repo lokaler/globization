@@ -1,7 +1,8 @@
 /*eslint-disable*/
 import ajv from 'ajv';
 import schema from '../data/schema.json';
-import { cloneDeep } from 'lodash';
+import { cloneDeep, isUndefined } from 'lodash';
+import * as QFuncs from './questionnaire-functions';
 
 
 function compileExpression(expr) {
@@ -13,11 +14,24 @@ function compileExpression(expr) {
   }
 }
 
-function compileFunction(funcs) {
-  return function() { return 12345 };
+function compileFunction(functionSignature) {
+  let returnFunc;
+
+  // parse function name from signature
+  const functionName = functionSignature.split('(')[0].trim();
+
+  // check if function exists...
+  if (!isUndefined(QFuncs[functionName])) {
+    returnFunc = QFuncs[functionName];
+  } else {
+    throw new Error(`Function "${functionName}"" is not implemented.`);
+  }
+
+  return returnFunc;
 }
 
 function compileExpressionsInData(data) {
+  console.log(data);
   return cloneDeep(data).map(card =>
     card.content.map(part => {
       const answer = part.answer;
@@ -30,6 +44,32 @@ function compileExpressionsInData(data) {
       return part;
     })
   );
+}
+
+function compileContext(context, userInput) {
+  const compiledContext = {};
+
+  Object.keys(context).forEach((key) => {
+    compiledContext[key] = context[key];
+    const isFunction = /^[a-zA-Z]*\(.*\)$/.test(context[key]);
+
+    if (isFunction) {
+      const arg = context[key].match(/\(([^)]+)\)/)[1];
+      const compiledArgument = compileExpression(arg)(userInput);
+      try {
+        compiledContext[key] = compileFunction(context[key])(compiledArgument, this.props);
+      } catch (e) {
+        // console.log(e);
+      }
+    } else {
+      try {
+        compiledContext[key] = compileExpression(context[key])(userInput);
+      } catch (e) {
+        // console.log(e);
+      }
+    }
+  });
+  return compiledContext;
 }
 
 export function validateData(data) {
@@ -46,5 +86,6 @@ export function validateData(data) {
 
 export {
   compileExpression,
-  compileFunction
+  compileFunction,
+  compileContext
 };

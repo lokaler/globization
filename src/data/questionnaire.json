@@ -36,7 +36,7 @@
             "(inputs.slider.value >= 10) && 'bar'"
           ],
           "answerContext": {
-            "landAusgaben": "getCountry(inputs)",
+            "landAusgaben": "getCountry()",
             "wertFleisch": "inputs.slider.value * 1.25"
           },
           "templates": {
