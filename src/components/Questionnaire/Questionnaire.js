@@ -43,13 +43,15 @@ export default class Questionnaire extends React.Component {
 
   createWidgets(questions) {
     return questions.questionData[questions.activeCard]
-      .filter((item) => item.type !== 'functions')
-      .map((item) =>
-        WidgetFactory[item.type]({
+      .filter((item) => (item.type !== 'functions' && item.type !== 'dataset'))
+      .map((item) => {
+        return WidgetFactory[item.type]({
           id: item.key,
           ...item,
           ...this.props
-        })
+        })        
+      }
+
       );
   }
 

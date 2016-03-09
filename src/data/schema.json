@@ -10,6 +10,15 @@
       }
     },
 
+    "dataset": {
+      "required": ["dataset"],
+      "properties": {
+        "dataset": {
+          "type": "string"
+        }
+      }
+    },
+
     "functions": {
       "required": ["functions"],
       "properties": {
@@ -84,7 +93,8 @@
           { "$ref": "#/definitions/functions" },
           { "$ref": "#/definitions/text" },
           { "$ref": "#/definitions/input" },
-          { "$ref": "#/definitions/answer" }
+          { "$ref": "#/definitions/answer" },
+          { "$ref": "#/definitions/dataset" }
         ]
       }
     }

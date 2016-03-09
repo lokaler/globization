@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 import MicroMustache from 'micromustache';
 import cssModules from 'react-css-modules';
 import * as Logic from '../../../logic/questionnaire';
+import { isEmpty } from 'lodash';
 
 @cssModules()
 export default class Answer extends React.Component {
@@ -38,7 +39,7 @@ export default class Answer extends React.Component {
   }
 
   render() {
-    if (typeof this.props.data === 'undefined') {
+    if (typeof this.props.data === 'undefined' || isEmpty(this.props.questions.inputs)) {
       return null;
     }
 

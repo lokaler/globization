@@ -17,6 +17,11 @@ export function errorQuestionData(err) {
   return { type: types.ERROR_QUESTION_DATA, error: err };
 }
 
+export function errorDataSets(err) {
+  console.log(err);
+  return { type: types.ERROR_QUESTION_DATA, error: err };
+}
+
 export function loadingQuestionData() {
   return { type: types.LOADING_QUESTION_DATA };
 }
@@ -41,7 +46,7 @@ export function requestDataSets(url) {
       .then(jsonData => {
         dispatch(receiveDataSets(jsonData));
       })
-      .catch((err) => dispatch(errorQuestionData(err)));
+      .catch((err) => dispatch(errorDataSets(err)));
   };
 }
 

@@ -1,11 +1,13 @@
 [
-  { "title": "fff",
+  {"title": "fff",
     "content":[
       {
         "functions": [
-          "getCountry",
-          "test"
+          "getCountry(inputs.slider.value)"
         ]
+      },
+      {
+        "dataset": "aölskdj"
       },
       {
         "text": [
@@ -36,19 +38,19 @@
             "(inputs.slider.value >= 10) && 'bar'"
           ],
           "answerContext": {
-            "landAusgaben": "getCountry()",
+            "landAusgaben": "getCountry(inputs.slider.value)",
             "wertFleisch": "inputs.slider.value * 1.25"
           },
           "templates": {
             "default": [],
             "foo": [
               "<10 : Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
+              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
               "ähnlich viel für Essen aus wie Sie."
             ],
             "bar": [
-              ">= 10: Auf dem Globus sehen Sie Ihre das {{ landAusgaben }} Angaben im internationalen Vergleich.",
-              "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
+              ">= 10: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
               "ähnlich viel für Essen aus wie Sie."
             ]
           }
@@ -60,8 +62,11 @@
     "content":[
       {
         "functions": [
-          "getCountry"
+          "getCountry(inputs.slider.value)"
         ]
+      },
+      {
+        "dataset": "aölskdj"
       },
       {
         "text": [
@@ -94,7 +99,7 @@
             "(inputs.slider2.value >= 10) && 'bar'"
           ],
           "answerContext": {
-            "landAusgaben": "getCountry(inputs)",
+            "landAusgaben": "getCountry(inputs.slider.value)",
             "wertFleisch": "inputs.slider.value * 1.25"
           },
           "templates": {
@@ -123,8 +128,11 @@
     "content":[
       {
         "functions": [
-          "getCountry"
+          "getCountry(inputs.slider.value)"
         ]
+      },
+      {
+        "dataset": "aölskdj"
       },
       {
         "text": [
@@ -168,7 +176,7 @@
             "(inputs.slider2.value >= 10) && 'bar'"
           ],
           "answerContext": {
-            "landAusgaben": "getCountry(inputs)",
+            "landAusgaben": "getCountry(inputs.slider.value)",
             "wertFleisch": "inputs.slider.value * 1.25"
           },
           "templates": {

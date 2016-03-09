@@ -2,6 +2,7 @@ import 'rc-slider/assets/index.css';
 import React, { PropTypes } from 'react';
 import Rcslider from 'rc-slider';
 import cssModules from 'react-css-modules';
+import * as Logic from '../../../logic/questionnaire-functions';
 
 @cssModules()
 export default class Slider extends React.Component {
@@ -10,11 +11,13 @@ export default class Slider extends React.Component {
     data: PropTypes.object.isRequired,
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
-    id: PropTypes.string.isRequired
+    id: PropTypes.string.isRequired,
+    master: PropTypes.object.isRequired
   }
 
   onChange(value) {
     this.props.actions.updateUserInput(this.props.id, value);
+    this.props.actions.zoomToCountry(Logic.getCountry(value, this.props));
   }
 
   render() {

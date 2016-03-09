@@ -52,7 +52,6 @@ function compileContext(context, userInput) {
   Object.keys(context).forEach((key) => {
     compiledContext[key] = context[key];
     const isFunction = /^[a-zA-Z]*\(.*\)$/.test(context[key]);
-
     if (isFunction) {
       const arg = context[key].match(/\(([^)]+)\)/)[1];
       const compiledArgument = compileExpression(arg)(userInput);
@@ -76,7 +75,9 @@ export function validateData(data) {
   if (__DEV__) {
     const validate = ajv().compile(schema);
     const valid = validate(data);
+
     if (!valid) {
+
       const errors = JSON.stringify(validate.errors, null, 2);
       throw new Error(`Question data is not valid - errors: ${errors}`);
     }
