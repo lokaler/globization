@@ -19,12 +19,14 @@ export default class Slider extends React.Component {
 
   onChange(value) {
     this.props.actions.updateUserInput(this.props.id, value);
-    // this.props.actions.zoomToCountry(Logic.getCountry(value, this.props));
+    //this.props.actions.zoomToCountry(Logic.getCountry(value, this.props));
+    const country = Logic.getCountry(value, this.props);
     this.props.actions.changeVis({
       animation: {
         action: 'zoomToCountry',
-        payload: Logic.getCountry(value, this.props)
-      }
+        payload: country
+      },
+      active: country
     });
   }
 

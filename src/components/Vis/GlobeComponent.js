@@ -8,6 +8,7 @@ import colorbrewer from 'colorbrewer'
 import Dataset from '../../logic/Dataset.js'
 import cssModules from 'react-css-modules';
 import styles from './globe.scss';
+import classnames from 'classnames';
 
 @cssModules(styles)
 
@@ -26,8 +27,10 @@ export default class GlobeComponent extends React.Component {
     utils.log("constructor globe", this.props)
     this.sensetivity = 0.25;
     this.svg = null;
+    this.activeGeometry = null;
+    this.graticule = d3.geo.graticule()();
 
-    this.dataset = new Dataset(this.props.master.dataset);
+    this.dataset = new Dataset();
 
     this.projection = d3.geo.orthographic()
       .translate([this.props.width / 2, this.props.height / 2])
@@ -41,10 +44,8 @@ export default class GlobeComponent extends React.Component {
       // .domain(this.props.master.dataset.domain);
 
     // dunnow if this should be done here!
-    this.geometries = this.props.vis.topojson.map((d) => d);
+    this.geometries = this.props.master.topojson;
     this.geometries.forEach((d) => {
-      d.properties.iso = this.dataset.getIsoForId(d.id);
-      //d.properties.fillColor = this.getFillColor(d.id);
       d.properties.strokeColor = "#777777";
     })
 
@@ -100,29 +101,27 @@ export default class GlobeComponent extends React.Component {
     this.svg.remove();
   }
 
-  getFillColor(id, data){
-    const val = this.getValueForCountry(id, data);
+  getFillColor(iso,data){
+    const val = this.getValueForCountry(iso,data);
     // return val ? this.color(val) : "url(#pattern-stripe)";
     return val ? this.color(val) : "#EEE";
   }
 
-  getValueForCountry(id, data){
-    const entry = _.find(this.props.master.master, { numeric: id+""});
-    let val = undefined;
-    if(entry) val = _.find(data, { iso: entry.alpha3 });
+  getValueForCountry(iso,data){
+    const val = _.find(data, { iso });
     return val ? val.value : undefined;
   }
 
   zoomToCountry(name){
+    // todo: wrap this in the dataset class
     if(name == "random") name = _.sample(this.props.master.master).alpha3;
 
-    const entry = _.find(this.props.master.master, { alpha3: name});
-    utils.log(name, entry);
-    const country = _.find(this.props.vis.topojson, { id: entry.numeric*1 });
+    const country = _.find(this.geometries, (d)=> d.properties.iso === name);
     if(!country){
       utils.log("country not found!");
       return;
     }
+    // end
 
     const p = d3.geo.centroid(country);
     const scale = 2;
@@ -131,7 +130,6 @@ export default class GlobeComponent extends React.Component {
     p[1] = p[1]/this.sensetivity * scale;
 
     this.svg
-      //.call(this.zoom.scale(this.props.vis.zoom).translate(this.props.vis.translate))
       .transition()
       .duration(1000)
       .call(this.zoom.scale(scale).translate(p).event);
@@ -147,7 +145,14 @@ export default class GlobeComponent extends React.Component {
       update = false;
     }
 
+    if(nextProps.vis.active != this.props.vis.active) {
+      this.activeGeometry = _.find(nextProps.master.topojson, (d)=> d.properties.iso === nextProps.vis.active);
+      update = true;
+    }
+
     if(nextProps.master.dataset != this.props.master.dataset) {
+      this.dataset.setData(nextProps.master.dataset);
+
       this.color
         .range(colorbrewer[nextProps.master.dataset.colorSet][nextProps.master.dataset.colorNum])
         .domain(nextProps.master.dataset.domain);
@@ -155,7 +160,7 @@ export default class GlobeComponent extends React.Component {
       // console.log(nextProps.master.dataset, d3.extent(nextProps.master.dataset.data, (d) => d.value*1))
 
       this.geometries.forEach((d) =>{
-        d.properties.fillColor = this.getFillColor(d.id, nextProps.master.dataset.data);
+        d.properties.fillColor = this.getFillColor(d.properties.iso, nextProps.master.dataset.data);
       });
 
       update = true;
@@ -165,12 +170,19 @@ export default class GlobeComponent extends React.Component {
     return update;
   }
 
+  getActiveClass(name){
+    return classnames(this.props.vis.active === name ? "active" : "");
+  }
+
 
   render() {
     utils.log("render globe")
 
-    const paths = this.props.vis.topojson.map((d, i) => <path key={ i } d={this.path(d)} fill={d.properties.fillColor}></path>);
-    const graticule = <path className="graticule" key="graticule" d={ this.path(d3.geo.graticule()()) } />;
+    const paths = this.geometries.map((d, i) =>
+      <path key={ i } d={this.path(d)} fill={d.properties.fillColor}></path>);
+
+    const activeGeometry = <path className="activeGeometry" d={this.path(this.activeGeometry)}/>;
+    const graticule = <path className="graticule" key="graticule" d={ this.path(this.graticule) } />;
 
     const name = this.props.master.dataset ? this.props.master.dataset.description : "Keine Daten";
     const quelle = this.props.master.dataset ? this.props.master.dataset.quelle : "Keine Daten";
@@ -196,6 +208,7 @@ export default class GlobeComponent extends React.Component {
           <g>
             { graticule }
             { paths }
+            { activeGeometry }
           </g>
         </svg>
         <div className="footer">

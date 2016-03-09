@@ -8,4 +8,10 @@
     stroke:#EEE;
     stroke-width: 0.7px;
   }
+  .activeGeometry {
+    stroke-width: 2px;
+    stroke:#7f2704;
+    stroke-dasharray:5,5;
+    fill:none;
+  }
 }
