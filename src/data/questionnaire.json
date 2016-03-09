@@ -1,9 +1,10 @@
 [
-  {"title": "fff",
+  { "title": "fff",
     "content":[
       {
         "functions": [
-          "getCountry"
+          "getCountry",
+          "test"
         ]
       },
       {
@@ -46,7 +47,7 @@
               "ähnlich viel für Essen aus wie Sie."
             ],
             "bar": [
-              ">= 10: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
+              ">= 10: Auf dem Globus sehen Sie Ihre das {{ landAusgaben }} Angaben im internationalen Vergleich.",
               "Menschen in {{ wertFleisch }} geben, gemessen an den Gesamtausgaben",
               "ähnlich viel für Essen aus wie Sie."
             ]

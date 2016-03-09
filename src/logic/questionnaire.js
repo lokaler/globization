@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import ajv from 'ajv';
 import schema from '../data/schema.json';
 import { cloneDeep } from 'lodash';
@@ -10,6 +11,10 @@ function compileExpression(expr) {
   } catch (e) {
     throw new Error(`Error in expression "${expr}"`, e.toString());
   }
+}
+
+function compileFunction(funcs) {
+  return function() { return 12345 };
 }
 
 function compileExpressionsInData(data) {
@@ -40,5 +45,6 @@ export function validateData(data) {
 }
 
 export {
-  compileExpression
+  compileExpression,
+  compileFunction
 };

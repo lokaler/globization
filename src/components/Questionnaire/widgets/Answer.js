@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React, { PropTypes } from 'react';
 import MicroMustache from 'micromustache';
 import cssModules from 'react-css-modules';
@@ -38,17 +39,29 @@ export default class Answer extends React.Component {
   // until now we can only handle simple expressions
   // no function support yet
   compileContext(context, userInput) {
+    console.log(context);
     const compiledContext = {};
 
     Object.keys(context).forEach((key) => {
       compiledContext[key] = context[key];
+
+      if(true) {
+
+      }
+
       try {
         compiledContext[key] = Logic.compileExpression(context[key])(userInput);
       } catch (e) {
           // console.log(e);
       }
+      try {
+        compiledContext[key] = Logic.compileFunction(context[key])(userInput);
+      }
+      catch (e) {
+        console.log(e);
+      }
     });
-
+    console.log(compiledContext);
     return compiledContext;
   }
 
