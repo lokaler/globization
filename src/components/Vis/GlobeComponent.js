@@ -178,10 +178,10 @@ export default class GlobeComponent extends React.Component {
     const unit = this.props.master.dataset ? this.props.master.dataset.unit : "";
 
     const legendFields = this.color.range().map((d,i) =>
-        <div className="item">
-          <div className="color" key={ i } style={{ background: d }}>
+        <div className="item" key={"item-"+i}>
+          <div className="color" key={"color-"+i} style={{ background: d }}>
           </div>
-          <div className="label">
+          <div className="label" key={"label-"+i}>
             { (i/9 * this.color.domain()[1]).toFixed(this.props.master.dataset.fixed) }
           </div>
         </div>
