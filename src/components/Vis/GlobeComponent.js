@@ -172,11 +172,20 @@ export default class GlobeComponent extends React.Component {
     const paths = this.props.vis.topojson.map((d, i) => <path key={ i } d={this.path(d)} fill={d.properties.fillColor}></path>);
     const graticule = <path className="graticule" key="graticule" d={ this.path(d3.geo.graticule()()) } />;
 
-    const name = this.props.master.dataset ? this.props.master.dataset.name : "Keine Daten";
+    const name = this.props.master.dataset ? this.props.master.dataset.description : "Keine Daten";
+    const quelle = this.props.master.dataset ? this.props.master.dataset.quelle : "Keine Daten";
+    const link = this.props.master.dataset ? this.props.master.dataset.link : "";
     const unit = this.props.master.dataset ? this.props.master.dataset.unit : "";
-    const legendFields = this.color.range().map((d,i) => {
-      return <div key={ i } style={{ background: d }}>{ (i/9 * this.color.domain()[1]).toFixed(this.props.master.dataset.fixed) }</div>;
-    })
+
+    const legendFields = this.color.range().map((d,i) =>
+        <div className="item">
+          <div className="color" key={ i } style={{ background: d }}>
+          </div>
+          <div className="label">
+            { (i/9 * this.color.domain()[1]).toFixed(this.props.master.dataset.fixed) }
+          </div>
+        </div>
+    )
 
     return (
       <div>
@@ -190,10 +199,11 @@ export default class GlobeComponent extends React.Component {
           </g>
         </svg>
         <div className="footer">
-          { name } ({ unit })
-           <div className="legend">
-           { legendFields }
-           </div>
+          <div className="legend">
+            { legendFields }
+          </div>
+          <div className="label">{ name }</div>
+          <div className="quelle">Quelle: <a href={ link }>{ quelle }</a></div>
         </div>
       </div>
     );

@@ -50,16 +50,50 @@
     left: 10px;
     position: absolute;
     z-index: 100;
-    width: 80%;
+    width: 520px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+
+    .label {
+        float: left;
+        padding-top: 5px;
+    }
+    .quelle {
+        clear: left;
+        float: left;
+        font-size: 10px;
+        color: #797979;
+        padding-top: 2px;
+
+        a {
+          text-decoration: none;
+          color: #797979;
+        }
+    }
 
     .legend {
       float: right;
       font-size: 10px;
+      position: relative;
 
-      div {
-        padding: 10px;
+      .item {
+        text-align: center;
+        margin: 1px;
+
+        width: 20px;
         float: left;
+
+        .color {
+            float: left;
+            height: 16px;
+            width: 20px;
+        }
+        .label {
+          position: relative;
+          float: left;
+          text-align: center;
+          width: 20px;
+          padding-top: 3px;
+        }
       }
     }
   }
