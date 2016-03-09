@@ -9,6 +9,7 @@ import Answer from './widgets/Answer';
 import Footer from './Footer';
 import Data from './Data';
 
+
 const WidgetFactory = {
   text: React.createFactory(Text),
   slider: React.createFactory(Slider),
@@ -49,7 +50,7 @@ export default class Questionnaire extends React.Component {
           id: item.key,
           ...item,
           ...this.props
-        })        
+        })
       }
 
       );
@@ -62,11 +63,12 @@ export default class Questionnaire extends React.Component {
     }
 
     const widgets = this.createWidgets(questions);
-    const data = __DEV__ &&
-      <Data onClickLoad={ this.onClickLoad } onClickEdit={ this.onClickEdit }/>;
+    // const data = __DEV__ &&
+    //   <Data onClickLoad={ this.onClickLoad } onClickEdit={ this.onClickEdit }/>;
+    const data = '';
 
     return (
-      <div>
+      <div className="questions">
         <div styleName="questions">
           { data }
           { widgets }

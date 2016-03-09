@@ -13,6 +13,7 @@ export default class Footer extends React.Component {
   getClickHandler(cardIndex) {
     return (cardIndex !== this.props.questions.activeCard) ? () => {
       // this should not be hardcoded but read from questionnaire json
+      // todo
       const dataId = 'Ewaste';
       this.props.actions.setCard(cardIndex, dataId);
     } : null;
@@ -40,7 +41,7 @@ export default class Footer extends React.Component {
         <div styleName="pagination" className="clearfix">{ pagination }</div>
         { showNextBtn ?
           <div styleName="btn-next" onClick={ this.getClickHandler(questions.activeCard + 1) }>
-            <div styleName="btn-text">nächste Frage</div>
+            <div styleName="btn-text">Weiter</div>
             <div styleName="btn-arrow"></div>
           </div> : null
         }
