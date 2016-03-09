@@ -173,8 +173,9 @@ export default class GlobeComponent extends React.Component {
     const graticule = <path className="graticule" key="graticule" d={ this.path(d3.geo.graticule()()) } />;
 
     const name = this.props.master.dataset ? this.props.master.dataset.name : "Keine Daten";
+    const unit = this.props.master.dataset ? this.props.master.dataset.unit : "";
     const legendFields = this.color.range().map((d,i) => {
-      return <div key={ i } style={{ background: d }}>{ (i/9 * this.color.domain()[1]).toFixed(2) }</div>;
+      return <div key={ i } style={{ background: d }}>{ (i/9 * this.color.domain()[1]).toFixed(this.props.master.dataset.fixed) }</div>;
     })
 
     return (
@@ -189,7 +190,7 @@ export default class GlobeComponent extends React.Component {
           </g>
         </svg>
         <div className="footer">
-          { name }
+          { name } ({ unit })
            <div className="legend">
            { legendFields }
            </div>

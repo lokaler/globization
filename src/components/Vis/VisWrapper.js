@@ -6,6 +6,7 @@ import MapComponent from './MapComponent';
 import VisUtils from './VisUtils';
 import cssModules from 'react-css-modules';
 import styles from './vis.scss';
+import classnames from 'classnames';
 
 @cssModules(styles)
 
@@ -24,7 +25,7 @@ export default class Globe extends React.Component {
     //this.props.actions.updatePos([52, 23]);
   }
 
-  changeType(type, evt) {
+  changeType(type) {
     this.props.actions.changeType(type);
   }
 
@@ -35,6 +36,10 @@ export default class Globe extends React.Component {
         payload: "random"
       }
     });
+  }
+
+  getActiveClass(name){
+    return classnames([ name, this.props.vis.type === name ? "active" : ""]);
   }
 
   render() {
@@ -50,17 +55,16 @@ export default class Globe extends React.Component {
 
     const changeGlobe = this.changeType.bind(this, 'globe');
     const changeMap = this.changeType.bind(this, 'map');
-    const changePlot = this.changeType.bind(this, 'plot');
+    const changeScatter = this.changeType.bind(this, 'scatter');
     const random = this.random.bind(this);
 
     return (
       <div className="vis">
         { Globe }
         <div className="menu">
-          <div className="globe" onClick={ changeGlobe }></div>
-          <div className="map" onClick={ changeMap }></div>
-          <div className="scatter" onClick={ changePlot }></div>
-          <div onClick={ random }>R</div>
+          <div className={ this.getActiveClass('globe') } onClick={ changeGlobe }></div>
+          <div className={ this.getActiveClass('map') } onClick={ changeMap }></div>
+          <div className={ this.getActiveClass('scatter') } onClick={ changeScatter }></div>
         </div>
       </div>
     );
