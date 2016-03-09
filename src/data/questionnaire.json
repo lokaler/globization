@@ -1,5 +1,5 @@
 [
-  {"title": "fff",
+  {"title": "1. Karte",
     "content":[
       {
         "functions": [
@@ -7,7 +7,7 @@
         ]
       },
       {
-        "dataset": "aölskdj"
+        "dataset": "Lebensmittelausgaben"
       },
       {
         "text": [
@@ -25,40 +25,41 @@
           "key": "slider",
           "type": "slider",
           "options": {
+            "unit": "%",
             "min": 0,
             "value": 30,
-            "max": 42
+            "max": 60
           }
         }
       },
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider.value < 10) && 'foo'",
-            "(inputs.slider.value >= 10) && 'bar'"
+            "(inputs.slider.value < 15) && 'antwort_a'",
+            "(inputs.slider.value >15 && inputs.slider.value <50) && 'antwort_b'",
+            "(inputs.slider.value >= 50) && 'antwort_c'"
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs.slider.value)",
-            "wertFleisch": "inputs.slider.value * 1.25"
+            "wertLebensmittel": "inputs.slider.value * 1.25"
           },
           "templates": {
             "default": [],
-            "foo": [
-              "<10 : Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
+            "antwort_a": [
+              "Weniger als 15 Prozent: Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in [Land_Min], die nur [Wert_Land_Min] Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
             ],
-            "bar": [
-              ">= 10: Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
-            ]
+            "antwort_b": [
+              "15 bis 50 Prozent: Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
+              ],
+            "antwort_c": [
+                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in [Land_Max] den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich [Wert_Land_max] Prozent."
+              ]
           }
         }
       }
     ]
   },
-  {"title": "fff",
+  {"title": "2. Karte",
     "content":[
       {
         "functions": [
@@ -66,22 +67,20 @@
         ]
       },
       {
-        "dataset": "aölskdj"
+        "dataset": "Lebensmittelausgaben"
       },
       {
         "text": [
-          "# 2. Wofür geben Sie Ihr Geld aus?",
+          "# Worauf achten Sie beim Kauf?",
           "",
-          "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
-          "welche Produkte uns wie viel wert sind.",
+          "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
           "",
-          "*Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
-          "beispielsweise für Lebensmittel aus?*"
+          "*Kaufen Sie Fairtrade-Produkte?*"
         ]
       },
       {
         "input": {
-          "key": "fooo2",
+          "key": "fairtrade",
           "type": "choices",
           "options": {
             "choices": [
@@ -95,29 +94,64 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider2.value < 10) && 'foo'",
-            "(inputs.slider2.value >= 10) && 'bar'"
+            "inputs.fairtrade.value == 'never' && 'never'",
+            "inputs.fairtrade.value == 'sometimes' && 'sometimes'",
+            "inputs.fairtrade.value == 'always' && 'always'"
           ],
           "answerContext": {
-            "landAusgaben": "getCountry(inputs.slider.value)",
-            "wertFleisch": "inputs.slider.value * 1.25"
           },
           "templates": {
             "default": [],
-            "foo": [
-              "FOOO Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
+            "never": [
+              "Da geht noch was – vorausgesetzt Ihr Portemonnaie erlaubt es! Würden Sie Fairtrade-Produkte kaufen, wenn Sie mehr darüber wüssten, was sich hinter dieser Bezeichnung verbirgt? Einen Überblick über verschiedene Fairtrade-, Bio- und Öko-Siegel gibt zum Beispiel die Webseite [Nachhaltiger Warenkorb](http://nachhaltiger-warenkorb.de/)"
             ],
-            "bar": [
-              "BAAAR Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
+            "sometimes": [
+              "Damit liegen Sie voll im Trend. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
             ],
-            "meat": [
-              "Für Ihren wöchentlichen",
-              "Konsum müssten somit {{ wertFleisch }}",
-              "Kilogramm Fleisch produziert werden."
+            "always": [
+              "Sie können sich zu den Trendsettern unter den Fairtrade-Käufern zählen. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
+            ]
+          }
+        }
+      },
+      {
+        "text": [
+          "*Kaufen Sie Bio-Produkte?*"
+        ]
+      },
+      {
+        "input": {
+          "key": "bioproduct",
+          "type": "choices",
+          "options": {
+            "choices": [
+              ["never", "Nie"],
+              ["sometimes", "Manchmal"],
+              ["always", "Immer"]
+            ]
+          }
+        }
+      },
+      {
+        "answer": {
+          "answerKey": [
+            "inputs.bioproduct.value == 'never' && 'never'",
+            "inputs.bioproduct.value == 'sometimes' && 'sometimes'",
+            "inputs.bioproduct.value == 'always' && 'always'"
+          ],
+          "answerContext": {
+
+          },
+          "templates": {
+            "default": [],
+            "never": [
+              "Damit gehören Sie zur Minderheit: Laut einer repräsentativen Umfrage aus dem Jahr 2013 kauft nur jeder vierte Deutsche nie Bio-Produkte. Rund jeder Fünfte kauft sie häufig oder fast ausschließlich. Längst werden viele davon aus dem Ausland importiert, um den Bedarf zu decken. Lesen Sie dazu auch unsere [Reportage](http://)."
+            ],
+            "sometimes": [
+              "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere  [Reportage](http://)."
+            ],
+            "always": [
+              "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://)."
             ]
           }
         }
@@ -132,7 +166,7 @@
         ]
       },
       {
-        "dataset": "aölskdj"
+        "dataset": "Lebensmittelausgaben"
       },
       {
         "text": [
