@@ -1,7 +1,11 @@
 [
    {
       "name":"Lebensmittelausgaben",
+      "quelle": "Statistisches Bundesamt",
+      "link": "",
       "decription":"Prozentualer Anteil Lebensmittel an Gesamtausgaben",
+      "unit": "%",
+      "fixed": 0,
       "domain":[
          0,
          63.23
@@ -383,6 +387,10 @@
    },
    {
       "name":"Fleischkonsum",
+      "quelle": "FAO / WRI",
+      "link": "",
+      "unit": "kg",
+      "fixed": 1,
       "decription":"Meat supply kg per capita by country 2011",
       "domain":[
          0,
@@ -1093,6 +1101,10 @@
    },
    {
       "name":"Foodwaste",
+      "quelle": "Studie zu EU-Staaten",
+      "link": "http://wmr.sagepub.com/content/32/8/683.short",
+      "unit": "kg",
+      "fixed": 1,
       "decription":"Foodwaste auf Consumer-Ebene pro Kopf",
       "domain":[
          1.5,
@@ -1218,7 +1230,11 @@
       ]
    },
    {
-      "name":"Ewaste",
+      "name":"Elektroschrott",
+      "quelle": "E-Waste-Monitor 2014",
+      "link": "http://i.unu.edu/media/unu.edu/news/52624/UNU-1stGlobal-E-Waste-Monitor-2014-small.pdf",
+      "unit": "kg",
+      "fixed": 0,
       "decription":"Kg Elektroschrott pro Kopf pro Land",
       "domain":[
          0,
