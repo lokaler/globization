@@ -1,7 +1,5 @@
-/*eslint-disable*/
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
-import { map } from 'lodash';
 
 @cssModules()
 export default class Outro extends React.Component {
@@ -10,14 +8,20 @@ export default class Outro extends React.Component {
     questions: PropTypes.object.isRequired
   }
 
-  createSummary(answers) {
-    return map(answers, (value) => <div>hello</div>);
-  }
-
   render() {
-    //const summary = this.createSummary(this.props.questions.inputs);
-
-    return <div>Intro</div>;
+    return (<div>
+      <h1>Übermorgen</h1>
+      <p>Hier steht das intro... Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Vitae consequatur
+      dolorum voluptate nam necessitatibus quis eum voluptas
+      laboriosam nostrum eaque quod reprehenderit molestiae,
+      obcaecati ipsum deleniti. Possimus praesentium, ipsum molestias.</p>
+      <p>Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Vitae consequatur
+      dolorum voluptate nam necessitatibus quis eum voluptas
+      laboriosam nostrum eaque quod reprehenderit molestiae,
+      obcaecati ipsum deleniti. Possimus praesentium, ipsum molestias.</p>
+    </div>);
   }
 
 }

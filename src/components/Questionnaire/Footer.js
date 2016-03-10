@@ -8,13 +8,15 @@ export default class Footer extends React.Component {
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
     master: PropTypes.object.isRequired,
-    btnLabel: PropTypes.string
+    nextBtnLabel: PropTypes.string,
+    prevBtnLabel: PropTypes.string
   }
 
   getClickHandler(cardIndex) {
     return (cardIndex !== this.props.questions.activeCard) ? () => {
       let dataId = null;
-      if (cardIndex < this.props.questions.questionData.length) {
+      if (cardIndex < this.props.questions.questionData.length &&
+          cardIndex > -1) {
         dataId = this.props.questions.questionData[cardIndex]
           .filter(d => d.type === 'dataset')[0].data;
       }
@@ -37,6 +39,7 @@ export default class Footer extends React.Component {
   render() {
     const { questions } = this.props;
     const showNextBtn = questions.activeCard < questions.questionData.length;
+    const showPrevBtn = questions.activeCard > -1;
     const showPagination = questions.activeCard >= 0
       && questions.activeCard < questions.questionData.length;
 
@@ -45,12 +48,19 @@ export default class Footer extends React.Component {
 
     return (
       <div styleName="footer">
-        { showPagination && <div styleName="pagination" className="clearfix">{ pagination }</div> }
-        { showNextBtn ?
-          <div styleName="btn-next" onClick={ this.getClickHandler(questions.activeCard + 1) }>
-            <div styleName="btn-text">{ this.props.btnLabel || 'Weiter' }</div>
+        {
+          showPrevBtn &&
+          <div styleName="btn-prev" onClick={ this.getClickHandler(questions.activeCard - 1) }>
             <div styleName="btn-arrow"></div>
-          </div> : null
+            <div styleName="btn-text">{ this.props.prevBtnLabel || 'Weiter' }</div>
+          </div>
+        }
+        { showPagination && <div styleName="pagination" className="clearfix">{ pagination }</div> }
+        { showNextBtn &&
+          <div styleName="btn-next" onClick={ this.getClickHandler(questions.activeCard + 1) }>
+            <div styleName="btn-text">{ this.props.nextBtnLabel || 'Weiter' }</div>
+            <div styleName="btn-arrow"></div>
+          </div>
         }
       </div>
     );

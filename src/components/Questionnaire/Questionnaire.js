@@ -59,18 +59,18 @@ export default class Questionnaire extends React.Component {
     }
 
     let widgets = null;
-    let btnLabel = 'Weiter';
+    let nextBtnLabel = 'Weiter';
 
     if (questions.activeCard === -1) {
       widgets = <Intro { ...this.props }/>;
-      btnLabel = 'Starten';
+      nextBtnLabel = 'Starten';
     } else if (questions.activeCard === questions.questionData.length) {
       widgets = <Outro { ...this.props }/>;
     } else {
       widgets = this.createWidgets(questions);
 
       if (questions.activeCard === questions.questionData.length - 1) {
-        btnLabel = 'Ergebnis';
+        nextBtnLabel = 'Ergebnis';
       }
     }
 
@@ -84,7 +84,7 @@ export default class Questionnaire extends React.Component {
           { data }
           { widgets }
         </div>
-        <Footer btnLabel={ btnLabel } { ...this.props }/>
+        <Footer nextBtnLabel={ nextBtnLabel } prevBtnLabel="Zurück" { ...this.props }/>
       </div>
     );
   }
