@@ -23,6 +23,7 @@ export default class MapComponent extends React.Component {
     utils.log("constructor map", this.props.vis)
 
     this.sensetivity = 0.25;
+    this.geometries = this.props.master.topojson;
 
     this.projection = d3.geo.winkel3()
       .translate([this.props.width / 2, this.props.height / 2])
@@ -122,7 +123,7 @@ export default class MapComponent extends React.Component {
   render() {
     utils.log("render map")
 
-    const paths = this.props.vis.topojson.map((d, i) => <path key={i} d={this.path(d)} fill={d.properties.fillColor}></path>);
+    const paths = this.geometries.map((d, i) => <path key={i} d={this.path(d)} fill={d.properties.fillColor}></path>);
 
     return (
       <div>

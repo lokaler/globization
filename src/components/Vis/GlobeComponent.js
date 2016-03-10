@@ -45,9 +45,7 @@ export default class GlobeComponent extends React.Component {
 
     // dunnow if this should be done here!
     this.geometries = this.props.master.topojson;
-    this.geometries.forEach((d) => {
-      d.properties.strokeColor = "#777777";
-    })
+
 
     this.zoom = d3.behavior.zoom()
       .center([0,0])
