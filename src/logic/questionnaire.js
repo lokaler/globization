@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import ajv from 'ajv';
 import schema from '../data/schema.json';
 import { cloneDeep, isUndefined } from 'lodash';
@@ -31,7 +30,6 @@ function compileFunction(functionSignature) {
 }
 
 function compileExpressionsInData(data) {
-  console.log(data);
   return cloneDeep(data).map(card =>
     card.content.map(part => {
       const answer = part.answer;
@@ -53,7 +51,12 @@ function compileContext(context, userInput) {
     compiledContext[key] = context[key];
     const isFunction = /^[a-zA-Z]*\(.*\)$/.test(context[key]);
     if (isFunction) {
-      const arg = context[key].match(/\(([^)]+)\)/)[1];
+      let arg = context[key].match(/\(([^)]+)\)/);
+      if (arg) {
+        arg = arg[1];
+      } else {
+        arg = '';
+      }
       const compiledArgument = compileExpression(arg)(userInput);
       try {
         compiledContext[key] = compileFunction(context[key])(compiledArgument, this.props);
@@ -77,7 +80,6 @@ export function validateData(data) {
     const valid = validate(data);
 
     if (!valid) {
-
       const errors = JSON.stringify(validate.errors, null, 2);
       throw new Error(`Question data is not valid - errors: ${errors}`);
     }

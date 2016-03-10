@@ -3,7 +3,7 @@
     "content":[
       {
         "functions": [
-          "getCountry(inputs.slider.value)"
+          "getGermanCountryName(inputs.slider.value)"
         ]
       },
       {
@@ -40,19 +40,23 @@
             "(inputs.slider.value >= 50) && 'antwort_c'"
           ],
           "answerContext": {
-            "landAusgaben": "getCountry(inputs.slider.value)",
-            "wertLebensmittel": "inputs.slider.value * 1.25"
+            "landAusgaben": "getGermanCountryName(inputs.slider.value)",
+            "wertLebensmittel": "inputs.slider.value * 1.25",
+            "landMax": "getMaxGermanCountryName()",
+            "landMin": "getMinGermanCountryName()",
+            "valueMax": "getMaxValue()",
+            "valueMin": "getMinValue()"
           },
           "templates": {
             "default": [],
             "antwort_a": [
-              "Weniger als 15 Prozent: Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in [Land_Min], die nur [Wert_Land_Min] Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+              "Weniger als 15 Prozent: Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in {{ landMin }}, die nur {{ valueMin }} Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
             ],
             "antwort_b": [
               "15 bis 50 Prozent: Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
               ],
             "antwort_c": [
-                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in [Land_Max] den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich [Wert_Land_max] Prozent."
+                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
               ]
           }
         }

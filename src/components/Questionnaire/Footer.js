@@ -12,9 +12,8 @@ export default class Footer extends React.Component {
 
   getClickHandler(cardIndex) {
     return (cardIndex !== this.props.questions.activeCard) ? () => {
-      // this should not be hardcoded but read from questionnaire json
-      // todo
-      const dataId = 'Ewaste';
+      const dataId = this.props.questions.questionData[this.props.questions.activeCard]
+        .filter(d => d.type === 'dataset')[0].data;
       this.props.actions.setCard(cardIndex, dataId);
     } : null;
   }

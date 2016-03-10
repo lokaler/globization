@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import 'rc-slider/assets/index.css';
 import React, { PropTypes } from 'react';
 import Rcslider from 'rc-slider';
@@ -19,8 +17,8 @@ export default class Slider extends React.Component {
 
   onChange(value) {
     this.props.actions.updateUserInput(this.props.id, value);
-    //this.props.actions.zoomToCountry(Logic.getCountry(value, this.props));
-    const country = Logic.getCountry(value, this.props);
+
+    const country = Logic.getCountryCode(value, this.props);
     this.props.actions.changeVis({
       animation: {
         action: 'zoomToCountry',
@@ -30,18 +28,19 @@ export default class Slider extends React.Component {
     });
   }
 
-  tipFormatter(val){
-    return val + " " + this.props.data.options.unit;
+  tipFormatter(val) {
+    return `${val} ${this.props.data.options.unit}`;
   }
 
   render() {
     const options = { ...this.props.data.options };
     const sliderChangeBind = this.onChange.bind(this);
+    const tipFormatter = this.tipFormatter.bind(this);
 
     return (
       <div key={this.props.id} styleName="widget" className="slider">
         <Rcslider
-          tipFormatter={this.tipFormatter.bind(this)}
+          tipFormatter={tipFormatter}
           defaultValue={options.value}
           min={options.min}
           max={options.max}
