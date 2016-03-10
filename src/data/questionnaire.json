@@ -3,7 +3,11 @@
     "content":[
       {
         "functions": [
-          "getGermanCountryName(inputs.slider.value)"
+          "getGermanCountryName",
+          "getMaxGermanCountryName",
+          "getMinGermanCountryName",
+          "getMaxValue",
+          "getMinValue"
         ]
       },
       {
@@ -36,7 +40,7 @@
         "answer": {
           "answerKey": [
             "(inputs.slider.value < 15) && 'antwort_a'",
-            "(inputs.slider.value >15 && inputs.slider.value <50) && 'antwort_b'",
+            "(inputs.slider.value >15 && inputs.slider.value < 50) && 'antwort_b'",
             "(inputs.slider.value >= 50) && 'antwort_c'"
           ],
           "answerContext": {
@@ -162,25 +166,20 @@
       }
     ]
   },
-  {"title": "fff",
+  {"title": "3. Karte",
     "content":[
       {
-        "functions": [
-          "getCountry(inputs.slider.value)"
-        ]
+        "functions": []
       },
       {
-        "dataset": "Lebensmittelausgaben"
+        "dataset": "Fleischkonsum"
       },
       {
         "text": [
-          "# 3. Wofür geben Sie Ihr Geld aus?",
+          "Manche Produkte verbrauchen besonders viele Ressourcen: Die Herstellung von einem Kilogramm Rindfleisch zum Beispiel beansprucht im Durchschnitt gut 50 mal mehr Wasser und rund 100 mal mehr Land als die Produktion von einem Kilo Kartoffeln.:",
           "",
-          "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
-          "welche Produkte uns wie viel wert sind.",
-          "",
-          "*Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
-          "beispielsweise für Lebensmittel aus?*"
+          "*Wie viel Fleisch essen Sie pro Woche?*",
+          "(Fleischgericht ≈ 200 Gramm, Bratwurst ≈ 100 Gramm, Wurstbrot ≈ 20 Gramm)"
         ]
       },
       {
@@ -188,55 +187,161 @@
           "key": "slider2",
           "type": "slider",
           "options": {
+            "unit": "%",
             "min": 0,
-            "value": 30,
-            "max": 42
-          }
-        }
-      },
-      {
-        "input": {
-          "key": "fooo2",
-          "type": "choices",
-          "options": {
-            "choices": [
-              ["never", "Nie"],
-              ["sometimes", "Manchmal"],
-              ["always", "Immer"]
-            ]
+            "value": 3,
+            "max": 7
           }
         }
       },
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider2.value < 10) && 'foo'",
-            "(inputs.slider2.value >= 10) && 'bar'"
+            "(inputs.slider2.value < 1) && 'antwort_a3'",
+            "(inputs.slider2.value >= 1 && inputs.slider2.value < 2) && 'antwort_b3'",
+            "(inputs.slider2.value >= 2 && inputs.slider2.value < 5) && 'antwort_c3'",
+            "(inputs.slider2.value >= 5) && 'antwort_c3'"
           ],
           "answerContext": {
-            "landAusgaben": "getCountry(inputs.slider.value)",
-            "wertFleisch": "inputs.slider.value * 1.25"
+            "wertFleisch": "inputs.slider2.value * 1.25"
           },
           "templates": {
-            "default": [],
-            "foo": [
-              "FOOO Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
+            "default": [
+              "TIPP NUR FÜR {{wertFleisch}} ungleich Null einblenden: Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um [Gasred= Wert_Fleisch_ges/2*3.89] kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr [Gasred*1000/249] Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."            
             ],
-            "bar": [
-              "BAAAR Auf dem Globus sehen Sie Ihre Angaben im internationalen Vergleich.",
-              "Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben",
-              "ähnlich viel für Essen aus wie Sie."
+            "antwort_a3": [
+              "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
             ],
-            "meat": [
-              "Für Ihren wöchentlichen",
-              "Konsum müssten somit {{ wertFleisch }}",
-              "Kilogramm Fleisch produziert werden."
+            "antwort_b3": [
+              "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."            
+            ],
+            "antwort_c3": [
+              "Das entspricht etwa der pro Woche und Person verfügbaren Menge in [LAND_Fleisch]."
+            ],
+            "antwort_d3": [
+              "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
             ]
           }
         }
       }
+    ]
+  },
+
+
+  {
+    "title": "4. Karte",
+    "content": [
+      {
+        "functions": []
+      },
+      {
+        "dataset": "Foodwaste"
+      },
+      {
+        "text": [
+          "# Was landet bei Ihnen im Müll?",
+          "",
+          "1,3 Milliarden Tonnen Lebensmittel werden weltweit pro Jahr weggeschmissen. Diese gigantische Menge wollen die Vereinten Nationen bis 2030 halbieren.",
+          "",
+          "*Wie viel Kilogramm Lebensmittel landen bei Ihnen zu Hause pro Woche im Müll?*"
+        ]
+      },
+      {
+        "input": {
+          "key": "slider",
+          "type": "slider",
+          "options": {
+            "unit": "",
+            "min": 0,
+            "value": 3,
+            "max": 6
+          }
+        }
+      },
+      {
+        "answer": {
+          "answerKey": [
+            "(inputs.slider.value < 1) && 'antwort_a4'",
+            "(inputs.slider.value >=1 && inputs.slider.value <= 2) && 'antwort_b4'",
+            "(inputs.slider.value >= 3) && 'antwort_c4'"
+          ],
+          "answerContext": {
+            "landAusgaben": "getCountry(inputs)",
+            "wertLebensmittel": "inputs.slider.value * 1.25"
+          },
+          "templates": {
+            "default": [],
+            "antwort_a4": [
+              "In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+            ],
+            "antwort_b4": [
+              "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in [LAND_Foodwaste]. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+            ],
+            "antwort_c4": [
+                "In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+            ]
+          }
+        }
+      }
+    ]
+  },
+
+  {
+    "title": "5. Karte",
+    "content": [
+      {
+        "functions": []
+      },
+      {
+        "dataset": "Elektroschrott"
+      },
+      {
+        "text": [
+          "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy (Finde die Quelle nicht wieder). Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt (Später E-Waste-Republic verlinken).",
+          "",
+          "*Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?*",
+          "(Smartphone ≈ 150g, PC ≈ 8kg, Toaster ≈ 3kg, Waschmaschine ≈ 70kg)",
+          "Für den internationalen Vergleich nehmen wir an, das Unternehmen und öffentliche Einrichtungen in Ihrem Land noch einmal das X-FACHE IHRES WERTES (dazu bekomme ich noch einen Wert von der UNU) an Elektroschrott verursachen. Auf Sie entfallen dann insgesamt [Wert_Schrott*X] Kilogramm Elektroschrott."
+        ]
+      },
+      {
+        "input": {
+          "key": "slider",
+          "type": "slider",
+          "options": {
+            "min": 0,
+            "value": 100,
+            "max": 200
+          }
+        }
+      },
+
+      {
+        "answer": {
+          "answerKey": [
+            "(inputs.slider.value < 50) && 'antwort_a5'",
+            "(inputs.slider.value >=50 && inputs.slider.value <= 120) && 'antwort_b5'",
+            "(inputs.slider.value >= 120) && 'antwort_c5'"
+          ],
+          "answerContext": {
+            "landAusgaben": "getCountry(inputs)",
+            "wertEwaste": "inputs.slider.value * 1.25"
+          },
+          "templates": {
+            "default": [],
+            "antwort_a5": [
+              "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht [Land_min] mit [Wert_Land_min] Kilogramm pro Jahr und Einwohner."
+            ],
+            "antwort_b5": [
+              "Das entspricht etwa dem Pro-Kopf-Wert in {{ wertEwaste }}."
+            ],
+            "antwort_c4": [
+              "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht[Land_max] mit [Wert_Land_max] Kilogramm pro Jahr und Einwohner."
+            ]
+          }
+        }
+      }
+
     ]
   }
 ]

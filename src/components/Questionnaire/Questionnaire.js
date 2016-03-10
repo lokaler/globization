@@ -1,14 +1,13 @@
-/*eslint-disable*/
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 
+import Intro from './Intro';
 import Text from './widgets/Text';
 import Slider from './widgets/Slider';
 import Choices from './widgets/Choices';
 import Answer from './widgets/Answer';
 import Footer from './Footer';
-import Data from './Data';
-
+import Outro from './Outro';
 
 const WidgetFactory = {
   text: React.createFactory(Text),
@@ -45,15 +44,12 @@ export default class Questionnaire extends React.Component {
   createWidgets(questions) {
     return questions.questionData[questions.activeCard]
       .filter((item) => (item.type !== 'functions' && item.type !== 'dataset'))
-      .map((item) => {
-        return WidgetFactory[item.type]({
-          id: item.key,
-          ...item,
-          ...this.props
-        })
-      }
-
-      );
+      .map((item) => WidgetFactory[item.type]({
+        id: item.key,
+        ...item,
+        ...this.props
+      })
+    );
   }
 
   render() {
@@ -62,7 +58,22 @@ export default class Questionnaire extends React.Component {
       return <div />;
     }
 
-    const widgets = this.createWidgets(questions);
+    let widgets = null;
+    let btnLabel = 'Weiter';
+
+    if (questions.activeCard === -1) {
+      widgets = <Intro { ...this.props }/>;
+      btnLabel = 'Starten';
+    } else if (questions.activeCard === questions.questionData.length) {
+      widgets = <Outro { ...this.props }/>;
+    } else {
+      widgets = this.createWidgets(questions);
+
+      if (questions.activeCard === questions.questionData.length - 1) {
+        btnLabel = 'Ergebnis';
+      }
+    }
+
     // const data = __DEV__ &&
     //   <Data onClickLoad={ this.onClickLoad } onClickEdit={ this.onClickEdit }/>;
     const data = '';
@@ -73,7 +84,7 @@ export default class Questionnaire extends React.Component {
           { data }
           { widgets }
         </div>
-        <Footer { ...this.props }/>
+        <Footer btnLabel={ btnLabel } { ...this.props }/>
       </div>
     );
   }

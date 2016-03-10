@@ -7,13 +7,19 @@ export default class Footer extends React.Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired
+    master: PropTypes.object.isRequired,
+    btnLabel: PropTypes.string
   }
 
   getClickHandler(cardIndex) {
     return (cardIndex !== this.props.questions.activeCard) ? () => {
-      const dataId = this.props.questions.questionData[this.props.questions.activeCard]
-        .filter(d => d.type === 'dataset')[0].data;
+      let dataId = null;
+      if (cardIndex < this.props.questions.questionData.length) {
+        dataId = this.props.questions.questionData[cardIndex]
+          .filter(d => d.type === 'dataset')[0].data;
+      }
+
+      // const dataId = this.props.questions.questionData[cardIndex]
       this.props.actions.setCard(cardIndex, dataId);
     } : null;
   }
@@ -30,17 +36,19 @@ export default class Footer extends React.Component {
 
   render() {
     const { questions } = this.props;
-    const showNextBtn = questions.activeCard < questions.questionData.length - 1;
+    const showNextBtn = questions.activeCard < questions.questionData.length;
+    const showPagination = questions.activeCard >= 0
+      && questions.activeCard < questions.questionData.length;
 
-    const pagination = this.createPagination
-      .bind(this)(questions);
+    const pagination = showPagination ? this.createPagination
+        .bind(this)(questions) : null;
 
     return (
       <div styleName="footer">
-        <div styleName="pagination" className="clearfix">{ pagination }</div>
+        { showPagination && <div styleName="pagination" className="clearfix">{ pagination }</div> }
         { showNextBtn ?
           <div styleName="btn-next" onClick={ this.getClickHandler(questions.activeCard + 1) }>
-            <div styleName="btn-text">Weiter</div>
+            <div styleName="btn-text">{ this.props.btnLabel || 'Weiter' }</div>
             <div styleName="btn-arrow"></div>
           </div> : null
         }

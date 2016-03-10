@@ -3,7 +3,7 @@ import objectAssign from 'object-assign';
 
 const initialState = {
   activeChapter: 0,
-  activeCard: 0,
+  activeCard: -1,
   inputs: {},
   questionData: []
 };

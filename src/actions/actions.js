@@ -52,7 +52,9 @@ export function requestDataSets(url) {
 
 export function setCard(index, dataId) {
   return dispatch => {
-    dispatch(setDataSet(dataId));
+    if(dataId) {
+      dispatch(setDataSet(dataId));
+    }
     dispatch({ type: types.SET_CARD, index: index });
   }
 }
