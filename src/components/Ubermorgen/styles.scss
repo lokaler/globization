@@ -6,8 +6,6 @@
   }
 }
 
-
-
 :local(.container) {
   overflow: hidden;
   display: flex;
@@ -88,7 +86,6 @@
     height: 12px;
     margin-right: 3px;
     width: 12px;
-
   }
 
   :local(.pagination) {
@@ -113,29 +110,41 @@
     cursor: default;
   }
 
-  :local(.btn-next) {
+  @mixin btn {
     color: #777;
     cursor: pointer;
     position: absolute;
+    user-select: none;
+  }
 
+  @mixin btnText {
+    text-transform: uppercase;
+    float: left;
+    font-size: 12px;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  @mixin btnArrow {
+    float: left;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  :local(.btn-next) {
+    @include btn;
     right: 20px;
 
     :local(.btn-text) {
-      text-transform: uppercase;
-      float: left;
+      @include btnText;
       margin-right: 5px;
-      font-size: 12px;
-
-      &:hover {
-        color: #000;
-      }
     }
 
     :local(.btn-arrow) {
-      float: left;
-      width: 0;
-      height: 0;
-      border-style: solid;
+      @include btnArrow;
       border-width: 8px 0 8px 15px;
       border-color: transparent transparent transparent #EEE;
     }
@@ -143,28 +152,16 @@
   }
 
   :local(.btn-prev) {
-    color: #777;
-    cursor: pointer;
-    position: absolute;
-
+    @include btn;
     left: 20px;
 
     :local(.btn-text) {
-      text-transform: uppercase;
-      float: left;
+      @include btnText;
       margin-left: 5px;
-      font-size: 12px;
-
-      &:hover {
-        color: #000;
-      }
     }
 
     :local(.btn-arrow) {
-      float: left;
-      width: 0;
-      height: 0;
-      border-style: solid;
+      @include btnArrow;
       border-width: 8px 15px 8px 0;
       border-color: transparent #EEE transparent transparent;
     }

@@ -10,8 +10,6 @@ export default class DataSetList extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired,
-    vis: PropTypes.object.isRequired,
     master: PropTypes.object.isRequired
   };
 
