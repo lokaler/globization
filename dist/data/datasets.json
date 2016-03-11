@@ -1,6 +1,6 @@
 [
    {
-      "name":"Lebensmittelausgaben",
+      "name":"Ausgaben für Lebensmittel",
       "quelle": "Statistisches Bundesamt",
       "link": "",
       "description":"Ausgaben für Lebensmittel in % am Einkommen",
@@ -16,6 +16,8 @@
          40,
          100
       ],
+      "translate": [0,90],
+      "scale": 1,
       "colorSet":"Oranges",
       "colorNum":9,
       "data":[
@@ -402,6 +404,8 @@
          40,
          100
       ],
+      "translate": [0,90],
+      "scale": 1,
       "colorSet":"Oranges",
       "colorNum":9,
       "data":[
@@ -1100,7 +1104,7 @@
       ]
    },
    {
-      "name":"Foodwaste",
+      "name":"Lebensmittelabfälle",
       "quelle": "Studie zu EU-Staaten",
       "link": "http://wmr.sagepub.com/content/32/8/683.short",
       "unit": "kg",
@@ -1116,6 +1120,8 @@
          40,
          100
       ],
+      "translate": [-124, 485],
+      "scale": 2.4,
       "colorSet":"Oranges",
       "colorNum":9,
       "data":[
@@ -1246,6 +1252,8 @@
          40,
          100
       ],
+      "translate": [0,90],
+      "scale": 1,
       "colorSet":"Oranges",
       "colorNum":9,
       "data":[
