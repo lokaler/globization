@@ -58,6 +58,8 @@ export default class GlobeComponent extends React.Component {
           .rotate(_rotate)
           .scale(_scale);
 
+        //utils.log("zoom",this.zoom.translate(), this.zoom.scale());
+
         this.forceUpdate();
       })
       .on("zoomend", () => {
@@ -135,7 +137,7 @@ export default class GlobeComponent extends React.Component {
 
 
   shouldComponentUpdate(nextProps) {
-    utils.log("shouldComponentUpdate", nextProps, this);
+    utils.log("shouldComponentUpdate", nextProps, this.props);
     let update = false;
 
     if(nextProps.vis.animation) {
@@ -155,13 +157,36 @@ export default class GlobeComponent extends React.Component {
         .range(colorbrewer[nextProps.master.dataset.colorSet][nextProps.master.dataset.colorNum])
         .domain(nextProps.master.dataset.domain);
 
-      // console.log(nextProps.master.dataset, d3.extent(nextProps.master.dataset.data, (d) => d.value*1))
+      // this.geometries.forEach((d) =>{
+      //   d.properties.fillColor = this.getFillColor(d.properties.iso, nextProps.master.dataset.data);
+      // });
 
-      this.geometries.forEach((d) =>{
-        d.properties.fillColor = this.getFillColor(d.properties.iso, nextProps.master.dataset.data);
+      let tween = function tween(d, i, a) {
+        return d3.interpolate(a, String(value.call(this, d, i)));
+      }
+
+      this.svg
+      .transition()
+      .duration(1000)
+      .call(this.zoom
+        .scale(nextProps.master.dataset.scale)
+        .translate(nextProps.master.dataset.translate)
+        .event
+      )
+      .tween("test", ()=>{
+        this.geometries.forEach((d) =>{
+          const a = d.properties.fillColor;
+          const b = this.getFillColor(d.properties.iso, nextProps.master.dataset.data);
+          d.interpolate = d3.interpolateRgb(a, b);
+        });
+        return (t) => {
+          this.geometries.forEach((d,i) =>{
+            d.properties.fillColor = d.interpolate(t);
+          })
+        };
       });
 
-      update = true;
+      update = false;
     }
 
     utils.log("shouldComponentUpdate", update ? "yes": "no");
