@@ -29,7 +29,7 @@ export default class Choices extends React.Component {
     return (<div key={`${this.props.id}_i${index}`}>
         <input
           type="radio"
-          name={index}
+          name={`${this.props.id}_${index}`}
           value={option[0]}
           onChange={boundRadioChange}
           checked={isSelected}
