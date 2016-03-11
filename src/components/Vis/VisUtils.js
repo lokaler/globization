@@ -6,7 +6,7 @@ export default {
     return newValue;
   },
   log: (...theArgs) => {
-    const debug = false;
+    const debug = true;
     if (debug) console.log.apply(console, theArgs);
   },
   svgStripePattern: `<pattern id="pattern-stripe"

@@ -38,6 +38,8 @@ export default class MapComponent extends React.Component {
         const _scale = this.props.vis.initialScale * e.scale;
         const _rotate = [(e.translate[0]/e.scale) * this.sensetivity, -(e.translate[1]/e.scale) * this.sensetivity, 0];
 
+        // utils.log(_rotate, _scale, this.zoom.translate());
+
         this.projection
           .rotate(_rotate)
           .scale(_scale);
@@ -67,12 +69,13 @@ export default class MapComponent extends React.Component {
     .transition()
     .duration(()=>{
       const t = Math.abs(this.props.vis.translate[0]) + Math.abs(this.props.vis.translate[1]);
-      const z = this.props.vis.zoom - 0.7;
-      return t+z*200;
+      const z = this.props.vis.zoom - 0.5;
+
+      return t*0.75+Math.abs(Math.log(z*z))*400;
     })
     .call(this.zoom
-      .scale(0.7)
-      .translate([0,0])
+      .scale(0.55)
+      .translate([-50, -11])
       .event
     )
   }
