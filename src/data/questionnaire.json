@@ -11,7 +11,7 @@
         ]
       },
       {
-        "dataset": "Lebensmittelausgaben"
+        "dataset": "Ausgaben für Lebensmittel"
       },
       {
         "text": [
@@ -235,7 +235,7 @@
         "functions": []
       },
       {
-        "dataset": "Foodwaste"
+        "dataset": "Lebensmittelabfälle"
       },
       {
         "text": [
@@ -275,7 +275,7 @@
               "In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
             ],
             "antwort_b4": [
-              "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in [LAND_Foodwaste]. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+              "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in [LAND_Lebensmittelabfälle]. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
             ],
             "antwort_c4": [
                 "In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."

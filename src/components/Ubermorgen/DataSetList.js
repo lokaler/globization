@@ -3,7 +3,7 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './styles.scss';
-
+import classnames from 'classnames';
 
 @cssModules(styles)
 export default class DataSetList extends React.Component {
@@ -21,14 +21,17 @@ export default class DataSetList extends React.Component {
     this.props.actions.setDataSet(name);
   }
 
+  getActiveClass(name){
+    return classnames([ this.props.master.dataset.name === name ? "active" : ""]);
+  }
+
   render() {
     const list = this.props.master.datasets.map((d, i) => {
-      return <li key={i} onClick={ this.handleClick.bind(this, d.name) }>{ d.name }</li>;
+      return <li className={ this.getActiveClass(d.name) } key={i} onClick={ this.handleClick.bind(this, d.name) }>{ d.name }</li>;
     });
 
     return (
       <div className="DataSetList">
-        <h5>DataSets</h5>
         <ul>
           { list }
         </ul>

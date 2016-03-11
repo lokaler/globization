@@ -55,7 +55,7 @@
 
     .label {
         float: left;
-        padding-top: 5px;
+        padding-top: 2px;
     }
     .quelle {
         clear: left;
@@ -74,10 +74,11 @@
       float: right;
       font-size: 10px;
       position: relative;
+      cursor: default;
 
       .item {
         text-align: center;
-        margin: 1px;
+        margin-right: 1px;
 
         width: 20px;
         float: left;
@@ -93,6 +94,7 @@
           text-align: center;
           width: 20px;
           padding-top: 3px;
+          left: -10px;
         }
       }
     }

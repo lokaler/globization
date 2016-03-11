@@ -44,19 +44,68 @@
   padding: 2em;
   font-size: 12px;
 
+  .losButton {
+    font-size: 12px;
+    padding: 8px 30px 8px 30px;
+    font-weight: bold;
+    background: #7d9f89;
+    color: #FFF;
+    text-align: center;
+    border-radius: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    transition: all 0.2s;
+
+
+    &:hover {
+      box-shadow: 0px 3px 4px rgba(0,0,0,0.1);
+      background: #577562;
+    }
+  }
+
+  h1 {
+    margin-top:0;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+  p {
+    float:left;
+  }
+
+  .DataSetList {
+    float: left;
+    width: 100%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding: 8px 10px 8px 10px;
+        cursor: pointer;
+        background: #EEE;
+        list-style: none;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        color: #1D1D1D;
+        transition: all 0.2s;
+
+        &:hover, &.active {
+          box-shadow: 0px 3px 4px rgba(0,0,0,0.1);
+          background: #D2D2D2;
+        }
+      }
+    }
+  }
+
   :local(.widget) {
     margin-top:1em;
     float:left;
     width: 100%;
 
-    h1 {
-      margin-top:0;
-      font-size: 1.5em;
-      font-weight: normal;
-    }
-    p {
-      float:left;
-    }
     &:first-of-type {
       margin-top:0;
     }
@@ -169,8 +218,3 @@
   }
 }
 
-.DataSetList {
-  li {
-    cursor: pointer;
-  }
-}

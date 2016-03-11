@@ -1,6 +1,6 @@
 [
    {
-      "name":"Lebensmittelausgaben",
+      "name":"Ausgaben für Lebensmittel",
       "quelle": "Statistisches Bundesamt",
       "link": "",
       "description":"Ausgaben für Lebensmittel in % am Einkommen",
@@ -1104,7 +1104,7 @@
       ]
    },
    {
-      "name":"Foodwaste",
+      "name":"Lebensmittelabfälle",
       "quelle": "Studie zu EU-Staaten",
       "link": "http://wmr.sagepub.com/content/32/8/683.short",
       "unit": "kg",
