@@ -6,6 +6,11 @@ import d3_projection from './libs/d3.projection.js';
 import topojson from 'topojson';
 import ReactDom from 'react-dom';
 import utils from './VisUtils.js'
+import styles from './globe.scss';
+import cssModules from 'react-css-modules';
+import classnames from 'classnames';
+
+@cssModules(styles)
 
 export default class MapComponent extends React.Component {
 
@@ -130,7 +135,7 @@ export default class MapComponent extends React.Component {
 
     return (
       <div>
-        <svg ref='mapSVG' width={ this.props.width } height={ this.props.height }>
+        <svg className='map' ref='mapSVG' width={ this.props.width } height={ this.props.height }>
           <g>
             {paths}
           </g>

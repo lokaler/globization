@@ -13,12 +13,9 @@ export default class Outro extends React.Component {
 
   render() {
     return (<div>
-      <h1>Übermorgen</h1>
-      <p>Hier steht das intro... Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit. Vitae consequatur
-      dolorum voluptate nam necessitatibus quis eum voluptas
-      laboriosam nostrum eaque quod reprehenderit molestiae,
-      obcaecati ipsum deleniti. Possimus praesentium, ipsum molestias.</p>
+      <h1>ÜberMorgen-Explorer</h1>
+      <p>Vergleichen Sie Ihr Konsumverhalten mit dem von Menschen in anderen Ländern.
+      Und finden Sie heraus, wie Sie Umwelt und Ressourcen schonen können.</p>
       <DataSetList { ...this.props } />
     </div>);
   }
