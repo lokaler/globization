@@ -57,6 +57,7 @@
     "cheerio": "0.19.0",
     "classnames": "2.2.3",
     "colors": "1.1.2",
+    "copy-webpack-plugin": "1.1.1",
     "cross-env": "1.0.7",
     "css-loader": "0.23.1",
     "dsv-loader": "1.0.3",

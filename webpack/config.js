@@ -2,6 +2,8 @@ import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import autoprefixer from 'autoprefixer';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+
 
 const developmentEnvironment = 'development';
 const productionEnvironment = 'production';
@@ -37,7 +39,10 @@ function getPlugins(env) {
 
     prod && new ExtractTextPlugin('styles.css'),
     prod && new webpack.optimize.DedupePlugin(),
-    prod && new webpack.optimize.UglifyJsPlugin()
+    prod && new webpack.optimize.UglifyJsPlugin(),
+    prod && new CopyWebpackPlugin([
+      { from: 'src/data', to: 'data' }
+    ])
 
   ]);
 }
