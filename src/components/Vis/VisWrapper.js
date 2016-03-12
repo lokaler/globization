@@ -3,6 +3,7 @@
 import React, { PropTypes } from 'react';
 import GlobeComponent from './GlobeComponent';
 import MapComponent from './MapComponent';
+import ScatterComponent from './ScatterComponent';
 import VisUtils from './VisUtils';
 import cssModules from 'react-css-modules';
 import styles from './vis.scss';
@@ -51,6 +52,9 @@ export default class Globe extends React.Component {
     }
     if(this.props.vis.type === 'map'){
       Globe = <MapComponent {...this.props} width={550} height={500} />
+    }
+    if(this.props.vis.type === 'scatter'){
+      Globe = <ScatterComponent {...this.props} width={550} height={500} />
     }
 
     const changeGlobe = this.changeType.bind(this, 'globe');

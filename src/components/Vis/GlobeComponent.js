@@ -164,10 +164,6 @@ export default class GlobeComponent extends React.Component {
       //   d.properties.fillColor = this.getFillColor(d.properties.iso, nextProps.master.dataset.data);
       // });
 
-      let tween = function tween(d, i, a) {
-        return d3.interpolate(a, String(value.call(this, d, i)));
-      }
-
       this.svg
       .transition()
       .duration(1000)

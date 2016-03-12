@@ -9,6 +9,12 @@ export default {
     const debug = true;
     if (debug) console.log.apply(console, theArgs);
   },
+  pathCircle : (x, y, radius) => {
+    return "M" + x + "," + (y + radius)
+        + "a" + radius + "," + radius + " 0 1,1 0," + -2 * radius
+        + "a" + radius + "," + radius + " 0 1,1 0," + 2 * radius
+        + "z";
+  },
   svgStripePattern: `<pattern id="pattern-stripe"
               width="6" height="6"
               patternUnits="userSpaceOnUse"

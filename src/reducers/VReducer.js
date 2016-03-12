@@ -13,16 +13,12 @@ const initialState = {
   zoom: 1,
   rotate: [0, 0],
   translate: [0, 0],
-  type: 'globe',
+  type: 'scatter',
   animation:null,
   active:null
 };
 
 
-
-function findeCountry(name){
-  console.log(name);
-}
 
 export default function vis(state = initialState, action) {
   switch (action.type) {
@@ -32,9 +28,6 @@ export default function vis(state = initialState, action) {
       return objectAssign({}, state, { paths: action.paths });
     case ActionTypes.CHANGE_TYPE:
       return objectAssign({}, state, { type: action.val });
-    case ActionTypes.ZOOM_TO_COUNTRY:
-      findeCountry(action.name);
-      return objectAssign({}, state, { type: action.name });
     case ActionTypes.CHANGE_VIS:
       return objectAssign({}, state,  action.val );
     default:
