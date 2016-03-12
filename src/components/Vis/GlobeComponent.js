@@ -49,6 +49,8 @@ export default class GlobeComponent extends React.Component {
 
     this.zoom = d3.behavior.zoom()
       .center([0,0])
+      .scaleExtent([1,5])
+      .size([this.props.width,this.props.height])
       .on("zoom", () => {
         const e = d3.event;
         const _scale = this.props.vis.initialScale * e.scale;
@@ -72,6 +74,7 @@ export default class GlobeComponent extends React.Component {
             animation: null
           });
       })
+
 
   }
 
