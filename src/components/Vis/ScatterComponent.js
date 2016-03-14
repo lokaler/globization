@@ -50,7 +50,6 @@ export default class ScatterComponent extends React.Component {
     let e = _.find(this.props.master.master, { alpha3: name });
     if(!e) { console.log(name, "not defined!"); e = { gdp : 0 } }
 
-    // return this.y(e.gdp);
     return e.vergleich;
   }
 
@@ -110,8 +109,8 @@ export default class ScatterComponent extends React.Component {
         <svg className='scatter' ref='scatterSVG' width={ this.props.width } height={ this.props.height }>
 
         <g transform={`translate(${this.margin.left}, ${this.margin.top})`}>
-          <AxisComponent className='x axis' scale={this.x} tickFormat={ d3.format("s") } orient='bottom' transform={`translate(0, ${this.innerHeight})`}  transitionDuration={1000} />
-          <AxisComponent className='y axis' scale={this.y} tickFormat={ d3.format("s") } orient='right' transform={`translate(${this.innerWidth}, 0)`}  transitionDuration={1000} />
+          <AxisComponent className='x axis' scale={this.x} tickFormat={ d3.format("d") } orient='bottom' transform={`translate(0, ${this.innerHeight})`}  transitionDuration={1000} />
+          <AxisComponent className='y axis' scale={this.y} tickFormat={ d3.format("d") } orient='right' transform={`translate(${this.innerWidth}, 0)`}  transitionDuration={1000} />
           <DotsComponent className='dots' xScale={this.x} yScale={this.y} transitionDuration={1000} data={this.props.master.dataset}/>
         </g>
 

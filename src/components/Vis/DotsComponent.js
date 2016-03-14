@@ -18,9 +18,10 @@ export default class DotsComponent extends React.Component {
       console.log("mount", this.props)
 
       this.g = d3.select(this.refs.g);
-      if(this.props.data){
-        this.renderData()
-      }
+      this.tooltip = d3.select(this.refs.tooltip);
+      this.tooltip.append("text").text("tooltip").attr("dy", "-1em")
+
+      if(this.props.data) this.renderData();
     }
 
     componentWillUnmount(){
@@ -29,13 +30,21 @@ export default class DotsComponent extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-      console.log("prevProps", prevProps)
+      utils.log("prevProps", prevProps)
 
       this.renderData()
     }
 
+    mouseenter(d, a){
+
+      this.tooltip
+        .attr("transform", `translate(${this.props.xScale(d.value)}, ${this.props.yScale(d.y)})`)
+        .select("text")
+        .text(d.iso + " " + d.value)
+    }
+
     renderData() {
-      console.log("render", this)
+      utils.log("render", this)
       var x = this.props.xScale;
       var y = this.props.yScale;
       var data = this.props.data.data;
@@ -47,6 +56,7 @@ export default class DotsComponent extends React.Component {
         .append('circle')
         .attr('class', 'item')
         .style('opacity', 0)
+        .on("mouseenter", this.mouseenter.bind(this))
 
       item
         .transition()
@@ -66,7 +76,10 @@ export default class DotsComponent extends React.Component {
 
     render() {
       return (
-        <g ref='g' {...this.props} />
+        <g>
+          <g ref='g' />
+          <g ref='tooltip' className='tooltip' />
+        </g>
       )
     }
 

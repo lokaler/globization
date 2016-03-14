@@ -12,20 +12,26 @@ export default class AxisComponent extends React.Component {
     transitionDuration: PropTypes.number.isRequired
   };
 
-  componentDidMount() {
-      this.axis = d3.svg.axis()
-        .scale(this.props.scale)
-        .orient(this.props.orient)
-        .tickFormat(this.props.tickFormat);
 
-      d3.select(this.refs.g).call(this.axis);
-    }
+  componentDidMount() {
+    // this.localeFormatter = d3.locale({
+    //   "decimal": ",",
+    //   "thousands": "."
+    // });
+
+    this.axis = d3.svg.axis()
+      .scale(this.props.scale)
+      .orient(this.props.orient)
+      // .tickFormat(this.localeFormatter.numberFormat);
+
+    d3.select(this.refs.g).call(this.axis);
+  }
 
     componentDidUpdate(prevProps, prevState) {
       this.axis
         .scale(this.props.scale)
         .orient(this.props.orient)
-        .tickFormat(this.props.tickFormat);
+        // .tickFormat(this.localeFormatter.numberFormat);
 
       d3.select(this.refs.g).transition().duration(this.props.transitionDuration)
         .call(this.axis);
