@@ -13,7 +13,7 @@ export function receiveDataSets(jsonData) {
 }
 
 export function errorQuestionData(err) {
-  console.log(err)
+  console.error(err)
   return { type: types.ERROR_QUESTION_DATA, error: err };
 }
 
