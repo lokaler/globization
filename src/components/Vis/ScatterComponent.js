@@ -36,8 +36,8 @@ export default class ScatterComponent extends React.Component {
 
     this.geometries = this.props.master.topojson;
 
-    this.x = d3.scale.linear().range([0,this.innerWidth])
-    this.y = d3.scale.linear().range([this.innerHeight,0])
+    this.x = d3.scale.linear().range([0,this.innerWidth]).clamp(true)
+    this.y = d3.scale.linear().range([this.innerHeight,0]).clamp(true)
 
     this.axis = null;
 
@@ -71,7 +71,8 @@ export default class ScatterComponent extends React.Component {
 
   yValue(name) {
     let e = _.find(this.props.master.master, { alpha3: name });
-    if(!e) console.log(name, "not defined!");
+    if(!e) { console.log(name, "not defined!"); e = { gdp : 0 } }
+
     return this.y(e.gdp);
   }
 
@@ -128,11 +129,22 @@ export default class ScatterComponent extends React.Component {
       this.x.domain(nextProps.master.dataset.domain);
       this.y.domain(d3.extent(this.props.master.master, function(d) { return d.gdp*1; }));
 
+      // nextProps.master.dataset.data.map((d, i) =>
+      //         utils.log(d.iso, this.x(d.value), this.yValue(d.iso))
+      // )
+
+      // utils.log(this.x.domain(), this.y.domain())
+
       this.axis.select(".x.axis").call(this.xAxis);
       this.axis.select(".y.axis").call(this.yAxis);
 
       update = true;
     }
+
+    // nextProps.master.dataset.data.forEach((d) => {
+    //   utils.log(this.x(d.value), this.yValue(d.iso));
+
+    // })
 
     utils.log("shouldComponentUpdate", update ? "yes": "no");
     return update;
@@ -151,9 +163,11 @@ export default class ScatterComponent extends React.Component {
     let paths = "";
 
     if(this.props.master.dataset){
-      paths = this.props.master.dataset.data.map((d, i) =>
-            <path key={ i } d={ utils.pathCircle(this.x(d.value), this.yValue(d.iso), 5) } ></path>);
-    }
+      paths = this.props.master.dataset.data
+        .filter((d)=> !isNaN(d.value))
+        .map((d, i) =>
+          <path key={ i } d={ utils.pathCircle(this.x(d.value), this.yValue(d.iso), 5) } ></path>);
+        }
 
     return (
       <div>

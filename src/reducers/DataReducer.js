@@ -22,11 +22,23 @@ function makeTopoJson(){
   return t;
 }
 
+
+function parseMaster(){
+  master.forEach( (d) => {
+    d.gdp = d.gdp == "#NV" ? NaN : d.gdp;
+    d.gdp = Number(d.gdp);
+
+    // console.log(d.name, d.alpha3,d.gdp);
+  })
+  return master;
+}
+
+
 const initialState = {
   dataset: null,
   datasets: [],
   topojson: makeTopoJson(),
-  master
+  master: parseMaster()
 };
 
 export default function questions(state = initialState, action) {
