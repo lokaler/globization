@@ -153,7 +153,7 @@ export default class GlobeComponent extends React.Component {
       update = true;
     }
 
-    if(nextProps.master.dataset != this.props.master.dataset) {
+    if(nextProps.master.dataset != this.props.master.dataset && nextProps.master.dataset) {
       this.dataset.setData(nextProps.master.dataset);
 
       this.color
