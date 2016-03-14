@@ -24,20 +24,6 @@ export default {
 
     arrayOfStrings: array({ items: string() }),
 
-    dataset: {
-      required: ['dataset'],
-      properties: {
-        dataset: string()
-      }
-    },
-
-    functions: {
-      required: ['functions'],
-      properties: {
-        functions: ref('arrayOfStrings')
-      }
-    },
-
     text: {
       required: ['text'],
       properties: {
@@ -87,11 +73,9 @@ export default {
     card: array({
       items: object({
         oneOf: [
-          ref('functions'),
           ref('text'),
           ref('input'),
-          ref('answer'),
-          ref('dataset')
+          ref('answer')
         ]
       })
     })
@@ -102,6 +86,8 @@ export default {
     required: ['title', 'content'],
     properties: {
       title: string(),
+      dataset: string(),
+      functions: ref('arrayOfStrings'),
       content: ref('card')
     }
   })

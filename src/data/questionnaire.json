@@ -1,18 +1,14 @@
 [
   {"title": "1. Karte",
-    "content":[
-      {
-        "functions": [
-          "getGermanCountryName",
-          "getMaxGermanCountryName",
-          "getMinGermanCountryName",
-          "getMaxValue",
-          "getMinValue"
-        ]
-      },
-      {
-        "dataset": "Ausgaben für Lebensmittel"
-      },
+    "dataset": "Ausgaben für Lebensmittel",
+    "functions": [
+      "getGermanCountryName",
+      "getMaxGermanCountryName",
+      "getMinGermanCountryName",
+      "getMaxValue",
+      "getMinValue"
+    ],
+    "content": [
       {
         "text": [
           "# Wofür geben Sie Ihr Geld aus?",
@@ -68,15 +64,9 @@
     ]
   },
   {"title": "2. Karte",
+    "dataset": "Lebensmittelausgaben",
+    "functions": [],
     "content":[
-      {
-        "functions": [
-
-        ]
-      },
-      {
-        "dataset": "Lebensmittelausgaben"
-      },
       {
         "text": [
           "# Worauf achten Sie beim Kauf?",
@@ -167,13 +157,9 @@
     ]
   },
   {"title": "3. Karte",
+    "dataset": "Fleischkonsum",
+    "functions": [],
     "content":[
-      {
-        "functions": []
-      },
-      {
-        "dataset": "Fleischkonsum"
-      },
       {
         "text": [
           "Manche Produkte verbrauchen besonders viele Ressourcen: Die Herstellung von einem Kilogramm Rindfleisch zum Beispiel beansprucht im Durchschnitt gut 50 mal mehr Wasser und rund 100 mal mehr Land als die Produktion von einem Kilo Kartoffeln.:",
@@ -230,13 +216,9 @@
 
   {
     "title": "4. Karte",
+    "dataset": "Lebensmittelabfälle",
+    "functions": [],
     "content": [
-      {
-        "functions": []
-      },
-      {
-        "dataset": "Lebensmittelabfälle"
-      },
       {
         "text": [
           "# Was landet bei Ihnen im Müll?",
@@ -288,13 +270,9 @@
 
   {
     "title": "5. Karte",
+    "dataset": "Elektroschrott",
+    "functions": [],
     "content": [
-      {
-        "functions": []
-      },
-      {
-        "dataset": "Elektroschrott"
-      },
       {
         "text": [
           "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy (Finde die Quelle nicht wieder). Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt (Später E-Waste-Republic verlinken).",

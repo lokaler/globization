@@ -13,17 +13,19 @@ export default class Footer extends React.Component {
   }
 
   getClickHandler(cardIndex) {
-    return (cardIndex !== this.props.questions.activeCard) ? () => {
-      let dataId = null;
-      if (cardIndex < this.props.questions.questionData.length &&
-          cardIndex > -1) {
-        dataId = this.props.questions.questionData[cardIndex]
-          .filter(d => d.type === 'dataset')[0].data;
-      }
-
-      // const dataId = this.props.questions.questionData[cardIndex]
-      this.props.actions.setCard(cardIndex, dataId);
-    } : null;
+    const { questions, actions } = this.props;
+    if (cardIndex !== questions.activeCard) {
+      return () => {
+        let dataId = null;
+        if (
+          cardIndex < questions.questionData.length
+          && cardIndex > -1
+        ) {
+          dataId = questions.questionData[cardIndex].dataset;
+        }
+        actions.setCard(cardIndex, dataId);
+      };
+    }
   }
 
   createPagination(questions) {
