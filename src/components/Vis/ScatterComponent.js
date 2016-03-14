@@ -9,6 +9,9 @@ import Dataset from '../../logic/Dataset.js'
 import cssModules from 'react-css-modules';
 import styles from './globe.scss';
 import classnames from 'classnames';
+import AxisComponent from './AxisComponent.js';
+import DotsComponent from './DotsComponent.js';
+
 
 @cssModules(styles)
 
@@ -36,35 +39,9 @@ export default class ScatterComponent extends React.Component {
 
     this.geometries = this.props.master.topojson;
 
-    this.x = d3.scale.linear().range([0,this.innerWidth]).clamp(true)
-    this.y = d3.scale.linear().range([this.innerHeight,0]).clamp(true)
+    this.x = d3.scale.linear().range([0,this.innerWidth]).clamp(true).nice();
+    this.y = d3.scale.linear().range([this.innerHeight,0]).clamp(true).nice();
 
-    this.axis = null;
-
-    this.xAxis = d3.svg.axis()
-      .scale(this.x)
-      .orient("bottom");
-
-    this.yAxis = d3.svg.axis()
-        .scale(this.y)
-        .orient("right")
-        .tickFormat(d3.format("s"))
-
-    this.zoom = d3.behavior.zoom()
-      .center([0,0])
-      .scaleExtent([1,5])
-      .size([this.width,this.height])
-      .on("zoom", () => {
-        const e = d3.event;
-
-        utils.log("zoom",this.zoom.translate(), this.zoom.scale());
-
-        this.forceUpdate();
-      })
-      .on("zoomend", () => {
-        utils.log("zoomend")
-
-      })
 
 
   }
@@ -73,40 +50,17 @@ export default class ScatterComponent extends React.Component {
     let e = _.find(this.props.master.master, { alpha3: name });
     if(!e) { console.log(name, "not defined!"); e = { gdp : 0 } }
 
-    return this.y(e.gdp);
+    // return this.y(e.gdp);
+    return e.gdp;
   }
 
   componentDidMount() {
     utils.log("componentDidMount", this.props)
 
     this.svg = d3.select(this.refs.scatterSVG)
-      .append("g")
-      .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")")
 
     //this.svg.call(this.zoom)
 
-    this.axis = this.svg.append("g");
-
-    this.axis.append("g")
-          .attr("class", "x axis")
-          .attr("transform", "translate(0," + this.innerHeight + ")")
-          .call(this.xAxis)
-        .append("text")
-          .attr("class", "label")
-          .attr("x", this.innerWidth)
-          .attr("y", -6)
-          .style("text-anchor", "end")
-          // .text("fleischkonsum (kg/woche)");
-
-    this.axis.append("g")
-          .attr("class", "y axis")
-          .attr("transform", "translate(" + this.innerWidth + ",0)")
-          .call(this.yAxis)
-        .append("text")
-          .attr("class", "label")
-          .attr("y", 6)
-          .attr("dy", ".71em")
-          .style("text-anchor", "end")
 
   }
   componentWillUnmount(){
@@ -129,22 +83,14 @@ export default class ScatterComponent extends React.Component {
       this.x.domain(nextProps.master.dataset.domain);
       this.y.domain(d3.extent(this.props.master.master, function(d) { return d.gdp*1; }));
 
-      // nextProps.master.dataset.data.map((d, i) =>
-      //         utils.log(d.iso, this.x(d.value), this.yValue(d.iso))
-      // )
-
-      // utils.log(this.x.domain(), this.y.domain())
-
-      this.axis.select(".x.axis").call(this.xAxis);
-      this.axis.select(".y.axis").call(this.yAxis);
+      nextProps.master.dataset.data.forEach(d => {
+        // todo: not here !
+        d.y = this.yValue(d.iso);
+      })
 
       update = true;
     }
 
-    // nextProps.master.dataset.data.forEach((d) => {
-    //   utils.log(this.x(d.value), this.yValue(d.iso));
-
-    // })
 
     utils.log("shouldComponentUpdate", update ? "yes": "no");
     return update;
@@ -158,23 +104,17 @@ export default class ScatterComponent extends React.Component {
   render() {
     utils.log("render scatter")
 
-    // if(!this.props.master.dataset) return;
-
-    let paths = "";
-
-    if(this.props.master.dataset){
-      paths = this.props.master.dataset.data
-        .filter((d)=> !isNaN(d.value))
-        .map((d, i) =>
-          <path key={ i } d={ utils.pathCircle(this.x(d.value), this.yValue(d.iso), 5) } ></path>);
-        }
 
     return (
       <div>
         <svg className='scatter' ref='scatterSVG' width={ this.props.width } height={ this.props.height }>
-          <g>
-          {paths}
-          </g>
+
+        <g transform={`translate(${this.margin.left}, ${this.margin.top})`}>
+          <AxisComponent className='x axis' scale={this.x} tickFormat={ d3.format("s") } orient='bottom' transform={`translate(0, ${this.innerHeight})`}  transitionDuration={1000} />
+          <AxisComponent className='y axis' scale={this.y} tickFormat={ d3.format("s") } orient='right' transform={`translate(${this.innerWidth}, 0)`}  transitionDuration={1000} />
+          <DotsComponent className='dots' xScale={this.x} yScale={this.y} transitionDuration={1000} data={this.props.master.dataset}/>
+        </g>
+
         </svg>
       </div>
     );
