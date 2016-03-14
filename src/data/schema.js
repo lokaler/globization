@@ -16,6 +16,16 @@ function ref(definition) {
   };
 }
 
+function contentPart(key, schema) {
+  return {
+    required: [key],
+    additionalProperties: false,
+    properties: {
+      [key]: schema
+    }
+  };
+}
+
 export default {
 
   $schema: 'http://json-schema.org/draft-04/schema#',
@@ -24,51 +34,37 @@ export default {
 
     arrayOfStrings: array({ items: string() }),
 
-    text: {
-      required: ['text'],
-      properties: {
-        text: ref('arrayOfStrings')
-      }
-    },
+    text: contentPart(
+      'text',
+      ref('arrayOfStrings')
+    ),
 
-    input: {
-      required: ['input'],
-      properties: {
-        input: object({
-          required: ['key', 'type', 'options'],
-          properties: {
-            key: string(),
-            type: { enum: ['slider', 'choices'] },
-            options: { type: 'object' }
+    input: contentPart(
+      'input',
+      object({
+        required: ['key', 'type', 'options'],
+        properties: {
+          key: string(),
+          type: { enum: ['slider', 'choices'] },
+          options: { type: 'object' }
+        }
+      })
+    ),
+
+    answer: contentPart(
+      'answer',
+      object({
+        properties: {
+          answerKey: ref('arrayOfStrings'),
+          answerContext: object({
+            patternProperties: { '.*': string() }
+          }),
+          templates: {
+            patternProperties: { '.*': ref('arrayOfStrings') }
           }
-        })
-      }
-    },
-
-    answer: {
-      required: ['answer'],
-      properties: {
-        answer: object({
-          properties: {
-
-            answerKey: ref('arrayOfStrings'),
-
-            answerContext: object({
-              patternProperties: {
-                '.*': string()
-              }
-            }),
-
-            templates: {
-              patternProperties: {
-                '.*': ref('arrayOfStrings')
-              }
-            }
-
-          }
-        })
-      }
-    },
+        }
+      })
+    ),
 
     card: array({
       items: object({
