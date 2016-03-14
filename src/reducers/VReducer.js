@@ -15,7 +15,13 @@ const initialState = {
   translate: [0, 0],
   type: 'globe',
   animation:null,
-  active:null
+  active:null,
+  tooltip: {
+    active:false,
+    text: "Testtooltip",
+    x: 200,
+    y: 200
+  }
 };
 
 

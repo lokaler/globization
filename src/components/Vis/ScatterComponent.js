@@ -54,9 +54,10 @@ export default class ScatterComponent extends React.Component {
   }
 
   componentDidMount() {
-    utils.log("componentDidMount", this.props)
+    utils.log("scatter componentDidMount", this.props)
 
     this.svg = d3.select(this.refs.scatterSVG)
+
 
     //this.svg.call(this.zoom)
 
@@ -69,7 +70,7 @@ export default class ScatterComponent extends React.Component {
 
 
   shouldComponentUpdate(nextProps) {
-    utils.log("shouldComponentUpdate", nextProps, this.props);
+    utils.log("scatter shouldComponentUpdate", nextProps, this.props);
     let update = false;
 
     if(nextProps.master.dataset != this.props.master.dataset) {
@@ -111,7 +112,7 @@ export default class ScatterComponent extends React.Component {
         <g transform={`translate(${this.margin.left}, ${this.margin.top})`}>
           <AxisComponent className='x axis' scale={this.x} tickFormat={ d3.format("d") } orient='bottom' transform={`translate(0, ${this.innerHeight})`}  transitionDuration={1000} />
           <AxisComponent className='y axis' scale={this.y} tickFormat={ d3.format("d") } orient='right' transform={`translate(${this.innerWidth}, 0)`}  transitionDuration={1000} />
-          <DotsComponent className='dots' xScale={this.x} yScale={this.y} transitionDuration={1000} data={this.props.master.dataset}/>
+          <DotsComponent {...this.props} className='dots' xScale={this.x} yScale={this.y} transitionDuration={1000} data={this.props.master.dataset}/>
         </g>
 
         </svg>

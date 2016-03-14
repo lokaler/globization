@@ -196,12 +196,41 @@ export default class GlobeComponent extends React.Component {
     return classnames(this.props.vis.active === name ? "active" : "");
   }
 
+  onMouseEnter(d){
+    utils.log("mouseover", d);
+
+    const c = this.path.centroid(d);
+    const val = this.getValueForCountry(d.properties.iso, this.props.master.dataset.data)
+
+    utils.log(c);
+
+    this.props.actions.changeVis({
+      tooltip: {
+        active: true,
+        text: `${d.properties.iso}: ${val}`,
+        x: c[0],
+        y: c[1]
+      }
+    });
+
+  }
+
+  onMouseLeave(d){
+
+    this.props.actions.changeVis({
+      tooltip: {
+        active: false
+      }
+    });
+
+  }
+
 
   render() {
     utils.log("render globe")
 
     const paths = this.geometries.map((d, i) =>
-      <path key={ i } d={this.path(d)} fill={d.properties.fillColor}></path>);
+      <path key={ i } d={this.path(d)} fill={d.properties.fillColor} onMouseLeave={this.onMouseLeave.bind(this,d)} onMouseEnter={this.onMouseEnter.bind(this,d)}></path>);
 
     const activeGeometry = <path className="activeGeometry" d={this.path(this.activeGeometry)}/>;
     const graticule = <path className="graticule" key="graticule" d={ this.path(this.graticule) } />;

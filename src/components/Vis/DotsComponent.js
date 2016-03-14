@@ -35,21 +35,42 @@ export default class DotsComponent extends React.Component {
       this.renderData()
     }
 
-    mouseenter(d, a){
+    mouseenter(d){
+      utils.log("tooltip", d)
 
-      this.tooltip
-        .attr("transform", `translate(${this.props.xScale(d.value)}, ${this.props.yScale(d.y)})`)
-        .select("text")
-        .text(d.iso + " " + d.value)
+      const x = this.props.xScale;
+      const y = this.props.yScale;
+
+      this.props.actions.changeVis({
+        tooltip: {
+          active: true,
+          text: `${d.iso}: ${d.value}`,
+          x: x(d.value),
+          y: y(d.y)
+        }
+      });
+
+    }
+
+    mouseleave(d){
+
+      utils.log("leave")
+
+      this.props.actions.changeVis({
+        tooltip: {
+          active: false
+        }
+      });
+
     }
 
     renderData() {
-      utils.log("render", this)
-      var x = this.props.xScale;
-      var y = this.props.yScale;
-      var data = this.props.data.data;
+      utils.log("dots render", this)
+      const x = this.props.xScale;
+      const y = this.props.yScale;
+      const data = this.props.data.data;
 
-      var item = this.g.selectAll('circle')
+      const item = this.g.selectAll('circle')
             .data(data, d => d.iso );
 
       item.enter()
@@ -57,6 +78,7 @@ export default class DotsComponent extends React.Component {
         .attr('class', 'item')
         .style('opacity', 0)
         .on("mouseenter", this.mouseenter.bind(this))
+        .on("mouseleave", this.mouseleave.bind(this))
 
       item
         .transition()
@@ -76,10 +98,7 @@ export default class DotsComponent extends React.Component {
 
     render() {
       return (
-        <g>
-          <g ref='g' />
-          <g ref='tooltip' className='tooltip' />
-        </g>
+        <g ref='g' />
       )
     }
 
