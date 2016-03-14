@@ -27,8 +27,10 @@ function parseMaster(){
   master.forEach( (d) => {
     d.gdp = d.gdp == "#NV" ? NaN : d.gdp;
     d.gdp = Number(d.gdp);
+    d.population = Number(d.population);
+    d.vergleich = d.gdp / d.population;
 
-    // console.log(d.name, d.alpha3,d.gdp);
+    // console.log(d.name, d.alpha3,d.gdp, d.population);
   })
   return master;
 }

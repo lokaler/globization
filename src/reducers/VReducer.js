@@ -13,7 +13,7 @@ const initialState = {
   zoom: 1,
   rotate: [0, 0],
   translate: [0, 0],
-  type: 'scatter',
+  type: 'globe',
   animation:null,
   active:null
 };

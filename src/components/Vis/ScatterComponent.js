@@ -51,7 +51,7 @@ export default class ScatterComponent extends React.Component {
     if(!e) { console.log(name, "not defined!"); e = { gdp : 0 } }
 
     // return this.y(e.gdp);
-    return e.gdp;
+    return e.vergleich;
   }
 
   componentDidMount() {
@@ -81,7 +81,7 @@ export default class ScatterComponent extends React.Component {
         .domain(nextProps.master.dataset.domain);
 
       this.x.domain(nextProps.master.dataset.domain);
-      this.y.domain(d3.extent(this.props.master.master, function(d) { return d.gdp*1; }));
+      this.y.domain(d3.extent(this.props.master.master, function(d) { return d.vergleich; }));
 
       nextProps.master.dataset.data.forEach(d => {
         // todo: not here !

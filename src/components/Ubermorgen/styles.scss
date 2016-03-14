@@ -46,7 +46,7 @@
 
   .losButton {
     font-size: 12px;
-    padding: 8px 30px 8px 30px;
+    padding: 10px 30px 10px 30px;
     font-weight: bold;
     background: #7d9f89;
     color: #FFF;
@@ -55,6 +55,7 @@
     text-transform: uppercase;
     cursor: pointer;
     float: left;
+    width:100%;
     margin-bottom: 30px;
     margin-top: 10px;
     transition: all 0.2s;
@@ -91,11 +92,27 @@
         margin-bottom: 5px;
         border-radius: 2px;
         color: #1D1D1D;
-        transition: all 0.2s;
 
-        &:hover, &.active {
+
+        &.active {
           box-shadow: 0px 3px 4px rgba(0,0,0,0.1);
-          background: #D2D2D2;
+          background: #FDAE6B;
+          color:#FFF;
+          .info {
+            color:#FFF;
+            opacity: 1;
+          }
+        }
+        &:hover {
+
+          background: #FDAE6B;
+          color:#FFF;
+
+        }
+
+        .info {
+          float: right;
+          opacity: 0;
         }
       }
     }
@@ -109,10 +126,18 @@
     &:first-of-type {
       margin-top:0;
     }
+
   }
   .slider{
     margin-top:2em;
     margin-bottom:2em;
+
+    .rc-slider-track {
+      background-color: #FD8D3C;
+    }
+    .rc-slider-handle {
+      border-color:#FD8D3C;
+    }
   }
 
 

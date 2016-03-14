@@ -27,7 +27,7 @@ export default class DataSetList extends React.Component {
 
   render() {
     const list = this.props.master.datasets.map((d, i) => {
-      return <li className={ this.getActiveClass(d.name) } key={i} onClick={ this.handleClick.bind(this, d.name) }>{ d.name }</li>;
+      return <li className={ this.getActiveClass(d.name) } key={i} onClick={ this.handleClick.bind(this, d.name) }>{ d.name }<span className="info">{ d.data.length } Länder</span></li>;
     });
 
     return (
