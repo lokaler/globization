@@ -6,14 +6,16 @@ import cssModules from 'react-css-modules';
 export default class Text extends React.Component {
 
   static propTypes = {
-    data: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired
+    data: PropTypes.object.isRequired,
+    id: PropTypes.string.isRequired,
+    app: PropTypes.object.isRequired
   }
 
   render() {
+    const { data, id, app } = this.props;
     return (
-      <div styleName="widget" key={this.props.id}>
-        <ReactMarkdown source={this.props.data.toString()} />
+      <div styleName="widget" key={ id }>
+        <ReactMarkdown source={ data[app.language].toString() } />
       </div>
     );
   }

@@ -8,10 +8,12 @@ export default class Choices extends React.Component {
     data: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired,
     actions: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired
+    questions: PropTypes.object.isRequired,
+    app: PropTypes.object.isRequired
   }
 
-  onChange(activeValue) {
+  onChange = (evt) => {
+    const activeValue = evt.target.value;
     this.props.actions.updateUserInput(this.props.id, activeValue);
   }
 
@@ -23,19 +25,18 @@ export default class Choices extends React.Component {
   }
 
   createRadioButton(option, index) {
-    const boundRadioChange = this.onChange.bind(this, option[0]);
+    const { id, app } = this.props;
     const isSelected = this.isActiveRadio(option[0]);
+    const key = `${ id }_i${ index }`;
+    const value = option[0];
+    const label = option[1][app.language];
 
-    return (<div key={`${this.props.id}_i${index}`}>
-        <input
-          type="radio"
-          name={`${this.props.id}_${index}`}
-          value={option[0]}
-          onChange={boundRadioChange}
-          checked={isSelected}
-        />
-        <span styleName="choice-label">{option[1]}</span>
-      </div>);
+    return (
+      <div key={ key }>
+        <input type="radio" value={ value } onChange={ this.onChange } checked={ isSelected }/>
+        <span styleName="choice-label">{ label }</span>
+      </div>
+    );
   }
 
   render() {

@@ -19,7 +19,10 @@ function structureData(card) {
 
     switch (key) {
       case 'text': {
-        cleanData.data = el.text.join('\n');
+        cleanData.data = {
+          de: el.text.de.join('\n'),
+          en: el.text.en.join('\n')
+        };
         cleanData.key = createKey(cleanData.type, index);
         break;
       }
@@ -29,9 +32,11 @@ function structureData(card) {
         break;
       }
       case 'answer': {
-        for (const templateKey in el.answer.templates) {
-          if (typeof el.answer.templates[templateKey] !== 'undefined') {
-            cleanData.data.templates[templateKey] = el.answer.templates[templateKey].join('\n');
+        const templates = el.answer.templates;
+        for (const templateKey in templates) {
+          if (typeof templates[templateKey] !== 'undefined') {
+            cleanData.data.templates[templateKey].de = templates[templateKey].de.join('\n');
+            cleanData.data.templates[templateKey].en = templates[templateKey].en.join('\n');
           }
         }
         cleanData.key = createKey(cleanData.type, index);

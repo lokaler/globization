@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 import MicroMustache from 'micromustache';
 import cssModules from 'react-css-modules';
 import * as Logic from '../../../logic/questionnaire';
-import { isEmpty } from 'lodash';
+import { isUndefined, isEmpty } from 'lodash';
 
 @cssModules()
 export default class Answer extends React.Component {
@@ -12,7 +12,8 @@ export default class Answer extends React.Component {
     data: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired,
     questions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired
+    master: PropTypes.object.isRequired,
+    app: PropTypes.object.isRequired
   }
 
   getTemplate(templates, userInput) {
@@ -39,20 +40,19 @@ export default class Answer extends React.Component {
   }
 
   render() {
-    if (typeof this.props.data === 'undefined' || isEmpty(this.props.questions.inputs)) {
+    const { id, data, questions, app } = this.props;
+
+    if (isUndefined(data) || isEmpty(questions.inputs)) {
       return null;
     }
 
-    const questions = { ...this.props.questions };
-    const data = { ...this.props.data };
-
-    const template = this.getTemplate(data.templates, questions.inputs);
-    const templateContext = Logic.compileContext.bind(this)(data.answerContext, questions.inputs);
-    const answerContent = MicroMustache.render(template, templateContext);
+    const template = this.getTemplate(data.templates, questions.inputs)[app.language];
+    const ctx = Logic.compileContext.bind(this)(data.answerContext, questions.inputs);
+    const answerContent = MicroMustache.render(template, ctx);
 
     return (
-      <div key={ this.props.id } styleName="widget">
-      { answerContent }
+      <div key={ id } styleName="widget">
+        { answerContent }
       </div>
     );
   }

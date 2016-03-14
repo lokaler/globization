@@ -34,9 +34,18 @@ export default {
 
     arrayOfStrings: array({ items: string() }),
 
+    multiLangArrayOfStrings: object({
+      required: ['de', 'en'],
+      additionalProperties: false,
+      properties: {
+        de: ref('arrayOfStrings'),
+        en: ref('arrayOfStrings')
+      }
+    }),
+
     text: contentPart(
       'text',
-      ref('arrayOfStrings')
+      ref('multiLangArrayOfStrings')
     ),
 
     input: contentPart(
@@ -60,7 +69,7 @@ export default {
             patternProperties: { '.*': string() }
           }),
           templates: {
-            patternProperties: { '.*': ref('arrayOfStrings') }
+            patternProperties: { '.*': ref('multiLangArrayOfStrings') }
           }
         }
       })
