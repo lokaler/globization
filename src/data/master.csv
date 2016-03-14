@@ -185,7 +185,7 @@ numeric,alpha3,name,gdp,population,name_deu
 638,REU,Réunion,#NV,#NV,Réunion
 652,BLM,"Saint,Barthélemy",#NV,#NV,Saint-Barthélemy
 654,SHN,"Saint,Helena,,Ascension,and,Tristan,da,Cunha",#NV,#NV,St. Helena
-659,KNA,"Saint,Kitts,and,Nevis",#NV,#NV,St. Kitts und Nevis
+659,KNA,"Saint,Kitts,and,Nevis",76500000,#NV,St. Kitts und Nevis
 662,LCA,"Saint,Lucia",1405794281,183645,St. Lucia
 663,MAF,"Saint,Martin,(French,part)",#NV,#NV,Saint-Martin (franz. Teil)
 666,SPM,"Saint,Pierre,and,Miquelon",#NV,#NV,Saint-Pierre und Miquelon
@@ -205,7 +205,7 @@ numeric,alpha3,name,gdp,population,name_deu
 90,SLB,"Solomon,Islands",1102683983,572171,Salomonen
 706,SOM,Somalia,1374625108,10517569,Somalia
 710,ZAF,"South,Africa",3.49819E11,53969054,Südafrika
-239,SGS,"South,Georgia,and,the,South,Sandwich,Islands",#NV,#NV,"Südgeorgien und die Südlichen 
+239,SGS,"South,Georgia,and,the,South,Sandwich,Islands",#NV,#NV,"Südgeorgien und die Südlichen
 Sandwichinseln"
 728,SSD,"South,Sudan",11006755458,11911184,Südsudan
 724,ESP,Spain,1.38134E12,46259716,Spanien
@@ -217,7 +217,7 @@ Sandwichinseln"
 752,SWE,Sweden,5.7109E11,9703247,Schweden
 756,CHE,Switzerland,7.01037E11,8211383,Schweiz
 760,SYR,"Syrian,Arab,Republic",34184127956,18772481,"Syrien, Arabische Republik"
-158,TWN,"Taiwan,,Province,of,China",#NV,#NV,Republik China (Taiwan)
+158,TWN,"Taiwan,,Province,of,China",47400000000,#NV,Republik China (Taiwan)
 762,TJK,Tajikistan,9241627841,8295840,Tadschikistan
 834,TZA,"Tanzania,,United,Republic,of",48030400639,50443621,"Tansania, Vereinigte Republik"
 764,THA,Thailand,4.04824E11,67725979,Thailand
