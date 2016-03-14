@@ -934,10 +934,6 @@
             "value":0.1
          },
          {
-            "iso":"KANN",
-            "value":1.5
-         },
-         {
             "iso":"LCA",
             "value":1.7
          },
@@ -1776,10 +1772,6 @@
          {
             "iso":"SAU",
             "value":12.5
-         },
-         {
-            "iso":"SYR",
-            "value":null
          },
          {
             "iso":"TUR",
