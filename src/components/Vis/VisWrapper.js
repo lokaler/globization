@@ -4,7 +4,8 @@ import React, { PropTypes } from 'react';
 import GlobeComponent from './GlobeComponent';
 import MapComponent from './MapComponent';
 import ScatterComponent from './ScatterComponent';
-import VisUtils from './VisUtils';
+import TooltipComponent from './TooltipComponent';
+import utils from './VisUtils';
 import cssModules from 'react-css-modules';
 import styles from './vis.scss';
 import classnames from 'classnames';
@@ -45,16 +46,16 @@ export default class Globe extends React.Component {
 
   render() {
 
-    let Globe = <div></div>;
+    let visComponent = <div></div>;
 
     if(this.props.vis.type === 'globe'){
-      Globe = <GlobeComponent {...this.props} width={550} height={500} />
+      visComponent = <GlobeComponent {...this.props} width={550} height={500} />
     }
     if(this.props.vis.type === 'map'){
-      Globe = <MapComponent {...this.props} width={550} height={500} />
+      visComponent = <MapComponent {...this.props} width={550} height={500} />
     }
     if(this.props.vis.type === 'scatter'){
-      Globe = <ScatterComponent {...this.props} width={550} height={500} />
+      visComponent = <ScatterComponent {...this.props} width={550} height={500} />
     }
 
     const changeGlobe = this.changeType.bind(this, 'globe');
@@ -64,12 +65,13 @@ export default class Globe extends React.Component {
 
     return (
       <div className="vis">
-        { Globe }
+        { visComponent }
         <div className="menu">
           <div className={ this.getActiveClass('globe') } onClick={ changeGlobe }></div>
           <div className={ this.getActiveClass('map') } onClick={ changeMap }></div>
           <div className={ this.getActiveClass('scatter') } onClick={ changeScatter }></div>
         </div>
+        <TooltipComponent {...this.props} />
       </div>
     );
   }
