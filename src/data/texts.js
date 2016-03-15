@@ -16,7 +16,8 @@ export const intro = {
     BeyondTomorrow Explorer
     ===================
 
-    Compare your consumption habits with those of people from other countries -- and find out how you can protect the environment and conserve natural resources.
+    Compare your consumption habits with those of people from other countries --
+    and find out how you can protect the environment and conserve natural resources.
 
     <div class="losButton" data-onclick="onStartClick">Let's go</div>
 
