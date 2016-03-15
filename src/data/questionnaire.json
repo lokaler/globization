@@ -22,14 +22,11 @@
             "beispielsweise für Lebensmittel aus?*"
           ],
           "en": [
-            "*** ENGLISH ***",
-            "# Wofür geben Sie Ihr Geld aus?",
+            "# What do you spend your money on?",
             "",
-            "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
-            "welche Produkte uns wie viel wert sind.",
+            "At the supermarket and in the shopping mall, we decide how much the products we want are worth to us.",
             "",
-            "*Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
-            "beispielsweise für Lebensmittel aus?*"
+            "*What percent of your total expenditures goes to food?*"
           ]
         }
       },
@@ -50,7 +47,7 @@
           "answerKey": [
             "(inputs.slider.value < 15) && 'antwort_a'",
             "(inputs.slider.value < 50) && 'antwort_b'",
-            "(inputs.slider.value >= 50) && 'antwort_C'"
+            "(inputs.slider.value >= 50) && 'antwort_c'"
           ],
           "answerContext": {
             "landAusgaben": "getGermanCountryName(inputs.slider.value)",
@@ -62,36 +59,36 @@
           },
           "templates": {
             "default": {
-              "de": [],
+              "de": [
+                "Bitte bewegen Sie den Schieberegler "
+              ],
               "en": [
-                "*** ENGLISH ***"
+                "Please move the slider."
               ]
             },
             "antwort_a": {
               "de": [
-                "Weniger als 15 Prozent: Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in {{ landMin }}, die nur {{ valueMin }} Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+                "Weniger als 15 Prozent: Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in *{{ landMin }}*, die nur *{{ valueMin }}* Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Weniger als 15 Prozent: Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in {{ landMin }}, die nur {{ valueMin }} Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+                "You spend a very small percentage of your money on food, even less than people in **{{ landMin }}**. There, the share is just *{{ valueMin }}* percent, which is the lowest percentage of all countries"
               ]
             },
             "antwort_b": {
               "de": [
-                "15 bis 50 Prozent: Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
+                "15 bis 50 Prozent: Menschen in *{{ landAusgaben }}* geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "15 bis 50 Prozent: Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
+                "People in *{{ landAusgaben }}* spend a similar amount on food as you do, measured as a percentage of total expenditures."
               ]
             },
             "antwort_c": {
               "de": [
-                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
+                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in *{{ landMax }}* den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich *{{ valueMax }}* Prozent."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
+                "You spend a very large share of your money on food. Internationally, people in *{{ landMax }}* devote the largest share of their expenditures to food, namely *{{ valueMax }}* percent."
               ]
             }
           }
@@ -135,9 +132,9 @@
           "type": "choices",
           "options": {
             "choices": [
-              ["never", { "de": "Nie", "en": "*** ENGLISH *** Nie" }],
-              ["sometimes", { "de": "Manchmal", "en": "*** ENGLISH *** Manchmal"}],
-              ["always", { "de": "Immer", "en": "*** ENGLISH *** Immer" }]
+              ["never", { "de": "Nie", "en": "Never" }],
+              ["sometimes", { "de": "Manchmal", "en": "Sometimes"}],
+              ["always", { "de": "Immer", "en": "Always" }]
             ]
           }
         }
@@ -149,17 +146,14 @@
           "templates": {
             "default": {
               "de": [],
-              "en": [
-                "*** ENGLISH ***"
-              ]
+              "en": []
             },
             "never": {
               "de": [
                 "Da geht noch was – vorausgesetzt Ihr Portemonnaie erlaubt es! Würden Sie Fairtrade-Produkte kaufen, wenn Sie mehr darüber wüssten, was sich hinter dieser Bezeichnung verbirgt? Einen überblick über verschiedene Fairtrade-, Bio- und öko-Siegel gibt zum Beispiel die Webseite [Nachhaltiger Warenkorb](http://nachhaltiger-warenkorb.de/)"
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Da geht noch was – vorausgesetzt Ihr Portemonnaie erlaubt es! Würden Sie Fairtrade-Produkte kaufen, wenn Sie mehr darüber wüssten, was sich hinter dieser Bezeichnung verbirgt? Einen überblick über verschiedene Fairtrade-, Bio- und öko-Siegel gibt zum Beispiel die Webseite [Nachhaltiger Warenkorb](http://nachhaltiger-warenkorb.de/)"
+                "There’s room for improvement -- assuming your wallet allows for it! Would you buy fair trade products if you knew more about what the label means? A summary of the various fair trade and organic certifications can be found on the website fairtrade.net  [fairtrade.net](http://www.fairtrade.net/), for example."
               ]
             },
             "sometimes": {
@@ -167,8 +161,7 @@
                 "Damit liegen Sie voll im Trend. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Damit liegen Sie voll im Trend. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
+                "That’s the popular answer. Germans spent 10 times more money on fair trade products in 2014 than they did in 2004. Despite the increase, average spending on such products is still only €13 per year."
               ]
             },
             "always": {
@@ -176,8 +169,7 @@
                 "Sie können sich zu den Trendsettern unter den Fairtrade-Käufern zählen. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Sie können sich zu den Trendsettern unter den Fairtrade-Käufern zählen. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
+                "You are among the trend-setters when it comes to fair trade purchases. Germans spent 10 times more money on fair trade products in 2014 than they did in 2004. Despite the increase, average spending on such products is still only €13 per year."
               ]
             }
           }
@@ -189,7 +181,6 @@
             "*Kaufen Sie Bio-Produkte?*"
           ],
           "en": [
-            "*** ENGLISH ***",
             "*Kaufen Sie Bio-Produkte?*"
           ]
         }
@@ -200,9 +191,9 @@
           "type": "choices",
           "options": {
             "choices": [
-              ["never", { "de": "Nie", "en": "*** ENGLISH *** Nie" }],
-              ["sometimes", { "de": "Manchmal", "en": "*** ENGLISH *** Manchmal" }],
-              ["always", { "de": "Immer", "en": "*** ENGLISH *** Immer" }]
+              ["never", { "de": "Nie", "en": "Never" }],
+              ["sometimes", { "de": "Manchmal", "en": "Sometimes"}],
+              ["always", { "de": "Immer", "en": "Always" }]
             ]
           }
         }
@@ -218,40 +209,95 @@
           "templates": {
             "default": {
               "de": [],
-              "en": [
-                "*** ENGLISH ***"
-              ]
+              "en": []
             },
             "never": {
               "de": [
                 "Damit gehören Sie zur Minderheit: Laut einer repräsentativen Umfrage aus dem Jahr 2013 kauft nur jeder vierte Deutsche nie Bio-Produkte. Rund jeder Fünfte kauft sie häufig oder fast ausschließlich. Längst werden viele davon aus dem Ausland importiert, um den Bedarf zu decken. Lesen Sie dazu auch unsere [Reportage](http://)."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Damit gehören Sie zur Minderheit: Laut einer repräsentativen Umfrage aus dem Jahr 2013 kauft nur jeder vierte Deutsche nie Bio-Produkte. Rund jeder Fünfte kauft sie häufig oder fast ausschließlich. Längst werden viele davon aus dem Ausland importiert, um den Bedarf zu decken. Lesen Sie dazu auch unsere [Reportage](http://)."
+                "That puts you in the minority. According to a representative survey from 2013, only about one in four Germans never buys organic products. About one in five buys them often or almost exclusively. Many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this feature story [Link](http://)."
               ]
             },
             "sometimes": {
               "de": [
-                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere  [Reportage](http://)."
+                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://)."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere  [Reportage](http://)."
+                "Your purchasing patterns are similar to many in Germany: In a representative survey from 2013, 52 percent of respondents said they bought organic products occasionally. One of the most important reasons cited was a desire to support local suppliers. Yet many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this feature story.[Link](http://)."
               ]
             },
             "always": {
               "de": [
-                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://)."
+                "Nicht schlecht! So konsequent ist nur etwa ein Fünftel der Deutschen. Bei einer repräsentativen Umfrage im Jahr 2013 gaben 22 Prozent der Befragten an, häufig oder ausschließlich Öko-Produkte zu kaufen. Im Schnitt geben Deutsche 93 Euro im Jahr für Bio-Lebensmittel aus. Damit liegen sie im Vergleich von 29 europäischen Ländern auf dem sechsten Platz. Längst müssen für den Bio-Konsum der Deutschen auch Produkte importiert werden. Lesen Sie dazu unsere [Reportage](http://)"
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://)."
+                "Not bad! Only about a fifth of German consumers have similar purchasing habits. In a representative study from 2013, 22 percent of respondents said they often or exclusively bought organic products. On average, Germans spend €93 per year on organic foodstuffs. In a ranking of 29 European countries, Germany is in sixth place, provided varying purchasing power from country to country is taken into account. To meet the demand in Germany, organic products have been imported from abroad for some time now. You can read more about the organic business in this feature story.[Link](http://)"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "text": {
+          "de": [
+            "*Kaufen Sie regionale Produkte?*"
+          ],
+          "en": [
+            "*Do you buy local products?*"
+          ]
+        }
+      },
+      {
+        "input": {
+          "key": "localproducts",
+          "type": "choices",
+          "options": {
+            "choices": [
+              ["never", { "de": "Nie", "en": "Never" }],
+              ["sometimes", { "de": "Manchmal", "en": "Sometimes"}],
+              ["always", { "de": "Immer", "en": "Always" }]
+            ]
+          }
+        }
+      },
+      {
+        "answer": {
+          "answerKey": ["inputs.localproducts.value"],
+          "answerContext": {},
+          "templates": {
+            "default": {
+              "de": [],
+              "en": []
+            },
+            "never": {
+              "de": [
+                "Ganz allein sind Sie damit nicht: Rund elf Prozent der deutschen Verbraucher achten laut einer Umfrage aus dem Jahr 2013 beim Einkaufen gar nicht auf die Herkunft der Produkte. Für Spiegel-Online-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal. (Link) Erdbeeren im Winter gibt’s dann aber leider nicht und so manche Südfrucht scheidet ganz aus."
+              ],
+              "en": [
+                "You’re not alone: According to a 2013 survey, around 11 percent of German consumers don’t pay any attention to the origin of products when shopping. SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop. (Link) That means no strawberries in winter and some fruits from the Southern Hemisphere will have to drop off the menu completely."
+              ]
+            },
+            "sometimes": {
+              "de": [
+                "Damit gehören Sie zur Mehrheit: Laut einer Umfrage aus dem Jahr 2013 bevorzugen gut zwei Drittel der deutschen Verbraucher regionale Lebensmittel – Frauen mit 72 Prozent noch etwas häufiger als Männer mit 63 Prozent. Für Spiegel-Online-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal. (Link)"
+              ],
+              "en": [
+                "You  belong to the majority: A 2013 survey found that some two-thirds of German consumers preferred local foodstuffs, with women, at 72 percent, beating out the men, at 63 percent. SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop. (Link)"
+              ]
+            },
+            "always": {
+              "de": [
+                "Damit gehören Sie zu den Menschen, die saisonbedingt auf bestimmte Obst- und Gemüsesorten verzichten. Laut einer repräsentativen Umfrage aus dem Jahr 2013 wären 87 Prozent der Deutschen grundsätzlich bereit, ihre Obst- und Gemüseauswahl für einige Monate im Jahr einzuschränken. Für Spiegel-Online-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal. (Link)"
+              ],
+              "en": [
+                "You are among those people who do without certain fruits and vegetables on a seasonal basis. According to a representative survey conducted in 2013, 87 percent of Germans would be willing to limit the variety of fruits and vegetables they consume for a few months of the year. SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop. (Link)"
               ]
             }
           }
         }
       }
+
     ]
   },
   {
@@ -339,11 +385,11 @@
             },
             "antwort_c3": {
               "de": [
-                "Das entspricht etwa der pro Woche und Person verfügbaren Menge in {{ landMax }}."
+                "Das entspricht etwa der pro Woche und Person verfügbaren Menge in *{{ landMax }}*."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Das entspricht etwa der pro Woche und Person verfügbaren Menge in {{ landMax }}."
+                "Das entspricht etwa der pro Woche und Person verfügbaren Menge in *{{ landMax }}*."
               ]
             },
             "antwort_d3": {
@@ -356,6 +402,16 @@
               ]
             }
           }
+        }
+      },
+      {
+        "text": {
+          "de": [
+            "Nachhaltigkeitstipp: Ein per Frachtschiff importierter Apfel aus Neuseeland ist nicht unbedingt klimaschädlicher als ein deutscher Apfel, der monatelang im Kühlhaus lagert. Der Naturschutzbund Deutschland empfiehlt jedoch, auf eingeflogene Ware zu verzichten – das sind meist schnell verderbliche Obst- und Gemüsesorten, die von außerhalb Europas importiert werden. Mindestens ebenso gewinnbringend für den Klimaschutz ist jedoch: Kurze Strecken zum Supermarkt nicht mit dem Auto zurücklegen."
+          ],
+          "en": [
+            "Sustainability Tip: An apple shipped in from New Zealand is not necessarily more damaging to the climate than is a German apple that spends months in a refrigerated warehouse. Germany’s Nature and Biodiversity Conservation Union recommends, however, avoiding goods that have been flown in -- usually things like fruits and vegetable types that spoil rapidly and are imported from outside of Europe. Just as beneficial to the climate, though, is keeping your car in the garage if the supermarket is close by."
+          ]
         }
       }
     ]
@@ -428,18 +484,18 @@
             },
             "antwort_b4": {
               "de": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in {{ landAbfall }}. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in *{{ landAbfall }}*. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in {{ landAbfall }}. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in *{{ landAbfall }}*. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ]
             },
             "antwort_c4": {
               "de": [
-                "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit *{{ wertLebensmittel }}* Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit *{{ wertLebensmittel }}* Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ]
             }
           }
@@ -522,11 +578,11 @@
             },
             "antwort_b5": {
               "de": [
-                "Das entspricht etwa dem Pro-Kopf-Wert in {{ wertEwaste }}."
+                "Das entspricht etwa dem Pro-Kopf-Wert in *{{ wertEwaste }}*."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Das entspricht etwa dem Pro-Kopf-Wert in {{ wertEwaste }}."
+                "Das entspricht etwa dem Pro-Kopf-Wert in *{{ wertEwaste }}*."
               ]
             },
             "antwort_c4": {
