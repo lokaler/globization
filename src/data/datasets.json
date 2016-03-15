@@ -1,11 +1,15 @@
 [
    {
       "name":"Ausgaben für Lebensmittel",
+      "nameEN":"Ausgaben für Lebensmittel",
       "quelle": "Statistisches Bundesamt",
       "link": "",
       "description":"Ausgaben für Lebensmittel in % am Einkommen",
+      "descriptionEN":"Ausgaben für Lebensmittel in % am Einkommen",
       "unit": "%",
       "fixed": 0,
+      "compareName": "BIP pro Kopf",
+      "compareNameEN": "GDP per head",
       "domain":[
          0,
          63.23
