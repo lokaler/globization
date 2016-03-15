@@ -14,33 +14,32 @@ export default class AxisComponent extends React.Component {
 
 
   componentDidMount() {
-    // this.localeFormatter = d3.locale({
-    //   "decimal": ",",
-    //   "thousands": "."
-    // });
 
     this.axis = d3.svg.axis()
       .scale(this.props.scale)
       .orient(this.props.orient)
-      // .tickFormat(this.localeFormatter.numberFormat);
+      // .tickSize(this.props.tickSize)
+      .tickFormat(this.props.tickFormat)
+      // .tickValues(this.props.scale.domain())
 
     d3.select(this.refs.g).call(this.axis);
   }
 
-    componentDidUpdate(prevProps, prevState) {
-      this.axis
-        .scale(this.props.scale)
-        .orient(this.props.orient)
-        // .tickFormat(this.localeFormatter.numberFormat);
+  componentDidUpdate(prevProps, prevState) {
+    this.axis
+      .scale(this.props.scale)
+      .orient(this.props.orient)
+      .tickFormat(this.props.tickFormat);
 
-      d3.select(this.refs.g).transition().duration(this.props.transitionDuration)
-        .call(this.axis);
-    }
+    d3.select(this.refs.g).transition().duration(this.props.transitionDuration)
+      .call(this.axis);
+  }
 
-    render() {
-      return (
-        <g ref='g' {...this.props} />
-      )
-    }
+  render() {
+    utils.log("render Axis");
+    return (
+      <g ref='g' {...this.props} />
+    )
+  }
 
 }

@@ -12,7 +12,6 @@ import classnames from 'classnames';
 import AxisComponent from './AxisComponent.js';
 import DotsComponent from './DotsComponent.js';
 
-
 @cssModules(styles)
 
 export default class ScatterComponent extends React.Component {
@@ -29,43 +28,30 @@ export default class ScatterComponent extends React.Component {
 
     utils.log("constructor scatter", this.props)
 
+    const dataset = this.props.master.dataset;
+
     this.svg = null;
     this.dataset = new Dataset();
-    this.margin = {top: 40, right: 80, bottom: 40, left: 40}
+    this.margin = {top: 40, right: 50, bottom: 100, left: 80}
     this.innerWidth = this.props.width - this.margin.left - this.margin.right
     this.innerHeight = this.props.height - this.margin.top - this.margin.bottom
+    this.padding = 10;
 
-    this.color = d3.scale.quantile();
+    this.x = d3.scale.linear()
+      .range([this.padding,this.innerWidth - this.padding*2])
+      .clamp(true).nice()
 
-    this.geometries = this.props.master.topojson;
-
-    this.x = d3.scale.linear().range([0,this.innerWidth]).clamp(true).nice();
-    this.y = d3.scale.linear().range([this.innerHeight,0]).clamp(true).nice();
-
-
-
-  }
-
-  yValue(name) {
-    let e = _.find(this.props.master.master, { alpha3: name });
-    if(!e) { console.log(name, "not defined!"); e = { gdp : 0 } }
-
-    return e.vergleich;
-  }
-
-  componentDidMount() {
-    utils.log("scatter componentDidMount", this.props)
-
-    this.svg = d3.select(this.refs.scatterSVG)
+    this.y = d3.scale.linear()
+      .range([this.innerHeight - this.padding*2,this.padding])
+      .clamp(true).nice()
 
 
-    //this.svg.call(this.zoom)
+    if(dataset){
+        this.x.domain(dataset.vergleichDomain);
+        this.y.domain(dataset.domain);
+    }
 
-
-  }
-  componentWillUnmount(){
-    utils.log("UNMOUNTING")
-    this.svg.remove();
+    utils.log("DATASET",this.y.domain(), this.x.domain())
   }
 
 
@@ -74,19 +60,9 @@ export default class ScatterComponent extends React.Component {
     let update = false;
 
     if(nextProps.master.dataset != this.props.master.dataset) {
-      this.dataset.setData(nextProps.master.dataset);
 
-      this.color
-        .range(colorbrewer[nextProps.master.dataset.colorSet][nextProps.master.dataset.colorNum])
-        .domain(nextProps.master.dataset.domain);
-
-      this.x.domain(nextProps.master.dataset.domain);
-      this.y.domain(d3.extent(this.props.master.master, function(d) { return d.vergleich; }));
-
-      nextProps.master.dataset.data.forEach(d => {
-        // todo: not here !
-        d.y = this.yValue(d.iso);
-      })
+      this.x.domain(nextProps.master.dataset.vergleichDomain);
+      this.y.domain(nextProps.master.dataset.domain);
 
       update = true;
     }
@@ -96,23 +72,43 @@ export default class ScatterComponent extends React.Component {
     return update;
   }
 
+
   getActiveClass(name){
     return classnames(this.props.vis.active === name ? "active" : "");
   }
 
-
   render() {
     utils.log("render scatter")
-
 
     return (
       <div>
         <svg className='scatter' ref='scatterSVG' width={ this.props.width } height={ this.props.height }>
 
         <g transform={`translate(${this.margin.left}, ${this.margin.top})`}>
-          <AxisComponent className='x axis' scale={this.x} tickFormat={ d3.format("d") } orient='bottom' transform={`translate(0, ${this.innerHeight})`}  transitionDuration={1000} />
-          <AxisComponent className='y axis' scale={this.y} tickFormat={ d3.format("d") } orient='right' transform={`translate(${this.innerWidth}, 0)`}  transitionDuration={1000} />
-          <DotsComponent {...this.props} className='dots' xScale={this.x} yScale={this.y} transitionDuration={1000} data={this.props.master.dataset}/>
+          <AxisComponent
+            className='x axis'
+            scale={this.x}
+            tickFormat={ (d) => d/1000 }
+            orient='bottom'
+            transform={`translate(0, ${this.innerHeight})`}
+            transitionDuration={1000}
+          />
+          <AxisComponent
+            tickSize={this.innerWidth}
+            className='y axis'
+            tickFormat={ d3.format(".1f") }
+            scale={this.y}
+            orient='right'
+            transform={`translate(${this.innerWidth}, 0)`}
+            transitionDuration={1000}
+          />
+          <DotsComponent {...this.props}
+            tickSize={-this.innerWidth}
+            className='dots'
+            xScale={this.x}
+            yScale={this.y}
+            transitionDuration={1000}
+          />
         </g>
 
         </svg>

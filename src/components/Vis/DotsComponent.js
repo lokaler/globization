@@ -9,97 +9,95 @@ export default class DotsComponent extends React.Component {
   static propTypes = {
     xScale: React.PropTypes.func.isRequired,
     yScale: React.PropTypes.func.isRequired,
-    data: React.PropTypes.array.isRequired,
+    master: React.PropTypes.object.isRequired,
     transitionDuration: React.PropTypes.number.isRequired
   };
 
   componentDidMount() {
 
-      console.log("mount", this.props)
+    console.log("DOTS mount", this.props)
 
-      this.g = d3.select(this.refs.g);
-      this.tooltip = d3.select(this.refs.tooltip);
-      this.tooltip.append("text").text("tooltip").attr("dy", "-1em")
+    this.g = d3.select(this.refs.g);
 
-      if(this.props.data) this.renderData();
-    }
+    if(this.props.master.dataset) this.renderData();
+  }
 
-    componentWillUnmount(){
-      utils.log("UNMOUNTING")
-      this.g.remove();
-    }
+  componentWillUnmount(){
+    this.g.remove();
+  }
 
-    componentDidUpdate(prevProps, prevState) {
-      utils.log("prevProps", prevProps)
+  componentDidUpdate(prevProps, prevState) {
+    utils.log("DOTS componentDidUpdate", prevProps)
 
-      this.renderData()
-    }
+    this.renderData()
+  }
 
-    mouseenter(d){
-      utils.log("tooltip", d)
+  mouseenter(d){
+    utils.log("tooltip", d)
 
-      const x = this.props.xScale;
-      const y = this.props.yScale;
+    const x = this.props.xScale;
+    const y = this.props.yScale;
 
-      this.props.actions.changeVis({
-        tooltip: {
-          active: true,
-          text: `${d.iso}: ${d.value}`,
-          x: x(d.value),
-          y: y(d.y)
-        }
-      });
+    this.props.actions.changeVis({
+      tooltip: {
+        active: true,
+        text: `${d.iso}: ${d.value}`,
+        x: x(d.vergleich),
+        y: y(d.value)
+      }
+    });
 
-    }
+  }
 
-    mouseleave(d){
+  mouseleave(d){
 
-      utils.log("leave")
+    utils.log("leave")
 
-      this.props.actions.changeVis({
-        tooltip: {
-          active: false
-        }
-      });
+    this.props.actions.changeVis({
+      tooltip: {
+        active: false
+      }
+    });
 
-    }
+  }
 
-    renderData() {
-      utils.log("dots render", this)
-      const x = this.props.xScale;
-      const y = this.props.yScale;
-      const data = this.props.data.data;
+  renderData() {
+    utils.log("dots render", this.props.xScale.domain(), this.props.yScale.domain(), this.props.master.dataset.data.length)
 
-      const item = this.g.selectAll('circle')
-            .data(data, d => d.iso );
+    const x = this.props.xScale;
+    const y = this.props.yScale;
+    const data = this.props.master.dataset.data;
 
-      item.enter()
-        .append('circle')
-        .attr('class', 'item')
-        .style('opacity', 0)
-        .on("mouseenter", this.mouseenter.bind(this))
-        .on("mouseleave", this.mouseleave.bind(this))
+    const item = this.g.selectAll('circle')
+          .data(data, d => d.iso );
 
-      item
-        .transition()
-        .duration(this.props.transitionDuration)
-        .attr('r', function(d) { return 5; })
-        .attr('cx', function(d) { return x(d.value); })
-        .attr('cy', function(d) { return y(d.y); })
-        .style('opacity', 1)
+    item.enter()
+      .append('circle')
+      .attr('class', 'item')
+      .style('opacity', 0)
+      .on("mouseenter", this.mouseenter.bind(this))
+      .on("mouseleave", this.mouseleave.bind(this))
 
-      item.exit().filter(':not(.exiting)')
-        .transition()
-        .duration(this.props.transitionDuration)
-        .style('opacity', 0)
-        .remove()
+    item
+      .transition()
+      .duration(this.props.transitionDuration)
+      .attr('r', function(d) { return 5; })
+      .attr('cx', function(d) { return x(d.vergleich); })
+      .attr('cy', function(d) { return y(d.value); })
+      .style('opacity', 1)
 
-    }
+    item.exit().filter(':not(.exiting)')
+      .transition()
+      .duration(this.props.transitionDuration)
+      .style('opacity', 0)
+      .remove()
 
-    render() {
-      return (
-        <g ref='g' />
-      )
-    }
+  }
+
+  render() {
+    return (
+      <g ref='g' />
+    )
+  }
 
 }

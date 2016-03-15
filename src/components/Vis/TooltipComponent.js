@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import utils from './VisUtils';
+// import utils from './VisUtils';
 import cssModules from 'react-css-modules';
 import styles from './vis.scss';
 @cssModules(styles)
@@ -17,7 +17,7 @@ export default class TooltipComponent extends React.Component {
   }
 
   render() {
-    utils.log('render tooltip', this.props.vis.tooltip);
+    // utils.log('render tooltip', this.props.vis.tooltip);
 
     const { x, y, text, active } = this.props.vis.tooltip;
 

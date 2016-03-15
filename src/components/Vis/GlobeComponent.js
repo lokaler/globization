@@ -4,11 +4,11 @@ import React, { PropTypes } from 'react';
 import d3 from 'd3';
 import _ from 'lodash';
 import utils from './VisUtils.js'
-import colorbrewer from 'colorbrewer'
 import Dataset from '../../logic/Dataset.js'
 import cssModules from 'react-css-modules';
 import styles from './globe.scss';
 import classnames from 'classnames';
+import LegendComponent from './LegendComponent.js';
 
 @cssModules(styles)
 
@@ -25,6 +25,9 @@ export default class GlobeComponent extends React.Component {
     super(props);
 
     utils.log("constructor globe", this.props)
+
+    const dataset = this.props.master.dataset;
+
     this.sensetivity = 0.25;
     this.svg = null;
     this.activeGeometry = null;
@@ -39,13 +42,12 @@ export default class GlobeComponent extends React.Component {
     this.path = d3.geo.path()
       .projection(this.projection);
 
-    this.color = d3.scale.quantile()
-      // .range(colorbrewer[this.props.master.dataset.colorSet][this.props.master.dataset.colorNum])
-      // .domain(this.props.master.dataset.domain);
 
     // dunnow if this should be done here!
     this.geometries = this.props.master.topojson;
-
+    this.geometries.forEach((d) =>{
+      d.properties.fillColor = this.getFillColor(d.properties.iso, dataset.data);
+    });
 
     this.zoom = d3.behavior.zoom()
       .center([0,0])
@@ -54,7 +56,11 @@ export default class GlobeComponent extends React.Component {
       .on("zoom", () => {
         const e = d3.event;
         const _scale = this.props.vis.initialScale * e.scale;
-        const _rotate = [(e.translate[0]/e.scale) * this.sensetivity, -(e.translate[1]/e.scale) * this.sensetivity, 0];
+        const _rotate = [
+          (e.translate[0]/e.scale) * this.sensetivity,
+          -(e.translate[1]/e.scale) * this.sensetivity,
+          0
+        ];
 
         this.projection
           .rotate(_rotate)
@@ -78,10 +84,7 @@ export default class GlobeComponent extends React.Component {
 
   }
 
-  componentDidMount() {
-    utils.log("componentDidMount", this.props)
-
-    this.svg = d3.select(this.refs.globeSVG).call(this.zoom);
+  resetGlobe(){
     this.svg.call(this.zoom
       .scale(this.props.vis.zoom)
       .translate(this.props.vis.translate)
@@ -99,6 +102,15 @@ export default class GlobeComponent extends React.Component {
       .event
     )
   }
+
+  componentDidMount() {
+    utils.log("componentDidMount", this.props)
+
+    this.svg = d3.select(this.refs.globeSVG).call(this.zoom);
+    this.resetGlobe();
+
+  }
+
   componentWillUnmount(){
     utils.log("UNMOUNTING")
     this.svg.remove();
@@ -106,8 +118,7 @@ export default class GlobeComponent extends React.Component {
 
   getFillColor(iso,data){
     const val = this.getValueForCountry(iso,data);
-    // return val ? this.color(val) : "url(#pattern-stripe)";
-    return val ? this.color(val) : "#EEE";
+    return val ? this.props.color(val) : "#EEE";
   }
 
   getValueForCountry(iso,data){
@@ -116,15 +127,9 @@ export default class GlobeComponent extends React.Component {
   }
 
   zoomToCountry(name){
-    // todo: wrap this in the dataset class
-    if(name == "random") name = _.sample(this.props.master.master).alpha3;
 
     const country = _.find(this.geometries, (d)=> d.properties.iso === name);
-    if(!country){
-      utils.log("country not found!");
-      return;
-    }
-    // end
+    if(!country){ utils.log("country not found!"); return; }
 
     const p = d3.geo.centroid(country);
     const scale = 2;
@@ -139,8 +144,8 @@ export default class GlobeComponent extends React.Component {
   }
 
 
-  shouldComponentUpdate(nextProps) {
-    utils.log("shouldComponentUpdate", nextProps, this.props);
+  componentWillReceiveProps(nextProps) {
+    // utils.log("shouldComponentUpdate", nextProps, this.props);
     let update = false;
 
     if(nextProps.vis.animation) {
@@ -153,17 +158,10 @@ export default class GlobeComponent extends React.Component {
       update = true;
     }
 
-    if(nextProps.master.dataset != this.props.master.dataset && nextProps.master.dataset) {
+    if(nextProps.master.dataset != this.props.master.dataset) {
       this.dataset.setData(nextProps.master.dataset);
 
-      this.color
-        .range(colorbrewer[nextProps.master.dataset.colorSet][nextProps.master.dataset.colorNum])
-        .domain(nextProps.master.dataset.domain);
-
-      // this.geometries.forEach((d) =>{
-      //   d.properties.fillColor = this.getFillColor(d.properties.iso, nextProps.master.dataset.data);
-      // });
-
+      utils.log(this.props.color.domain())
       this.svg
       .transition()
       .duration(1000)
@@ -172,7 +170,7 @@ export default class GlobeComponent extends React.Component {
         .translate(nextProps.master.dataset.translate)
         .event
       )
-      .tween("test", ()=>{
+      .tween("colors", ()=>{
         this.geometries.forEach((d) =>{
           const a = d.properties.fillColor;
           const b = this.getFillColor(d.properties.iso, nextProps.master.dataset.data);
@@ -188,7 +186,7 @@ export default class GlobeComponent extends React.Component {
       update = false;
     }
 
-    utils.log("shouldComponentUpdate", update ? "yes": "no");
+    // utils.log("shouldComponentUpdate", update ? "yes": "no");
     return update;
   }
 
@@ -197,12 +195,8 @@ export default class GlobeComponent extends React.Component {
   }
 
   onMouseEnter(d){
-    utils.log("mouseover", d);
-
     const c = this.path.centroid(d);
     const val = this.getValueForCountry(d.properties.iso, this.props.master.dataset.data)
-
-    utils.log(c);
 
     this.props.actions.changeVis({
       tooltip: {
@@ -216,13 +210,11 @@ export default class GlobeComponent extends React.Component {
   }
 
   onMouseLeave(d){
-
     this.props.actions.changeVis({
       tooltip: {
         active: false
       }
     });
-
   }
 
 
@@ -230,25 +222,11 @@ export default class GlobeComponent extends React.Component {
     utils.log("render globe")
 
     const paths = this.geometries.map((d, i) =>
-      <path key={ i } d={this.path(d)} fill={d.properties.fillColor} onMouseLeave={this.onMouseLeave.bind(this,d)} onMouseEnter={this.onMouseEnter.bind(this,d)}></path>);
+      <path key={ i } d={this.path(d)} fill={d.properties.fillColor} onMouseLeaves={this.onMouseLeave.bind(this,d)} onMouseEnters={this.onMouseEnter.bind(this,d)}></path>);
 
     const activeGeometry = <path className="activeGeometry" d={this.path(this.activeGeometry)}/>;
     const graticule = <path className="graticule" key="graticule" d={ this.path(this.graticule) } />;
 
-    const name = this.props.master.dataset ? this.props.master.dataset.description : "Keine Daten";
-    const quelle = this.props.master.dataset ? this.props.master.dataset.quelle : "Keine Daten";
-    const link = this.props.master.dataset ? this.props.master.dataset.link : "";
-    const unit = this.props.master.dataset ? this.props.master.dataset.unit : "";
-
-    const legendFields = this.color.range().map((d,i) =>
-        <div className="item" key={"item-"+i}>
-          <div className="color" key={"color-"+i} style={{ background: d }}>
-          </div>
-          <div className="label" key={"label-"+i}>
-            { (i/9 * this.color.domain()[1]).toFixed(this.props.master.dataset.fixed) }
-          </div>
-        </div>
-    )
 
     return (
       <div>
@@ -262,13 +240,6 @@ export default class GlobeComponent extends React.Component {
             { activeGeometry }
           </g>
         </svg>
-        <div className="footer">
-          <div className="legend">
-            { legendFields }
-          </div>
-          <div className="label">{ name }</div>
-          <div className="quelle">Quelle: <a href={ link }>{ quelle }</a></div>
-        </div>
       </div>
     );
   }

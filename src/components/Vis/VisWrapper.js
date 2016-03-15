@@ -9,6 +9,9 @@ import utils from './VisUtils';
 import cssModules from 'react-css-modules';
 import styles from './vis.scss';
 import classnames from 'classnames';
+import colorbrewer from 'colorbrewer'
+import LegendComponent from './LegendComponent.js';
+
 
 @cssModules(styles)
 
@@ -21,10 +24,24 @@ export default class Globe extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.color = d3.scale.quantile();
   }
 
   componentDidMount() {
     //this.props.actions.updatePos([52, 23]);
+  }
+
+  componentWillReceiveProps(nextProps){
+    utils.log("componentWillUpdate", nextProps)
+    const dataset = nextProps.master.dataset;
+
+    if(dataset){
+      this.color
+        .range(colorbrewer[dataset.colorSet][dataset.colorNum])
+        .domain(dataset.domain);
+    }
+
   }
 
   changeType(type) {
@@ -45,18 +62,14 @@ export default class Globe extends React.Component {
   }
 
   render() {
+    const dataset = this.props.master.dataset;
+    const type = this.props.master.dataset;
 
-    let visComponent = <div></div>;
-
-    if(this.props.vis.type === 'globe'){
-      visComponent = <GlobeComponent {...this.props} width={550} height={500} />
-    }
-    if(this.props.vis.type === 'map'){
-      visComponent = <MapComponent {...this.props} width={550} height={500} />
-    }
-    if(this.props.vis.type === 'scatter'){
-      visComponent = <ScatterComponent {...this.props} width={550} height={500} />
-    }
+    const Component = {
+      globe: GlobeComponent,
+      map: MapComponent,
+      scatter: ScatterComponent,
+    }[this.props.vis.type];
 
     const changeGlobe = this.changeType.bind(this, 'globe');
     const changeMap = this.changeType.bind(this, 'map');
@@ -65,13 +78,19 @@ export default class Globe extends React.Component {
 
     return (
       <div className="vis">
-        { visComponent }
+        { dataset &&
+          <Component color={this.color} {...this.props} width={540} height={500} />
+        }
         <div className="menu">
           <div className={ this.getActiveClass('globe') } onClick={ changeGlobe }></div>
           <div className={ this.getActiveClass('map') } onClick={ changeMap }></div>
           <div className={ this.getActiveClass('scatter') } onClick={ changeScatter }></div>
         </div>
         <TooltipComponent {...this.props} />
+        { dataset &&
+          <LegendComponent color={this.color} {...this.props} />
+        }
+
       </div>
     );
   }

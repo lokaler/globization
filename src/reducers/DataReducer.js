@@ -25,14 +25,19 @@ function makeTopoJson(){
 
 function parseMaster(){
   master.forEach( (d) => {
-    d.gdp = d.gdp == "#NV" ? NaN : d.gdp;
     d.gdp = Number(d.gdp);
     d.population = Number(d.population);
     d.vergleich = d.gdp / d.population;
-
-    // console.log(d.name, d.alpha3,d.gdp, d.population);
   })
   return master;
+}
+
+function prepareDataset(dataset){
+  dataset.data.forEach((d) => {
+    let e = _.find(master, { alpha3: d.iso });
+    d.vergleich = e.vergleich;
+  })
+  dataset.vergleichDomain = d3.extent(dataset.data, function(d) { return d.vergleich; })
 }
 
 
@@ -46,6 +51,8 @@ const initialState = {
 export default function questions(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.RECEIVE_DATASETS: {
+      action.data.forEach(prepareDataset);
+
       return objectAssign({}, state, { dataset: action.data[0], datasets: action.data });
     }
     case ActionTypes.SET_DATASET: {
