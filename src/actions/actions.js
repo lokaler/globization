@@ -109,3 +109,9 @@ export function changeVis(val) {
     val
   };
 }
+
+export function getUrlParameters() {
+  return {
+    type: types.GET_URL_PARAMETERS
+  };
+}

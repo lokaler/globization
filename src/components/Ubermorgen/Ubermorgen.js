@@ -16,6 +16,7 @@ export default class UbermorgenApp extends React.Component {
   };
 
   componentDidMount() {
+    this.props.actions.getUrlParameters();
     this.props.actions.requestDataSets('./data/datasets.json');
   }
 
