@@ -9,19 +9,18 @@ export const intro = {
 
     <div class="losButton" data-onclick="onStartClick">Los geht’s</div>
 
-    Oder erkunden Sie die Datensätze auf eigene Faust
+    Oder erkunden Sie die Datensätze auf eigene Faust.
   `,
 
   en: `
-    ÜberMorgen-Explorer (*** ENGLISH ***)
+    BeyondTomorrow Explorer
     ===================
 
-    Vergleichen Sie Ihr Konsumverhalten mit dem von Menschen in anderen Ländern.
-    Und finden Sie heraus, wie Sie Umwelt und Ressourcen schonen können.
+    Compare your consumption habits with those of people from other countries -- and find out how you can protect the environment and conserve natural resources.
 
-    <div class="losButton" data-onclick="onStartClick">Los geht’s</div>
+    <div class="losButton" data-onclick="onStartClick">Let's go</div>
 
-    Oder erkunden Sie die Datensätze auf eigene Faust
+    Or go ahead exploring the data sets on your own.
   `
 
 };
