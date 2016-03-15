@@ -31,7 +31,7 @@ export default class ScatterComponent extends React.Component {
     const dataset = this.props.master.dataset;
 
     this.svg = null;
-    this.dataset = new Dataset();
+    // this.dataset = new Dataset();
     this.margin = {top: 40, right: 50, bottom: 100, left: 80}
     this.innerWidth = this.props.width - this.margin.left - this.margin.right
     this.innerHeight = this.props.height - this.margin.top - this.margin.bottom

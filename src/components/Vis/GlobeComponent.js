@@ -33,7 +33,7 @@ export default class GlobeComponent extends React.Component {
     this.activeGeometry = null;
     this.graticule = d3.geo.graticule()();
 
-    this.dataset = new Dataset();
+    this.dataset = new Dataset(dataset.data);
 
     this.projection = d3.geo.orthographic()
       .translate([this.props.width / 2, this.props.height / 2])
@@ -46,7 +46,7 @@ export default class GlobeComponent extends React.Component {
     // dunnow if this should be done here!
     this.geometries = this.props.master.topojson;
     this.geometries.forEach((d) =>{
-      d.properties.fillColor = this.getFillColor(d.properties.iso, dataset.data);
+      d.properties.fillColor = this.getFillColor(d.properties.iso);
     });
 
     this.zoom = d3.behavior.zoom()
@@ -117,14 +117,11 @@ export default class GlobeComponent extends React.Component {
   }
 
   getFillColor(iso,data){
-    const val = this.getValueForCountry(iso,data);
+    const val = this.dataset.getValueForCountry(iso);
     return val ? this.props.color(val) : "#EEE";
   }
 
-  getValueForCountry(iso,data){
-    const val = _.find(data, { iso });
-    return val ? val.value : undefined;
-  }
+
 
   zoomToCountry(name){
 
@@ -159,21 +156,23 @@ export default class GlobeComponent extends React.Component {
     }
 
     if(nextProps.master.dataset != this.props.master.dataset) {
-      this.dataset.setData(nextProps.master.dataset);
+      const dataset = nextProps.master.dataset;
+
+      this.dataset.setData(dataset.data);
 
       utils.log(this.props.color.domain())
       this.svg
       .transition()
       .duration(1000)
       .call(this.zoom
-        .scale(nextProps.master.dataset.scale)
-        .translate(nextProps.master.dataset.translate)
+        .scale(dataset.scale)
+        .translate(dataset.translate)
         .event
       )
       .tween("colors", ()=>{
         this.geometries.forEach((d) =>{
           const a = d.properties.fillColor;
-          const b = this.getFillColor(d.properties.iso, nextProps.master.dataset.data);
+          const b = this.getFillColor(d.properties.iso);
           d.interpolate = d3.interpolateRgb(a, b);
         });
         return (t) => {
