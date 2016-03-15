@@ -13,7 +13,12 @@ function createKey(type, index) {
 }
 
 function structureData(card) {
-  return card.content.map((el, index) => {
+  const items = [];
+
+  items.push({ type: 'functions', data: card.functions });
+  items.push({ type: 'dataset', data: card.dataset });
+
+  const content = card.content.map((el, index) => {
     const key = Object.keys(el)[0];
     const cleanData = { type: key, data: el[key] };
 
@@ -49,6 +54,8 @@ function structureData(card) {
 
     return cleanData;
   });
+
+  return [...items, ...content];
 }
 
 function createNewUserInput(state, key, value) {

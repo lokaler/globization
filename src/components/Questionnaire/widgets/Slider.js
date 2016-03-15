@@ -16,9 +16,8 @@ export default class Slider extends React.Component {
   }
 
   onChange(value) {
-    this.props.actions.updateUserInput(this.props.id, value);
-
     const country = Logic.getCountryCode(value, this.props);
+    this.props.actions.updateUserInput(this.props.id, value);
     this.props.actions.changeVis({
       animation: {
         action: 'zoomToCountry',
@@ -43,11 +42,12 @@ export default class Slider extends React.Component {
     return (
       <div key={this.props.id} styleName="widget" className="slider">
         <Rcslider
-          tipFormatter={tipFormatter}
-          defaultValue={value}
-          min={options.min}
-          max={options.max}
-          onAfterChange={sliderChangeBind}
+          tipFormatter={ tipFormatter }
+          defaultValue={ value }
+          min={ options.min }
+          max={ options.max }
+          step = { options.step || 1 }
+          onAfterChange={ sliderChangeBind }
         />
       </div>
     );

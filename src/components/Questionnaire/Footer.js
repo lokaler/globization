@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
     nextBtnLabel: PropTypes.string,
     prevBtnLabel: PropTypes.string
   }
-
+  /* eslint-disable */
   getClickHandler(cardIndex) {
     const { questions, actions } = this.props;
     if (cardIndex !== questions.activeCard) {
@@ -21,8 +21,9 @@ export default class Footer extends React.Component {
           cardIndex < questions.questionData.length
           && cardIndex > -1
         ) {
-          dataId = questions.questionData[cardIndex].dataset;
+          dataId = questions.questionData[cardIndex].filter((el) => el.type === 'dataset')[0].data;
         }
+
         actions.setCard(cardIndex, dataId);
       };
     }
