@@ -68,7 +68,7 @@ function createInputs(data) {
   content.filter(el => Object.keys(el)[0] === 'input')
     .forEach(el => {
       inputs[el.input.key] = {};
-      inputs[el.input.key].value = null;
+      inputs[el.input.key].value = undefined;
     });
 
   return inputs;

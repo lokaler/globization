@@ -50,7 +50,7 @@
           "answerKey": [
             "(inputs.slider.value < 15) && 'antwort_a'",
             "(inputs.slider.value < 50) && 'antwort_b'",
-            "'antwort_c'"
+            "(inputs.slider.value >= 50) && 'antwort_C'"
           ],
           "answerContext": {
             "landAusgaben": "getGermanCountryName(inputs.slider.value)",

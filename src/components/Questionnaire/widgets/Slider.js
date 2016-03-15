@@ -36,7 +36,8 @@ export default class Slider extends React.Component {
     const sliderChangeBind = this.onChange.bind(this);
     const tipFormatter = this.tipFormatter.bind(this);
 
-    const value = this.props.questions.inputs[this.props.id] ?
+    const value = this.props.questions.inputs[this.props.id] &&
+      this.props.questions.inputs[this.props.id].value ?
       this.props.questions.inputs[this.props.id].value : options.value;
 
     return (
