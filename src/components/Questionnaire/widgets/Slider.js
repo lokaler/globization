@@ -37,11 +37,14 @@ export default class Slider extends React.Component {
     const sliderChangeBind = this.onChange.bind(this);
     const tipFormatter = this.tipFormatter.bind(this);
 
+    const value = this.props.questions.inputs[this.props.id] ?
+      this.props.questions.inputs[this.props.id].value : options.value;
+
     return (
       <div key={this.props.id} styleName="widget" className="slider">
         <Rcslider
           tipFormatter={tipFormatter}
-          defaultValue={options.value}
+          defaultValue={value}
           min={options.min}
           max={options.max}
           onAfterChange={sliderChangeBind}

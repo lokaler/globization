@@ -23,7 +23,7 @@ function compileFunction(functionSignature) {
   if (!isUndefined(QFuncs[functionName])) {
     returnFunc = QFuncs[functionName];
   } else {
-    throw new Error(`Function "${functionName}"" is not implemented.`);
+    throw new Error(`Function "${functionName}" is not implemented.`);
   }
 
   return returnFunc;
