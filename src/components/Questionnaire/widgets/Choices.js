@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
+import translate from 'logic/translate';
 
 @cssModules()
 export default class Choices extends React.Component {
@@ -8,8 +9,7 @@ export default class Choices extends React.Component {
     data: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired,
     actions: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired,
-    app: PropTypes.object.isRequired
+    questions: PropTypes.object.isRequired
   }
 
   onChange = (evt) => {
@@ -29,11 +29,11 @@ export default class Choices extends React.Component {
   }
 
   createRadioButton(option, index) {
-    const { id, app } = this.props;
+    const { id } = this.props;
     const isSelected = this.isActiveRadio(option[0]);
     const key = `${ id }_i${ index }`;
     const value = option[0];
-    const label = option[1][app.language];
+    const label = translate(option[1]);
     const boundOnClick = this.onClick.bind(this, value);
 
     return (

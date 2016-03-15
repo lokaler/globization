@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import MicroMustache from 'micromustache';
 import cssModules from 'react-css-modules';
 import { compileExpression, compileContext } from '../../../logic/questionnaire';
+import translate from 'logic/translate';
 import { isUndefined, isEmpty } from 'lodash';
 
 @cssModules()
@@ -12,8 +13,7 @@ export default class Answer extends React.Component {
     data: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired,
     questions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired,
-    app: PropTypes.object.isRequired
+    master: PropTypes.object.isRequired
   }
 
   getTemplate(templates, userInput) {
@@ -32,13 +32,13 @@ export default class Answer extends React.Component {
   }
 
   render() {
-    const { id, data, questions, app } = this.props;
+    const { id, data, questions } = this.props;
 
     if (isUndefined(data) || isEmpty(questions.inputs)) {
       return null;
     }
 
-    const template = this.getTemplate(data.templates, questions.inputs)[app.language];
+    const template = translate(this.getTemplate(data.templates, questions.inputs));
     const ctx = compileContext.bind(this)(data.answerContext, questions.inputs);
     const answerContent = MicroMustache.render(template, ctx);
 
