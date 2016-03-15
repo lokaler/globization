@@ -63,7 +63,6 @@ export default class Questionnaire extends React.Component {
 
     if (questions.activeCard === -1) {
       widgets = <Intro { ...this.props }/>;
-      nextBtnLabel = 'Starten';
     } else if (questions.activeCard === questions.questionData.length) {
       widgets = <Outro { ...this.props }/>;
     } else {

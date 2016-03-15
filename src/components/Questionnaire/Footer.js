@@ -56,11 +56,11 @@ export default class Footer extends React.Component {
           </div>
         }
         { showPagination && <div styleName="pagination" className="clearfix">{ pagination }</div> }
-        { showNextBtn &&
-          <div styleName="btn-next" onClick={ this.getClickHandler(questions.activeCard + 1) }>
-            <div styleName="btn-text">{ this.props.nextBtnLabel || 'Weiter' }</div>
-            <div styleName="btn-arrow"></div>
-          </div>
+        { showNextBtn && questions.activeCard !== -1 &&
+            <div styleName="btn-next" onClick={ this.getClickHandler(questions.activeCard + 1) }>
+              <div styleName="btn-text">{ this.props.nextBtnLabel || 'Weiter' }</div>
+              <div styleName="btn-arrow"></div>
+            </div>
         }
       </div>
     );
