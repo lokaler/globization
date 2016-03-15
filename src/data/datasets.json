@@ -392,8 +392,9 @@
          }
       ]
    },
-   {
+   {  "key" : "meat",
       "name":"Fleischkonsum",
+      "nameEN":"Meat consumption",
       "quelle": "FAO / WRI",
       "link": "",
       "unit": "kg",
@@ -1105,7 +1106,9 @@
       ]
    },
    {
+      "key": "foodwaste",
       "name":"Lebensmittelabfälle",
+      "nameEN": "food waste",
       "quelle": "Studie zu EU-Staaten",
       "link": "http://wmr.sagepub.com/content/32/8/683.short",
       "unit": "kg",
@@ -1236,8 +1239,10 @@
          }
       ]
    },
-   {
+   {  
+      "key": "electro",
       "name":"Elektroschrott",
+      "nameEN":"E-waste",
       "quelle": "E-Waste-Monitor 2014",
       "link": "http://i.unu.edu/media/unu.edu/news/52624/UNU-1stGlobal-E-Waste-Monitor-2014-small.pdf",
       "unit": "kg",

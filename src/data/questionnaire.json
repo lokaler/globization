@@ -1,7 +1,7 @@
 [
   {
     "title": "1. Karte",
-    "dataset": "Ausgaben für Lebensmittel",
+    "dataset": "food",
     "functions": [
       "getGermanCountryName",
       "getMaxGermanCountryName",
@@ -101,7 +101,7 @@
   },
   {
     "title": "2. Karte",
-    "dataset": "Ausgaben für Lebensmittel",
+    "dataset": "food",
     "functions": [
       "getGermanCountryName",
       "getMaxGermanCountryName",
@@ -256,7 +256,7 @@
   },
   {
     "title": "3. Karte",
-    "dataset": "Fleischkonsum",
+    "dataset": "meat",
     "functions": [
       "getGermanCountryName",
       "getMaxGermanCountryName",
@@ -361,7 +361,7 @@
   },
   {
     "title": "4. Karte",
-    "dataset": "Lebensmittelabfälle",
+    "dataset": "foodwaste",
     "functions": [
       "getGermanCountryName",
       "getMaxGermanCountryName",
@@ -450,7 +450,7 @@
   },
   {
     "title": "5. Karte",
-    "dataset": "Elektroschrott",
+    "dataset": "electro",
     "functions": [
       "getGermanCountryName",
       "getMaxGermanCountryName",
@@ -542,7 +542,7 @@
   },
   {
     "title": "6. Karte - Summary",
-    "dataset": "Elektroschrott",
+    "dataset": "electro",
     "functions": [
       "getGermanCountryName",
       "getMaxGermanCountryName",
