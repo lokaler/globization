@@ -9,7 +9,7 @@ export const intro = {
 
     <div class="losButton" data-onclick="onStartClick">Los geht’s</div>
 
-    Oder erkunden Sie die Datensätze auf eigene Faust.
+    Oder erkunden Sie die Datensätze:
   `,
 
   en: `
@@ -21,7 +21,7 @@ export const intro = {
 
     <div class="losButton" data-onclick="onStartClick">Let's go</div>
 
-    Or go ahead exploring the data sets on your own.
+    Or go ahead explore the data sets.
   `
 
 };

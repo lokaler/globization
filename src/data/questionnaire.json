@@ -68,7 +68,7 @@
             },
             "antwort_a": {
               "de": [
-                "Weniger als 15 Prozent: Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in *{{ landMin }}*, die nur *{{ valueMin }}* Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in *{{ landMin }}*, die nur *{{ valueMin }}* Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
                 "*** ENGLISH ***",
@@ -77,7 +77,7 @@
             },
             "antwort_b": {
               "de": [
-                "15 bis 50 Prozent: Menschen in *{{ landAusgaben }}* geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
+                "Menschen in *{{ landAusgaben }}* geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
               ],
               "en": [
                 "People in *{{ landAusgaben }}* spend a similar amount on food as you do, measured as a percentage of total expenditures."
@@ -85,7 +85,7 @@
             },
             "antwort_c": {
               "de": [
-                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in *{{ landMax }}* den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich *{{ valueMax }}* Prozent."
+                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in *{{ landMax }}* den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich *{{ valueMax }}* Prozent."
               ],
               "en": [
                 "You spend a very large share of your money on food. Internationally, people in *{{ landMax }}* devote the largest share of their expenditures to food, namely *{{ valueMax }}* percent."
