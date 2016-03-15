@@ -538,5 +538,68 @@
         }
       }
     ]
+  },
+  {
+    "title": "6. Karte - Summary",
+    "dataset": "Elektroschrott",
+    "functions": [
+      "getGermanCountryName",
+      "getMaxGermanCountryName",
+      "getMinGermanCountryName",
+      "getMaxValue",
+      "getMinValue"
+    ],
+    "content": [
+      {
+        "answer": {
+          "answerKey": [
+            "(inputs.slider.value < 15) && 'antwort_a'",
+            "(inputs.slider.value < 50) && 'antwort_b'",
+            "'antwort_c'"
+          ],
+          "answerContext": {
+            "landAusgaben": "getGermanCountryName(inputs.slider.value)",
+            "landMax": "getMaxGermanCountryName()",
+            "landMin": "getMinGermanCountryName()",
+            "valueMax": "getMaxValue()",
+            "valueMin": "getMinValue()",
+            "testfoo" : "inputs.slider && inputs.slider.value * 1.25"
+          },
+          "templates": {
+            "default": {
+              "de": [],
+              "en": []
+            },
+            "antwort_a": {
+              "de": [
+                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in [Land_Min], die nur [Wert_Land_Min] Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+              ],
+              "en": [
+                "*** ENGLISH ***",
+                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in [Land_Min], die nur [Wert_Land_Min] Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+              ]
+            },
+            "antwort_b": {
+              "de": [ 
+                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen in [LAND_Ausgaben]. Im Vergleich von [Anzahl_Länder_Lebensmittel] Ländern liegen Sie damit auf Platz [Anzahl Länder minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+              ],
+              "en": [
+                "*** ENGLISH ***",
+                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen in [LAND_Ausgaben]. Im Vergleich von [Anzahl_Länder_Lebensmittel] Ländern liegen Sie damit auf Platz [Anzahl Länder minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+              ]
+            },
+            "antwort_c": {
+              "de": [
+                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in [Land_Max] den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich [Wert_Land_max] Prozent."
+              ],
+              "en": [
+                "*** ENGLISH ***",
+                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in [Land_Max] den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich [Wert_Land_max] Prozent."
+              ]
+            }
+          }
+        }
+      }      
+    ]
   }
 ]

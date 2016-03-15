@@ -1,5 +1,6 @@
 import * as ActionTypes from '../constants/ActionTypes';
 import objectAssign from 'object-assign';
+import { flatten } from 'lodash';
 
 const initialState = {
   activeChapter: 0,
@@ -58,15 +59,32 @@ function structureData(card) {
   return [...items, ...content];
 }
 
+// hotfix
+function createInputs(data) {
+  const inputs = {};
+  const contents = data.map((el) => el.content);
+  const content = flatten(contents);
+
+  content.filter(el => Object.keys(el)[0] === 'input')
+    .forEach(el => {
+      inputs[el.input.key] = {};
+      inputs[el.input.key].value = null;
+    });
+
+  return inputs;
+}
+
 function createNewUserInput(state, key, value) {
   return objectAssign({}, state.inputs, { [key]: { value } });
 }
+
 
 export default function questions(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.RECEIVE_QUESTION_DATA: {
       const questionData = action.data.map(structureData);
-      return objectAssign({}, state, { questionData });
+      const inputs = createInputs(action.data);
+      return objectAssign({}, state, { questionData, inputs });
     }
     case ActionTypes.UPDATE_USERINPUT: {
       const newUserInput = createNewUserInput(state, action.key, action.value);

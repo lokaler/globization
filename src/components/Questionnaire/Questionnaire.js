@@ -64,12 +64,12 @@ export default class Questionnaire extends React.Component {
 
     if (questions.activeCard === -1) {
       widgets = <Intro { ...this.props }/>;
-    } else if (questions.activeCard === questions.questionData.length) {
+    } else if (questions.activeCard === questions.questionData.length - 1) {
       widgets = <Outro { ...this.props }/>;
     } else {
       widgets = this.createWidgets(questions);
 
-      if (questions.activeCard === questions.questionData.length - 1) {
+      if (questions.activeCard === questions.questionData.length - 2) {
         nextBtnLabel = 'Ergebnis';
       }
     }
