@@ -301,7 +301,7 @@
             "(inputs.slider2.value < 1) && 'antwort_a3'",
             "(inputs.slider2.value < 2) && 'antwort_b3'",
             "(inputs.slider2.value < 5) && 'antwort_c3'",
-            "'antwort_d3'"
+            "(inputs.slider2.value >= 5) && 'antwort_d3'"
           ],
           "answerContext": {
             "wertFleisch": "inputs.slider2.value * 1.25",
@@ -406,7 +406,7 @@
           "answerKey": [
             "(inputs.slider.value < 1) && 'antwort_a4'",
             "(inputs.slider.value <= 2) && 'antwort_b4'",
-            "'antwort_c4'"
+            "(inputs.slider.value > 2) && 'antwort_c4'",
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
@@ -495,7 +495,7 @@
           "answerKey": [
             "(inputs.slider.value < 50) && 'antwort_a5'",
             "(inputs.slider.value <= 120) && 'antwort_b5'",
-            "'antwort_c5'"
+            "(inputs.slider.value > 120) && 'antwort_c5'",
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
@@ -566,7 +566,7 @@
           "answerKey": [
             "(inputs.slider.value < 15) && 'antwort_a'",
             "(inputs.slider.value < 50) && 'antwort_b'",
-            "'antwort_c'"
+            "(inputs.slider.value >= 50) && 'antwort_c'",
           ],
           "answerContext": {
             "landAusgaben": "getGermanCountryName(inputs.slider.value)",
