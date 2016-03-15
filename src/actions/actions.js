@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import * as types from '../constants/ActionTypes';
 import { validateData } from '../logic/questionnaire';
 
@@ -13,12 +11,12 @@ export function receiveDataSets(jsonData) {
 }
 
 export function errorQuestionData(err) {
-  console.log(err)
+  console.error(err); // eslint-disable-line no-console
   return { type: types.ERROR_QUESTION_DATA, error: err };
 }
 
 export function errorDataSets(err) {
-  console.log(err);
+  console.log(err); // eslint-disable-line no-console
   return { type: types.ERROR_QUESTION_DATA, error: err };
 }
 
@@ -50,13 +48,21 @@ export function requestDataSets(url) {
   };
 }
 
+// master Datareducer
+export function setDataSet(name) {
+  return {
+    type: types.SET_DATASET,
+    name
+  };
+}
+
 export function setCard(index, dataId) {
   return dispatch => {
-    if(dataId) {
+    if (dataId) {
       dispatch(setDataSet(dataId));
     }
-    dispatch({ type: types.SET_CARD, index: index });
-  }
+    dispatch({ type: types.SET_CARD, index });
+  };
 }
 
 // slider and chioces actions
@@ -65,14 +71,6 @@ export function updateUserInput(key, value) {
     type: types.UPDATE_USERINPUT,
     key,
     value
-  };
-}
-
-// master Datareducer
-export function setDataSet(name) {
-  return {
-    type: types.SET_DATASET,
-    name
   };
 }
 

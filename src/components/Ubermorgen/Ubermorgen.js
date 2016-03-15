@@ -11,7 +11,8 @@ export default class UbermorgenApp extends React.Component {
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
     vis: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired
+    master: PropTypes.object.isRequired,
+    app: PropTypes.object.isRequired
   };
 
   componentDidMount() {

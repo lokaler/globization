@@ -13,7 +13,8 @@ class App extends React.Component {
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
     vis: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired
+    master: PropTypes.object.isRequired,
+    app: PropTypes.object.isRequired
   }
 
   render() {
@@ -27,7 +28,8 @@ function mapStateToProps(state) {
   return {
     questions: state.questions,
     vis: state.vis,
-    master: state.master
+    master: state.master,
+    app: state.app
   };
 }
 
