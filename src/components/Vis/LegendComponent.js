@@ -3,6 +3,7 @@
 import React, { PropTypes } from 'react';
 import d3 from 'd3';
 import utils from './VisUtils.js'
+import translate from 'logic/translate';
 
 export default class LegendComponent extends React.Component {
 
@@ -21,10 +22,10 @@ export default class LegendComponent extends React.Component {
   render() {
     utils.log("render Legend", this.props.color.domain());
 
-    const name = this.props.master.dataset.description;
-    const quelle= this.props.master.dataset.quelle;
-    const link = this.props.master.dataset.link;
     const dataset = this.props.master.dataset;
+    const description = translate(dataset.description);
+    const quelle= dataset.quelle;
+    const link = dataset.link;
     const color = this.props.color;
 
     const legendFields = color.range().map((d,i) =>
@@ -42,7 +43,7 @@ export default class LegendComponent extends React.Component {
         <div className="legend">
           { legendFields }
         </div>
-        <div className="label">{ name }</div>
+        <div className="label">{ description }</div>
         <div className="quelle">Quelle: <a href={ link }>{ quelle }</a></div>
       </div>
 

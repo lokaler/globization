@@ -4,6 +4,7 @@ import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './styles.scss';
 import classnames from 'classnames';
+import translate from 'logic/translate';
 
 @cssModules(styles)
 export default class DataSetList extends React.Component {
@@ -17,17 +18,25 @@ export default class DataSetList extends React.Component {
 
   }
 
-  handleClick(name) {
-    this.props.actions.setDataSet(name);
+  handleClick(key) {
+    this.props.actions.setDataSet(key);
   }
 
-  getActiveClass(name){
-    return classnames([ this.props.master.dataset.name === name ? "active" : ""]);
+  getActiveClass(key){
+    return classnames([ this.props.master.dataset.key === key ? "active" : ""]);
   }
 
   render() {
     const list = this.props.master.datasets.map((d, i) => {
-      return <li className={ this.getActiveClass(d.name) } key={i} onClick={ this.handleClick.bind(this, d.name) }>{ d.name }<span className="info">{ d.data.length } Länder</span></li>;
+      return (
+        <li
+          className={ this.getActiveClass(d.key) }
+          key={i} onClick={ this.handleClick.bind(this, d.key) }
+        >
+          { translate(d.name) }
+          <span className="info">{ d.data.length } Länder</span>
+        </li>
+      );
     });
 
     return (
