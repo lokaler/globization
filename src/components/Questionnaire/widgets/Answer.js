@@ -1,9 +1,8 @@
 /*eslint-disable*/
 import React, { PropTypes } from 'react';
 import MicroMustache from 'micromustache';
-import objectAssign from 'object-assign';
 import cssModules from 'react-css-modules';
-import * as Logic from '../../../logic/questionnaire';
+import { compileExpression, compileContext } from '../../../logic/questionnaire';
 import { isUndefined, isEmpty } from 'lodash';
 
 @cssModules()
@@ -18,27 +17,18 @@ export default class Answer extends React.Component {
   }
 
   getTemplate(templates, userInput) {
-    const templateKey = this.findTemplateKey(userInput);
+    const templateKey = this.getTemplateKey(userInput);
     return templates[templateKey];
   }
 
-  findTemplateKey(userInput) {
-    let templateKey = 'default';
-
-    this.props.data.answerKey.forEach((expr) => {
-      if (templateKey === 'default') {
-        try {
-          const result = Logic.compileExpression(expr)(userInput);
-          if (result) {
-            templateKey = result;
-          }
-        } catch (e) {
-          // console.log(e);
-        }
+  getTemplateKey(userInput) {
+    for (const expr of this.props.data.answerKey) {
+      const templateKey = compileExpression(expr)(userInput);
+      if (templateKey) {
+        return templateKey;
       }
-    });
-
-    return templateKey;
+    }
+    return 'default';
   }
 
   render() {
@@ -49,8 +39,8 @@ export default class Answer extends React.Component {
     }
 
     const template = this.getTemplate(data.templates, questions.inputs)[app.language];
-    const ctx = Logic.compileContext.bind(this)(data.answerContext, questions.inputs);
-    const answerContent = MicroMustache.render(template, objectAssign({}, ctx, { inputs: questions.inputs }));
+    const ctx = compileContext.bind(this)(data.answerContext, questions.inputs);
+    const answerContent = MicroMustache.render(template, ctx);
 
     return (
       <div key={ id } styleName="widget">
