@@ -1,5 +1,5 @@
-/*eslint-disable*/
 import React, { PropTypes } from 'react';
+import ReactMarkdown from 'react-markdown';
 import MicroMustache from 'micromustache';
 import cssModules from 'react-css-modules';
 import { compileExpression, compileContext } from '../../../logic/questionnaire';
@@ -44,7 +44,7 @@ export default class Answer extends React.Component {
 
     return (
       <div key={ id } styleName="widget">
-        { answerContent }
+        <ReactMarkdown source={ answerContent.toString() } />
       </div>
     );
   }
