@@ -38,6 +38,7 @@
 
 :local(.questions) {
   overflow-y: scroll;
+  line-height: 1.4em;
   height: 450px;
   position: relative;
   padding: 2em;
@@ -122,11 +123,22 @@
     float:left;
     width: 100%;
 
+
+
     &:first-of-type {
       margin-top:0;
     }
 
   }
+
+  .answer {
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: rgba(154, 154, 154, 0.22);
+    color: #2B2B2B;
+  }
+
   .slider{
     margin-top:2em;
     margin-bottom:2em;
@@ -164,7 +176,7 @@
   :local(.pagination) {
     @include clearfix;
     position: absolute;
-    left: 40%;
+    left: 35%;
   }
 
   :local(.pagination-item) {
@@ -205,6 +217,7 @@
     width: 0;
     height: 0;
     border-style: solid;
+    display: none;
   }
 
   :local(.btn-next) {

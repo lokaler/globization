@@ -43,7 +43,7 @@ export default class Answer extends React.Component {
     const answerContent = MicroMustache.render(template, ctx);
 
     return (
-      <div key={ id } styleName="widget">
+      <div className="answer" key={ id } styleName="widget">
         <ReactMarkdown source={ answerContent.toString() } />
       </div>
     );
