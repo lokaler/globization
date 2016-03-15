@@ -69,7 +69,7 @@
             },
             "antwort_a": {
               "de": [
-                "Weniger als 15 Prozent: {{ testfoo }} Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in {{ landMin }}, die nur {{ valueMin }} Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+                "Weniger als 15 Prozent: Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in {{ landMin }}, die nur {{ valueMin }} Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
                 "*** ENGLISH ***",
@@ -306,16 +306,17 @@
           "answerContext": {
             "wertFleisch": "inputs.slider2.value * 1.25",
             "landMax": "getMaxGermanCountryName()",
-            "gasred": "inputs.slider2.value / 2 * 3.89"
+            "gasred": "inputs.slider2.value / 2 * 3.89",
+            "gasred2" : "inputs.slider2.value / 2 * 3.89 * 1000 / 249"
           },
           "templates": {
             "default": {
               "de": [
-                "TIPP NUR FÜR {{ wertFleisch }} ungleich Null einblenden: Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um {gasred} kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr [Gasred*1000/249] Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."
+                "TIPP NUR FüR ungleich Null einblenden: Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um {{ gasred }} kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr {{ gasred2 }} Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "TIPP NUR FüR {{wertFleisch}} ungleich Null einblenden: Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um [Gasred= Wert_Fleisch_ges/2*3.89] kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr [Gasred*1000/249] Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."
+                "TIPP NUR FüR ungleich Null einblenden: Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um {{ gasred }} kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr {{ gasred2 }} Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."
               ]
             },
             "antwort_a3": {
@@ -404,35 +405,33 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider.value < 1) && 'antwort_a4'",
-            "(inputs.slider.value <= 2) && 'antwort_b4'",
-            "(inputs.slider.value > 2) && 'antwort_c4'"
+            "(inputs.slider4.value < 1) && 'antwort_a4'",
+            "(inputs.slider4.value <= 2) && 'antwort_b4'",
+            "(inputs.slider4.value > 2) && 'antwort_c4'"
           ],
           "answerContext": {
-            "landAusgaben": "getCountry(inputs)",
+            "landAbfall": "getCountry(inputs)",
             "wertLebensmittel": "inputs.slider4.value"
           },
           "templates": {
             "default": {
               "de": [],
-              "en": [
-                "*** ENGLISH ***"
-              ]
+              "en": []
             },
             "antwort_a4": {
               "de": [
-                "In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ]
             },
             "antwort_b4": {
               "de": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in {{ landAusgaben }}. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in {{ landAbfall }}. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in [LAND_Lebensmittelabfälle]. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in {{ landAbfall }}. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ]
             },
             "antwort_c4": {
@@ -440,7 +439,7 @@
                 "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ]
             }
           }
@@ -499,6 +498,10 @@
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
+            "landMax": "getMaxGermanCountryName()",
+            "landMin": "getMinGermanCountryName()",
+            "valueMax": "getMaxValue()",
+            "valueMin": "getMinValue()",
             "wertEwaste": "inputs.slider.value * 1.25"
           },
           "templates": {
@@ -510,11 +513,11 @@
             },
             "antwort_a5": {
               "de": [
-                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht [Land_min] mit [Wert_Land_min] Kilogramm pro Jahr und Einwohner."
+                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht {{ landMin }} mit {{ valueMin }} Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht [Land_min] mit [Wert_Land_min] Kilogramm pro Jahr und Einwohner."
+                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht {{ landMin }} mit {{ valueMin }} Kilogramm pro Jahr und Einwohner."
               ]
             },
             "antwort_b5": {
@@ -528,11 +531,11 @@
             },
             "antwort_c4": {
               "de": [
-                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht[Land_max] mit [Wert_Land_max] Kilogramm pro Jahr und Einwohner."
+                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht {{ landMax }} mit {{ valueMax }} Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht[Land_max] mit [Wert_Land_max] Kilogramm pro Jahr und Einwohner."
+                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht {{ landMax }} mit {{ valueMax }} Kilogramm pro Jahr und Einwohner."
               ]
             }
           }
@@ -583,11 +586,11 @@
             },
             "antwort_a": {
               "de": [
-                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in [Land_Min], die nur [Wert_Land_Min] Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in {{ landMin }}, die nur {{ valueMin }} Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in [Land_Min], die nur [Wert_Land_Min] Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in {{ landMin }}, die nur {{ valueMin }} Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
               ]
             },
             "antwort_b": {
@@ -601,11 +604,11 @@
             },
             "antwort_c": {
               "de": [
-                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in [Land_Max] den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich [Wert_Land_max] Prozent."
+                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in [Land_Max] den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich [Wert_Land_max] Prozent."
+                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
               ]
             }
           }
