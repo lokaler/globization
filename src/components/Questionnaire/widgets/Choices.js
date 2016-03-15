@@ -17,6 +17,10 @@ export default class Choices extends React.Component {
     this.props.actions.updateUserInput(this.props.id, activeValue);
   }
 
+  onClick(activeValue) {
+    this.props.actions.updateUserInput(this.props.id, activeValue);
+  }
+
   isActiveRadio(activeValue) {
     const currUserInput = this.props.questions.inputs[this.props.id];
     return currUserInput &&
@@ -30,9 +34,10 @@ export default class Choices extends React.Component {
     const key = `${ id }_i${ index }`;
     const value = option[0];
     const label = option[1][app.language];
+    const boundOnClick = this.onClick.bind(this, value);
 
     return (
-      <div key={ key }>
+      <div key={ key } onClick={ boundOnClick } style={{ cursor: 'pointer' }}>
         <input type="radio" value={ value } onChange={ this.onChange } checked={ isSelected }/>
         <span styleName="choice-label">{ label }</span>
       </div>

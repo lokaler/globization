@@ -20,7 +20,7 @@ export default class Outro extends React.Component {
 
   render() {
     const summary = this.createSummary(this.props.questions.inputs);
-    return (<div>
+    return (<div style={{ width: '100%' }}>
       <h1>Ihre Ergebnisse</h1>
       { summary }
     </div>);
