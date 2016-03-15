@@ -406,7 +406,7 @@
           "answerKey": [
             "(inputs.slider.value < 1) && 'antwort_a4'",
             "(inputs.slider.value <= 2) && 'antwort_b4'",
-            "(inputs.slider.value > 2) && 'antwort_c4'",
+            "(inputs.slider.value > 2) && 'antwort_c4'"
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
@@ -495,7 +495,7 @@
           "answerKey": [
             "(inputs.slider.value < 50) && 'antwort_a5'",
             "(inputs.slider.value <= 120) && 'antwort_b5'",
-            "(inputs.slider.value > 120) && 'antwort_c5'",
+            "(inputs.slider.value > 120) && 'antwort_c5'"
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
@@ -566,7 +566,7 @@
           "answerKey": [
             "(inputs.slider.value < 15) && 'antwort_a'",
             "(inputs.slider.value < 50) && 'antwort_b'",
-            "(inputs.slider.value >= 50) && 'antwort_c'",
+            "(inputs.slider.value >= 50) && 'antwort_c'"
           ],
           "answerContext": {
             "landAusgaben": "getGermanCountryName(inputs.slider.value)",
@@ -591,7 +591,7 @@
               ]
             },
             "antwort_b": {
-              "de": [ 
+              "de": [
                 "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen in [LAND_Ausgaben]. Im Vergleich von [Anzahl_Länder_Lebensmittel] Ländern liegen Sie damit auf Platz [Anzahl Länder minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
               ],
               "en": [
@@ -610,7 +610,7 @@
             }
           }
         }
-      }      
+      }
     ]
   }
 ]
