@@ -81,7 +81,7 @@ export default class DotsComponent extends React.Component {
     item
       .transition()
       .duration(this.props.transitionDuration)
-      .attr('r', function(d) { return 5; })
+      .attr('r', function(d) { return 5+Math.random()*5; })
       .attr('cx', function(d) { return x(d.vergleich); })
       .attr('cy', function(d) { return y(d.value); })
       .style('opacity', 1)

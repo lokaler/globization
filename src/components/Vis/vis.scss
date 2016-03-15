@@ -4,14 +4,14 @@
 
   .menu {
     padding: 5px;
-    background: rgb(255, 255, 255);
     clear: left;
     top: 10px;
-    left: 10px;
+    right: -6px;
     position: absolute;
     z-index: 100;
-    width: 40px;
+    width: 50px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    background: #FFF;
 
     div {
       width: 20px;
@@ -59,6 +59,46 @@
     }
   }
 
+
+  .scatterLegend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 100%;
+    width: 100%;
+    font-size: 12px;
+    pointer-events: none;
+
+    .label {
+      top: 20px;
+      left: 20px;
+      position: absolute;
+    }
+    .vergleich {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
+    .quelle {
+        bottom: 20px;
+        left: 20px;
+        position: absolute;
+        font-size: 10px;
+        color: #797979;
+
+        a {
+          text-decoration: none;
+          color: #797979;
+
+          &:hover {
+            color: #000;
+          }
+        }
+    }
+  }
+
+
   .footer {
     font-size: 12px;
     padding: 10px;
@@ -75,6 +115,7 @@
         float: left;
         padding-top: 2px;
     }
+
     .quelle {
         clear: left;
         float: left;
@@ -85,6 +126,10 @@
         a {
           text-decoration: none;
           color: #797979;
+
+          &:hover {
+            color: #000;
+          }
         }
     }
 

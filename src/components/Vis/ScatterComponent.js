@@ -32,7 +32,7 @@ export default class ScatterComponent extends React.Component {
 
     this.svg = null;
     // this.dataset = new Dataset();
-    this.margin = {top: 40, right: 50, bottom: 100, left: 80}
+    this.margin = {top: 60, right: 40, bottom: 70, left: 50}
     this.innerWidth = this.props.width - this.margin.left - this.margin.right
     this.innerHeight = this.props.height - this.margin.top - this.margin.bottom
     this.padding = 10;
@@ -88,7 +88,7 @@ export default class ScatterComponent extends React.Component {
           <AxisComponent
             className='x axis'
             scale={this.x}
-            tickFormat={ (d) => d/1000 }
+            tickFormat={ (d) => d }
             orient='bottom'
             transform={`translate(0, ${this.innerHeight})`}
             transitionDuration={1000}
@@ -96,15 +96,17 @@ export default class ScatterComponent extends React.Component {
           <AxisComponent
             tickSize={this.innerWidth}
             className='y axis'
-            tickFormat={ d3.format(".1f") }
+            tickFormat={ (d)=> d3.format(".1f")(d) }
+            fixed={ this.props.master.dataset.fixed }
             scale={this.y}
-            orient='right'
-            transform={`translate(${this.innerWidth}, 0)`}
+            orient='left'
+            transform={`translate(0, 0)`}
             transitionDuration={1000}
           />
           <DotsComponent {...this.props}
             tickSize={-this.innerWidth}
             className='dots'
+            fixed={ this.props.master.dataset.fixed }
             xScale={this.x}
             yScale={this.y}
             transitionDuration={1000}

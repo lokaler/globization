@@ -8,7 +8,6 @@ import Dataset from '../../logic/Dataset.js'
 import cssModules from 'react-css-modules';
 import styles from './globe.scss';
 import classnames from 'classnames';
-import LegendComponent from './LegendComponent.js';
 
 @cssModules(styles)
 

@@ -20,6 +20,7 @@ export default class AxisComponent extends React.Component {
       .orient(this.props.orient)
       // .tickSize(this.props.tickSize)
       .tickFormat(this.props.tickFormat)
+      .ticks(5)
       // .tickValues(this.props.scale.domain())
 
     d3.select(this.refs.g).call(this.axis);
@@ -29,7 +30,7 @@ export default class AxisComponent extends React.Component {
     this.axis
       .scale(this.props.scale)
       .orient(this.props.orient)
-      .tickFormat(this.props.tickFormat);
+      .tickFormat(this.props.tickFormat)
 
     d3.select(this.refs.g).transition().duration(this.props.transitionDuration)
       .call(this.axis);
