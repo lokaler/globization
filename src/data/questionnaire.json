@@ -485,7 +485,8 @@
           "options": {
             "min": 0,
             "value": 100,
-            "max": 200
+            "max": 200,
+            "unit": "Kg"
           }
         }
       },
@@ -550,6 +551,16 @@
       "getMinValue"
     ],
     "content": [
+      {
+        "text": {
+          "de": [
+            "# Zusammenfassung"
+          ],
+          "en": [
+            "# Summary"
+          ]
+        }
+      },
       {
         "answer": {
           "answerKey": [

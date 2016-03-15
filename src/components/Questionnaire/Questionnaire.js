@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 
@@ -65,7 +67,8 @@ export default class Questionnaire extends React.Component {
     if (questions.activeCard === -1) {
       widgets = <Intro { ...this.props }/>;
     } else if (questions.activeCard === questions.questionData.length - 1) {
-      widgets = <Outro { ...this.props }/>;
+      // widgets = <Outro { ...this.props }/>;
+      widgets = this.createWidgets(questions);
     } else {
       widgets = this.createWidgets(questions);
 
