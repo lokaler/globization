@@ -136,7 +136,9 @@ function getConfig(env) {
     ],
     resolve: {
       alias: {
-        ajv: root('node_modules/ajv/dist/ajv.bundle.js')
+        ajv: root('node_modules/ajv/dist/ajv.bundle.js'),
+        logic: root('src/logic'),
+        data: root('src/data')
       }
     }
   };
