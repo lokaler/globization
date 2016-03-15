@@ -10,7 +10,8 @@ import cssModules from 'react-css-modules';
 import styles from './vis.scss';
 import classnames from 'classnames';
 import colorbrewer from 'colorbrewer'
-import LegendComponent from './LegendComponent.js';
+import MapLegendComponent from './MapLegendComponent.js';
+import ScatterLegendComponent from './ScatterLegendComponent.js';
 
 
 @cssModules(styles)
@@ -71,6 +72,12 @@ export default class Globe extends React.Component {
       scatter: ScatterComponent,
     }[this.props.vis.type];
 
+    const Legend = {
+      globe: MapLegendComponent,
+      map: MapLegendComponent,
+      scatter: ScatterLegendComponent
+    }[this.props.vis.type];
+
     const changeGlobe = this.changeType.bind(this, 'globe');
     const changeMap = this.changeType.bind(this, 'map');
     const changeScatter = this.changeType.bind(this, 'scatter');
@@ -88,7 +95,7 @@ export default class Globe extends React.Component {
         </div>
         <TooltipComponent {...this.props} />
         { dataset &&
-          <LegendComponent color={this.color} {...this.props} />
+          <Legend color={this.color} {...this.props} />
         }
 
       </div>

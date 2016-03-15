@@ -5,7 +5,7 @@ import d3 from 'd3';
 import utils from './VisUtils.js'
 import translate from 'logic/translate';
 
-export default class LegendComponent extends React.Component {
+export default class ScatterLegendComponent extends React.Component {
 
   static propTypes = {
 
@@ -39,12 +39,10 @@ export default class LegendComponent extends React.Component {
     )
 
     return (
-      <div className="footer">
-        <div className="legend">
-          { legendFields }
-        </div>
-        <div className="label">{ description }</div>
-        <div className="quelle">Quelle: <a href={ link }>{ quelle }</a></div>
+      <div className="scatterLegend">
+      <div className="label">{ description }</div>
+      <div className="quelle">Quelle: <a href={ link }>{ quelle }</a></div>
+      <div className="vergleich">BIP pro Kopf in $</div>
       </div>
 
     )
