@@ -1,5 +1,5 @@
 import * as ActionTypes from '../constants/ActionTypes';
-import { contains } from 'lodash';
+import { includes } from 'lodash';
 
 const initialState = {
   language: 'de',
@@ -21,7 +21,7 @@ export default function appReducer(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.GET_URL_PARAMETERS: {
       let language = getQueryVariable('language') || 'de';
-      if (!contains(['de', 'en'], language)) language = 'de';
+      if (!includes(['de', 'en'], language)) language = 'de';
       const mobile = !!parseInt(getQueryVariable('mobile') || '0', 10);
       return Object.assign({}, { language, mobile });
     }
