@@ -49,8 +49,8 @@
         "answer": {
           "answerKey": [
             "(inputs.slider.value < 15) && 'antwort_a'",
-            "(inputs.slider.value >15 && inputs.slider.value < 50) && 'antwort_b'",
-            "(inputs.slider.value >= 50) && 'antwort_c'"
+            "(inputs.slider.value < 50) && 'antwort_b'",
+            "'antwort_c'"
           ],
           "answerContext": {
             "landAusgaben": "getGermanCountryName(inputs.slider.value)",
@@ -138,11 +138,7 @@
       },
       {
         "answer": {
-          "answerKey": [
-            "inputs.fairtrade.value == 'never' && 'never'",
-            "inputs.fairtrade.value == 'sometimes' && 'sometimes'",
-            "inputs.fairtrade.value == 'always' && 'always'"
-          ],
+          "answerKey": ["inputs.fairtrade.value"],
           "answerContext": {},
           "templates": {
             "default": {
@@ -207,11 +203,7 @@
       },
       {
         "answer": {
-          "answerKey": [
-            "inputs.bioproduct.value == 'never' && 'never'",
-            "inputs.bioproduct.value == 'sometimes' && 'sometimes'",
-            "inputs.bioproduct.value == 'always' && 'always'"
-          ],
+          "answerKey": ["inputs.bioproduct.value"],
           "answerContext": {},
           "templates": {
             "default": {
@@ -290,9 +282,9 @@
         "answer": {
           "answerKey": [
             "(inputs.slider2.value < 1) && 'antwort_a3'",
-            "(inputs.slider2.value >= 1 && inputs.slider2.value < 2) && 'antwort_b3'",
-            "(inputs.slider2.value >= 2 && inputs.slider2.value < 5) && 'antwort_c3'",
-            "(inputs.slider2.value >= 5) && 'antwort_c3'"
+            "(inputs.slider2.value < 2) && 'antwort_b3'",
+            "(inputs.slider2.value < 5) && 'antwort_c3'",
+            "'antwort_d3'"
           ],
           "answerContext": {
             "wertFleisch": "inputs.slider2.value * 1.25"
@@ -388,8 +380,8 @@
         "answer": {
           "answerKey": [
             "(inputs.slider.value < 1) && 'antwort_a4'",
-            "(inputs.slider.value >=1 && inputs.slider.value <= 2) && 'antwort_b4'",
-            "(inputs.slider.value >= 3) && 'antwort_c4'"
+            "(inputs.slider.value <= 2) && 'antwort_b4'",
+            "'antwort_c4'"
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
@@ -473,8 +465,8 @@
         "answer": {
           "answerKey": [
             "(inputs.slider.value < 50) && 'antwort_a5'",
-            "(inputs.slider.value >=50 && inputs.slider.value <= 120) && 'antwort_b5'",
-            "(inputs.slider.value >= 120) && 'antwort_c5'"
+            "(inputs.slider.value <= 120) && 'antwort_b5'",
+            "'antwort_c5'"
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
