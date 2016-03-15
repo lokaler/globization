@@ -49,8 +49,8 @@
         "answer": {
           "answerKey": [
             "(inputs.slider.value < 15) && 'antwort_a'",
-            "(inputs.slider.value >15 && inputs.slider.value < 50) && 'antwort_b'",
-            "(inputs.slider.value >= 50) && 'antwort_c'"
+            "(inputs.slider.value < 50) && 'antwort_b'",
+            "'antwort_c'"
           ],
           "answerContext": {
             "landAusgaben": "getGermanCountryName(inputs.slider.value)",
@@ -73,25 +73,25 @@
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Weniger als 15 Prozent: Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in {{ landMin }}, die nur {{ valueMin }} Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+                "Weniger als 15 Prozent: Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in {{ landMin }}, die nur {{ valueMin }} Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
               ]
             },
             "antwort_b": {
               "de": [
-                "15 bis 50 Prozent: Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
+                "15 bis 50 Prozent: Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "15 bis 50 Prozent: Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
+                "15 bis 50 Prozent: Menschen in {{ landAusgaben }} geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
               ]
             },
             "antwort_c": {
               "de": [
-                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
+                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
+                "Mehr als 50 Prozent: Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
               ]
             }
           }
@@ -115,7 +115,7 @@
           "de": [
             "# Worauf achten Sie beim Kauf?",
             "",
-            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
+            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
             "",
             "*Kaufen Sie Fairtrade-Produkte?*"
           ],
@@ -123,7 +123,7 @@
             "*** ENGLISH ***",
             "# Worauf achten Sie beim Kauf?",
             "",
-            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
+            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
             "",
             "*Kaufen Sie Fairtrade-Produkte?*"
           ]
@@ -144,11 +144,7 @@
       },
       {
         "answer": {
-          "answerKey": [
-            "inputs.fairtrade.value == 'never' && 'never'",
-            "inputs.fairtrade.value == 'sometimes' && 'sometimes'",
-            "inputs.fairtrade.value == 'always' && 'always'"
-          ],
+          "answerKey": ["inputs.fairtrade.value"],
           "answerContext": {},
           "templates": {
             "default": {
@@ -159,29 +155,29 @@
             },
             "never": {
               "de": [
-                "Da geht noch was – vorausgesetzt Ihr Portemonnaie erlaubt es! Würden Sie Fairtrade-Produkte kaufen, wenn Sie mehr darüber wüssten, was sich hinter dieser Bezeichnung verbirgt? Einen Überblick über verschiedene Fairtrade-, Bio- und Öko-Siegel gibt zum Beispiel die Webseite [Nachhaltiger Warenkorb](http://nachhaltiger-warenkorb.de/)"
+                "Da geht noch was – vorausgesetzt Ihr Portemonnaie erlaubt es! Würden Sie Fairtrade-Produkte kaufen, wenn Sie mehr darüber wüssten, was sich hinter dieser Bezeichnung verbirgt? Einen überblick über verschiedene Fairtrade-, Bio- und öko-Siegel gibt zum Beispiel die Webseite [Nachhaltiger Warenkorb](http://nachhaltiger-warenkorb.de/)"
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Da geht noch was – vorausgesetzt Ihr Portemonnaie erlaubt es! Würden Sie Fairtrade-Produkte kaufen, wenn Sie mehr darüber wüssten, was sich hinter dieser Bezeichnung verbirgt? Einen Überblick über verschiedene Fairtrade-, Bio- und Öko-Siegel gibt zum Beispiel die Webseite [Nachhaltiger Warenkorb](http://nachhaltiger-warenkorb.de/)"
+                "Da geht noch was – vorausgesetzt Ihr Portemonnaie erlaubt es! Würden Sie Fairtrade-Produkte kaufen, wenn Sie mehr darüber wüssten, was sich hinter dieser Bezeichnung verbirgt? Einen überblick über verschiedene Fairtrade-, Bio- und öko-Siegel gibt zum Beispiel die Webseite [Nachhaltiger Warenkorb](http://nachhaltiger-warenkorb.de/)"
               ]
             },
             "sometimes": {
               "de": [
-                "Damit liegen Sie voll im Trend. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
+                "Damit liegen Sie voll im Trend. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Damit liegen Sie voll im Trend. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
+                "Damit liegen Sie voll im Trend. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
               ]
             },
             "always": {
               "de": [
-                "Sie können sich zu den Trendsettern unter den Fairtrade-Käufern zählen. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
+                "Sie können sich zu den Trendsettern unter den Fairtrade-Käufern zählen. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Sie können sich zu den Trendsettern unter den Fairtrade-Käufern zählen. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
+                "Sie können sich zu den Trendsettern unter den Fairtrade-Käufern zählen. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
               ]
             }
           }
@@ -228,29 +224,29 @@
             },
             "never": {
               "de": [
-                "Damit gehören Sie zur Minderheit: Laut einer repräsentativen Umfrage aus dem Jahr 2013 kauft nur jeder vierte Deutsche nie Bio-Produkte. Rund jeder Fünfte kauft sie häufig oder fast ausschließlich. Längst werden viele davon aus dem Ausland importiert, um den Bedarf zu decken. Lesen Sie dazu auch unsere [Reportage](http://)."
+                "Damit gehören Sie zur Minderheit: Laut einer repräsentativen Umfrage aus dem Jahr 2013 kauft nur jeder vierte Deutsche nie Bio-Produkte. Rund jeder Fünfte kauft sie häufig oder fast ausschließlich. Längst werden viele davon aus dem Ausland importiert, um den Bedarf zu decken. Lesen Sie dazu auch unsere [Reportage](http://)."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Damit gehören Sie zur Minderheit: Laut einer repräsentativen Umfrage aus dem Jahr 2013 kauft nur jeder vierte Deutsche nie Bio-Produkte. Rund jeder Fünfte kauft sie häufig oder fast ausschließlich. Längst werden viele davon aus dem Ausland importiert, um den Bedarf zu decken. Lesen Sie dazu auch unsere [Reportage](http://)."
+                "Damit gehören Sie zur Minderheit: Laut einer repräsentativen Umfrage aus dem Jahr 2013 kauft nur jeder vierte Deutsche nie Bio-Produkte. Rund jeder Fünfte kauft sie häufig oder fast ausschließlich. Längst werden viele davon aus dem Ausland importiert, um den Bedarf zu decken. Lesen Sie dazu auch unsere [Reportage](http://)."
               ]
             },
             "sometimes": {
               "de": [
-                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere  [Reportage](http://)."
+                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere  [Reportage](http://)."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere  [Reportage](http://)."
+                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere  [Reportage](http://)."
               ]
             },
             "always": {
               "de": [
-                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://)."
+                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://)."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://)."
+                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://)."
               ]
             }
           }
@@ -303,9 +299,9 @@
         "answer": {
           "answerKey": [
             "(inputs.slider2.value < 1) && 'antwort_a3'",
-            "(inputs.slider2.value >= 1 && inputs.slider2.value < 2) && 'antwort_b3'",
-            "(inputs.slider2.value >= 2 && inputs.slider2.value < 5) && 'antwort_c3'",
-            "(inputs.slider2.value >= 5) && 'antwort_c3'"
+            "(inputs.slider2.value < 2) && 'antwort_b3'",
+            "(inputs.slider2.value < 5) && 'antwort_c3'",
+            "'antwort_d3'"
           ],
           "answerContext": {
             "wertFleisch": "inputs.slider2.value * 1.25",
@@ -319,25 +315,25 @@
               ],
               "en": [
                 "*** ENGLISH ***",
-                "TIPP NUR FÜR {{ wertFleisch }} ungleich Null einblenden: Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um {gasred} kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr [Gasred*1000/249] Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."
+                "TIPP NUR FüR {{wertFleisch}} ungleich Null einblenden: Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um [Gasred= Wert_Fleisch_ges/2*3.89] kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr [Gasred*1000/249] Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."
               ]
             },
             "antwort_a3": {
               "de": [
-                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
+                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
+                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
               ]
             },
             "antwort_b3": {
               "de": [
-                "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
+                "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
+                "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
               ]
             },
             "antwort_c3": {
@@ -351,11 +347,11 @@
             },
             "antwort_d3": {
               "de": [
-                "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
+                "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
+                "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
               ]
             }
           }
@@ -377,19 +373,19 @@
       {
         "text": {
           "de": [
-            "# Was landet bei Ihnen im Müll?",
+            "# Was landet bei Ihnen im Müll?",
             "",
             "1,3 Milliarden Tonnen Lebensmittel werden weltweit pro Jahr weggeschmissen. Diese gigantische Menge wollen die Vereinten Nationen bis 2030 halbieren.",
             "",
-            "*Wie viel Kilogramm Lebensmittel landen bei Ihnen zu Hause pro Woche im Müll?*"
+            "*Wie viel Kilogramm Lebensmittel landen bei Ihnen zu Hause pro Woche im Müll?*"
           ],
           "en": [
             "*** ENGLISH ***",
-            "# Was landet bei Ihnen im Müll?",
+            "# Was landet bei Ihnen im Müll?",
             "",
             "1,3 Milliarden Tonnen Lebensmittel werden weltweit pro Jahr weggeschmissen. Diese gigantische Menge wollen die Vereinten Nationen bis 2030 halbieren.",
             "",
-            "*Wie viel Kilogramm Lebensmittel landen bei Ihnen zu Hause pro Woche im Müll?*"
+            "*Wie viel Kilogramm Lebensmittel landen bei Ihnen zu Hause pro Woche im Müll?*"
           ]
         }
       },
@@ -408,9 +404,9 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider4.value < 1) && 'antwort_a4'",
-            "(inputs.slider4.value >=1 && inputs.slider4.value <= 2) && 'antwort_b4'",
-            "(inputs.slider4.value >= 3) && 'antwort_c4'"
+            "(inputs.slider.value < 1) && 'antwort_a4'",
+            "(inputs.slider.value <= 2) && 'antwort_b4'",
+            "'antwort_c4'"
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
@@ -425,11 +421,10 @@
             },
             "antwort_a4": {
               "de": [
-                "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ]
             },
             "antwort_b4": {
@@ -437,8 +432,7 @@
                 "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in {{ landAusgaben }}. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in {{ landAusgaben }}. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in [LAND_Lebensmittelabfälle]. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ]
             },
             "antwort_c4": {
@@ -446,8 +440,7 @@
                 "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ]
             }
           }
@@ -469,19 +462,19 @@
       {
         "text": {
           "de": [
-            "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy (Finde die Quelle nicht wieder). Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt (Später E-Waste-Republic verlinken).",
+            "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy (Finde die Quelle nicht wieder). Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt (Später E-Waste-Republic verlinken).",
             "",
             "*Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?*",
             "(Smartphone ≈ 150g, PC ≈ 8kg, Toaster ≈ 3kg, Waschmaschine ≈ 70kg)",
-            "Für den internationalen Vergleich nehmen wir an, das Unternehmen und öffentliche Einrichtungen in Ihrem Land noch einmal das X-FACHE IHRES WERTES (dazu bekomme ich noch einen Wert von der UNU) an Elektroschrott verursachen. Auf Sie entfallen dann insgesamt [Wert_Schrott*X] Kilogramm Elektroschrott."
+            "Für den internationalen Vergleich nehmen wir an, das Unternehmen und öffentliche Einrichtungen in Ihrem Land noch einmal das X-FACHE IHRES WERTES (dazu bekomme ich noch einen Wert von der UNU) an Elektroschrott verursachen. Auf Sie entfallen dann insgesamt [Wert_Schrott*X] Kilogramm Elektroschrott."
           ],
           "en": [
             "*** ENGLISH ***",
-            "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy (Finde die Quelle nicht wieder). Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt (Später E-Waste-Republic verlinken).",
+            "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy (Finde die Quelle nicht wieder). Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt (Später E-Waste-Republic verlinken).",
             "",
             "*Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?*",
             "(Smartphone ≈ 150g, PC ≈ 8kg, Toaster ≈ 3kg, Waschmaschine ≈ 70kg)",
-            "Für den internationalen Vergleich nehmen wir an, das Unternehmen und öffentliche Einrichtungen in Ihrem Land noch einmal das X-FACHE IHRES WERTES (dazu bekomme ich noch einen Wert von der UNU) an Elektroschrott verursachen. Auf Sie entfallen dann insgesamt [Wert_Schrott*X] Kilogramm Elektroschrott."
+            "Für den internationalen Vergleich nehmen wir an, das Unternehmen und öffentliche Einrichtungen in Ihrem Land noch einmal das X-FACHE IHRES WERTES (dazu bekomme ich noch einen Wert von der UNU) an Elektroschrott verursachen. Auf Sie entfallen dann insgesamt [Wert_Schrott*X] Kilogramm Elektroschrott."
           ]
         }
       },
@@ -500,8 +493,8 @@
         "answer": {
           "answerKey": [
             "(inputs.slider.value < 50) && 'antwort_a5'",
-            "(inputs.slider.value >=50 && inputs.slider.value <= 120) && 'antwort_b5'",
-            "(inputs.slider.value >= 120) && 'antwort_c5'"
+            "(inputs.slider.value <= 120) && 'antwort_b5'",
+            "'antwort_c5'"
           ],
           "answerContext": {
             "landAusgaben": "getCountry(inputs)",
@@ -516,11 +509,11 @@
             },
             "antwort_a5": {
               "de": [
-                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht [Land_min] mit [Wert_Land_min] Kilogramm pro Jahr und Einwohner."
+                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht [Land_min] mit [Wert_Land_min] Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht [Land_min] mit [Wert_Land_min] Kilogramm pro Jahr und Einwohner."
+                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht [Land_min] mit [Wert_Land_min] Kilogramm pro Jahr und Einwohner."
               ]
             },
             "antwort_b5": {
@@ -534,11 +527,11 @@
             },
             "antwort_c4": {
               "de": [
-                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht[Land_max] mit [Wert_Land_max] Kilogramm pro Jahr und Einwohner."
+                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht[Land_max] mit [Wert_Land_max] Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht[Land_max] mit [Wert_Land_max] Kilogramm pro Jahr und Einwohner."
+                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht[Land_max] mit [Wert_Land_max] Kilogramm pro Jahr und Einwohner."
               ]
             }
           }
