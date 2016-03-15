@@ -1,9 +1,20 @@
 [
    {
-      "name":"Ausgaben für Lebensmittel",
+      "key": "food",
+      "name": {
+         "de": "Ausgaben für Lebensmittel",
+         "en": "*** ENGLISH *** Ausgaben für Lebensmittel"
+      },
+      "description": {
+         "de": "Ausgaben für Lebensmittel in % am Einkommen",
+         "en": "*** ENGLISH *** Ausgaben für Lebensmittel in % am Einkommen"
+      },
+      "compareName": {
+         "de": "BIP pro Kopf",
+         "en": "GDP per head"
+      },
       "quelle": "Statistisches Bundesamt",
       "link": "",
-      "description":"Ausgaben für Lebensmittel in % am Einkommen",
       "unit": "%",
       "fixed": 0,
       "domain":[
@@ -388,12 +399,19 @@
       ]
    },
    {
-      "name":"Fleischkonsum",
+      "key" : "meat",
+      "name": {
+        "de": "Fleischkonsum",
+        "en": "Meat consumption"
+      },
+      "description": {
+        "de": "Pro-Kopf Fleischkonsum in Kg",
+        "en": "*** ENGLISH *** Pro-Kopf Fleischkonsum in Kg"
+      },
       "quelle": "FAO / WRI",
       "link": "",
       "unit": "kg",
       "fixed": 1,
-      "description":"Pro-Kopf Fleischkonsum in Kg",
       "domain":[
          0,
          3
@@ -934,10 +952,6 @@
             "value":0.1
          },
          {
-            "iso":"KANN",
-            "value":1.5
-         },
-         {
             "iso":"LCA",
             "value":1.7
          },
@@ -1104,12 +1118,19 @@
       ]
    },
    {
-      "name":"Lebensmittelabfälle",
+      "key": "foodwaste",
+      "name": {
+        "de": "Lebensmittelabfälle",
+        "en": "*** ENGLISH *** Lebensmittelabfälle"
+      },
+      "description": {
+        "de": "Pro-Kopf Foodwaste in Kg",
+        "en": "*** ENGLISH *** Pro-Kopf Foodwaste in Kg"
+      },
       "quelle": "Studie zu EU-Staaten",
       "link": "http://wmr.sagepub.com/content/32/8/683.short",
       "unit": "kg",
       "fixed": 1,
-      "description":"Pro-Kopf Foodwaste in Kg",
       "domain":[
          1.5,
          2.7
@@ -1236,12 +1257,19 @@
       ]
    },
    {
-      "name":"Elektroschrott",
+      "key": "electro",
+      "name": {
+        "de": "Elektroschrott",
+        "en": "E-waste"
+      },
+      "description": {
+        "de": "Pro-Kopf Elektroschrott in kg",
+        "en": "*** ENGLISH *** Pro-Kopf Elektroschrott in kg"
+      },
       "quelle": "E-Waste-Monitor 2014",
       "link": "http://i.unu.edu/media/unu.edu/news/52624/UNU-1stGlobal-E-Waste-Monitor-2014-small.pdf",
       "unit": "kg",
       "fixed": 0,
-      "description":"Pro-Kopf Elektroschrott in kg",
       "domain":[
          0,
          28.3
@@ -1776,10 +1804,6 @@
          {
             "iso":"SAU",
             "value":12.5
-         },
-         {
-            "iso":"SYR",
-            "value":null
          },
          {
             "iso":"TUR",
