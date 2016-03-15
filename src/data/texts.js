@@ -25,3 +25,8 @@ export const intro = {
   `
 
 };
+
+export const pagination = {
+  prev: { de: 'ZURÜCK', en: 'PREV' },
+  next: { de: 'WEITER', en: 'NEXT' }
+};
