@@ -330,7 +330,7 @@
       },
       {
         "input": {
-          "key": "slider2",
+          "key": "sliderMeatConsumption",
           "type": "slider",
           "options": {
             "unit": "Kg",
@@ -344,16 +344,16 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider2.value < 1) && 'antwort_a3'",
-            "(inputs.slider2.value < 2) && 'antwort_b3'",
-            "(inputs.slider2.value < 5) && 'antwort_c3'",
-            "(inputs.slider2.value >= 5) && 'antwort_d3'"
+            "(inputs.sliderMeatConsumption.value < 1) && 'noMeat'",
+            "(inputs.sliderMeatConsumption.value < 2) && 'someMeat'",
+            "(inputs.sliderMeatConsumption.value < 5) && 'muchMeat'",
+            "'muchTooMuchMeat'"
           ],
           "answerContext": {
-            "wertFleisch": "inputs.slider2.value * 1.25",
+            "wertFleisch": "inputs.sliderMeatConsumption.value * 1.25",
             "landMax": "getMaxGermanCountryName()",
-            "gasred": "inputs.slider2.value / 2 * 3.89",
-            "gasred2" : "inputs.slider2.value / 2 * 3.89 * 1000 / 249"
+            "gasred": "inputs.sliderMeatConsumption.value / 2 * 3.89",
+            "gasred2" : "inputs.sliderMeatConsumption.value / 2 * 3.89 * 1000 / 249"
           },
           "templates": {
             "default": {
@@ -365,7 +365,7 @@
                 "TIPP NUR FüR ungleich Null einblenden: Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um {{ gasred }} kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr {{ gasred2 }} Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."
               ]
             },
-            "antwort_a3": {
+            "noMeat": {
               "de": [
                 "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
               ],
@@ -374,7 +374,7 @@
                 "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
               ]
             },
-            "antwort_b3": {
+            "someMeat": {
               "de": [
                 "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
               ],
@@ -383,7 +383,7 @@
                 "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
               ]
             },
-            "antwort_c3": {
+            "muchMeat": {
               "de": [
                 "Das entspricht etwa der pro Woche und Person verfügbaren Menge in *{{ landMax }}*."
               ],
@@ -392,13 +392,33 @@
                 "Das entspricht etwa der pro Woche und Person verfügbaren Menge in *{{ landMax }}*."
               ]
             },
-            "antwort_d3": {
+            "muchTooMuchMeat": {
               "de": [
                 "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
               ],
               "en": [
                 "*** ENGLISH ***",
                 "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "answer": {
+          "className": "tip",
+          "answerKey": [
+            "(inputs.sliderMeatConsumption.value >= 1) && 'meat'"
+          ],
+          "answerContext": {},
+          "templates": {
+            "meat": {
+              "de": [
+                "Aasfresser!"
+              ],
+              "en": [
+                "*** ENGLISH ***",
+                "Aasfresser!"
               ]
             }
           }
