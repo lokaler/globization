@@ -37,12 +37,15 @@
 }
 
 :local(.questions) {
-  overflow-y: scroll;
+
   line-height: 1.4em;
-  height: 450px;
-  position: relative;
-  padding: 2em;
   font-size: 12px;
+
+  :local(.inner) {
+    padding: 20px;
+    position: relative;
+    float: left;
+  }
 
   a {
     text-decoration: none;
@@ -168,7 +171,7 @@
 }
 
 :local(.footer) {
-  padding: 1em;
+  padding: 18px;
   position: absolute;
   bottom:0;
   width: 100%;

@@ -63,6 +63,8 @@ export default class Globe extends React.Component {
   }
 
   render() {
+    utils.log("render vis");
+
     const dataset = this.props.master.dataset;
     const type = this.props.master.dataset;
 

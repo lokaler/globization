@@ -6,6 +6,7 @@ import Text from './widgets/Text';
 import Answer from './widgets/Answer';
 import Input from './widgets/Input';
 import Footer from './Footer';
+import ShadowScrollbars from './ShadowScrollbars';
 // import Outro from './Outro';
 
 const WidgetFactory = {
@@ -80,11 +81,16 @@ export default class Questionnaire extends React.Component {
     const data = '';
 
     return (
-      <div className="questions">
-        <div styleName="questions">
-          { data }
-          { widgets }
-        </div>
+      <div styleName="questions">
+        <ShadowScrollbars
+          activeCard={ this.props.questions.activeCard }
+          style={{ width: 320, height: 450 }}
+        >
+          <div styleName="inner">
+            { data }
+            { widgets }
+          </div>
+        </ShadowScrollbars>
         <Footer nextBtnLabel={ nextBtnLabel } prevBtnLabel="Zurück" { ...this.props }/>
       </div>
     );
