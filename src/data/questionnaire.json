@@ -893,11 +893,12 @@
             "landMin": "funcs.getMinCountryName('electro')",
             "valueMax": "funcs.getMaxValue('electro')",
             "valueMin": "funcs.getMinValue('electro')",
-            "wertEwaste": "inputs.sliderEwaste.value + 2.41"
+            "wertEwaste": "inputs.sliderEwaste.value + 2.41",
+            "testfoo": "funcs.getDatasetCountByComparator('food', inputs.slider.value, '<')"
           },
           "templates": {
             "default": {
-              "de": [],
+              "de": ["{{ testfoo }}"],
               "en": []
             },
             "lessEwaste": {

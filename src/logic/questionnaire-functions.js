@@ -53,5 +53,31 @@ export default {
       const less = dataset.data.filter(d => d.value < value);
       return less.count;
     }
+  },
+
+  getDatasetCountByComparator(datasetKey, value, comparator) {
+    const dataset = getDataset(datasetKey);
+    if (dataset) {
+      switch (comparator) {
+        case '=': {
+          return dataset.data.filter(d => d.value === value).length;
+        }
+        case '<': {
+          return dataset.data.filter(d => d.value < value).length;
+        }
+        case '<=': {
+          return dataset.data.filter(d => d.value <= value).length;
+        }
+        case '>': {
+          return dataset.data.filter(d => d.value > value).length;
+        }
+        case '>=': {
+          return dataset.data.filter(d => d.value >= value).length;
+        }
+        default: {
+          return 0;
+        }
+      }
+    }
   }
 };
