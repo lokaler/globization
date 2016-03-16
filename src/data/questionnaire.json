@@ -1,6 +1,6 @@
 [
   {
-    "title": "1. Karte",
+    "title": "1. Karte - Wofür geben Sie Ihr Geld aus?",
     "dataset": "food",
     "functions": [
       "getGermanCountryName",
@@ -95,7 +95,7 @@
     ]
   },
   {
-    "title": "2. Karte",
+    "title": "2. Karte - Worauf achten Sie beim Kauf?",
     "dataset": "food",
     "functions": [
       "getGermanCountryName",
@@ -482,7 +482,7 @@
     ]
   },
   {
-    "title": "5. Karte",
+    "title": "5. Karte - Was landet bei Ihnen im Müll?",
     "dataset": "foodwaste",
     "functions": [
       "getGermanCountryName",
@@ -603,7 +603,7 @@
     ]
   },
   {
-    "title": "5. Karte",
+    "title": "6. Karte - Elektro",
     "dataset": "electro",
     "functions": [
       "getGermanCountryName",
@@ -718,7 +718,7 @@
     ]
   },
   {
-    "title": "6. Karte - Summary",
+    "title": "7. Karte - Summary",
     "dataset": "electro",
     "functions": [
       "getGermanCountryName",

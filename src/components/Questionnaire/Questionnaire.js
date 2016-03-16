@@ -76,9 +76,7 @@ export default class Questionnaire extends React.Component {
       }
     }
 
-    // const data = __DEV__ &&
-    //   <Data onClickLoad={ this.onClickLoad } onClickEdit={ this.onClickEdit }/>;
-    const data = '';
+    const cardTitle = (questions.questionData[activeCard] || {}).title;
 
     return (
       <div styleName="questions">
@@ -87,11 +85,17 @@ export default class Questionnaire extends React.Component {
           style={{ width: 320, height: 450 }}
         >
           <div styleName="inner">
-            { data }
+            { __DEV__ && !firstCard &&
+              <span style={{ color: 'green' }}>card: "{ cardTitle }"</span>
+            }
             { widgets }
           </div>
         </ShadowScrollbars>
-        <Footer nextBtnLabel={ translate(nextBtnLabel) } prevBtnLabel={ translate('prev') } { ...this.props }/>
+        <Footer
+          nextBtnLabel={ translate(nextBtnLabel) }
+          prevBtnLabel={ translate('prev') }
+          { ...this.props }
+        />
       </div>
     );
   }
