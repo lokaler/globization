@@ -1,32 +1,21 @@
 import ajv from 'ajv';
 import schema from '../data/schema';
-import { cloneDeep, isUndefined } from 'lodash';
-import * as QFuncs from './questionnaire-functions';
-
+import { cloneDeep } from 'lodash';
+import funcs from './questionnaire-functions';
+import store from '../store';
 
 function compileExpression(expr) {
   const funcBody = `return ${expr};`;
   try {
-    return (new Function('inputs', funcBody)); // eslint-disable-line no-new-func
+    /* eslint-disable */
+    const func = new Function('inputs', 'funcs', 'state', funcBody);
+    /* eslint-enable */
+    return function wrappedFunc(inputs) {
+      return func(inputs, funcs, store.getState());
+    };
   } catch (e) {
     throw new Error(`Error in expression "${expr}"`, e.toString());
   }
-}
-
-function compileFunction(functionSignature) {
-  let returnFunc;
-
-  // parse function name from signature
-  const functionName = functionSignature.split('(')[0].trim();
-
-  // check if function exists...
-  if (!isUndefined(QFuncs[functionName])) {
-    returnFunc = QFuncs[functionName];
-  } else {
-    throw new Error(`Function "${functionName}" is not implemented.`);
-  }
-
-  return returnFunc;
 }
 
 function compileExpressionsInData(data) {
@@ -46,30 +35,9 @@ function compileExpressionsInData(data) {
 
 function compileContext(context, userInput) {
   const compiledContext = {};
-
   Object.keys(context).forEach((key) => {
-    compiledContext[key] = context[key];
-    const isFunction = /^[a-zA-Z]*\(.*\)$/.test(context[key]);
-    if (isFunction) {
-      let arg = context[key].match(/\(([^)]+)\)/);
-      if (arg) {
-        arg = arg[1];
-      } else {
-        arg = '';
-      }
-      const compiledArgument = compileExpression(arg)(userInput);
-      try {
-        compiledContext[key] = compileFunction(context[key])(compiledArgument, this.props);
-      } catch (e) {
-        // console.log(e);
-      }
-    } else {
-      try {
-        compiledContext[key] = compileExpression(context[key])(userInput);
-      } catch (e) {
-        // console.log(e);
-      }
-    }
+    const func = compileExpression(context[key]);
+    compiledContext[key] = func(userInput);
   });
   return compiledContext;
 }
@@ -89,6 +57,5 @@ export function validateData(data) {
 
 export {
   compileExpression,
-  compileFunction,
   compileContext
 };

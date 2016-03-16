@@ -4,7 +4,7 @@ import 'rc-slider/assets/index.css';
 import React, { PropTypes } from 'react';
 import Rcslider from 'rc-slider';
 import cssModules from 'react-css-modules';
-import * as Logic from '../../../logic/questionnaire-functions';
+import Dataset from 'logic/Dataset';
 
 @cssModules()
 export default class Slider extends React.Component {
@@ -19,8 +19,9 @@ export default class Slider extends React.Component {
   }
 
   onChange(value) {
-    const country = Logic.getCountryCode(value, this.props);
     this.props.actions.updateUserInput(this.props.id, value);
+    const dataset = new Dataset(this.props.master.dataset.data);
+    const country = dataset.getCountryForValue(value);
     this.props.actions.changeVis({
       animation: {
         action: 'zoomToCountry',

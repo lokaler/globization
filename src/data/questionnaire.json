@@ -50,12 +50,11 @@
             "(inputs.slider.value >= 50) && 'antwort_c'"
           ],
           "answerContext": {
-            "landAusgaben": "getGermanCountryName(inputs.slider.value)",
-            "landMax": "getMaxGermanCountryName()",
-            "landMin": "getMinGermanCountryName()",
-            "valueMax": "getMaxValue()",
-            "valueMin": "getMinValue()",
-            "testfoo" : "inputs.slider && inputs.slider.value * 1.25"
+            "landAusgaben": "funcs.getCountryName('food', inputs.slider.value)",
+            "landMax": "funcs.getMaxCountryName('food')",
+            "landMin": "funcs.getMinCountryName('food')",
+            "valueMax": "funcs.getMaxValue('food')",
+            "valueMin": "funcs.getMinValue('food')"
           },
           "templates": {
             "default": {
@@ -395,7 +394,7 @@
           ],
           "answerContext": {
             "wertFleisch": "inputs.sliderMeatConsumption.value * 1.25",
-            "landMax": "getMaxGermanCountryName()",
+            "landMax": "funcs.getMaxCountryName('meat')",
             "gasred": "inputs.sliderMeatConsumption.value / 2 * 3.89",
             "gasred2" : "inputs.sliderMeatConsumption.value / 2 * 3.89 * 1000 / 249"
           },
@@ -542,7 +541,7 @@
             "(inputs.sliderTrash.value > 2) && 'muchTrash'"
           ],
           "answerContext": {
-            "landAbfall": "getCountry(inputs.sliderTrash.value / inputs.sliderSizeHousehold.value)",
+            "landAbfall": "funcs.getCountryName('foodwaste', inputs.sliderTrash.value / inputs.sliderSizeHousehold.value)",
             "wertLebensmittel": "inputs.sliderTrash.value / inputs.sliderSizeHousehold.value",
             "sizeHousehold": "inputs.sliderSizeHousehold.value",
             "AmountTrashPerHead": "inputs.sliderTrash.value * inputs.sliderSizeHousehold.value"
@@ -639,11 +638,11 @@
             "(inputs.sliderEwaste.value > 29) && 'muchEwaste'"
           ],
           "answerContext": {
-            "countryEwaste": "getCountry(inputs.sliderEwaste)",
-            "landMax": "getMaxGermanCountryName()",
-            "landMin": "getMinGermanCountryName()",
-            "valueMax": "getMaxValue()",
-            "valueMin": "getMinValue()",
+            "countryEwaste": "funcs.getCountryName('electro', inputs.sliderEwaste)",
+            "landMax": "funcs.getMaxCountryName('electro')",
+            "landMin": "funcs.getMinCountryName('electro')",
+            "valueMax": "funcs.getMaxValue('electro')",
+            "valueMin": "funcs.getMinValue('electro')",
             "wertEwaste": "inputs.sliderEwaste.value + 2.41"
           },
           "templates": {
@@ -735,11 +734,11 @@
             "(inputs.slider.value >= 50) && 'antwort_c'"
           ],
           "answerContext": {
-            "landAusgaben": "getGermanCountryName(inputs.slider.value)",
-            "landMax": "getMaxGermanCountryName()",
-            "landMin": "getMinGermanCountryName()",
-            "valueMax": "getMaxValue()",
-            "valueMin": "getMinValue()",
+            "landAusgaben": "funcs.getCountryName('electro', inputs.slider.value)",
+            "landMax": "funcs.getMaxCountryName('electro')",
+            "landMin": "funcs.getMinCountryName('electro')",
+            "valueMax": "funcs.getMaxValue('electro')",
+            "valueMin": "funcs.getMinValue('electro')",
             "testfoo" : "inputs.slider && inputs.slider.value * 1.25"
           },
           "templates": {
