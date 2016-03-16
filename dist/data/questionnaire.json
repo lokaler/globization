@@ -113,7 +113,6 @@
             "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?"
           ],
           "en": [
-            "*** ENGLISH ***",
             "# What is important to you when making a purchase?",
             "",
             "Some people are happy just to be able to make ends meet. Others can afford to pay attention to criteria beyond just price. Where do you stand?"
@@ -237,7 +236,7 @@
                 "Damit gehören Sie zur Mehrheit: Laut einer Umfrage aus dem Jahr 2013 bevorzugen gut zwei Drittel der deutschen Verbraucher regionale Lebensmittel – Frauen mit 72 Prozent noch etwas häufiger als Männer mit 63 Prozent. [Für SPIEGEL-ONLINE-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal.](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)"
               ],
               "en": [
-                "You  belong to the majority: A 2013 survey found that some two-thirds of German consumers preferred local foodstuffs, with women, at 72 percent, beating out the men, at 63 percent. [SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop.](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)"
+                "You  belong to the majority: A 2013 survey found that some two-thirds of German consumers preferred local foodstuffs, with women, at 72 percent, beating out the men, at 63 percent. [SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop.](http://www.spiegel.de/international/tomorrow/a-1082697.html)"
               ]
             },
             "always": {
@@ -245,20 +244,27 @@
                 "Damit gehören Sie zu den Menschen, die saisonbedingt auf bestimmte Obst- und Gemüsesorten verzichten. Laut einer repräsentativen Umfrage aus dem Jahr 2013 wären 87 Prozent der Deutschen grundsätzlich bereit, ihre Obst- und Gemüseauswahl für einige Monate im Jahr einzuschränken. [Für SPIEGEL-ONLINE-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal.](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)"
               ],
               "en": [
-                "You are among those people who do without certain fruits and vegetables on a seasonal basis. According to a representative survey conducted in 2013, 87 percent of Germans would be willing to limit the variety of fruits and vegetables they consume for a few months of the year. [SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop.](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)"
+                "You are among those people who do without certain fruits and vegetables on a seasonal basis. According to a representative survey conducted in 2013, 87 percent of Germans would be willing to limit the variety of fruits and vegetables they consume for a few months of the year. [SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop.](http://www.spiegel.de/international/tomorrow/a-1082697.html)"
               ]
             }
           }
         }
       },
       {
-        "text": {
-          "de": [
-            "Nachhaltigkeitstipp: Ein per Frachtschiff importierter Apfel aus Neuseeland ist nicht unbedingt klimaschädlicher als ein deutscher Apfel, der monatelang im Kühlhaus lagert. Der Naturschutzbund Deutschland empfiehlt jedoch, auf eingeflogene Ware zu verzichten – das sind meist schnell verderbliche Obst- und Gemüsesorten, die von außerhalb Europas importiert werden. Mindestens ebenso gewinnbringend für den Klimaschutz ist jedoch: Kurze Strecken zum Supermarkt nicht mit dem Auto zurücklegen."
-          ],
-          "en": [
-            "Sustainability Tip: An apple shipped in from New Zealand is not necessarily more damaging to the climate than is a German apple that spends months in a refrigerated warehouse. Germany’s Nature and Biodiversity Conservation Union recommends, however, avoiding goods that have been flown in -- usually things like fruits and vegetable types that spoil rapidly and are imported from outside of Europe. Just as beneficial to the climate, though, is keeping your car in the garage if the supermarket is close by."
-          ]
+        "answer": {
+          "className": "tip",
+          "answerKey": ["i.localproducts && 'tip'"],
+          "answerContext": {},
+          "templates": {
+            "tip": {
+              "de": [
+                "**Nachhaltigkeitstipp**: Ein per Frachtschiff importierter Apfel aus Neuseeland ist nicht unbedingt klimaschädlicher als ein deutscher Apfel, der monatelang im Kühlhaus lagert. Der Naturschutzbund Deutschland empfiehlt jedoch, auf eingeflogene Ware zu verzichten – das sind meist schnell verderbliche Obst- und Gemüsesorten, die von außerhalb Europas importiert werden. Mindestens ebenso gewinnbringend für den Klimaschutz ist jedoch: Kurze Strecken zum Supermarkt nicht mit dem Auto zurücklegen."
+              ],
+              "en": [
+                "**Sustainability Tip**: An apple shipped in from New Zealand is not necessarily more damaging to the climate than is a German apple that spends months in a refrigerated warehouse. Germany’s Nature and Biodiversity Conservation Union recommends, however, avoiding goods that have been flown in -- usually things like fruits and vegetable types that spoil rapidly and are imported from outside of Europe. Just as beneficial to the climate, though, is keeping your car in the garage if the supermarket is close by."
+              ]
+            }
+          }
         }
       }
     ]
@@ -331,13 +337,20 @@
         }
       },
       {
-        "text": {
-          "de": [
-            "Nachhaltigkeitstipp: Im Netz lassen sich Kleider tauschen, leihen oder secondhand kaufen, zum Beispiel auf den Webseiten [Kleiderkreisel.de](https://www.kleiderkreisel.de/) oder [Kleiderkorb.de](http://www.kleiderkorb.de/)."
-          ],
-          "en": [
+        "answer": {
+          "className": "tip",
+          "answerKey": ["i.sliderCloth && 'tip'"],
+          "answerContext": {},
+          "templates": {
+            "tip": {
+              "de": [
+                "**Nachhaltigkeitstipp**: Im Netz lassen sich Kleider tauschen, leihen oder secondhand kaufen, zum Beispiel auf den Webseiten [Kleiderkreisel.de](https://www.kleiderkreisel.de/) oder [Kleiderkorb.de](http://www.kleiderkorb.de/)."
+              ],
+              "en": [
             "Sustainability Tip: On the Internet, you can trade, borrow or buy second hand on clothing swap websites like [Swapstyle.com](http://www.swapstyle.com/) or [Swap.com](https://www.swap.com/)."
-          ]
+              ]
+            }
+          }
         }
       }
     ]
@@ -376,7 +389,7 @@
           "type": "slider",
           "options": {
             "unit": "Kg",
-            "min": 0,
+            "min": 0.1,
             "value": 1.5,
             "max": 4,
             "step": 0.1
@@ -386,16 +399,14 @@
       {
         "answer": {
           "answerKey": [
-            "(i.sliderMeatConsumption < 1) && 'noMeat'",
-            "(i.sliderMeatConsumption < 2) && 'someMeat'",
-            "(i.sliderMeatConsumption < 5) && 'muchMeat'",
-            "(i.sliderMeatConsumption >= 5) && 'muchTooMuchMeat'"
+            "(i.sliderMeatConsumption == 0.1) && 'noMeat'",
+            "(i.sliderMeatConsumption < 1.5) && 'someMeat'",
+            "(i.sliderMeatConsumption < 2.5) && 'muchMeat'",
+            "(i.sliderMeatConsumption >= 2.5) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
-            "wertFleisch": "i.sliderMeatConsumption * 1.31",
-            "landMax": "f.getMaxCountryName('meat')",
-            "gasred": "i.sliderMeatConsumption / 2 * 3.89",
-            "gasred2" : "i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249"
+            "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
+            "landMax": "f.getMaxCountryName('meat')"
           },
           "templates": {
             "default": {
@@ -458,25 +469,23 @@
         "answer": {
           "className": "tip",
           "answerKey": [
-            "(i.sliderMeatConsumption >= 1) && 'meat'"
+            "(i.sliderMeatConsumption >= 1) && 'meat'",
+            "(i.sliderMeatConsumption > 0.5) && 'meat'"
           ],
-          "answerContext": {},
+          "answerContext": {
+            "gasred": "f.fmt('%0.1f', i.sliderMeatConsumption / 2 * 3.89)",
+            "gasred2" : "f.fmt('%0.1f', i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249)"
+          },
           "templates": {
             "meat": {
-              "de": [],
-              "en": []
+              "de": [
+                "Nachhaltigkeitstipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um **{{ gasred }}** kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr **{{ gasred2 }}** Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch Sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland."
+              ],
+              "en": [
+                "Sustainability Tip: If you were to cut your meat consumption in half for a year, you could reduce your CO2 emissions by around **{{ gasred }}** kilograms. You could save the same amount by driving **{{ gasred2 }}** fewer kilometers with your car. Compared with the CO2 emissions produced by taking a plane trip, to the Balearic Islands for example, that isn't much. But by reducing meat consumption, you are also protecting resources like clean water and farmland."
+              ]
             }
           }
-        }
-      },
-      {
-        "text": {
-          "de": [
-            "Nachhaltigkeitstipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um **{{ gasred }}** kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr **{{ gasred2 }}** Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch Sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland."
-          ],
-          "en": [
-            "Sustainability Tip: If you were to cut your meat consumption in half for a year, you could reduce your CO2 emissions by around **{{ gasred }}** kilograms. You could save the same amount by driving **{{ gasred2 }}** fewer kilometers with your car. Compared with the CO2 emissions produced by taking a plane trip, to the Balearic Islands for example, that isn't much. But by reducing meat consumption, you are also protecting resources like clean water and farmland."
-          ]
         }
       }
     ]
@@ -502,7 +511,7 @@
             "**Wie viel Kilogramm Lebensmittel landen bei Ihnen zu Hause pro Woche im Müll?**Der deutsche Durchschnittswert von 1,9 Kilogramm entspricht ungefähr einer halben Packung Milch, vier Äpfeln, einem Hirtenkäse, fünf Scheiben Wurst und einem halben Brot."
           ],
           "en": [
-            "*** ENGLISH ***",
+
             "# What do you throw away?",
             "",
             "Every year, 1.3 billion metric tons (1.4 billion tons) of foodstuffs are thrown away worldwide. The United Nations would like to significantly reduce this prodigious amount of waste by 2030.",
@@ -557,7 +566,7 @@
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
             "wertLebensmittel": "f.fmt('%0.1f', i.sliderTrash / i.sliderSizeHousehold)",
             "sizeHousehold": "i.sliderSizeHousehold",
-            "TrashSustainableTip": "i.sliderTrash / 2"
+            "TrashSustainableTip": "i.sliderTrash"
           },
           "templates": {
             "default": {
@@ -569,7 +578,7 @@
                 "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}**  Kilogramm pro Kopf** weniger Lebensmittel weggeworfen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "At **{{ wertLebensmittel }}**  kilograms per person**, your household throws away less food than those in all European countries for which data is available. But compared to places around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
+                "At **{{ wertLebensmittel }}** kilograms per person**, your household throws away less food than those in all European countries for which data is available. But compared to places around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
               ]
             },
             "someTrash": {
@@ -585,20 +594,10 @@
                 "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeworfen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "With a value of  **{{ wertLebensmittel }}** per capita, your household throws away more food than in all European countries for which data is available. But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms (0.2 pounds) of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms (2 pounds)."
+                "With a value of  **{{ wertLebensmittel }}** kilograms per capita, your household throws away more food than in all European countries for which data is available. But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms (0.2 pounds) of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms (2 pounds)."
               ]
             }
           }
-        }
-      },
-      {
-        "text": {
-          "de": [
-            "Um Ihren persönlichen Beitrag zu den UN-Nachhaltigkeitszielen zu leisten, müssten Sie pro Woche **{{ TrashSustainableTip }}** Kilogramm weniger Essen wegschmeißen."
-          ],
-          "en": [
-            "To do your part in the realization of the UN’s Sustainable Development Goals, you would have to throw away **{{ TrashSustainableTip }}** fewer kilograms of food each week. The UN has called for consumers to reduce food waste by half by 2030."
-          ]
         }
       }
     ]
@@ -622,12 +621,10 @@
             "**Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?**"
           ],
           "en": [
-            "*** ENGLISH ***",
             "Many Germans buy a new mobile phone about every two years. Old phones often end up forgotten in a drawer or are recycled in Africa in catastrophic conditions.",
             "",
             "**How many kilograms of electronic waste have you gotten rid of or thrown away in the last year?**",
-            "(Smartphone ≈ 130g (4.6 oz), laptop ≈ 3.5kg (7.7 lbs), toaster ≈ 1kg (2.2 lbs), washing machine ≈ 65kg (143 lbs))",
-            "DIESE ZEILE IST ZU VIEL"
+            "(Smartphone ≈ 130g (4.6 oz), laptop ≈ 3.5kg (7.7 lbs), toaster ≈ 1kg (2.2 lbs), washing machine ≈ 65kg (143 lbs))"
           ]
         }
       },
@@ -636,7 +633,7 @@
           "key": "sliderEwaste",
           "type": "slider",
           "options": {
-            "min": 0,
+            "min": 0.1,
             "value": 20,
             "max": 50,
             "unit": "Kg"
@@ -707,13 +704,20 @@
         }
       },
       {
-        "text": {
-          "de": [
-            "Nachhaltigkeitstipp: Ihre Elektroschrott-Bilanz können Sie zum Beispiel verbessern, indem Sie reparierbare Geräte kaufen, für die es Ersatzteile gibt."
-          ],
-          "en": [
-            "Sustainability Tip: One way to avoid electronic waste is by repairing broken devices rather than throwing them away. At a [Repair Café](http://repaircafe.org/en/visit/) near you, you can get the help you need to get your electronics up and running again. The feeling of accomplishment afterwards doesn’t cost anything."
-          ]
+        "answer": {
+          "className": "tip",
+          "answerKey": ["i.sliderEwaste && 'tip'"],
+          "answerContext": {},
+          "templates": {
+            "tip": {
+              "de": [
+                "**Nachhaltigkeitstipp**: Ihre Elektroschrott-Bilanz können Sie zum Beispiel verbessern, indem Sie reparierbare Geräte kaufen, für die es Ersatzteile gibt."
+              ],
+              "en": [
+            "**Sustainability Tip**: One way to avoid electronic waste is by repairing broken devices rather than throwing them away. At a [Repair Café](http://repaircafe.org/en/visit/) near you, you can get the help you need to get your electronics up and running again. The feeling of accomplishment afterwards doesn’t cost anything."
+              ]
+            }
+          }
         }
       }
     ]
@@ -733,11 +737,11 @@
         "text": {
           "de": [
             "# Steckbrief ",
-            "## So konsumieren Sie im internationalen Vergleich:"
+            "So konsumieren Sie im internationalen Vergleich:"
           ],
           "en": [
             "# Summary",
-            "## So konsumieren Sie im internationalen Vergleich:"
+            "So konsumieren Sie im internationalen Vergleich:"
           ]
         }
       },
@@ -753,41 +757,35 @@
             "landMax": "f.getMaxCountryName('food')",
             "landMin": "f.getMinCountryName('food')",
             "valueMax": "f.getMaxValue('food')",
-            "valueMin": "f.getMinValue('food')"
+            "valueMin": "f.getMinValue('food')",
+            "numberCountriesFood": "funcs.getDatasetCount('food')",
+            "numbercountriesWithLowerFoodConsumptionThanMe": "funcs.getDatasetCountByComparator('food', inputs.sliderMeatConsumption.value, '>')",
+            "RankingUserInComparisionToCountriesFood": "funcs.getDatasetCount('food') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '>')"
           },
           "templates": {
-            "default": {
-              "de": [
-                "Bitte beantworten Sie zuvor mindesten eine der Fragen."
-              ],
-              "en": [
-                "Please answer at least on of the questions."
-              ]
-            },
             "litteFoodCon": {
               "de": [
                 "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
-                "*** ENGLISH ***",
+
                 "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
               ]
             },
             "mediumFoodCon": {
               "de": [
-                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen in **{{ landAusgaben }}** . Im Vergleich von **{{ datasetCount }}**  Ländern liegen Sie damit auf Platz [Anzahl Länder minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen in **{{ landAusgaben }}**. Im Vergleich von **{{ numberCountriesFood }}**  Ländern liegen Sie damit auf Platz **{{ RankingUserInComparisionToCountriesFood }}**."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen in **{{ landAusgaben }}** . Im Vergleich von **{{ datasetCount }}** Ländern liegen Sie damit auf Platz [Anzahl Länder minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+                "People in **{{ landAusgaben }}**. spend a similar amount on food as you do, measured as a percentage of total expenditures. Compared to **{{ numberCountriesFood }}** countries, that puts you at number **{{ RankingUserInComparisionToCountriesFood }}** on the list."
               ]
             },
             "highFoodCon": {
               "de": [
-                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in **{{ landMax }}**  den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}**  Prozent."
+                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in **{{ landMax }}** den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
               ],
               "en": [
-                "*** ENGLISH ***",
+
                 "You spend a very large share of your money on food. Internationally, people  **{{ landMax }}**  devote the largest share of their expenditures to food, namely **{{ valueMax }}** percent."
               ]
             }
@@ -798,9 +796,9 @@
         "answer": {
           "answerKey": [
             "(i.sliderMeatConsumption < 1) && 'noMeat'",
-            "(i.sliderMeatConsumption < 2) && 'someMeat'",
-            "(i.sliderMeatConsumption < 5) && 'muchMeat'",
-            "(i.sliderMeatConsumption >= 5) && 'muchTooMuchMeat'"
+            "(i.sliderMeatConsumption < 1.5) && 'someMeat'",
+            "(i.sliderMeatConsumption < 2.5) && 'muchMeat'",
+            "(i.sliderMeatConsumption >= 2.5) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
             "wertFleisch": "i.sliderMeatConsumption * 1.31",
@@ -808,13 +806,10 @@
             "gasred": "i.sliderMeatConsumption / 2 * 3.89",
             "gasred2" : "i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249",
             "numberCountriesWithConsumption": "f.getDatasetCount('meat')",
-            "numbercountriesWithLowerMeatConsumptionThanMe": "f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')"
+            "numbercountriesWithLowerMeatConsumptionThanMe": "f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')",
+            "RankingUserInComparisionToCountriesMeat": "funcs.getDatasetCount('meat') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
-            "default": {
-              "de": [],
-              "en": []
-            },
             "noMeat": {
               "de": [
                 "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
@@ -833,18 +828,18 @@
             },
             "muchMeat": {
               "de": [
-                "Ihr Fleischbedarf pro Woche entspricht [Wert_Fleisch*1,25] Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge in [LAND_Fleisch]. Mehr Fleisch pro Kopf gibt es in [Anzahl_Länder_Fleisch minus Anzahl Länder mit Wert kleinergleich persönlicher Wert] von [Anzahl_Länder_Fleisch] Ländern."
+                "Ihr Fleischbedarf pro Woche entspricht  **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge in **{{ sameMeat }}** . Mehr Fleisch pro Kopf gibt es in **{{ RankingUserInComparisionToCountriesMeat }}** von **{{ numberCountriesWithConsumption }}** Ländern."
               ],
               "en": [
-                "Your weekly meat consumption is [Wert_Fleisch*1,25] kilograms. That is comparable to the weekly per capita amount available in [LAND_Fleisch]. There is more meat available per capita in [Anzahl_Länder_Fleisch minus Anzahl Länder mit Wert kleinergleich persönlicher Wert] of [Anzahl_Länder_Fleisch] countries."
+                "Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available in **{{ sameMeat }}** . There is more meat available per capita in **{{ RankingUserInComparisionToCountriesMeat }}** of **{{ numberCountriesWithConsumption }}** countries."
               ]
               },
               "muchTooMuchMeat": {
                 "de": [
-                  "Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available in [Land_max], where [Wert_Land_max] kilograms are available per person and week"
+                  "Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es in **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
                 ],
                 "en": [
-                  "Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available in [Land_max], where [Wert_Land_max] kilograms are available per person and week."
+                  "Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available in **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
                 ]
               }
             }
@@ -869,26 +864,26 @@
             },
             "littleTrash": {
               "de": [
-                ") In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
+                ") In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
               ],
               "en": [
-                "At [Wert] kilograms per person, your household throws away less food than those in all European countries for which data is available. "
+                "At **{{ wertLebensmittel }}** kilograms per person, your household throws away less food than those in all European countries for which data is available. "
               ]
                 },
             "someTrash": {
               "de": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in [LAND_Foodwaste]. Sie liegen damit im Vergleich von [Anzahl_Länder_Foodwaste] europäischen Ländern auf Platz [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in **{{ landAbfall }}**."
               ],
               "en": [
-                "Your household throws away about as much food per person as in [LAND_Foodwaste]. In a comparison of  [Anzahl_Länder_Foodwaste] European countries, that puts you at number [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert] on the list."
+                "Your household throws away about as much food per person as in **{{ landAbfall }}**."
               ]
             },
             "muchTrash": {
               "de": [
-                ") In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in [LAND_Foodwaste]. Sie liegen damit im Vergleich von [Anzahl_Länder_Foodwaste] europäischen Ländern auf Platz [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in **{{ landAbfall }}**."
               ],
               "en": [
-                "Your household throws away about as much food per person as in [LAND_Foodwaste]. In a comparison of  [Anzahl_Länder_Foodwaste] European countries, that puts you at number [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert] on the list."
+                "Your household throws away about as much food per person as in **{{ landAbfall }}**."
               ]
               }
             }
@@ -907,8 +902,7 @@
             "landMin": "f.getMinCountryName('electro')",
             "valueMax": "f.getMaxValue('electro')",
             "valueMin": "f.getMinValue('electro')",
-            "wertEwaste": "i.sliderEwaste + 2.41",
-            "testfoo": "f.getDatasetCountByComparator('food', i.slider, '<')"
+            "wertEwaste": "i.sliderEwaste + 2.41"
           },
           "templates": {
             "default": {
@@ -917,26 +911,26 @@
             },
             "lessEwaste": {
               "de": [
-                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht [Land_min] mit [Wert_Land_min] Kilogramm pro Jahr und Einwohner."
+                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}** mit **{{ valueMin}}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "At [Wert] kilograms per person, your household throws away less food than those in all European countries for which data is available. "
+                "That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin}}** kilograms per year and resident"
               ]
                 },
             "someEwaste": {
               "de": [
-                "Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen aus [LAND_Schrott]. In [Anzahl_Länder_Elektroschrott minus Anzahl Länder Elektroschrott mit Wert größergleich persönlicher Wert] von [Anzahl_Länder_Elektroschrott] Ländern ist die Elektroschrottmenge pro Person geringer."
+                "Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen aus **{{ countryEwaste }}**."
               ],
               "en": [
-                "You are responsible for roughly the same amount of electronic waste as people in [LAND_Schrott]. The amount of electronic waste per person is lower in [Anzahl_Länder_Elektroschrott minus Anzahl Länder Elektroschrott mit Wert größergleich persönlicher Wert] of [Anzahl_Länder_Elektroschrott] countries."
+                "You are responsible for roughly the same amount of electronic waste as people in **{{ countryEwaste }}**."
               ]
             },
             "muchEwaste": {
               "de": [
-                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht [Land_max] mit [Wert_Land_max] Kilogramm pro Jahr und Einwohner."
+                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht **{{ landMax }}** mit **{{Wert_Land_max}}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "That is more than in all countries for which data is available. The most electronic waste is produced by [Land_max], with [Wert_Land_max] kilograms per year and resident."
+                "That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}**, with **{{Wert_Land_max}}** kilograms per year and resident."
               ]
               }
             }
