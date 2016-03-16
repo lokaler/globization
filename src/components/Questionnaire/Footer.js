@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
-import * as texts from 'data/texts';
 import translate from 'logic/translate';
 
 @cssModules()
@@ -57,13 +56,13 @@ export default class Footer extends React.Component {
           showPrevBtn &&
           <div styleName="btn-prev" onClick={ this.getClickHandler(questions.activeCard - 1) }>
             <div styleName="btn-arrow"></div>
-            <div styleName="btn-text">{ translate(texts.pagination.prev) }</div>
+            <div styleName="btn-text">{ translate("PREVIOUS") }</div>
           </div>
         }
         { showPagination && <div styleName="pagination" className="clearfix">{ pagination }</div> }
         { showNextBtn && questions.activeCard !== -1 &&
             <div styleName="btn-next" onClick={ this.getClickHandler(questions.activeCard + 1) }>
-              <div styleName="btn-text">{ translate(texts.pagination.next) }</div>
+              <div styleName="btn-text">{ translate("NEXT") }</div>
               <div styleName="btn-arrow"></div>
             </div>
         }
