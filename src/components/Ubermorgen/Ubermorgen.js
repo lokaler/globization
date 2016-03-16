@@ -20,9 +20,15 @@ export default class UbermorgenApp extends React.Component {
     this.props.actions.requestDataSets('./data/datasets.json');
   }
 
+  onDoubleClick = () => {
+    if (__DEV__) {
+      this.props.actions.requestQuestionData('./data/questionnaire.json');
+    }
+  }
+
   render() {
     return (
-      <div>
+      <div onDoubleClick={ this.onDoubleClick }>
         <div styleName="container">
           <div styleName="left">
             <Vis {...this.props}/>
