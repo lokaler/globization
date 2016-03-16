@@ -2,11 +2,12 @@ import * as ActionTypes from '../constants/ActionTypes';
 import { includes } from 'lodash';
 import d3 from 'd3';
 const bbox = d3.select('body').node().getBoundingClientRect();
+const width = bbox.width > 860 ? 860 : bbox.width;
 
 const initialState = {
   language: 'de',
   mobile: false,
-  width: bbox.width,
+  width,
   height: 500
 };
 

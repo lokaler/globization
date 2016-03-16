@@ -42,7 +42,7 @@ export default class UbermorgenApp extends React.Component {
   }
 
   render() {
-    console.log(this.props.app);
+    // console.log(this.props.app);
     const responsiveClass = this.props.app.mobile ? 'mq-mobile' : 'mq-desktop';
     return (
       <div className={ responsiveClass } onDoubleClick={ this.onDoubleClick }>
