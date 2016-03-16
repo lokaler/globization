@@ -1,21 +1,17 @@
-/* eslint-disable */
-
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 
 import Intro from './Intro';
 import Text from './widgets/Text';
-import Slider from './widgets/Slider';
-import Choices from './widgets/Choices';
 import Answer from './widgets/Answer';
+import Input from './widgets/Input';
 import Footer from './Footer';
-import Outro from './Outro';
+//import Outro from './Outro';
 
 const WidgetFactory = {
   text: React.createFactory(Text),
-  slider: React.createFactory(Slider),
-  choices: React.createFactory(Choices),
-  answer: React.createFactory(Answer)
+  answer: React.createFactory(Answer),
+  input: React.createFactory(Input)
 };
 
 @cssModules()
@@ -45,13 +41,15 @@ export default class Questionnaire extends React.Component {
   }
 
   createWidgets(questions) {
-    return questions.questionData[questions.activeCard]
-      .filter((item) => (item.type !== 'functions' && item.type !== 'dataset'))
-      .map((item) => WidgetFactory[item.type]({
-        id: item.key,
-        ...item,
-        ...this.props
-      })
+    return questions.questionData[questions.activeCard].content
+      .map((item, index) => {
+        const widgetKey = Object.keys(item)[0];
+        return WidgetFactory[widgetKey]({
+          ...item,
+          ...this.props,
+          key: `${+new Date()}_${widgetKey}_${index}`
+        });
+      }
     );
   }
 

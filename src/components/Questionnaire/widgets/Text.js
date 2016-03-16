@@ -7,15 +7,15 @@ import translate from 'logic/translate';
 export default class Text extends React.Component {
 
   static propTypes = {
-    data: PropTypes.object.isRequired,
-    id: PropTypes.string.isRequired
+    text: PropTypes.object.isRequired,
   }
 
   render() {
-    const { data, id } = this.props;
+    const text = translate(this.props.text).join('\n');
+
     return (
-      <div styleName="widget" key={ id }>
-        <ReactMarkdown source={ translate(data) } />
+      <div styleName="widget" key={ `${+new Date()}_text` }>
+        <ReactMarkdown source={ text } />
       </div>
     );
   }

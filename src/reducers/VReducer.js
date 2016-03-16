@@ -4,7 +4,7 @@ import * as ActionTypes from '../constants/ActionTypes';
 import objectAssign from 'object-assign';
 
 const initialState = {
-  debug:true,
+  debug:false,
   mapData: [],
   latlng: [0, 0],
   paths: [],

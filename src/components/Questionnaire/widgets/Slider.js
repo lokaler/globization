@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import 'rc-slider/assets/index.css';
 import React, { PropTypes } from 'react';
 import Rcslider from 'rc-slider';
@@ -8,10 +10,11 @@ import * as Logic from '../../../logic/questionnaire-functions';
 export default class Slider extends React.Component {
 
   static propTypes = {
-    data: PropTypes.object.isRequired,
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    options: PropTypes.object.isRequired,
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
-    id: PropTypes.string.isRequired,
     master: PropTypes.object.isRequired
   }
 
@@ -28,11 +31,11 @@ export default class Slider extends React.Component {
   }
 
   tipFormatter(val) {
-    return `${val} ${this.props.data.options.unit}`;
+    return `${val} ${this.props.options.unit}`;
   }
 
   render() {
-    const options = { ...this.props.data.options };
+    const options = { ...this.props.options };
     const sliderChangeBind = this.onChange.bind(this);
     const tipFormatter = this.tipFormatter.bind(this);
 
@@ -41,7 +44,7 @@ export default class Slider extends React.Component {
       this.props.questions.inputs[this.props.id].value : options.value;
 
     return (
-      <div key={this.props.id} styleName="widget" className="slider">
+      <div styleName="widget" className="slider">
         <Rcslider
           tipFormatter={ tipFormatter }
           defaultValue={ value }

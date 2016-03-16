@@ -6,8 +6,9 @@ import translate from 'logic/translate';
 export default class Choices extends React.Component {
 
   static propTypes = {
-    data: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    options: PropTypes.object.isRequired,
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired
   }
@@ -31,7 +32,7 @@ export default class Choices extends React.Component {
   createRadioButton(option, index) {
     const { id } = this.props;
     const isSelected = this.isActiveRadio(option[0]);
-    const key = `${ id }_i${ index }`;
+    const key = `${ id }_${ index }`;
     const value = option[0];
     const label = translate(option[1]);
     const boundOnClick = this.onClick.bind(this, value);
@@ -45,12 +46,12 @@ export default class Choices extends React.Component {
   }
 
   render() {
-    const options = [...this.props.data.options.choices];
-    const Radios = options.map(this.createRadioButton.bind(this));
+    const choices = [...this.props.options.choices];
+    const Radios = choices.map(this.createRadioButton.bind(this));
 
     return (
-      <div key={this.props.id} styleName="widget">
-        {Radios}
+      <div styleName="widget">
+        { Radios }
       </div>
     );
   }
