@@ -1,9 +1,13 @@
 import * as ActionTypes from '../constants/ActionTypes';
 import { includes } from 'lodash';
+import d3 from 'd3';
+const bbox = d3.select('body').node().getBoundingClientRect();
 
 const initialState = {
   language: 'de',
-  mobile: false
+  mobile: false,
+  width: bbox.width,
+  height: 500
 };
 
 function getQueryVariable(variable) {
@@ -23,7 +27,10 @@ export default function appReducer(state = initialState, action) {
       let language = getQueryVariable('language') || 'de';
       if (!includes(['de', 'en'], language)) language = 'de';
       const mobile = !!parseInt(getQueryVariable('mobile') || '0', 10);
-      return Object.assign({}, { language, mobile });
+      return Object.assign({}, state, { language, mobile });
+    }
+    case ActionTypes.SET_WINDOW_SIZE: {
+      return Object.assign({}, state, { ...action.sizes });
     }
     default:
       return state;

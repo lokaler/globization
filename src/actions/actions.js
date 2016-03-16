@@ -115,3 +115,10 @@ export function getUrlParameters() {
     type: types.GET_URL_PARAMETERS
   };
 }
+
+export function setWindowSize(sizes) {
+  return {
+    type: types.SET_WINDOW_SIZE,
+    sizes
+  };
+}
