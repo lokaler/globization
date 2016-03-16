@@ -1,1 +1,10 @@
-{}
+{
+  "Source": {
+    "de": "Quelle",
+    "en": "Source"
+  },
+  "Globe": {
+    "de": "Globus",
+    "en": "Globus"
+  }
+}

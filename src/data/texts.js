@@ -30,8 +30,3 @@ export const pagination = {
   prev: { de: 'ZURÜCK', en: 'PREV' },
   next: { de: 'WEITER', en: 'NEXT' }
 };
-
-export const vis = {
-  source: { de: 'Quelle', en: 'Source' },
-  globe: { de: 'Globus', end: 'Gobe' }
-};
