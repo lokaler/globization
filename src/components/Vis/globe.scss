@@ -17,7 +17,11 @@
   }
 }
 .vis svg.map {
-  pointer-events: none;
+  // pointer-events: none;
+
+  path {
+    // pointer-events: visible;
+  }
 }
 
 .scatter {

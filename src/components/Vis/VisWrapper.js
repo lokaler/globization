@@ -87,6 +87,7 @@ export default class Globe extends React.Component {
       <div className="vis">
         { dataset &&
           <Component color={this.color} {...this.props} width={540} height={500} />
+          // <Component color={this.color} {...this.props} width={320} height={240} />
         }
         <div className="menu">
           <div className={ this.getActiveClass('globe') } onClick={ changeGlobe }></div>

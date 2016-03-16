@@ -9,6 +9,8 @@ import utils from './VisUtils.js'
 import styles from './globe.scss';
 import cssModules from 'react-css-modules';
 import classnames from 'classnames';
+import Dataset from '../../logic/Dataset.js'
+
 
 @cssModules(styles)
 
@@ -27,8 +29,14 @@ export default class MapComponent extends React.Component {
 
     utils.log("constructor map", this.props.vis)
 
+    const dataset = this.props.master.dataset;
+
     this.sensetivity = 0.25;
-    this.geometries = this.props.master.topojson;
+    this.svg = null;
+    this.activeGeometry = null;
+    this.graticule = d3.geo.graticule()();
+
+    this.dataset = new Dataset(dataset.data);
 
     this.projection = d3.geo.winkel3()
       .translate([this.props.width / 2, this.props.height / 2])
@@ -36,18 +44,31 @@ export default class MapComponent extends React.Component {
     this.path = d3.geo.path()
       .projection(this.projection);
 
+
+    // dunnow if this should be done here!
+    this.geometries = this.props.master.topojson;
+    this.geometries.forEach((d) =>{
+      d.properties.fillColor = this.getFillColor(d.properties.iso);
+    });
+
     this.zoom = d3.behavior.zoom()
       .center([0,0])
+      .scaleExtent([0.5,5])
+      .size([this.props.width,this.props.height])
       .on("zoom", () => {
         const e = d3.event;
         const _scale = this.props.vis.initialScale * e.scale;
-        const _rotate = [(e.translate[0]/e.scale) * this.sensetivity, -(e.translate[1]/e.scale) * this.sensetivity, 0];
-
-        // utils.log(_rotate, _scale, this.zoom.translate());
+        const _rotate = [
+          (e.translate[0]/e.scale) * this.sensetivity,
+          -(e.translate[1]/e.scale) * this.sensetivity,
+          0
+        ];
 
         this.projection
           .rotate(_rotate)
           .scale(_scale);
+
+        //utils.log("zoom",this.zoom.translate(), this.zoom.scale());
 
         this.forceUpdate();
       })
@@ -62,7 +83,9 @@ export default class MapComponent extends React.Component {
           });
       })
 
+
   }
+
 
   componentDidMount() {
     this.svg = d3.select(this.refs.mapSVG).call(this.zoom);
@@ -84,60 +107,84 @@ export default class MapComponent extends React.Component {
       .event
     )
   }
-  componentWillUnmount(){
-    utils.log("UNMOUNTING")
-    this.svg.remove();
-  }
+
+
+  getFillColor(iso){
+      const val = this.dataset.getValueForCountry(iso);
+      return val ? this.props.color(val) : "#EEE";
+    }
 
   zoomToCountry(name){
-    if(name == "random") name = _.sample(this.props.master.master).alpha3;
 
-    const entry = _.find(this.props.master.master, { alpha3: name});
-    utils.log(name, entry);
-    const country = _.find(this.props.vis.topojson, { id: entry.numeric*1 });
-    if(!country){
-      utils.log("country not found!");
-      return;
-    }
+    const country = _.find(this.geometries, (d)=> d.properties.iso === name);
+    if(!country){ utils.log("country not found!"); return; }
 
-    const p = d3.geo.centroid(country);
-    const scale = 2;
-
-    p[0] = -p[0]/this.sensetivity * scale;
-    p[1] = p[1]/this.sensetivity * scale;
-
-    utils.log(country, p)
-
-    this.svg
-      //.call(this.zoom.scale(this.props.vis.zoom).translate(this.props.vis.translate))
-      .transition()
-      .duration(1000)
-      .call(this.zoom.scale(scale).translate(p).event);
   }
 
-  shouldComponentUpdate(nextProps) {
-    utils.log("shouldComponentUpdate", nextProps.vis.animation ? "no": "yes");
+  componentWillReceiveProps(nextProps) {
+    //utils.log("shouldComponentUpdate", nextProps.vis.animation ? "no": "yes");
 
-    const d = nextProps.vis.animation;
-    if(d){
-      this[d.action](d.payload);
-      return false;
-    } else {
-      return true;
+    if(nextProps.vis.animation){
+      this[nextProps.vis.animation.action](nextProps.vis.animation.payload);
     }
+
+    if(nextProps.vis.active != this.props.vis.active) {
+      this.activeGeometry = _.find(nextProps.master.topojson, (d)=> d.properties.iso === nextProps.vis.active);
+      utils.log("activeGeometry",this.activeGeometry)
+    }
+  }
+
+  onMouseEnter(d){
+    const c = this.path.centroid(d);
+    const value = this.dataset.getValueForCountry(d.properties.iso);
+    const unit = this.props.master.dataset.unit;
+
+    this.props.actions.changeVis({
+      tooltip: {
+        active: true,
+        iso: d.properties.iso,
+        value,
+        unit,
+        x: c[0],
+        y: c[1]
+      }
+    });
+
+  }
+
+  onMouseLeave(d){
+    this.props.actions.changeVis({
+      tooltip: {
+        active: false
+      }
+    });
   }
 
 
   render() {
     utils.log("render map")
 
-    const paths = this.geometries.map((d, i) => <path key={i} d={this.path(d)} fill={d.properties.fillColor}></path>);
+    const paths = this.geometries.map((d, i) => {
+      return (
+        <path
+          key={ i }
+          d={this.path(d)}
+          fill={d.properties.fillColor}
+          onMouseLeave={this.onMouseLeave.bind(this,d)}
+          onMouseEnter={this.onMouseEnter.bind(this,d)}
+        />
+      )
+    });
+
+    const activeGeometry = <path className="activeGeometry" d={this.path(this.activeGeometry)}/>;
+
 
     return (
       <div>
         <svg className='map' ref='mapSVG' width={ this.props.width } height={ this.props.height }>
           <g>
-            {paths}
+            { paths }
+            { activeGeometry }
           </g>
         </svg>
       </div>
