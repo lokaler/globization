@@ -32,7 +32,7 @@
       },
       {
         "input": {
-          "key": "slider",
+          "key": "sliderFoodSpending",
           "type": "slider",
           "options": {
             "unit": "%",
@@ -45,12 +45,12 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider.value < 15) && 'litteFoodCon'",
-            "(inputs.slider.value < 50) && 'mediumFoodCon'",
-            "(inputs.slider.value >= 50) && 'highFoodCon'"
+            "(inputs.sliderFoodSpending.value < 15) && 'litteFoodCon'",
+            "(inputs.sliderFoodSpending.value < 50) && 'mediumFoodCon'",
+            "(inputs.sliderFoodSpending.value >= 50) && 'highFoodCon'"
           ],
           "answerContext": {
-            "landAusgaben": "funcs.getCountryName('food', inputs.slider.value)",
+            "landAusgaben": "funcs.getCountryName('food', inputs.sliderFoodSpending.value)",
             "landMax": "funcs.getMaxCountryName('food')",
             "landMin": "funcs.getMinCountryName('food')",
             "valueMax": "funcs.getMaxValue('food')",
@@ -378,7 +378,7 @@
           "options": {
             "unit": "Kg",
             "min": 0,
-            "value": 0.5,
+            "value": 1.5,
             "max": 4,
             "step": 0.1
           }
@@ -393,7 +393,7 @@
             "(inputs.sliderMeatConsumption.value >= 5) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
-            "wertFleisch": "inputs.sliderMeatConsumption.value * 1.25",
+            "wertFleisch": "inputs.sliderMeatConsumption.value * 1.31",
             "landMax": "funcs.getMaxCountryName('meat')",
             "gasred": "inputs.sliderMeatConsumption.value / 2 * 3.89",
             "gasred2" : "inputs.sliderMeatConsumption.value / 2 * 3.89 * 1000 / 249"
@@ -409,6 +409,7 @@
             },
             "noMeat": {
               "de": [
+
                 "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnittsfleischesser sparen Sie dadurch pro Jahr etwa 330 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 1300 Kilometern Autofahrt mit einem mittelgroßen Benziner."
               ],
               "en": [
@@ -417,25 +418,37 @@
             },
             "someMeat": {
               "de": [
+                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch}}** Kilogramm Fleisch produziert werden",
+                "",
                 "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
               ],
               "en": [
+                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch}}** kilograms of meat must be produced.",
+                "",
                 "Your level of consumption can be covered in any of the countries for which comparative data is available."
               ]
             },
             "muchMeat": {
               "de": [
-                "Das entspricht etwa der pro Woche und Person verfügbaren Menge ***{{ landMax }}** *."
+                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch}}** Kilogramm Fleisch produziert werden",
+                "",
+                "Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ landMax }}**."
               ],
               "en": [
-                "That is comparable to the weekly per capita amount available **{{ landMax }}** ."
+                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch}}** kilograms of meat must be produced.",
+                "",
+                "That is comparable to the weekly per capita amount available **{{ landMax }}**."
               ]
             },
             "muchTooMuchMeat": {
               "de": [
+                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch}}** Kilogramm Fleisch produziert werden",
+                "",
                 "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
               ],
               "en": [
+                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch}}** kilograms of meat must be produced.",
+                "",
                 "Your consumption is higher than the average amount of meat available per person in all countries for which data is available."
               ]
             }
@@ -731,23 +744,25 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider.value < 15) && 'litteFoodCon'",
-            "(inputs.slider.value < 50) && 'mediumFoodCon'",
-            "(inputs.slider.value >= 50) && 'highFoodCon'"
+            "(inputs.sliderFoodSpending.value < 15) && 'litteFoodCon'",
+            "(inputs.sliderFoodSpending.value < 50) && 'mediumFoodCon'",
+            "(inputs.sliderFoodSpending.value >= 50) && 'highFoodCon'"
           ],
           "answerContext": {
-            "landAusgaben": "funcs.getCountryName('electro', inputs.slider.value)",
-            "landMax": "funcs.getMaxCountryName('electro')",
-            "landMin": "funcs.getMinCountryName('electro')",
-            "valueMax": "funcs.getMaxValue('electro')",
-            "valueMin": "funcs.getMinValue('electro')",
-            "datasetCount": "funcs.getDatasetCount('food')",
-            "lessThanCount": "funcs.getDatasetCountLessThanValue('food', inputs.slider.value)"
+            "landAusgaben": "funcs.getCountryName('food', inputs.sliderFoodSpending.value)",
+            "landMax": "funcs.getMaxCountryName('food')",
+            "landMin": "funcs.getMinCountryName('food')",
+            "valueMax": "funcs.getMaxValue('food')",
+            "valueMin": "funcs.getMinValue('food')"
           },
           "templates": {
             "default": {
-              "de": [],
-              "en": []
+              "de": [
+                "Bitte beantworten Sie zuvor mindesten eine der Fragen."
+              ],
+              "en": [
+                "Please answer at least on of the questions."
+              ]
             },
             "litteFoodCon": {
               "de": [
@@ -755,7 +770,7 @@
               ],
               "en": [
                 "*** ENGLISH ***",
-                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}** . There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
+                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
               ]
             },
             "mediumFoodCon": {
@@ -788,13 +803,13 @@
             "(inputs.sliderMeatConsumption.value >= 5) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
-            "landAusgaben": "funcs.getCountryName('electro', inputs.slider.value)",
-            "landMax": "funcs.getMaxCountryName('electro')",
-            "landMin": "funcs.getMinCountryName('electro')",
-            "valueMax": "funcs.getMaxValue('electro')",
-            "valueMin": "funcs.getMinValue('electro')",
-            "testfoo" : "inputs.slider && inputs.slider.value * 1.25",
-            "datasetCount": "funcs.getDatasetCount('food')"
+            "wertFleisch": "inputs.sliderMeatConsumption.value * 1.31",
+            "landMax": "funcs.getMaxCountryName('meat')",
+            "gasred": "inputs.sliderMeatConsumption.value / 2 * 3.89",
+            "gasred2" : "inputs.sliderMeatConsumption.value / 2 * 3.89 * 1000 / 249",
+            "numberCountriesWithConsumption": "funcs.getDatasetCount('meat')",
+            "numbercountriesWithLowerMeatConsumptionThanMe": "funcs.getDatasetCountLessThanValue('meat',inputs.sliderMeatConsumption.value)"
+
           },
           "templates": {
             "default": {
