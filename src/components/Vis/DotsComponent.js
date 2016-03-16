@@ -37,13 +37,18 @@ export default class DotsComponent extends React.Component {
 
     const x = this.props.xScale;
     const y = this.props.yScale;
+    const margin = this.props.margin;
+    const unit = this.props.master.dataset.unit;
 
     this.props.actions.changeVis({
       tooltip: {
         active: true,
         text: `${d.iso}: ${d.value}`,
-        x: x(d.vergleich),
-        y: y(d.value)
+        iso: d.iso,
+        value: d.value,
+        unit,
+        x: x(d.vergleich)+margin.left,
+        y: y(d.value)+margin.top
       }
     });
 
