@@ -18,15 +18,15 @@
             "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
             "welche Produkte uns wie viel wert sind.",
             "",
-            "*Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
-            "beispielsweise für Lebensmittel aus?*"
+            "**Wie viel Prozent Ihrer Gesamtausgaben wenden Sie",
+            "beispielsweise für Lebensmittel aus?**"
           ],
           "en": [
             "# What do you spend your money on?",
             "",
             "At the supermarket and in the shopping mall, we decide how much the products we want are worth to us.",
             "",
-            "*What percent of your total expenditures goes to food?*"
+            "**What percent of your total expenditures goes to food?**"
           ]
         }
       },
@@ -68,7 +68,7 @@
             },
             "antwort_a": {
               "de": [
-                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in *{{ landMin }}*, die nur *{{ valueMin }}* Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen in **{{ landMin }}**, die nur **{{ valueMin }}** Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
                 "*** ENGLISH ***",
@@ -77,18 +77,18 @@
             },
             "antwort_b": {
               "de": [
-                "Menschen in *{{ landAusgaben }}* geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
+                "Menschen in **{{ landAusgaben }}** geben, gemessen an den Gesamtausgaben, ähnlich viel für Essen aus wie Sie."
               ],
               "en": [
-                "People in *{{ landAusgaben }}* spend a similar amount on food as you do, measured as a percentage of total expenditures."
+                "People in **{{ landAusgaben }}** spend a similar amount on food as you do, measured as a percentage of total expenditures."
               ]
             },
             "antwort_c": {
               "de": [
-                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in *{{ landMax }}* den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich *{{ valueMax }}* Prozent."
+                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in **{{ landMax }}** den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
               ],
               "en": [
-                "You spend a very large share of your money on food. Internationally, people in *{{ landMax }}* devote the largest share of their expenditures to food, namely *{{ valueMax }}* percent."
+                "You spend a very large share of your money on food. Internationally, people in **{{ landMax }}** devote the largest share of their expenditures to food, namely **{{ valueMax }}** percent."
               ]
             }
           }
@@ -112,76 +112,24 @@
           "de": [
             "# Worauf achten Sie beim Kauf?",
             "",
-            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
-            "",
-            "*Kaufen Sie Fairtrade-Produkte?*"
+            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?"
           ],
           "en": [
             "*** ENGLISH ***",
-            "# Worauf achten Sie beim Kauf?",
+            "# What is important to you when making a purchase?",
             "",
-            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
-            "",
-            "*Kaufen Sie Fairtrade-Produkte?*"
+            "Some people are happy just to be able to make ends meet. Others can afford to pay attention to criteria beyond just price. Where do you stand?"
           ]
         }
       },
-      {
-        "input": {
-          "key": "fairtrade",
-          "type": "choices",
-          "options": {
-            "choices": [
-              ["never", { "de": "Nie", "en": "Never" }],
-              ["sometimes", { "de": "Manchmal", "en": "Sometimes"}],
-              ["always", { "de": "Immer", "en": "Always" }]
-            ]
-          }
-        }
-      },
-      {
-        "answer": {
-          "answerKey": ["inputs.fairtrade.value"],
-          "answerContext": {},
-          "templates": {
-            "default": {
-              "de": [],
-              "en": []
-            },
-            "never": {
-              "de": [
-                "Da geht noch was – vorausgesetzt Ihr Portemonnaie erlaubt es! Würden Sie Fairtrade-Produkte kaufen, wenn Sie mehr darüber wüssten, was sich hinter dieser Bezeichnung verbirgt? Einen überblick über verschiedene Fairtrade-, Bio- und öko-Siegel gibt zum Beispiel die Webseite [Nachhaltiger Warenkorb](http://nachhaltiger-warenkorb.de/)"
-              ],
-              "en": [
-                "There’s room for improvement -- assuming your wallet allows for it! Would you buy fair trade products if you knew more about what the label means? A summary of the various fair trade and organic certifications can be found on the website fairtrade.net  [fairtrade.net](http://www.fairtrade.net/), for example."
-              ]
-            },
-            "sometimes": {
-              "de": [
-                "Damit liegen Sie voll im Trend. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
-              ],
-              "en": [
-                "That’s the popular answer. Germans spent 10 times more money on fair trade products in 2014 than they did in 2004. Despite the increase, average spending on such products is still only €13 per year."
-              ]
-            },
-            "always": {
-              "de": [
-                "Sie können sich zu den Trendsettern unter den Fairtrade-Käufern zählen. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
-              ],
-              "en": [
-                "You are among the trend-setters when it comes to fair trade purchases. Germans spent 10 times more money on fair trade products in 2014 than they did in 2004. Despite the increase, average spending on such products is still only €13 per year."
-              ]
-            }
-          }
-        }
-      },
+
       {
         "text": {
           "de": [
-            "*Kaufen Sie Bio-Produkte?*"
+            "**Kaufen Sie Bio-Produkte?**"
           ],
           "en": [
-            "*Kaufen Sie Bio-Produkte?*"
+            "**Do you buy organic products?**"
           ]
         }
       },
@@ -208,31 +156,35 @@
           "answerContext": {},
           "templates": {
             "default": {
-              "de": [],
-              "en": []
+              "de": [
+                "Bitte wählen Sie eine Antwort."
+              ],
+              "en": [
+                "Please choose."
+              ]
             },
             "never": {
               "de": [
                 "Damit gehören Sie zur Minderheit: Laut einer repräsentativen Umfrage aus dem Jahr 2013 kauft nur jeder vierte Deutsche nie Bio-Produkte. Rund jeder Fünfte kauft sie häufig oder fast ausschließlich. Längst werden viele davon aus dem Ausland importiert, um den Bedarf zu decken. Lesen Sie dazu auch unsere [Reportage](http://)."
               ],
               "en": [
-                "That puts you in the minority. According to a representative survey from 2013, only about one in four Germans never buys organic products. About one in five buys them often or almost exclusively. Many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this feature story [Link](http://)."
+                "That puts you in the minority. According to a representative survey from 2013, only about one in four Germans never buys organic products. About one in five buys them often or almost exclusively. Many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this [feature story](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)"
               ]
             },
             "sometimes": {
               "de": [
-                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://)."
+                "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bio-Produkte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bio-Produkte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)."
               ],
               "en": [
-                "Your purchasing patterns are similar to many in Germany: In a representative survey from 2013, 52 percent of respondents said they bought organic products occasionally. One of the most important reasons cited was a desire to support local suppliers. Yet many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this feature story.[Link](http://)."
+                "Your purchasing patterns are similar to many in Germany: In a representative survey from 2013, 52 percent of respondents said they bought organic products occasionally. One of the most important reasons cited was a desire to support local suppliers. Yet many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this [feature story](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)."
               ]
             },
             "always": {
               "de": [
-                "Nicht schlecht! So konsequent ist nur etwa ein Fünftel der Deutschen. Bei einer repräsentativen Umfrage im Jahr 2013 gaben 22 Prozent der Befragten an, häufig oder ausschließlich Öko-Produkte zu kaufen. Im Schnitt geben Deutsche 93 Euro im Jahr für Bio-Lebensmittel aus. Damit liegen sie im Vergleich von 29 europäischen Ländern auf dem sechsten Platz. Längst müssen für den Bio-Konsum der Deutschen auch Produkte importiert werden. Lesen Sie dazu unsere [Reportage](http://)"
+                "Nicht schlecht! So konsequent ist nur etwa ein Fünftel der Deutschen. Bei einer repräsentativen Umfrage im Jahr 2013 gaben 22 Prozent der Befragten an, häufig oder ausschließlich Öko-Produkte zu kaufen. Im Schnitt geben Deutsche 93 Euro im Jahr für Bio-Lebensmittel aus. Damit liegen sie im Vergleich von 29 europäischen Ländern auf dem sechsten Platz. Längst müssen für den Bio-Konsum der Deutschen auch Produkte importiert werden. Lesen Sie dazu unsere [Reportage](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)"
               ],
               "en": [
-                "Not bad! Only about a fifth of German consumers have similar purchasing habits. In a representative study from 2013, 22 percent of respondents said they often or exclusively bought organic products. On average, Germans spend €93 per year on organic foodstuffs. In a ranking of 29 European countries, Germany is in sixth place, provided varying purchasing power from country to country is taken into account. To meet the demand in Germany, organic products have been imported from abroad for some time now. You can read more about the organic business in this feature story.[Link](http://)"
+                "Not bad! Only about a fifth of German consumers have similar purchasing habits. In a representative study from 2013, 22 percent of respondents said they often or exclusively bought organic products. On average, Germans spend €93 per year on organic foodstuffs. In a ranking of 29 European countries, Germany is in sixth place, provided varying purchasing power from country to country is taken into account. To meet the demand in Germany, organic products have been imported from abroad for some time now. You can read more about the organic business in this [feature story](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)."
               ]
             }
           }
@@ -241,10 +193,10 @@
       {
         "text": {
           "de": [
-            "*Kaufen Sie regionale Produkte?*"
+            "**Kaufen Sie regionale Produkte?**"
           ],
           "en": [
-            "*Do you buy local products?*"
+            "**Do you buy local products?**"
           ]
         }
       },
@@ -267,8 +219,12 @@
           "answerContext": {},
           "templates": {
             "default": {
-              "de": [],
-              "en": []
+              "de": [
+                "Bitte wählen Sie eine Antwort."
+                    ],
+              "en": [
+                "Please choose."
+              ]
             },
             "never": {
               "de": [
@@ -296,113 +252,6 @@
             }
           }
         }
-      }
-
-    ]
-  },
-  {
-    "title": "3. Karte",
-    "dataset": "meat",
-    "functions": [
-      "getGermanCountryName",
-      "getMaxGermanCountryName",
-      "getMinGermanCountryName",
-      "getMaxValue",
-      "getMinValue"
-    ],
-    "content": [
-      {
-        "text": {
-          "de": [
-            "Manche Produkte verbrauchen besonders viele Ressourcen: Die Herstellung von einem Kilogramm Rindfleisch zum Beispiel beansprucht im Durchschnitt gut 50 mal mehr Wasser und rund 100 mal mehr Land als die Produktion von einem Kilo Kartoffeln.:",
-            "",
-            "*Wie viel Fleisch essen Sie pro Woche?*",
-            "(Fleischgericht ≈ 200 Gramm, Bratwurst ≈ 100 Gramm, Wurstbrot ≈ 20 Gramm)"
-          ],
-          "en": [
-            "*** ENGLISH ***",
-            "Manche Produkte verbrauchen besonders viele Ressourcen: Die Herstellung von einem Kilogramm Rindfleisch zum Beispiel beansprucht im Durchschnitt gut 50 mal mehr Wasser und rund 100 mal mehr Land als die Produktion von einem Kilo Kartoffeln.:",
-            "",
-            "*Wie viel Fleisch essen Sie pro Woche?*",
-            "(Fleischgericht ≈ 200 Gramm, Bratwurst ≈ 100 Gramm, Wurstbrot ≈ 20 Gramm)"
-          ]
-        }
-      },
-      {
-        "input": {
-          "key": "slider2",
-          "type": "slider",
-          "options": {
-            "unit": "Kg",
-            "min": 0,
-            "value": 0.5,
-            "max": 4,
-            "step": 0.1
-          }
-        }
-      },
-      {
-        "answer": {
-          "answerKey": [
-            "(inputs.slider2.value < 1) && 'antwort_a3'",
-            "(inputs.slider2.value < 2) && 'antwort_b3'",
-            "(inputs.slider2.value < 5) && 'antwort_c3'",
-            "(inputs.slider2.value >= 5) && 'antwort_d3'"
-          ],
-          "answerContext": {
-            "wertFleisch": "inputs.slider2.value * 1.25",
-            "landMax": "getMaxGermanCountryName()",
-            "gasred": "inputs.slider2.value / 2 * 3.89",
-            "gasred2" : "inputs.slider2.value / 2 * 3.89 * 1000 / 249"
-          },
-          "templates": {
-            "default": {
-              "de": [
-                "TIPP NUR FüR ungleich Null einblenden: Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um {{ gasred }} kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr {{ gasred2 }} Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."
-              ],
-              "en": [
-                "*** ENGLISH ***",
-                "TIPP NUR FüR ungleich Null einblenden: Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um {{ gasred }} kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr {{ gasred2 }} Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."
-              ]
-            },
-            "antwort_a3": {
-              "de": [
-                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
-              ],
-              "en": [
-                "*** ENGLISH ***",
-                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
-              ]
-            },
-            "antwort_b3": {
-              "de": [
-                "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
-              ],
-              "en": [
-                "*** ENGLISH ***",
-                "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
-              ]
-            },
-            "antwort_c3": {
-              "de": [
-                "Das entspricht etwa der pro Woche und Person verfügbaren Menge in *{{ landMax }}*."
-              ],
-              "en": [
-                "*** ENGLISH ***",
-                "Das entspricht etwa der pro Woche und Person verfügbaren Menge in *{{ landMax }}*."
-              ]
-            },
-            "antwort_d3": {
-              "de": [
-                "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
-              ],
-              "en": [
-                "*** ENGLISH ***",
-                "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
-              ]
-            }
-          }
-        }
       },
       {
         "text": {
@@ -416,8 +265,213 @@
       }
     ]
   },
+
   {
-    "title": "4. Karte",
+    "title": "3. Karte - Kleidung",
+    "functions": [],
+    "content": [
+      {
+        "text": {
+          "de": [
+            "Auf Überflüssiges verzichten spart Geld und Ressourcen. Schätzen Sie:",
+            "",
+            "**Wie viel Prozent der Kleidung in Ihrem Schrank tragen Sie so gut wie nie?**"
+          ],
+          "en": [
+            "Avoiding purchases of things you don’t need can save both money and resources. Take a guess: ",
+            "",
+            "*+What percent of the clothing in your wardrobe do you hardly ever wear?**"
+          ]
+        }
+      },
+      {
+        "input": {
+          "key": "sliderCloth",
+          "type": "slider",
+          "options": {
+            "unit": "%",
+            "min": 0,
+            "value": 50,
+            "max": 100,
+            "step": 1
+          }
+        }
+      },
+      {
+        "answer": {
+          "answerKey": [
+            "(inputs.sliderCloth.value < 19) && 'lessCloth'",
+            "(inputs.sliderCloth.value >= 19) && 'moreCloth'"
+          ],
+          "answerContext": {},
+          "templates": {
+            "default": {
+              "de": [
+                "Bitte bewegen Sie den Schieberegler"
+              ],
+              "en": [
+                "Please move the slider."
+              ]
+            },
+            "lessCloth": {
+              "de": [
+                "Damit liegen Sie **unter** dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
+              ],
+              "en": [
+                "That puts you **under** the German average. Almost every fifth piece of clothing in German wardrobes is hardly ever worn. German women own an average of 118 pieces of clothing whereas men have slightly more sustainable habits, owning an average of 73 items. The production of every piece of clothing consumes resources -- for example, around 2,700 liters (595 gallons) of water for a T-shirt and 10,900 liters (2,880 gallons) for a pair of jeans."
+              ]
+            },
+            "moreCloth": {
+              "de": [
+                "Damit liegen Sie **über** dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
+              ],
+              "en": [
+                "That puts you **over** the German average. Almost every fifth piece of clothing in German wardrobes is hardly ever worn. German women own an average of 118 pieces of clothing whereas men have slightly more sustainable habits, owning an average of 73 items. The production of every piece of clothing consumes resources -- for example, around 2,700 liters (595 gallons) of water for a T-shirt and 10,900 liters (2,880 gallons) for a pair of jeans."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "text": {
+          "de": [
+            "Nachhaltigkeits-Tipp: Im Netz lassen sich Kleider tauschen, leihen oder secondhand kaufen, zum Beispiel auf den Webseiten Kleiderkreisel.de oder Kleiderkorb.de."
+          ],
+          "en": [
+            "Sustainability Tip: On the Internet, you can trade, borrow or buy second hand on clothing swap websites like Kleiderkreisel.de or Kleiderkorb.de. ((SOLLEN WIR HIER US/UK WEBSEITEN LISTEN? Swapstyle oder Swap.com, zum Beispiel?))"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "4. Karte - Fleisch",
+    "dataset": "meat",
+    "functions": [
+      "getGermanCountryName",
+      "getMaxGermanCountryName",
+      "getMinGermanCountryName",
+      "getMaxValue",
+      "getMinValue"
+    ],
+
+    "content": [
+      {
+        "text": {
+          "de": [
+            "Manche Produkte verbrauchen besonders viele Ressourcen: Die Herstellung von einem Kilogramm Rindfleisch zum Beispiel beansprucht im Durchschnitt gut 50 mal mehr Wasser und rund 100 mal mehr Land als die Produktion von einem Kilo Kartoffeln.:",
+            "",
+            "**Wie viel Fleisch essen Sie pro Woche?**",
+            "(Fleischgericht ≈ 200 Gramm, Bratwurst ≈ 100 Gramm, Wurstbrot ≈ 20 Gramm)"
+          ],
+          "en": [
+            "Some products require a particularly high quantity of resources. The production of a kilogram (2.2 pounds) of beef, for example, requires on average 50 times more water and 100 times more land on average than the production of a kilogram of potatoes.",
+            "",
+            "**How much meat do you eat each week?**",
+            "(Meat dishes ≈ 200 grams (7 ounces), bratwurst ≈ 100 grams (3.5 ounces), cold cut sandwich ≈ 20 grams (0.7 ounces))"
+          ]
+        }
+      },
+      {
+        "input": {
+          "key": "sliderMeatConsumption",
+          "type": "slider",
+          "options": {
+            "unit": "Kg",
+            "min": 0,
+            "value": 0.5,
+            "max": 4,
+            "step": 0.1
+          }
+        }
+      },
+      {
+        "answer": {
+          "answerKey": [
+            "(inputs.sliderMeatConsumption.value < 1) && 'noMeat'",
+            "(inputs.sliderMeatConsumption.value < 2) && 'someMeat'",
+            "(inputs.sliderMeatConsumption.value < 5) && 'muchMeat'",
+            "(inputs.sliderMeatConsumption.value >= 5) && 'muchTooMuchMeat'"
+          ],
+          "answerContext": {
+            "wertFleisch": "inputs.sliderMeatConsumption.value * 1.25",
+            "landMax": "getMaxGermanCountryName()",
+            "gasred": "inputs.sliderMeatConsumption.value / 2 * 3.89",
+            "gasred2" : "inputs.sliderMeatConsumption.value / 2 * 3.89 * 1000 / 249"
+          },
+          "templates": {
+            "default": {
+              "de": [
+                "Bitte bewegen Sie den Schieberegler"
+              ],
+              "en": [
+                "Please move the slider"
+              ]
+            },
+            "noMeat": {
+              "de": [
+                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
+              ],
+              "en": [
+                "You are a vegetarian, or even a vegan? The CO2 emissions you produce over the course of a year are around 330 kilograms (727 pounds) less than those of an average German meat-eater. That is the equivalent of driving 1,300 kilometers (810 miles) in a mid-sized, gasoline-powered vehicle. "
+              ]
+            },
+            "someMeat": {
+              "de": [
+                "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
+              ],
+              "en": [
+                "Your level of consumption can be covered in any of the countries for which comparative data is available."
+              ]
+            },
+            "muchMeat": {
+              "de": [
+                "Das entspricht etwa der pro Woche und Person verfügbaren Menge in *{{ landMax }}*."
+              ],
+              "en": [
+                "That is comparable to the weekly per capita amount available in  **{{ landMax }}**."
+              ]
+            },
+            "muchTooMuchMeat": {
+              "de": [
+                "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
+              ],
+              "en": [
+                "Your consumption is higher than the average amount of meat available per person in all countries for which data is available."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "answer": {
+          "className": "tip",
+          "answerKey": [
+            "(inputs.sliderMeatConsumption.value >= 1) && 'meat'"
+          ],
+          "answerContext": {},
+          "templates": {
+            "meat": {
+              "de": [],
+              "en": []
+            }
+          }
+        }
+      },
+      {
+        "text": {
+          "de": [
+            "Nachhaltigkeits-Tipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um [Gasred= Wert_Fleisch_ges/2*3.89] kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr [Gasred*1000/249] Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland. Das kann sich wiederum positiv auf die Erhaltung von natürlichen Lebensräumen und die Artenvielfalt auswirken."
+          ],
+          "en": [
+            "Sustainability Tip: If you were to cut your meat consumption in half for a year, you could reduce your CO2 emissions by around [Gasred= Wert_Fleisch_ges/2*3.89] kilograms. You could save the same amount by driving [Gasred*1000/249] fewer kilometers with your car. Compared with the CO2 emissions produced by taking a plane trip, to the Balearic Islands for example, that isn't much. But by reducing meat consumption, you are also protecting resources like clean water and farmland. That can have positive effects on the preservation of habitat and biodiversity."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "5. Karte",
     "dataset": "foodwaste",
     "functions": [
       "getGermanCountryName",
@@ -434,7 +488,7 @@
             "",
             "1,3 Milliarden Tonnen Lebensmittel werden weltweit pro Jahr weggeschmissen. Diese gigantische Menge wollen die Vereinten Nationen bis 2030 halbieren.",
             "",
-            "*Wie viel Kilogramm Lebensmittel landen bei Ihnen zu Hause pro Woche im Müll?*"
+            "**Wie viel Kilogramm Lebensmittel landen bei Ihnen zu Hause pro Woche im Müll?**"
           ],
           "en": [
             "*** ENGLISH ***",
@@ -448,57 +502,91 @@
       },
       {
         "input": {
-          "key": "slider4",
+          "key": "sliderTrash",
+          "type": "slider",
+          "options": {
+            "unit": "Kg",
+            "min": 0,
+            "value": 6,
+            "max": 30
+          }
+        }
+      },
+      {
+        "text": {
+          "de": [
+            "**Wie viele Personen leben in Ihrem Haushalt?**"
+          ],
+          "en": [
+            "*How many people live in your household?**"
+          ]
+        }
+      },
+      {
+        "input": {
+          "key": "sliderSizeHousehold",
           "type": "slider",
           "options": {
             "unit": "",
             "min": 0,
-            "value": 3,
-            "max": 6
+            "value": 4,
+            "max": 10
           }
         }
       },
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider4.value < 1) && 'antwort_a4'",
-            "(inputs.slider4.value <= 2) && 'antwort_b4'",
-            "(inputs.slider4.value > 2) && 'antwort_c4'"
+            "(inputs.sliderTrash.value < 1) && 'littleTrash'",
+            "(inputs.sliderTrash.value <= 2) && 'someTrash'",
+            "(inputs.sliderTrash.value > 2) && 'muchTrash'"
           ],
           "answerContext": {
-            "landAbfall": "getCountry(inputs)",
-            "wertLebensmittel": "inputs.slider4.value"
+            "landAbfall": "getCountry(inputs.sliderTrash.value / inputs.sliderSizeHousehold.value)",
+            "wertLebensmittel": "inputs.sliderTrash.value / inputs.sliderSizeHousehold.value",
+            "sizeHousehold": "inputs.sliderSizeHousehold.value",
+            "AmountTrashPerHead": "inputs.sliderTrash.value * inputs.sliderSizeHousehold.value"
           },
           "templates": {
             "default": {
               "de": [],
               "en": []
             },
-            "antwort_a4": {
+            "littleTrash": {
               "de": [
-                "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }} Kilogramm pro Kopf** weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "In Ihrem Haushalt werden mit {{ wertLebensmittel }} Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "At **{{ wertLebensmittel }} kilograms per person**, your household throws away less food than those in all European countries for which data is available. But compared to places around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
               ]
             },
-            "antwort_b4": {
+            "someTrash": {
               "de": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in *{{ landAbfall }}*. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in **{{ landAbfall }}**. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in *{{ landAbfall }}*. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "Your household throws away about as much food per person as in **{{ landAbfall }}**. ]. But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
               ]
             },
-            "antwort_c4": {
+            "muchTrash": {
               "de": [
-                "In Ihrem Haushalt werden mit *{{ wertLebensmittel }}* Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "In Ihrem Haushalt werden mit *{{ wertLebensmittel }}* Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Verglich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
+                "With a value of  **{{ wertLebensmittel }}** per capita, your household throws away more food than in all European countries for which data is available. But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms (0.2 pounds) of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms (2 pounds)."
               ]
             }
           }
+        }
+      },
+      {
+        "text": {
+          "de": [
+            "Um Ihren persönlichen Beitrag zu den UN-Nachhaltigkeitszielen zu leisten, müssten Sie pro Woche [Wert_Essen/2] Kilogramm weniger Essen wegschmeißen."
+          ],
+          "en": [
+            "To do your part in the realization of the UN’s Sustainable Development Goals, you would have to throw away [Wert_Essen/2] fewer kilograms of food each week. The UN has called for consumers to reduce food waste by half by 2030."
+          ]
         }
       }
     ]
@@ -517,11 +605,9 @@
       {
         "text": {
           "de": [
-            "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy (Finde die Quelle nicht wieder). Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt (Später E-Waste-Republic verlinken).",
+            "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy. Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt (Später E-Waste-Republic verlinken).",
             "",
-            "*Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?*",
-            "(Smartphone ≈ 150g, PC ≈ 8kg, Toaster ≈ 3kg, Waschmaschine ≈ 70kg)",
-            "Für den internationalen Vergleich nehmen wir an, das Unternehmen und öffentliche Einrichtungen in Ihrem Land noch einmal das X-FACHE IHRES WERTES (dazu bekomme ich noch einen Wert von der UNU) an Elektroschrott verursachen. Auf Sie entfallen dann insgesamt [Wert_Schrott*X] Kilogramm Elektroschrott."
+            "**Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?**"
           ],
           "en": [
             "*** ENGLISH ***",
@@ -535,12 +621,12 @@
       },
       {
         "input": {
-          "key": "slider",
+          "key": "sliderEwaste",
           "type": "slider",
           "options": {
             "min": 0,
-            "value": 100,
-            "max": 200,
+            "value": 20,
+            "max": 50,
             "unit": "Kg"
           }
         }
@@ -548,53 +634,74 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider.value < 50) && 'antwort_a5'",
-            "(inputs.slider.value <= 120) && 'antwort_b5'",
-            "(inputs.slider.value > 120) && 'antwort_c5'"
+            "(inputs.sliderEwaste.value < 10) && 'lessEwaste'",
+            "(inputs.sliderEwaste.value <= 29) && 'someEwaste'",
+            "(inputs.sliderEwaste.value > 29) && 'muchEwaste'"
           ],
           "answerContext": {
-            "landAusgaben": "getCountry(inputs)",
+            "countryEwaste": "getCountry(inputs.sliderEwaste)",
             "landMax": "getMaxGermanCountryName()",
             "landMin": "getMinGermanCountryName()",
             "valueMax": "getMaxValue()",
             "valueMin": "getMinValue()",
-            "wertEwaste": "inputs.slider.value * 1.25"
+            "wertEwaste": "inputs.sliderEwaste.value + 2.41"
           },
           "templates": {
             "default": {
-              "de": [],
-              "en": [
-                "*** ENGLISH ***"
-              ]
-            },
-            "antwort_a5": {
               "de": [
-                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht {{ landMin }} mit {{ valueMin }} Kilogramm pro Jahr und Einwohner."
+                "Bitte bewegen Sie den Schieberegler"
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht {{ landMin }} mit {{ valueMin }} Kilogramm pro Jahr und Einwohner."
+                "Please move the slider"
               ]
             },
-            "antwort_b5": {
+            "lessEwaste": {
               "de": [
-                "Das entspricht etwa dem Pro-Kopf-Wert in *{{ wertEwaste }}*."
+                "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland im Jahr 2014 waren das 2,41 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
+                "",
+                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht {{ landMin }} mit **{{ valueMin }}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Das entspricht etwa dem Pro-Kopf-Wert in *{{ wertEwaste }}*."
+                "To be able to compare internationally, we added your value together with the amount of electronic waste produced by companies and public institutions on a per capita and per year basis. For Germany in 2014, that value was 2.41 kilograms (5.3 pounds). As such, you are responsible for a total of **{{ wertEwaste }}** kilograms of electronic waste.",
+                "",
+                "That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin }}** kilograms per year and resident. "
               ]
             },
-            "antwort_c4": {
+            "someEwaste": {
               "de": [
+                "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland im Jahr 2014 waren das 2,41 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
+                "",
+                "Das entspricht etwa dem Pro-Kopf-Wert in **{{ countryEwaste }}**."
+              ],
+              "en": [
+                "To be able to compare internationally, we added your value together with the amount of electronic waste produced by companies and public institutions on a per capita and per year basis. For Germany in 2014, that value was 2.41 kilograms (5.3 pounds). As such, you are responsible for a total of **{{ wertEwaste }}** kilograms of electronic waste.",
+                "",
+                "That is roughly equivalent to the per capital value in **{{ countryEwaste }}**."
+              ]
+            },
+            "muchEwaste": {
+              "de": [
+                "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland im Jahr 2014 waren das 2,41 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
+                "",
                 "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht {{ landMax }} mit {{ valueMax }} Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht {{ landMax }} mit {{ valueMax }} Kilogramm pro Jahr und Einwohner."
+                "To be able to compare internationally, we added your value together with the amount of electronic waste produced by companies and public institutions on a per capita and per year basis. For Germany in 2014, that value was 2.41 kilograms (5.3 pounds). As such, you are responsible for a total of **{{ wertEwaste }}** kilograms of electronic waste.",
+                "",
+                "That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}** with **{{ valueMax }}** kilograms per year and resident."
               ]
             }
           }
+        }
+      },
+      {
+        "text": {
+          "de": [
+            "Nachhaltigkeits-Tipp: Ihre Elektroschrott-Bilanz können Sie zum Beispiel verbessern, indem Sie reparierbare Geräte kaufen, für die es Ersatzteile gibt."
+          ],
+          "en": [
+            "Sustainability Tip: One way to avoid electronic waste is by repairing broken devices rather than throwing them away. At a [Repair Café](http://repaircafe.org/en/visit/) near you, you can get the help you need to get your electronics up and running again. The feeling of accomplishment afterwards doesn’t cost anything."
+          ]
         }
       }
     ]
