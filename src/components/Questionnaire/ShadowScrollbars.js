@@ -31,7 +31,7 @@ export default createClass({
     },
 
     componentWillUnmount() {
-        window.removeListeners('resize', this.handleWindowResize);
+        window.removeEventListener('resize', this.handleWindowResize);
     },
 
     handleScrollFrame(values) {
