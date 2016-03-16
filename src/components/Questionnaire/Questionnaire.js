@@ -66,6 +66,7 @@ export default class Questionnaire extends React.Component {
     const activeCard = questions.activeCard;
     const firstCard = activeCard === -1;
     const lastCard = activeCard === questions.questionData.length - 2;
+    const veryLastCard = activeCard === questions.questionData.length - 1;
 
     if (firstCard) {
       widgets = <Intro { ...this.props }/>;
@@ -73,6 +74,8 @@ export default class Questionnaire extends React.Component {
       widgets = this.createWidgets(questions);
       if (lastCard) {
         nextBtnLabel = 'last';
+      } else if (veryLastCard) {
+        nextBtnLabel = 'close';
       }
     }
 

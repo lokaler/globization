@@ -23,6 +23,9 @@ export default class Footer extends React.Component {
         ) {
           dataId = questions.questionData[cardIndex].dataset;
         }
+        else {
+          cardIndex = -1;
+        }
 
         actions.setCard(cardIndex, dataId);
       };
@@ -41,7 +44,7 @@ export default class Footer extends React.Component {
 
   render() {
     const { questions, prevBtnLabel, nextBtnLabel } = this.props;
-    const showNextBtn = questions.activeCard < questions.questionData.length - 1;
+    const showNextBtn = questions.activeCard < questions.questionData.length ;
     const showPrevBtn = questions.activeCard > -1;
     const showPagination = questions.activeCard >= 0
       && questions.activeCard < questions.questionData.length;
