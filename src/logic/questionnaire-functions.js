@@ -1,18 +1,20 @@
 import { maxBy, minBy } from 'lodash';
 import { getDataset } from 'logic/Dataset';
+import translate from 'logic/translate';
 
 export default {
 
   getCountryName(datasetKey, value) {
     const dataset = getDataset(datasetKey);
-    const countryCode = dataset.getCountryForValue(value);
-    return countryCode;
+    const isoCode = dataset.getCountryForValue(value);
+    return translate(isoCode, { isCountryCode: true, case: 'locative' });
   },
 
   getMaxCountryName(datasetKey) {
     const dataset = getDataset(datasetKey);
     if (dataset) {
-      return maxBy(dataset.data, d => parseFloat(d.value)).iso;
+      const isoCode = maxBy(dataset.data, d => parseFloat(d.value)).iso;
+      return translate(isoCode, { isCountryCode: true, case: 'locative' });
     }
   },
 
@@ -26,7 +28,8 @@ export default {
   getMinCountryName(datasetKey) {
     const dataset = getDataset(datasetKey);
     if (dataset) {
-      return minBy(dataset.data, d => parseFloat(d.value)).iso;
+      const isoCode = minBy(dataset.data, d => parseFloat(d.value)).iso;
+      return translate(isoCode, { isCountryCode: true, case: 'locative' });
     }
   },
 
