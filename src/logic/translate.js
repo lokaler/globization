@@ -1,5 +1,5 @@
 import store from '../store';
-import { isUndefined, isObject, isString, get } from 'lodash';
+import { isObject, isString, get } from 'lodash';
 import translations from 'data/translations.json';
 import master from 'data/master.csv';
 
@@ -33,18 +33,22 @@ export default function translate(value, options = {}) {
     return get(countries, path);
   }
 
-  // simple string
-  if (isString(value)) {
-    const translated = ((translations[value] || {})[language]);
-    if (isUndefined(translated)) {
-      if (__DEV__) {
-        console.warn(
-          `Translation for "${ value }" (${ language }) is missing.`
-        ); // eslint-disable-line no-console
-      }
-      return value;
+  // for numbers and strings which are parsable as numbers
+  const _isNumber = !isNaN(value);
+  const _isNumberString = isString(value) && !isNaN(parseFloat(value));
+  if (_isNumber || _isNumberString) {
+    let translated = value.toString();
+    if (language === 'de') {
+      translated = translated.replace('.', ',');
     }
     return translated;
   }
+
+  // simple string
+  if (isString(value)) {
+    const translated = ((translations[value] || {})[language]);
+    if (isString(translated))  ? translated : value;
+  }
+
   return value;
 }
