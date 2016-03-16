@@ -45,7 +45,7 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.sliderFoodSpending.value < 15) && 'litteFoodCon'",
+            "(inputs.sliderFoodSpending.value < 15) && 'littleFoodCon'",
             "(inputs.sliderFoodSpending.value < 50) && 'mediumFoodCon'",
             "(inputs.sliderFoodSpending.value >= 50) && 'highFoodCon'"
           ],
@@ -70,8 +70,7 @@
                 "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Konsumausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}** . There, the share is just ***{{ valueMin }}** * percent, which is the lowest percentage of all countries"
+                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just ***{{ valueMin }}** * percent, which is the lowest percentage of all countries"
               ]
             },
             "mediumFoodCon": {
@@ -808,8 +807,7 @@
             "gasred": "inputs.sliderMeatConsumption.value / 2 * 3.89",
             "gasred2" : "inputs.sliderMeatConsumption.value / 2 * 3.89 * 1000 / 249",
             "numberCountriesWithConsumption": "funcs.getDatasetCount('meat')",
-            "numbercountriesWithLowerMeatConsumptionThanMe": "funcs.getDatasetCountLessThanValue('meat',inputs.sliderMeatConsumption.value)"
-
+            "numbercountriesWithLowerMeatConsumptionThanMe": "funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
             "default": {
@@ -913,7 +911,7 @@
           },
           "templates": {
             "default": {
-              "de": ["{{ testfoo }}"],
+              "de": [],
               "en": []
             },
             "lessEwaste": {
