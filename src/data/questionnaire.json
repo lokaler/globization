@@ -392,10 +392,8 @@
             "(i.sliderMeatConsumption >= 2.5) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
-            "wertFleisch": "i.sliderMeatConsumption * 1.31",
-            "landMax": "f.getMaxCountryName('meat')",
-            "gasred": "i.sliderMeatConsumption / 2 * 3.89",
-            "gasred2" : "i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249"
+            "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
+            "landMax": "f.getMaxCountryName('meat')"
           },
           "templates": {
             "default": {
@@ -461,23 +459,20 @@
             "(i.sliderMeatConsumption >= 1) && 'meat'",
             "(i.sliderMeatConsumption > 0.5) && 'meat'"
           ],
-          "answerContext": {},
+          "answerContext": {
+            "gasred": "f.fmt('%0.1f', i.sliderMeatConsumption / 2 * 3.89)",
+            "gasred2" : "f.fmt('%0.1f', i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249)"
+          },
           "templates": {
             "meat": {
-              "de": [],
-              "en": []
+              "de": [
+                "Nachhaltigkeitstipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um **{{ gasred }}** kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr **{{ gasred2 }}** Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch Sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland."
+              ],
+              "en": [
+                "Sustainability Tip: If you were to cut your meat consumption in half for a year, you could reduce your CO2 emissions by around **{{ gasred }}** kilograms. You could save the same amount by driving **{{ gasred2 }}** fewer kilometers with your car. Compared with the CO2 emissions produced by taking a plane trip, to the Balearic Islands for example, that isn't much. But by reducing meat consumption, you are also protecting resources like clean water and farmland."
+              ]
             }
           }
-        }
-      },
-      {
-        "text": {
-          "de": [
-            "Nachhaltigkeitstipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um **{{ gasred }}** kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr **{{ gasred2 }}** Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch Sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland."
-          ],
-          "en": [
-            "Sustainability Tip: If you were to cut your meat consumption in half for a year, you could reduce your CO2 emissions by around **{{ gasred }}** kilograms. You could save the same amount by driving **{{ gasred2 }}** fewer kilometers with your car. Compared with the CO2 emissions produced by taking a plane trip, to the Balearic Islands for example, that isn't much. But by reducing meat consumption, you are also protecting resources like clean water and farmland."
-          ]
         }
       }
     ]
@@ -761,10 +756,6 @@
             "RankingUserInComparisionToCountriesFood": "funcs.getDatasetCount('food') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '>')"
           },
           "templates": {
-            "default": {
-              "de": [],
-              "en": []
-            },
             "litteFoodCon": {
               "de": [
                 "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
@@ -812,10 +803,6 @@
             "RankingUserInComparisionToCountriesMeat": "funcs.getDatasetCount('meat') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
-            "default": {
-              "de": [],
-              "en": []
-            },
             "noMeat": {
               "de": [
                 "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
