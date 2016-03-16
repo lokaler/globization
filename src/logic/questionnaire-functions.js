@@ -35,5 +35,20 @@ export default {
     if (dataset) {
       return minBy(dataset.data, d => parseFloat(d.value)).value;
     }
+  },
+
+  getDatasetCount(datasetKey) {
+    const dataset = getDataset(datasetKey);
+    if (dataset) {
+      return dataset.data.length;
+    }
+  },
+
+  getDatasetCountLessThanValue(datasetKey, value) {
+    const dataset = getDataset(datasetKey);
+    if (dataset) {
+      const less = dataset.data.filter(d => d.value < value);
+      return less.count;
+    }
   }
 };
