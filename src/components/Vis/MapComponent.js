@@ -44,6 +44,10 @@ export default class MapComponent extends React.Component {
     this.path = d3.geo.path()
       .projection(this.projection);
 
+    this.reset = {
+      scale: 0.55,
+      translate: [-50, -11]
+    }
 
     // dunnow if this should be done here!
     this.geometries = this.props.master.topojson;
@@ -89,6 +93,14 @@ export default class MapComponent extends React.Component {
 
   componentDidMount() {
     this.svg = d3.select(this.refs.mapSVG).call(this.zoom);
+    this.resetGlobe();
+  }
+
+  resetGlobe(){
+    const dataset = this.props.master.dataset;
+    const translate = dataset.scale==1 ? this.reset.translate : dataset.translate.map(d=>d*this.reset.scale);
+    const scale = this.reset.scale * dataset.scale;
+
     this.svg.call(this.zoom
       .scale(this.props.vis.zoom)
       .translate(this.props.vis.translate)
@@ -99,11 +111,12 @@ export default class MapComponent extends React.Component {
       const t = Math.abs(this.props.vis.translate[0]) + Math.abs(this.props.vis.translate[1]);
       const z = this.props.vis.zoom - 0.5;
 
-      return t*0.75+Math.abs(Math.log(z*z))*400;
+      // return t*0.75+Math.abs(Math.log(z*z))*400;
+      return 1000;
     })
     .call(this.zoom
-      .scale(0.55)
-      .translate([-50, -11])
+      .scale(scale)
+      .translate(translate)
       .event
     )
   }
@@ -131,6 +144,34 @@ export default class MapComponent extends React.Component {
     if(nextProps.vis.active != this.props.vis.active) {
       this.activeGeometry = _.find(nextProps.master.topojson, (d)=> d.properties.iso === nextProps.vis.active);
       utils.log("activeGeometry",this.activeGeometry)
+    }
+
+    if(nextProps.master.dataset != this.props.master.dataset) {
+      const dataset = nextProps.master.dataset;
+      const translate = dataset.scale==1 ? this.reset.translate : dataset.translate.map(d=>d*this.reset.scale);
+      const scale = this.reset.scale * dataset.scale;
+
+      this.dataset.setData(dataset.data);
+      this.svg
+      .transition()
+      .duration(1000)
+      .call(this.zoom
+        .scale(scale)
+        .translate(translate)
+        .event
+      )
+      .tween("colors", ()=>{
+        this.geometries.forEach((d) =>{
+          const a = d.properties.fillColor;
+          const b = this.getFillColor(d.properties.iso);
+          d.interpolate = d3.interpolateRgb(a, b);
+        });
+        return (t) => {
+          this.geometries.forEach((d,i) =>{
+            d.properties.fillColor = d.interpolate(t);
+          })
+        };
+      });
     }
   }
 

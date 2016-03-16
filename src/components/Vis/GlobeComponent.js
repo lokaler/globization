@@ -84,6 +84,8 @@ export default class GlobeComponent extends React.Component {
   }
 
   resetGlobe(){
+    const dataset = this.props.master.dataset;
+
     this.svg.call(this.zoom
       .scale(this.props.vis.zoom)
       .translate(this.props.vis.translate)
@@ -91,13 +93,14 @@ export default class GlobeComponent extends React.Component {
     )
     .transition()
     .duration(()=>{
-      const t = Math.abs(this.props.vis.translate[0]) + Math.abs(this.props.vis.translate[1]);
+      const t = Math.abs(dataset.translate[0]) + Math.abs(dataset.translate[1]);
       const z = this.props.vis.zoom - 0.7;
       return t+z*200;
+      // return 1000;
     })
     .call(this.zoom
-      .scale(1)
-      .translate([0,0])
+      .scale(dataset.scale)
+      .translate(dataset.translate)
       .event
     )
   }
