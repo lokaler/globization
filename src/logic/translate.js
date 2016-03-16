@@ -30,7 +30,6 @@ export default function translate(value, options = {}) {
   if (options.isCountryCode) {
     const case_ = options.case || 'default';
     const path = `${value }.${ language }.${ case_ }`;
-    console.log('parh', path);
     return get(countries, path);
   }
 
