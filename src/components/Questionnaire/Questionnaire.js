@@ -6,7 +6,7 @@ import Text from './widgets/Text';
 import Answer from './widgets/Answer';
 import Input from './widgets/Input';
 import Footer from './Footer';
-//import Outro from './Outro';
+// import Outro from './Outro';
 
 const WidgetFactory = {
   text: React.createFactory(Text),
