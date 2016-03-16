@@ -112,69 +112,17 @@
           "de": [
             "# Worauf achten Sie beim Kauf?",
             "",
-            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
-            "",
-            "*Kaufen Sie Fairtrade-Produkte?*"
+            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?"
           ],
           "en": [
             "*** ENGLISH ***",
             "# Worauf achten Sie beim Kauf?",
             "",
-            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
-            "",
-            "*Kaufen Sie Fairtrade-Produkte?*"
+            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?"
           ]
         }
       },
-      {
-        "input": {
-          "key": "fairtrade",
-          "type": "choices",
-          "options": {
-            "choices": [
-              ["never", { "de": "Nie", "en": "Never" }],
-              ["sometimes", { "de": "Manchmal", "en": "Sometimes"}],
-              ["always", { "de": "Immer", "en": "Always" }]
-            ]
-          }
-        }
-      },
-      {
-        "answer": {
-          "answerKey": ["inputs.fairtrade.value"],
-          "answerContext": {},
-          "templates": {
-            "default": {
-              "de": [],
-              "en": []
-            },
-            "never": {
-              "de": [
-                "Da geht noch was – vorausgesetzt Ihr Portemonnaie erlaubt es! Würden Sie Fairtrade-Produkte kaufen, wenn Sie mehr darüber wüssten, was sich hinter dieser Bezeichnung verbirgt? Einen überblick über verschiedene Fairtrade-, Bio- und öko-Siegel gibt zum Beispiel die Webseite [Nachhaltiger Warenkorb](http://nachhaltiger-warenkorb.de/)"
-              ],
-              "en": [
-                "There’s room for improvement -- assuming your wallet allows for it! Would you buy fair trade products if you knew more about what the label means? A summary of the various fair trade and organic certifications can be found on the website fairtrade.net  [fairtrade.net](http://www.fairtrade.net/), for example."
-              ]
-            },
-            "sometimes": {
-              "de": [
-                "Damit liegen Sie voll im Trend. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
-              ],
-              "en": [
-                "That’s the popular answer. Germans spent 10 times more money on fair trade products in 2014 than they did in 2004. Despite the increase, average spending on such products is still only €13 per year."
-              ]
-            },
-            "always": {
-              "de": [
-                "Sie können sich zu den Trendsettern unter den Fairtrade-Käufern zählen. Gut achtmal mehr als noch 2005 gaben die Deutschen im Jahr 2014 für Fairtrade-Produkte aus . Durchschnittlich sind ihnen faire Waren mittlerweile 13 Euro pro Jahr wert."
-              ],
-              "en": [
-                "You are among the trend-setters when it comes to fair trade purchases. Germans spent 10 times more money on fair trade products in 2014 than they did in 2004. Despite the increase, average spending on such products is still only €13 per year."
-              ]
-            }
-          }
-        }
-      },
+
       {
         "text": {
           "de": [
@@ -208,8 +156,12 @@
           "answerContext": {},
           "templates": {
             "default": {
-              "de": [],
-              "en": []
+              "de": [
+                "Bitte.."
+              ],
+              "en": [
+                "Please.."
+              ]
             },
             "never": {
               "de": [
@@ -296,12 +248,100 @@
             }
           }
         }
+      },
+      {
+        "text": {
+          "de": [
+            "Nachhaltigkeitstipp: Ein per Frachtschiff importierter Apfel aus Neuseeland ist nicht unbedingt klimaschädlicher als ein deutscher Apfel, der monatelang im Kühlhaus lagert. Der Naturschutzbund Deutschland empfiehlt jedoch, auf eingeflogene Ware zu verzichten – das sind meist schnell verderbliche Obst- und Gemüsesorten, die von außerhalb Europas importiert werden. Mindestens ebenso gewinnbringend für den Klimaschutz ist jedoch: Kurze Strecken zum Supermarkt nicht mit dem Auto zurücklegen."
+          ],
+          "en": [
+            "Sustainability Tip: An apple shipped in from New Zealand is not necessarily more damaging to the climate than is a German apple that spends months in a refrigerated warehouse. Germany’s Nature and Biodiversity Conservation Union recommends, however, avoiding goods that have been flown in -- usually things like fruits and vegetable types that spoil rapidly and are imported from outside of Europe. Just as beneficial to the climate, though, is keeping your car in the garage if the supermarket is close by."
+          ]
+        }
       }
+    ]
+  },
 
+  {
+    "title": "3. Karte - Kleidung",
+    "functions": [],
+    "content": [
+      {
+        "text": {
+          "de": [
+            "Auf Überflüssiges verzichten spart Geld und Ressourcen. Schätzen Sie:",
+            "",
+            "**Wie viel Prozent der Kleidung in Ihrem Schrank tragen Sie so gut wie nie?**"
+          ],
+          "en": [
+            "Avoiding purchases of things you don’t need can save both money and resources. Take a guess: ",
+            "",
+            "*+What percent of the clothing in your wardrobe do you hardly ever wear?**"
+          ]
+        }
+      },
+      {
+        "input": {
+          "key": "sliderCloth",
+          "type": "slider",
+          "options": {
+            "unit": "%",
+            "min": 0,
+            "value": 50,
+            "max": 100,
+            "step": 1
+          }
+        }
+      },
+      {
+        "answer": {
+          "answerKey": [
+            "(inputs.sliderCloth.value < 19) && 'lessCloth'",
+            "(inputs.sliderCloth.value >= 19) && 'moreCloth'"
+          ],
+          "answerContext": {},
+          "templates": {
+            "default": {
+              "de": [
+                "Bitte bewegen Sie den Schieberegler"
+              ],
+              "en": [
+                "Please move the slider."
+              ]
+            },
+            "lessCloth": {
+              "de": [
+                "Damit liegen Sie **unter** dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
+              ],
+              "en": [
+                "That puts you **under** the German average. Almost every fifth piece of clothing in German wardrobes is hardly ever worn. German women own an average of 118 pieces of clothing whereas men have slightly more sustainable habits, owning an average of 73 items. The production of every piece of clothing consumes resources -- for example, around 2,700 liters (595 gallons) of water for a T-shirt and 10,900 liters (2,880 gallons) for a pair of jeans."
+              ]
+            },
+            "moreCloth": {
+              "de": [
+                "Damit liegen Sie **über** dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
+              ],
+              "en": [
+                "That puts you **over** the German average. Almost every fifth piece of clothing in German wardrobes is hardly ever worn. German women own an average of 118 pieces of clothing whereas men have slightly more sustainable habits, owning an average of 73 items. The production of every piece of clothing consumes resources -- for example, around 2,700 liters (595 gallons) of water for a T-shirt and 10,900 liters (2,880 gallons) for a pair of jeans."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "text": {
+          "de": [
+            "Nachhaltigkeits-Tipp: Im Netz lassen sich Kleider tauschen, leihen oder secondhand kaufen, zum Beispiel auf den Webseiten Kleiderkreisel.de oder Kleiderkorb.de."
+          ],
+          "en": [
+            "Sustainability Tip: On the Internet, you can trade, borrow or buy second hand on clothing swap websites like Kleiderkreisel.de or Kleiderkorb.de. ((SOLLEN WIR HIER US/UK WEBSEITEN LISTEN? Swapstyle oder Swap.com, zum Beispiel?))"
+          ]
+        }
+      }
     ]
   },
   {
-    "title": "3. Karte",
+    "title": "4. Karte - Fleisch",
     "dataset": "meat",
     "functions": [
       "getGermanCountryName",
@@ -310,6 +350,7 @@
       "getMaxValue",
       "getMinValue"
     ],
+
     "content": [
       {
         "text": {

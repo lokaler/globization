@@ -109,6 +109,7 @@ export default class ScatterComponent extends React.Component {
             fixed={ this.props.master.dataset.fixed }
             xScale={this.x}
             yScale={this.y}
+            margin={this.margin}
             transitionDuration={1000}
           />
         </g>

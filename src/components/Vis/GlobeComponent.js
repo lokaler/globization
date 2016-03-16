@@ -115,7 +115,7 @@ export default class GlobeComponent extends React.Component {
     this.svg.remove();
   }
 
-  getFillColor(iso,data){
+  getFillColor(iso){
     const val = this.dataset.getValueForCountry(iso);
     return val ? this.props.color(val) : "#EEE";
   }
@@ -194,12 +194,15 @@ export default class GlobeComponent extends React.Component {
 
   onMouseEnter(d){
     const c = this.path.centroid(d);
-    const val = this.getValueForCountry(d.properties.iso, this.props.master.dataset.data)
+    const value = this.dataset.getValueForCountry(d.properties.iso);
+    const unit = this.props.master.dataset.unit;
 
     this.props.actions.changeVis({
       tooltip: {
         active: true,
-        text: `${d.properties.iso}: ${val}`,
+        iso: d.properties.iso,
+        value,
+        unit,
         x: c[0],
         y: c[1]
       }
@@ -219,8 +222,17 @@ export default class GlobeComponent extends React.Component {
   render() {
     utils.log("render globe")
 
-    const paths = this.geometries.map((d, i) =>
-      <path key={ i } d={this.path(d)} fill={d.properties.fillColor} onMouseLeaves={this.onMouseLeave.bind(this,d)} onMouseEnters={this.onMouseEnter.bind(this,d)}></path>);
+    const paths = this.geometries.map((d, i) => {
+      return (
+        <path
+          key={ i }
+          d={this.path(d)}
+          fill={d.properties.fillColor}
+          onMouseLeave={this.onMouseLeave.bind(this,d)}
+          onMouseEnter={this.onMouseEnter.bind(this,d)}
+        />
+      )
+    });
 
     const activeGeometry = <path className="activeGeometry" d={this.path(this.activeGeometry)}/>;
     const graticule = <path className="graticule" key="graticule" d={ this.path(this.graticule) } />;
