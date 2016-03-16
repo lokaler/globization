@@ -15,7 +15,10 @@ export default class Text extends React.Component {
 
     return (
       <div styleName="widget" key={ `${+new Date()}_text` }>
-        <ReactMarkdown source={ text } />
+        <ReactMarkdown
+          source={ text }
+          renderers={{ Link: props => <a href={props.href} target="_blank">{props.children}</a> }}
+        />
       </div>
     );
   }
