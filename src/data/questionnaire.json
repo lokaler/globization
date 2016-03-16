@@ -555,7 +555,7 @@
           ],
           "answerContext": {
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
-            "wertLebensmittel": "i.sliderTrash / i.sliderSizeHousehold",
+            "wertLebensmittel": "f.fmt('%0.1f', i.sliderTrash / i.sliderSizeHousehold)",
             "sizeHousehold": "i.sliderSizeHousehold",
             "TrashSustainableTip": "i.sliderTrash / 2"
           },

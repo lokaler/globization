@@ -2,11 +2,13 @@ import { maxBy, minBy } from 'lodash';
 import { getDataset } from 'logic/Dataset';
 import translate from 'logic/translate';
 import { isNull, isUndefined } from 'lodash';
+import { sprintf } from 'sprintf-js';
 
 export default {
 
   isNull,
   isUndefined,
+  fmt: sprintf,
 
   getCountryName(datasetKey, value) {
     const dataset = getDataset(datasetKey);

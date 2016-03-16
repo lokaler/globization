@@ -85,6 +85,7 @@
     "redbox-react": "1.2.0",
     "rimraf": "2.5.0",
     "sass-loader": "3.1.2",
+    "sprintf-js": "1.0.3",
     "style-loader": "0.13.0",
     "url-loader": "0.5.7",
     "watch": "0.17.1",
