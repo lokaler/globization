@@ -57,7 +57,10 @@ export default class Answer extends React.Component {
     const className = classNames('answer', answer.className && `answer-${ answer.className }`);
     return (
       <div className={ className } key={ `${+new Date()}_answer` } styleName="widget">
-        <ReactMarkdown source={ answerContent.toString() } />
+        <ReactMarkdown
+          source={ answerContent.toString() }
+          renderers={{ Link: props => <a href={props.href} target="_blank">{props.children}</a> }}
+        />
       </div>
     );
   }
