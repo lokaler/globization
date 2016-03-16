@@ -112,17 +112,13 @@
           "de": [
             "# Worauf achten Sie beim Kauf?",
             "",
-            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
-            "",
-            "*Kaufen Sie Fairtrade-Produkte?*"
+            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?"
           ],
           "en": [
             "*** ENGLISH ***",
             "# Worauf achten Sie beim Kauf?",
             "",
-            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?",
-            "",
-            "*Kaufen Sie Fairtrade-Produkte?*"
+            "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?"
           ]
         }
       },
@@ -160,8 +156,12 @@
           "answerContext": {},
           "templates": {
             "default": {
-              "de": [],
-              "en": []
+              "de": [
+                "Bitte.."
+              ],
+              "en": [
+                "Please.."
+              ]
             },
             "never": {
               "de": [
@@ -262,83 +262,84 @@
     ]
   },
 
+  {
+    "title": "3. Karte - Kleidung",
+    "functions": [],
+    "content": [
       {
-        "title": "3. Karte - Kleidung",
-        "functions": [],
-        "content": [
-          {
-            "text": {
+        "text": {
+          "de": [
+            "Auf Überflüssiges verzichten spart Geld und Ressourcen. Schätzen Sie:",
+            "",
+            "**Wie viel Prozent der Kleidung in Ihrem Schrank tragen Sie so gut wie nie?**"
+          ],
+          "en": [
+            "Avoiding purchases of things you don’t need can save both money and resources. Take a guess: ",
+            "",
+            "*+What percent of the clothing in your wardrobe do you hardly ever wear?**"
+          ]
+        }
+      },
+      {
+        "input": {
+          "key": "sliderCloth",
+          "type": "slider",
+          "options": {
+            "unit": "%",
+            "min": 0,
+            "value": 50,
+            "max": 100,
+            "step": 1
+          }
+        }
+      },
+      {
+        "answer": {
+          "answerKey": [
+            "(inputs.sliderCloth.value < 19) && 'lessCloth'",
+            "'moreCloth'"
+          ],
+          "answerContext": {},
+          "templates": {
+            "default": {
               "de": [
-                "Auf Überflüssiges verzichten spart Geld und Ressourcen. Schätzen Sie:",
-                "",
-                "**Wie viel Prozent der Kleidung in Ihrem Schrank tragen Sie so gut wie nie?**"
+                "Bitte bewegen Sie den Schieberegler"
               ],
               "en": [
-                "Avoiding purchases of things you don’t need can save both money and resources. Take a guess: ",
-                "",
-                "*+What percent of the clothing in your wardrobe do you hardly ever wear?**"
+                "Please move the slider."
               ]
-            }
-          },
-          {
-            "input": {
-              "key": "sliderCloth",
-              "type": "slider",
-              "options": {
-                "unit": "%",
-                "min": 0,
-                "value": 50,
-                "max": 100,
-                "step": 1
-              }
-            }
-          },
-          {
-            "answer": {
-              "answerKey": [
-                "(inputs.sliderCloth.value < 19) && 'lessCloth'",
-                "'moreCloth'"
-              ],
-              "templates": {
-                "default": {
-                  "de": [
-                    "Bitte bewegen Sie den Schieberegler"
-                  ],
-                  "en": [
-                    "Please move the slider."
-                  ]
-                },
-                "lessCloth": {
-                  "de": [
-                    "Damit liegen Sie **unter** dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
-                  ],
-                  "en": [
-                    "That puts you **under** the German average. Almost every fifth piece of clothing in German wardrobes is hardly ever worn. German women own an average of 118 pieces of clothing whereas men have slightly more sustainable habits, owning an average of 73 items. The production of every piece of clothing consumes resources -- for example, around 2,700 liters (595 gallons) of water for a T-shirt and 10,900 liters (2,880 gallons) for a pair of jeans."
-                  ]
-                },
-                "moreCloth": {
-                  "de": [
-                    "Damit liegen Sie **über** dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
-                  ],
-                  "en": [
-                    "That puts you **over** the German average. Almost every fifth piece of clothing in German wardrobes is hardly ever worn. German women own an average of 118 pieces of clothing whereas men have slightly more sustainable habits, owning an average of 73 items. The production of every piece of clothing consumes resources -- for example, around 2,700 liters (595 gallons) of water for a T-shirt and 10,900 liters (2,880 gallons) for a pair of jeans."
-                  ]
-                }
-              }
-            }
-          },
-          {
-            "text": {
+            },
+            "lessCloth": {
               "de": [
-                "Nachhaltigkeits-Tipp: Im Netz lassen sich Kleider tauschen, leihen oder secondhand kaufen, zum Beispiel auf den Webseiten Kleiderkreisel.de oder Kleiderkorb.de."
+                "Damit liegen Sie **unter** dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
               ],
               "en": [
-                "Sustainability Tip: On the Internet, you can trade, borrow or buy second hand on clothing swap websites like Kleiderkreisel.de or Kleiderkorb.de. ((SOLLEN WIR HIER US/UK WEBSEITEN LISTEN? Swapstyle oder Swap.com, zum Beispiel?))"
+                "That puts you **under** the German average. Almost every fifth piece of clothing in German wardrobes is hardly ever worn. German women own an average of 118 pieces of clothing whereas men have slightly more sustainable habits, owning an average of 73 items. The production of every piece of clothing consumes resources -- for example, around 2,700 liters (595 gallons) of water for a T-shirt and 10,900 liters (2,880 gallons) for a pair of jeans."
+              ]
+            },
+            "moreCloth": {
+              "de": [
+                "Damit liegen Sie **über** dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
+              ],
+              "en": [
+                "That puts you **over** the German average. Almost every fifth piece of clothing in German wardrobes is hardly ever worn. German women own an average of 118 pieces of clothing whereas men have slightly more sustainable habits, owning an average of 73 items. The production of every piece of clothing consumes resources -- for example, around 2,700 liters (595 gallons) of water for a T-shirt and 10,900 liters (2,880 gallons) for a pair of jeans."
               ]
             }
           }
-        ]
+        }
       },
+      {
+        "text": {
+          "de": [
+            "Nachhaltigkeits-Tipp: Im Netz lassen sich Kleider tauschen, leihen oder secondhand kaufen, zum Beispiel auf den Webseiten Kleiderkreisel.de oder Kleiderkorb.de."
+          ],
+          "en": [
+            "Sustainability Tip: On the Internet, you can trade, borrow or buy second hand on clothing swap websites like Kleiderkreisel.de or Kleiderkorb.de. ((SOLLEN WIR HIER US/UK WEBSEITEN LISTEN? Swapstyle oder Swap.com, zum Beispiel?))"
+          ]
+        }
+      }
+    ]
+  },
   {
     "title": "4. Karte - Fleisch",
     "dataset": "meat",
