@@ -55,7 +55,7 @@ export default class ScatterComponent extends React.Component {
   }
 
 
-  shouldComponentUpdate(nextProps) {
+  componentWillReceiveProps(nextProps) {
     utils.log("scatter shouldComponentUpdate", nextProps, this.props);
     let update = false;
 
@@ -104,6 +104,7 @@ export default class ScatterComponent extends React.Component {
             transitionDuration={1000}
           />
           <DotsComponent {...this.props}
+            active={this.props.vis.active}
             tickSize={-this.innerWidth}
             className='dots'
             fixed={ this.props.master.dataset.fixed }

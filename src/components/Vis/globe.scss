@@ -41,5 +41,10 @@
   .item {
     fill: rgba(241, 105, 19, 0.64);
     cursor: pointer;
+
+    &.active {
+      stroke:#5A2507;
+      stroke-width:2px;
+    }
   }
 }

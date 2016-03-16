@@ -72,6 +72,7 @@ export default class DotsComponent extends React.Component {
     const x = this.props.xScale;
     const y = this.props.yScale;
     const data = this.props.master.dataset.data;
+    const active = this.props.active;
 
     const item = this.g.selectAll('circle')
           .data(data, d => d.iso );
@@ -84,6 +85,10 @@ export default class DotsComponent extends React.Component {
       .on("mouseleave", this.mouseleave.bind(this))
 
     item
+      .classed("active", d=> d.iso == active)
+      .sort((a,b)=>{
+        return (a.iso == active) - (b.iso == active);
+      })
       .transition()
       .duration(this.props.transitionDuration)
       .attr('r', function(d) { return 5+Math.random()*5; })

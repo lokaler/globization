@@ -86,8 +86,6 @@ export default class MapComponent extends React.Component {
             animation: null
           });
       })
-
-
   }
 
 
