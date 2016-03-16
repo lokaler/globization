@@ -7,7 +7,7 @@ import Answer from './widgets/Answer';
 import Input from './widgets/Input';
 import Footer from './Footer';
 import ShadowScrollbars from './ShadowScrollbars';
-// import Outro from './Outro';
+import translate from 'logic/translate';
 
 const WidgetFactory = {
   text: React.createFactory(Text),
@@ -61,18 +61,18 @@ export default class Questionnaire extends React.Component {
     }
 
     let widgets = null;
-    let nextBtnLabel = 'Weiter';
+    let nextBtnLabel = 'next';
 
-    if (questions.activeCard === -1) {
+    const activeCard = questions.activeCard;
+    const firstCard = activeCard === -1;
+    const lastCard = activeCard === questions.questionData.length - 2;
+
+    if (firstCard) {
       widgets = <Intro { ...this.props }/>;
-    } else if (questions.activeCard === questions.questionData.length - 1) {
-      // widgets = <Outro { ...this.props }/>;
-      widgets = this.createWidgets(questions);
     } else {
       widgets = this.createWidgets(questions);
-
-      if (questions.activeCard === questions.questionData.length - 2) {
-        nextBtnLabel = 'Ergebnis';
+      if (lastCard) {
+        nextBtnLabel = 'last';
       }
     }
 
@@ -91,7 +91,7 @@ export default class Questionnaire extends React.Component {
             { widgets }
           </div>
         </ShadowScrollbars>
-        <Footer nextBtnLabel={ nextBtnLabel } prevBtnLabel="Zurück" { ...this.props }/>
+        <Footer nextBtnLabel={ translate(nextBtnLabel) } prevBtnLabel={ translate('prev') } { ...this.props }/>
       </div>
     );
   }

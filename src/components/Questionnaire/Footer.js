@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
-import translate from 'logic/translate';
 
 @cssModules()
 export default class Footer extends React.Component {
@@ -41,7 +40,7 @@ export default class Footer extends React.Component {
   }
 
   render() {
-    const { questions } = this.props;
+    const { questions, prevBtnLabel, nextBtnLabel } = this.props;
     const showNextBtn = questions.activeCard < questions.questionData.length - 1;
     const showPrevBtn = questions.activeCard > -1;
     const showPagination = questions.activeCard >= 0
@@ -56,13 +55,13 @@ export default class Footer extends React.Component {
           showPrevBtn &&
           <div styleName="btn-prev" onClick={ this.getClickHandler(questions.activeCard - 1) }>
             <div styleName="btn-arrow"></div>
-            <div styleName="btn-text">{ translate("PREVIOUS") }</div>
+            <div styleName="btn-text">{ prevBtnLabel }</div>
           </div>
         }
         { showPagination && <div styleName="pagination" className="clearfix">{ pagination }</div> }
         { showNextBtn && questions.activeCard !== -1 &&
             <div styleName="btn-next" onClick={ this.getClickHandler(questions.activeCard + 1) }>
-              <div styleName="btn-text">{ translate("NEXT") }</div>
+              <div styleName="btn-text">{ nextBtnLabel }</div>
               <div styleName="btn-arrow"></div>
             </div>
         }

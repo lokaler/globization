@@ -8,12 +8,16 @@
     "en": "Globus"
   },
 
-  "PREVIOUS": {
+  "prev": {
     "de": "ZURÜCK",
     "en": "PREVIOUS"
   },
-  "NEXT": {
+  "next": {
     "de": "WEITER",
     "en": "NEXT"
+  },
+  "last": {
+    "de": "Ergebnis",
+    "en": "Result"
   }
 }
