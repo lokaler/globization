@@ -297,7 +297,7 @@
         "answer": {
           "answerKey": [
             "(inputs.sliderCloth.value < 19) && 'lessCloth'",
-            "'moreCloth'"
+            "(inputs.sliderCloth.value >= 19) && 'moreCloth'"
           ],
           "answerContext": {},
           "templates": {
