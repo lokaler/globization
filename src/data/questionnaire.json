@@ -45,9 +45,9 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider.value < 15) && 'antwort_a'",
-            "(inputs.slider.value < 50) && 'antwort_b'",
-            "(inputs.slider.value >= 50) && 'antwort_c'"
+            "(inputs.slider.value < 15) && 'litteFoodCon'",
+            "(inputs.slider.value < 50) && 'mediumFoodCon'",
+            "(inputs.slider.value >= 50) && 'highFoodCon'"
           ],
           "answerContext": {
             "landAusgaben": "funcs.getCountryName('food', inputs.slider.value)",
@@ -65,16 +65,16 @@
                 "Please move the slider."
               ]
             },
-            "antwort_a": {
+            "littleFoodCon": {
               "de": [
-                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}**, die nur **{{ valueMin }}** Prozent Ihrer Konsumausgaben für Nahrungsmittel aufwenden."
+                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Konsumausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just *{{ valueMin }}* percent, which is the lowest percentage of all countries"
+                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}** . There, the share is just ***{{ valueMin }}** * percent, which is the lowest percentage of all countries"
               ]
             },
-            "antwort_b": {
+            "mediumFoodCon": {
               "de": [
                 "Menschen **{{ landAusgaben }}** geben, gemessen an den gesamten Konsumausgaben, ähnlich viel für Essen aus wie Sie."
               ],
@@ -82,7 +82,7 @@
                 "People **{{ landAusgaben }}** spend a similar amount on food as you do, measured as a percentage of total consumption expenditures."
               ]
             },
-            "antwort_c": {
+            "highFoodCon": {
               "de": [
                 "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen **{{ landMax }}** den größten Anteil ihrer Konsumausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
               ],
@@ -425,10 +425,10 @@
             },
             "muchMeat": {
               "de": [
-                "Das entspricht etwa der pro Woche und Person verfügbaren Menge *{{ landMax }}*."
+                "Das entspricht etwa der pro Woche und Person verfügbaren Menge ***{{ landMax }}** *."
               ],
               "en": [
-                "That is comparable to the weekly per capita amount available **{{ landMax }}**."
+                "That is comparable to the weekly per capita amount available **{{ landMax }}** ."
               ]
             },
             "muchTooMuchMeat": {
@@ -460,10 +460,10 @@
       {
         "text": {
           "de": [
-            "Nachhaltigkeitstipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um [Gasred= Wert_Fleisch_ges/2*3.89] kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr [Gasred*1000/249] Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch Sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland."
+            "Nachhaltigkeitstipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um **{{ gasred }}** kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr **{{ gasred2 }}** Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch Sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland."
           ],
           "en": [
-            "Sustainability Tip: If you were to cut your meat consumption in half for a year, you could reduce your CO2 emissions by around [Gasred= Wert_Fleisch_ges/2*3.89] kilograms. You could save the same amount by driving [Gasred*1000/249] fewer kilometers with your car. Compared with the CO2 emissions produced by taking a plane trip, to the Balearic Islands for example, that isn't much. But by reducing meat consumption, you are also protecting resources like clean water and farmland."
+            "Sustainability Tip: If you were to cut your meat consumption in half for a year, you could reduce your CO2 emissions by around **{{ gasred }}** kilograms. You could save the same amount by driving **{{ gasred2 }}** fewer kilometers with your car. Compared with the CO2 emissions produced by taking a plane trip, to the Balearic Islands for example, that isn't much. But by reducing meat consumption, you are also protecting resources like clean water and farmland."
           ]
         }
       }
@@ -544,7 +544,7 @@
             "landAbfall": "funcs.getCountryName('foodwaste', inputs.sliderTrash.value / inputs.sliderSizeHousehold.value)",
             "wertLebensmittel": "inputs.sliderTrash.value / inputs.sliderSizeHousehold.value",
             "sizeHousehold": "inputs.sliderSizeHousehold.value",
-            "AmountTrashPerHead": "inputs.sliderTrash.value * inputs.sliderSizeHousehold.value"
+            "TrashSustainableTip": "inputs.sliderTrash.value / 2"
           },
           "templates": {
             "default": {
@@ -553,18 +553,18 @@
             },
             "littleTrash": {
               "de": [
-                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }} Kilogramm pro Kopf** weniger Lebensmittel weggeworfen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}**  Kilogramm pro Kopf** weniger Lebensmittel weggeworfen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "At **{{ wertLebensmittel }} kilograms per person**, your household throws away less food than those in all European countries for which data is available. But compared to places around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
+                "At **{{ wertLebensmittel }}**  kilograms per person**, your household throws away less food than those in all European countries for which data is available. But compared to places around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
               ]
             },
             "someTrash": {
               "de": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeworfen wie **{{ landAbfall }}**. Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeworfen wie **{{ landAbfall }}** . Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "Your household throws away about as much food per person as **{{ landAbfall }}**. ] But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
+                "Your household throws away about as much food per person as **{{ landAbfall }}** . ] But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
               ]
             },
             "muchTrash": {
@@ -581,10 +581,10 @@
       {
         "text": {
           "de": [
-            "Um Ihren persönlichen Beitrag zu den UN-Nachhaltigkeitszielen zu leisten, müssten Sie pro Woche [Wert_Essen/2] Kilogramm weniger Essen wegschmeißen."
+            "Um Ihren persönlichen Beitrag zu den UN-Nachhaltigkeitszielen zu leisten, müssten Sie pro Woche **{{ TrashSustainableTip }}** Kilogramm weniger Essen wegschmeißen."
           ],
           "en": [
-            "To do your part in the realization of the UN’s Sustainable Development Goals, you would have to throw away [Wert_Essen/2] fewer kilograms of food each week. The UN has called for consumers to reduce food waste by half by 2030."
+            "To do your part in the realization of the UN’s Sustainable Development Goals, you would have to throw away **{{ TrashSustainableTip }}** fewer kilograms of food each week. The UN has called for consumers to reduce food waste by half by 2030."
           ]
         }
       }
@@ -658,7 +658,7 @@
               "de": [
                 "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland im Jahr 2014 waren das 2,41 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
                 "",
-                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht {{ landMin }} mit **{{ valueMin }}** Kilogramm pro Jahr und Einwohner."
+                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}**  mit **{{ valueMin }}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
                 "To be able to compare internationally, we added your value together with the amount of electronic waste produced by companies and public institutions on a per capita and per year basis. For Germany in 2014, that value was 2.41 kilograms (5.3 pounds). As such, you are responsible for a total of **{{ wertEwaste }}** kilograms of electronic waste.",
@@ -670,19 +670,19 @@
               "de": [
                 "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland im Jahr 2014 waren das 2,41 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
                 "",
-                "Das entspricht etwa dem Pro-Kopf-Wert **{{ countryEwaste }}**."
+                "Das entspricht etwa dem Pro-Kopf-Wert **{{ countryEwaste }}** ."
               ],
               "en": [
                 "To be able to compare internationally, we added your value together with the amount of electronic waste produced by companies and public institutions on a per capita and per year basis. For Germany in 2014, that value was 2.41 kilograms (5.3 pounds). As such, you are responsible for a total of **{{ wertEwaste }}** kilograms of electronic waste.",
                 "",
-                "That is roughly equivalent to the per capital value **{{ countryEwaste }}**."
+                "That is roughly equivalent to the per capital value **{{ countryEwaste }}** ."
               ]
             },
             "muchEwaste": {
               "de": [
                 "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland im Jahr 2014 waren das 2,41 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
                 "",
-                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht {{ landMax }} mit {{ valueMax }} Kilogramm pro Jahr und Einwohner."
+                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht **{{ landMax }}**  mit **{{ valueMax }}**  Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
                 "To be able to compare internationally, we added your value together with the amount of electronic waste produced by companies and public institutions on a per capita and per year basis. For Germany in 2014, that value was 2.41 kilograms (5.3 pounds). As such, you are responsible for a total of **{{ wertEwaste }}** kilograms of electronic waste.",
@@ -731,9 +731,9 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.slider.value < 15) && 'antwort_a'",
-            "(inputs.slider.value < 50) && 'antwort_b'",
-            "(inputs.slider.value >= 50) && 'antwort_c'"
+            "(inputs.slider.value < 15) && 'litteFoodCon'",
+            "(inputs.slider.value < 50) && 'mediumFoodCon'",
+            "(inputs.slider.value >= 50) && 'highFoodCon'"
           ],
           "answerContext": {
             "landAusgaben": "funcs.getCountryName('electro', inputs.slider.value)",
@@ -749,31 +749,31 @@
               "de": [],
               "en": []
             },
-            "antwort_a": {
+            "litteFoodCon": {
               "de": [
-                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen {{ landMin }}, die nur {{ valueMin }} Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "You spend a very small percentage of your money on food, even less than people [Land_Min]. There, the share is just [Wert_Land_Min] percent, which is the lowest percentage of all countries."
+                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}** . There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
               ]
             },
-            "antwort_b": {
+            "mediumFoodCon": {
               "de": [
-                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen in {{ landAusgaben }}. Im Vergleich von {{ datasetCount }} Ländern liegen Sie damit auf Platz [Anzahl Länder minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen in **{{ landAusgaben }}** . Im Vergleich von **{{ datasetCount }}**  Ländern liegen Sie damit auf Platz [Anzahl Länder minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen in {{ landAusgaben }}. Im Vergleich von {{ datasetCount }} Ländern liegen Sie damit auf Platz [Anzahl Länder minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen in **{{ landAusgaben }}** . Im Vergleich von **{{ datasetCount }}** Ländern liegen Sie damit auf Platz [Anzahl Länder minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
               ]
             },
-            "antwort_c": {
+            "highFoodCon": {
               "de": [
-                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
+                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in **{{ landMax }}**  den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}**  Prozent."
               ],
               "en": [
                 "*** ENGLISH ***",
-                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
+                "You spend a very large share of your money on food. Internationally, people  **{{ landMax }}**  devote the largest share of their expenditures to food, namely **{{ valueMax }}** percent."
               ]
             }
           }
@@ -782,9 +782,10 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.sliderCloth.value < 15) && 'antwort_a'",
-            "(inputs.sliderCloth.value < 50) && 'antwort_b'",
-            "(inputs.sliderCloth.value >= 50) && 'antwort_c'"
+            "(inputs.sliderMeatConsumption.value < 1) && 'noMeat'",
+            "(inputs.sliderMeatConsumption.value < 2) && 'someMeat'",
+            "(inputs.sliderMeatConsumption.value < 5) && 'muchMeat'",
+            "(inputs.sliderMeatConsumption.value >= 5) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
             "landAusgaben": "funcs.getCountryName('electro', inputs.slider.value)",
@@ -800,36 +801,132 @@
               "de": [],
               "en": []
             },
-            "antwort_a": {
+            "noMeat": {
               "de": [
                 "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
+                "You are a vegetarian, or even a vegan? The CO2 emissions you produce over the course of a year are around 330 kilograms (727 pounds) less than those of an average German meat-eater. That is the equivalent of driving 1,300 kilometers (810 miles) in a mid-sized, gasoline-powered vehicle."
               ]
             },
-            "antwort_b": {
+            "someMeat": {
               "de": [
-                "Ihr Fleischbedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken"
+                "Ihr Fleischbedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
               ],
               "en": [
-                "*** ENGLISH ***",
-                "Ihr Fleischbedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken",
-                "People in [LAND_Ausgaben] spend a similar amount on food as you do, measured as a percentage of total expenditures. Compared to [Anzahl_Länder_Lebensmittel] countries, that puts you at number [Anzahl Länder minus Anzahl Länder mit Wert kleiner persönlicher Wert] on the list."
+                "Your level of consumption can be covered in any of the countries for which comparative data is available."
               ]
             },
-            "antwort_c": {
+            "muchMeat": {
               "de": [
-                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in {{ landMax }} den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich {{ valueMax }} Prozent."
+                "Ihr Fleischbedarf pro Woche entspricht [Wert_Fleisch*1,25] Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge in [LAND_Fleisch]. Mehr Fleisch pro Kopf gibt es in [Anzahl_Länder_Fleisch minus Anzahl Länder mit Wert kleinergleich persönlicher Wert] von [Anzahl_Länder_Fleisch] Ländern."
               ],
               "en": [
-                "You spend a very large share of your money on food. Internationally, people in [Land_Max] devote the largest share of their expenditures to food, namely [Wert_Land_max] percent."
+                "Your weekly meat consumption is [Wert_Fleisch*1,25] kilograms. That is comparable to the weekly per capita amount available in [LAND_Fleisch]. There is more meat available per capita in [Anzahl_Länder_Fleisch minus Anzahl Länder mit Wert kleinergleich persönlicher Wert] of [Anzahl_Länder_Fleisch] countries."
               ]
+              },
+              "muchTooMuchMeat": {
+                "de": [
+                  "Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available in [Land_max], where [Wert_Land_max] kilograms are available per person and week"
+                ],
+                "en": [
+                  "Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available in [Land_max], where [Wert_Land_max] kilograms are available per person and week."
+                ]
+              }
+            }
+          }
+        },
+        {
+        "answer": {
+          "answerKey": [
+            "(inputs.sliderTrash.value < 1) && 'littleTrash'",
+            "(inputs.sliderTrash.value <= 2) && 'someTrash'",
+            "(inputs.sliderTrash.value > 2) && 'muchTrash'"
+          ],
+          "answerContext": {
+            "landAbfall": "funcs.getCountryName('foodwaste', inputs.sliderTrash.value / inputs.sliderSizeHousehold.value)",
+            "wertLebensmittel": "inputs.sliderTrash.value / inputs.sliderSizeHousehold.value",
+            "sizeHousehold": "inputs.sliderSizeHousehold.value"
+          },
+          "templates": {
+            "default": {
+              "de": [],
+              "en": []
+            },
+            "littleTrash": {
+              "de": [
+                ") In Ihrem Haushalt werden mit [Wert] Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
+              ],
+              "en": [
+                "At [Wert] kilograms per person, your household throws away less food than those in all European countries for which data is available. "
+              ]
+                },
+            "someTrash": {
+              "de": [
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in [LAND_Foodwaste]. Sie liegen damit im Vergleich von [Anzahl_Länder_Foodwaste] europäischen Ländern auf Platz [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+              ],
+              "en": [
+                "Your household throws away about as much food per person as in [LAND_Foodwaste]. In a comparison of  [Anzahl_Länder_Foodwaste] European countries, that puts you at number [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert] on the list."
+              ]
+            },
+            "muchTrash": {
+              "de": [
+                ") In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in [LAND_Foodwaste]. Sie liegen damit im Vergleich von [Anzahl_Länder_Foodwaste] europäischen Ländern auf Platz [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+              ],
+              "en": [
+                "Your household throws away about as much food per person as in [LAND_Foodwaste]. In a comparison of  [Anzahl_Länder_Foodwaste] European countries, that puts you at number [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert] on the list."
+              ]
+              }
+            }
+          }
+        },
+        {
+        "answer": {
+          "answerKey": [
+            "(inputs.sliderEwaste.value < 10) && 'lessEwaste'",
+            "(inputs.sliderEwaste.value <= 29) && 'someEwaste'",
+            "(inputs.sliderEwaste.value > 29) && 'muchEwaste'"
+          ],
+          "answerContext": {
+            "countryEwaste": "funcs.getCountryName('electro', inputs.sliderEwaste)",
+            "landMax": "funcs.getMaxCountryName('electro')",
+            "landMin": "funcs.getMinCountryName('electro')",
+            "valueMax": "funcs.getMaxValue('electro')",
+            "valueMin": "funcs.getMinValue('electro')",
+            "wertEwaste": "inputs.sliderEwaste.value + 2.41"
+          },
+          "templates": {
+            "default": {
+              "de": [],
+              "en": []
+            },
+            "lessEwaste": {
+              "de": [
+                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht [Land_min] mit [Wert_Land_min] Kilogramm pro Jahr und Einwohner."
+              ],
+              "en": [
+                "At [Wert] kilograms per person, your household throws away less food than those in all European countries for which data is available. "
+              ]
+                },
+            "someEwaste": {
+              "de": [
+                "Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen aus [LAND_Schrott]. In [Anzahl_Länder_Elektroschrott minus Anzahl Länder Elektroschrott mit Wert größergleich persönlicher Wert] von [Anzahl_Länder_Elektroschrott] Ländern ist die Elektroschrottmenge pro Person geringer."
+              ],
+              "en": [
+                "You are responsible for roughly the same amount of electronic waste as people in [LAND_Schrott]. The amount of electronic waste per person is lower in [Anzahl_Länder_Elektroschrott minus Anzahl Länder Elektroschrott mit Wert größergleich persönlicher Wert] of [Anzahl_Länder_Elektroschrott] countries."
+              ]
+            },
+            "muchEwaste": {
+              "de": [
+                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht [Land_max] mit [Wert_Land_max] Kilogramm pro Jahr und Einwohner."
+              ],
+              "en": [
+                "That is more than in all countries for which data is available. The most electronic waste is produced by [Land_max], with [Wert_Land_max] kilograms per year and resident."
+              ]
+              }
             }
           }
         }
-      }
     ]
   }
 ]
