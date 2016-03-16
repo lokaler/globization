@@ -109,7 +109,12 @@ export default class GlobeComponent extends React.Component {
     utils.log("componentDidMount", this.props)
 
     this.svg = d3.select(this.refs.globeSVG).call(this.zoom);
-    this.resetGlobe();
+
+    if(this.props.vis.active){
+      this.zoomToCountry(this.props.vis.active);
+    } else {
+      this.resetGlobe();
+    }
 
   }
 
@@ -126,6 +131,7 @@ export default class GlobeComponent extends React.Component {
 
 
   zoomToCountry(name){
+    this.activeGeometry = _.find(this.props.master.topojson, (d)=> d.properties.iso === name);
 
     const country = _.find(this.geometries, (d)=> d.properties.iso === name);
     if(!country){ utils.log("country not found!"); return; }
@@ -153,8 +159,8 @@ export default class GlobeComponent extends React.Component {
     }
 
     if(nextProps.vis.active != this.props.vis.active) {
-      this.activeGeometry = _.find(nextProps.master.topojson, (d)=> d.properties.iso === nextProps.vis.active);
-      update = true;
+      //this.activeGeometry = _.find(nextProps.master.topojson, (d)=> d.properties.iso === nextProps.vis.active);
+      //update = true;
     }
 
     if(nextProps.master.dataset != this.props.master.dataset) {

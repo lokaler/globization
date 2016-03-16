@@ -101,6 +101,10 @@ export default class MapComponent extends React.Component {
     const translate = dataset.scale==1 ? this.reset.translate : dataset.translate.map(d=>d*this.reset.scale);
     const scale = this.reset.scale * dataset.scale;
 
+    if(this.props.vis.active){
+      this.activeGeometry = _.find(this.props.master.topojson, (d)=> d.properties.iso === this.props.vis.active);
+    }
+
     this.svg.call(this.zoom
       .scale(this.props.vis.zoom)
       .translate(this.props.vis.translate)
@@ -127,12 +131,6 @@ export default class MapComponent extends React.Component {
       return val ? this.props.color(val) : "#EEE";
     }
 
-  zoomToCountry(name){
-
-    const country = _.find(this.geometries, (d)=> d.properties.iso === name);
-    if(!country){ utils.log("country not found!"); return; }
-
-  }
 
   componentWillReceiveProps(nextProps) {
     //utils.log("shouldComponentUpdate", nextProps.vis.animation ? "no": "yes");
@@ -218,7 +216,6 @@ export default class MapComponent extends React.Component {
     });
 
     const activeGeometry = <path className="activeGeometry" d={this.path(this.activeGeometry)}/>;
-
 
     return (
       <div>
