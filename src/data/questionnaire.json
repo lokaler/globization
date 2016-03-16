@@ -45,16 +45,16 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.sliderFoodSpending.value < 15) && 'littleFoodCon'",
-            "(inputs.sliderFoodSpending.value < 50) && 'mediumFoodCon'",
-            "(inputs.sliderFoodSpending.value >= 50) && 'highFoodCon'"
+            "(i.sliderFoodSpending < 15) && 'littleFoodCon'",
+            "(i.sliderFoodSpending < 50) && 'mediumFoodCon'",
+            "(i.sliderFoodSpending >= 50) && 'highFoodCon'"
           ],
           "answerContext": {
-            "landAusgaben": "funcs.getCountryName('food', inputs.sliderFoodSpending.value)",
-            "landMax": "funcs.getMaxCountryName('food')",
-            "landMin": "funcs.getMinCountryName('food')",
-            "valueMax": "funcs.getMaxValue('food')",
-            "valueMin": "funcs.getMinValue('food')"
+            "landAusgaben": "f.getCountryName('food', i.sliderFoodSpending)",
+            "landMax": "f.getMaxCountryName('food')",
+            "landMin": "f.getMinCountryName('food')",
+            "valueMax": "f.getMaxValue('food')",
+            "valueMin": "f.getMinValue('food')"
           },
           "templates": {
             "default": {
@@ -147,9 +147,9 @@
       {
         "answer": {
           "answerKey": [
-            "inputs.bioproduct.value === 'never' && 'never'",
-            "inputs.bioproduct.value === 'sometimes' && 'sometimes'",
-            "inputs.bioproduct.value === 'always' && 'always'"
+            "i.bioproduct === 'never' && 'never'",
+            "i.bioproduct === 'sometimes' && 'sometimes'",
+            "i.bioproduct === 'always' && 'always'"
           ],
           "answerContext": {},
           "templates": {
@@ -213,7 +213,7 @@
       },
       {
         "answer": {
-          "answerKey": ["inputs.localproducts.value"],
+          "answerKey": ["i.localproducts"],
           "answerContext": {},
           "templates": {
             "default": {
@@ -298,8 +298,8 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.sliderCloth.value < 19) && 'lessCloth'",
-            "(inputs.sliderCloth.value >= 19) && 'moreCloth'"
+            "(i.sliderCloth < 19) && 'lessCloth'",
+            "(i.sliderCloth >= 19) && 'moreCloth'"
           ],
           "answerContext": {},
           "templates": {
@@ -386,16 +386,16 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.sliderMeatConsumption.value < 1) && 'noMeat'",
-            "(inputs.sliderMeatConsumption.value < 2) && 'someMeat'",
-            "(inputs.sliderMeatConsumption.value < 5) && 'muchMeat'",
-            "(inputs.sliderMeatConsumption.value >= 5) && 'muchTooMuchMeat'"
+            "(i.sliderMeatConsumption < 1) && 'noMeat'",
+            "(i.sliderMeatConsumption < 2) && 'someMeat'",
+            "(i.sliderMeatConsumption < 5) && 'muchMeat'",
+            "(i.sliderMeatConsumption >= 5) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
-            "wertFleisch": "inputs.sliderMeatConsumption.value * 1.31",
-            "landMax": "funcs.getMaxCountryName('meat')",
-            "gasred": "inputs.sliderMeatConsumption.value / 2 * 3.89",
-            "gasred2" : "inputs.sliderMeatConsumption.value / 2 * 3.89 * 1000 / 249"
+            "wertFleisch": "i.sliderMeatConsumption * 1.31",
+            "landMax": "f.getMaxCountryName('meat')",
+            "gasred": "i.sliderMeatConsumption / 2 * 3.89",
+            "gasred2" : "i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249"
           },
           "templates": {
             "default": {
@@ -458,7 +458,7 @@
         "answer": {
           "className": "tip",
           "answerKey": [
-            "(inputs.sliderMeatConsumption.value >= 1) && 'meat'"
+            "(i.sliderMeatConsumption >= 1) && 'meat'"
           ],
           "answerContext": {},
           "templates": {
@@ -548,15 +548,15 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.sliderTrash.value < 1) && 'littleTrash'",
-            "(inputs.sliderTrash.value <= 2) && 'someTrash'",
-            "(inputs.sliderTrash.value > 2) && 'muchTrash'"
+            "(i.sliderTrash < 1) && 'littleTrash'",
+            "(i.sliderTrash <= 2) && 'someTrash'",
+            "(i.sliderTrash > 2) && 'muchTrash'"
           ],
           "answerContext": {
-            "landAbfall": "funcs.getCountryName('foodwaste', inputs.sliderTrash.value / inputs.sliderSizeHousehold.value)",
-            "wertLebensmittel": "inputs.sliderTrash.value / inputs.sliderSizeHousehold.value",
-            "sizeHousehold": "inputs.sliderSizeHousehold.value",
-            "TrashSustainableTip": "inputs.sliderTrash.value / 2"
+            "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
+            "wertLebensmittel": "i.sliderTrash / i.sliderSizeHousehold",
+            "sizeHousehold": "i.sliderSizeHousehold",
+            "TrashSustainableTip": "i.sliderTrash / 2"
           },
           "templates": {
             "default": {
@@ -645,17 +645,17 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.sliderEwaste.value < 10) && 'lessEwaste'",
-            "(inputs.sliderEwaste.value <= 29) && 'someEwaste'",
-            "(inputs.sliderEwaste.value > 29) && 'muchEwaste'"
+            "(i.sliderEwaste < 10) && 'lessEwaste'",
+            "(i.sliderEwaste <= 29) && 'someEwaste'",
+            "(i.sliderEwaste > 29) && 'muchEwaste'"
           ],
           "answerContext": {
-            "countryEwaste": "funcs.getCountryName('electro', inputs.sliderEwaste)",
-            "landMax": "funcs.getMaxCountryName('electro')",
-            "landMin": "funcs.getMinCountryName('electro')",
-            "valueMax": "funcs.getMaxValue('electro')",
-            "valueMin": "funcs.getMinValue('electro')",
-            "wertEwaste": "inputs.sliderEwaste.value + 2.41"
+            "countryEwaste": "f.getCountryName('electro', i.sliderEwaste)",
+            "landMax": "f.getMaxCountryName('electro')",
+            "landMin": "f.getMinCountryName('electro')",
+            "valueMax": "f.getMaxValue('electro')",
+            "valueMin": "f.getMinValue('electro')",
+            "wertEwaste": "i.sliderEwaste + 2.41"
           },
           "templates": {
             "default": {
@@ -743,16 +743,16 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.sliderFoodSpending.value < 15) && 'litteFoodCon'",
-            "(inputs.sliderFoodSpending.value < 50) && 'mediumFoodCon'",
-            "(inputs.sliderFoodSpending.value >= 50) && 'highFoodCon'"
+            "(i.sliderFoodSpending < 15) && 'litteFoodCon'",
+            "(i.sliderFoodSpending < 50) && 'mediumFoodCon'",
+            "(i.sliderFoodSpending >= 50) && 'highFoodCon'"
           ],
           "answerContext": {
-            "landAusgaben": "funcs.getCountryName('food', inputs.sliderFoodSpending.value)",
-            "landMax": "funcs.getMaxCountryName('food')",
-            "landMin": "funcs.getMinCountryName('food')",
-            "valueMax": "funcs.getMaxValue('food')",
-            "valueMin": "funcs.getMinValue('food')"
+            "landAusgaben": "f.getCountryName('food', i.sliderFoodSpending)",
+            "landMax": "f.getMaxCountryName('food')",
+            "landMin": "f.getMinCountryName('food')",
+            "valueMax": "f.getMaxValue('food')",
+            "valueMin": "f.getMinValue('food')"
           },
           "templates": {
             "default": {
@@ -796,18 +796,18 @@
       {
         "answer": {
           "answerKey": [
-            "(inputs.sliderMeatConsumption.value < 1) && 'noMeat'",
-            "(inputs.sliderMeatConsumption.value < 2) && 'someMeat'",
-            "(inputs.sliderMeatConsumption.value < 5) && 'muchMeat'",
-            "(inputs.sliderMeatConsumption.value >= 5) && 'muchTooMuchMeat'"
+            "(i.sliderMeatConsumption < 1) && 'noMeat'",
+            "(i.sliderMeatConsumption < 2) && 'someMeat'",
+            "(i.sliderMeatConsumption < 5) && 'muchMeat'",
+            "(i.sliderMeatConsumption >= 5) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
-            "wertFleisch": "inputs.sliderMeatConsumption.value * 1.31",
-            "landMax": "funcs.getMaxCountryName('meat')",
-            "gasred": "inputs.sliderMeatConsumption.value / 2 * 3.89",
-            "gasred2" : "inputs.sliderMeatConsumption.value / 2 * 3.89 * 1000 / 249",
-            "numberCountriesWithConsumption": "funcs.getDatasetCount('meat')",
-            "numbercountriesWithLowerMeatConsumptionThanMe": "funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
+            "wertFleisch": "i.sliderMeatConsumption * 1.31",
+            "landMax": "f.getMaxCountryName('meat')",
+            "gasred": "i.sliderMeatConsumption / 2 * 3.89",
+            "gasred2" : "i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249",
+            "numberCountriesWithConsumption": "f.getDatasetCount('meat')",
+            "numbercountriesWithLowerMeatConsumptionThanMe": "f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')"
           },
           "templates": {
             "default": {
@@ -852,14 +852,14 @@
         {
         "answer": {
           "answerKey": [
-            "(inputs.sliderTrash.value < 1) && 'littleTrash'",
-            "(inputs.sliderTrash.value <= 2) && 'someTrash'",
-            "(inputs.sliderTrash.value > 2) && 'muchTrash'"
+            "(i.sliderTrash < 1) && 'littleTrash'",
+            "(i.sliderTrash <= 2) && 'someTrash'",
+            "(i.sliderTrash > 2) && 'muchTrash'"
           ],
           "answerContext": {
-            "landAbfall": "funcs.getCountryName('foodwaste', inputs.sliderTrash.value / inputs.sliderSizeHousehold.value)",
-            "wertLebensmittel": "inputs.sliderTrash.value / inputs.sliderSizeHousehold.value",
-            "sizeHousehold": "inputs.sliderSizeHousehold.value"
+            "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
+            "wertLebensmittel": "i.sliderTrash / i.sliderSizeHousehold",
+            "sizeHousehold": "i.sliderSizeHousehold"
           },
           "templates": {
             "default": {
@@ -896,18 +896,18 @@
         {
         "answer": {
           "answerKey": [
-            "(inputs.sliderEwaste.value < 10) && 'lessEwaste'",
-            "(inputs.sliderEwaste.value <= 29) && 'someEwaste'",
-            "(inputs.sliderEwaste.value > 29) && 'muchEwaste'"
+            "(i.sliderEwaste < 10) && 'lessEwaste'",
+            "(i.sliderEwaste <= 29) && 'someEwaste'",
+            "(i.sliderEwaste > 29) && 'muchEwaste'"
           ],
           "answerContext": {
-            "countryEwaste": "funcs.getCountryName('electro', inputs.sliderEwaste)",
-            "landMax": "funcs.getMaxCountryName('electro')",
-            "landMin": "funcs.getMinCountryName('electro')",
-            "valueMax": "funcs.getMaxValue('electro')",
-            "valueMin": "funcs.getMinValue('electro')",
-            "wertEwaste": "inputs.sliderEwaste.value + 2.41",
-            "testfoo": "funcs.getDatasetCountByComparator('food', inputs.slider.value, '<')"
+            "countryEwaste": "f.getCountryName('electro', i.sliderEwaste)",
+            "landMax": "f.getMaxCountryName('electro')",
+            "landMin": "f.getMinCountryName('electro')",
+            "valueMax": "f.getMaxValue('electro')",
+            "valueMin": "f.getMinValue('electro')",
+            "wertEwaste": "i.sliderEwaste + 2.41",
+            "testfoo": "f.getDatasetCountByComparator('food', i.slider, '<')"
           },
           "templates": {
             "default": {
