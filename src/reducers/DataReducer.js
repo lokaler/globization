@@ -5,6 +5,7 @@ import objectAssign from 'object-assign';
 
 import master from '../data/master.csv';
 import worldData from '../data/world-110m.json';
+// import worldDataHk from '../data/hk2.json';
 import topojson from 'topojson';
 import d3 from 'd3';
 import _ from 'lodash';
@@ -14,7 +15,11 @@ import _ from 'lodash';
 // console.log(JSON.stringify(dataset1));
 
 function makeTopoJson(){
+  // console.log(worldData, worldDataHk);
   const t = topojson.feature(worldData, worldData.objects.countries).features;
+  // const t2 = topojson.feature(worldDataHk, worldDataHk.objects.collection).features;
+  // console.log(t[0], t2[1]);
+  // console.log(t, t2);
   t.forEach((d)=> {
     const e = _.find(master, { numeric: d.id+""});
     d.properties.iso = e ? e.alpha3 : "";
