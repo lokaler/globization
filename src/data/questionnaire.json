@@ -113,7 +113,6 @@
             "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?"
           ],
           "en": [
-            "*** ENGLISH ***",
             "# What is important to you when making a purchase?",
             "",
             "Some people are happy just to be able to make ends meet. Others can afford to pay attention to criteria beyond just price. Where do you stand?"
@@ -252,13 +251,20 @@
         }
       },
       {
-        "text": {
-          "de": [
-            "Nachhaltigkeitstipp: Ein per Frachtschiff importierter Apfel aus Neuseeland ist nicht unbedingt klimaschädlicher als ein deutscher Apfel, der monatelang im Kühlhaus lagert. Der Naturschutzbund Deutschland empfiehlt jedoch, auf eingeflogene Ware zu verzichten – das sind meist schnell verderbliche Obst- und Gemüsesorten, die von außerhalb Europas importiert werden. Mindestens ebenso gewinnbringend für den Klimaschutz ist jedoch: Kurze Strecken zum Supermarkt nicht mit dem Auto zurücklegen."
-          ],
-          "en": [
-            "Sustainability Tip: An apple shipped in from New Zealand is not necessarily more damaging to the climate than is a German apple that spends months in a refrigerated warehouse. Germany’s Nature and Biodiversity Conservation Union recommends, however, avoiding goods that have been flown in -- usually things like fruits and vegetable types that spoil rapidly and are imported from outside of Europe. Just as beneficial to the climate, though, is keeping your car in the garage if the supermarket is close by."
-          ]
+        "answer": {
+          "className": "tip",
+          "answerKey": ["i.localproducts && 'tip'"],
+          "answerContext": {},
+          "templates": {
+            "tip": {
+              "de": [
+                "**Nachhaltigkeitstipp**: Ein per Frachtschiff importierter Apfel aus Neuseeland ist nicht unbedingt klimaschädlicher als ein deutscher Apfel, der monatelang im Kühlhaus lagert. Der Naturschutzbund Deutschland empfiehlt jedoch, auf eingeflogene Ware zu verzichten – das sind meist schnell verderbliche Obst- und Gemüsesorten, die von außerhalb Europas importiert werden. Mindestens ebenso gewinnbringend für den Klimaschutz ist jedoch: Kurze Strecken zum Supermarkt nicht mit dem Auto zurücklegen."
+              ],
+              "en": [
+                "**Sustainability Tip**: An apple shipped in from New Zealand is not necessarily more damaging to the climate than is a German apple that spends months in a refrigerated warehouse. Germany’s Nature and Biodiversity Conservation Union recommends, however, avoiding goods that have been flown in -- usually things like fruits and vegetable types that spoil rapidly and are imported from outside of Europe. Just as beneficial to the climate, though, is keeping your car in the garage if the supermarket is close by."
+              ]
+            }
+          }
         }
       }
     ]
@@ -331,13 +337,20 @@
         }
       },
       {
-        "text": {
-          "de": [
-            "Nachhaltigkeitstipp: Im Netz lassen sich Kleider tauschen, leihen oder secondhand kaufen, zum Beispiel auf den Webseiten [Kleiderkreisel.de](https://www.kleiderkreisel.de/) oder [Kleiderkorb.de](http://www.kleiderkorb.de/)."
-          ],
-          "en": [
+        "answer": {
+          "className": "tip",
+          "answerKey": ["i.sliderCloth && 'tip'"],
+          "answerContext": {},
+          "templates": {
+            "tip": {
+              "de": [
+                "**Nachhaltigkeitstipp**: Im Netz lassen sich Kleider tauschen, leihen oder secondhand kaufen, zum Beispiel auf den Webseiten [Kleiderkreisel.de](https://www.kleiderkreisel.de/) oder [Kleiderkorb.de](http://www.kleiderkorb.de/)."
+              ],
+              "en": [
             "Sustainability Tip: On the Internet, you can trade, borrow or buy second hand on clothing swap websites like [Swapstyle.com](http://www.swapstyle.com/) or [Swap.com](https://www.swap.com/)."
-          ]
+              ]
+            }
+          }
         }
       }
     ]
@@ -376,7 +389,7 @@
           "type": "slider",
           "options": {
             "unit": "Kg",
-            "min": 0,
+            "min": 0.1,
             "value": 1.5,
             "max": 4,
             "step": 0.1
@@ -386,7 +399,7 @@
       {
         "answer": {
           "answerKey": [
-            "(i.sliderMeatConsumption == 00) && 'noMeat'",
+            "(i.sliderMeatConsumption == 0.1) && 'noMeat'",
             "(i.sliderMeatConsumption < 1.5) && 'someMeat'",
             "(i.sliderMeatConsumption < 2.5) && 'muchMeat'",
             "(i.sliderMeatConsumption >= 2.5) && 'muchTooMuchMeat'"
@@ -498,7 +511,7 @@
             "**Wie viel Kilogramm Lebensmittel landen bei Ihnen zu Hause pro Woche im Müll?**Der deutsche Durchschnittswert von 1,9 Kilogramm entspricht ungefähr einer halben Packung Milch, vier Äpfeln, einem Hirtenkäse, fünf Scheiben Wurst und einem halben Brot."
           ],
           "en": [
-            "*** ENGLISH ***",
+
             "# What do you throw away?",
             "",
             "Every year, 1.3 billion metric tons (1.4 billion tons) of foodstuffs are thrown away worldwide. The United Nations would like to significantly reduce this prodigious amount of waste by 2030.",
@@ -553,7 +566,7 @@
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
             "wertLebensmittel": "f.fmt('%0.1f', i.sliderTrash / i.sliderSizeHousehold)",
             "sizeHousehold": "i.sliderSizeHousehold",
-            "TrashSustainableTip": "i.sliderTrash / 2"
+            "TrashSustainableTip": "i.sliderTrash"
           },
           "templates": {
             "default": {
@@ -565,7 +578,7 @@
                 "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}**  Kilogramm pro Kopf** weniger Lebensmittel weggeworfen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "At **{{ wertLebensmittel }}**  kilograms per person**, your household throws away less food than those in all European countries for which data is available. But compared to places around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
+                "At **{{ wertLebensmittel }}** kilograms per person**, your household throws away less food than those in all European countries for which data is available. But compared to places around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
               ]
             },
             "someTrash": {
@@ -581,21 +594,10 @@
                 "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeworfen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeschmissen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "With a value of  **{{ wertLebensmittel }}** per capita, your household throws away more food than in all European countries for which data is available. But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms (0.2 pounds) of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms (2 pounds)."
+                "With a value of  **{{ wertLebensmittel }}** kilograms per capita, your household throws away more food than in all European countries for which data is available. But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms (0.2 pounds) of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms (2 pounds)."
               ]
             }
           }
-        }
-      },
-
-      {
-        "text": {
-          "de": [
-            "Um Ihren persönlichen Beitrag zu den UN-Nachhaltigkeitszielen zu leisten, müssten Sie pro Woche **{{ TrashSustainableTip }}** Kilogramm weniger Essen wegschmeißen."
-          ],
-          "en": [
-            "To do your part in the realization of the UN’s Sustainable Development Goals, you would have to throw away **{{ TrashSustainableTip }}** fewer kilograms of food each week. The UN has called for consumers to reduce food waste by half by 2030."
-          ]
         }
       }
     ]
@@ -619,12 +621,10 @@
             "**Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?**"
           ],
           "en": [
-            "*** ENGLISH ***",
             "Many Germans buy a new mobile phone about every two years. Old phones often end up forgotten in a drawer or are recycled in Africa in catastrophic conditions.",
             "",
             "**How many kilograms of electronic waste have you gotten rid of or thrown away in the last year?**",
-            "(Smartphone ≈ 130g (4.6 oz), laptop ≈ 3.5kg (7.7 lbs), toaster ≈ 1kg (2.2 lbs), washing machine ≈ 65kg (143 lbs))",
-            "DIESE ZEILE IST ZU VIEL"
+            "(Smartphone ≈ 130g (4.6 oz), laptop ≈ 3.5kg (7.7 lbs), toaster ≈ 1kg (2.2 lbs), washing machine ≈ 65kg (143 lbs))"
           ]
         }
       },
@@ -633,7 +633,7 @@
           "key": "sliderEwaste",
           "type": "slider",
           "options": {
-            "min": 0,
+            "min": 0.1,
             "value": 20,
             "max": 50,
             "unit": "Kg"
@@ -704,13 +704,20 @@
         }
       },
       {
-        "text": {
-          "de": [
-            "Nachhaltigkeitstipp: Ihre Elektroschrott-Bilanz können Sie zum Beispiel verbessern, indem Sie reparierbare Geräte kaufen, für die es Ersatzteile gibt."
-          ],
-          "en": [
-            "Sustainability Tip: One way to avoid electronic waste is by repairing broken devices rather than throwing them away. At a [Repair Café](http://repaircafe.org/en/visit/) near you, you can get the help you need to get your electronics up and running again. The feeling of accomplishment afterwards doesn’t cost anything."
-          ]
+        "answer": {
+          "className": "tip",
+          "answerKey": ["i.sliderEwaste && 'tip'"],
+          "answerContext": {},
+          "templates": {
+            "tip": {
+              "de": [
+                "**Nachhaltigkeitstipp**: Ihre Elektroschrott-Bilanz können Sie zum Beispiel verbessern, indem Sie reparierbare Geräte kaufen, für die es Ersatzteile gibt."
+              ],
+              "en": [
+            "**Sustainability Tip**: One way to avoid electronic waste is by repairing broken devices rather than throwing them away. At a [Repair Café](http://repaircafe.org/en/visit/) near you, you can get the help you need to get your electronics up and running again. The feeling of accomplishment afterwards doesn’t cost anything."
+              ]
+            }
+          }
         }
       }
     ]
@@ -761,7 +768,7 @@
                 "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
-                "*** ENGLISH ***",
+
                 "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
               ]
             },
@@ -778,7 +785,7 @@
                 "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in **{{ landMax }}** den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
               ],
               "en": [
-                "*** ENGLISH ***",
+
                 "You spend a very large share of your money on food. Internationally, people  **{{ landMax }}**  devote the largest share of their expenditures to food, namely **{{ valueMax }}** percent."
               ]
             }
@@ -904,7 +911,7 @@
             },
             "lessEwaste": {
               "de": [
-                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht [Land_min] mit [Wert_Land_min] Kilogramm pro Jahr und Einwohner."
+                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}** mit **{{ valueMin}}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
                 "At [Wert] kilograms per person, your household throws away less food than those in all European countries for which data is available. "
