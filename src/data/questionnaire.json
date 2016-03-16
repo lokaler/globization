@@ -864,26 +864,26 @@
             },
             "littleTrash": {
               "de": [
-                ") In Ihrem Haushalt werden mit ** {{ inputs.sliderTrash.value }} Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
+                ") In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
               ],
               "en": [
-                "At [Wert] kilograms per person, your household throws away less food than those in all European countries for which data is available. "
+                "At **{{ wertLebensmittel }}** kilograms per person, your household throws away less food than those in all European countries for which data is available. "
               ]
                 },
             "someTrash": {
               "de": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in [LAND_Foodwaste]. Sie liegen damit im Vergleich von [Anzahl_Länder_Foodwaste] europäischen Ländern auf Platz [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in **{{ landAbfall }}**."
               ],
               "en": [
-                "Your household throws away about as much food per person as in [LAND_Foodwaste]. In a comparison of  [Anzahl_Länder_Foodwaste] European countries, that puts you at number [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert] on the list."
+                "Your household throws away about as much food per person as in **{{ landAbfall }}**."
               ]
             },
             "muchTrash": {
               "de": [
-                ") In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in [LAND_Foodwaste]. Sie liegen damit im Vergleich von [Anzahl_Länder_Foodwaste] europäischen Ländern auf Platz [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert]."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in **{{ landAbfall }}**."
               ],
               "en": [
-                "Your household throws away about as much food per person as in [LAND_Foodwaste]. In a comparison of  [Anzahl_Länder_Foodwaste] European countries, that puts you at number [Anzahl_Länder_Foodwaste minus Anzahl Länder mit Wert kleiner persönlicher Wert] on the list."
+                "Your household throws away about as much food per person as in **{{ landAbfall }}**."
               ]
               }
             }
@@ -914,23 +914,23 @@
                 "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}** mit **{{ valueMin}}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "At [Wert] kilograms per person, your household throws away less food than those in all European countries for which data is available. "
+                "That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin}}** kilograms per year and resident"
               ]
                 },
             "someEwaste": {
               "de": [
-                "Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen aus [LAND_Schrott]. In [Anzahl_Länder_Elektroschrott minus Anzahl Länder Elektroschrott mit Wert größergleich persönlicher Wert] von [Anzahl_Länder_Elektroschrott] Ländern ist die Elektroschrottmenge pro Person geringer."
+                "Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen aus **{{ countryEwaste }}**."
               ],
               "en": [
-                "You are responsible for roughly the same amount of electronic waste as people in [LAND_Schrott]. The amount of electronic waste per person is lower in [Anzahl_Länder_Elektroschrott minus Anzahl Länder Elektroschrott mit Wert größergleich persönlicher Wert] of [Anzahl_Länder_Elektroschrott] countries."
+                "You are responsible for roughly the same amount of electronic waste as people in **{{ countryEwaste }}**."
               ]
             },
             "muchEwaste": {
               "de": [
-                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht [Land_max] mit [Wert_Land_max] Kilogramm pro Jahr und Einwohner."
+                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht **{{ landMax }}** mit **{{Wert_Land_max}}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "That is more than in all countries for which data is available. The most electronic waste is produced by [Land_max], with [Wert_Land_max] kilograms per year and resident."
+                "That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}**, with **{{Wert_Land_max}}** kilograms per year and resident."
               ]
               }
             }
