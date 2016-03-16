@@ -26,5 +26,9 @@
   "last": {
     "de": "Ergebnis",
     "en": "Result"
+  },
+  "close": {
+    "de": "Beenden",
+    "en": "Close"
   }
 }
