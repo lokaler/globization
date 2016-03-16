@@ -15,10 +15,7 @@ export default class DotsComponent extends React.Component {
 
   componentDidMount() {
 
-    console.log("DOTS mount", this.props)
-
     this.g = d3.select(this.refs.g);
-
     if(this.props.master.dataset) this.renderData();
   }
 
