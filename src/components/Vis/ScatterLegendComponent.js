@@ -42,7 +42,7 @@ export default class ScatterLegendComponent extends React.Component {
       <div className="scatterLegend">
       <div className="label">{ description }</div>
       <div className="quelle">Quelle: <a href={ link }>{ quelle }</a></div>
-      <div className="vergleich">BIP pro Kopf in $</div>
+      <div className="vergleich">{ translate("gdp") }</div>
       </div>
 
     )

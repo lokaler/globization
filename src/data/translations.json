@@ -5,9 +5,16 @@
   },
   "Globe": {
     "de": "Globus",
-    "en": "Globus"
+    "en": "Globe"
   },
-
+  "gdp": {
+    "de": "BIP pro Kopf in USD",
+    "en": "GDP per capita in USD"
+  },
+  "countries": {
+    "de": "Länder",
+    "en": "countries"
+  },
   "prev": {
     "de": "ZURÜCK",
     "en": "PREVIOUS"

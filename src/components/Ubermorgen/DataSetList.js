@@ -34,7 +34,7 @@ export default class DataSetList extends React.Component {
           key={i} onClick={ this.handleClick.bind(this, d.key) }
         >
           { translate(d.name) }
-          <span className="info">{ d.data.length } Länder</span>
+          <span className="info">{ d.data.length } { translate('countries') }</span>
         </li>
       );
     });
