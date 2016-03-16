@@ -9,23 +9,41 @@
 :local(.container) {
   overflow: hidden;
   display: flex;
-  flex-direction: row;
-  width: 860px;
+
   background: #FFF;
-  height: 500px;
 
-  :local(.left) {
 
-    border-right: none;
-    flex-grow: 1;
-    width: 65%;
-    overflow: hidden;
+  .mq-mobile & {
+    flex-direction: column;
+    width: 100%;
+  }
+  .mq-desktop & {
+    flex-direction: row;
+    width: 860px;
+    height: 500px;
   }
 
-  :local(.right) {
+  .left {
+    .mq-mobile & {
+      overflow: hidden;
+    }
+    .mq-desktop & {
+      border-right: none;
+      flex-grow: 1;
+      width: 65%;
+      overflow: hidden;
+    }
+  }
+
+  .right {
+    .mq-mobile & {
+      width: 100%;
+    }
+    .mq-desktop & {
+      width: 35%;
+    }
     z-index: 200;
-    width: 35%;
-    min-width: 320px;
+
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     position: relative;
   }
@@ -172,7 +190,6 @@
 
 :local(.footer) {
   padding: 18px;
-  position: absolute;
   bottom:0;
   width: 100%;
   height: 50px;

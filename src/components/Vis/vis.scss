@@ -1,6 +1,9 @@
 .vis {
   position: relative;
-  min-height: 500px;
+
+  .mq-mobile & {
+    pointer-events: none;
+  }
 
   .menu {
     padding: 5px;
@@ -12,6 +15,10 @@
     width: 50px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
     background: #FFF;
+
+    .mq-mobile & {
+      display: none;
+    }
 
     div {
       width: 20px;
@@ -119,6 +126,10 @@
     z-index: 100;
     width: 520px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+
+    .mq-mobile & {
+      display: none;
+    }
 
     .label {
         float: left;

@@ -84,11 +84,14 @@ export default class Globe extends React.Component {
     const changeMap = this.changeType.bind(this, 'map');
     const changeScatter = this.changeType.bind(this, 'scatter');
     const random = this.random.bind(this);
+    const app = this.props.app;
+    const scrollHeight = app.mobile ? app.height * 0.3 : app.height;
+    const scrollWidth = app.mobile ? app.width : app.width * 0.65;
 
     return (
       <div className="vis">
         { dataset &&
-          <Component color={this.color} {...this.props} width={540} height={500} />
+          <Component color={this.color} {...this.props} width={scrollWidth} height={scrollHeight} />
           // <Component color={this.color} {...this.props} width={320} height={240} />
         }
         <div className="menu">
