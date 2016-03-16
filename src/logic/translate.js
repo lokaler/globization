@@ -47,7 +47,7 @@ export default function translate(value, options = {}) {
   // simple string
   if (isString(value)) {
     const translated = ((translations[value] || {})[language]);
-    if (isString(translated))  ? translated : value;
+    return isString(translated) ? translated : value;
   }
 
   return value;
