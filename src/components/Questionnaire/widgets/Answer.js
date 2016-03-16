@@ -5,6 +5,8 @@ import cssModules from 'react-css-modules';
 import { compileExpression, compileContext } from '../../../logic/questionnaire';
 import translate from 'logic/translate';
 import { isUndefined, isEmpty } from 'lodash';
+import classNames from 'classnames';
+
 
 @cssModules()
 export default class Answer extends React.Component {
@@ -49,8 +51,9 @@ export default class Answer extends React.Component {
     template = translate(template);
     const ctx = compileContext.bind(this)(data.answerContext, questions.inputs);
     const answerContent = MicroMustache.render(template, ctx);
+    const className = classNames('answer', data.className && `answer-${ data.className }`);
     return (
-      <div className="answer" key={ id } styleName="widget">
+      <div className={ className } key={ id } styleName="widget">
         <ReactMarkdown source={ answerContent.toString() } />
       </div>
     );
