@@ -16,11 +16,6 @@ export default class Answer extends React.Component {
     master: PropTypes.object.isRequired
   }
 
-  getTemplate(templates, userInput) {
-    const templateKey = this.getTemplateKey(userInput);
-    return templates[templateKey];
-  }
-
   getTemplateKey(userInput) {
     for (const expr of this.props.data.answerKey) {
       const templateKey = compileExpression(expr)(userInput);
@@ -38,10 +33,22 @@ export default class Answer extends React.Component {
       return null;
     }
 
-    const template = translate(this.getTemplate(data.templates, questions.inputs));
+    const templateKey = this.getTemplateKey(questions.inputs);
+
+    // nonexisting default template is ok
+    if (templateKey === 'default' && !('default' in data.templates)) {
+      return null;
+    }
+
+    // nonexisting template referenced in an expression is an error
+    let template = data.templates[templateKey];
+    if (isUndefined(template)) {
+      throw new Error(`Missing template "${ templateKey }"`);
+    }
+
+    template = translate(template);
     const ctx = compileContext.bind(this)(data.answerContext, questions.inputs);
     const answerContent = MicroMustache.render(template, ctx);
-
     return (
       <div className="answer" key={ id } styleName="widget">
         <ReactMarkdown source={ answerContent.toString() } />
