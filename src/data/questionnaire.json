@@ -548,6 +548,7 @@
       {
         "answer": {
           "answerKey": [
+            "(f.isUndefined(i.sliderTrash) || f.isUndefined(i.sliderSizeHousehold)) && 'default'",
             "(i.sliderTrash < 1) && 'littleTrash'",
             "(i.sliderTrash <= 2) && 'someTrash'",
             "(i.sliderTrash > 2) && 'muchTrash'"
