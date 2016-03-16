@@ -63,7 +63,10 @@ export default {
     answer: contentPart(
       'answer',
       object({
+        required: ['templates'],
+        additionalProperties: false,
         properties: {
+          className: { enum: ['tip'] },
           answerKey: ref('arrayOfStrings'),
           answerContext: object({
             patternProperties: { '.*': string() }
