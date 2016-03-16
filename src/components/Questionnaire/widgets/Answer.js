@@ -49,7 +49,10 @@ export default class Answer extends React.Component {
 
     template = translate(template).join('\n');
 
-    const ctx = compileContext.bind(this)(answer.answerContext, questions.inputs);
+    const ctx = compileContext(answer.answerContext, questions.inputs);
+    for (const k of Object.keys(ctx)) {
+      ctx[k] = translate(ctx[k]);
+    }
     const answerContent = MicroMustache.render(template, ctx);
     const className = classNames('answer', answer.className && `answer-${ answer.className }`);
     return (
