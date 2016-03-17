@@ -423,8 +423,8 @@
           "answerKey": [
             "(i.sliderMeatConsumption == 0.1) && 'noMeat'",
             "(i.sliderMeatConsumption < 1.5) && 'someMeat'",
-            "(i.sliderMeatConsumption < 2.5) && 'muchMeat'",
-            "(i.sliderMeatConsumption >= 2.5) && 'muchTooMuchMeat'"
+            "(i.sliderMeatConsumption < 2.5) && f.changeVis(f.getMaxISO('meat')) && 'muchMeat'",
+            "(i.sliderMeatConsumption >= 2.5) && f.changeVis(f.getMaxISO('meat')) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
             "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
@@ -442,7 +442,6 @@
             },
             "noMeat": {
               "de": [
-
                 "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnittsfleischesser sparen Sie dadurch pro Jahr etwa 330 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 1300 Kilometern Autofahrt mit einem mittelgroßen Benziner."
               ],
               "en": [
