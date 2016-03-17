@@ -72,7 +72,7 @@
                 "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Konsumausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
-                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just ***{{ valueMin }}** * percent, which is the lowest percentage of all countries"
+                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries"
               ]
             },
             "mediumFoodCon": {
