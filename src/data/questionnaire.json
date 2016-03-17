@@ -430,7 +430,7 @@
             "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
             "landMax": "f.getMaxCountryName('meat')",
             "landMaxValue": "f.getMaxValue('meat')",
-            "landValue": "f.getCountryNameValue('meat')"
+            "landValue": "f.getCountryName('meat', i.sliderMeatConsumption)"
           },
           "templates": {
             "default": {
