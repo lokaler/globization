@@ -38,7 +38,8 @@
             "unit": "%",
             "min": 0,
             "value": 30,
-            "max": 60
+            "max": 60,
+            "step": 1
           }
         }
       },
@@ -66,6 +67,7 @@
               ]
             },
             "littleFoodCon": {
+              "action": "f.getMinCountryName('food')",
               "de": [
                 "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Konsumausgaben für Nahrungsmittel aufwenden."
               ],
@@ -277,14 +279,18 @@
       {
         "text": {
           "de": [
+            "# Brauchen wir alles, was wir besitzen?",
+            "",
             "Auf Überflüssiges verzichten, spart Geld und Ressourcen. Schätzen Sie:",
             "",
             "**Wie viel Prozent der Kleidung in Ihrem Schrank tragen Sie so gut wie nie?**"
           ],
           "en": [
+            "# Brauchen wir alles, was wir besitzen?",
+            "",
             "Avoiding purchases of things you don’t need can save both money and resources. Take a guess: ",
             "",
-            "*+What percent of the clothing in your wardrobe do you hardly ever wear?**"
+            "**What percent of the clothing in your wardrobe do you hardly ever wear?**"
           ]
         }
       },
@@ -370,12 +376,16 @@
       {
         "text": {
           "de": [
+            "# Schnitzel, Bratwurst & Co",
+            "",
             "Manche Produkte verbrauchen besonders viele Ressourcen: Die Herstellung von einem Kilogramm Rindfleisch zum Beispiel beansprucht im Durchschnitt gut 50 mal mehr Wasser und rund 100 mal mehr Land als die Produktion von einem Kilogramm Kartoffeln.",
             "",
             "**Wie viel Fleisch essen Sie pro Woche?**",
             "(Fleischgericht ≈ 200 Gramm, Bratwurst ≈ 100 Gramm, Wurstbrot ≈ 20 Gramm)"
           ],
           "en": [
+            "# Schnitzel, Bratwurst & Co",
+            "",
             "Some products require a particularly high quantity of resources. The production of a kilogram (2.2 pounds) of beef, for example, requires on average 50 times more water and 100 times more land on average than the production of a kilogram of potatoes.",
             "",
             "**How much meat do you eat each week?**",
@@ -528,7 +538,8 @@
             "unit": "Kg",
             "min": 0,
             "value": 2,
-            "max": 4
+            "max": 4,
+            "step": 0.1
           }
         }
       },
@@ -558,9 +569,9 @@
         "answer": {
           "answerKey": [
             "(f.isUndefined(i.sliderTrash) || f.isUndefined(i.sliderSizeHousehold)) && 'default'",
-            "(i.sliderTrash < 1.5) && 'littleTrash'",
-            "(i.sliderTrash <= 2.7) && 'someTrash'",
-            "(i.sliderTrash > 2.7) && 'muchTrash'"
+            "(i.sliderTrash / i.sliderSizeHousehold < 1.5) && 'littleTrash'",
+            "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && 'someTrash'",
+            "(i.sliderTrash / i.sliderSizeHousehold> 2.7) && 'muchTrash'"
           ],
           "answerContext": {
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
@@ -575,7 +586,7 @@
             },
             "littleTrash": {
               "de": [
-                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}**  Kilogramm pro Kopf** weniger Lebensmittel weggeworfen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}**  Kilogramm pro Kopf weniger Lebensmittel weggeworfen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
                 "At **{{ wertLebensmittel }}** kilograms per person**, your household throws away less food than those in all European countries for which data is available. But compared to places around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
@@ -586,7 +597,7 @@
                 "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeworfen wie **{{ landAbfall }}** . Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "Your household throws away about as much food per person as **{{ landAbfall }}** . ] But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
+                "Your household throws away about as much food per person as **{{ landAbfall }}** . But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
               ]
             },
             "muchTrash": {
@@ -616,11 +627,15 @@
       {
         "text": {
           "de": [
+            "# Und wieder ein neues Smartphone?",
+            "",
             "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy. Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt.",
             "",
             "**Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?** (Smartphone ≈ 130g, Laptop ≈ 3,5kg, Toaster ≈ 1kg, Waschmaschine ≈ 65kg)"
           ],
           "en": [
+            "# Und wieder ein neues Smartphone?",
+            "",
             "Many Germans buy a new mobile phone about every two years. Old phones often end up forgotten in a drawer or are recycled in Africa in catastrophic conditions.",
             "",
             "**How many kilograms of electronic waste have you gotten rid of or thrown away in the last year?**",
@@ -635,7 +650,7 @@
           "options": {
             "min": 0.1,
             "value": 20,
-            "max": 70,
+            "max": 80,
             "unit": "Kg"
           }
         }
@@ -737,11 +752,11 @@
         "text": {
           "de": [
             "# Steckbrief ",
-            "So konsumieren Sie im internationalen Vergleich:"
+            "**So konsumieren Sie im internationalen Vergleich:**"
           ],
           "en": [
             "# Summary",
-            "So konsumieren Sie im internationalen Vergleich:"
+            "**Your consumption in comparison with the world:**"
           ]
         }
       },
@@ -753,6 +768,7 @@
             "(i.sliderFoodSpending >= 50) && 'highFoodCon'"
           ],
           "answerContext": {
+            "valueFoodUser": "i.sliderFoodSpending",
             "landAusgaben": "f.getCountryName('food', i.sliderFoodSpending)",
             "landMax": "f.getMaxCountryName('food')",
             "landMin": "f.getMinCountryName('food')",
@@ -760,33 +776,39 @@
             "valueMin": "f.getMinValue('food')",
             "numberCountriesFood": "funcs.getDatasetCount('food')",
             "numbercountriesWithLowerFoodConsumptionThanMe": "funcs.getDatasetCountByComparator('food', inputs.sliderMeatConsumption.value, '>')",
-            "RankingUserInComparisionToCountriesFood": "funcs.getDatasetCount('food') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '>')"
+            "RankingUserInComparisionToCountriesFood": "funcs.getDatasetCount('food') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
-            "litteFoodCon": {
+            "default": {
               "de": [
-                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+                "Bitte beantworten Sie die Frage zu den Ausgaben für **Nahrungsmittel**."
               ],
               "en": [
-
-                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
+                "Please answer the question about your spendings for **food**."
+              ]
+                },
+            "litteFoodCon": {
+              "de": [
+                "**Ihre Ausgaben: {{ valueFoodUser }} %** – Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+              ],
+              "en": [
+                "Your spending: {{ valueFoodUser }} %** – You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
               ]
             },
             "mediumFoodCon": {
               "de": [
-                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen **{{ landAusgaben }}**. Im Vergleich von **{{ numberCountriesFood }}**  Ländern liegen Sie damit auf Platz **{{ RankingUserInComparisionToCountriesFood }}**."
+                "**Ihre Ausgaben: {{ valueFoodUser }} %** – Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen **{{ landAusgaben }}**."
               ],
               "en": [
-                "People in **{{ landAusgaben }}**. spend a similar amount on food as you do, measured as a percentage of total expenditures. Compared to **{{ numberCountriesFood }}** countries, that puts you at number **{{ RankingUserInComparisionToCountriesFood }}** on the list."
+                "Your spending: {{ valueFoodUser }} %** – People in **{{ landAusgaben }}**. spend a similar amount on food as you do, measured as a percentage of total expenditures."
               ]
             },
             "highFoodCon": {
               "de": [
-                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen **{{ landMax }}** den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
+                "**Ihre Ausgaben: {{ valueFoodUser }} %** – Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen **{{ landMax }}** den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
               ],
               "en": [
-
-                "You spend a very large share of your money on food. Internationally, people  **{{ landMax }}**  devote the largest share of their expenditures to food, namely **{{ valueMax }}** percent."
+                "Your spending: {{ valueFoodUser }} %** – You spend a very large share of your money on food. Internationally, people  **{{ landMax }}**  devote the largest share of their expenditures to food, namely **{{ valueMax }}** percent."
               ]
             }
           }
@@ -795,21 +817,32 @@
       {
         "answer": {
           "answerKey": [
-            "(i.sliderMeatConsumption < 1) && 'noMeat'",
+            "(i.sliderMeatConsumption < 0.1) && 'noMeat'",
             "(i.sliderMeatConsumption < 1.5) && 'someMeat'",
             "(i.sliderMeatConsumption < 2.5) && 'muchMeat'",
             "(i.sliderMeatConsumption >= 2.5) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
             "wertFleisch": "i.sliderMeatConsumption * 1.31",
+            "meatConsumptionCountry": "f.getCountryName('meat')",
             "landMax": "f.getMaxCountryName('meat')",
+            "landMaxValue": "f.getMaxValue('meat')",
             "gasred": "i.sliderMeatConsumption / 2 * 3.89",
             "gasred2" : "i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249",
             "numberCountriesWithConsumption": "f.getDatasetCount('meat')",
             "numbercountriesWithLowerMeatConsumptionThanMe": "f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')",
-            "RankingUserInComparisionToCountriesMeat": "funcs.getDatasetCount('meat') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
+            "RankingUserInComparisionToCountriesMeat": "funcs.getDatasetCount('meat') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')",
+            "testfoo":"funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
+            "default": {
+              "de": [
+                "Bitte beantworten Sie die Frage zum **Fleischkonsum**."
+              ],
+              "en": [
+                "Please answer the question about your **meat consumption**."
+              ]
+                },
             "noMeat": {
               "de": [
                 "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 330 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 1.300 Kilometern Autofahrt mit einem mittelgroßen Benziner."
@@ -828,10 +861,10 @@
             },
             "muchMeat": {
               "de": [
-                "Ihr Fleischbedarf pro Woche entspricht  **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ sameMeat }}** . Mehr Fleisch pro Kopf gibt es **{{ RankingUserInComparisionToCountriesMeat }}** von **{{ numberCountriesWithConsumption }}** Ländern."
+                "Ihr Fleischbedarf pro Woche entspricht  **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ meatConsumptionCountry }}** . Mehr Fleisch pro Kopf gibt es **{{ RankingUserInComparisionToCountriesMeat }}** von **{{ numberCountriesWithConsumption }}** Ländern."
               ],
               "en": [
-                "Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}** . There is more meat available per capita **{{ RankingUserInComparisionToCountriesMeat }}** of **{{ numberCountriesWithConsumption }}** countries."
+                "Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}** . There is more meat available per capita in **{{ RankingUserInComparisionToCountriesMeat }}** of **{{ numberCountriesWithConsumption }}** countries."
               ]
               },
               "muchTooMuchMeat": {
@@ -848,23 +881,24 @@
         {
         "answer": {
           "answerKey": [
-            "(i.sliderTrash < 1) && 'littleTrash'",
-            "(i.sliderTrash <= 2) && 'someTrash'",
-            "(i.sliderTrash > 2) && 'muchTrash'"
+            "(i.sliderTrash / i.sliderSizeHousehold < 1.5) && 'littleTrash'",
+            "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && 'someTrash'",
+            "(i.sliderTrash / i.sliderSizeHousehold> 2.7) && 'muchTrash'"
           ],
           "answerContext": {
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
-            "wertLebensmittel": "i.sliderTrash / i.sliderSizeHousehold",
+            "wertLebensmittel": "f.fmt('%0.1f', i.sliderTrash / i.sliderSizeHousehold)",
             "sizeHousehold": "i.sliderSizeHousehold"
+
           },
           "templates": {
             "default": {
-              "de": [],
-              "en": []
+              "de": ["Bitte beantworten Sie die Frage, wie viele **Lebensmittel** Sie wegwerfen."],
+              "en": ["Please answer the question, how much **food** you throw away."]
             },
             "littleTrash": {
               "de": [
-                ") In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
+                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
               ],
               "en": [
                 "At **{{ wertLebensmittel }}** kilograms per person, your household throws away less food than those in all European countries for which data is available. "
@@ -880,10 +914,10 @@
             },
             "muchTrash": {
               "de": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie **{{ landAbfall }}**."
+                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen."
               ],
               "en": [
-                "Your household throws away about as much food per person as **{{ landAbfall }}**."
+                "With a value of **{{ wertLebensmittel }}**  per capita, your household throws away more food than in all European countries for which data is available.."
               ]
               }
             }
@@ -906,8 +940,12 @@
           },
           "templates": {
             "default": {
-              "de": [],
-              "en": []
+              "de": [
+                "Bitte beantworten Sie die Frage zum **Elektroschrott**."
+              ],
+              "en": [
+                "Please answer the question about **elecronic waste**."
+              ]
             },
             "lessEwaste": {
               "de": [

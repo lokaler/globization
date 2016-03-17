@@ -36,8 +36,9 @@ export default {
 
     multiLangArrayOfStrings: object({
       required: ['de', 'en'],
-      additionalProperties: false,
+      additionalProperties: true,
       properties: {
+        action: string(),
         de: ref('arrayOfStrings'),
         en: ref('arrayOfStrings')
       }
