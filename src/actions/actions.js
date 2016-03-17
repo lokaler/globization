@@ -56,15 +56,6 @@ export function setDataSet(name) {
   };
 }
 
-export function setCard(index, dataId) {
-  return dispatch => {
-    if (dataId) {
-      dispatch(setDataSet(dataId));
-    }
-    dispatch({ type: types.SET_CARD, index });
-  };
-}
-
 // slider and chioces actions
 export function updateUserInput(key, value) {
   return {
@@ -107,6 +98,16 @@ export function changeVis(val) {
   return {
     type: types.CHANGE_VIS,
     val
+  };
+}
+
+export function setCard(index, dataId) {
+  return dispatch => {
+    if (dataId) {
+      dispatch(setDataSet(dataId));
+    }
+    dispatch(changeVis({ active: null, tooltip: { active: false } }));
+    dispatch({ type: types.SET_CARD, index });
   };
 }
 

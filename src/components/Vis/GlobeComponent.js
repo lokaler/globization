@@ -174,7 +174,7 @@ export default class GlobeComponent extends React.Component {
     }
 
     if(nextProps.vis.active != this.props.vis.active) {
-      //this.activeGeometry = _.find(nextProps.master.topojson, (d)=> d.properties.iso === nextProps.vis.active);
+      this.activeGeometry = _.find(nextProps.master.topojson, (d)=> d.properties.iso === nextProps.vis.active);
       //update = true;
     }
 
