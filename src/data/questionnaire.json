@@ -672,8 +672,8 @@
         "answer": {
           "answerKey": [
             "(i.sliderEwaste < 10) && 'lessEwaste'",
-            "(i.sliderEwaste <= 29) && 'someEwaste'",
-            "(i.sliderEwaste > 29) && 'muchEwaste'"
+            "(i.sliderEwaste <= 29) && f.changeVis(f.getISO('electro', i.sliderEwaste)) &&  'someEwaste'",
+            "(i.sliderEwaste > 29) && f.changeVis(f.getMaxISO('electro')) && 'muchEwaste'"
           ],
           "answerContext": {
             "countryEwaste": "f.getCountryName('electro', i.sliderEwaste)",
