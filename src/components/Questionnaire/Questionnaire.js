@@ -81,10 +81,7 @@ export default class Questionnaire extends React.Component {
       }
     }
 
-    // const cardTitle = (questions.questionData[activeCard] || {}).title;
-    // { __DEV__ && !firstCard &&
-    //   <span style={{ color: 'green' }}>card: "{ cardTitle }"</span>
-    // }
+    const cardTitle = (questions.questionData[activeCard] || {}).title;
     const app = this.props.app;
     const scrollHeight = app.mobile ? ((app.height * (1 - 0.3)) - 50) : app.height - 50;
     const scrollWidth = app.mobile ? app.width : app.width * (1 - 0.65);
@@ -96,6 +93,9 @@ export default class Questionnaire extends React.Component {
           style={{ width: scrollWidth, height: scrollHeight }}
         >
           <div styleName="inner">
+            { __DEV__ && !firstCard &&
+              <span style={{ color: 'green' }}>card: "{ cardTitle }"</span>
+            }
             { widgets }
           </div>
         </ShadowScrollbars>
