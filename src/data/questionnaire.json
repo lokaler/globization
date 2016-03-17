@@ -286,7 +286,7 @@
             "**Wie viel Prozent der Kleidung in Ihrem Schrank tragen Sie so gut wie nie?**"
           ],
           "en": [
-            "# Brauchen wir alles, was wir besitzen?",
+            "# Do we need everything we own?",
             "",
             "Avoiding purchases of things you don’t need can save both money and resources. Take a guess: ",
             "",
@@ -634,7 +634,7 @@
             "**Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?** (Smartphone ≈ 130g, Laptop ≈ 3,5kg, Toaster ≈ 1kg, Waschmaschine ≈ 65kg)"
           ],
           "en": [
-            "# Und wieder ein neues Smartphone?",
+            "# Another new smartphone?",
             "",
             "Many Germans buy a new mobile phone about every two years. Old phones often end up forgotten in a drawer or are recycled in Africa in catastrophic conditions.",
             "",
@@ -668,7 +668,7 @@
             "landMin": "f.getMinCountryName('electro')",
             "valueMax": "f.getMaxValue('electro')",
             "valueMin": "f.getMinValue('electro')",
-            "wertEwaste": "i.sliderEwaste + 2.41"
+            "wertEwaste": "i.sliderEwaste + 2.4"
           },
           "templates": {
             "default": {
@@ -681,12 +681,12 @@
             },
             "lessEwaste": {
               "de": [
-                "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland waren das im Jahr 2014 2,41 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
+                "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland waren das im Jahr 2014 2,4 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
                 "",
                 "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}**  mit **{{ valueMin }}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "To be able to compare internationally, we added your value together with the amount of electronic waste produced by companies and public institutions on a per capita and per year basis. For Germany in 2014, that value was 2.41 kilograms (5.3 pounds). As such, you are responsible for a total of **{{ wertEwaste }}** kilograms of electronic waste.",
+                "To be able to compare internationally, we added your value together with the amount of electronic waste produced by companies and public institutions on a per capita and per year basis. For Germany in 2014, that value was 2.4 kilograms (5.3 pounds). As such, you are responsible for a total of **{{ wertEwaste }}** kilograms of electronic waste.",
                 "",
                 "That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin }}** kilograms per year and resident. "
               ]
@@ -823,7 +823,7 @@
             "(i.sliderMeatConsumption >= 2.5) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
-            "wertFleisch": "i.sliderMeatConsumption * 1.31",
+            "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
             "meatConsumptionCountry": "f.getCountryName('meat')",
             "landMax": "f.getMaxCountryName('meat')",
             "landMaxValue": "f.getMaxValue('meat')",
@@ -853,26 +853,26 @@
             },
             "someMeat": {
               "de": [
-                "Ihr Fleischbedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
+                "**Ihr Fleischkonsum: {{ wertFleisch }} kg** – Ihr Fleischbedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
               ],
               "en": [
-                "Your level of consumption can be covered in any of the countries for which comparative data is available."
+                "**Your meat consumption: {{ wertFleisch }} kg** – Your level of consumption can be covered in any of the countries for which comparative data is available."
               ]
             },
             "muchMeat": {
               "de": [
-                "Ihr Fleischbedarf pro Woche entspricht  **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ meatConsumptionCountry }}** . Mehr Fleisch pro Kopf gibt es **{{ RankingUserInComparisionToCountriesMeat }}** von **{{ numberCountriesWithConsumption }}** Ländern."
+                "**Ihr Fleischkonsum: {{ wertFleisch }} kg** – Ihr Fleischbedarf pro Woche entspricht **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ meatConsumptionCountry }}**."
               ],
               "en": [
-                "Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}** . There is more meat available per capita in **{{ RankingUserInComparisionToCountriesMeat }}** of **{{ numberCountriesWithConsumption }}** countries."
+                "**Your meat consumption: {{ wertFleisch }} kg**Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}**."
               ]
               },
               "muchTooMuchMeat": {
                 "de": [
-                  "Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
+                  "**Ihr Fleischkonsum: {{ wertFleisch }} kg** – Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
                 ],
                 "en": [
-                  "Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
+                  "**Your meat consumption: {{ wertFleisch }} kg**Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
                 ]
               }
             }
@@ -885,7 +885,9 @@
             "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && 'someTrash'",
             "(i.sliderTrash / i.sliderSizeHousehold> 2.7) && 'muchTrash'"
           ],
-          "answerContext": {
+          "answerContext":{
+            "trashValueUser":"i.sliderTrash",
+            "householdValueUser":"i.sliderSizeHousehold",
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
             "wertLebensmittel": "f.fmt('%0.1f', i.sliderTrash / i.sliderSizeHousehold)",
             "sizeHousehold": "i.sliderSizeHousehold"
@@ -898,26 +900,26 @@
             },
             "littleTrash": {
               "de": [
-                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
+                "**Ihr Haushalt von {{ householdValueUser }} wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
               ],
               "en": [
-                "At **{{ wertLebensmittel }}** kilograms per person, your household throws away less food than those in all European countries for which data is available. "
+                "**Your household of {{ householdValueUser }} throws away {{ trashValueUser }} kg food** – At **{{ wertLebensmittel }}** kilograms per person, your household throws away less food than those in all European countries for which data is available. "
               ]
                 },
             "someTrash": {
               "de": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie **{{ landAbfall }}**."
+                "**Ihr Haushalt von {{ householdValueUser }} wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie **{{ landAbfall }}**."
               ],
               "en": [
-                "Your household throws away about as much food per person as **{{ landAbfall }}**."
+                "**Your household of {{ householdValueUser }} throws away {{ trashValueUser }} kg food** – Your household throws away about as much food per person as **{{ landAbfall }}**."
               ]
             },
             "muchTrash": {
               "de": [
-                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen."
+                "**Ihr Haushalt von {{ householdValueUser }} wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen."
               ],
               "en": [
-                "With a value of **{{ wertLebensmittel }}**  per capita, your household throws away more food than in all European countries for which data is available.."
+                "**Your household of {{ householdValueUser }} throws away {{ trashValueUser }} kg food** – With a value of **{{ wertLebensmittel }}**  per capita, your household throws away more food than in all European countries for which data is available.."
               ]
               }
             }
@@ -936,7 +938,7 @@
             "landMin": "f.getMinCountryName('electro')",
             "valueMax": "f.getMaxValue('electro')",
             "valueMin": "f.getMinValue('electro')",
-            "wertEwaste": "i.sliderEwaste + 2.41"
+            "wertEwaste": "i.sliderEwaste + 2.4"
           },
           "templates": {
             "default": {
@@ -949,26 +951,26 @@
             },
             "lessEwaste": {
               "de": [
-                "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}** mit **{{ valueMin}}** Kilogramm pro Jahr und Einwohner."
+                "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}** mit **{{ valueMin }}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin}}** kilograms per year and resident"
+                "**Your're resposible for {{ wertEwaste }} kg electronic waste ** – That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin }}** kilograms per year and resident"
               ]
                 },
             "someEwaste": {
               "de": [
-                "Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen **{{ countryEwaste }}**."
+                "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen **{{ countryEwaste }}**."
               ],
               "en": [
-                "You are responsible for roughly the same amount of electronic waste as people **{{ countryEwaste }}**."
+                "**Your're resposible for {{ wertEwaste }} kg electronic waste ** – You are responsible for roughly the same amount of electronic waste as people **{{ countryEwaste }}**."
               ]
             },
             "muchEwaste": {
               "de": [
-                "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht **{{ landMax }}** mit **{{Wert_Land_max}}** Kilogramm pro Jahr und Einwohner."
+                "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht **{{ landMax }}** mit **{{ valueMax }}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}**, with **{{Wert_Land_max}}** kilograms per year and resident."
+                "**Your're resposible for {{ wertEwaste }} kg electronic waste ** – That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}**, with **{{ valueMax }}** kilograms per year and resident."
               ]
               }
             }
