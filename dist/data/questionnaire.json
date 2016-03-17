@@ -36,7 +36,7 @@
           "type": "slider",
           "options": {
             "unit": "%",
-            "min": 0,
+            "min": 1,
             "value": 30,
             "max": 60,
             "step": 1
@@ -46,9 +46,21 @@
       {
         "answer": {
           "answerKey": [
-            "(i.sliderFoodSpending < 15) && 'littleFoodCon'",
-            "(i.sliderFoodSpending < 50) && 'mediumFoodCon'",
-            "(i.sliderFoodSpending >= 50) && 'highFoodCon'"
+            [
+              "(i.sliderFoodSpending < 15)",
+              "&& f.changeVis(f.getMinISO('food'))",
+              "&& 'littleFoodCon'"
+            ],
+            [
+              "(i.sliderFoodSpending < 50)",
+              "&& f.changeVis(f.getISO('food', i.sliderFoodSpending))",
+              "&& 'mediumFoodCon'"
+            ],
+            [
+              "(i.sliderFoodSpending >= 50)",
+              "&& f.changeVis(f.getMaxISO('food'))",
+              "&& 'highFoodCon'"
+            ]
           ],
           "answerContext": {
             "landAusgaben": "f.getCountryName('food', i.sliderFoodSpending)",
@@ -72,7 +84,7 @@
                 "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Konsumausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
-                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just ***{{ valueMin }}** * percent, which is the lowest percentage of all countries"
+                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries"
               ]
             },
             "mediumFoodCon": {
@@ -286,7 +298,7 @@
             "**Wie viel Prozent der Kleidung in Ihrem Schrank tragen Sie so gut wie nie?**"
           ],
           "en": [
-            "# Do we need everything we own?",
+            "# Do we really need everything we own?",
             "",
             "Avoiding purchases of things you don’t need can save both money and resources. Take a guess: ",
             "",
@@ -384,7 +396,7 @@
             "(Fleischgericht ≈ 200 Gramm, Bratwurst ≈ 100 Gramm, Wurstbrot ≈ 20 Gramm)"
           ],
           "en": [
-            "# Schnitzel, Bratwurst & Co",
+            "# Sausage and steak",
             "",
             "Some products require a particularly high quantity of resources. The production of a kilogram (2.2 pounds) of beef, for example, requires on average 50 times more water and 100 times more land on average than the production of a kilogram of potatoes.",
             "",
@@ -411,12 +423,14 @@
           "answerKey": [
             "(i.sliderMeatConsumption == 0.1) && 'noMeat'",
             "(i.sliderMeatConsumption < 1.5) && 'someMeat'",
-            "(i.sliderMeatConsumption < 2.5) && 'muchMeat'",
-            "(i.sliderMeatConsumption >= 2.5) && 'muchTooMuchMeat'"
+            "(i.sliderMeatConsumption < 2.5) && f.changeVis(f.getISO('meat', i.sliderMeatConsumption)) && 'muchMeat'",
+            "(i.sliderMeatConsumption >= 2.5) && f.changeVis(f.getMaxISO('meat')) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
             "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
-            "landMax": "f.getMaxCountryName('meat')"
+            "landMax": "f.getMaxCountryName('meat')",
+            "landMaxValue": "f.getMaxValue('meat')",
+            "landValue": "f.getCountryName('meat', i.sliderMeatConsumption)"
           },
           "templates": {
             "default": {
@@ -429,7 +443,6 @@
             },
             "noMeat": {
               "de": [
-
                 "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnittsfleischesser sparen Sie dadurch pro Jahr etwa 330 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 1300 Kilometern Autofahrt mit einem mittelgroßen Benziner."
               ],
               "en": [
@@ -438,38 +451,38 @@
             },
             "someMeat": {
               "de": [
-                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch}}** Kilogramm Fleisch produziert werden",
+                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch }}** Kilogramm Fleisch produziert werden",
                 "",
                 "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
               ],
               "en": [
-                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch}}** kilograms of meat must be produced.",
+                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch }}** kilograms of meat must be produced.",
                 "",
                 "Your level of consumption can be covered in any of the countries for which comparative data is available."
               ]
             },
             "muchMeat": {
               "de": [
-                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch}}** Kilogramm Fleisch produziert werden",
+                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch }}** Kilogramm Fleisch produziert werden",
                 "",
-                "Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ landMax }}**."
+                "Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ landValue }}**."
               ],
               "en": [
-                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch}}** kilograms of meat must be produced.",
+                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch }}** kilograms of meat must be produced.",
                 "",
-                "That is comparable to the weekly per capita amount available **{{ landMax }}**."
+                "That is comparable to the weekly per capita amount available **{{ landValue }}**."
               ]
             },
             "muchTooMuchMeat": {
               "de": [
-                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch}}** Kilogramm Fleisch produziert werden",
+                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch }}** Kilogramm Fleisch produziert werden",
                 "",
-                "Ihr Bedarf ließe sich in keinem der Länder, für die Vergleichsdaten vorliegen, decken."
+                "Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
               ],
               "en": [
-                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch}}** kilograms of meat must be produced.",
+                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch }}** kilograms of meat must be produced.",
                 "",
-                "Your consumption is higher than the average amount of meat available per person in all countries for which data is available."
+                "Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
               ]
             }
           }
@@ -483,8 +496,8 @@
             "(i.sliderMeatConsumption > 0.5) && 'meat'"
           ],
           "answerContext": {
-            "gasred": "f.fmt('%0.1f', i.sliderMeatConsumption *52 / 2 * 3.89)",
-            "gasred2" : "f.fmt('%0.1f', i.sliderMeatConsumption * 52 / 2 * 3.89 * 1000 / 249)"
+            "gasred": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31 * 52 / 2 * 3.89)",
+            "gasred2" : "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31 * 52 / 2 * 3.89 * 1000 / 249)"
           },
           "templates": {
             "meat": {
@@ -570,8 +583,8 @@
           "answerKey": [
             "(f.isUndefined(i.sliderTrash) || f.isUndefined(i.sliderSizeHousehold)) && 'default'",
             "(i.sliderTrash / i.sliderSizeHousehold < 1.5) && 'littleTrash'",
-            "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && 'someTrash'",
-            "(i.sliderTrash / i.sliderSizeHousehold> 2.7) && 'muchTrash'"
+            "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && f.changeVis(f.getISO('foodwaste', i.sliderTrash / i.sliderSizeHousehold)) && 'someTrash'",
+            "(i.sliderTrash / i.sliderSizeHousehold > 2.7) && f.changeVis(f.getMaxISO('foodwaste')) && 'muchTrash'"
           ],
           "answerContext": {
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
@@ -634,7 +647,7 @@
             "**Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?** (Smartphone ≈ 130g, Laptop ≈ 3,5kg, Toaster ≈ 1kg, Waschmaschine ≈ 65kg)"
           ],
           "en": [
-            "# Another new smartphone?",
+            "# Yet another new smartphone?",
             "",
             "Many Germans buy a new mobile phone about every two years. Old phones often end up forgotten in a drawer or are recycled in Africa in catastrophic conditions.",
             "",
@@ -864,7 +877,7 @@
                 "**Ihr Fleischkonsum: {{ wertFleisch }} kg** – Ihr Fleischbedarf pro Woche entspricht **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ meatConsumptionCountry }}**."
               ],
               "en": [
-                "**Your meat consumption: {{ wertFleisch }} kg**Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}**."
+                "**Your meat consumption: {{ wertFleisch }} kg** – Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}**."
               ]
               },
               "muchTooMuchMeat": {
@@ -872,7 +885,7 @@
                   "**Ihr Fleischkonsum: {{ wertFleisch }} kg** – Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
                 ],
                 "en": [
-                  "**Your meat consumption: {{ wertFleisch }} kg**Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
+                  "**Your meat consumption: {{ wertFleisch }} kg** – Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
                 ]
               }
             }
@@ -896,7 +909,7 @@
           "templates": {
             "default": {
               "de": ["Bitte beantworten Sie die Frage, wie viele **Lebensmittel** Sie wegwerfen."],
-              "en": ["Please answer the question, how much **food** you throw away."]
+              "en": ["Please answer the question about how much food you throw away."]
             },
             "littleTrash": {
               "de": [
