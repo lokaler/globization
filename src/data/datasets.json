@@ -496,10 +496,6 @@
             "value":0.4
          },
          {
-            "iso":"BMU",
-            "value":2.4
-         },
-         {
             "iso":"BOL",
             "value":1.3
          },
@@ -654,10 +650,6 @@
          {
             "iso":"FRA",
             "value":1.7
-         },
-         {
-            "iso":"PYF",
-            "value":2.1
          },
          {
             "iso":"GAB",
