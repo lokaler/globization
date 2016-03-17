@@ -285,7 +285,7 @@
           "en": [
             "Avoiding purchases of things you don’t need can save both money and resources. Take a guess: ",
             "",
-            "*+What percent of the clothing in your wardrobe do you hardly ever wear?**"
+            "**What percent of the clothing in your wardrobe do you hardly ever wear?**"
           ]
         }
       },
@@ -637,7 +637,7 @@
           "options": {
             "min": 0.1,
             "value": 20,
-            "max": 70,
+            "max": 80,
             "unit": "Kg"
           }
         }
@@ -743,7 +743,7 @@
           ],
           "en": [
             "# Summary",
-            "So konsumieren Sie im internationalen Vergleich:"
+            "Your consumption in comparison with the world:"
           ]
         }
       },
@@ -762,7 +762,7 @@
             "valueMin": "f.getMinValue('food')",
             "numberCountriesFood": "funcs.getDatasetCount('food')",
             "numbercountriesWithLowerFoodConsumptionThanMe": "funcs.getDatasetCountByComparator('food', inputs.sliderMeatConsumption.value, '>')",
-            "RankingUserInComparisionToCountriesFood": "funcs.getDatasetCount('food') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '>')"
+            "RankingUserInComparisionToCountriesFood": "funcs.getDatasetCount('food') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
             "litteFoodCon": {
@@ -776,10 +776,10 @@
             },
             "mediumFoodCon": {
               "de": [
-                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen **{{ landAusgaben }}**. Im Vergleich von **{{ numberCountriesFood }}**  Ländern liegen Sie damit auf Platz **{{ RankingUserInComparisionToCountriesFood }}**."
+                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen **{{ landAusgaben }}**."
               ],
               "en": [
-                "People in **{{ landAusgaben }}**. spend a similar amount on food as you do, measured as a percentage of total expenditures. Compared to **{{ numberCountriesFood }}** countries, that puts you at number **{{ RankingUserInComparisionToCountriesFood }}** on the list."
+                "People in **{{ landAusgaben }}**. spend a similar amount on food as you do, measured as a percentage of total expenditures."
               ]
             },
             "highFoodCon": {
@@ -797,21 +797,32 @@
       {
         "answer": {
           "answerKey": [
-            "(i.sliderMeatConsumption < 1) && 'noMeat'",
+            "(i.sliderMeatConsumption < 0.1) && 'noMeat'",
             "(i.sliderMeatConsumption < 1.5) && 'someMeat'",
             "(i.sliderMeatConsumption < 2.5) && 'muchMeat'",
             "(i.sliderMeatConsumption >= 2.5) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
             "wertFleisch": "i.sliderMeatConsumption * 1.31",
+            "meatConsumptionCountry": "f.getCountryName('meat')",
             "landMax": "f.getMaxCountryName('meat')",
+            "landMaxValue": "f.getMaxValue('meat')",
             "gasred": "i.sliderMeatConsumption / 2 * 3.89",
             "gasred2" : "i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249",
             "numberCountriesWithConsumption": "f.getDatasetCount('meat')",
             "numbercountriesWithLowerMeatConsumptionThanMe": "f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')",
-            "RankingUserInComparisionToCountriesMeat": "funcs.getDatasetCount('meat') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
+            "RankingUserInComparisionToCountriesMeat": "funcs.getDatasetCount('meat') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')",
+            "testfoo":"funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
+            "default": {
+              "de": [
+                "Bitte beantworten Sie die Frage zum Fleischkonsum."
+              ],
+              "en": [
+                "Please answer the question about your meat consumption."
+              ]
+                },
             "noMeat": {
               "de": [
                 "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 330 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 1.300 Kilometern Autofahrt mit einem mittelgroßen Benziner."
@@ -830,10 +841,10 @@
             },
             "muchMeat": {
               "de": [
-                "Ihr Fleischbedarf pro Woche entspricht  **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ sameMeat }}** . Mehr Fleisch pro Kopf gibt es **{{ RankingUserInComparisionToCountriesMeat }}** von **{{ numberCountriesWithConsumption }}** Ländern."
+                "Ihr Fleischbedarf pro Woche entspricht  **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ meatConsumptionCountry }}** . Mehr Fleisch pro Kopf gibt es **{{ RankingUserInComparisionToCountriesMeat }}** von **{{ numberCountriesWithConsumption }}** Ländern."
               ],
               "en": [
-                "Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}** . There is more meat available per capita **{{ RankingUserInComparisionToCountriesMeat }}** of **{{ numberCountriesWithConsumption }}** countries."
+                "Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}** . There is more meat available per capita in **{{ RankingUserInComparisionToCountriesMeat }}** of **{{ numberCountriesWithConsumption }}** countries."
               ]
               },
               "muchTooMuchMeat": {
@@ -856,9 +867,9 @@
           ],
           "answerContext": {
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
-            "wertLebensmittel": "i.sliderTrash / i.sliderSizeHousehold",
-            "wertLebensmittelHaushalt":"i.sliderTrash",
+            "wertLebensmittel": "f.fmt('%0.1f', i.sliderTrash / i.sliderSizeHousehold)",
             "sizeHousehold": "i.sliderSizeHousehold"
+
           },
           "templates": {
             "default": {
@@ -909,8 +920,12 @@
           },
           "templates": {
             "default": {
-              "de": [],
-              "en": []
+              "de": [
+                "Bitte beantworten Sie die Frage zum Elektroschrott."
+              ],
+              "en": [
+                "Please answer the question about elecronic waste."
+              ]
             },
             "lessEwaste": {
               "de": [
