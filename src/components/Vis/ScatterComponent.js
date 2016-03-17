@@ -12,6 +12,7 @@ import classnames from 'classnames';
 import AxisComponent from './AxisComponent.js';
 import DotsComponent from './DotsComponent.js';
 import translate from 'logic/translate';
+import { numberWithThousandsSeparator } from 'logic/formatting';
 
 
 @cssModules(styles)
@@ -90,7 +91,7 @@ export default class ScatterComponent extends React.Component {
           <AxisComponent
             className='x axis'
             scale={this.x}
-            tickFormat={ (d) => translate(d) }
+            tickFormat={ (d) => translate(numberWithThousandsSeparator(d)) }
             orient='bottom'
             transform={`translate(0, ${this.innerHeight})`}
             transitionDuration={1000}
