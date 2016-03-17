@@ -792,7 +792,7 @@
                 "**Ihre Ausgaben: {{ valueFoodUser }} %** – Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
               ],
               "en": [
-                "Your spending: {{ valueFoodUser }} %** – You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
+                "**Your spending: {{ valueFoodUser }} %** – You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
               ]
             },
             "mediumFoodCon": {
@@ -800,7 +800,7 @@
                 "**Ihre Ausgaben: {{ valueFoodUser }} %** – Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen **{{ landAusgaben }}**."
               ],
               "en": [
-                "Your spending: {{ valueFoodUser }} %** – People in **{{ landAusgaben }}**. spend a similar amount on food as you do, measured as a percentage of total expenditures."
+                "**Your spending: {{ valueFoodUser }} %** – People in **{{ landAusgaben }}**. spend a similar amount on food as you do, measured as a percentage of total expenditures."
               ]
             },
             "highFoodCon": {
@@ -808,7 +808,7 @@
                 "**Ihre Ausgaben: {{ valueFoodUser }} %** – Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen **{{ landMax }}** den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
               ],
               "en": [
-                "Your spending: {{ valueFoodUser }} %** – You spend a very large share of your money on food. Internationally, people  **{{ landMax }}**  devote the largest share of their expenditures to food, namely **{{ valueMax }}** percent."
+                "**Your spending: {{ valueFoodUser }} %** – You spend a very large share of your money on food. Internationally, people  **{{ landMax }}**  devote the largest share of their expenditures to food, namely **{{ valueMax }}** percent."
               ]
             }
           }
@@ -919,7 +919,7 @@
                 "**Ihr Haushalt von {{ householdValueUser }} wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen."
               ],
               "en": [
-                "**Your household of {{ householdValueUser }} throws away {{ trashValueUser }} kg food** – With a value of **{{ wertLebensmittel }}**  per capita, your household throws away more food than in all European countries for which data is available.."
+                "**Your household of {{ householdValueUser }} throws away {{ trashValueUser }} kg food** – With a value of **{{ wertLebensmittel }}** per capita, your household throws away more food than in all European countries for which data is available.."
               ]
               }
             }
@@ -954,7 +954,7 @@
                 "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}** mit **{{ valueMin }}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "**Your're resposible for {{ wertEwaste }} kg electronic waste ** – That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin }}** kilograms per year and resident"
+                "**Your're resposible for {{ wertEwaste }} kg electronic waste** – That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin }}** kilograms per year and resident"
               ]
                 },
             "someEwaste": {
@@ -962,7 +962,7 @@
                 "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen **{{ countryEwaste }}**."
               ],
               "en": [
-                "**Your're resposible for {{ wertEwaste }} kg electronic waste ** – You are responsible for roughly the same amount of electronic waste as people **{{ countryEwaste }}**."
+                "**Your're resposible for {{ wertEwaste }} kg electronic waste** – You are responsible for roughly the same amount of electronic waste as people **{{ countryEwaste }}**."
               ]
             },
             "muchEwaste": {
@@ -970,7 +970,7 @@
                 "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht **{{ landMax }}** mit **{{ valueMax }}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "**Your're resposible for {{ wertEwaste }} kg electronic waste ** – That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}**, with **{{ valueMax }}** kilograms per year and resident."
+                "**Your're resposible for {{ wertEwaste }} kg electronic waste** – That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}**, with **{{ valueMax }}** kilograms per year and resident."
               ]
               }
             }
