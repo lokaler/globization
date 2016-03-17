@@ -20,17 +20,6 @@ export default class Slider extends React.Component {
 
   onChange(value) {
     this.props.actions.updateUserInput(this.props.id, value);
-    
-    /*const dataset = new Dataset(this.props.master.dataset.data);
-    const country = dataset.getCountryForValue(value);
-    this.props.actions.changeVis({
-      animation: {
-        action: 'zoomToCountry',
-        payload: country
-      },
-      active: country,
-      tooltip: { active: false }
-    });*/
   }
 
   tipFormatter(val) {

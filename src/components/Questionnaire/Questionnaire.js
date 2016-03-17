@@ -27,6 +27,7 @@ export default class Questionnaire extends React.Component {
 
   componentDidMount() {
     this.loadData();
+    window.actions = this.props.actions;
   }
 
   onClickLoad = () => {

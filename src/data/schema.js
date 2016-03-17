@@ -68,7 +68,7 @@ export default {
         additionalProperties: false,
         properties: {
           className: { enum: ['tip'] },
-          answerKey: ref('arrayOfStrings'),
+          answerKey: array(),
           answerContext: object({
             patternProperties: { '.*': string() }
           }),

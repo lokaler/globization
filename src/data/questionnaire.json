@@ -46,9 +46,21 @@
       {
         "answer": {
           "answerKey": [
-            "(i.sliderFoodSpending < 15) && 'littleFoodCon'",
-            "(i.sliderFoodSpending < 50) && 'mediumFoodCon'",
-            "(i.sliderFoodSpending >= 50) && 'highFoodCon'"
+            [
+              "(i.sliderFoodSpending < 15)",
+              "&& f.changeVis(f.getMinISO('food'))",
+              "&& 'littleFoodCon'"
+            ],
+            [
+              "(i.sliderFoodSpending < 50)",
+              "&& f.changeVis(f.getISO('food', i.sliderFoodSpending))",
+              "&& 'mediumFoodCon'"
+            ],
+            [
+              "(i.sliderFoodSpending >= 50)",
+              "&& f.changeVis(f.getMaxISO('food'))",
+              "&& 'highFoodCon'"
+            ]
           ],
           "answerContext": {
             "landAusgaben": "f.getCountryName('food', i.sliderFoodSpending)",

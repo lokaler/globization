@@ -1,10 +1,13 @@
 import ajv from 'ajv';
 import schema from '../data/schema';
-import { cloneDeep } from 'lodash';
+import { isArray, cloneDeep } from 'lodash';
 import funcs from './questionnaire-functions';
 import store from '../store';
 
 function compileExpression(expr) {
+  if (isArray(expr)) {
+    expr = expr.join(' '); // eslint-disable-line no-param-reassign
+  }
   const funcBody = `return ${expr};`;
   try {
     /* eslint-disable */
