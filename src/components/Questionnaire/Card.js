@@ -27,6 +27,12 @@ export default class Questionnaire extends React.Component {
     window.actions = this.props.actions;
   }
 
+  shouldComponentUpdate(nextProps) {
+    const p = this.props;
+    const n = nextProps;
+    return (p.app !== n.app) || (p.questions !== n.questions);
+  }
+
   loadData() {
     this.props.actions.requestQuestionData('./data/questionnaire.json');
   }
