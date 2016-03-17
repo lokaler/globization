@@ -4,6 +4,7 @@ import React, { PropTypes } from 'react';
 // import utils from './VisUtils';
 import cssModules from 'react-css-modules';
 import styles from './vis.scss';
+import translate from 'logic/translate';
 
 @cssModules(styles)
 
@@ -19,16 +20,13 @@ export default class TooltipComponent extends React.Component {
 
   }
 
-  getCountryName(iso){
-    const d = this.props.master.master.filter(d => d.alpha3 === iso);
-    return d.length ? d[0].name_deu : '';
-  }
 
   render() {
     // utils.log('render tooltip', this.props.vis.tooltip);
 
     const { x, y, active, value, iso, unit } = this.props.vis.tooltip;
-    const countryName = this.getCountryName(iso);
+    const name = translate(iso, { isCountryCode: true });
+    const slug = value != undefined ? translate(value) + " " + unit : translate("no data");
 
     return (
       <div
@@ -36,7 +34,7 @@ export default class TooltipComponent extends React.Component {
         style={{ transform: `translate(${x}px, ${y}px)` }}
       >
         <div className="inner">
-          { countryName }: { value } { unit }
+          { name }: { slug }
          </div>
       </div>
     );

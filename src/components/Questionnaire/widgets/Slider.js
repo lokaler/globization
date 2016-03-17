@@ -27,7 +27,8 @@ export default class Slider extends React.Component {
         action: 'zoomToCountry',
         payload: country
       },
-      active: country
+      active: country,
+      tooltip: { active: false }
     });
   }
 
