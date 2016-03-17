@@ -34,11 +34,15 @@ export default function appReducer(state = initialState, action) {
       return Object.assign({}, state, { ...action.sizes });
     }
     case ActionTypes.SPON_LOGGER: {
-      const sponFrame = window.parent.$ || false;
-      // console.log('logger', sponFrame);
-      if (sponFrame) {
-        sponFrame().spInterface('reCountPage',
-          { countIVW: true, newParamsOnly: false, params: null });
+      try {
+        const sponFrame = window.parent.$ || false;
+        console.log('logger', sponFrame);
+        if (sponFrame) {
+          sponFrame().spInterface('reCountPage',
+            { countIVW: true, newParamsOnly: false, params: null });
+        }
+      } catch (e) {
+        console.log('can not log');
       }
       return state;
     }
