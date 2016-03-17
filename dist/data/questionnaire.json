@@ -15,7 +15,7 @@
           "de": [
             "# Wofür geben Sie Ihr Geld aus?",
             "",
-            "An der Supermarktkasse und im Einkaufszentrum entscheiden wir",
+            "An der Supermarktkasse und im Einkaufszentrum entscheiden wir, ",
             "welche Produkte uns wie viel wert sind.",
             "",
             "**Wie viel Prozent Ihrer Konsumausgaben wenden Sie",
@@ -165,7 +165,7 @@
                 "Damit gehören Sie zur Minderheit: Laut einer repräsentativen Umfrage aus dem Jahr 2013 kauft nur jeder vierte Deutsche nie Bioprodukte. Rund jeder Fünfte kauft sie häufig oder fast ausschließlich. Längst werden viele davon aus dem Ausland importiert, um den Bedarf zu decken. Lesen Sie dazu auch unsere [Reportage](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)."
               ],
               "en": [
-                "That puts you in the minority. According to a representative survey from 2013, only about one in four Germans never buys organic products. About one in five buys them often or almost exclusively. Many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this [feature story](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)"
+                "That puts you in the minority. According to a representative survey from 2013, only about one in four Germans never buys organic products. About one in five buys them often or almost exclusively. Many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this [feature story](http://www.spiegel.de/international/tomorrow/a-1082697.html)"
               ]
             },
             "sometimes": {
@@ -173,7 +173,7 @@
                 "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bioprodukte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bioprodukte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)."
               ],
               "en": [
-                "Your purchasing patterns are similar to many in Germany: In a representative survey from 2013, 52 percent of respondents said they bought organic products occasionally. One of the most important reasons cited was a desire to support local suppliers. Yet many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this [feature story](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)."
+                "Your purchasing patterns are similar to many in Germany: In a representative survey from 2013, 52 percent of respondents said they bought organic products occasionally. One of the most important reasons cited was a desire to support local suppliers. Yet many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this [feature story](http://www.spiegel.de/international/tomorrow/a-1082697.html)."
               ]
             },
             "always": {
@@ -181,7 +181,7 @@
                 "Nicht schlecht! So konsequent ist nur etwa ein Fünftel der Deutschen. Bei einer repräsentativen Umfrage im Jahr 2013 gaben 22 Prozent der Befragten an, häufig oder ausschließlich Ökoprodukte zu kaufen. Im Schnitt geben Deutsche 93 Euro im Jahr für Biolebensmittel aus. Damit liegen sie im Vergleich von 29 europäischen Ländern auf dem sechsten Platz. Längst müssen für den Biokonsum der Deutschen auch Produkte importiert werden. Lesen Sie dazu unsere [Reportage](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)"
               ],
               "en": [
-                "Not bad! Only about a fifth of German consumers have similar purchasing habits. In a representative study from 2013, 22 percent of respondents said they often or exclusively bought organic products. On average, Germans spend €93 per year on organic foodstuffs. In a ranking of 29 European countries, Germany is in sixth place, provided varying purchasing power from country to country is taken into account. To meet the demand in Germany, organic products have been imported from abroad for some time now. You can read more about the organic business in this [feature story](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)."
+                "Not bad! Only about a fifth of German consumers have similar purchasing habits. In a representative study from 2013, 22 percent of respondents said they often or exclusively bought organic products. On average, Germans spend €93 per year on organic foodstuffs. In a ranking of 29 European countries, Germany is in sixth place, provided varying purchasing power from country to country is taken into account. To meet the demand in Germany, organic products have been imported from abroad for some time now. You can read more about the organic business in this [feature story](http://www.spiegel.de/international/tomorrow/a-1082697.html)."
               ]
             }
           }
@@ -473,13 +473,13 @@
             "(i.sliderMeatConsumption > 0.5) && 'meat'"
           ],
           "answerContext": {
-            "gasred": "f.fmt('%0.1f', i.sliderMeatConsumption / 2 * 3.89)",
-            "gasred2" : "f.fmt('%0.1f', i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249)"
+            "gasred": "f.fmt('%0.1f', i.sliderMeatConsumption *52 / 2 * 3.89)",
+            "gasred2" : "f.fmt('%0.1f', i.sliderMeatConsumption * 52 / 2 * 3.89 * 1000 / 249)"
           },
           "templates": {
             "meat": {
               "de": [
-                "Nachhaltigkeitstipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, entspräche das einer Reduktion der klimaschädlichen Gase um **{{ gasred }}** kg CO2. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr **{{ gasred2 }}** Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise ist das wenig, doch Sie sparen gleichzeitig auch Ressourcen wie sauberes Wasser und Ackerland."
+                "Nachhaltigkeitstipp: Wenn Sie Ihren Fleischkonsum für ein Jahr halbieren würden, könnten Sie damit den Ausstoß von etwa **{{ gasred }}** Kilogramm CO2 vermeiden. Diese Menge können Sie auch einsparen, wenn Sie pro Jahr **{{ gasred2 }}** Kilometer weniger mit dem Auto fahren. Verglichen mit dem CO2-Ausstoß einer Flugreise, etwa auf die Balearen, ist das wenig, doch Sie schonen beim Fleischverzicht auch Ressourcen wie sauberes Wasser und Ackerland."
               ],
               "en": [
                 "Sustainability Tip: If you were to cut your meat consumption in half for a year, you could reduce your CO2 emissions by around **{{ gasred }}** kilograms. You could save the same amount by driving **{{ gasred2 }}** fewer kilometers with your car. Compared with the CO2 emissions produced by taking a plane trip, to the Balearic Islands for example, that isn't much. But by reducing meat consumption, you are also protecting resources like clean water and farmland."
@@ -508,7 +508,7 @@
             "",
             "1,3 Milliarden Tonnen Lebensmittel werden weltweit pro Jahr weggeworfen. Diese gigantische Menge wollen die Vereinten Nationen bis 2030 deutlich reduzieren.",
             "",
-            "**Wie viel Kilogramm Lebensmittel landen bei Ihnen zu Hause pro Woche im Müll?**Der deutsche Durchschnittswert von 1,9 Kilogramm entspricht ungefähr einer halben Packung Milch, vier Äpfeln, einem Hirtenkäse, fünf Scheiben Wurst und einem halben Brot."
+            "**Wie viel Kilogramm Lebensmittel landen bei Ihnen zu Hause pro Woche im Müll?** Der deutsche Durchschnittswert von 1,9 Kilogramm entspricht ungefähr einer halben Packung Milch, vier Äpfeln, einem Hirtenkäse, fünf Scheiben Wurst und einem halben Brot."
           ],
           "en": [
 
@@ -527,8 +527,8 @@
           "options": {
             "unit": "Kg",
             "min": 0,
-            "value": 6,
-            "max": 30
+            "value": 2,
+            "max": 4
           }
         }
       },
@@ -618,7 +618,7 @@
           "de": [
             "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy. Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt.",
             "",
-            "**Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?**"
+            "**Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?** (Smartphone ≈ 130g, Laptop ≈ 3,5kg, Toaster ≈ 1kg, Waschmaschine ≈ 65kg)"
           ],
           "en": [
             "Many Germans buy a new mobile phone about every two years. Old phones often end up forgotten in a drawer or are recycled in Africa in catastrophic conditions.",
@@ -635,7 +635,7 @@
           "options": {
             "min": 0.1,
             "value": 20,
-            "max": 50,
+            "max": 70,
             "unit": "Kg"
           }
         }
@@ -666,7 +666,7 @@
             },
             "lessEwaste": {
               "de": [
-                "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland im Jahr 2014 waren das 2,41 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
+                "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland waren das im Jahr 2014 2,41 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
                 "",
                 "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}**  mit **{{ valueMin }}** Kilogramm pro Jahr und Einwohner."
               ],
@@ -711,7 +711,7 @@
           "templates": {
             "tip": {
               "de": [
-                "**Nachhaltigkeitstipp**: Ihre Elektroschrott-Bilanz können Sie zum Beispiel verbessern, indem Sie reparierbare Geräte kaufen, für die es Ersatzteile gibt."
+                "**Nachhaltigkeitstipp**: Elektroschrott können Sie zum Beispiel vermeiden, indem Sie reparieren statt wegwerfen. Beim [Repair-Café in Ihrer Nähe](http://repaircafe.org/de/besuchen/) bekommen Sie mit etwas Hilfe den Toaster oder die Bohrmaschine vielleicht noch mal zum Laufen – das Erfolgserlebnis gibt es gratis dazu."
               ],
               "en": [
             "**Sustainability Tip**: One way to avoid electronic waste is by repairing broken devices rather than throwing them away. At a [Repair Café](http://repaircafe.org/en/visit/) near you, you can get the help you need to get your electronics up and running again. The feeling of accomplishment afterwards doesn’t cost anything."
@@ -774,7 +774,7 @@
             },
             "mediumFoodCon": {
               "de": [
-                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen in **{{ landAusgaben }}**. Im Vergleich von **{{ numberCountriesFood }}**  Ländern liegen Sie damit auf Platz **{{ RankingUserInComparisionToCountriesFood }}**."
+                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen **{{ landAusgaben }}**. Im Vergleich von **{{ numberCountriesFood }}**  Ländern liegen Sie damit auf Platz **{{ RankingUserInComparisionToCountriesFood }}**."
               ],
               "en": [
                 "People in **{{ landAusgaben }}**. spend a similar amount on food as you do, measured as a percentage of total expenditures. Compared to **{{ numberCountriesFood }}** countries, that puts you at number **{{ RankingUserInComparisionToCountriesFood }}** on the list."
@@ -782,7 +782,7 @@
             },
             "highFoodCon": {
               "de": [
-                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen in **{{ landMax }}** den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
+                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen **{{ landMax }}** den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
               ],
               "en": [
 
@@ -812,7 +812,7 @@
           "templates": {
             "noMeat": {
               "de": [
-                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 230 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 900 Kilometern Autofahrt mit einem mittelgroßen Benziner."
+                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 330 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 1.300 Kilometern Autofahrt mit einem mittelgroßen Benziner."
               ],
               "en": [
                 "You are a vegetarian, or even a vegan? The CO2 emissions you produce over the course of a year are around 330 kilograms (727 pounds) less than those of an average German meat-eater. That is the equivalent of driving 1,300 kilometers (810 miles) in a mid-sized, gasoline-powered vehicle."
@@ -828,18 +828,18 @@
             },
             "muchMeat": {
               "de": [
-                "Ihr Fleischbedarf pro Woche entspricht  **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge in **{{ sameMeat }}** . Mehr Fleisch pro Kopf gibt es in **{{ RankingUserInComparisionToCountriesMeat }}** von **{{ numberCountriesWithConsumption }}** Ländern."
+                "Ihr Fleischbedarf pro Woche entspricht  **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ sameMeat }}** . Mehr Fleisch pro Kopf gibt es **{{ RankingUserInComparisionToCountriesMeat }}** von **{{ numberCountriesWithConsumption }}** Ländern."
               ],
               "en": [
-                "Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available in **{{ sameMeat }}** . There is more meat available per capita in **{{ RankingUserInComparisionToCountriesMeat }}** of **{{ numberCountriesWithConsumption }}** countries."
+                "Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}** . There is more meat available per capita **{{ RankingUserInComparisionToCountriesMeat }}** of **{{ numberCountriesWithConsumption }}** countries."
               ]
               },
               "muchTooMuchMeat": {
                 "de": [
-                  "Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es in **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
+                  "Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
                 ],
                 "en": [
-                  "Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available in **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
+                  "Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
                 ]
               }
             }
@@ -872,18 +872,18 @@
                 },
             "someTrash": {
               "de": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in **{{ landAbfall }}**."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie **{{ landAbfall }}**."
               ],
               "en": [
-                "Your household throws away about as much food per person as in **{{ landAbfall }}**."
+                "Your household throws away about as much food per person as **{{ landAbfall }}**."
               ]
             },
             "muchTrash": {
               "de": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie in **{{ landAbfall }}**."
+                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie **{{ landAbfall }}**."
               ],
               "en": [
-                "Your household throws away about as much food per person as in **{{ landAbfall }}**."
+                "Your household throws away about as much food per person as **{{ landAbfall }}**."
               ]
               }
             }
@@ -919,10 +919,10 @@
                 },
             "someEwaste": {
               "de": [
-                "Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen aus **{{ countryEwaste }}**."
+                "Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen **{{ countryEwaste }}**."
               ],
               "en": [
-                "You are responsible for roughly the same amount of electronic waste as people in **{{ countryEwaste }}**."
+                "You are responsible for roughly the same amount of electronic waste as people **{{ countryEwaste }}**."
               ]
             },
             "muchEwaste": {
