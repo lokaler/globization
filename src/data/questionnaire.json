@@ -672,8 +672,8 @@
         "answer": {
           "answerKey": [
             "(i.sliderEwaste < 10) && 'lessEwaste'",
-            "(i.sliderEwaste <= 29) && f.changeVis(f.getISO('electro', i.sliderEwaste)) &&  'someEwaste'",
-            "(i.sliderEwaste > 29) && f.changeVis(f.getMaxISO('electro')) && 'muchEwaste'"
+            "(i.sliderEwaste <= 29) && f.panToCountry(f.getISO('electro', i.sliderEwaste)) &&  'someEwaste'",
+            "(i.sliderEwaste > 29) && f.panToCountry(f.getMaxISO('electro')) && 'muchEwaste'"
           ],
           "answerContext": {
             "countryEwaste": "f.getCountryName('electro', i.sliderEwaste)",
@@ -787,9 +787,9 @@
             "landMin": "f.getMinCountryName('food')",
             "valueMax": "f.getMaxValue('food')",
             "valueMin": "f.getMinValue('food')",
-            "numberCountriesFood": "funcs.getDatasetCount('food')",
-            "numbercountriesWithLowerFoodConsumptionThanMe": "funcs.getDatasetCountByComparator('food', inputs.sliderMeatConsumption.value, '>')",
-            "RankingUserInComparisionToCountriesFood": "funcs.getDatasetCount('food') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
+            "numberCountriesFood": "f.getDatasetCount('food')",
+            "numbercountriesWithLowerFoodConsumptionThanMe": "f.getDatasetCountByComparator('food', inputs.sliderMeatConsumption.value, '>')",
+            "RankingUserInComparisionToCountriesFood": "f.getDatasetCount('food') - f.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
             "default": {
@@ -844,8 +844,8 @@
             "gasred2" : "i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249",
             "numberCountriesWithConsumption": "f.getDatasetCount('meat')",
             "numbercountriesWithLowerMeatConsumptionThanMe": "f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')",
-            "RankingUserInComparisionToCountriesMeat": "funcs.getDatasetCount('meat') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')",
-            "testfoo":"funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
+            "RankingUserInComparisionToCountriesMeat": "f.getDatasetCount('meat') - f.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')",
+            "testfoo":"f.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
             "default": {
