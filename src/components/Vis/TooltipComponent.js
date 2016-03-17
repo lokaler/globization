@@ -22,7 +22,7 @@ export default class TooltipComponent extends React.Component {
 
 
   render() {
-    // utils.log('render tooltip', this.props.vis.tooltip);
+    // console.log('render tooltip', this.props.vis.tooltip);
 
     const { x, y, active, value, iso, unit } = this.props.vis.tooltip;
     const name = translate(iso, { isCountryCode: true });

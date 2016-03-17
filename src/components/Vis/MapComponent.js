@@ -10,7 +10,7 @@ import styles from './globe.scss';
 import cssModules from 'react-css-modules';
 import classnames from 'classnames';
 import Dataset from '../../logic/Dataset.js'
-
+import { defer } from 'lodash';
 
 @cssModules(styles)
 
@@ -132,22 +132,20 @@ export default class MapComponent extends React.Component {
     const unit = this.props.master.dataset.unit;
     const c = this.path.centroid(country);
 
-    this.svg
-      .transition()
-      .duration(1000)
-      .each("end", ()=>{
-        const c = this.path.centroid(country);
-        this.props.actions.changeVis({
-          tooltip: {
-            active: true,
-            iso: name,
-            value,
-            unit,
-            x: c[0],
-            y: c[1]
-          }
-        });
-      })
+    // console.log("zoomToCountry", name);
+
+    defer(()=>{
+      this.props.actions.changeVis({
+        tooltip: {
+          active: true,
+          iso: name,
+          value,
+          unit,
+          x: c[0],
+          y: c[1]
+        }
+      });
+    });
   }
 
 
@@ -160,13 +158,16 @@ export default class MapComponent extends React.Component {
   componentWillReceiveProps(nextProps) {
     //utils.log("shouldComponentUpdate", nextProps.vis.animation ? "no": "yes");
 
-    if(nextProps.vis.animation){
-      this[nextProps.vis.animation.action](nextProps.vis.animation.payload);
-    }
+    // if(nextProps.vis.animation){
+    //   this[nextProps.vis.animation.action](nextProps.vis.animation.payload);
+    // }
 
     if(nextProps.vis.active != this.props.vis.active) {
       this.activeGeometry = _.find(nextProps.master.topojson, (d)=> d.properties.iso === nextProps.vis.active);
-      utils.log("activeGeometry",this.activeGeometry)
+      // console.log("activeGeometry",this.activeGeometry)
+      if(nextProps.vis.active){
+        this.zoomToCountry(nextProps.vis.active);
+      }
     }
 
     if(nextProps.master.dataset != this.props.master.dataset) {

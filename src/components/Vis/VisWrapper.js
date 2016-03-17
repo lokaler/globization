@@ -47,11 +47,12 @@ export default class Globe extends React.Component {
 
   changeType(type) {
     // this.props.actions.changeType(type);
-    this.props.actions.sponLogger();
+
     this.props.actions.changeVis({
       type,
       tooltip: { active: false }
     });
+    this.props.actions.sponLogger();
   }
 
   random(){
