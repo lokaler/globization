@@ -26,7 +26,7 @@ export default class Footer extends React.Component {
         else {
           cardIndex = -1;
         }
-
+        this.props.actions.sponLogger();
         actions.setCard(cardIndex, dataId);
       };
     }

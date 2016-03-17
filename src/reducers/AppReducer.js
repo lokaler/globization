@@ -33,6 +33,15 @@ export default function appReducer(state = initialState, action) {
     case ActionTypes.SET_WINDOW_SIZE: {
       return Object.assign({}, state, { ...action.sizes });
     }
+    case ActionTypes.SPON_LOGGER: {
+      const sponFrame = window.parent.$ || false;
+      // console.log('logger', sponFrame);
+      if (sponFrame) {
+        sponFrame().spInterface('reCountPage',
+          { countIVW: true, newParamsOnly: false, params: null });
+      }
+      return state;
+    }
     default:
       return state;
   }

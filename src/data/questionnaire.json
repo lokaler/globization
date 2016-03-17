@@ -36,7 +36,7 @@
           "type": "slider",
           "options": {
             "unit": "%",
-            "min": 0,
+            "min": 1,
             "value": 30,
             "max": 60,
             "step": 1
@@ -429,7 +429,8 @@
           "answerContext": {
             "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
             "landMax": "f.getMaxCountryName('meat')",
-            "landMaxValue": "f.getMaxValue('meat')"
+            "landMaxValue": "f.getMaxValue('meat')",
+            "landValue": "f.getCountryName('meat', i.sliderMeatConsumption)"
           },
           "templates": {
             "default": {
@@ -464,12 +465,12 @@
               "de": [
                 "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch }}** Kilogramm Fleisch produziert werden",
                 "",
-                "Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ landMax }}**."
+                "Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ landValue }}**."
               ],
               "en": [
                 "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch }}** kilograms of meat must be produced.",
                 "",
-                "That is comparable to the weekly per capita amount available **{{ landMax }}**."
+                "That is comparable to the weekly per capita amount available **{{ landValue }}**."
               ]
             },
             "muchTooMuchMeat": {
@@ -495,8 +496,8 @@
             "(i.sliderMeatConsumption > 0.5) && 'meat'"
           ],
           "answerContext": {
-            "gasred": "f.fmt('%0.1f', i.sliderMeatConsumption * 52 / 2 * 3.89)",
-            "gasred2" : "f.fmt('%0.1f', i.sliderMeatConsumption * 52 / 2 * 3.89 * 1000 / 249)"
+            "gasred": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31 * 52 / 2 * 3.89)",
+            "gasred2" : "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31 * 52 / 2 * 3.89 * 1000 / 249)"
           },
           "templates": {
             "meat": {
