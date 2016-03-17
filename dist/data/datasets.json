@@ -7,11 +7,11 @@
       },
       "description": {
          "de": "Anteil Lebensmittelausgaben am Konsum in Prozent",
-         "en": "Share of expenditures that goes to food in percent"
+         "en": "Food expenditures as a percentage of consumption"
       },
       "compareName": {
          "de": "Bruttoinlandsprodukt pro Kopf",
-         "en": "Gross Domestic Product per capita"
+         "en": "Gross domestic product per capita"
       },
       "quelle": "Statistisches Bundesamt",
       "link": "https://www.destatis.de/DE/ZahlenFakten/LaenderRegionen/Internationales/Thema/Tabellen/Basistabelle_KonsumN.html",
@@ -406,7 +406,7 @@
       },
       "description": {
         "de": "Wöchentlicher Fleischverbrauch pro Kopf in kg",
-        "en": "Meat supply per capita per week in kg"
+        "en": "Weekly per capita meat supply in kg"
       },
       "quelle": "FAO / WRI",
       "link": "http://faostat3.fao.org/home/E",
@@ -1121,7 +1121,7 @@
       },
       "description": {
         "de": "Wöchentliche Lebensmittelabfälle pro Kopf in kg",
-        "en": "Per capita food waste per week in kg"
+        "en": "Weekly per capita food waste in kg"
       },
       "quelle": "Bräutigam et al. 2014",
       "link": "http://wmr.sagepub.com/content/32/8/683.full.pdf+html",
@@ -1256,11 +1256,11 @@
       "key": "electro",
       "name": {
         "de": "Elektroschrott",
-        "en": "E-waste"
+        "en": "Electronic waste"
       },
       "description": {
         "de": "Jährlich erzeugter Elektroschrott pro Kopf in kg",
-        "en": "E-waste generated per capita per year in kg"
+        "en": "Yearly electronic waste generated per capita in kg"
       },
       "quelle": "E-Waste-Monitor 2014",
       "link": "http://i.unu.edu/media/unu.edu/news/52624/UNU-1stGlobal-E-Waste-Monitor-2014-small.pdf",
