@@ -40,8 +40,11 @@ function parseMaster(){
 function prepareDataset(dataset){
   dataset.data.forEach((d) => {
     let e = _.find(master, { alpha3: d.iso });
+    let t = _.find(this.topojson, (c) => c.properties.iso == d.iso);
+    d.onMap = t !== undefined;
     d.vergleich = e.vergleich;
   })
+
   dataset.vergleichDomain = d3.extent(dataset.data, function(d) { return d.vergleich; })
 }
 
@@ -56,7 +59,7 @@ const initialState = {
 export default function questions(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.RECEIVE_DATASETS: {
-      action.data.forEach(prepareDataset);
+      action.data.forEach(prepareDataset.bind(state));
 
       return objectAssign({}, state, { dataset: action.data[0], datasets: action.data });
     }

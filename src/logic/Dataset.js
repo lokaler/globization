@@ -16,13 +16,15 @@ export default class Dataset {
   getCountryForValue(value) {
     let distance = Number.MAX_VALUE;
     let isoCode = null;
-    this.data.forEach((data) => {
-      const cDist = Math.abs(data.value - value);
-      if (cDist < distance) {
-        isoCode = data.iso;
-        distance = cDist;
-      }
-    });
+    this.data
+      .filter(d => d.onMap)
+      .forEach((data) => {
+        const cDist = Math.abs(data.value - value);
+        if (cDist < distance) {
+          isoCode = data.iso;
+          distance = cDist;
+        }
+      });
     return isoCode;
   }
 }
@@ -31,6 +33,7 @@ export function getDataset(datasetKey) {
   const datasets = store.getState().master.datasets;
   const dataset = find(datasets, dataset => dataset.key === datasetKey);
   if (dataset) {
+    // this is very un-performant
     return new Dataset(dataset.data);
   }
   return null;
