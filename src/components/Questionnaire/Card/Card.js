@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 
-import Intro from './Intro';
 import Text from './widgets/Text';
 import Answer from './widgets/Answer';
 import Input from './widgets/Input';
@@ -64,20 +63,12 @@ export default class Questionnaire extends React.Component {
       return <div />;
     }
 
-    let widgets = null;
-
-    if (firstCard) {
-      widgets = <Intro { ...this.props }/>;
-    } else {
-      widgets = this.createWidgets(questions);
-    }
-
     return (
       <div>
         { __DEV__ && !firstCard &&
           <span style={{ color: 'green' }}>card: "{ cardTitle }"</span>
         }
-        { widgets }
+        { this.createWidgets(questions) }
       </div>
     );
   }

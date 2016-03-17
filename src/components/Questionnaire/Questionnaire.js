@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 
-import Card from './Card';
+import Intro from './Intro';
+import Card from './Card/Card';
 import Footer from './Footer';
 import ShadowScrollbars from './ShadowScrollbars';
 import translate from 'logic/translate';
@@ -57,7 +58,11 @@ export default class Questionnaire extends React.Component {
           style={{ width: scrollWidth, height: scrollHeight }}
         >
           <div styleName="inner">
-            <Card { ...this.props }/>
+            { firstCard ?
+              <Intro { ...this.props }/>
+              :
+              <Card { ...this.props }/>
+            }
           </div>
         </ShadowScrollbars>
         <Footer

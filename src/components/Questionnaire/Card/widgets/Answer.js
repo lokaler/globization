@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import ReactMarkdown from 'react-markdown';
 import MicroMustache from 'micromustache';
 import cssModules from 'react-css-modules';
-import { compileExpression, compileContext } from '../../../logic/questionnaire';
+import { compileExpression, compileContext } from 'logic/questionnaire';
 import translate from 'logic/translate';
 import { isUndefined, isEmpty } from 'lodash';
 import classNames from 'classnames';
