@@ -123,6 +123,33 @@ export default class MapComponent extends React.Component {
     )
   }
 
+  zoomToCountry(name){
+
+    const country = _.find(this.geometries, (d)=> d.properties.iso === name);
+    if(!country){ utils.log("country not found!"); return; }
+
+    const value = this.dataset.getValueForCountry(name);
+    const unit = this.props.master.dataset.unit;
+    const c = this.path.centroid(country);
+
+    this.svg
+      .transition()
+      .duration(1000)
+      .each("end", ()=>{
+        const c = this.path.centroid(country);
+        this.props.actions.changeVis({
+          tooltip: {
+            active: true,
+            iso: name,
+            value,
+            unit,
+            x: c[0],
+            y: c[1]
+          }
+        });
+      })
+  }
+
 
   getFillColor(iso){
       const val = this.dataset.getValueForCountry(iso);

@@ -138,14 +138,29 @@ export default class GlobeComponent extends React.Component {
 
     const p = d3.geo.centroid(country);
     const scale = 2;
+    const value = this.dataset.getValueForCountry(name);
+    const unit = this.props.master.dataset.unit;
 
-    p[0] = -p[0]/this.sensetivity * scale;
-    p[1] = p[1]/this.sensetivity * scale;
+    p[0] = -p[0]/this.sensetivity * scale,
+    p[1] = p[1]/this.sensetivity * scale
 
     this.svg
       .transition()
       .duration(1000)
-      .call(this.zoom.scale(scale).translate(p).event);
+      .call(this.zoom.scale(scale).translate(p).event)
+      .each("end", ()=>{
+        const c = this.path.centroid(country);
+        this.props.actions.changeVis({
+          tooltip: {
+            active: true,
+            iso: name,
+            value,
+            unit,
+            x: c[0],
+            y: c[1]
+          }
+        });
+      })
   }
 
 
