@@ -179,11 +179,12 @@ export default class GlobeComponent extends React.Component {
     }
 
     if(nextProps.master.dataset != this.props.master.dataset) {
+      // console.log("new Dataset!", nextProps.color.domain());
       const dataset = nextProps.master.dataset;
 
       this.dataset.setData(dataset.data);
 
-      utils.log(this.props.color.domain())
+      utils.log(nextProps.color.domain())
       this.svg
       .transition()
       .duration(1000)
@@ -192,18 +193,25 @@ export default class GlobeComponent extends React.Component {
         .translate(dataset.translate)
         .event
       )
-      .tween("colors", ()=>{
-        this.geometries.forEach((d) =>{
-          const a = d.properties.fillColor;
-          const b = this.getFillColor(d.properties.iso);
-          d.interpolate = d3.interpolateRgb(a, b);
-        });
-        return (t) => {
-          this.geometries.forEach((d,i) =>{
-            d.properties.fillColor = d.interpolate(t);
-          })
-        };
+
+      this.geometries.forEach((d) =>{
+        d.properties.fillColor = this.getFillColor(d.properties.iso);
       });
+
+      // tweening is not working for now
+
+      // .tween("colors", ()=>{
+      //   this.geometries.forEach((d) =>{
+      //     const a = d.properties.fillColor;
+      //     const b = this.getFillColor(d.properties.iso);
+      //     d.interpolate = d3.interpolateRgb(a, b);
+      //   });
+      //   return (t) => {
+      //     this.geometries.forEach((d,i) =>{
+      //       d.properties.fillColor = d.interpolate(t);
+      //     })
+      //   };
+      // });
 
       update = false;
     }
