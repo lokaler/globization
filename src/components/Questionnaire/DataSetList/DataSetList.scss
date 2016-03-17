@@ -1,0 +1,39 @@
+:local(.component) {
+  float: left;
+  width: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 8px 10px 8px 10px;
+      cursor: pointer;
+      background: #EEE;
+      list-style: none;
+      margin-bottom: 5px;
+      border-radius: 2px;
+      color: #1D1D1D;
+
+      &.active {
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.1);
+        background: #FDAE6B;
+        color:#FFF;
+        .info {
+          color:#FFF;
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        background: #FDAE6B;
+        color:#FFF;
+      }
+
+      .info {
+        float: right;
+        opacity: 0;
+      }
+    }
+  }
+}

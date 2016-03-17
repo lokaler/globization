@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import DataSetItem from './DataSetItem';
+import styles from './DataSetList.scss';
 
 export default class DataSetList extends React.Component {
 
@@ -12,7 +13,7 @@ export default class DataSetList extends React.Component {
     const datasets = this.props.master.datasets;
 
     return (
-      <div className="DataSetList">
+      <div className={ styles.component }>
         <ul>
           { datasets.map(
             (dataset, idx) => (
