@@ -38,7 +38,8 @@
             "unit": "%",
             "min": 0,
             "value": 30,
-            "max": 60
+            "max": 60,
+            "step": 1
           }
         }
       },
@@ -528,7 +529,8 @@
             "unit": "Kg",
             "min": 0,
             "value": 2,
-            "max": 4
+            "max": 4,
+            "step": 0.1
           }
         }
       },
@@ -558,9 +560,9 @@
         "answer": {
           "answerKey": [
             "(f.isUndefined(i.sliderTrash) || f.isUndefined(i.sliderSizeHousehold)) && 'default'",
-            "(i.sliderTrash < 1.5) && 'littleTrash'",
-            "(i.sliderTrash <= 2.7) && 'someTrash'",
-            "(i.sliderTrash > 2.7) && 'muchTrash'"
+            "(i.sliderTrash / i.sliderSizeHousehold < 1.5) && 'littleTrash'",
+            "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && 'someTrash'",
+            "(i.sliderTrash / i.sliderSizeHousehold> 2.7) && 'muchTrash'"
           ],
           "answerContext": {
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
@@ -575,7 +577,7 @@
             },
             "littleTrash": {
               "de": [
-                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}**  Kilogramm pro Kopf** weniger Lebensmittel weggeworfen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
+                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}**  Kilogramm pro Kopf weniger Lebensmittel weggeworfen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
                 "At **{{ wertLebensmittel }}** kilograms per person**, your household throws away less food than those in all European countries for which data is available. But compared to places around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
@@ -586,7 +588,7 @@
                 "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeworfen wie **{{ landAbfall }}** . Im weltweiten Vergleich steht Europa übrigens schlecht da: In afrikanischen Ländern südlich der Sahara werden nur rund 0,1 Kilogramm Lebensmittel pro Kopf und Jahr weggeworfen. In Europa sind es rund 1,8 Kilogramm."
               ],
               "en": [
-                "Your household throws away about as much food per person as **{{ landAbfall }}** . ] But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
+                "Your household throws away about as much food per person as **{{ landAbfall }}** . But compared to countries around the globe, Europe does not do well. In countries located in sub-Saharan Africa, only around 0.1 kilograms of foodstuffs per capita are thrown away each week. In Europe, that number is around 1.8 kilograms."
               ]
             },
             "muchTrash": {
@@ -848,23 +850,24 @@
         {
         "answer": {
           "answerKey": [
-            "(i.sliderTrash < 1) && 'littleTrash'",
-            "(i.sliderTrash <= 2) && 'someTrash'",
-            "(i.sliderTrash > 2) && 'muchTrash'"
+            "(i.sliderTrash / i.sliderSizeHousehold < 1.5) && 'littleTrash'",
+            "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && 'someTrash'",
+            "(i.sliderTrash / i.sliderSizeHousehold> 2.7) && 'muchTrash'"
           ],
           "answerContext": {
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
             "wertLebensmittel": "i.sliderTrash / i.sliderSizeHousehold",
+            "wertLebensmittelHaushalt":"i.sliderTrash",
             "sizeHousehold": "i.sliderSizeHousehold"
           },
           "templates": {
             "default": {
-              "de": [],
-              "en": []
+              "de": ["Bitte beantworten Sie die Frage, wie viele Lebensmittel Sie wegwerfen."],
+              "en": ["Please answer the question, how much food you throw away."]
             },
             "littleTrash": {
               "de": [
-                ") In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
+                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
               ],
               "en": [
                 "At **{{ wertLebensmittel }}** kilograms per person, your household throws away less food than those in all European countries for which data is available. "
@@ -880,10 +883,10 @@
             },
             "muchTrash": {
               "de": [
-                "In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie **{{ landAbfall }}**."
+                "In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen."
               ],
               "en": [
-                "Your household throws away about as much food per person as **{{ landAbfall }}**."
+                "With a value of **{{ wertLebensmittel }}**  per capita, your household throws away more food than in all European countries for which data is available.."
               ]
               }
             }
