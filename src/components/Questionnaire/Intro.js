@@ -17,14 +17,14 @@ export default class Intro extends React.Component {
   onClick = (evt) => {
     const handler = this.clickHandlers[evt.target.dataset.onclick];
     if (handler) {
-      this.props.actions.sponLogger();
       handler(evt);
     }
   }
 
   clickHandlers = {
     onStartClick: () => {
-      this.props.actions.setCard(0, null);
+      this.props.actions.sponLogger();
+      this.props.actions.setCard(0, 'food');
     }
   }
 
