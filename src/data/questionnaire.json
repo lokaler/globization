@@ -572,7 +572,7 @@
           "type": "slider",
           "options": {
             "unit": "",
-            "min": 0,
+            "min": 1,
             "value": 4,
             "max": 10
           }
