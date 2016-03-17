@@ -114,7 +114,6 @@ export default {
 
   /* eslint-disable */
   changeVis(isoCode) {
-    console.log('changeVis', isoCode);
     const store_ = store;
     const state = store.getState();
 
