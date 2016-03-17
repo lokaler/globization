@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
-import DataSetList from '../Ubermorgen/DataSetList';
+import DataSetList from './DataSetList/DataSetList';
 import TranslatedMarkdown from './TranslatedMarkdown';
 import * as texts from 'data/texts';
 
