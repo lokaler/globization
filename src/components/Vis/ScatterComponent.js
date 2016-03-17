@@ -11,6 +11,8 @@ import styles from './globe.scss';
 import classnames from 'classnames';
 import AxisComponent from './AxisComponent.js';
 import DotsComponent from './DotsComponent.js';
+import translate from 'logic/translate';
+
 
 @cssModules(styles)
 
@@ -88,7 +90,7 @@ export default class ScatterComponent extends React.Component {
           <AxisComponent
             className='x axis'
             scale={this.x}
-            tickFormat={ (d) => d }
+            tickFormat={ (d) => translate(d) }
             orient='bottom'
             transform={`translate(0, ${this.innerHeight})`}
             transitionDuration={1000}
@@ -96,7 +98,7 @@ export default class ScatterComponent extends React.Component {
           <AxisComponent
             tickSize={this.innerWidth}
             className='y axis'
-            tickFormat={ (d)=> d3.format(".1f")(d) }
+            tickFormat={ (d)=> translate(d) }
             fixed={ this.props.master.dataset.fixed }
             scale={this.y}
             orient='left'

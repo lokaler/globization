@@ -134,7 +134,7 @@ export default class GlobeComponent extends React.Component {
     this.activeGeometry = _.find(this.props.master.topojson, (d)=> d.properties.iso === name);
 
     const country = _.find(this.geometries, (d)=> d.properties.iso === name);
-    if(!country){ utils.log("country not found!"); return; }
+    if(!country){ utils.log("country not found!", name); return; }
 
     const p = d3.geo.centroid(country);
     const scale = 2;
