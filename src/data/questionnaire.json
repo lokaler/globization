@@ -67,6 +67,7 @@
               ]
             },
             "littleFoodCon": {
+              "action": "f.getMinCountryName('food')",
               "de": [
                 "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Konsumausgaben für Nahrungsmittel aufwenden."
               ],
