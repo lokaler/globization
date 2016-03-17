@@ -23,7 +23,6 @@ export default class Answer extends React.Component {
         return templateKey;
       }
     }
-
     return 'default';
   }
 
@@ -56,7 +55,7 @@ export default class Answer extends React.Component {
     const answerContent = MicroMustache.render(template, ctx);
     const className = classNames('answer', answer.className && `answer-${ answer.className }`);
     return (
-      <div className={ className } key={ `${+new Date()}_answer` } styleName="widget">
+      <div className={ className } styleName="widget">
         <ReactMarkdown
           source={ answerContent.toString() }
           renderers={{ Link: props => <a href={props.href} target="_blank">{props.children}</a> }}

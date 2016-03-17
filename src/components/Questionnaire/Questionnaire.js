@@ -48,7 +48,8 @@ export default class Questionnaire extends React.Component {
         return WidgetFactory[widgetKey]({
           ...item,
           ...this.props,
-          key: `${+new Date()}_${widgetKey}_${index}`
+          index,
+          key: `${this.props.questions.activeCard}_${widgetKey}_${index}`
         });
       }
     );

@@ -14,7 +14,7 @@ export default class Text extends React.Component {
     const text = translate(this.props.text).join('\n');
 
     return (
-      <div styleName="widget" key={ `${+new Date()}_text` }>
+      <div styleName="widget">
         <ReactMarkdown
           source={ text }
           renderers={{ Link: props => <a href={props.href} target="_blank">{props.children}</a> }}
