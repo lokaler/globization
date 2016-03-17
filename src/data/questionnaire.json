@@ -497,8 +497,8 @@
             "(i.sliderMeatConsumption > 0.5) && 'meat'"
           ],
           "answerContext": {
-            "gasred": "f.fmt('%0.1f', i.sliderMeatConsumption * 52 / 2 * 3.89)",
-            "gasred2" : "f.fmt('%0.1f', i.sliderMeatConsumption * 52 / 2 * 3.89 * 1000 / 249)"
+            "gasred": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31 * 52 / 2 * 3.89)",
+            "gasred2" : "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31 * 52 / 2 * 3.89 * 1000 / 249)"
           },
           "templates": {
             "meat": {
