@@ -411,7 +411,7 @@
           "type": "slider",
           "options": {
             "unit": "Kg",
-            "min": 0.1,
+            "min": 0,
             "value": 1.5,
             "max": 4,
             "step": 0.1
@@ -421,10 +421,10 @@
       {
         "answer": {
           "answerKey": [
-            "(i.sliderMeatConsumption == 0.1) && 'noMeat'",
-            "(i.sliderMeatConsumption < 1.5) && 'someMeat'",
-            "(i.sliderMeatConsumption < 2.5) && f.panToCountry(f.getISO('meat', i.sliderMeatConsumption)) && 'muchMeat'",
-            "(i.sliderMeatConsumption >= 2.5) && f.panToCountry(f.getMaxISO('meat')) && 'muchTooMuchMeat'"
+            "(i.sliderMeatConsumption = 0) && 'noMeat'",
+            "(i.sliderMeatConsumption*1.31 < 0.1) && 'someMeat'",
+            "(i.sliderMeatConsumption*1.31 < 2.4) && f.panToCountry(f.getISO('meat', i.sliderMeatConsumption)) && 'muchMeat'",
+            "(i.sliderMeatConsumption*1.31 >= 2.4) && f.panToCountry(f.getMaxISO('meat')) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
             "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
@@ -551,7 +551,7 @@
             "unit": "Kg",
             "min": 0,
             "value": 2,
-            "max": 4,
+            "max": 15,
             "step": 0.1
           }
         }
@@ -574,7 +574,7 @@
             "unit": "",
             "min": 1,
             "value": 4,
-            "max": 10
+            "max": 7
           }
         }
       },
@@ -835,14 +835,15 @@
       {
         "answer": {
           "answerKey": [
-            "(i.sliderMeatConsumption < 0.1) && 'noMeat'",
-            "(i.sliderMeatConsumption < 1.5) && 'someMeat'",
-            "(i.sliderMeatConsumption < 2.5) && 'muchMeat'",
-            "(i.sliderMeatConsumption >= 2.5) && 'muchTooMuchMeat'"
+            "(i.sliderMeatConsumption == 0) && 'noMeat'",
+            "(i.sliderMeatConsumption*1.31 < 0.1) && 'someMeat'",
+            "(i.sliderMeatConsumption*1.31 < 2.4) && 'muchMeat'",
+            "(i.sliderMeatConsumption*1.31 >= 2.4) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
+            "realFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption)",
             "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
-            "meatConsumptionCountry": "f.getCountryName('meat')",
+            "meatConsumptionCountry": "f.getCountryName('meat', i.sliderMeatConsumption)",
             "landMax": "f.getMaxCountryName('meat')",
             "landMaxValue": "f.getMaxValue('meat')",
             "gasred": "i.sliderMeatConsumption / 2 * 3.89",
@@ -871,26 +872,26 @@
             },
             "someMeat": {
               "de": [
-                "**Ihr Fleischkonsum: {{ wertFleisch }} kg** – Ihr Fleischbedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
+                "**Ihr Fleischkonsum: {{ realFleisch }} kg** – Ihr Fleischbedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
               ],
               "en": [
-                "**Your meat consumption: {{ wertFleisch }} kg** – Your level of consumption can be covered in any of the countries for which comparative data is available."
+                "**Your meat consumption: {{ realFleisch }} kg** – Your level of consumption can be covered in any of the countries for which comparative data is available."
               ]
             },
             "muchMeat": {
               "de": [
-                "**Ihr Fleischkonsum: {{ wertFleisch }} kg** – Ihr Fleischbedarf pro Woche entspricht **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ meatConsumptionCountry }}**."
+                "**Ihr Fleischkonsum: {{ realFleisch }} kg** – Ihr Fleischbedarf pro Woche entspricht **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ meatConsumptionCountry }}**."
               ],
               "en": [
-                "**Your meat consumption: {{ wertFleisch }} kg** – Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}**."
+                "**Your meat consumption: {{ realFleisch }} kg** – Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}**."
               ]
               },
               "muchTooMuchMeat": {
                 "de": [
-                  "**Ihr Fleischkonsum: {{ wertFleisch }} kg** – Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
+                  "**Ihr Fleischkonsum: {{ realFleisch }} kg** – Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
                 ],
                 "en": [
-                  "**Your meat consumption: {{ wertFleisch }} kg** – Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
+                  "**Your meat consumption: {{ realFleisch }} kg** – Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
                 ]
               }
             }
