@@ -661,17 +661,18 @@
           "key": "sliderEwaste",
           "type": "slider",
           "options": {
-            "min": 0.1,
+            "min": 1,
             "value": 20,
             "max": 80,
-            "unit": "Kg"
+            "unit": "Kg",
+            "step": 1
           }
         }
       },
       {
         "answer": {
           "answerKey": [
-            "(i.sliderEwaste < 10) && 'lessEwaste'",
+            "(i.sliderEwaste < 1) && 'lessEwaste'",
             "(i.sliderEwaste <= 29) && f.panToCountry(f.getISO('electro', i.sliderEwaste)) &&  'someEwaste'",
             "(i.sliderEwaste > 29) && f.panToCountry(f.getMaxISO('electro')) && 'muchEwaste'"
           ],
@@ -941,7 +942,7 @@
         {
         "answer": {
           "answerKey": [
-            "(i.sliderEwaste < 10) && 'lessEwaste'",
+            "(i.sliderEwaste < 1) && 'lessEwaste'",
             "(i.sliderEwaste <= 29) && 'someEwaste'",
             "(i.sliderEwaste > 29) && 'muchEwaste'"
           ],
@@ -967,7 +968,7 @@
                 "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}** mit **{{ valueMin }}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "**Your're resposible for {{ wertEwaste }} kg electronic waste** – That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin }}** kilograms per year and resident"
+                "**Your're responsible for {{ wertEwaste }} kg electronic waste** – That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin }}** kilograms per year and resident"
               ]
                 },
             "someEwaste": {
@@ -975,7 +976,7 @@
                 "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen **{{ countryEwaste }}**."
               ],
               "en": [
-                "**Your're resposible for {{ wertEwaste }} kg electronic waste** – You are responsible for roughly the same amount of electronic waste as people **{{ countryEwaste }}**."
+                "**Your're responsible for {{ wertEwaste }} kg electronic waste** – You are responsible for roughly the same amount of electronic waste as people **{{ countryEwaste }}**."
               ]
             },
             "muchEwaste": {
@@ -983,7 +984,7 @@
                 "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht **{{ landMax }}** mit **{{ valueMax }}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "**Your're resposible for {{ wertEwaste }} kg electronic waste** – That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}**, with **{{ valueMax }}** kilograms per year and resident."
+                "**Your're responsible for {{ wertEwaste }} kg electronic waste** – That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}**, with **{{ valueMax }}** kilograms per year and resident."
               ]
               }
             }
