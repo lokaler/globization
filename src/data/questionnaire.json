@@ -279,11 +279,15 @@
       {
         "text": {
           "de": [
+            "# Brauchen wir alles, was wir besitzen?",
+            "",
             "Auf Überflüssiges verzichten, spart Geld und Ressourcen. Schätzen Sie:",
             "",
             "**Wie viel Prozent der Kleidung in Ihrem Schrank tragen Sie so gut wie nie?**"
           ],
           "en": [
+            "# Brauchen wir alles, was wir besitzen?",
+            "",
             "Avoiding purchases of things you don’t need can save both money and resources. Take a guess: ",
             "",
             "**What percent of the clothing in your wardrobe do you hardly ever wear?**"
@@ -372,12 +376,16 @@
       {
         "text": {
           "de": [
+            "# Schnitzel, Bratwurst & Co",
+            "",
             "Manche Produkte verbrauchen besonders viele Ressourcen: Die Herstellung von einem Kilogramm Rindfleisch zum Beispiel beansprucht im Durchschnitt gut 50 mal mehr Wasser und rund 100 mal mehr Land als die Produktion von einem Kilogramm Kartoffeln.",
             "",
             "**Wie viel Fleisch essen Sie pro Woche?**",
             "(Fleischgericht ≈ 200 Gramm, Bratwurst ≈ 100 Gramm, Wurstbrot ≈ 20 Gramm)"
           ],
           "en": [
+            "# Schnitzel, Bratwurst & Co",
+            "",
             "Some products require a particularly high quantity of resources. The production of a kilogram (2.2 pounds) of beef, for example, requires on average 50 times more water and 100 times more land on average than the production of a kilogram of potatoes.",
             "",
             "**How much meat do you eat each week?**",
@@ -619,11 +627,15 @@
       {
         "text": {
           "de": [
+            "# Und wieder ein neues Smartphone?",
+            "",
             "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy. Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt.",
             "",
             "**Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?** (Smartphone ≈ 130g, Laptop ≈ 3,5kg, Toaster ≈ 1kg, Waschmaschine ≈ 65kg)"
           ],
           "en": [
+            "# Und wieder ein neues Smartphone?",
+            "",
             "Many Germans buy a new mobile phone about every two years. Old phones often end up forgotten in a drawer or are recycled in Africa in catastrophic conditions.",
             "",
             "**How many kilograms of electronic waste have you gotten rid of or thrown away in the last year?**",
@@ -740,11 +752,11 @@
         "text": {
           "de": [
             "# Steckbrief ",
-            "So konsumieren Sie im internationalen Vergleich:"
+            "**So konsumieren Sie im internationalen Vergleich:**"
           ],
           "en": [
             "# Summary",
-            "Your consumption in comparison with the world:"
+            "**Your consumption in comparison with the world:**"
           ]
         }
       },
@@ -756,6 +768,7 @@
             "(i.sliderFoodSpending >= 50) && 'highFoodCon'"
           ],
           "answerContext": {
+            "valueFoodUser": "i.sliderFoodSpending",
             "landAusgaben": "f.getCountryName('food', i.sliderFoodSpending)",
             "landMax": "f.getMaxCountryName('food')",
             "landMin": "f.getMinCountryName('food')",
@@ -766,30 +779,36 @@
             "RankingUserInComparisionToCountriesFood": "funcs.getDatasetCount('food') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
-            "litteFoodCon": {
+            "default": {
               "de": [
-                "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+                "Bitte beantworten Sie die Frage zu den Ausgaben für **Nahrungsmittel**."
               ],
               "en": [
-
-                "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
+                "Please answer the question about your spendings for **food**."
+              ]
+                },
+            "litteFoodCon": {
+              "de": [
+                "**Ihre Ausgaben: {{ valueFoodUser }} %** – Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+              ],
+              "en": [
+                "Your spending: {{ valueFoodUser }} %** – You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
               ]
             },
             "mediumFoodCon": {
               "de": [
-                "Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen **{{ landAusgaben }}**."
+                "**Ihre Ausgaben: {{ valueFoodUser }} %** – Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen **{{ landAusgaben }}**."
               ],
               "en": [
-                "People in **{{ landAusgaben }}**. spend a similar amount on food as you do, measured as a percentage of total expenditures."
+                "Your spending: {{ valueFoodUser }} %** – People in **{{ landAusgaben }}**. spend a similar amount on food as you do, measured as a percentage of total expenditures."
               ]
             },
             "highFoodCon": {
               "de": [
-                "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen **{{ landMax }}** den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
+                "**Ihre Ausgaben: {{ valueFoodUser }} %** – Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen **{{ landMax }}** den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
               ],
               "en": [
-
-                "You spend a very large share of your money on food. Internationally, people  **{{ landMax }}**  devote the largest share of their expenditures to food, namely **{{ valueMax }}** percent."
+                "Your spending: {{ valueFoodUser }} %** – You spend a very large share of your money on food. Internationally, people  **{{ landMax }}**  devote the largest share of their expenditures to food, namely **{{ valueMax }}** percent."
               ]
             }
           }
@@ -818,10 +837,10 @@
           "templates": {
             "default": {
               "de": [
-                "Bitte beantworten Sie die Frage zum Fleischkonsum."
+                "Bitte beantworten Sie die Frage zum **Fleischkonsum**."
               ],
               "en": [
-                "Please answer the question about your meat consumption."
+                "Please answer the question about your **meat consumption**."
               ]
                 },
             "noMeat": {
@@ -874,8 +893,8 @@
           },
           "templates": {
             "default": {
-              "de": ["Bitte beantworten Sie die Frage, wie viele Lebensmittel Sie wegwerfen."],
-              "en": ["Please answer the question, how much food you throw away."]
+              "de": ["Bitte beantworten Sie die Frage, wie viele **Lebensmittel** Sie wegwerfen."],
+              "en": ["Please answer the question, how much **food** you throw away."]
             },
             "littleTrash": {
               "de": [
@@ -922,10 +941,10 @@
           "templates": {
             "default": {
               "de": [
-                "Bitte beantworten Sie die Frage zum Elektroschrott."
+                "Bitte beantworten Sie die Frage zum **Elektroschrott**."
               ],
               "en": [
-                "Please answer the question about elecronic waste."
+                "Please answer the question about **elecronic waste**."
               ]
             },
             "lessEwaste": {
