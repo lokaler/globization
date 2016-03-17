@@ -30,7 +30,11 @@ export default class Questionnaire extends React.Component {
   shouldComponentUpdate(nextProps) {
     const p = this.props;
     const n = nextProps;
-    return (p.app !== n.app) || (p.questions !== n.questions);
+    return (
+      (p.app !== n.app)
+      || (p.questions !== n.questions)
+      || (p.master !== n.master)
+    );
   }
 
   loadData() {
