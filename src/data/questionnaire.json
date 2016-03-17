@@ -913,26 +913,26 @@
             },
             "littleTrash": {
               "de": [
-                "**Ihr Haushalt von {{ householdValueUser }} wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
+                "**Ihr Haushalt von {{ householdValueUser }} Person(en) wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
               ],
               "en": [
-                "**Your household of {{ householdValueUser }} throws away {{ trashValueUser }} kg food** – At **{{ wertLebensmittel }}** kilograms per person, your household throws away less food than those in all European countries for which data is available. "
+                "**Your household of {{ householdValueUser }} person(s) throws away {{ trashValueUser }} kg food** – At **{{ wertLebensmittel }}** kilograms per person, your household throws away less food than those in all European countries for which data is available. "
               ]
                 },
             "someTrash": {
               "de": [
-                "**Ihr Haushalt von {{ householdValueUser }} wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie **{{ landAbfall }}**."
+                "**Ihr Haushalt von {{ householdValueUser }} Person(en) wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie **{{ landAbfall }}**."
               ],
               "en": [
-                "**Your household of {{ householdValueUser }} throws away {{ trashValueUser }} kg food** – Your household throws away about as much food per person as **{{ landAbfall }}**."
+                "**Your household of {{ householdValueUser }} person(s) throws away {{ trashValueUser }} kg food** – Your household throws away about as much food per person as **{{ landAbfall }}**."
               ]
             },
             "muchTrash": {
               "de": [
-                "**Ihr Haushalt von {{ householdValueUser }} wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen."
+                "**Ihr Haushalt von {{ householdValueUser }} Person(en) wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen."
               ],
               "en": [
-                "**Your household of {{ householdValueUser }} throws away {{ trashValueUser }} kg food** – With a value of **{{ wertLebensmittel }}** per capita, your household throws away more food than in all European countries for which data is available.."
+                "**Your household of {{ householdValueUser }} person(s) throws away {{ trashValueUser }} kg food** – With a value of **{{ wertLebensmittel }}** per capita, your household throws away more food than in all European countries for which data is available.."
               ]
               }
             }
