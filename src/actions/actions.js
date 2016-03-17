@@ -1,6 +1,10 @@
 import * as types from '../constants/ActionTypes';
 import { validateData } from '../logic/questionnaire';
 
+export function sponLogger() {
+  return { type: types.SPON_LOGGER };
+}
+
 // question data actions
 export function receiveQuestionData(jsonData) {
   return { type: types.RECEIVE_QUESTION_DATA, data: jsonData };
