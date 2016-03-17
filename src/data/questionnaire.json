@@ -558,9 +558,9 @@
         "answer": {
           "answerKey": [
             "(f.isUndefined(i.sliderTrash) || f.isUndefined(i.sliderSizeHousehold)) && 'default'",
-            "(i.sliderTrash < 1) && 'littleTrash'",
-            "(i.sliderTrash <= 2) && 'someTrash'",
-            "(i.sliderTrash > 2) && 'muchTrash'"
+            "(i.sliderTrash < 1.5) && 'littleTrash'",
+            "(i.sliderTrash <= 2.7) && 'someTrash'",
+            "(i.sliderTrash > 2.7) && 'muchTrash'"
           ],
           "answerContext": {
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
