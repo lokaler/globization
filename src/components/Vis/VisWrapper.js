@@ -26,7 +26,9 @@ export default class Globe extends React.Component {
   constructor(props) {
     super(props);
 
-    this.color = d3.scale.quantile();
+    this.color = d3.scale.quantile()
+      .range(colorbrewer['Oranges'][9])
+      .domain([0,10])
   }
 
   componentDidMount() {
