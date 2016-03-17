@@ -1,7 +1,7 @@
 import { maxBy, minBy } from 'lodash';
 import { getDataset } from 'logic/Dataset';
 import translate from 'logic/translate';
-import { isNull, isUndefined } from 'lodash';
+import { isNull, isUndefined, defer } from 'lodash';
 import { sprintf } from 'sprintf-js';
 import store from '../store';
 
@@ -112,23 +112,20 @@ export default {
     }
   },
 
-  /* eslint-disable */
-  changeVis(isoCode) {
-    const store_ = store;
+  panToCountry(isoCode) {
     const state = store.getState();
-
-    if (state.vis.active === isoCode) {
-      return true;
+    if (state.vis.active !== isoCode) {
+      defer(() => {
+        window.actions.changeVis({
+          animation: {
+            action: 'zoomToCountry',
+            payload: isoCode
+          },
+          active: isoCode,
+          tooltip: { active: false }
+        });
+      });
     }
-
-    window.actions.changeVis({
-      animation: {
-        action: 'zoomToCountry',
-        payload: isoCode
-      },
-      active: isoCode,
-      tooltip: { active: false }
-    });
     return true;
   }
 };

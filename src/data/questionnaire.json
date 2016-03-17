@@ -48,17 +48,17 @@
           "answerKey": [
             [
               "(i.sliderFoodSpending < 15)",
-              "&& f.changeVis(f.getMinISO('food'))",
+              "&& f.panToCountry(f.getMinISO('food'))",
               "&& 'littleFoodCon'"
             ],
             [
               "(i.sliderFoodSpending < 50)",
-              "&& f.changeVis(f.getISO('food', i.sliderFoodSpending))",
+              "&& f.panToCountry(f.getISO('food', i.sliderFoodSpending))",
               "&& 'mediumFoodCon'"
             ],
             [
               "(i.sliderFoodSpending >= 50)",
-              "&& f.changeVis(f.getMaxISO('food'))",
+              "&& f.panToCountry(f.getMaxISO('food'))",
               "&& 'highFoodCon'"
             ]
           ],
@@ -423,8 +423,8 @@
           "answerKey": [
             "(i.sliderMeatConsumption == 0.1) && 'noMeat'",
             "(i.sliderMeatConsumption < 1.5) && 'someMeat'",
-            "(i.sliderMeatConsumption < 2.5) && f.changeVis(f.getISO('meat', i.sliderMeatConsumption)) && 'muchMeat'",
-            "(i.sliderMeatConsumption >= 2.5) && f.changeVis(f.getMaxISO('meat')) && 'muchTooMuchMeat'"
+            "(i.sliderMeatConsumption < 2.5) && f.panToCountry(f.getISO('meat', i.sliderMeatConsumption)) && 'muchMeat'",
+            "(i.sliderMeatConsumption >= 2.5) && f.panToCountry(f.getMaxISO('meat')) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
             "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
@@ -583,8 +583,8 @@
           "answerKey": [
             "(f.isUndefined(i.sliderTrash) || f.isUndefined(i.sliderSizeHousehold)) && 'default'",
             "(i.sliderTrash / i.sliderSizeHousehold < 1.5) && 'littleTrash'",
-            "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && f.changeVis(f.getISO('foodwaste', i.sliderTrash / i.sliderSizeHousehold)) && 'someTrash'",
-            "(i.sliderTrash / i.sliderSizeHousehold > 2.7) && f.changeVis(f.getMaxISO('foodwaste')) && 'muchTrash'"
+            "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && f.panToCountry(f.getISO('foodwaste', i.sliderTrash / i.sliderSizeHousehold)) && 'someTrash'",
+            "(i.sliderTrash / i.sliderSizeHousehold > 2.7) && f.panToCountry(f.getMaxISO('foodwaste')) && 'muchTrash'"
           ],
           "answerContext": {
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
