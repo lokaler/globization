@@ -47,7 +47,7 @@
         "answer": {
           "answerKey": [
             [
-              "(i.sliderFoodSpending < 15)",
+              "(i.sliderFoodSpending < 7)",
               "&& f.panToCountry(f.getMinISO('food'))",
               "&& 'littleFoodCon'"
             ],
@@ -673,11 +673,15 @@
         "answer": {
           "answerKey": [
             "(i.sliderEwaste < 1) && 'lessEwaste'",
-            "(i.sliderEwaste <= 29) && f.panToCountry(f.getISO('electro', i.sliderEwaste)) &&  'someEwaste'",
-            "(i.sliderEwaste > 29) && f.panToCountry(f.getMaxISO('electro')) && 'muchEwaste'"
+            [
+              "(i.sliderEwaste <= 29)",
+              "&& f.panToCountry(f.getISO('electro', i.sliderEwaste + 2.4))",
+              "&& 'someEwaste'"
+            ],
+            "(i.sliderEwaste > 27) && f.panToCountry(f.getMaxISO('electro')) && 'muchEwaste'"
           ],
           "answerContext": {
-            "countryEwaste": "f.getCountryName('electro', i.sliderEwaste)",
+            "countryEwaste": "f.getCountryName('electro', i.sliderEwaste + 2.4)",
             "landMax": "f.getMaxCountryName('electro')",
             "landMin": "f.getMinCountryName('electro')",
             "valueMax": "f.getMaxValue('electro')",
@@ -777,7 +781,7 @@
       {
         "answer": {
           "answerKey": [
-            "(i.sliderFoodSpending < 15) && 'litteFoodCon'",
+            "(i.sliderFoodSpending < 7) && 'litteFoodCon'",
             "(i.sliderFoodSpending < 50) && 'mediumFoodCon'",
             "(i.sliderFoodSpending >= 50) && 'highFoodCon'"
           ],
@@ -943,11 +947,15 @@
         "answer": {
           "answerKey": [
             "(i.sliderEwaste < 1) && 'lessEwaste'",
-            "(i.sliderEwaste <= 29) && 'someEwaste'",
-            "(i.sliderEwaste > 29) && 'muchEwaste'"
+            [
+              "(i.sliderEwaste <= 29)",
+              "&& f.panToCountry(f.getISO('electro', i.sliderEwaste + 2.4))",
+              "&& 'someEwaste'"
+            ],
+            "(i.sliderEwaste > 27) && f.panToCountry(f.getMaxISO('electro')) && 'muchEwaste'"
           ],
           "answerContext": {
-            "countryEwaste": "f.getCountryName('electro', i.sliderEwaste)",
+            "countryEwaste": "f.getCountryName('electro', i.sliderEwaste + 2.4)",
             "landMax": "f.getMaxCountryName('electro')",
             "landMin": "f.getMinCountryName('electro')",
             "valueMax": "f.getMaxValue('electro')",
