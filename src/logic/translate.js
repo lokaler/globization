@@ -35,11 +35,16 @@ export default function translate(value, options = {}) {
 
   // for numbers and strings which are parsable as numbers
   const _isNumber = !isNaN(value);
-  const _isNumberString = isString(value) && !isNaN(parseFloat(value));
+  const _isNumberString = (
+    isString(value)
+    && !isNaN(Number(value.replace(/,/g, '')))
+  );
   if (_isNumber || _isNumberString) {
     let translated = value.toString();
     if (language === 'de') {
-      translated = translated.replace('.', ',');
+      translated = translated.replace(/,/g, '_');
+      translated = translated.replace(/\./g, ',');
+      translated = translated.replace(/_/g, '.');
     }
     return translated;
   }
