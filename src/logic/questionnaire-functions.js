@@ -85,5 +85,29 @@ export default {
         }
       }
     }
+  },
+
+  getMinISO(datasetKey) {
+    const dataset = getDataset(datasetKey);
+    if (dataset) {
+      const isoCode = minBy(dataset.data, d => parseFloat(d.value)).iso;
+      return isoCode;
+    }
+  },
+
+  getMaxISO(datasetKey) {
+    const dataset = getDataset(datasetKey);
+    if (dataset) {
+      const isoCode = maxBy(dataset.data, d => parseFloat(d.value)).iso;
+      return isoCode;
+    }
+  },
+
+  getISO(datasetKey, value) {
+    const dataset = getDataset(datasetKey);
+    if (dataset) {
+      const isoCode = dataset.getCountryForValue(value);
+      return isoCode;
+    }
   }
 };
