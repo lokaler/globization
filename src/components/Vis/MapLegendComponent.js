@@ -27,13 +27,14 @@ export default class MapLegendComponent extends React.Component {
     const quelle= dataset.quelle;
     const link = dataset.link;
     const color = this.props.color;
+    const domain = color.domain();
 
     const legendFields = color.range().map((d,i) =>
         <div className="item" key={"item-"+i}>
           <div className="color" key={"color-"+i} style={{ background: d }}>
           </div>
           <div className="label" key={"label-"+i}>
-            { (i/9 * color.domain()[1]).toFixed(dataset.fixed) }
+            { translate((domain[0]+ (i/9 * (domain[1]-domain[0]))).toFixed(dataset.fixed)) }
           </div>
         </div>
     )
