@@ -1,19 +1,10 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 
-import Intro from './Intro';
-import Text from './widgets/Text';
-import Answer from './widgets/Answer';
-import Input from './widgets/Input';
+import Card from './Card';
 import Footer from './Footer';
 import ShadowScrollbars from './ShadowScrollbars';
 import translate from 'logic/translate';
-
-const WidgetFactory = {
-  text: React.createFactory(Text),
-  answer: React.createFactory(Answer),
-  input: React.createFactory(Input)
-};
 
 @cssModules()
 export default class Questionnaire extends React.Component {
@@ -30,30 +21,8 @@ export default class Questionnaire extends React.Component {
     window.actions = this.props.actions;
   }
 
-  onClickLoad = () => {
-    this.loadData();
-  }
-
-  onClickEdit = () => {
-    throw new Error('Editing is not implemented, yet!');
-  }
-
   loadData() {
     this.props.actions.requestQuestionData('./data/questionnaire.json');
-  }
-
-  createWidgets(questions) {
-    return questions.questionData[questions.activeCard].content
-      .map((item, index) => {
-        const widgetKey = Object.keys(item)[0];
-        return WidgetFactory[widgetKey]({
-          ...item,
-          ...this.props,
-          index,
-          key: `${this.props.questions.activeCard}_${widgetKey}_${index}`
-        });
-      }
-    );
   }
 
   render() {
@@ -62,7 +31,6 @@ export default class Questionnaire extends React.Component {
       return <div />;
     }
 
-    let widgets = null;
     let nextBtnLabel = 'next';
 
     const activeCard = questions.activeCard;
@@ -70,10 +38,7 @@ export default class Questionnaire extends React.Component {
     const lastCard = activeCard === questions.questionData.length - 2;
     const veryLastCard = activeCard === questions.questionData.length - 1;
 
-    if (firstCard) {
-      widgets = <Intro { ...this.props }/>;
-    } else {
-      widgets = this.createWidgets(questions);
+    if (!firstCard) {
       if (lastCard) {
         nextBtnLabel = 'last';
       } else if (veryLastCard) {
@@ -81,7 +46,6 @@ export default class Questionnaire extends React.Component {
       }
     }
 
-    const cardTitle = (questions.questionData[activeCard] || {}).title;
     const app = this.props.app;
     const scrollHeight = app.mobile ? ((app.height * (1 - 0.3)) - 50) : app.height - 50;
     const scrollWidth = app.mobile ? app.width : app.width * (1 - 0.65);
@@ -93,10 +57,7 @@ export default class Questionnaire extends React.Component {
           style={{ width: scrollWidth, height: scrollHeight }}
         >
           <div styleName="inner">
-            { __DEV__ && !firstCard &&
-              <span style={{ color: 'green' }}>card: "{ cardTitle }"</span>
-            }
-            { widgets }
+            <Card { ...this.props }/>
           </div>
         </ShadowScrollbars>
         <Footer
