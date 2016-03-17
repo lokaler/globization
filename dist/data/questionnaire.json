@@ -47,18 +47,18 @@
         "answer": {
           "answerKey": [
             [
-              "(i.sliderFoodSpending < 15)",
-              "&& f.changeVis(f.getMinISO('food'))",
+              "(i.sliderFoodSpending < 7)",
+              "&& f.panToCountry(f.getMinISO('food'))",
               "&& 'littleFoodCon'"
             ],
             [
               "(i.sliderFoodSpending < 50)",
-              "&& f.changeVis(f.getISO('food', i.sliderFoodSpending))",
+              "&& f.panToCountry(f.getISO('food', i.sliderFoodSpending))",
               "&& 'mediumFoodCon'"
             ],
             [
               "(i.sliderFoodSpending >= 50)",
-              "&& f.changeVis(f.getMaxISO('food'))",
+              "&& f.panToCountry(f.getMaxISO('food'))",
               "&& 'highFoodCon'"
             ]
           ],
@@ -423,8 +423,8 @@
           "answerKey": [
             "(i.sliderMeatConsumption == 0.1) && 'noMeat'",
             "(i.sliderMeatConsumption < 1.5) && 'someMeat'",
-            "(i.sliderMeatConsumption < 2.5) && f.changeVis(f.getISO('meat', i.sliderMeatConsumption)) && 'muchMeat'",
-            "(i.sliderMeatConsumption >= 2.5) && f.changeVis(f.getMaxISO('meat')) && 'muchTooMuchMeat'"
+            "(i.sliderMeatConsumption < 2.5) && f.panToCountry(f.getISO('meat', i.sliderMeatConsumption)) && 'muchMeat'",
+            "(i.sliderMeatConsumption >= 2.5) && f.panToCountry(f.getMaxISO('meat')) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
             "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
@@ -572,7 +572,7 @@
           "type": "slider",
           "options": {
             "unit": "",
-            "min": 0,
+            "min": 1,
             "value": 4,
             "max": 10
           }
@@ -583,8 +583,8 @@
           "answerKey": [
             "(f.isUndefined(i.sliderTrash) || f.isUndefined(i.sliderSizeHousehold)) && 'default'",
             "(i.sliderTrash / i.sliderSizeHousehold < 1.5) && 'littleTrash'",
-            "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && f.changeVis(f.getISO('foodwaste', i.sliderTrash / i.sliderSizeHousehold)) && 'someTrash'",
-            "(i.sliderTrash / i.sliderSizeHousehold > 2.7) && f.changeVis(f.getMaxISO('foodwaste')) && 'muchTrash'"
+            "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && f.panToCountry(f.getISO('foodwaste', i.sliderTrash / i.sliderSizeHousehold)) && 'someTrash'",
+            "(i.sliderTrash / i.sliderSizeHousehold > 2.7) && f.panToCountry(f.getMaxISO('foodwaste')) && 'muchTrash'"
           ],
           "answerContext": {
             "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
@@ -661,22 +661,27 @@
           "key": "sliderEwaste",
           "type": "slider",
           "options": {
-            "min": 0.1,
+            "min": 1,
             "value": 20,
             "max": 80,
-            "unit": "Kg"
+            "unit": "Kg",
+            "step": 1
           }
         }
       },
       {
         "answer": {
           "answerKey": [
-            "(i.sliderEwaste < 10) && 'lessEwaste'",
-            "(i.sliderEwaste <= 29) && f.changeVis(f.getISO('electro', i.sliderEwaste)) &&  'someEwaste'",
-            "(i.sliderEwaste > 29) && f.changeVis(f.getMaxISO('electro')) && 'muchEwaste'"
+            "(i.sliderEwaste < 1) && 'lessEwaste'",
+            [
+              "(i.sliderEwaste <= 29)",
+              "&& f.panToCountry(f.getISO('electro', i.sliderEwaste + 2.4))",
+              "&& 'someEwaste'"
+            ],
+            "(i.sliderEwaste > 27) && f.panToCountry(f.getMaxISO('electro')) && 'muchEwaste'"
           ],
           "answerContext": {
-            "countryEwaste": "f.getCountryName('electro', i.sliderEwaste)",
+            "countryEwaste": "f.getCountryName('electro', i.sliderEwaste + 2.4)",
             "landMax": "f.getMaxCountryName('electro')",
             "landMin": "f.getMinCountryName('electro')",
             "valueMax": "f.getMaxValue('electro')",
@@ -776,7 +781,7 @@
       {
         "answer": {
           "answerKey": [
-            "(i.sliderFoodSpending < 15) && 'litteFoodCon'",
+            "(i.sliderFoodSpending < 7) && 'litteFoodCon'",
             "(i.sliderFoodSpending < 50) && 'mediumFoodCon'",
             "(i.sliderFoodSpending >= 50) && 'highFoodCon'"
           ],
@@ -787,9 +792,9 @@
             "landMin": "f.getMinCountryName('food')",
             "valueMax": "f.getMaxValue('food')",
             "valueMin": "f.getMinValue('food')",
-            "numberCountriesFood": "funcs.getDatasetCount('food')",
-            "numbercountriesWithLowerFoodConsumptionThanMe": "funcs.getDatasetCountByComparator('food', inputs.sliderMeatConsumption.value, '>')",
-            "RankingUserInComparisionToCountriesFood": "funcs.getDatasetCount('food') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
+            "numberCountriesFood": "f.getDatasetCount('food')",
+            "numbercountriesWithLowerFoodConsumptionThanMe": "f.getDatasetCountByComparator('food', inputs.sliderMeatConsumption.value, '>')",
+            "RankingUserInComparisionToCountriesFood": "f.getDatasetCount('food') - f.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
             "default": {
@@ -844,8 +849,8 @@
             "gasred2" : "i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249",
             "numberCountriesWithConsumption": "f.getDatasetCount('meat')",
             "numbercountriesWithLowerMeatConsumptionThanMe": "f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')",
-            "RankingUserInComparisionToCountriesMeat": "funcs.getDatasetCount('meat') - funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')",
-            "testfoo":"funcs.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
+            "RankingUserInComparisionToCountriesMeat": "f.getDatasetCount('meat') - f.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')",
+            "testfoo":"f.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
           },
           "templates": {
             "default": {
@@ -913,26 +918,26 @@
             },
             "littleTrash": {
               "de": [
-                "**Ihr Haushalt von {{ householdValueUser }} wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
+                "**Ihr Haushalt von {{ householdValueUser }} Person(en) wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
               ],
               "en": [
-                "**Your household of {{ householdValueUser }} throws away {{ trashValueUser }} kg food** – At **{{ wertLebensmittel }}** kilograms per person, your household throws away less food than those in all European countries for which data is available. "
+                "**Your household of {{ householdValueUser }} person(s) throws away {{ trashValueUser }} kg food** – At **{{ wertLebensmittel }}** kilograms per person, your household throws away less food than those in all European countries for which data is available. "
               ]
                 },
             "someTrash": {
               "de": [
-                "**Ihr Haushalt von {{ householdValueUser }} wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie **{{ landAbfall }}**."
+                "**Ihr Haushalt von {{ householdValueUser }} Person(en) wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie **{{ landAbfall }}**."
               ],
               "en": [
-                "**Your household of {{ householdValueUser }} throws away {{ trashValueUser }} kg food** – Your household throws away about as much food per person as **{{ landAbfall }}**."
+                "**Your household of {{ householdValueUser }} person(s) throws away {{ trashValueUser }} kg food** – Your household throws away about as much food per person as **{{ landAbfall }}**."
               ]
             },
             "muchTrash": {
               "de": [
-                "**Ihr Haushalt von {{ householdValueUser }} wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen."
+                "**Ihr Haushalt von {{ householdValueUser }} Person(en) wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen."
               ],
               "en": [
-                "**Your household of {{ householdValueUser }} throws away {{ trashValueUser }} kg food** – With a value of **{{ wertLebensmittel }}** per capita, your household throws away more food than in all European countries for which data is available.."
+                "**Your household of {{ householdValueUser }} person(s) throws away {{ trashValueUser }} kg food** – With a value of **{{ wertLebensmittel }}** per capita, your household throws away more food than in all European countries for which data is available.."
               ]
               }
             }
@@ -941,12 +946,16 @@
         {
         "answer": {
           "answerKey": [
-            "(i.sliderEwaste < 10) && 'lessEwaste'",
-            "(i.sliderEwaste <= 29) && 'someEwaste'",
-            "(i.sliderEwaste > 29) && 'muchEwaste'"
+            "(i.sliderEwaste < 1) && 'lessEwaste'",
+            [
+              "(i.sliderEwaste <= 29)",
+              "&& f.panToCountry(f.getISO('electro', i.sliderEwaste + 2.4))",
+              "&& 'someEwaste'"
+            ],
+            "(i.sliderEwaste > 27) && f.panToCountry(f.getMaxISO('electro')) && 'muchEwaste'"
           ],
           "answerContext": {
-            "countryEwaste": "f.getCountryName('electro', i.sliderEwaste)",
+            "countryEwaste": "f.getCountryName('electro', i.sliderEwaste + 2.4)",
             "landMax": "f.getMaxCountryName('electro')",
             "landMin": "f.getMinCountryName('electro')",
             "valueMax": "f.getMaxValue('electro')",
@@ -967,7 +976,7 @@
                 "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}** mit **{{ valueMin }}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "**Your're resposible for {{ wertEwaste }} kg electronic waste** – That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin }}** kilograms per year and resident"
+                "**Your're responsible for {{ wertEwaste }} kg electronic waste** – That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin }}** kilograms per year and resident"
               ]
                 },
             "someEwaste": {
@@ -975,7 +984,7 @@
                 "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen **{{ countryEwaste }}**."
               ],
               "en": [
-                "**Your're resposible for {{ wertEwaste }} kg electronic waste** – You are responsible for roughly the same amount of electronic waste as people **{{ countryEwaste }}**."
+                "**Your're responsible for {{ wertEwaste }} kg electronic waste** – You are responsible for roughly the same amount of electronic waste as people **{{ countryEwaste }}**."
               ]
             },
             "muchEwaste": {
@@ -983,7 +992,7 @@
                 "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht **{{ landMax }}** mit **{{ valueMax }}** Kilogramm pro Jahr und Einwohner."
               ],
               "en": [
-                "**Your're resposible for {{ wertEwaste }} kg electronic waste** – That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}**, with **{{ valueMax }}** kilograms per year and resident."
+                "**Your're responsible for {{ wertEwaste }} kg electronic waste** – That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}**, with **{{ valueMax }}** kilograms per year and resident."
               ]
               }
             }
