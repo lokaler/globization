@@ -24,7 +24,7 @@ export default class ScatterLegendComponent extends React.Component {
 
     const dataset = this.props.master.dataset;
     const description = translate(dataset.description);
-    const quelle= dataset.quelle;
+    const quelle= translate(dataset.quelle);
     const link = dataset.link;
     const color = this.props.color;
 
@@ -41,7 +41,7 @@ export default class ScatterLegendComponent extends React.Component {
     return (
       <div className="scatterLegend">
       <div className="label">{ description }</div>
-      <div className="quelle">Quelle: <a href={ link }>{ quelle }</a></div>
+      <div className="quelle">{translate('Source')}: <a href={ link }>{ quelle }</a></div>
       <div className="vergleich">{ translate("gdp") }</div>
       </div>
 
