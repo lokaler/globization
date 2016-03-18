@@ -33,7 +33,7 @@ export default class Slider extends React.Component {
     const tipFormatter = this.tipFormatter.bind(this);
 
     const value = this.props.questions.inputs[this.props.id] &&
-      this.props.questions.inputs[this.props.id].value ?
+      !isNaN(this.props.questions.inputs[this.props.id].value) ?
       this.props.questions.inputs[this.props.id].value : options.value;
 
     return (
