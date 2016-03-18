@@ -13,7 +13,10 @@
          "de": "Bruttoinlandsprodukt pro Kopf",
          "en": "Gross domestic product per capita"
       },
-      "quelle": "Statistisches Bundesamt",
+      "quelle": {
+        "de": "Statistisches Bundesamt",
+        "en": "Federal Office of Statistics"
+      },
       "link": "https://www.destatis.de/DE/ZahlenFakten/LaenderRegionen/Internationales/Thema/Tabellen/Basistabelle_KonsumN.html",
       "unit": "%",
       "fixed": 0,

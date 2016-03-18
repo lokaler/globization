@@ -24,7 +24,7 @@ export default class MapLegendComponent extends React.Component {
 
     const dataset = this.props.master.dataset;
     const description = translate(dataset.description);
-    const quelle= dataset.quelle;
+    const quelle= translate(dataset.quelle);
     const link = dataset.link;
     const color = this.props.color;
     const domain = color.domain();
@@ -46,8 +46,7 @@ export default class MapLegendComponent extends React.Component {
         </div>
         <div className="label">{ description }</div>
         <div className="quelle">
-          { translate('Source') }:
-          <a href={ link }>{ quelle }</a>
+          { translate('Source') }: <a href={ link }>{ quelle }</a>
         </div>
       </div>
 
