@@ -422,7 +422,6 @@
         "answer": {
           "answerKey": [
             "(i.sliderMeatConsumption == 0) && 'noMeat'",
-            "(i.sliderMeatConsumption * 1.31 < 1.5) && 'someMeat'",
             "(i.sliderMeatConsumption * 1.31 < 2.4) && f.panToCountry(f.getISO('meat', i.sliderMeatConsumption * 1.31)) && 'muchMeat'",
             "(i.sliderMeatConsumption * 1.31 >= 2.4) && f.panToCountry(f.getMaxISO('meat')) && 'muchTooMuchMeat'"
           ],
