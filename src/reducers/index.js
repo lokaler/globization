@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
-import questions from './QReducer';
-import vis from './VReducer';
-import master from './DataReducer';
+import questionnaire from './QuestionnaireReducer';
+import visualization from './VisualizationReducer';
+import data from './DataReducer';
 import app from './AppReducer';
 
 const rootReducer = combineReducers({
-  questions,
-  vis,
-  master,
+  questions: questionnaire,
+  vis: visualization,
+  master: data,
   app
 });
 
