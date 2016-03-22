@@ -1,10 +1,7 @@
-/* eslint-disable */
-
-import * as ActionTypes from '../constants/ActionTypes';
-import objectAssign from 'object-assign';
+import { UPDATE_POS, UPDATE_PATH, CHANGE_TYPE, CHANGE_VIS } from '../constants/ActionTypes';
 
 const initialState = {
-  debug:false,
+  debug: false,
   mapData: [],
   latlng: [0, 0],
   paths: [],
@@ -14,28 +11,43 @@ const initialState = {
   rotate: [0, 0],
   translate: [0, 0],
   type: 'globe',
-  animation:null,
-  active:null,
+  animation: null,
+  active: null,
   tooltip: {
-    active:false,
-    text: "Testtooltip",
+    active: false,
+    text: 'Testtooltip',
     x: 200,
     y: 200
   }
 };
 
-
-
 export default function vis(state = initialState, action) {
   switch (action.type) {
-    case ActionTypes.UPDATE_POS:
-      return objectAssign({}, state, { latlng: action.latlng });
-    case ActionTypes.UPDATE_PATH:
-      return objectAssign({}, state, { paths: action.paths });
-    case ActionTypes.CHANGE_TYPE:
-      return objectAssign({}, state, { type: action.val });
-    case ActionTypes.CHANGE_VIS:
-      return objectAssign({}, state,  action.val );
+
+    case UPDATE_POS:
+      return {
+        ...state,
+        latlng: action.latlng
+      };
+
+    case UPDATE_PATH:
+      return {
+        ...state,
+        paths: action.paths
+      };
+
+    case CHANGE_TYPE:
+      return {
+        ...state,
+        type: action.val
+      };
+
+    case CHANGE_VIS:
+      return {
+        ...state,
+        ...action.val
+      };
+
     default:
       return state;
   }
