@@ -1,48 +1,45 @@
-import * as ActionTypes from '../constants/ActionTypes';
-import objectAssign from 'object-assign';
-import { flatten } from 'lodash';
+import {
+  RECEIVE_QUESTION_DATA, UPDATE_USERINPUT, LOADING_QUESTION_DATA, SET_CARD
+} from '../constants/ActionTypes';
 
 const initialState = {
   activeChapter: 0,
   activeCard: -1,
-  inputs: {},
+  inputValues: {},
   questionData: [],
 };
 
-// hotfix
-function createInputs(data) {
-  const inputs = {};
-  const contents = data.map((el) => el.content);
-  const content = flatten(contents);
-
-  content.filter(el => Object.keys(el)[0] === 'input')
-    .forEach(el => {
-      inputs[el.input.key] = {};
-      inputs[el.input.key].value = undefined;
-    });
-
-  return inputs;
-}
-
-function createNewUserInput(state, key, value) {
-  return objectAssign({}, state.inputs, { [key]: { value } });
-}
-
 export default function questions(state = initialState, action) {
   switch (action.type) {
-    case ActionTypes.RECEIVE_QUESTION_DATA: {
-      const inputs = createInputs(action.data);
+
+    case RECEIVE_QUESTION_DATA: {
       const questionData = action.data;
-      return objectAssign({}, state, { questionData, inputs });
+      return {
+        ...state,
+        questionData,
+        inputValues: {}
+      };
     }
-    case ActionTypes.UPDATE_USERINPUT: {
-      const newUserInput = createNewUserInput(state, action.key, action.value);
-      return objectAssign({}, state, { inputs: newUserInput });
+
+    case UPDATE_USERINPUT: {
+      return {
+        ...state,
+        inputValues: {
+          ...state.inputValues,
+          [action.key]: action.value
+        }
+      };
     }
-    case ActionTypes.LOADING_QUESTION_DATA:
+
+    case SET_CARD:
+      return {
+        ...state,
+        activeCard: action.index
+      };
+
+    case LOADING_QUESTION_DATA:
       return state;
-    case ActionTypes.SET_CARD:
-      return objectAssign({}, state, { activeCard: action.index });
+
     default:
       return state;
   }

@@ -1,10 +1,8 @@
-/* eslint-disable */
-
-import 'rc-slider/assets/index.css';
+import { isUndefined } from 'lodash';
 import React, { PropTypes } from 'react';
 import Rcslider from 'rc-slider';
 import cssModules from 'react-css-modules';
-import Dataset from 'logic/Dataset';
+import 'rc-slider/assets/index.css';
 
 @cssModules()
 export default class Slider extends React.Component {
@@ -14,8 +12,7 @@ export default class Slider extends React.Component {
     type: PropTypes.string.isRequired,
     options: PropTypes.object.isRequired,
     actions: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired
+    questions: PropTypes.object.isRequired
   }
 
   onChange(value) {
@@ -28,13 +25,14 @@ export default class Slider extends React.Component {
   }
 
   render() {
-    const options = { ...this.props.options };
+    const { id, questions, options } = this.props;
     const sliderChangeBind = this.onChange.bind(this);
     const tipFormatter = this.tipFormatter.bind(this);
 
-    const value = this.props.questions.inputs[this.props.id] &&
-      !isNaN(this.props.questions.inputs[this.props.id].value) ?
-      this.props.questions.inputs[this.props.id].value : options.value;
+    let value = questions.inputValues[id];
+    if (isUndefined(value)) {
+      value = options.value;
+    }
 
     return (
       <div styleName="widget" className="slider">

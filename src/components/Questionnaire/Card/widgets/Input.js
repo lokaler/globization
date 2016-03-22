@@ -11,8 +11,7 @@ export default class Input extends React.Component {
 
   static propTypes = {
     input: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired
+    questions: PropTypes.object.isRequired
   }
 
   render() {

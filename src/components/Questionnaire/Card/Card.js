@@ -5,10 +5,10 @@ import Text from './widgets/Text';
 import Answer from './widgets/Answer';
 import Input from './widgets/Input';
 
-const WidgetFactory = {
-  text: React.createFactory(Text),
-  answer: React.createFactory(Answer),
-  input: React.createFactory(Input)
+const widgets = {
+  text: Text,
+  answer: Answer,
+  input: Input
 };
 
 @cssModules()
@@ -43,13 +43,15 @@ export default class Questionnaire extends React.Component {
   createWidgets(questions) {
     return questions.questionData[questions.activeCard].content
       .map((item, index) => {
-        const widgetKey = Object.keys(item)[0];
-        return WidgetFactory[widgetKey]({
-          ...item,
-          ...this.props,
-          index,
-          key: `${this.props.questions.activeCard}_${widgetKey}_${index}`
-        });
+        const widgetType = Object.keys(item)[0];
+        const Widget = widgets[widgetType];
+        return (
+          <Widget
+            { ...item }
+            { ...this.props }
+            key={ `${questions.activeCard}_${widgetType}_${index}` }
+          />
+        );
       });
   }
 

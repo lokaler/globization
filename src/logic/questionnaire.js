@@ -11,14 +11,10 @@ function compileExpression(expr) {
   const funcBody = `return ${expr};`;
   try {
     /* eslint-disable */
-    const func = new Function('inputs', 'i', 'funcs', 'f', 'state', funcBody);
+    const func = new Function('i', 'f', 'state', funcBody);
     /* eslint-enable */
     return function wrappedFunc(inputs) {
-      const inputs_ = {};
-      for (const [k, v] of Object.entries(inputs)) {
-        inputs_[k] = v.value;
-      }
-      return func(inputs, inputs_, funcs, funcs, store.getState());
+      return func(inputs, funcs, store.getState());
     };
   } catch (e) {
     throw new Error(`Error in expression "${expr}"`, e.toString());
