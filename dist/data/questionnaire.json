@@ -780,8 +780,8 @@
             "valueMax": "f.getMaxValue('food')",
             "valueMin": "f.getMinValue('food')",
             "numberCountriesFood": "f.getDatasetCount('food')",
-            "numbercountriesWithLowerFoodConsumptionThanMe": "f.getDatasetCountByComparator('food', inputs.sliderMeatConsumption.value, '>')",
-            "RankingUserInComparisionToCountriesFood": "f.getDatasetCount('food') - f.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
+            "numbercountriesWithLowerFoodConsumptionThanMe": "f.getDatasetCountByComparator('food', i.sliderMeatConsumption, '>')",
+            "RankingUserInComparisionToCountriesFood": "f.getDatasetCount('food') - f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')"
           },
           "templates": {
             "default": {
@@ -837,8 +837,7 @@
             "gasred2" : "i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249",
             "numberCountriesWithConsumption": "f.getDatasetCount('meat')",
             "numbercountriesWithLowerMeatConsumptionThanMe": "f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')",
-            "RankingUserInComparisionToCountriesMeat": "f.getDatasetCount('meat') - f.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')",
-            "testfoo":"f.getDatasetCountByComparator('meat', inputs.sliderMeatConsumption.value, '<')"
+            "RankingUserInComparisionToCountriesMeat": "f.getDatasetCount('meat') - f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')"
           },
           "templates": {
             "default": {
