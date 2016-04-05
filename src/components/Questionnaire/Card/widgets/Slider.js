@@ -18,6 +18,7 @@ export default class Slider extends React.Component {
   onChange(value) {
     this.props.actions.sponLogger();
     this.props.actions.updateUserInput(this.props.id, value);
+    this.props.actions.postQuestionAnswer({ key: this.props.id, value });
   }
 
   tipFormatter(val) {

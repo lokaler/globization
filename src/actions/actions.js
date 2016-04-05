@@ -1,5 +1,6 @@
 import * as types from '../constants/ActionTypes';
 import { validateData } from '../logic/questionnaire';
+import querystring from 'querystring';
 
 export function sponLogger() {
   return { type: types.SPON_LOGGER };
@@ -22,6 +23,20 @@ export function errorQuestionData(err) {
 export function errorDataSets(err) {
   console.log(err); // eslint-disable-line no-console
   return { type: types.ERROR_QUESTION_DATA, error: err };
+}
+
+export function postingQuestionAnswer() {
+  return { type: types.POSTING_QUESTION_ANSWER };
+}
+
+export function postQuestionAnswer(payload) {
+  const url = `https://uebermorgen-logbuch.lokaler.de?${querystring.stringify(payload)}`;
+  return dispatch => {
+    dispatch(postingQuestionAnswer());
+    fetch(url, {
+      method: 'POST'
+    });
+  };
 }
 
 export function loadingQuestionData() {
