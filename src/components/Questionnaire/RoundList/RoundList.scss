@@ -1,0 +1,36 @@
+:local(.component) {
+    float: left;
+    width: 100%;
+    .theme {
+        font-size: 12px;
+        /* padding: 8px 10px 8px 10px; */
+        cursor: pointer;
+        /* background: #EEE; */
+        list-style: none;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        color: #1D1D1D;
+        margin-bottom: 30px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #C8C8C8;
+
+        .info {
+            font-weight: bold;
+
+        }
+
+        .dropdown {
+          display: inline-block;
+          line-height: 28px;
+          border: 0px solid #bababa;
+          padding: 4px;
+          color: #222;
+          font-size: 1em;
+          font-weight: normal;
+          background: white;
+          width: 210px;
+
+          &:focus {outline:0;}
+        }
+    }
+}

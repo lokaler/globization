@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import DataSetList from './DataSetList/DataSetList';
+import RoundList from './RoundList/RoundList';
 import TranslatedMarkdown from './TranslatedMarkdown';
 import * as texts from 'data/texts';
 
@@ -31,6 +32,7 @@ export default class Intro extends React.Component {
   render() {
     return (
       <div onClick={ this.onClick }>
+        <RoundList { ...this.props } />
         <TranslatedMarkdown text={ texts.intro }/>
         <DataSetList { ...this.props } />
       </div>
