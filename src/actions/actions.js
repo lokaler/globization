@@ -30,7 +30,8 @@ export function postingQuestionAnswer() {
 }
 
 export function postQuestionAnswer(payload) {
-  const url = `https://uebermorgen-logbuch.lokaler.de?${querystring.stringify(payload)}`;
+  // const url = `https://uebermorgen-logbuch.lokaler.de?${querystring.stringify(payload)}`;
+  const url = `http://10.0.0.197?${querystring.stringify(payload)}`;
   return dispatch => {
     dispatch(postingQuestionAnswer());
     fetch(url, {
