@@ -1,0 +1,245 @@
+{
+  "title": "7. Karte - Summary",
+  "dataset": "electro",
+  "functions": [
+    "getGermanCountryName",
+    "getMaxGermanCountryName",
+    "getMinGermanCountryName",
+    "getMaxValue",
+    "getMinValue"
+  ],
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Steckbrief ",
+          "**So konsumieren Sie im internationalen Vergleich:**"
+        ],
+        "en": [
+          "# Summary",
+          "**Your consumption in comparison with the world:**"
+        ]
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "(i.sliderFoodSpending < 7) && 'litteFoodCon'",
+          "(i.sliderFoodSpending < 50) && 'mediumFoodCon'",
+          "(i.sliderFoodSpending >= 50) && 'highFoodCon'"
+        ],
+        "answerContext": {
+          "valueFoodUser": "i.sliderFoodSpending",
+          "landAusgaben": "f.getCountryName('food', i.sliderFoodSpending)",
+          "landMax": "f.getMaxCountryName('food')",
+          "landMin": "f.getMinCountryName('food')",
+          "valueMax": "f.getMaxValue('food')",
+          "valueMin": "f.getMinValue('food')",
+          "numberCountriesFood": "f.getDatasetCount('food')",
+          "numbercountriesWithLowerFoodConsumptionThanMe": "f.getDatasetCountByComparator('food', i.sliderMeatConsumption, '>')",
+          "RankingUserInComparisionToCountriesFood": "f.getDatasetCount('food') - f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')"
+        },
+        "templates": {
+          "default": {
+            "de": [
+              "Bitte beantworten Sie die Frage zu den Ausgaben für **Nahrungsmittel**."
+            ],
+            "en": [
+              "Please answer the question about your spendings for **food**."
+            ]
+          },
+          "litteFoodCon": {
+            "de": [
+              "**Ihre Ausgaben: {{ valueFoodUser }} %** – Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Ausgaben für Nahrungsmittel aufwenden."
+            ],
+            "en": [
+              "**Your spending: {{ valueFoodUser }} %** – You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries."
+            ]
+          },
+          "mediumFoodCon": {
+            "de": [
+              "**Ihre Ausgaben: {{ valueFoodUser }} %** – Gemessen an den Gesamtausgaben, geben Sie ungefähr so viel Geld für Lebensmittel aus wie Menschen **{{ landAusgaben }}**."
+            ],
+            "en": [
+              "**Your spending: {{ valueFoodUser }} %** – People in **{{ landAusgaben }}**. spend a similar amount on food as you do, measured as a percentage of total expenditures."
+            ]
+          },
+          "highFoodCon": {
+            "de": [
+              "**Ihre Ausgaben: {{ valueFoodUser }} %** – Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen **{{ landMax }}** den größten Anteil ihrer Ausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
+            ],
+            "en": [
+              "**Your spending: {{ valueFoodUser }} %** – You spend a very large share of your money on food. Internationally, people  **{{ landMax }}**  devote the largest share of their expenditures to food, namely **{{ valueMax }}** percent."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "(i.sliderMeatConsumption == 0) && 'noMeat'",
+          "(i.sliderMeatConsumption*1.31 < 0.1) && 'someMeat'",
+          "(i.sliderMeatConsumption*1.31 < 2.4) && 'muchMeat'",
+          "(i.sliderMeatConsumption*1.31 >= 2.4) && 'muchTooMuchMeat'"
+        ],
+        "answerContext": {
+          "realFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption)",
+          "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
+          "meatConsumptionCountry": "f.getCountryName('meat', i.sliderMeatConsumption)",
+          "landMax": "f.getMaxCountryName('meat')",
+          "landMaxValue": "f.getMaxValue('meat')",
+          "gasred": "i.sliderMeatConsumption / 2 * 3.89",
+          "gasred2" : "i.sliderMeatConsumption / 2 * 3.89 * 1000 / 249",
+          "numberCountriesWithConsumption": "f.getDatasetCount('meat')",
+          "numbercountriesWithLowerMeatConsumptionThanMe": "f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')",
+          "RankingUserInComparisionToCountriesMeat": "f.getDatasetCount('meat') - f.getDatasetCountByComparator('meat', i.sliderMeatConsumption, '<')"
+        },
+        "templates": {
+          "default": {
+            "de": [
+              "Bitte beantworten Sie die Frage zum **Fleischkonsum**."
+            ],
+            "en": [
+              "Please answer the question about your **meat consumption**."
+            ]
+          },
+          "noMeat": {
+            "de": [
+              "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnitts-Fleischesser sparen Sie dadurch pro Jahr etwa 330 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 1.300 Kilometern Autofahrt mit einem mittelgroßen Benziner."
+            ],
+            "en": [
+              "You are a vegetarian, or even a vegan? The CO2 emissions you produce over the course of a year are around 330 kilograms (727 pounds) less than those of an average German meat-eater. That is the equivalent of driving 1,300 kilometers (810 miles) in a mid-sized, gasoline-powered vehicle."
+            ]
+          },
+          "someMeat": {
+            "de": [
+              "**Ihr Fleischkonsum: {{ realFleisch }} kg** – Ihr Fleischbedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
+            ],
+            "en": [
+              "**Your meat consumption: {{ realFleisch }} kg** – Your level of consumption can be covered in any of the countries for which comparative data is available."
+            ]
+          },
+          "muchMeat": {
+            "de": [
+              "**Ihr Fleischkonsum: {{ realFleisch }} kg** – Ihr Fleischbedarf pro Woche entspricht **{{ wertFleisch }}** Kilogramm. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ meatConsumptionCountry }}**."
+            ],
+            "en": [
+              "**Your meat consumption: {{ realFleisch }} kg** – Your weekly meat consumption is **{{ wertFleisch }}** kilograms. That is comparable to the weekly per capita amount available **{{ sameMeat }}**."
+            ]
+          },
+          "muchTooMuchMeat": {
+            "de": [
+              "**Ihr Fleischkonsum: {{ realFleisch }} kg** – Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
+            ],
+            "en": [
+              "**Your meat consumption: {{ realFleisch }} kg** – Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "(i.sliderTrash / i.sliderSizeHousehold < 1.5) && 'littleTrash'",
+          "(i.sliderTrash / i.sliderSizeHousehold <= 2.7) && 'someTrash'",
+          "(i.sliderTrash / i.sliderSizeHousehold> 2.7) && 'muchTrash'"
+        ],
+        "answerContext":{
+          "trashValueUser":"i.sliderTrash",
+          "householdValueUser":"i.sliderSizeHousehold",
+          "landAbfall": "f.getCountryName('foodwaste', i.sliderTrash / i.sliderSizeHousehold)",
+          "wertLebensmittel": "f.fmt('%0.1f', i.sliderTrash / i.sliderSizeHousehold)",
+          "sizeHousehold": "i.sliderSizeHousehold"
+
+        },
+        "templates": {
+          "default": {
+            "de": ["Bitte beantworten Sie die Frage, wie viele **Lebensmittel** Sie wegwerfen."],
+            "en": ["Please answer the question about how much food you throw away."]
+          },
+          "littleTrash": {
+            "de": [
+              "**Ihr Haushalt von {{ householdValueUser }} Person(en) wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf weniger Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen. "
+            ],
+            "en": [
+              "**Your household of {{ householdValueUser }} person(s) throws away {{ trashValueUser }} kg food** – At **{{ wertLebensmittel }}** kilograms per person, your household throws away less food than those in all European countries for which data is available. "
+            ]
+          },
+          "someTrash": {
+            "de": [
+              "**Ihr Haushalt von {{ householdValueUser }} Person(en) wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden pro Kopf etwa so viele Lebensmittel weggeschmissen wie **{{ landAbfall }}**."
+            ],
+            "en": [
+              "**Your household of {{ householdValueUser }} person(s) throws away {{ trashValueUser }} kg food** – Your household throws away about as much food per person as **{{ landAbfall }}**."
+            ]
+          },
+          "muchTrash": {
+            "de": [
+              "**Ihr Haushalt von {{ householdValueUser }} Person(en) wirft {{ trashValueUser }} kg Lebensmittel weg** – In Ihrem Haushalt werden mit **{{ wertLebensmittel }}** Kilogramm pro Kopf mehr Lebensmittel weggeschmissen als in den europäischen Ländern, für die Vergleichsdaten vorliegen."
+            ],
+            "en": [
+              "**Your household of {{ householdValueUser }} person(s) throws away {{ trashValueUser }} kg food** – With a value of **{{ wertLebensmittel }}** per capita, your household throws away more food than in all European countries for which data is available.."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "(i.sliderEwaste < 1) && 'lessEwaste'",
+          [
+            "(i.sliderEwaste <= 29)",
+            "&& f.panToCountry(f.getISO('electro', i.sliderEwaste + 2.4))",
+            "&& 'someEwaste'"
+          ],
+          "(i.sliderEwaste > 27) && f.panToCountry(f.getMaxISO('electro')) && 'muchEwaste'"
+        ],
+        "answerContext": {
+          "countryEwaste": "f.getCountryName('electro', i.sliderEwaste + 2.4)",
+          "landMax": "f.getMaxCountryName('electro')",
+          "landMin": "f.getMinCountryName('electro')",
+          "valueMax": "f.getMaxValue('electro')",
+          "valueMin": "f.getMinValue('electro')",
+          "wertEwaste": "i.sliderEwaste + 2.4"
+        },
+        "templates": {
+          "default": {
+            "de": [
+              "Bitte beantworten Sie die Frage zum **Elektroschrott**."
+            ],
+            "en": [
+              "Please answer the question about **elecronic waste**."
+            ]
+          },
+          "lessEwaste": {
+            "de": [
+              "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}** mit **{{ valueMin }}** Kilogramm pro Jahr und Einwohner."
+            ],
+            "en": [
+              "**Your're responsible for {{ wertEwaste }} kg electronic waste** – That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin }}** kilograms per year and resident"
+            ]
+          },
+          "someEwaste": {
+            "de": [
+              "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Auf Sie entfällt etwa so viel Elektroschrott wie auf Menschen **{{ countryEwaste }}**."
+            ],
+            "en": [
+              "**Your're responsible for {{ wertEwaste }} kg electronic waste** – You are responsible for roughly the same amount of electronic waste as people **{{ countryEwaste }}**."
+            ]
+          },
+          "muchEwaste": {
+            "de": [
+              "**Sie haben {{ wertEwaste }} kg Elektroschrott verursacht** – Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht **{{ landMax }}** mit **{{ valueMax }}** Kilogramm pro Jahr und Einwohner."
+            ],
+            "en": [
+              "**Your're responsible for {{ wertEwaste }} kg electronic waste** – That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}**, with **{{ valueMax }}** kilograms per year and resident."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

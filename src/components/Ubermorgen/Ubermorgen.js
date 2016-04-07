@@ -32,7 +32,7 @@ export default class UbermorgenApp extends React.Component {
 
   onDoubleClick = () => {
     if (__DEV__) {
-      this.props.actions.requestQuestionData('./data/questionnaire.json');
+      this.props.actions.setQuestionnaire('0316');
     }
   }
 

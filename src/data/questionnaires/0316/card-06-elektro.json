@@ -1,0 +1,129 @@
+{
+  "title": "6. Karte - Elektro",
+  "dataset": "electro",
+  "functions": [
+    "getGermanCountryName",
+    "getMaxGermanCountryName",
+    "getMinGermanCountryName",
+    "getMaxValue",
+    "getMinValue"
+  ],
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Und wieder ein neues Smartphone?",
+          "",
+          "Viele Deutsche kaufen rund alle zwei Jahre ein neues Handy. Alte Geräte lagern nicht selten in der Schublade oder werden in Afrika unter katastrophalen Bedingungen recycelt.",
+          "",
+          "**Wie viel Kilogramm Elektroschrott haben Sie im letzten Jahr ausrangiert oder weggeworfen?** (Smartphone ≈ 130g, Laptop ≈ 3,5kg, Toaster ≈ 1kg, Waschmaschine ≈ 65kg)"
+        ],
+        "en": [
+          "# Yet another new smartphone?",
+          "",
+          "Many Germans buy a new mobile phone about every two years. Old phones often end up forgotten in a drawer or are recycled in Africa in catastrophic conditions.",
+          "",
+          "**How many kilograms of electronic waste have you gotten rid of or thrown away in the last year?**",
+          "(Smartphone ≈ 130g (4.6 oz), laptop ≈ 3.5kg (7.7 lbs), toaster ≈ 1kg (2.2 lbs), washing machine ≈ 65kg (143 lbs))"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "sliderEwaste",
+        "type": "slider",
+        "options": {
+          "min": 1,
+          "value": 20,
+          "max": 80,
+          "unit": "Kg",
+          "step": 1
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "(i.sliderEwaste < 1) && 'lessEwaste'",
+          [
+            "(i.sliderEwaste <= 29)",
+            "&& f.panToCountry(f.getISO('electro', i.sliderEwaste + 2.4))",
+            "&& 'someEwaste'"
+          ],
+          "(i.sliderEwaste > 27) && f.panToCountry(f.getMaxISO('electro')) && 'muchEwaste'"
+        ],
+        "answerContext": {
+          "countryEwaste": "f.getCountryName('electro', i.sliderEwaste + 2.4)",
+          "landMax": "f.getMaxCountryName('electro')",
+          "landMin": "f.getMinCountryName('electro')",
+          "valueMax": "f.getMaxValue('electro')",
+          "valueMin": "f.getMinValue('electro')",
+          "wertEwaste": "i.sliderEwaste + 2.4"
+        },
+        "templates": {
+          "default": {
+            "de": [
+              "Bitte bewegen Sie den Schieberegler"
+            ],
+            "en": [
+              "Please move the slider"
+            ]
+          },
+          "lessEwaste": {
+            "de": [
+              "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland waren das im Jahr 2014 2,4 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
+              "",
+              "Das ist weniger als in den Ländern, für die Vergleichsdaten vorliegen. Am wenigsten Elektroschrott verursacht **{{ landMin }}**  mit **{{ valueMin }}** Kilogramm pro Jahr und Einwohner."
+            ],
+            "en": [
+              "To be able to compare internationally, we added your value together with the amount of electronic waste produced by companies and public institutions on a per capita and per year basis. For Germany in 2014, that value was 2.4 kilograms (5.3 pounds). As such, you are responsible for a total of **{{ wertEwaste }}** kilograms of electronic waste.",
+              "",
+              "That is less than in all countries for which data is available. The least electronic waste is produced by **{{ landMin }}** with **{{ valueMin }}** kilograms per year and resident. "
+            ]
+          },
+          "someEwaste": {
+            "de": [
+              "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland im Jahr 2014 waren das 2,41 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
+              "",
+              "Das entspricht etwa dem Pro-Kopf-Wert **{{ countryEwaste }}** ."
+            ],
+            "en": [
+              "To be able to compare internationally, we added your value together with the amount of electronic waste produced by companies and public institutions on a per capita and per year basis. For Germany in 2014, that value was 2.41 kilograms (5.3 pounds). As such, you are responsible for a total of **{{ wertEwaste }}** kilograms of electronic waste.",
+              "",
+              "That is roughly equivalent to the per capital value **{{ countryEwaste }}** ."
+            ]
+          },
+          "muchEwaste": {
+            "de": [
+              "Für den internationalen Vergleich addieren wir zu Ihrem Wert noch den Anteil an Elektroschrott, den Unternehmen und öffentliche Einrichtungen pro Kopf und Jahr verursachen. Für Deutschland im Jahr 2014 waren das 2,41 Kilogramm. Auf Sie entfallen dann insgesamt **{{ wertEwaste }}** Kilogramm Elektroschrott.",
+              "",
+              "Das ist mehr als in den Ländern, für die Vergleichsdaten vorliegen. Am meisten Elektroschrott verursacht **{{ landMax }}**  mit **{{ valueMax }}**  Kilogramm pro Jahr und Einwohner."
+            ],
+            "en": [
+              "To be able to compare internationally, we added your value together with the amount of electronic waste produced by companies and public institutions on a per capita and per year basis. For Germany in 2014, that value was 2.41 kilograms (5.3 pounds). As such, you are responsible for a total of **{{ wertEwaste }}** kilograms of electronic waste.",
+              "",
+              "That is more than in all countries for which data is available. The most electronic waste is produced by **{{ landMax }}** with **{{ valueMax }}** kilograms per year and resident."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "answer": {
+        "className": "tip",
+        "answerKey": ["i.sliderEwaste && 'tip'"],
+        "answerContext": {},
+        "templates": {
+          "tip": {
+            "de": [
+              "**Nachhaltigkeitstipp**: Elektroschrott können Sie zum Beispiel vermeiden, indem Sie reparieren statt wegwerfen. Beim [Repair-Café in Ihrer Nähe](http://repaircafe.org/de/besuchen/) bekommen Sie mit etwas Hilfe den Toaster oder die Bohrmaschine vielleicht noch mal zum Laufen – das Erfolgserlebnis gibt es gratis dazu."
+            ],
+            "en": [
+              "**Sustainability Tip**: One way to avoid electronic waste is by repairing broken devices rather than throwing them away. At a [Repair Café](http://repaircafe.org/en/visit/) near you, you can get the help you need to get your electronics up and running again. The feeling of accomplishment afterwards doesn’t cost anything."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

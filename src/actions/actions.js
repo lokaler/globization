@@ -1,5 +1,4 @@
 import * as types from '../constants/ActionTypes';
-import { validateData } from '../logic/questionnaire';
 import querystring from 'querystring';
 
 export function sponLogger() {
@@ -8,21 +7,16 @@ export function sponLogger() {
 
 // question data actions
 export function receiveQuestionData(jsonData) {
-  return { type: types.RECEIVE_QUESTION_DATA, data: jsonData };
+  return { type: types.SET_QUESTIONNAIRE, data: jsonData };
 }
 
 export function receiveDataSets(jsonData) {
   return { type: types.RECEIVE_DATASETS, data: jsonData };
 }
 
-export function errorQuestionData(err) {
-  console.error(err); // eslint-disable-line no-console
-  return { type: types.ERROR_QUESTION_DATA, error: err };
-}
-
 export function errorDataSets(err) {
   console.log(err); // eslint-disable-line no-console
-  return { type: types.ERROR_QUESTION_DATA, error: err };
+  return { type: types.ERROR_DATASETS, error: err };
 }
 
 export function postingQuestionAnswer() {
@@ -40,21 +34,8 @@ export function postQuestionAnswer(payload) {
   };
 }
 
-export function loadingQuestionData() {
-  return { type: types.LOADING_QUESTION_DATA };
-}
-
-export function requestQuestionData(url) {
-  return dispatch => {
-    dispatch(loadingQuestionData());
-    fetch(url)
-      .then(res => res.json())
-      .then(jsonData => {
-        validateData(jsonData);
-        dispatch(receiveQuestionData(jsonData));
-      })
-      .catch((err) => dispatch(errorQuestionData(err)));
-  };
+export function setQuestionnaire(id) {
+  return { type: types.SET_QUESTIONNAIRE, id };
 }
 
 export function requestDataSets(url) {

@@ -23,7 +23,7 @@ export default class Questionnaire extends React.Component {
   }
 
   loadData() {
-    this.props.actions.requestQuestionData('./data/questionnaire.json');
+    this.props.actions.setQuestionnaire('0316');
   }
 
   render() {
