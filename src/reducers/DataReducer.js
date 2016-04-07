@@ -38,6 +38,7 @@ function prepareDataset(dataset) {
 }
 
 const initialState = {
+  round: 'konsum',
   dataset: null,
   datasets: [],
   topojson: makeTopoJson(),

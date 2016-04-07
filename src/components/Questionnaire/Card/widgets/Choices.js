@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import translate from 'logic/translate';
+import { logbuch } from 'logic/logbuch';
 
 @cssModules()
 export default class Choices extends React.Component {
@@ -20,6 +21,7 @@ export default class Choices extends React.Component {
 
   onClick(activeValue) {
     this.props.actions.updateUserInput(this.props.id, activeValue);
+    logbuch({ key: this.props.id, activeValue });
   }
 
   isActiveRadio(activeValue) {

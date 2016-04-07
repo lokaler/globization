@@ -1,5 +1,4 @@
 import * as types from '../constants/ActionTypes';
-import querystring from 'querystring';
 
 // question data actions
 export function receiveQuestionData(jsonData) {
@@ -17,17 +16,6 @@ export function errorDataSets(err) {
 
 export function postingQuestionAnswer() {
   return { type: types.POSTING_QUESTION_ANSWER };
-}
-
-export function postQuestionAnswer(payload) {
-  const url = `https://uebermorgen-logbuch.lokaler.de?${querystring.stringify(payload)}`;
-  // const url = `http://10.0.0.197?${querystring.stringify(payload)}`;
-  return dispatch => {
-    dispatch(postingQuestionAnswer());
-    fetch(url, {
-      method: 'POST'
-    });
-  };
 }
 
 export function setQuestionnaire(id) {
