@@ -32,6 +32,7 @@ function prepareDataset(dataset) {
     d.vergleich = e.vergleich;
   }
   /* eslint-disable */
+  //console.log(dataset.key, d3.extent(dataset.data, d=>d.value ))
   dataset.vergleichDomain = d3.extent(dataset.data, (d) => d.vergleich);
   /* eslint-enable */
 }
