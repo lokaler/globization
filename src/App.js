@@ -8,6 +8,7 @@ import UbermorgenApp from './components/Ubermorgen/Ubermorgen';
 import * as oldActions from './actions/actions';
 import { actions as questionnaireActions } from './ducks/questionnaire';
 import { actions as appActions } from './ducks/app';
+import { actions as visualizationActions } from './ducks/visualization';
 
 
 class App extends React.Component {
@@ -40,7 +41,8 @@ function mapDispatchToProps(dispatch) {
   const actions = {
     ...oldActions,
     ...questionnaireActions,
-    ...appActions
+    ...appActions,
+    ...visualizationActions
   };
   return {
     actions: bindActionCreators(actions, dispatch)

@@ -1,4 +1,5 @@
-import { CHANGE_VIS, ZOOM_TO_COUNTRY } from '../constants/ActionTypes';
+const CHANGE_VIS = 'CHANGE_VIS';
+const ZOOM_TO_COUNTRY = 'ZOOM_TO_COUNTRY';
 
 const initialState = {
   debug: false,
@@ -21,7 +22,7 @@ const initialState = {
   }
 };
 
-export default function vis(state = initialState, action) {
+export function reducer(state = initialState, action) {
   switch (action.type) {
 
     case CHANGE_VIS:
@@ -46,3 +47,12 @@ export default function vis(state = initialState, action) {
       return state;
   }
 }
+
+export const actions = {
+  zoomToCountry: (isoCode) => (
+    { type: ZOOM_TO_COUNTRY, isoCode }
+  ),
+  changeVis: (val) => (
+    { type: CHANGE_VIS, val }
+  )
+};

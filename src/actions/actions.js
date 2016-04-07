@@ -36,17 +36,3 @@ export function setDataSet(name) {
     name
   };
 }
-
-export function zoomToCountry(isoCode) {
-  return {
-    type: types.ZOOM_TO_COUNTRY,
-    isoCode
-  };
-}
-
-export function changeVis(val) {
-  return {
-    type: types.CHANGE_VIS,
-    val
-  };
-}
