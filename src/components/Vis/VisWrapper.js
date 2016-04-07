@@ -12,6 +12,7 @@ import classnames from 'classnames';
 import colorbrewer from 'colorbrewer'
 import MapLegendComponent from './MapLegendComponent.js';
 import ScatterLegendComponent from './ScatterLegendComponent.js';
+import { sponLogger } from 'logic/logging';
 
 
 @cssModules(styles)
@@ -54,7 +55,7 @@ export default class Globe extends React.Component {
       type,
       tooltip: { active: false }
     });
-    this.props.actions.sponLogger();
+    sponLogger();
   }
 
   random(){

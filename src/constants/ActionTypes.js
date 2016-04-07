@@ -1,7 +1,6 @@
 // AppReducer
 export const GET_URL_PARAMETERS = 'GET_URL_PARAMETERS';
 export const SET_WINDOW_SIZE = 'SET_WINDOW_SIZE';
-export const SPON_LOGGER = 'SPON_LOGGER';
 
 // DataReducer
 export const RECEIVE_DATASETS = 'RECEIVE_DATASETS';

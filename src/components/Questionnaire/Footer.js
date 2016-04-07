@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
+import { sponLogger } from 'logic/logging';
 
 @cssModules()
 export default class Footer extends React.Component {
@@ -26,7 +27,7 @@ export default class Footer extends React.Component {
         else {
           cardIndex = -1;
         }
-        this.props.actions.sponLogger();
+        sponLogger();
         actions.setCard(cardIndex, dataId);
       };
     }

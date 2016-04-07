@@ -3,6 +3,7 @@ import cssModules from 'react-css-modules';
 import DataSetList from './DataSetList/DataSetList';
 import RoundList from './RoundList/RoundList';
 import TranslatedMarkdown from './TranslatedMarkdown';
+import { sponLogger } from 'logic/logging';
 import * as texts from 'data/texts';
 
 
@@ -24,7 +25,7 @@ export default class Intro extends React.Component {
 
   clickHandlers = {
     onStartClick: () => {
-      this.props.actions.sponLogger();
+      sponLogger();
       this.props.actions.setCard(0, 'food');
     }
   }

@@ -2,6 +2,7 @@ import { isUndefined } from 'lodash';
 import React, { PropTypes } from 'react';
 import Rcslider from 'rc-slider';
 import cssModules from 'react-css-modules';
+import { sponLogger } from 'logic/logging';
 import 'rc-slider/assets/index.css';
 
 @cssModules()
@@ -16,7 +17,7 @@ export default class Slider extends React.Component {
   }
 
   onChange(value) {
-    this.props.actions.sponLogger();
+    sponLogger();
     this.props.actions.updateUserInput(this.props.id, value);
     this.props.actions.postQuestionAnswer({ key: this.props.id, value });
   }

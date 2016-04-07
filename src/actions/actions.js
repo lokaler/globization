@@ -1,10 +1,6 @@
 import * as types from '../constants/ActionTypes';
 import querystring from 'querystring';
 
-export function sponLogger() {
-  return { type: types.SPON_LOGGER };
-}
-
 // question data actions
 export function receiveQuestionData(jsonData) {
   return { type: types.SET_QUESTIONNAIRE, data: jsonData };
