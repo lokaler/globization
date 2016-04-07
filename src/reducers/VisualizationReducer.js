@@ -1,4 +1,4 @@
-import { UPDATE_POS, UPDATE_PATH, CHANGE_TYPE, CHANGE_VIS } from '../constants/ActionTypes';
+import { CHANGE_VIS } from '../constants/ActionTypes';
 
 const initialState = {
   debug: false,
@@ -23,24 +23,6 @@ const initialState = {
 
 export default function vis(state = initialState, action) {
   switch (action.type) {
-
-    case UPDATE_POS:
-      return {
-        ...state,
-        latlng: action.latlng
-      };
-
-    case UPDATE_PATH:
-      return {
-        ...state,
-        paths: action.paths
-      };
-
-    case CHANGE_TYPE:
-      return {
-        ...state,
-        type: action.val
-      };
 
     case CHANGE_VIS:
       return {

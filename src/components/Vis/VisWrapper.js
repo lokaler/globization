@@ -32,10 +32,6 @@ export default class Globe extends React.Component {
       .domain([0,10])
   }
 
-  componentDidMount() {
-    //this.props.actions.updatePos([52, 23]);
-  }
-
   componentWillReceiveProps(nextProps){
     utils.log("componentWillUpdate", nextProps)
     const dataset = nextProps.master.dataset;
@@ -49,8 +45,6 @@ export default class Globe extends React.Component {
   }
 
   changeType(type) {
-    // this.props.actions.changeType(type);
-
     this.props.actions.changeVis({
       type,
       tooltip: { active: false }

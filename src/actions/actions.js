@@ -62,32 +62,10 @@ export function updateUserInput(key, value) {
   };
 }
 
-// vis actions
-export function updatePos(latlng) {
-  return {
-    type: types.UPDATE_POS,
-    latlng
-  };
-}
-
 export function zoomToCountry(name) {
   return {
     type: types.ZOOM_TO_COUNTRY,
     name
-  };
-}
-
-export function changeType(val) {
-  return {
-    type: types.CHANGE_TYPE,
-    val
-  };
-}
-
-export function updatePaths(paths) {
-  return {
-    type: types.UPDATE_PATH,
-    paths
   };
 }
 

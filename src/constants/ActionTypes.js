@@ -14,8 +14,5 @@ export const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
 export const POSTING_QUESTION_ANSWER = 'POSTING_QUESTION_ANSWER';
 
 // VisualizationReducer
-export const UPDATE_POS = 'UPDATE_POS';
-export const UPDATE_PATH = 'UPDATE_PATH';
-export const CHANGE_TYPE = 'CHANGE_TYPE';
 export const CHANGE_VIS = 'CHANGE_VIS';
 export const ZOOM_TO_COUNTRY = 'ZOOM_TO_COUNTRY';
