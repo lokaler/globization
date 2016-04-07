@@ -1,8 +1,14 @@
 import { combineReducers } from 'redux';
-import appState from './reducers';
+import questions from './QReducer';
+import vis from './VReducer';
+import master from './DataReducer';
+import app from './AppReducer';
 
 const rootReducer = combineReducers({
-  appState
+  questions,
+  vis,
+  master,
+  app
 });
 
 export default rootReducer;

@@ -2,6 +2,8 @@ import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import autoprefixer from 'autoprefixer';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+
 
 const developmentEnvironment = 'development';
 const productionEnvironment = 'production';
@@ -37,7 +39,10 @@ function getPlugins(env) {
 
     prod && new ExtractTextPlugin('styles.css'),
     prod && new webpack.optimize.DedupePlugin(),
-    prod && new webpack.optimize.UglifyJsPlugin()
+    prod && new webpack.optimize.UglifyJsPlugin(),
+    prod && new CopyWebpackPlugin([
+      { from: 'src/data', to: 'data' }
+    ])
 
   ]);
 }
@@ -60,6 +65,19 @@ function getLoaders(env) {
       test: /\.js$/,
       include: root('src'),
       loaders: ['react-hot', 'babel', 'eslint']
+    },
+    {
+      test: /\.svg$/,
+      loader: 'url-loader'
+    },
+    {
+      test: /\.json$/,
+      loader: 'json'
+    },
+
+    {
+      test: /\.csv$/,
+      loader: 'dsv'
     },
 
     dev && {
@@ -115,7 +133,14 @@ function getConfig(env) {
     },
     postcss: [
       autoprefixer({ browsers: ['last 2 versions'] })
-    ]
+    ],
+    resolve: {
+      alias: {
+        ajv: root('node_modules/ajv/dist/ajv.bundle.js'),
+        logic: root('src/logic'),
+        data: root('src/data')
+      }
+    }
   };
 }
 

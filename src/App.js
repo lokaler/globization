@@ -7,12 +7,14 @@ import { connect } from 'react-redux';
 import UbermorgenApp from './components/Ubermorgen/Ubermorgen';
 import * as appActions from './actions/actions';
 
-
 class App extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    appState: PropTypes.object.isRequired
+    questions: PropTypes.object.isRequired,
+    vis: PropTypes.object.isRequired,
+    master: PropTypes.object.isRequired,
+    app: PropTypes.object.isRequired
   }
 
   render() {
@@ -24,7 +26,10 @@ class App extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    appState: state.appState
+    questions: state.questions,
+    vis: state.vis,
+    master: state.master,
+    app: state.app
   };
 }
 
