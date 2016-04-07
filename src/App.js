@@ -5,7 +5,6 @@ import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import UbermorgenApp from './components/Ubermorgen/Ubermorgen';
-import * as oldActions from './actions/actions';
 import { actions as questionnaireActions } from './ducks/questionnaire';
 import { actions as appActions } from './ducks/app';
 import { actions as visualizationActions } from './ducks/visualization';
@@ -40,7 +39,6 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   const actions = {
-    ...oldActions,
     ...questionnaireActions,
     ...appActions,
     ...visualizationActions,
