@@ -23,7 +23,7 @@ export default class Choices extends React.Component {
   }
 
   isActiveRadio(activeValue) {
-    const currUserInput = this.props.questions.inputs[this.props.id];
+    const currUserInput = this.props.questions.inputValues[this.props.id];
     return currUserInput &&
       typeof currUserInput.value !== 'undefined' &&
       currUserInput.value === activeValue;
