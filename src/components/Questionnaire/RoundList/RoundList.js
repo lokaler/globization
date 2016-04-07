@@ -11,7 +11,7 @@ export default class RoundList extends React.Component {
 
   render() {
     const rounds = ['Konsum', 'Dicke Kinder'].map(d => (
-        <option value="{d}" onClick={ this.handleClick }>{d}</option>
+        <option key={d} value={d} onClick={ this.handleClick }>{d}</option>
     ));
 
     return (
