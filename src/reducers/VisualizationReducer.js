@@ -1,4 +1,4 @@
-import { CHANGE_VIS } from '../constants/ActionTypes';
+import { CHANGE_VIS, ZOOM_TO_COUNTRY } from '../constants/ActionTypes';
 
 const initialState = {
   debug: false,
@@ -28,6 +28,18 @@ export default function vis(state = initialState, action) {
       return {
         ...state,
         ...action.val
+      };
+
+    case ZOOM_TO_COUNTRY:
+      return {
+        ...state,
+        animation: {
+          ...state.animation,
+          action: 'zoomToCountry',
+          payload: action.isoCode
+        },
+        active: action.isoCode,
+        tooltip: { active: false }
       };
 
     default:

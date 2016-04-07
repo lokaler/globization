@@ -62,10 +62,10 @@ export function updateUserInput(key, value) {
   };
 }
 
-export function zoomToCountry(name) {
+export function zoomToCountry(isoCode) {
   return {
     type: types.ZOOM_TO_COUNTRY,
-    name
+    isoCode
   };
 }
 

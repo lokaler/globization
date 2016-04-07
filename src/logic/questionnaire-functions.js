@@ -116,16 +116,9 @@ export default {
   panToCountry(isoCode) {
     const state = store.getState();
     if (state.vis.active !== isoCode) {
-      defer(() => {
-        window.actions.changeVis({
-          animation: {
-            action: 'zoomToCountry',
-            payload: isoCode
-          },
-          active: isoCode,
-          tooltip: { active: false }
-        });
-      });
+      defer(
+        () => window.actions.zoomToCountry(isoCode)
+      );
     }
     return true;
   }
