@@ -9,6 +9,7 @@ import * as oldActions from './actions/actions';
 import { actions as questionnaireActions } from './ducks/questionnaire';
 import { actions as appActions } from './ducks/app';
 import { actions as visualizationActions } from './ducks/visualization';
+import { actions as datasetActions } from './ducks/dataset';
 
 
 class App extends React.Component {
@@ -42,7 +43,8 @@ function mapDispatchToProps(dispatch) {
     ...oldActions,
     ...questionnaireActions,
     ...appActions,
-    ...visualizationActions
+    ...visualizationActions,
+    ...datasetActions
   };
   return {
     actions: bindActionCreators(actions, dispatch)
