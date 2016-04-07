@@ -5,10 +5,7 @@ import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import UbermorgenApp from './components/Ubermorgen/Ubermorgen';
-import { actions as questionnaireActions } from './ducks/questionnaire';
-import { actions as appActions } from './ducks/app';
-import { actions as visualizationActions } from './ducks/visualization';
-import { actions as datasetActions } from './ducks/dataset';
+import { actions } from './ducks/index';
 
 
 class App extends React.Component {
@@ -38,12 +35,6 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  const actions = {
-    ...questionnaireActions,
-    ...appActions,
-    ...visualizationActions,
-    ...datasetActions
-  };
   return {
     actions: bindActionCreators(actions, dispatch)
   };
