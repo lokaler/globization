@@ -5,8 +5,9 @@ import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import UbermorgenApp from './components/Ubermorgen/Ubermorgen';
-import * as appActions from './actions/actions';
+import * as oldActions from './actions/actions';
 import { actions as questionnaireActions } from './ducks/questionnaire';
+import { actions as appActions } from './ducks/app';
 
 
 class App extends React.Component {
@@ -37,8 +38,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   const actions = {
-    ...appActions,
-    ...questionnaireActions
+    ...oldActions,
+    ...questionnaireActions,
+    ...appActions
   };
   return {
     actions: bindActionCreators(actions, dispatch)

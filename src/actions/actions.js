@@ -50,16 +50,3 @@ export function changeVis(val) {
     val
   };
 }
-
-export function getUrlParameters() {
-  return {
-    type: types.GET_URL_PARAMETERS
-  };
-}
-
-export function setWindowSize(sizes) {
-  return {
-    type: types.SET_WINDOW_SIZE,
-    sizes
-  };
-}

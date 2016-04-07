@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { reducer as questions } from '../ducks/questionnaire';
 import visualization from './VisualizationReducer';
 import data from './DataReducer';
-import app from './AppReducer';
+import { reducer as app } from '../ducks/app';
 
 const rootReducer = combineReducers({
   questions,

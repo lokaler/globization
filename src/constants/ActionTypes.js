@@ -1,7 +1,3 @@
-// AppReducer
-export const GET_URL_PARAMETERS = 'GET_URL_PARAMETERS';
-export const SET_WINDOW_SIZE = 'SET_WINDOW_SIZE';
-
 // DataReducer
 export const RECEIVE_DATASETS = 'RECEIVE_DATASETS';
 export const ERROR_DATASETS = 'ERROR_DATASETS';
