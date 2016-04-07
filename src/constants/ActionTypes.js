@@ -8,9 +8,6 @@ export const ERROR_DATASETS = 'ERROR_DATASETS';
 export const SET_DATASET = 'SET_DATASET';
 
 // QuestionnaireReducer
-export const SET_QUESTIONNAIRE = 'SET_QUESTIONNAIRE';
-export const SET_CARD = 'SET_CARD';
-export const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
 export const POSTING_QUESTION_ANSWER = 'POSTING_QUESTION_ANSWER';
 
 // VisualizationReducer

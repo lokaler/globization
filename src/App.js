@@ -6,6 +6,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import UbermorgenApp from './components/Ubermorgen/Ubermorgen';
 import * as appActions from './actions/actions';
+import { actions as questionnaireActions } from './ducks/questionnaire';
+
 
 class App extends React.Component {
 
@@ -34,8 +36,12 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
+  const actions = {
+    ...appActions,
+    ...questionnaireActions
+  };
   return {
-    actions: bindActionCreators(appActions, dispatch)
+    actions: bindActionCreators(actions, dispatch)
   };
 }
 

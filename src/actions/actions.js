@@ -1,9 +1,5 @@
 import * as types from '../constants/ActionTypes';
 
-// question data actions
-export function receiveQuestionData(jsonData) {
-  return { type: types.SET_QUESTIONNAIRE, data: jsonData };
-}
 
 export function receiveDataSets(jsonData) {
   return { type: types.RECEIVE_DATASETS, data: jsonData };
@@ -41,15 +37,6 @@ export function setDataSet(name) {
   };
 }
 
-// slider and chioces actions
-export function updateUserInput(key, value) {
-  return {
-    type: types.UPDATE_USERINPUT,
-    key,
-    value
-  };
-}
-
 export function zoomToCountry(isoCode) {
   return {
     type: types.ZOOM_TO_COUNTRY,
@@ -61,16 +48,6 @@ export function changeVis(val) {
   return {
     type: types.CHANGE_VIS,
     val
-  };
-}
-
-export function setCard(index, dataId) {
-  return dispatch => {
-    if (dataId) {
-      dispatch(setDataSet(dataId));
-    }
-    dispatch(changeVis({ active: null, tooltip: { active: false } }));
-    dispatch({ type: types.SET_CARD, index });
   };
 }
 
