@@ -5,20 +5,31 @@ export default class RoundList extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired
+    master: PropTypes.object.isRequired,
+    questions: PropTypes.object.isRequired
   };
 
+  onChange = (evt) => {
+    const questionnaireKey = evt.target.value;
+    this.props.actions.setQuestionnaire(questionnaireKey);
+  }
 
   render() {
-    const rounds = ['Konsum', 'Dicke Kinder'].map(d => (
-        <option key={d} value={d} onClick={ this.handleClick }>{d}</option>
-    ));
+    const { questionnaires, activeQuestionnaireId } = this.props.questions;
+    const rounds = Object.entries(questionnaires).map((item) => {
+      const [key, questionnaire] = item;
+      return (
+        <option key={ key } value={ key } onClick={ this.handleClick }>
+          {questionnaire.title}
+        </option>
+      );
+    });
 
     return (
       <div className={ styles.component }>
         <div className="theme">
           <span className="info">Thema:</span>
-          <select className="dropdown">
+          <select className="dropdown" value={ activeQuestionnaireId } onChange={ this.onChange }>
             { rounds }
           </select>
         </div>
