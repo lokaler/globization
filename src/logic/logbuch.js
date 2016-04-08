@@ -11,6 +11,6 @@ export function logbuch(payload) {
 
   fetch(apiEndpoint, { method: 'POST' })
   .catch(error => {
-    console.log(error);
+    console.error(error); // eslint-disable-line no-console
   });
 }
