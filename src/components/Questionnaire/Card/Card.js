@@ -21,11 +21,6 @@ export default class Questionnaire extends React.Component {
     app: PropTypes.object.isRequired
   }
 
-  componentDidMount() {
-    this.loadData();
-    window.actions = this.props.actions;
-  }
-
   shouldComponentUpdate(nextProps) {
     const p = this.props;
     const n = nextProps;
@@ -34,10 +29,6 @@ export default class Questionnaire extends React.Component {
       || (p.questions !== n.questions)
       || (p.master !== n.master)
     );
-  }
-
-  loadData() {
-    this.props.actions.setQuestionnaire('0316');
   }
 
   createWidgets(questions) {

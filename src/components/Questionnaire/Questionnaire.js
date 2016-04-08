@@ -17,15 +17,6 @@ export default class Questionnaire extends React.Component {
     app: PropTypes.object.isRequired
   }
 
-  componentDidMount() {
-    this.loadData();
-    window.actions = this.props.actions;
-  }
-
-  loadData() {
-    this.props.actions.setQuestionnaire('0316');
-  }
-
   render() {
     const questions = { ...this.props.questions };
     if (questions.questionData.length === 0) {
