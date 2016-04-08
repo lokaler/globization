@@ -1,5 +1,6 @@
 {
   "title": "6. Karte - Elektro",
+  "view": "globe",
   "dataset": "electro",
   "functions": [
     "getGermanCountryName",

@@ -1,6 +1,7 @@
 {
   "title": "1. Karte - Wofür geben Sie Ihr Geld aus?",
   "dataset": "food",
+  "view": "globe",
   "functions": [
     "getGermanCountryName",
     "getMaxGermanCountryName",
