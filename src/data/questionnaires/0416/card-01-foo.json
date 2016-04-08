@@ -2,11 +2,7 @@
   "title": "1. Karte - Foo!!!",
   "dataset": "food",
   "functions": [
-    "getGermanCountryName",
-    "getMaxGermanCountryName",
-    "getMinGermanCountryName",
-    "getMaxValue",
-    "getMinValue"
+
   ],
   "content": [
     {
@@ -34,7 +30,13 @@
     },
     {
       "answer": {
-        "answerKey": [],
+        "type": "quiz",
+        "answerKey": [
+          [
+            "(i.sliderFoo < 100)",
+            "&& 'foo1'"
+          ]
+        ],
         "answerContext": {},
         "templates": {
           "default": {
@@ -43,6 +45,14 @@
             ],
             "en": [
               "default en"
+            ]
+          },
+          "foo1": {
+            "de": [
+              "foo!"
+            ],
+            "en": [
+              "foo!"
             ]
           }
         }

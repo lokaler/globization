@@ -65,7 +65,7 @@ export default {
       'answer',
       object({
         required: ['templates'],
-        additionalProperties: false,
+        additionalProperties: true,
         properties: {
           className: { enum: ['tip'] },
           answerKey: array(),

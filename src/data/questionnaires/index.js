@@ -7,13 +7,15 @@ let questionnaires = {
   '0316': {
     title: 'Erster Fragebogen März',
     options: {
-      showBackButton: false
+      showBackButton: true
     },
     data: _0316
   },
   '0416': {
     title: 'Zweiter Fragebogen April',
-    options: {},
+    options: {
+      showBackButton: true
+    },
     data: _0416
   }
 };

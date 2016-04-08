@@ -8,7 +8,7 @@ import { isUndefined } from 'lodash';
 import classNames from 'classnames';
 
 @cssModules()
-export default class Answer extends React.Component {
+export default class AnswerQuiz extends React.Component {
 
   static propTypes = {
     answer: PropTypes.object.isRequired,
@@ -28,7 +28,6 @@ export default class Answer extends React.Component {
 
   render() {
     const { answer, questions } = this.props;
-    const type = this.props.answer.type;
 
     const templateKey = this.getTemplateKey(questions.inputValues);
 
@@ -51,21 +50,12 @@ export default class Answer extends React.Component {
     }
     const answerContent = MicroMustache.render(template, ctx);
     const className = classNames('answer', answer.className && `answer-${ answer.className }`);
-
-    let button = '';
-    if (type === 'quiz') {
-      button = <button>Antwort anzeigen</button>;
-    }
-
     return (
       <div className={ className } styleName="widget">
-        { button }
-        <div >
-          <ReactMarkdown
-            source={ answerContent.toString() }
-            renderers={{ Link: props => <a href={props.href} target="_blank">{props.children}</a> }}
-          />
-        </div>
+        <ReactMarkdown
+          source={ answerContent.toString() }
+          renderers={{ Link: props => <a href={props.href} target="_blank">{props.children}</a> }}
+        />
       </div>
     );
   }

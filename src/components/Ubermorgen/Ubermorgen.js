@@ -32,14 +32,15 @@ export default class UbermorgenApp extends React.Component {
     actions.requestDataSets('./data/datasets.json');
     // actions.requestDataSets('./data/dataset0416.json');
     actions.loadQuestionnaires(questionnaires);
-    actions.setQuestionnaire('0316');
+    actions.setQuestionnaire('0416');
     window.addEventListener('resize', this.handleResize.bind(this));
     this.handleResize();
   }
 
   onDoubleClick = () => {
     if (__DEV__) {
-      this.props.actions.setQuestionnaire('0316');
+      this.props.actions.setQuestionnaire(this.props.questions.activeQuestionnaireId);
+      this.props.actions.setCard(this.props.questions.activeCard);
     }
   }
 
