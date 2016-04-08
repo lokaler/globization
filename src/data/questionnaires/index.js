@@ -4,7 +4,9 @@ import { validateData } from 'logic/questionnaire';
 const questionnaires = {
   '0316': {
     title: 'Erster Fragebogen März',
-    options: {},
+    options: {
+      showBackButton: false
+    },
     data: _0316
   }
 };

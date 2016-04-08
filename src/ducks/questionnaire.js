@@ -16,9 +16,11 @@ export function reducer(state = initialState, action) {
 
     case SET_QUESTIONNAIRE: {
       const questionData = questionnaires[action.id].data;
+      const options = questionnaires[action.id].options;
       return {
         ...state,
         questionData,
+        options,
         inputValues: {}
       };
     }

@@ -46,7 +46,7 @@ export default class Footer extends React.Component {
   render() {
     const { questions, prevBtnLabel, nextBtnLabel } = this.props;
     const showNextBtn = questions.activeCard < questions.questionData.length ;
-    const showPrevBtn = questions.activeCard > -1;
+    const showPrevBtn = questions.activeCard > -1 && questions.options.showBackButton;
     const showPagination = questions.activeCard >= 0
       && questions.activeCard < questions.questionData.length;
 

@@ -25,6 +25,7 @@ export default class UbermorgenApp extends React.Component {
   componentDidMount() {
     this.props.actions.getUrlParameters();
     this.props.actions.requestDataSets('./data/datasets.json');
+    // this.props.actions.requestDataSets('./data/dataset0416.json');
 
     window.addEventListener('resize', this.handleResize.bind(this));
     this.handleResize();
