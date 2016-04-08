@@ -22,7 +22,7 @@
     ],
     "translate": [0,0],
     "scale": 1,
-    "colorSet":"Oranges",
+    "colorSet":"GnBu",
     "colorNum":9,
     "data":[
       { "iso":"AFG" ,"value":23.7 },

@@ -9,8 +9,16 @@ export function logbuch(payload) {
 
   const apiEndpoint = `https://uebermorgen-logbuch.lokaler.de${ url.format({ query: params }) }`;
 
-  fetch(apiEndpoint, { method: 'POST' })
-  .catch(error => {
-    console.error(error); // eslint-disable-line no-console
+  const request = new Request(apiEndpoint, {
+    method: 'POST',
+    mode: 'no-cors'
   });
+  fetch(request);
+
+  // fetch('https://uebermorgen-logbuch.lokaler.de')
+  //   .then(response => {
+  //     response.json().then(json => {
+  //       console.log(json);
+  //     });
+  //   });
 }
