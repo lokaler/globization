@@ -3,7 +3,7 @@ import { validateData } from 'logic/questionnaire';
 import _0316 from './0316/index';
 import _0416 from './0416/index';
 
-const questionnaires = {
+let questionnaires = {
   '0316': {
     title: 'Erster Fragebogen März',
     options: {
@@ -19,7 +19,15 @@ const questionnaires = {
 };
 
 for (const questionnaire of Object.values(questionnaires)) {
-  validateData(questionnaire.data);
+  try {
+    validateData(questionnaire.data);
+  } catch (e) {
+    questionnaires = {
+      error: {
+        message: e.message
+      }
+    };
+  }
 }
 
 export default questionnaires;

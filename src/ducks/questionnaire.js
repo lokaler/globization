@@ -4,6 +4,7 @@ const SET_CARD = 'SET_CARD';
 const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
 
 const initialState = {
+  error: null,
   questionnaires: {},
   activeQuestionnaireId: null,
   activeCard: -1,
@@ -22,10 +23,21 @@ export function reducer(state = initialState, action) {
     }
 
     case SET_QUESTIONNAIRE: {
-      const questionData = state.questionnaires[action.id].data;
-      const options = state.questionnaires[action.id].options;
+      const questionnaires = state.questionnaires;
+
+      if (questionnaires.error) {
+        return {
+          ...state,
+          error: questionnaires.error
+        };
+      }
+
+      const questionData = questionnaires[action.id].data;
+      const options = questionnaires[action.id].options;
+
       return {
         ...state,
+        error: null,
         activeQuestionnaireId: action.id,
         activeCard: -1,
         inputValues: {},

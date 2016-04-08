@@ -1,0 +1,15 @@
+:local(.component ){
+  display: block;
+  color: rgb(0, 0, 0);
+  white-space: pre;
+  font-family: monospace;
+  position: fixed;
+  z-index: 9999;
+  padding: 10px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  overflow: auto;
+  background: rgb(255, 221, 221);
+}

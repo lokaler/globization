@@ -5,6 +5,7 @@ import Intro from './Intro';
 import Card from './Card/Card';
 import Footer from './Footer';
 import ShadowScrollbars from './ShadowScrollbars';
+import Error from './Error/Error';
 import translate from 'logic/translate';
 
 @cssModules()
@@ -18,7 +19,12 @@ export default class Questionnaire extends React.Component {
   }
 
   render() {
-    const questions = { ...this.props.questions };
+    const { questions } = this.props;
+
+    if (questions.error) {
+      return <Error>{ questions.error.message }</Error>;
+    }
+
     if (questions.questionData.length === 0) {
       return <div />;
     }
