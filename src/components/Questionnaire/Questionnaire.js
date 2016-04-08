@@ -46,13 +46,13 @@ export default class Questionnaire extends React.Component {
 
     const app = this.props.app;
     const scrollHeight = app.mobile ? ((app.height * (1 - 0.3)) - 50) : app.height - 50;
-    const scrollWidth = app.mobile ? app.width : app.width * (1 - 0.65);
+    // const scrollWidth = app.mobile ? app.width : app.width * (1 - 0.65);
 
     return (
       <div styleName="questions">
         <ShadowScrollbars
           activeCard={ this.props.questions.activeCard }
-          style={{ width: scrollWidth, height: scrollHeight }}
+          style={{ width: '100%', height: scrollHeight }}
         >
           <div styleName="inner">
             { firstCard ?

@@ -150,11 +150,38 @@
 </i>
     <div id="spArticleTopAsset">
 
-<div class="spArticleImageBox spAssetAlignleft panomobile" style="max-width: inherit!important;">
+<div class="spArticleImageBox spAssetAlignleft panomobile"  id="uebermorgenapp" style="max-width: inherit!important;">
 
-       <iframe class="html_125700- " frameborder="0" height="500" src="index.html?mobile=1" width="100%"></iframe>
 
 </div>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+
+  var appuebermorgenlang, appuebermorgenmobile,
+  ifr = $("<iframe></iframe>", {
+      "width": "100%", "height": "590", "frameborder": 0, "marginheight": 0, "marginwidth": 0, "scrolling": "no"
+  });
+
+
+    if(!/[a|m].spiegel.de/.test(window.location.href)){
+      appuebermorgenmobile = "0";
+    } else {
+      appuebermorgenmobile = "1";
+    }
+    if(!/spiegel.de\/international/.test(window.location.href)){
+      appuebermorgenlang = "de";
+    } else {
+      appuebermorgenlang = "en";
+    }
+
+  $("#uebermorgenapp").append( ifr );
+  ifr.attr("src", "index.html?language=" + appuebermorgenlang + "&mobile=" + appuebermorgenmobile );
+
+});
+
+</script>
     <p id="spIntroTeaser" class="clearfix"><strong>Der Verfall deutscher Brücken ist bedenklich. Millionen Quadratmeter müssen dringend repariert werden. Unsere interaktive Karte zeigt, wie marode die Bauten auf Ihrer Fahrstrecke sind.</strong></p>
     <div class="social-media-box-wrapper">
       <ul class="social-media-box">

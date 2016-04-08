@@ -1,17 +1,17 @@
-import d3 from 'd3';
+// import d3 from 'd3';
 import { includes } from 'lodash';
 import { getQueryVariable } from 'logic/url';
 
 const GET_URL_PARAMETERS = 'GET_URL_PARAMETERS';
 const SET_WINDOW_SIZE = 'SET_WINDOW_SIZE';
 
-const bbox = d3.select('body').node().getBoundingClientRect();
-const width = Math.min(bbox.width, 860);
+// const bbox = d3.select('body').node().getBoundingClientRect();
+// const width = Math.min(bbox.width, 860);
 
 const initialState = {
   language: 'de',
   mobile: false,
-  width,
+  width: 860,
   height: 500
 };
 
@@ -26,7 +26,8 @@ export function reducer(state = initialState, action) {
     }
 
     case SET_WINDOW_SIZE: {
-      return { ...state, ...action.sizes };
+      const mobile = action.sizes.width < 600;
+      return { ...state, ...action.sizes, mobile };
     }
 
     default:

@@ -54,7 +54,8 @@ export default class GlobeComponent extends React.Component {
       .size([this.props.width,this.props.height])
       .on("zoom", () => {
         const e = d3.event;
-        const _scale = this.props.vis.initialScale * e.scale;
+        const mobileScale = this.props.app.mobile ? 0.5 : 1;
+        const _scale = this.props.vis.initialScale * mobileScale * e.scale;
         const _rotate = [
           (e.translate[0]/e.scale) * this.sensetivity,
           -(e.translate[1]/e.scale) * this.sensetivity,
@@ -129,6 +130,17 @@ export default class GlobeComponent extends React.Component {
   }
 
 
+  // shouldComponentUpdate(nextProps) {
+  //   const p = this.props;
+  //   const n = nextProps;
+  //   return (
+  //     (p.app !== n.app)
+  //     || (p.questions !== n.questions)
+  //     || (p.master !== n.master)
+  //   );
+  // }
+
+
 
   zoomToCountry(name){
     this.activeGeometry = _.find(this.props.master.topojson, (d)=> d.properties.iso === name);
@@ -165,8 +177,13 @@ export default class GlobeComponent extends React.Component {
 
 
   componentWillReceiveProps(nextProps) {
-    // utils.log("shouldComponentUpdate", nextProps, this.props);
+    utils.log("shouldComponentUpdate", nextProps, this.props);
     let update = false;
+
+    if(nextProps.height != this.props.height || nextProps.width != this.props.width){
+      this.projection.translate([nextProps.width / 2, nextProps.height / 2]);
+      console.log(this.projection.translate(), nextProps.app)
+    }
 
     if(nextProps.vis.animation) {
       this[nextProps.vis.animation.action](nextProps.vis.animation.payload);
