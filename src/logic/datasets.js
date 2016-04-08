@@ -2,11 +2,11 @@ import _ from 'lodash';
 import d3 from 'd3';
 import topojson from 'topojson';
 
-import { RECEIVE_DATASETS, SET_DATASET } from '../constants/ActionTypes';
 import master from 'data/master.csv';
 import worldData from 'data/world-110m.json';
 
-function makeTopoJson() {
+
+export function getTopoJson() {
   const t = topojson.feature(worldData, worldData.objects.countries).features;
   for (const d of t) {
     const e = _.find(master, { numeric: d.id.toString() });
@@ -15,16 +15,16 @@ function makeTopoJson() {
   return t;
 }
 
-function parseMaster(data) {
-  for (const d of data) {
+export function getMaster() {
+  for (const d of master) {
     d.gdp = Number(d.gdp);
     d.population = Number(d.population);
     d.vergleich = d.gdp / d.population;
   }
-  return data;
+  return master;
 }
 
-function prepareDataset(dataset) {
+export function prepareDataset(dataset) {
   for (const d of dataset.data) {
     const e = _.find(master, { alpha3: d.iso });
     const t = _.find(this.topojson, (c) => c.properties.iso === d.iso);
@@ -35,34 +35,4 @@ function prepareDataset(dataset) {
   //console.log(dataset.key, d3.extent(dataset.data, d=>d.value ))
   dataset.vergleichDomain = d3.extent(dataset.data, (d) => d.vergleich);
   /* eslint-enable */
-}
-
-const initialState = {
-  round: 'konsum',
-  dataset: null,
-  datasets: [],
-  topojson: makeTopoJson(),
-  master: parseMaster(master)
-};
-
-export default function questions(state = initialState, action) {
-  switch (action.type) {
-    case RECEIVE_DATASETS: {
-      action.data.forEach(prepareDataset.bind(state));
-      return {
-        ...state,
-        dataset: action.data[0],
-        datasets: action.data
-      };
-    }
-    case SET_DATASET: {
-      const newDataSet = state.datasets.filter((d) => d.key === action.name)[0];
-      return {
-        ...state,
-        dataset: newDataSet
-      };
-    }
-    default:
-      return state;
-  }
 }

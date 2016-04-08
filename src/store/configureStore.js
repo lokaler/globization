@@ -3,7 +3,7 @@
 // With Redux, the actual stores are in /reducers.
 
 import { createStore, applyMiddleware, compose } from 'redux';
-import rootReducer from '../reducers';
+import { reducer as rootReducer } from '../ducks/index';
 import thunk from 'redux-thunk';
 
 export default function configureStore(initialState) {
@@ -14,8 +14,8 @@ export default function configureStore(initialState) {
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
-    module.hot.accept('../reducers', () => {
-      const nextReducer = require('../reducers');
+    module.hot.accept('../ducks', () => {
+      const nextReducer = require('../ducks/index').reducer;
       store.replaceReducer(nextReducer);
     });
   }
