@@ -1,10 +1,13 @@
 import React, { PropTypes } from 'react';
+import d3 from 'd3';
+import { debounce } from 'lodash';
 import cssModules from 'react-css-modules';
-import styles from './styles.scss';
+
 import Vis from '../Vis/VisWrapper';
 import Questionnaire from '../Questionnaire/Questionnaire';
-import { debounce } from 'lodash';
-import d3 from 'd3';
+
+import questionnaires from 'data/questionnaires/index';
+import styles from './styles.scss';
 
 @cssModules(styles)
 export default class UbermorgenApp extends React.Component {
@@ -28,6 +31,7 @@ export default class UbermorgenApp extends React.Component {
     actions.getUrlParameters();
     actions.requestDataSets('./data/datasets.json');
     // actions.requestDataSets('./data/dataset0416.json');
+    actions.loadQuestionnaires(questionnaires);
     actions.setQuestionnaire('0316');
     window.addEventListener('resize', this.handleResize.bind(this));
     this.handleResize();

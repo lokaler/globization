@@ -1,11 +1,11 @@
-import questionnaires from 'data/questionnaires/index';
-
+const LOAD_QUESTIONNAIRES = 'LOAD_QUESTIONNAIRES';
 const SET_QUESTIONNAIRE = 'SET_QUESTIONNAIRE';
 const SET_CARD = 'SET_CARD';
 const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
 
 const initialState = {
-  activeChapter: 0,
+  questionnaires: {},
+  activeQuestionnaireId: null,
   activeCard: -1,
   inputValues: {},
   questionData: []
@@ -14,14 +14,23 @@ const initialState = {
 export function reducer(state = initialState, action) {
   switch (action.type) {
 
-    case SET_QUESTIONNAIRE: {
-      const questionData = questionnaires[action.id].data;
-      const options = questionnaires[action.id].options;
+    case LOAD_QUESTIONNAIRES: {
       return {
         ...state,
+        questionnaires: action.data
+      };
+    }
+
+    case SET_QUESTIONNAIRE: {
+      const questionData = state.questionnaires[action.id].data;
+      const options = state.questionnaires[action.id].options;
+      return {
+        ...state,
+        activeQuestionnaireId: action.id,
+        activeCard: -1,
+        inputValues: {},
         questionData,
-        options,
-        inputValues: {}
+        options
       };
     }
 
@@ -47,12 +56,9 @@ export function reducer(state = initialState, action) {
 
 export const actions = {
 
-  setQuestionnaire: (id) => (
-    { type: SET_QUESTIONNAIRE, id }
-  ),
-  updateUserInput: (key, value) => (
-    { type: UPDATE_USERINPUT, key, value }
-  ),
+  loadQuestionnaires: (data) => ({ type: LOAD_QUESTIONNAIRES, data }),
+  setQuestionnaire: (id) => ({ type: SET_QUESTIONNAIRE, id }),
+  updateUserInput: (key, value) => ({ type: UPDATE_USERINPUT, key, value }),
   setCard(index, dataId) {
     return dispatch => {
       if (dataId) {
