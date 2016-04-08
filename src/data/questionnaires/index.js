@@ -1,5 +1,7 @@
-import _0316 from './0316/index';
 import { validateData } from 'logic/questionnaire';
+
+import _0316 from './0316/index';
+import _0416 from './0416/index';
 
 const questionnaires = {
   '0316': {
@@ -8,6 +10,11 @@ const questionnaires = {
       showBackButton: false
     },
     data: _0316
+  },
+  '0416': {
+    title: 'Zweiter Fragebogen April',
+    options: {},
+    data: _0416
   }
 };
 
