@@ -1,4 +1,4 @@
-import { maxBy, minBy } from 'lodash';
+import { maxBy, minBy, sample } from 'lodash';
 import { getDataset } from 'logic/Dataset';
 import translate from 'logic/translate';
 import { isNull, isUndefined, defer } from 'lodash';
@@ -120,6 +120,15 @@ export default {
         () => window.actions.zoomToCountry(isoCode)
       );
     }
+    return true;
+  },
+
+  panToRandomCountry() {
+    const state = store.getState();
+    const isoCode = sample(state.master.topojson).properties.iso;
+    defer(
+      () => window.actions.zoomToCountry(isoCode)
+    );
     return true;
   }
 };

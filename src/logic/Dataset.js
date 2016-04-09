@@ -1,4 +1,4 @@
-import { fromPairs, find } from 'lodash';
+import { fromPairs, find, sample } from 'lodash';
 import store from '../store';
 
 export default class Dataset {
@@ -26,6 +26,9 @@ export default class Dataset {
         }
       });
     return isoCode;
+  }
+  getRandomIso() {
+    return sample(this.data.filter(d => d.onMap)).iso;
   }
 }
 
