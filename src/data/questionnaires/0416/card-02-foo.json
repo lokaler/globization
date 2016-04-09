@@ -17,7 +17,7 @@
     },
     {
       "input": {
-        "key": "sliderFoo",
+        "key": "sliderFoo2",
         "type": "slider",
         "options": {
           "unit": "%",
@@ -29,12 +29,20 @@
       }
     },
     {
-      "answerQuiz": {
-        "key": "answer1",
-        "actions": ["f.panToRandomCountry()"],
+      "text": {
+        "de": [
+          "**Wie viele Personen leben in Ihrem Haushalt?**"
+        ],
+        "en": [
+          "**How many people live in your household?**"
+        ]
+      }
+    },
+    {
+      "answer": {
         "answerKey": [
           [
-            "(i.sliderFoo < 100)",
+            "(i.sliderFoo2 < 100)",
             "&& 'foo1'"
           ]
         ],
