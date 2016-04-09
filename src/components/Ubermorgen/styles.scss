@@ -84,6 +84,7 @@
     padding: 20px;
     position: relative;
     float: left;
+    width: 100%;
   }
 
   a {
@@ -134,7 +135,15 @@
     float:left;
     width: 100%;
 
+    .share {
+        clear: both;
+        padding-bottom: 15px;
+    }
 
+    button {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
 
     &:first-of-type {
       margin-top:0;

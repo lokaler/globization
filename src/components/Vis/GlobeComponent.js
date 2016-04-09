@@ -182,7 +182,7 @@ export default class GlobeComponent extends React.Component {
 
     if(nextProps.height != this.props.height || nextProps.width != this.props.width){
       this.projection.translate([nextProps.width / 2, nextProps.height / 2]);
-      console.log(this.projection.translate(), nextProps.app)
+      // console.log(this.projection.translate(), nextProps.app)
     }
 
     if(nextProps.vis.animation) {

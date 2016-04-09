@@ -3,11 +3,13 @@ import cssModules from 'react-css-modules';
 
 import Text from './widgets/Text';
 import Answer from './widgets/Answer';
+import AnswerQuiz from './widgets/AnswerQuiz';
 import Input from './widgets/Input';
 
 const widgets = {
   text: Text,
   answer: Answer,
+  answerQuiz: AnswerQuiz,
   input: Input
 };
 

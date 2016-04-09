@@ -28,7 +28,6 @@ export default class Answer extends React.Component {
 
   render() {
     const { answer, questions } = this.props;
-    const type = this.props.answer.type;
 
     const templateKey = this.getTemplateKey(questions.inputValues);
 
@@ -52,14 +51,8 @@ export default class Answer extends React.Component {
     const answerContent = MicroMustache.render(template, ctx);
     const className = classNames('answer', answer.className && `answer-${ answer.className }`);
 
-    let button = '';
-    if (type === 'quiz') {
-      button = <button>Antwort anzeigen</button>;
-    }
-
     return (
       <div className={ className } styleName="widget">
-        { button }
         <div >
           <ReactMarkdown
             source={ answerContent.toString() }
