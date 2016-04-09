@@ -65,7 +65,7 @@ export default {
       'answer',
       object({
         required: ['templates'],
-        additionalProperties: true,
+        additionalProperties: false,
         properties: {
           className: { enum: ['tip'] },
           answerKey: array(),
@@ -82,9 +82,11 @@ export default {
     answerQuiz: contentPart(
       'answerQuiz',
       object({
-        required: ['templates'],
-        additionalProperties: true,
+        required: ['templates', 'key'],
+        additionalProperties: false,
         properties: {
+          key: string(),
+          actions: array(),
           className: { enum: ['tip'] },
           answerKey: array(),
           answerContext: object({
