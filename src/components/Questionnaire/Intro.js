@@ -12,8 +12,7 @@ export default class Intro extends React.Component {
 
   static propTypes = {
     questions: PropTypes.object.isRequired,
-    actions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired
+    actions: PropTypes.object.isRequired
   }
 
   onClick = (evt) => {

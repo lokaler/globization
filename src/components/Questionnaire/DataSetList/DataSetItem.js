@@ -6,7 +6,7 @@ export default class DataSetItem extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired,
+    questions: PropTypes.object.isRequired,
     dataset: PropTypes.object.isRequired
   };
 
@@ -16,8 +16,8 @@ export default class DataSetItem extends React.Component {
   }
 
   render() {
-    const { master, dataset } = this.props;
-    const className = classnames(master.dataset.key === dataset.key && 'active');
+    const { questions, dataset } = this.props;
+    const className = classnames(questions.dataset.key === dataset.key && 'active');
     return (
       <li className={ className } onClick={ this.handleClick }>
         { translate(dataset.name) }

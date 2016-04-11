@@ -6,11 +6,11 @@ export default class DataSetList extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired
+    questions: PropTypes.object.isRequired
   };
 
   render() {
-    const datasets = this.props.master.datasets;
+    const datasets = this.props.questions.datasets;
 
     return (
       <div className={ styles.component }>

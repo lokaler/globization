@@ -3,6 +3,7 @@ import d3 from 'd3';
 import { debounce } from 'lodash';
 import cssModules from 'react-css-modules';
 
+import store from '../../store';
 import Vis from '../Vis/VisWrapper';
 import Questionnaire from '../Questionnaire/Questionnaire';
 
@@ -16,7 +17,6 @@ export default class UbermorgenApp extends React.Component {
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
     vis: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired,
     app: PropTypes.object.isRequired
   };
 
@@ -29,8 +29,6 @@ export default class UbermorgenApp extends React.Component {
     const actions = this.props.actions;
     window.actions = actions; // quickhack for questionnaire functions
     actions.getUrlParameters();
-    actions.requestDataSets('./data/datasets.json');
-    // actions.requestDataSets('./data/dataset0416.json');
     actions.loadQuestionnaires(questionnaires);
     actions.setQuestionnaire('0416');
     this.configureHotReload();
@@ -40,8 +38,10 @@ export default class UbermorgenApp extends React.Component {
 
   onDoubleClick = () => {
     if (__DEV__) {
-      this.props.actions.setQuestionnaire(this.props.questions.activeQuestionnaireId);
-      this.props.actions.setCard(this.props.questions.activeCard);
+      /* eslint-disable no-console */
+      console.clear();
+      console.debug(store.getState());
+      /* eslint-ensable */
     }
   }
 
@@ -51,11 +51,11 @@ export default class UbermorgenApp extends React.Component {
     if (module.hot) {
       // Enable Webpack hot module replacement for questionnaires
       module.hot.accept('../../data/questionnaires/index', () => {
-        console.warn('========== reloading questionnaires ==========');
-        const questionnaires = require('../../data/questionnaires/index').default;
-        // console.log('Title:', questionnaires['0416'].title);
-        // console.log('Card:', questionnaires['0416'].cards[0].title);
-        actions.loadQuestionnaires(questionnaires);
+        if (__DEV__) {
+          console.debug('reloading questionnaires...'); // eslint-disable-line no-console
+        }
+        const newQuestionnaires = require('../../data/questionnaires/index').default;
+        actions.loadQuestionnaires(newQuestionnaires);
         actions.setQuestionnaire('0416');
       });
     }

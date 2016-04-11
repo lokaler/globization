@@ -33,7 +33,7 @@ export default class Dataset {
 }
 
 export function getDataset(datasetKey) {
-  const datasets = store.getState().master.datasets;
+  const datasets = store.getState().questions.datasets;
   const dataset = find(datasets, ds => ds.key === datasetKey);
   if (dataset) {
     // this is very un-performant

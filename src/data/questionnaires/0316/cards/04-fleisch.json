@@ -2,14 +2,6 @@
   "title": "4. Karte - Fleisch",
   "view": "globe",
   "dataset": "meat",
-  "functions": [
-    "getGermanCountryName",
-    "getMaxGermanCountryName",
-    "getMinGermanCountryName",
-    "getMaxValue",
-    "getMinValue"
-  ],
-
   "content": [
     {
       "text": {

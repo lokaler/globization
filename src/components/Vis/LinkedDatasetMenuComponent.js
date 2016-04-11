@@ -11,7 +11,6 @@ export default class LinkedDatasetMenuComponent extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired,
     vis: PropTypes.object.isRequired
   };
 

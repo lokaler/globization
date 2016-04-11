@@ -9,14 +9,13 @@ export default class DotsComponent extends React.Component {
   static propTypes = {
     xScale: React.PropTypes.func.isRequired,
     yScale: React.PropTypes.func.isRequired,
-    master: React.PropTypes.object.isRequired,
     transitionDuration: React.PropTypes.number.isRequired
   };
 
   componentDidMount() {
 
     this.g = d3.select(this.refs.g);
-    if(this.props.master.dataset) this.renderData();
+    if(this.props.questions.dataset) this.renderData();
   }
 
   componentWillUnmount(){
@@ -35,7 +34,7 @@ export default class DotsComponent extends React.Component {
     const x = this.props.xScale;
     const y = this.props.yScale;
     const margin = this.props.margin;
-    const unit = this.props.master.dataset.unit;
+    const unit = this.props.questions.dataset.unit;
 
     this.props.actions.changeVis({
       tooltip: {
@@ -64,11 +63,11 @@ export default class DotsComponent extends React.Component {
   }
 
   renderData() {
-    utils.log("dots render", this.props.xScale.domain(), this.props.yScale.domain(), this.props.master.dataset.data.length)
+    utils.log("dots render", this.props.xScale.domain(), this.props.yScale.domain(), this.props.questions.dataset.data.length)
 
     const x = this.props.xScale;
     const y = this.props.yScale;
-    const data = this.props.master.dataset.data;
+    const data = this.props.questions.dataset.data;
     const active = this.props.active;
 
     const item = this.g.selectAll('circle')

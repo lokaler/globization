@@ -7,6 +7,7 @@ import utils from './VisUtils.js'
 import Dataset from '../../logic/Dataset.js'
 import cssModules from 'react-css-modules';
 import styles from './globe.scss';
+import { topofeatures } from 'data/map/index';
 import classnames from 'classnames';
 
 @cssModules(styles)
@@ -25,7 +26,7 @@ export default class GlobeComponent extends React.Component {
 
     utils.log("constructor globe", this.props)
 
-    const dataset = this.props.master.dataset;
+    const dataset = this.props.questions.dataset;
 
     this.sensetivity = 0.25;
     this.svg = null;
@@ -43,7 +44,7 @@ export default class GlobeComponent extends React.Component {
 
 
     // dunnow if this should be done here!
-    this.geometries = this.props.master.topojson;
+    this.geometries = topofeatures;
     this.geometries.forEach((d) =>{
       d.properties.fillColor = this.getFillColor(d.properties.iso);
     });
@@ -85,7 +86,7 @@ export default class GlobeComponent extends React.Component {
   }
 
   resetGlobe(){
-    const dataset = this.props.master.dataset;
+    const dataset = this.props.questions.dataset;
 
     this.svg.call(this.zoom
       .scale(this.props.vis.zoom)
@@ -143,7 +144,7 @@ export default class GlobeComponent extends React.Component {
 
 
   zoomToCountry(name){
-    this.activeGeometry = _.find(this.props.master.topojson, (d)=> d.properties.iso === name);
+    this.activeGeometry = _.find(topofeatures, (d)=> d.properties.iso === name);
 
     const country = _.find(this.geometries, (d)=> d.properties.iso === name);
     if(!country){ utils.log("country not found!", name); return; }
@@ -151,7 +152,7 @@ export default class GlobeComponent extends React.Component {
     const p = d3.geo.centroid(country);
     const scale = 2;
     const value = this.dataset.getValueForCountry(name);
-    const unit = this.props.master.dataset.unit;
+    const unit = this.props.questions.dataset.unit;
 
     p[0] = -p[0]/this.sensetivity * scale,
     p[1] = p[1]/this.sensetivity * scale
@@ -191,13 +192,13 @@ export default class GlobeComponent extends React.Component {
     }
 
     if(nextProps.vis.active != this.props.vis.active) {
-      this.activeGeometry = _.find(nextProps.master.topojson, (d)=> d.properties.iso === nextProps.vis.active);
+      this.activeGeometry = _.find(topofeatures, (d)=> d.properties.iso === nextProps.vis.active);
       //update = true;
     }
 
-    if(nextProps.master.dataset != this.props.master.dataset) {
+    if(nextProps.questions.dataset != this.props.questions.dataset) {
       // console.log("new Dataset!", nextProps.color.domain());
-      const dataset = nextProps.master.dataset;
+      const dataset = nextProps.questions.dataset;
 
       this.dataset.setData(dataset.data);
 
@@ -244,7 +245,7 @@ export default class GlobeComponent extends React.Component {
   onMouseEnter(d){
     const c = this.path.centroid(d);
     const value = this.dataset.getValueForCountry(d.properties.iso);
-    const unit = this.props.master.dataset.unit;
+    const unit = this.props.questions.dataset.unit;
 
     this.props.actions.changeVis({
       tooltip: {

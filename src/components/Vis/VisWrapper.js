@@ -35,7 +35,7 @@ export default class Globe extends React.Component {
 
   componentWillReceiveProps(nextProps){
     utils.log("componentWillUpdate", nextProps)
-    const dataset = nextProps.master.dataset;
+    const dataset = nextProps.questions.dataset;
 
     if(dataset){
       this.color
@@ -69,8 +69,8 @@ export default class Globe extends React.Component {
   render() {
     utils.log("render vis");
 
-    const dataset = this.props.master.dataset;
-    const type = this.props.master.dataset;
+    const dataset = this.props.questions.dataset;
+    const type = this.props.questions.dataset;
 
     const Component = {
       globe: GlobeComponent,

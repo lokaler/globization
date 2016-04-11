@@ -2,13 +2,6 @@
   "title": "6. Karte - Elektro",
   "view": "globe",
   "dataset": "electro",
-  "functions": [
-    "getGermanCountryName",
-    "getMaxGermanCountryName",
-    "getMinGermanCountryName",
-    "getMaxValue",
-    "getMinValue"
-  ],
   "content": [
     {
       "text": {

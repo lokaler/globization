@@ -22,7 +22,7 @@ export default class ScatterLegendComponent extends React.Component {
   render() {
     utils.log("render Legend", this.props.color.domain());
 
-    const dataset = this.props.master.dataset;
+    const dataset = this.props.questions.dataset;
     const description = translate(dataset.description);
     const quelle= translate(dataset.quelle);
     const link = dataset.link;
