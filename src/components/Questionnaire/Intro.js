@@ -25,7 +25,7 @@ export default class Intro extends React.Component {
   clickHandlers = {
     onStartClick: () => {
       sponLogger();
-      this.props.actions.setCard(0, 'food');
+      this.props.actions.setCard(0);
     }
   }
 

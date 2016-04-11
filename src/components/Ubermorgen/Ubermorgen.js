@@ -26,11 +26,11 @@ export default class UbermorgenApp extends React.Component {
   }
 
   componentDidMount() {
-    const actions = this.props.actions;
+    const { actions, questions } = this.props;
     window.actions = actions; // quickhack for questionnaire functions
     actions.getUrlParameters();
     actions.loadQuestionnaires(questionnaires);
-    actions.setQuestionnaire('0416');
+    actions.setQuestionnaire(questions.activeQuestionnaireId);
     this.configureHotReload();
     window.addEventListener('resize', this.handleResize.bind(this));
     this.handleResize();
@@ -46,7 +46,7 @@ export default class UbermorgenApp extends React.Component {
   }
 
   configureHotReload() {
-    const actions = this.props.actions;
+    const { actions, questions } = this.props;
 
     if (module.hot) {
       // Enable Webpack hot module replacement for questionnaires
@@ -56,7 +56,7 @@ export default class UbermorgenApp extends React.Component {
         }
         const newQuestionnaires = require('../../data/questionnaires/index').default;
         actions.loadQuestionnaires(newQuestionnaires);
-        actions.setQuestionnaire('0416');
+        actions.setQuestionnaire(questions.activeQuestionnaireId);
       });
     }
   }

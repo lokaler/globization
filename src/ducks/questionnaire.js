@@ -10,7 +10,7 @@ const SET_DATASET = 'SET_DATASET';
 const initialState = {
   error: null,
   questionnaires: {},
-  activeQuestionnaireId: null,
+  activeQuestionnaireId: '0416',
   activeCard: -1,
   inputValues: {},
   cards: []
