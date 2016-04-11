@@ -1,4 +1,4 @@
-import { getTopoJson, getMaster, prepareDataset } from 'logic/datasets';
+import { prepareDataset } from 'logic/datasets';
 
 const RECEIVE_DATASETS = 'RECEIVE_DATASETS';
 const SET_DATASET = 'SET_DATASET';
@@ -6,9 +6,7 @@ const SET_DATASET = 'SET_DATASET';
 const initialState = {
   round: 'konsum',
   dataset: null,
-  datasets: [],
-  topojson: getTopoJson(),
-  master: getMaster()
+  datasets: []
 };
 
 export function reducer(state = initialState, action) {

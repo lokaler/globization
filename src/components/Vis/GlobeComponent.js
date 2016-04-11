@@ -7,6 +7,7 @@ import utils from './VisUtils.js'
 import Dataset from '../../logic/Dataset.js'
 import cssModules from 'react-css-modules';
 import styles from './globe.scss';
+import { topofeatures } from 'data/map/index';
 import classnames from 'classnames';
 
 @cssModules(styles)
@@ -43,7 +44,7 @@ export default class GlobeComponent extends React.Component {
 
 
     // dunnow if this should be done here!
-    this.geometries = this.props.master.topojson;
+    this.geometries = topofeatures;
     this.geometries.forEach((d) =>{
       d.properties.fillColor = this.getFillColor(d.properties.iso);
     });
@@ -143,7 +144,7 @@ export default class GlobeComponent extends React.Component {
 
 
   zoomToCountry(name){
-    this.activeGeometry = _.find(this.props.master.topojson, (d)=> d.properties.iso === name);
+    this.activeGeometry = _.find(topofeatures, (d)=> d.properties.iso === name);
 
     const country = _.find(this.geometries, (d)=> d.properties.iso === name);
     if(!country){ utils.log("country not found!", name); return; }
@@ -191,7 +192,7 @@ export default class GlobeComponent extends React.Component {
     }
 
     if(nextProps.vis.active != this.props.vis.active) {
-      this.activeGeometry = _.find(nextProps.master.topojson, (d)=> d.properties.iso === nextProps.vis.active);
+      this.activeGeometry = _.find(topofeatures, (d)=> d.properties.iso === nextProps.vis.active);
       //update = true;
     }
 

@@ -11,6 +11,7 @@ import cssModules from 'react-css-modules';
 import classnames from 'classnames';
 import Dataset from '../../logic/Dataset.js'
 import { defer } from 'lodash';
+import { topofeatures } from 'data/map/index';
 
 @cssModules(styles)
 
@@ -50,7 +51,7 @@ export default class MapComponent extends React.Component {
     }
 
     // dunnow if this should be done here!
-    this.geometries = this.props.master.topojson;
+    this.geometries = topofeatures;
     this.geometries.forEach((d) =>{
       d.properties.fillColor = this.getFillColor(d.properties.iso);
     });
@@ -100,7 +101,7 @@ export default class MapComponent extends React.Component {
     const scale = this.reset.scale * dataset.scale;
 
     if(this.props.vis.active){
-      this.activeGeometry = _.find(this.props.master.topojson, (d)=> d.properties.iso === this.props.vis.active);
+      this.activeGeometry = _.find(topofeatures, (d)=> d.properties.iso === this.props.vis.active);
     }
 
     this.svg.call(this.zoom
