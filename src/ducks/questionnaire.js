@@ -1,3 +1,7 @@
+import { actions as visualizationActions } from './visualization';
+import { actions as datasetActions } from './dataset';
+
+
 const LOAD_QUESTIONNAIRES = 'LOAD_QUESTIONNAIRES';
 const SET_QUESTIONNAIRE = 'SET_QUESTIONNAIRE';
 const SET_CARD = 'SET_CARD';
@@ -71,12 +75,12 @@ export const actions = {
   loadQuestionnaires: (data) => ({ type: LOAD_QUESTIONNAIRES, data }),
   setQuestionnaire: (questionnaireId) => ({ type: SET_QUESTIONNAIRE, questionnaireId }),
   updateUserInput: (key, value) => ({ type: UPDATE_USERINPUT, key, value }),
-  setCard(index, dataId) {
+  setCard(index, datasetId) {
     return dispatch => {
-      if (dataId) {
-        // dispatch(setDataSet(dataId));
+      if (datasetId) {
+        dispatch(datasetActions.setDataSet(datasetId));
       }
-      // dispatch(changeVis({ active: null, tooltip: { active: false } }));
+      dispatch(visualizationActions.changeVis({ active: null, tooltip: { active: false } }));
       dispatch({ type: SET_CARD, index });
     };
   }
