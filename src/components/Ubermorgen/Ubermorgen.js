@@ -29,8 +29,8 @@ export default class UbermorgenApp extends React.Component {
     const actions = this.props.actions;
     window.actions = actions; // quickhack for questionnaire functions
     actions.getUrlParameters();
-    actions.requestDataSets('./data/datasets.json');
-    // actions.requestDataSets('./data/dataset0416.json');
+    actions.requestDataSets('./data/questionnaires/0316/datasets.json');
+    // actions.requestDataSets('./data/questionnaires/0416/datasets.json');
     actions.loadQuestionnaires(questionnaires);
     actions.setQuestionnaire('0416');
     this.configureHotReload();
