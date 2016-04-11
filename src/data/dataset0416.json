@@ -9,6 +9,7 @@
       "de": "Durchschnittlicher BMI Frauen in 2014",
       "en": "Durchschnittlicher BMI Frauen in 2014"
     },
+    "linkedSet": "bmiMen",
     "quelle": "The Lancet",
     "link": "",
     "unit": "",
