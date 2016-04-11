@@ -1,0 +1,90 @@
+{
+  "title": "1. Karte - Ihr BMI im weltweiten Vergleich",
+  "view": "globe",
+  "dataset": "bmiWoman",
+  "functions": [],
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Ihr BMI im weltweiten Vergleich",
+          "",
+          "Starkes Übergewicht schadet der Gesundheit und erhöht das Risiko, früh zu sterben. Ein Anhaltspunkt dafür, ob Sie zu viel oder zu wenig auf die Waage bringen, ist der Body-Mass-Index (BMI). Er berechnet sich aus Ihrer Größe und Ihrem Gewicht.",
+          "",
+          "**Bitte geben Sie Ihre Größe an**"
+        ],
+        "en": [
+
+          "# "
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "sliderHeight",
+        "type": "slider",
+        "options": {
+          "unit": "Kg",
+          "min": 100,
+          "value": 165,
+          "max": 230,
+          "step": 1
+        }
+      }
+    },
+    {
+      "text": {
+        "de": [
+          "**Bitte geben Sie Ihre Gewicht an?**"
+        ],
+        "en": [
+          "** **"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "sliderWeight",
+        "type": "slider",
+        "options": {
+          "unit": "",
+          "min": 30,
+          "value": 65,
+          "max": 200,
+          "step": 1
+        }
+      }
+    },
+    {
+      "answerQuiz": {
+        "key": "answer1",
+        "actions": ["f.panToRandomCountry()"],
+        "answerKey": [
+          [
+            "(i.sliderFoo < 100)",
+            "&& 'foo1'"
+          ]
+        ],
+        "answerContext": {},
+        "templates": {
+          "default": {
+            "de": [
+              "Bitte bestätigen"
+            ],
+            "en": [
+              "default en"
+            ]
+          },
+          "foo1": {
+            "de": [
+              "foo!"
+            ],
+            "en": [
+              "foo!"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
