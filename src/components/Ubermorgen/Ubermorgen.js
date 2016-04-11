@@ -3,6 +3,7 @@ import d3 from 'd3';
 import { debounce } from 'lodash';
 import cssModules from 'react-css-modules';
 
+import store from '../../store';
 import Vis from '../Vis/VisWrapper';
 import Questionnaire from '../Questionnaire/Questionnaire';
 
@@ -37,8 +38,10 @@ export default class UbermorgenApp extends React.Component {
 
   onDoubleClick = () => {
     if (__DEV__) {
-      this.props.actions.setQuestionnaire(this.props.questions.activeQuestionnaireId);
-      this.props.actions.setCard(this.props.questions.activeCard);
+      /* eslint-disable no-console */
+      console.clear();
+      console.debug(store.getState());
+      /* eslint-ensable */
     }
   }
 
