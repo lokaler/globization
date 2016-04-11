@@ -33,6 +33,7 @@ export default class UbermorgenApp extends React.Component {
     // actions.requestDataSets('./data/dataset0416.json');
     actions.loadQuestionnaires(questionnaires);
     actions.setQuestionnaire('0416');
+    this.configureHotReload();
     window.addEventListener('resize', this.handleResize.bind(this));
     this.handleResize();
   }
@@ -41,6 +42,22 @@ export default class UbermorgenApp extends React.Component {
     if (__DEV__) {
       this.props.actions.setQuestionnaire(this.props.questions.activeQuestionnaireId);
       this.props.actions.setCard(this.props.questions.activeCard);
+    }
+  }
+
+  configureHotReload() {
+    const actions = this.props.actions;
+
+    if (module.hot) {
+      // Enable Webpack hot module replacement for questionnaires
+      module.hot.accept('../../data/questionnaires/index', () => {
+        console.warn('========== reloading questionnaires ==========');
+        const questionnaires = require('../../data/questionnaires/index').default;
+        // console.log('Title:', questionnaires['0416'].title);
+        // console.log('Card:', questionnaires['0416'].cards[0].title);
+        actions.loadQuestionnaires(questionnaires);
+        actions.setQuestionnaire('0416');
+      });
     }
   }
 

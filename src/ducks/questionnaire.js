@@ -39,8 +39,8 @@ export function reducer(state = initialState, action) {
         ...state,
         error: null,
         activeQuestionnaireId: questionnaireId,
-        activeCard: -1,
-        inputValues: {},
+        // activeCard: -1,
+        // inputValues: {},
         cards: questionnaire.cards,
         options: questionnaire.options
       };
