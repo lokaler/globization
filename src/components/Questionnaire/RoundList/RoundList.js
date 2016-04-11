@@ -18,7 +18,7 @@ export default class RoundList extends React.Component {
     const rounds = Object.entries(questionnaires).map((item) => {
       const [key, questionnaire] = item;
       return (
-        <option key={ key } value={ key } onClick={ this.handleClick }>
+        <option key={ key } value={ key }>
           {questionnaire.title}
         </option>
       );
