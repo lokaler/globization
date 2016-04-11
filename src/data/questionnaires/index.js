@@ -1,7 +1,7 @@
 import { validateData } from 'logic/questionnaire';
 
-import _0316 from './0316/index';
-import _0416 from './0416/index';
+import cards0316 from './0316/cards/index';
+import cards0416 from './0416/cards/index';
 
 let questionnaires = {
   '0316': {
@@ -9,14 +9,14 @@ let questionnaires = {
     options: {
       showBackButton: true
     },
-    cards: _0316
+    cards: cards0316
   },
   '0416': {
     title: 'Zweiter Fragebogen April',
     options: {
       showBackButton: true
     },
-    cards: _0416
+    cards: cards0416
   }
 };
 

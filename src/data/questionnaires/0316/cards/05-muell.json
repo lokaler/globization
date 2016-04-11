@@ -2,13 +2,6 @@
   "title": "5. Karte - Was landet bei Ihnen im Müll?",
   "view": "globe",
   "dataset": "foodwaste",
-  "functions": [
-    "getGermanCountryName",
-    "getMaxGermanCountryName",
-    "getMinGermanCountryName",
-    "getMaxValue",
-    "getMinValue"
-  ],
   "content": [
     {
       "text": {

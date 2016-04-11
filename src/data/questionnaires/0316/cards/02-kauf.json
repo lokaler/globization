@@ -2,13 +2,6 @@
   "title": "2. Karte - Worauf achten Sie beim Kauf?",
   "dataset": "food",
   "view": "map",
-  "functions": [
-    "getGermanCountryName",
-    "getMaxGermanCountryName",
-    "getMinGermanCountryName",
-    "getMaxValue",
-    "getMinValue"
-  ],
   "content": [
     {
       "text": {
