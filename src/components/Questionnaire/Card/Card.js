@@ -19,7 +19,6 @@ export default class Questionnaire extends React.Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired,
     app: PropTypes.object.isRequired
   }
 

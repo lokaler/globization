@@ -26,7 +26,7 @@ export default class GlobeComponent extends React.Component {
 
     utils.log("constructor globe", this.props)
 
-    const dataset = this.props.master.dataset;
+    const dataset = this.props.questions.dataset;
 
     this.sensetivity = 0.25;
     this.svg = null;
@@ -86,7 +86,7 @@ export default class GlobeComponent extends React.Component {
   }
 
   resetGlobe(){
-    const dataset = this.props.master.dataset;
+    const dataset = this.props.questions.dataset;
 
     this.svg.call(this.zoom
       .scale(this.props.vis.zoom)
@@ -152,7 +152,7 @@ export default class GlobeComponent extends React.Component {
     const p = d3.geo.centroid(country);
     const scale = 2;
     const value = this.dataset.getValueForCountry(name);
-    const unit = this.props.master.dataset.unit;
+    const unit = this.props.questions.dataset.unit;
 
     p[0] = -p[0]/this.sensetivity * scale,
     p[1] = p[1]/this.sensetivity * scale
@@ -196,9 +196,9 @@ export default class GlobeComponent extends React.Component {
       //update = true;
     }
 
-    if(nextProps.master.dataset != this.props.master.dataset) {
+    if(nextProps.questions.dataset != this.props.questions.dataset) {
       // console.log("new Dataset!", nextProps.color.domain());
-      const dataset = nextProps.master.dataset;
+      const dataset = nextProps.questions.dataset;
 
       this.dataset.setData(dataset.data);
 
@@ -245,7 +245,7 @@ export default class GlobeComponent extends React.Component {
   onMouseEnter(d){
     const c = this.path.centroid(d);
     const value = this.dataset.getValueForCountry(d.properties.iso);
-    const unit = this.props.master.dataset.unit;
+    const unit = this.props.questions.dataset.unit;
 
     this.props.actions.changeVis({
       tooltip: {

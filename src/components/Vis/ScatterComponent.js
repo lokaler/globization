@@ -31,7 +31,7 @@ export default class ScatterComponent extends React.Component {
 
     utils.log("constructor scatter", this.props)
 
-    const dataset = this.props.master.dataset;
+    const dataset = this.props.questions.dataset;
 
     this.svg = null;
     // this.dataset = new Dataset();
@@ -62,10 +62,10 @@ export default class ScatterComponent extends React.Component {
     utils.log("scatter shouldComponentUpdate", nextProps, this.props);
     let update = false;
 
-    if(nextProps.master.dataset != this.props.master.dataset) {
+    if(nextProps.questions.dataset != this.props.questions.dataset) {
 
-      this.x.domain(nextProps.master.dataset.vergleichDomain);
-      this.y.domain(nextProps.master.dataset.domain);
+      this.x.domain(nextProps.questions.dataset.vergleichDomain);
+      this.y.domain(nextProps.questions.dataset.domain);
 
       update = true;
     }
@@ -100,7 +100,7 @@ export default class ScatterComponent extends React.Component {
             tickSize={this.innerWidth}
             className='y axis'
             tickFormat={ (d)=> translate(d) }
-            fixed={ this.props.master.dataset.fixed }
+            fixed={ this.props.questions.dataset.fixed }
             scale={this.y}
             orient='left'
             transform={`translate(0, 0)`}
@@ -110,7 +110,7 @@ export default class ScatterComponent extends React.Component {
             active={this.props.vis.active}
             tickSize={-this.innerWidth}
             className='dots'
-            fixed={ this.props.master.dataset.fixed }
+            fixed={ this.props.questions.dataset.fixed }
             xScale={this.x}
             yScale={this.y}
             margin={this.margin}

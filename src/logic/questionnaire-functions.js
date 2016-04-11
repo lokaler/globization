@@ -3,6 +3,7 @@ import { getDataset } from 'logic/Dataset';
 import translate from 'logic/translate';
 import { isNull, isUndefined, defer } from 'lodash';
 import { sprintf } from 'sprintf-js';
+import { topofeatures } from 'data/map/index';
 import store from '../store';
 
 export default {
@@ -124,8 +125,7 @@ export default {
   },
 
   panToRandomCountry() {
-    const state = store.getState();
-    const isoCode = sample(state.master.topojson).properties.iso;
+    const isoCode = sample(topofeatures).properties.iso;
     defer(
       () => window.actions.zoomToCountry(isoCode)
     );

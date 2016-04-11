@@ -30,7 +30,7 @@ export default class MapComponent extends React.Component {
 
     utils.log("constructor map", this.props.vis)
 
-    const dataset = this.props.master.dataset;
+    const dataset = this.props.questions.dataset;
 
     this.sensetivity = 0.25;
     this.svg = null;
@@ -96,7 +96,7 @@ export default class MapComponent extends React.Component {
   }
 
   resetGlobe(){
-    const dataset = this.props.master.dataset;
+    const dataset = this.props.questions.dataset;
     const translate = dataset.scale==1 ? this.reset.translate : dataset.translate.map(d=>d*this.reset.scale);
     const scale = this.reset.scale * dataset.scale;
 
@@ -130,7 +130,7 @@ export default class MapComponent extends React.Component {
     if(!country){ utils.log("country not found!"); return; }
 
     const value = this.dataset.getValueForCountry(name);
-    const unit = this.props.master.dataset.unit;
+    const unit = this.props.questions.dataset.unit;
     const c = this.path.centroid(country);
 
     // console.log("zoomToCountry", name);
@@ -164,15 +164,15 @@ export default class MapComponent extends React.Component {
     // }
 
     if(nextProps.vis.active != this.props.vis.active) {
-      this.activeGeometry = _.find(nextProps.master.topojson, (d)=> d.properties.iso === nextProps.vis.active);
+      this.activeGeometry = _.find(topofeatures, (d)=> d.properties.iso === nextProps.vis.active);
       // console.log("activeGeometry",this.activeGeometry)
       if(nextProps.vis.active){
         this.zoomToCountry(nextProps.vis.active);
       }
     }
 
-    if(nextProps.master.dataset != this.props.master.dataset) {
-      const dataset = nextProps.master.dataset;
+    if(nextProps.questions.dataset != this.props.questions.dataset) {
+      const dataset = nextProps.questions.dataset;
       const translate = dataset.scale==1 ? this.reset.translate : dataset.translate.map(d=>d*this.reset.scale);
       const scale = this.reset.scale * dataset.scale;
 
@@ -203,7 +203,7 @@ export default class MapComponent extends React.Component {
   onMouseEnter(d){
     const c = this.path.centroid(d);
     const value = this.dataset.getValueForCountry(d.properties.iso);
-    const unit = this.props.master.dataset.unit;
+    const unit = this.props.questions.dataset.unit;
 
     this.props.actions.changeVis({
       tooltip: {

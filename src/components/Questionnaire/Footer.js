@@ -8,7 +8,6 @@ export default class Footer extends React.Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired,
     nextBtnLabel: PropTypes.string,
     prevBtnLabel: PropTypes.string
   }

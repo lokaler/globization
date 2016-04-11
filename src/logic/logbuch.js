@@ -4,7 +4,7 @@ import store from '../store';
 export function logbuch(payload) {
   const params = {
     ...payload,
-    round: store.getState().master.round
+    round: store.getState().questions.activeQuestionnaireId
   };
 
   const apiEndpoint = `https://uebermorgen-logbuch.lokaler.de${ url.format({ query: params }) }`;

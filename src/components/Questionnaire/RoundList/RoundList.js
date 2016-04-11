@@ -5,7 +5,6 @@ export default class RoundList extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    master: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired
   };
 
