@@ -19,10 +19,10 @@ export default class Footer extends React.Component {
       return () => {
         let dataId = null;
         if (
-          cardIndex < questions.questionData.length
+          cardIndex < questions.cards.length
           && cardIndex > -1
         ) {
-          dataId = questions.questionData[cardIndex].dataset;
+          dataId = questions.cards[cardIndex].dataset;
         }
         else {
           cardIndex = -1;
@@ -34,7 +34,7 @@ export default class Footer extends React.Component {
   }
 
   createPagination(questions) {
-    return questions.questionData.map((q, i) =>
+    return questions.cards.map((q, i) =>
       <div
         key={ `${i}_pagination-item` }
         styleName={ i === questions.activeCard ? 'pagination-item--active' : 'pagination-item' }
@@ -45,10 +45,10 @@ export default class Footer extends React.Component {
 
   render() {
     const { questions, prevBtnLabel, nextBtnLabel } = this.props;
-    const showNextBtn = questions.activeCard < questions.questionData.length ;
+    const showNextBtn = questions.activeCard < questions.cards.length ;
     const showPrevBtn = questions.activeCard > -1 && questions.options.showBackButton;
     const showPagination = questions.activeCard >= 0
-      && questions.activeCard < questions.questionData.length;
+      && questions.activeCard < questions.cards.length;
 
     const pagination = showPagination ? this.createPagination
         .bind(this)(questions) : null;

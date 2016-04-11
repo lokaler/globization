@@ -34,7 +34,7 @@ export default class Questionnaire extends React.Component {
   }
 
   createWidgets(questions) {
-    return questions.questionData[questions.activeCard].content
+    return questions.cards[questions.activeCard].content
       .map((item, index) => {
         const widgetType = Object.keys(item)[0];
         const Widget = widgets[widgetType];
@@ -52,9 +52,9 @@ export default class Questionnaire extends React.Component {
     const questions = { ...this.props.questions };
     const activeCard = questions.activeCard;
     const firstCard = activeCard === -1;
-    const cardTitle = (questions.questionData[activeCard] || {}).title;
+    const cardTitle = (questions.cards[activeCard] || {}).title;
 
-    if (questions.questionData.length === 0) {
+    if (questions.cards.length === 0) {
       return <div />;
     }
 

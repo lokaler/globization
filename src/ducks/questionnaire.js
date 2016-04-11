@@ -9,7 +9,7 @@ const initialState = {
   activeQuestionnaireId: null,
   activeCard: -1,
   inputValues: {},
-  questionData: []
+  cards: []
 };
 
 export function reducer(state = initialState, action) {
@@ -32,17 +32,17 @@ export function reducer(state = initialState, action) {
         };
       }
 
-      const questionData = questionnaires[action.id].data;
-      const options = questionnaires[action.id].options;
+      const questionnaireId = action.questionnaireId;
+      const questionnaire = questionnaires[questionnaireId];
 
       return {
         ...state,
         error: null,
-        activeQuestionnaireId: action.id,
+        activeQuestionnaireId: questionnaireId,
         activeCard: -1,
         inputValues: {},
-        questionData,
-        options
+        cards: questionnaire.cards,
+        options: questionnaire.options
       };
     }
 
@@ -69,7 +69,7 @@ export function reducer(state = initialState, action) {
 export const actions = {
 
   loadQuestionnaires: (data) => ({ type: LOAD_QUESTIONNAIRES, data }),
-  setQuestionnaire: (id) => ({ type: SET_QUESTIONNAIRE, id }),
+  setQuestionnaire: (questionnaireId) => ({ type: SET_QUESTIONNAIRE, questionnaireId }),
   updateUserInput: (key, value) => ({ type: UPDATE_USERINPUT, key, value }),
   setCard(index, dataId) {
     return dispatch => {

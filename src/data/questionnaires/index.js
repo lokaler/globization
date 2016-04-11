@@ -9,20 +9,20 @@ let questionnaires = {
     options: {
       showBackButton: true
     },
-    data: _0316
+    cards: _0316
   },
   '0416': {
     title: 'Zweiter Fragebogen April',
     options: {
       showBackButton: true
     },
-    data: _0416
+    cards: _0416
   }
 };
 
 for (const questionnaire of Object.values(questionnaires)) {
   try {
-    validateData(questionnaire.data);
+    validateData(questionnaire.cards);
   } catch (e) {
     questionnaires = {
       error: {

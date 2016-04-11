@@ -25,7 +25,7 @@ export default class Questionnaire extends React.Component {
       return <Error>{ questions.error.message }</Error>;
     }
 
-    if (questions.questionData.length === 0) {
+    if (questions.cards.length === 0) {
       return <div />;
     }
 
@@ -33,8 +33,8 @@ export default class Questionnaire extends React.Component {
 
     const activeCard = questions.activeCard;
     const firstCard = activeCard === -1;
-    const lastCard = activeCard === questions.questionData.length - 2;
-    const veryLastCard = activeCard === questions.questionData.length - 1;
+    const lastCard = activeCard === questions.cards.length - 2;
+    const veryLastCard = activeCard === questions.cards.length - 1;
 
     if (!firstCard) {
       if (lastCard) {
