@@ -20,22 +20,25 @@ export function reducer(state = initialState, action) {
   switch (action.type) {
 
     case LOAD_QUESTIONNAIRES: {
+      const questionnaires = action.data;
+
+      if (questionnaires.error) {
+        return {
+          ...state,
+          error: questionnaires.error,
+          questionnaires: {}
+        };
+      }
+
       return {
         ...state,
-        questionnaires: action.data
+        error: null,
+        questionnaires
       };
     }
 
     case SET_QUESTIONNAIRE: {
       const questionnaires = state.questionnaires;
-
-      if (questionnaires.error) {
-        return {
-          ...state,
-          error: questionnaires.error
-        };
-      }
-
       const questionnaireId = action.questionnaireId;
       const questionnaire = questionnaires[questionnaireId];
 
