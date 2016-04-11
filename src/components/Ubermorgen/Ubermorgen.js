@@ -48,11 +48,11 @@ export default class UbermorgenApp extends React.Component {
     if (module.hot) {
       // Enable Webpack hot module replacement for questionnaires
       module.hot.accept('../../data/questionnaires/index', () => {
-        console.warn('========== reloading questionnaires ==========');
-        const questionnaires = require('../../data/questionnaires/index').default;
-        // console.log('Title:', questionnaires['0416'].title);
-        // console.log('Card:', questionnaires['0416'].cards[0].title);
-        actions.loadQuestionnaires(questionnaires);
+        if (__DEV__) {
+          console.debug('reloading questionnaires...'); // eslint-disable-line no-console
+        }
+        const newQuestionnaires = require('../../data/questionnaires/index').default;
+        actions.loadQuestionnaires(newQuestionnaires);
         actions.setQuestionnaire('0416');
       });
     }
