@@ -1,0 +1,82 @@
+{
+  "title": "4. Karte - Diabetes",
+  "dataset": "diabetesWoman",
+  "functions": [
+
+  ],
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Diabetes – ein weltweites Problem",
+          "",
+          "Übergewichtige Menschen haben ein höheres Risiko an Diabetes Typ 2 zu erkranken. Seit einigen Jahren sind auch in Ländern mit niedrigem und mittlerem Einkommen immer mehr Männer und Frauen von der Stoffwechselkrankheit betroffen. Diabetes ist heute ein weltweites Problem.",
+          "",
+          "Was glauben Sie: In welchem dieser Länder leiden, gemessen an der Gesamtbevölkerung, die meisten Frauen unter Diabetes?"
+        ],
+        "en": [
+          "# foo en"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "diabetes",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["diabetes_choice_one", { "de": "Südafrika", "en": "" }],
+            ["diabetes_choice_two", { "de": "Deutschland", "en": ""}],
+            ["diabetes_choice_three", { "de": "Brasilien", "en": " " }]
+          ]
+        }
+      }
+    },
+    {
+      "answerQuiz": {
+        "key": "answer_diabetes",
+        "actions": ["f.panToRandomCountry()"],
+        "answerKey": [
+            "i.diabetes === 'diabetes_choice_one' && 'diabetes_choice_one'",
+            "i.diabetes=== 'diabetes_choice_two' && 'diabetes_choice_two'",
+            "i.diabetes === 'diabetes_choice_three' && 'diabetes_choice_three'"
+          ],
+        "answerContext": {},
+        "templates": {
+          "default": {
+            "de": [
+              "Auswahl bestätigen."
+            ],
+            "en": [
+              "default en"
+            ]
+          },
+          "diabetes_choice_one": {
+            "de": [
+              "Richtig! In Südafrika leiden 12,6 Prozent der weiblichen Bevölkerung an Diabetes. Wie in vielen afrikanischen Staaten, nimmt dort die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. In Brasilien haben 8,7 in Deutschland 3,9 Prozent der Frauen Diabetes. Weltweit am höchsten ist der Anteil der erkrankten Frauen in [Land_Frauen_Diabetes_max] mit [Wert_Land_Frauen_Diabetes_max] Prozent. "
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "diabetes_choice_two": {
+            "de": [
+              "Nein, in Deutschland leiden 3,9 Prozent der weiblichen Bevölkerung unter Diabetes. In Brasilien hingegen 8,7 und in Südafrika sogar 12,6 Prozent. In Südafrika, wie in vielen afrikanischen Staaten, nimmt die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. Weltweit am höchsten ist der Anteil der erkrankten Frauen in [Land_Frauen_Diabetes_max] mit [Wert_Land_Frauen_Diabetes_max] Prozent."
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "diabetes_choice_three": {
+            "de": [
+              "Nein, in Südafrika leiden mit 12,6 prozentual mehr Frauen an Diabetes als in Brasilien, wo 8,7 Prozent der Frauen betroffen sind. In Südafrika, wie in vielen afrikanischen Staaten, nimmt die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. Weltweit am höchsten ist der Anteil der erkrankten Frauen in [Land_Frauen_Diabetes_max] mit [Wert_Land_Frauen_Diabetes_max] Prozent. In Deutschland haben 3,9 Prozent der Frauen Diabetes. "
+            ],
+            "en": [
+              "foo!"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
