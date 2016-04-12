@@ -11,7 +11,7 @@
     },
     "linkedSet": [
       { "key": "bmiWoman", "value":"female" },
-      { "key": "bmiMen", "value":"male" }
+      { "key": "bmiMan", "value":"male" }
     ],
     "quelle": "The Lancet",
     "link": "",
@@ -232,7 +232,7 @@
     ]
   },
   {
-    "key" : "bmiMen",
+    "key" : "bmiMan",
     "name": {
      "de": "Body-Mass-Index",
      "en": "Body-Mass-Index"
@@ -243,7 +243,7 @@
     },
     "linkedSet": [
       { "key": "bmiWoman", "value":"female" },
-      { "key": "bmiMen", "value":"male" }
+      { "key": "bmiMan", "value":"male" }
     ],
     "quelle": "The Lancet",
     "link": "",

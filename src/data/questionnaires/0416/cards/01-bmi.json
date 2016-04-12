@@ -25,8 +25,8 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["choice_1", { "de": "Frau", "en": "" }],
-            ["choice_2", { "de": "Mann", "en": ""}]
+            ["woman", { "de": "Frau", "en": "" }],
+            ["man", { "de": "Mann", "en": ""}]
           ]
         }
       }
@@ -80,14 +80,21 @@
     {
       "answerQuiz": {
         "key": "answer1",
-        "actions": ["f.panToRandomCountry()"],
+        "actions": [
+          "i.gender === 'man' && f.panToCountry(f.getISO('bmiMan',i.sliderWeight/(i.sliderHeight*i.sliderHeight/10000)))",
+          "i.gender === 'woman' && f.panToCountry(f.getISO('bmiWoman',i.sliderWeight/(i.sliderHeight*i.sliderHeight/10000)))"
+        ],
         "answerKey": [
-
+          "i.gender === 'man' && f.setDataset('bmiMan') && 'default'",
+          "i.gender === 'woman' && f.setDataset('bmiWoman') && 'default'",
           "(f.isUndefined(i.sliderHeight) || f.isUndefined(i.sliderWeight)) && 'default'",
-          "'bmiValueAnswer'"
+          "i.gender === 'man' && 'bmiAnswerMan'",
+          "i.gender === 'woman' && 'bmiAnswerWoman'"
         ],
         "answerContext": {
-          "bmiAnswer" : "f.fmt('%0.1f',i.sliderWeight / ((i.sliderHeight*i.sliderHeight)/10000))"
+          "bmiCountryMan": "f.getCountryName('bmiMan', i.sliderWeight/((i.sliderHeight*i.sliderHeight)/10000))",
+          "bmiCountryWoman": "f.getCountryName('bmiWoman', i.sliderWeight/((i.sliderHeight*i.sliderHeight)/10000))",
+          "bmiValue" : "f.fmt('%0.1f',i.sliderWeight/((i.sliderHeight*i.sliderHeight)/10000))"
         },
         "templates": {
           "default": {
@@ -98,9 +105,17 @@
               "default en"
             ]
           },
-          "bmiValueAnswer": {
+          "bmiAnswerMan": {
             "de": [
-              "{{ bmiAnswer }}"
+              "Man {{ bmiValue }} {{ bmiCountryMan }}"
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "bmiAnswerWoman": {
+            "de": [
+              "Woman {{ bmiValue }} {{ bmiCountryWoman }}"
             ],
             "en": [
               "foo!"

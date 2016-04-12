@@ -130,5 +130,12 @@ export default {
       () => window.actions.zoomToCountry(isoCode)
     );
     return true;
+  },
+
+  setDataset(name) {
+    console.log('dataset', name);
+    // defer(
+    //   () => window.actions.setDataSet(name)
+    // );
   }
 };
