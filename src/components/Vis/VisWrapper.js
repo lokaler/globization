@@ -12,7 +12,7 @@ import classnames from 'classnames';
 import colorbrewer from 'colorbrewer'
 import MapLegendComponent from './MapLegendComponent.js';
 import ScatterLegendComponent from './ScatterLegendComponent.js';
-import LinkedDatasetMenuComponent from './LinkedDatasetMenuComponent.js';
+import LinkedDatasetMenu from './LinkedDatasetMenu/LinkedDatasetMenu';
 import { sponLogger } from 'logic/logging';
 
 
@@ -93,8 +93,6 @@ export default class Globe extends React.Component {
     const height = app.mobile ? app.height * 0.3 : app.height;
     const width = app.mobile ? app.width : app.width * 0.65;
 
-    const linkedDatasetMenu = <div className="linked menu"></div>
-
     return (
       <div className="vis">
         { dataset &&
@@ -105,7 +103,9 @@ export default class Globe extends React.Component {
           <div className={ this.getActiveClass('map') } onClick={ changeMap }></div>
           <div className={ this.getActiveClass('scatter') } onClick={ changeScatter }></div>
         </div>
-        <LinkedDatasetMenuComponent {...this.props} />
+        { dataset && dataset.linkedSet && false &&
+          <LinkedDatasetMenu {...this.props} />
+        }
         <TooltipComponent {...this.props} />
         { dataset &&
           <Legend color={this.color} {...this.props} />
