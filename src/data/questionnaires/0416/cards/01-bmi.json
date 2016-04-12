@@ -11,7 +11,7 @@
           "",
           "Starkes Übergewicht schadet der Gesundheit und erhöht das Risiko, früh zu sterben. Ein Anhaltspunkt dafür, ob Sie zu viel oder zu wenig auf die Waage bringen, ist der Body-Mass-Index (BMI). Er berechnet sich aus Ihrer Größe und Ihrem Gewicht.",
           "",
-          "**Bitte geben Sie Ihre Größe an**"
+          "**Geben Sie Ihr Geschlecht an?**"
         ],
         "en": [
 
@@ -21,10 +21,32 @@
     },
     {
       "input": {
+        "key": "gender",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["choice_1", { "de": "Frau", "en": "" }],
+            ["choice_2", { "de": "Mann", "en": ""}]
+          ]
+        }
+      }
+    },
+    {
+      "text": {
+        "de": [
+          "**Bitte geben Sie Ihre Körpergröße an?**"
+        ],
+        "en": [
+          "** **"
+        ]
+      }
+    },
+    {
+      "input": {
         "key": "sliderHeight",
         "type": "slider",
         "options": {
-          "unit": "Kg",
+          "unit": "cm",
           "min": 100,
           "value": 165,
           "max": 230,
@@ -47,7 +69,7 @@
         "key": "sliderWeight",
         "type": "slider",
         "options": {
-          "unit": "",
+          "unit": "Kg",
           "min": 30,
           "value": 65,
           "max": 200,
@@ -60,12 +82,13 @@
         "key": "answer1",
         "actions": ["f.panToRandomCountry()"],
         "answerKey": [
-          [
-            "(i.sliderFoo < 100)",
-            "&& 'foo1'"
-          ]
+
+          "(f.isUndefined(i.sliderHeight) || f.isUndefined(i.sliderWeight)) && 'default'",
+          "'bmiValueAnswer'"
         ],
-        "answerContext": {},
+        "answerContext": {
+          "bmiAnswer" : "f.fmt('%0.1f',i.sliderWeight / ((i.sliderHeight*i.sliderHeight)/10000))"
+        },
         "templates": {
           "default": {
             "de": [
@@ -75,9 +98,9 @@
               "default en"
             ]
           },
-          "foo1": {
+          "bmiValueAnswer": {
             "de": [
-              "foo!"
+              "{{ bmiAnswer }}"
             ],
             "en": [
               "foo!"
