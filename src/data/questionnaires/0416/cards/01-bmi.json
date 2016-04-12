@@ -56,32 +56,24 @@
       }
     },
     {
+      "submit": {
+        "key": "bmiSubmitted"
+      }
+    },
+    {
       "answer": {
         "//key": "answer1",
         "//actions": ["f.panToRandomCountry()"],
         "answerKey": [
-          [
-            "(i.sliderFoo < 100)",
-            "&& 'foo1'"
-          ]
+            "i.bmiSubmitted && 'submitted'"
         ],
         "answerContext": {},
         "templates": {
           "default": {
-            "de": [
-              "Bitte bestätigen"
-            ],
-            "en": [
-              "default en"
-            ]
+            "de": ["Bitte bestätigen"], "en": ["default en"]
           },
-          "foo1": {
-            "de": [
-              "foo!"
-            ],
-            "en": [
-              "foo!"
-            ]
+          "submitted": {
+            "de": ["answer_1!"], "en": ["answer_1!"]
           }
         }
       }

@@ -5,12 +5,14 @@ import Text from './widgets/Text';
 import Answer from './widgets/Answer';
 import AnswerQuiz from './widgets/AnswerQuiz';
 import Input from './widgets/Input';
+import Submit from './widgets/Submit';
 
 const widgets = {
   text: Text,
   answer: Answer,
   answerQuiz: AnswerQuiz,
-  input: Input
+  input: Input,
+  submit: Submit
 };
 
 @cssModules()
@@ -33,15 +35,17 @@ export default class Questionnaire extends React.Component {
   }
 
   createWidgets(questions) {
-    return questions.cards[questions.activeCard].content
-      .map((item, index) => {
+    const card = questions.cards[questions.activeCard];
+    return card.content.map(
+      (item, index) => {
         const widgetType = Object.keys(item)[0];
         const Widget = widgets[widgetType];
         return (
           <Widget
+            key={ `${card.key}_${widgetType}_${index}` }
+            card={ card }
             { ...item }
             { ...this.props }
-            key={ `${questions.activeCard}_${widgetType}_${index}` }
           />
         );
       });

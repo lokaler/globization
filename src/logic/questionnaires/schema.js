@@ -43,6 +43,7 @@ export const questionnaire = array({
           oneOf: [
             contentPart('text'),
             contentPart('input'),
+            contentPart('submit'),
             contentPart('answer')
           ]
         })
@@ -72,6 +73,14 @@ export const widgets = {
       key: string(),
       type: { enum: ['slider', 'choices'] },
       options: { type: 'object' }
+    }
+  })),
+
+  submit: contentPart('submit', object({
+    required: ['key'],
+    additionalProperties: false,
+    properties: {
+      key: string()
     }
   })),
 
