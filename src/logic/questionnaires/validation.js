@@ -1,8 +1,7 @@
-import ajv from 'ajv';
-import schema from './schema';
-
 export function validateQuestionnaire(questionnaire) {
   if (__DEV__) {
+    const ajv = require('ajv');
+    const schema = require('./schema').default;
     const validate = ajv().compile(schema);
     const valid = validate(questionnaire.cards);
     if (!valid) {
