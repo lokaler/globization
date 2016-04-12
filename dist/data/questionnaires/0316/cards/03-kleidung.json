@@ -1,0 +1,90 @@
+{
+  "title": "3. Karte - Kleidung",
+  "functions": [],
+  "view": "globe",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Brauchen wir alles, was wir besitzen?",
+          "",
+          "Auf Überflüssiges verzichten, spart Geld und Ressourcen. Schätzen Sie:",
+          "",
+          "**Wie viel Prozent der Kleidung in Ihrem Schrank tragen Sie so gut wie nie?**"
+        ],
+        "en": [
+          "# Do we really need everything we own?",
+          "",
+          "Avoiding purchases of things you don’t need can save both money and resources. Take a guess: ",
+          "",
+          "**What percent of the clothing in your wardrobe do you hardly ever wear?**"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "sliderCloth",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 0,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "(i.sliderCloth < 19) && 'lessCloth'",
+          "(i.sliderCloth >= 19) && 'moreCloth'"
+        ],
+        "answerContext": {},
+        "templates": {
+          "default": {
+            "de": [
+              "Bitte bewegen Sie den Schieberegler"
+            ],
+            "en": [
+              "Please move the slider."
+            ]
+          },
+          "lessCloth": {
+            "de": [
+              "Damit liegen Sie **unter** dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
+            ],
+            "en": [
+              "That puts you **under** the German average. Almost every fifth piece of clothing in German wardrobes is hardly ever worn. German women own an average of 118 pieces of clothing whereas men have slightly more sustainable habits, owning an average of 73 items. The production of every piece of clothing consumes resources -- for example, around 2,700 liters (595 gallons) of water for a T-shirt and 10,900 liters (2,880 gallons) for a pair of jeans."
+            ]
+          },
+          "moreCloth": {
+            "de": [
+              "Damit liegen Sie **über** dem deutschen Durchschnitt. Fast jedes fünfte Kleidungsstück in den Schränken der Deutschen wird so gut wie nie getragen. Frauen in Deutschland besitzen im Schnitt 118 Kleidungsstücke. Männer sind in diesem Punkt mit durchschnittlich 73 Stücken ein bisschen nachhaltiger, denn die Produktion jedes Kleidungsstücks verbraucht Ressourcen – zum Beispiel rund 2.700 Liter Wasser für ein T-Shirt oder 10.800 Liter für eine Jeans."
+            ],
+            "en": [
+              "That puts you **over** the German average. Almost every fifth piece of clothing in German wardrobes is hardly ever worn. German women own an average of 118 pieces of clothing whereas men have slightly more sustainable habits, owning an average of 73 items. The production of every piece of clothing consumes resources -- for example, around 2,700 liters (595 gallons) of water for a T-shirt and 10,900 liters (2,880 gallons) for a pair of jeans."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "answer": {
+        "className": "tip",
+        "answerKey": ["i.sliderCloth && 'tip'"],
+        "answerContext": {},
+        "templates": {
+          "tip": {
+            "de": [
+              "**Nachhaltigkeitstipp**: Im Netz lassen sich Kleider tauschen, leihen oder secondhand kaufen, zum Beispiel auf den Webseiten [Kleiderkreisel.de](https://www.kleiderkreisel.de/) oder [Kleiderkorb.de](http://www.kleiderkorb.de/)."
+            ],
+            "en": [
+              "Sustainability Tip: On the Internet, you can trade, borrow or buy second hand on clothing swap websites like [Swapstyle.com](http://www.swapstyle.com/) or [Swap.com](https://www.swap.com/)."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "8. Karte - Summary",
+  "view": "globe",
+  "dataset": "electro",
+  "functions": [
+    "getGermanCountryName",
+    "getMaxGermanCountryName",
+    "getMinGermanCountryName",
+    "getMaxValue",
+    "getMinValue"
+  ],
+  "content": [
+
+  ]
+}

@@ -79,12 +79,33 @@ export default {
       })
     ),
 
+    answerQuiz: contentPart(
+      'answerQuiz',
+      object({
+        required: ['templates', 'key'],
+        additionalProperties: false,
+        properties: {
+          key: string(),
+          actions: array(),
+          className: { enum: ['tip'] },
+          answerKey: array(),
+          answerContext: object({
+            patternProperties: { '.*': string() }
+          }),
+          templates: {
+            patternProperties: { '.*': ref('multiLangArrayOfStrings') }
+          }
+        }
+      })
+    ),
+
     card: array({
       items: object({
         oneOf: [
           ref('text'),
           ref('input'),
-          ref('answer')
+          ref('answer'),
+          ref('answerQuiz')
         ]
       })
     })
