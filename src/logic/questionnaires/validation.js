@@ -8,7 +8,7 @@ export function validateQuestionnaire(questionnaire) {
     const valid = validate(questionnaire.cards);
     if (!valid) {
       const errors = JSON.stringify(validate.errors, null, 2);
-      throw new Error(`Questionnaire is invalid - ${errors}`);
+      throw new Error(`Questionnaire "${ questionnaire.title }" is invalid - ${errors}`);
     }
     for (const card of questionnaire.cards) {
       for (const widget of card.content) {
@@ -17,7 +17,7 @@ export function validateQuestionnaire(questionnaire) {
         const valid = validate(widget);
         if (!valid) {
           const errors = JSON.stringify(validate.errors, null, 2);
-          throw new Error(`Widget "${ type }" is invalid - ${errors}`);
+          throw new Error(`Card "${ card.title }" - Widget "${ type }" is invalid - ${errors}`);
         }
       }
     }

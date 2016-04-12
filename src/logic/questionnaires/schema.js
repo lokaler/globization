@@ -1,13 +1,20 @@
 function string(schema = {}) {
-  return Object.assign({ type: 'string' }, schema);
+  return { type: 'string', ...schema };
 }
 
 function object(schema = {}) {
-  return Object.assign({ type: 'object' }, schema);
+  return {
+    type: 'object',
+    ...schema,
+    patternProperties: {
+      '^//.*': {}
+      // ...(schema.patternProperties || {})
+    }
+  };
 }
 
 function array(schema = {}) {
-  return Object.assign({ type: 'array' }, schema);
+  return { type: 'array', ...schema };
 }
 
 function contentPart(key, schema = {}) {
@@ -24,10 +31,12 @@ export const questionnaire = array({
   $schema: 'http://json-schema.org/draft-04/schema#',
 
   items: object({
+    additionalProperties: false,
     required: ['title', 'content'],
     properties: {
       title: string(),
       dataset: string(),
+      view: string(),
       content: array({
         items: object({
           oneOf: [
