@@ -8,12 +8,13 @@ import worldData from './world-50m.json';      // 241 countries
 function getTopoJson() {
   topojson.presimplify(worldData);
   const t = topojson.feature(worldData, worldData.objects.countries).features;
+  const tna = t.filter(d => d.id !== 10); // no antarctica
 
-  for (const d of t) {
+  for (const d of tna) {
     const e = _.find(mastercsv, { numeric: d.id.toString() });
     d.properties.iso = e ? e.alpha3 : '';
   }
-  return t;
+  return tna;
 }
 
 function getMaster() {
