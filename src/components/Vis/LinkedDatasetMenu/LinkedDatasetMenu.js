@@ -2,28 +2,25 @@
 
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
-import styles from '../vis.scss';
 import translate from 'logic/translate';
+import styles from './LinkedDatasetMenu.scss';
 import d3 from 'd3';
 import classnames from 'classnames';
 import LinkedDatasetItem from './LinkedDatasetItem';
 
-@cssModules(styles)
-
 export default class LinkedDatasetMenu extends React.Component {
 
   static propTypes = {
-    master: PropTypes.object.isRequired,
+    questions: PropTypes.object.isRequired,
   };
 
   render() {
-    const dataset = this.props.master.dataset;
-    const linkedSet = d3.entries(dataset.linkedSet);
+    const linkedSet = this.props.questions.dataset.linkedSet;
+    const sortedSet = Array.from(linkedSet).sort((a,b) => d3.descending(a.value, b.value));
 
     return (
       <div className={ styles.component }>
-        <ul>
-          { linkedSet.map(
+          { sortedSet.map(
             (link, idx) => (
               <LinkedDatasetItem
                 key={ idx }
@@ -32,7 +29,6 @@ export default class LinkedDatasetMenu extends React.Component {
               />
             )
           )}
-        </ul>
       </div>
     );
   }

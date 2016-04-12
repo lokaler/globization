@@ -8,21 +8,21 @@ export default class LinkedDatasetItem extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    link: PropTypes.object.isRequired
+    link: PropTypes.object.isRequired,
+    questions: PropTypes.object.isRequired
   };
 
   handleClick = () => {
-    console.log(this.props)
     const key = this.props.link.key;
     this.props.actions.setDataSet(key);
   }
 
   render() {
-    const { link } = this.props;
-    const className = classnames([link.value, link.key === dataset.key ? "active" : ""]);
+    const { link, questions } = this.props;
+    const className = classnames([ link.value, link.key === questions.dataset.key ? "active" : ""]);
     return (
       <div
-        key={d.key}
+        key={link.key}
         className={ className }
         onClick={ this.handleClick }
       ></div>

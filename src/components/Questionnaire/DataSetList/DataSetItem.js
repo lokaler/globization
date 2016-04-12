@@ -17,7 +17,13 @@ export default class DataSetItem extends React.Component {
 
   render() {
     const { questions, dataset } = this.props;
-    const className = classnames(questions.dataset.key === dataset.key && 'active');
+    const activeDataset = questions.dataset;
+
+    const active = (dataset.key === activeDataset.key) ||
+      (activeDataset.linkedSet ? activeDataset.linkedSet[0].key === dataset.key : false);
+
+    const className = classnames(active && 'active');
+
     return (
       <li className={ className } onClick={ this.handleClick }>
         { translate(dataset.name) }

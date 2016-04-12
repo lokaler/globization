@@ -1,0 +1,39 @@
+:local(.component) {
+    padding: 5px;
+    clear: left;
+    top: 130px;
+    right: -6px;
+    position: absolute;
+    z-index: 100;
+    width: 50px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    background: #FFF;
+    .mq-mobile & {
+        display: none;
+    }
+    div {
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+        float: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+        margin: 5px;
+        cursor: pointer;
+        opacity: 0.3;
+    }
+    .active {
+        opacity: 1;
+    }
+    :hover {
+        opacity: 1;
+    }
+    .female {
+        background-image: url("./img/female.svg");
+        height: 23px;
+    }
+    .male {
+        background-image: url("./img/male.svg");
+    }
+}

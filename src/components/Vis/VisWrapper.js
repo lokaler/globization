@@ -103,7 +103,7 @@ export default class Globe extends React.Component {
           <div className={ this.getActiveClass('map') } onClick={ changeMap }></div>
           <div className={ this.getActiveClass('scatter') } onClick={ changeScatter }></div>
         </div>
-        { dataset && dataset.linkedSet && false &&
+        { dataset && dataset.linkedSet &&
           <LinkedDatasetMenu {...this.props} />
         }
         <TooltipComponent {...this.props} />
