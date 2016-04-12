@@ -1,4 +1,5 @@
 {
+  "key": "bmi",
   "title": "1. Karte - Ihr BMI im weltweiten Vergleich",
   "view": "globe",
   "dataset": "bmiWoman",

@@ -32,8 +32,9 @@ export const questionnaire = array({
 
   items: object({
     additionalProperties: false,
-    required: ['title', 'content'],
+    required: ['key', 'title', 'content'],
     properties: {
+      key: string(),
       title: string(),
       dataset: string(),
       view: string(),
