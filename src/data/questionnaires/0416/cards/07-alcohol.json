@@ -30,9 +30,9 @@
       }
     },
     {
-      "answerQuiz": {
-        "key": "answer_alcohol",
-        "actions": ["f.panToRandomCountry()"],
+      "answer": {
+        "//key": "answer_alcohol",
+        "//actions": ["f.panToRandomCountry()"],
         "answerKey": [
             "(i.sliderAlcohol < 8) && 'lessAlcohol'",
             "(i.sliderAlcohol < 10) && 'someAlcohol'",

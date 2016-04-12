@@ -28,9 +28,9 @@
       }
     },
     {
-      "answerQuiz": {
-        "key": "answer_overweight",
-        "actions": ["f.panToRandomCountry()"],
+      "answer": {
+        "//key": "answer_overweight",
+        "//actions": ["f.panToRandomCountry()"],
         "answerKey": ["i.overweight"],
         "answerContext": {},
         "templates": {

@@ -55,9 +55,9 @@
       }
     },
     {
-      "answerQuiz": {
-        "key": "answer1",
-        "actions": ["f.panToRandomCountry()"],
+      "answer": {
+        "//key": "answer1",
+        "//actions": ["f.panToRandomCountry()"],
         "answerKey": [
           [
             "(i.sliderFoo < 100)",

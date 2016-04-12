@@ -30,9 +30,9 @@
       }
     },
     {
-      "answerQuiz": {
-        "key": "answer_diabetes",
-        "actions": ["f.panToRandomCountry()"],
+      "answer": {
+        "//key": "answer_diabetes",
+        "//actions": ["f.panToRandomCountry()"],
         "answerKey": ["i.diabetes"],
         "answerContext": {},
         "templates": {

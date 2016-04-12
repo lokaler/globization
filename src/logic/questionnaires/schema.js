@@ -42,8 +42,7 @@ export const questionnaire = array({
           oneOf: [
             contentPart('text'),
             contentPart('input'),
-            contentPart('answer'),
-            contentPart('answerQuiz')
+            contentPart('answer')
           ]
         })
       })
@@ -88,23 +87,5 @@ export const widgets = {
         patternProperties: { '.*': multiLangArrayOfStrings }
       }
     }
-  })),
-
-  answerQuiz: contentPart('answerQuiz', object({
-    required: ['templates', 'key'],
-    additionalProperties: false,
-    properties: {
-      key: string(),
-      actions: array(),
-      className: { enum: ['tip'] },
-      answerKey: array(),
-      answerContext: object({
-        patternProperties: { '.*': string() }
-      }),
-      templates: {
-        patternProperties: { '.*': multiLangArrayOfStrings }
-      }
-    }
   }))
-
 };

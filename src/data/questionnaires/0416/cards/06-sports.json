@@ -30,9 +30,9 @@
       }
     },
     {
-      "answerQuiz": {
-        "key": "answer_sport",
-        "actions": ["f.panToRandomCountry()"],
+      "answer": {
+        "//key": "answer_sport",
+        "//actions": ["f.panToRandomCountry()"],
         "answerKey": [
             "i.sport"
           ],
