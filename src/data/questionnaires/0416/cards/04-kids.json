@@ -1,9 +1,6 @@
 {
   "title": "4. Karte - Kids",
   "dataset": "overweightBoys",
-  "functions": [
-
-  ],
   "content": [
     {
       "text": {
@@ -23,9 +20,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["overweight_choice_one", { "de": "USA", "en": "USA" }],
-            ["overweight_choice_two", { "de": "Kiribati", "en": "Kiribati"}],
-            ["overweight_choice_three", { "de": "Nordkorea", "en": "North Corea" }]
+            ["choice_1", { "de": "USA", "en": "USA" }],
+            ["choice_2", { "de": "Kiribati", "en": "Kiribati"}],
+            ["choice_3", { "de": "Nordkorea", "en": "North Corea" }]
           ]
         }
       }
@@ -34,20 +31,10 @@
       "answerQuiz": {
         "key": "answer_overweight",
         "actions": ["f.panToRandomCountry()"],
-        "answerKey": [
-            "i.overweight"
-          ],
+        "answerKey": ["i.overweight"],
         "answerContext": {},
         "templates": {
-          "default": {
-            "de": [
-              "Auswahl bestätigen."
-            ],
-            "en": [
-              "default en"
-            ]
-          },
-          "overweight_choice_one": {
+          "choice_1": {
             "de": [
               "Falsch! Auf der Pazifikinsel Kiribati sind mit 47,7 Prozent die meisten Jungen übergewichtig. Die USA liegen mit rund 30 Prozent auf Rang 29. Bei den Mädchen ist die Verteilung ähnlich, auch hier liegt Kiribati auf Platz eins. Die Weltgesundheitsorganisation (WHO) macht unter anderem die [wachsende Beliebtheit importierter, verarbeiteter Lebensmittel](http://www.who.int/bulletin/volumes/88/7/10-010710/en/) für die Gewichtsprobleme auf den pazifischen Inseln verantwortlich. Die traditionelle Küche hat stark an Popularität verloren."
             ],
@@ -55,7 +42,7 @@
               "foo!"
             ]
           },
-          "overweight_choice_two": {
+          "choice_2": {
             "de": [
               "Richtig! Fast die Hälfte aller Jungen auf der Pazifik-Insel sind übergewichtig. Bei den Mädchen ist die Verteilung ähnlich, auch hier liegt Kiribati auf Platz eins. Die Weltgesundheitsorganisation (WHO) macht unter anderem die [wachsende Beliebtheit importierter, verarbeiteter Lebensmittel](http://www.who.int/bulletin/volumes/88/7/10-010710/en/) für die Gewichtsprobleme auf den pazifischen Inseln verantwortlich. Die traditionelle Küche hat stark an Popularität verloren."
             ],
@@ -63,7 +50,7 @@
               "foo!"
             ]
           },
-          "overweight_choice_three": {
+          "choice_3": {
             "de": [
               "Falsch! Auf der Pazifikinsel Kiribati sind mit 47,7 Prozent die meisten Jungen übergewichtig. In Nordkorea sind es nur ein Prozent. Bei den Mädchen ist die Verteilung ähnlich, auch hier liegt Kiribati auf Platz eins. Die Weltgesundheitsorganisation (WHO) macht unter anderem die [wachsende Beliebtheit importierter, verarbeiteter Lebensmittel](http://www.who.int/bulletin/volumes/88/7/10-010710/en/) für die Gewichtsprobleme auf den pazifischen Inseln verantwortlich. Die traditionelle Küche hat stark an Popularität verloren."
             ],
