@@ -1,20 +1,22 @@
-import _ from 'lodash';
+// import _ from 'lodash';
 import topojson from 'topojson';
 
 import mastercsv from './master.csv';
-// import worldData from './world-110m.json';        // 177 countries
-import worldData from './world-50m.json';      // 241 countries
+import worldData from './world-50m-custom-hq.json';
+// import worldData from './world-50m-custom-mq.json';
+// import worldData from './world-50m-custom-lq.json';
 
 function getTopoJson() {
   topojson.presimplify(worldData);
   const t = topojson.feature(worldData, worldData.objects.countries).features;
-  const tna = t.filter(d => d.id !== 10); // no antarctica
 
-  for (const d of tna) {
-    const e = _.find(mastercsv, { numeric: d.id.toString() });
-    d.properties.iso = e ? e.alpha3 : '';
+  for (const d of t) {
+    // console.log(d);
+    // const e = _.find(mastercsv, { numeric: d.id.toString() });
+    // d.properties.iso = e ? e.alpha3 : '';
+    d.properties.iso = d.properties.iso_a3;
   }
-  return tna;
+  return t;
 }
 
 function getMaster() {
