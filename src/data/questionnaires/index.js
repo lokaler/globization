@@ -1,4 +1,4 @@
-import { validateData } from 'logic/questionnaire';
+import { validateQuestionnaire } from 'logic/questionnaires/validation';
 import { prepareDataset } from './datasets';
 
 import cards0316 from './0316/cards/index';
@@ -30,7 +30,7 @@ let questionnaires = {
 
 for (const questionnaire of Object.values(questionnaires)) {
   try {
-    validateData(questionnaire.cards);
+    validateQuestionnaire(questionnaire);
   } catch (e) {
     questionnaires = {
       validationError: {

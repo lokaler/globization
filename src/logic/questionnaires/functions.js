@@ -4,7 +4,7 @@ import translate from 'logic/translate';
 import { isNull, isUndefined, defer } from 'lodash';
 import { sprintf } from 'sprintf-js';
 import { topofeatures } from 'data/map/index';
-import store from '../store';
+import store from '../../store';
 
 export default {
 
