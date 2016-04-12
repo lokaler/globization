@@ -31,16 +31,38 @@ export default class GlobeComponent extends React.Component {
     this.sensetivity = 0.25;
     this.svg = null;
     this.activeGeometry = null;
-    this.graticule = d3.geo.graticule()();
 
     this.dataset = new Dataset(dataset.data);
 
     this.projection = d3.geo.orthographic()
       .translate([this.props.width / 2, this.props.height / 2])
       .clipAngle(90)
+      .precision(0.1)
 
-    this.path = d3.geo.path()
-      .projection(this.projection);
+    console.log(this.projection.clipExtent());
+
+    this.graticule = d3.geo.graticule()
+      .precision(10)
+      // .extent(this.projection.clipExtent());
+    this.graticulePath = d3.geo.path().projection(this.projection);
+
+   this.path = d3.geo.path()
+      .projection({
+        stream: s => this.simplify.stream(this.projection.stream(this.clip.stream(s)))
+      })
+      // .projection(this.projection);
+
+    this.clip = d3.geo.clipExtent()
+      .extent([[0, 0], [this.props.width, this.props.height]]);
+
+    this.scale = this.props.vis.zoom;
+    window.area = 1 / this.scale / this.scale;
+
+    this.simplify = d3.geo.transform({
+      point: function(x, y, z) {
+        if (z >= window.area) this.stream.point(x, y);
+      }
+    });
 
 
     // dunnow if this should be done here!
@@ -51,7 +73,7 @@ export default class GlobeComponent extends React.Component {
 
     this.zoom = d3.behavior.zoom()
       .center([0,0])
-      .scaleExtent([1,5])
+      .scaleExtent([1,9])
       .size([this.props.width,this.props.height])
       .on("zoom", () => {
         const e = d3.event;
@@ -66,6 +88,8 @@ export default class GlobeComponent extends React.Component {
         this.projection
           .rotate(_rotate)
           .scale(_scale);
+
+        window.area = 1 / this.zoom.scale() /  this.zoom.scale();
 
         //utils.log("zoom",this.zoom.translate(), this.zoom.scale());
 
@@ -144,13 +168,15 @@ export default class GlobeComponent extends React.Component {
 
 
   zoomToCountry(name){
-    this.activeGeometry = _.find(topofeatures, (d)=> d.properties.iso === name);
+    this.activeGeometry = _.find(this.geometries, (d)=> d.properties.iso === name);
+    // const country = _.find(this.geometries, (d)=> d.properties.iso === name);
+    // if(!country){ utils.log("country not found!", name); return; }
 
-    const country = _.find(this.geometries, (d)=> d.properties.iso === name);
-    if(!country){ utils.log("country not found!", name); return; }
-
-    const p = d3.geo.centroid(country);
-    const scale = 2;
+    const p = d3.geo.centroid(this.activeGeometry);
+    const area = d3.geo.area(this.activeGeometry);
+    // console.log(area);
+    const scale = -Math.log(area)*0.7;
+    // console.log(scale)
     const value = this.dataset.getValueForCountry(name);
     const unit = this.props.questions.dataset.unit;
 
@@ -162,7 +188,7 @@ export default class GlobeComponent extends React.Component {
       .duration(1000)
       .call(this.zoom.scale(scale).translate(p).event)
       .each("end", ()=>{
-        const c = this.path.centroid(country);
+        const c = this.path.centroid(this.activeGeometry);
         this.props.actions.changeVis({
           tooltip: {
             active: true,
@@ -272,11 +298,14 @@ export default class GlobeComponent extends React.Component {
   render() {
     utils.log("render globe")
 
-    const paths = this.geometries.map((d, i) => {
+    this.geometries
+      .forEach(d=> d.path=this.path(d))
+
+    const paths = this.geometries.filter(d=>d.path).map((d, i) => {
       return (
         <path
           key={ i }
-          d={this.path(d)}
+          d={d.path}
           fill={d.properties.fillColor}
           onMouseLeave={this.onMouseLeave.bind(this,d)}
           onMouseEnter={this.onMouseEnter.bind(this,d)}
@@ -285,7 +314,7 @@ export default class GlobeComponent extends React.Component {
     });
 
     const activeGeometry = <path className="activeGeometry" d={this.path(this.activeGeometry)}/>;
-    const graticule = <path className="graticule" key="graticule" d={ this.path(this.graticule) } />;
+    const graticule = <path className="graticule" key="graticule" d={ this.graticulePath(this.graticule()) } />;
 
 
     return (

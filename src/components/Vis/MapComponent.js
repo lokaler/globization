@@ -41,9 +41,24 @@ export default class MapComponent extends React.Component {
 
     this.projection = d3.geo.winkel3()
       .translate([this.props.width / 2, this.props.height / 2])
+      .precision(0)
 
     this.path = d3.geo.path()
-      .projection(this.projection);
+       .projection({
+         stream: s => this.simplify.stream(this.projection.stream(this.clip.stream(s)))
+       })
+       // .projection(this.projection);
+
+    this.clip = d3.geo.clipExtent()
+      .extent([[0, 0], [this.props.width, this.props.height]]);
+
+    window.area = 1;
+
+    this.simplify = d3.geo.transform({
+      point: function(x, y, z) {
+        if (z >= window.area) this.stream.point(x, y);
+      }
+    });
 
     this.reset = {
       scale: 0.55,
@@ -73,6 +88,7 @@ export default class MapComponent extends React.Component {
           .rotate(_rotate)
           .scale(_scale);
 
+        window.area = 1 / this.zoom.scale() /  this.zoom.scale();
         //utils.log("zoom",this.zoom.translate(), this.zoom.scale());
 
         this.forceUpdate();
@@ -230,17 +246,24 @@ export default class MapComponent extends React.Component {
   render() {
     utils.log("render map")
 
-    const paths = this.geometries.map((d, i) => {
-      return (
-        <path
-          key={ i }
-          d={this.path(d)}
-          fill={d.properties.fillColor}
-          onMouseLeave={this.onMouseLeave.bind(this,d)}
-          onMouseEnter={this.onMouseEnter.bind(this,d)}
-        />
-      )
-    });
+    // console.time("project");
+    this.geometries
+      .forEach(d=> d.path=this.path(d))
+
+    const paths = this.geometries
+      .filter(d=>d.path)
+      .map((d, i) => {
+        return (
+          <path
+            key={ i }
+            d={d.path}
+            fill={d.properties.fillColor}
+            onMouseLeave={this.onMouseLeave.bind(this,d)}
+            onMouseEnter={this.onMouseEnter.bind(this,d)}
+          />
+        )
+      });
+    // console.timeEnd("project");
 
     const activeGeometry = <path className="activeGeometry" d={this.path(this.activeGeometry)}/>;
 
