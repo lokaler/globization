@@ -20,8 +20,8 @@ export default class Questionnaire extends React.Component {
   render() {
     const { questions } = this.props;
 
-    if (questions.error) {
-      return <Error>{ questions.error.message }</Error>;
+    if (questions.validationError) {
+      return <Error>{ questions.validationError.message }</Error>;
     }
 
     if (questions.cards.length === 0) {

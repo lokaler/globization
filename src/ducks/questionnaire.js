@@ -8,7 +8,7 @@ const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
 const SET_DATASET = 'SET_DATASET';
 
 const initialState = {
-  error: null,
+  validationError: null,
   questionnaires: {},
   activeQuestionnaireId: '0416',
   activeCard: -1,
@@ -22,29 +22,33 @@ export function reducer(state = initialState, action) {
     case LOAD_QUESTIONNAIRES: {
       const questionnaires = action.data;
 
-      if (questionnaires.error) {
+      if (questionnaires.validationError) {
         return {
           ...state,
-          error: questionnaires.error,
+          validationError: questionnaires.validationError,
           questionnaires: {}
         };
       }
 
       return {
         ...state,
-        error: null,
+        validationError: null,
         questionnaires
       };
     }
 
     case SET_QUESTIONNAIRE: {
+      if (state.validationError) {
+        return state;
+      }
+
       const questionnaires = state.questionnaires;
       const questionnaireId = action.questionnaireId;
       const questionnaire = questionnaires[questionnaireId];
 
       return {
         ...state,
-        error: null,
+        validationError: null,
         activeQuestionnaireId: questionnaireId,
         // activeCard: -1,
         // inputValues: {},

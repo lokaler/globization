@@ -33,7 +33,7 @@ for (const questionnaire of Object.values(questionnaires)) {
     validateData(questionnaire.cards);
   } catch (e) {
     questionnaires = {
-      error: {
+      validationError: {
         message: e.message
       }
     };
