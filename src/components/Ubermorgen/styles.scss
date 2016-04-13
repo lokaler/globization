@@ -120,6 +120,7 @@
     margin-top:0;
     font-size: 1.5em;
     font-weight: normal;
+    line-height: 1.2em;
   }
   p {
     float:left;
@@ -141,7 +142,7 @@
     }
 
     &:first-of-type {
-      margin-top:0;
+      // margin-top:0;
     }
 
   }
@@ -215,8 +216,8 @@
   }
 
   .slider{
-    margin-top:2em!important;
-    margin-bottom:2em;
+    // margin-top:2em!important;
+    margin-bottom:1em;
 
     .rc-slider-track {
       background-color: #FD8D3C;
