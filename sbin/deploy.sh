@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 cp -r dist /tmp/
 git checkout testing
