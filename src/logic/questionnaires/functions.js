@@ -10,7 +10,10 @@ export default {
 
   isNull,
   isUndefined,
-  fmt: sprintf,
+  fmt: (f, ...values) => {
+    const clean = values.map(v => isUndefined(v) ? 0 : v);
+    return sprintf(f, ...clean);
+  },
 
   getCountryName(datasetKey, value) {
     const dataset = getDataset(datasetKey);
