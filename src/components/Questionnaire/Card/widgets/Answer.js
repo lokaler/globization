@@ -4,7 +4,7 @@ import MicroMustache from 'micromustache';
 import cssModules from 'react-css-modules';
 import { compileExpression, compileContext } from 'logic/questionnaires/expressions';
 import translate from 'logic/translate';
-import { isUndefined } from 'lodash';
+import { isUndefined, isString } from 'lodash';
 import classNames from 'classnames';
 
 @cssModules()
@@ -19,7 +19,7 @@ export default class Answer extends React.Component {
     for (const expr of this.props.answer.answerKey) {
       const func = compileExpression(expr);
       const templateKey = func(userInput);
-      if (templateKey) {
+      if (templateKey && isString(templateKey)) {
         return templateKey;
       }
     }

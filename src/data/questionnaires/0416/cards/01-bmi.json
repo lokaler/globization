@@ -86,27 +86,27 @@
       "answer": {
         "//key": "answer1",
         "//actions": [
-          "i.gender === 'man' && f.panToCountry(f.getISO('bmiMan',i.sliderWeight/(i.sliderHeight*i.sliderHeight/10000)))",
-          "i.gender === 'woman' && f.panToCountry(f.getISO('bmiWoman',i.sliderWeight/(i.sliderHeight*i.sliderHeight/10000)))"
+          "i.gender === 'man' && f.panToCountry(f.getISO('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight)))",
+          "i.gender === 'woman' && f.panToCountry(f.getISO('bmiWoman', f.calculateBmi(i.sliderWeight, i.sliderHeight)))"
         ],
         "answerKey": [
+          "i.gender === 'man' && f.setDataset('bmiMan')",
+          "i.gender === 'woman' && f.setDataset('bmiWoman')",
           "!i.bmiSubmitted && 'notSubmitted'",
-          "i.gender === 'man' && f.setDataset('bmiMan') && 'default'",
-          "i.gender === 'woman' && f.setDataset('bmiWoman') && 'default'",
-          "(f.isUndefined(i.sliderHeight) || f.isUndefined(i.sliderWeight)) && 'default'",
-          "i.gender === 'man' && 'bmiAnswerMan'",
-          "i.gender === 'woman' && 'bmiAnswerWoman'"
+          "i.gender === 'man' && f.panToCountry(f.getISO('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight)))",
+          "i.gender === 'woman' && f.panToCountry(f.getISO('bmiWoman', f.calculateBmi(i.sliderWeight, i.sliderHeight)))",
+          "i.gender"
         ],
         "answerContext": {
-          "bmiCountryMan": "f.getCountryName('bmiMan', i.sliderWeight/((i.sliderHeight*i.sliderHeight)/10000))",
-          "bmiCountryWoman": "f.getCountryName('bmiWoman', i.sliderWeight/((i.sliderHeight*i.sliderHeight)/10000))",
-          "bmiValue" : "f.fmt('%0.1f',i.sliderWeight/((i.sliderHeight*i.sliderHeight)/10000))"
+          "bmiCountryMan": "f.getCountryName('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight))",
+          "bmiCountryWoman": "f.getCountryName('bmiWoman', f.calculateBmi(i.sliderWeight, i.sliderHeight))",
+          "bmiValue" : "f.fmt('%0.1f',f.calculateBmi(i.sliderWeight, i.sliderHeight))"
         },
         "templates": {
           "notSubmitted": {
             "de": ["notSubmitted"], "en": ["notSubmitted"]
           },
-          "bmiAnswerMan": {
+          "man": {
             "de": [
               "Man {{ bmiValue }} {{ bmiCountryMan }}"
             ],
@@ -114,7 +114,7 @@
               "foo!"
             ]
           },
-          "bmiAnswerWoman": {
+          "woman": {
             "de": [
               "Woman {{ bmiValue }} {{ bmiCountryWoman }}"
             ],

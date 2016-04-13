@@ -132,10 +132,17 @@ export default {
     return true;
   },
 
-  setDataset(name) {
-    console.log('dataset', name);
-    // defer(
-    //   () => window.actions.setDataSet(name)
-    // );
+  setDataset(key) {
+    const state = store.getState();
+    const currentKey = (state.questions.dataset || {}).key;
+    if (key !== currentKey) {
+      defer(
+        () => window.actions.setDataSet(key)
+      );
+    }
+  },
+
+  calculateBmi(weight, height) {
+    return weight / ((height * height) / 10000);
   }
 };
