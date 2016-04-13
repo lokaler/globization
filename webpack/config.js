@@ -71,6 +71,10 @@ function getLoaders(env) {
       loader: 'url-loader'
     },
     {
+      test: /\.png$/,
+      loader: 'url-loader'
+    },
+    {
       test: /\.json$/,
       loader: 'json'
     },

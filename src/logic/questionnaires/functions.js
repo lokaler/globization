@@ -144,5 +144,11 @@ export default {
 
   calculateBmi(weight, height) {
     return weight / ((height * height) / 10000);
+  },
+
+  shareButtonTwitter(input) {
+    return (
+      `${input} <div class='share twitter'></div><div class='share facebook'></div>`
+    );
   }
 };

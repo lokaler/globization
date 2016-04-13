@@ -152,6 +152,23 @@
     padding-right: 15px;
     background: rgba(154, 154, 154, 0.22);
     color: #2B2B2B;
+
+    .share {
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+      padding-bottom: 0px;
+
+      &.twitter{
+        background-image: url("./img/twitter.png");
+      }
+      &.facebook{
+        background-image: url("./img/facebook.png");
+      }
+    }
+
   }
 
   .answer-tip {

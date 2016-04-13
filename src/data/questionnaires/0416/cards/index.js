@@ -1,5 +1,6 @@
 export default [
   require('./00-intro.json'),
+  require('./00-share.json'),
   require('./01-bmi.json'),
   require('./04-kids.json'),
   require('./05-diabetes.json'),
