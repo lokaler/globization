@@ -1,9 +1,7 @@
 {
+  "key": "bmiWomen",
   "title": "1. Karte - Foo!!!",
   "dataset": "food",
-  "functions": [
-
-  ],
   "content": [
     {
       "text": {

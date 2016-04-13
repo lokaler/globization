@@ -10,17 +10,20 @@ import 'rc-slider/assets/index.css';
 export default class Slider extends React.Component {
 
   static propTypes = {
+    actions: PropTypes.object.isRequired,
+    questions: PropTypes.object.isRequired,
+    // --- for this component only ---
     id: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     options: PropTypes.object.isRequired,
-    actions: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired
+    disabled: PropTypes.bool.isRequired
   }
 
   onChange(value) {
     sponLogger();
-    this.props.actions.updateUserInput(this.props.id, value);
-    logbuch({ key: this.props.id, value });
+    const { id, actions } = this.props;
+    actions.updateUserInput(id, value);
+    logbuch({ key: id, value });
   }
 
   tipFormatter(val) {
@@ -28,7 +31,7 @@ export default class Slider extends React.Component {
   }
 
   render() {
-    const { id, questions, options } = this.props;
+    const { id, questions, options, disabled } = this.props;
     const sliderChangeBind = this.onChange.bind(this);
     const tipFormatter = this.tipFormatter.bind(this);
 
@@ -40,6 +43,7 @@ export default class Slider extends React.Component {
     return (
       <div styleName="widget" className="slider">
         <Rcslider
+          disabled={ disabled }
           tipFormatter={ tipFormatter }
           defaultValue={ value }
           min={ options.min }

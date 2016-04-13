@@ -6,10 +6,12 @@ import styles from './widgets.scss';
 export default class Choices extends React.Component {
 
   static propTypes = {
+    actions: PropTypes.object.isRequired,
+    questions: PropTypes.object.isRequired,
+    // --- for this component only ---
     id: PropTypes.string.isRequired,
     options: PropTypes.object.isRequired,
-    actions: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired
+    disabled: PropTypes.bool.isRequired
   }
 
   setValue(value) {
@@ -19,13 +21,13 @@ export default class Choices extends React.Component {
   }
 
   render() {
-    const { id, options, questions } = this.props;
+    const { questions, id, options, disabled } = this.props;
     const currentValue = questions.inputValues[id];
 
     const Radios = options.choices.map((option) => {
       const [value, label] = option;
-      const onClick = this.setValue.bind(this, value);
       const noop = () => {}; // eslint-disable-line arrow-body-style
+      const onClick = disabled ? noop : this.setValue.bind(this, value);
 
       return (
         <div
@@ -38,6 +40,7 @@ export default class Choices extends React.Component {
             value={ value }
             checked={ value === currentValue }
             onChange={ noop } // so react doesn't complain
+            disabled={ disabled }
           />
           <span className={ styles.choicelabel }>
             { translate(label) }

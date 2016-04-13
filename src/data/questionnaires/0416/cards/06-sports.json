@@ -1,9 +1,7 @@
 {
+  "key": "sports",
   "title": "6. Karte - Sport",
   "dataset": "notMoving",
-  "functions": [
-
-  ],
   "content": [
     {
       "text": {
@@ -33,9 +31,9 @@
       }
     },
     {
-      "answerQuiz": {
-        "key": "answer_sport",
-        "actions": ["f.panToRandomCountry()"],
+      "answer": {
+        "//key": "answer_sport",
+        "//actions": ["f.panToRandomCountry()"],
         "answerKey": [
             "i.sport"
           ],

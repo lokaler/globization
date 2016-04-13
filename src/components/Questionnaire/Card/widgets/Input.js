@@ -10,17 +10,20 @@ const WidgetFactory = {
 export default class Input extends React.Component {
 
   static propTypes = {
-    input: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired
+    questions: PropTypes.object.isRequired,
+    card: PropTypes.object.isRequired,
+    input: PropTypes.object.isRequired
   }
 
   render() {
-    const { input } = this.props;
+    const { card, input, questions } = this.props;
+    const disabled = card.key in questions.submittedCards;
 
     const Widget = WidgetFactory[input.type]({
       ...input,
       ...this.props,
       id: input.key,
+      disabled
     });
 
     return <span key={ `${+new Date()}_${input.key}` }>{ Widget }</span>;

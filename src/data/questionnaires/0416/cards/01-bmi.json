@@ -1,8 +1,8 @@
 {
+  "key": "bmi",
   "title": "1. Karte - Ihr BMI im weltweiten Vergleich",
   "view": "globe",
   "dataset": "bmiWoman",
-  "functions": [],
   "content": [
     {
       "text": {
@@ -78,13 +78,19 @@
       }
     },
     {
-      "answerQuiz": {
-        "key": "answer1",
-        "actions": [
+      "submit": {
+        "key": "bmiSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "//key": "answer1",
+        "//actions": [
           "i.gender === 'man' && f.panToCountry(f.getISO('bmiMan',i.sliderWeight/(i.sliderHeight*i.sliderHeight/10000)))",
           "i.gender === 'woman' && f.panToCountry(f.getISO('bmiWoman',i.sliderWeight/(i.sliderHeight*i.sliderHeight/10000)))"
         ],
         "answerKey": [
+          "!i.bmiSubmitted && 'notSubmitted'",
           "i.gender === 'man' && f.setDataset('bmiMan') && 'default'",
           "i.gender === 'woman' && f.setDataset('bmiWoman') && 'default'",
           "(f.isUndefined(i.sliderHeight) || f.isUndefined(i.sliderWeight)) && 'default'",
@@ -97,13 +103,8 @@
           "bmiValue" : "f.fmt('%0.1f',i.sliderWeight/((i.sliderHeight*i.sliderHeight)/10000))"
         },
         "templates": {
-          "default": {
-            "de": [
-              "Bitte bestätigen"
-            ],
-            "en": [
-              "default en"
-            ]
+          "notSubmitted": {
+            "de": ["notSubmitted"], "en": ["notSubmitted"]
           },
           "bmiAnswerMan": {
             "de": [

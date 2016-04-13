@@ -1,13 +1,20 @@
 function string(schema = {}) {
-  return Object.assign({ type: 'string' }, schema);
+  return { type: 'string', ...schema };
 }
 
 function object(schema = {}) {
-  return Object.assign({ type: 'object' }, schema);
+  return {
+    type: 'object',
+    ...schema,
+    patternProperties: {
+      '^//.*': {}
+      // ...(schema.patternProperties || {})
+    }
+  };
 }
 
 function array(schema = {}) {
-  return Object.assign({ type: 'array' }, schema);
+  return { type: 'array', ...schema };
 }
 
 function contentPart(key, schema = {}) {
@@ -24,17 +31,20 @@ export const questionnaire = array({
   $schema: 'http://json-schema.org/draft-04/schema#',
 
   items: object({
-    required: ['title', 'content'],
+    additionalProperties: false,
+    required: ['key', 'title', 'content'],
     properties: {
+      key: string(),
       title: string(),
       dataset: string(),
+      view: string(),
       content: array({
         items: object({
           oneOf: [
             contentPart('text'),
             contentPart('input'),
-            contentPart('answer'),
-            contentPart('answerQuiz')
+            contentPart('submit'),
+            contentPart('answer')
           ]
         })
       })
@@ -66,6 +76,14 @@ export const widgets = {
     }
   })),
 
+  submit: contentPart('submit', object({
+    required: ['key'],
+    additionalProperties: false,
+    properties: {
+      key: string()
+    }
+  })),
+
   answer: contentPart('answer', object({
     required: ['templates'],
     additionalProperties: false,
@@ -79,23 +97,5 @@ export const widgets = {
         patternProperties: { '.*': multiLangArrayOfStrings }
       }
     }
-  })),
-
-  answerQuiz: contentPart('answerQuiz', object({
-    required: ['templates', 'key'],
-    additionalProperties: false,
-    properties: {
-      key: string(),
-      actions: array(),
-      className: { enum: ['tip'] },
-      answerKey: array(),
-      answerContext: object({
-        patternProperties: { '.*': string() }
-      }),
-      templates: {
-        patternProperties: { '.*': multiLangArrayOfStrings }
-      }
-    }
   }))
-
 };

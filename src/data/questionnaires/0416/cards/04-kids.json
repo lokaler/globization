@@ -1,4 +1,5 @@
 {
+  "key": "kids",
   "title": "4. Karte - Kids",
   "dataset": "overweightBoys",
   "content": [
@@ -28,19 +29,22 @@
       }
     },
     {
-      "answerQuiz": {
-        "key": "answer_overweight",
-        "actions": ["f.panToRandomCountry()"],
-        "answerKey": ["i.overweight"],
+      "submit": {
+        "key": "kidsSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "//key": "answer_overweight",
+        "//actions": ["f.panToRandomCountry()"],
+        "answerKey": [
+          "!i.kidsSubmitted && 'notSubmitted'",
+          "i.overweight"
+        ],
         "answerContext": {},
         "templates": {
-          "default": {
-            "de": [
-              "Auswahl bestätigen."
-            ],
-            "en": [
-              "default en"
-            ]
+          "notSubmitted": {
+            "de": ["notSubmitted"], "en": ["notSubmitted"]
           },
           "choice_1": {
             "de": [
