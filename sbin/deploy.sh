@@ -2,6 +2,7 @@
 
 cp -r dist /tmp/
 git checkout testing
+git pull
 cp -r /tmp/dist .
 git add -A
 git commit -a -m "deploy"
