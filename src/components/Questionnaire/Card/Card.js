@@ -6,8 +6,8 @@ import Answer from './widgets/Answer';
 import AnswerQuiz from './widgets/AnswerQuiz';
 import Input from './widgets/Input';
 import Submit from './widgets/Submit';
-import RoundChooser from '../RoundList/RoundList';
-import DatasetMenu from '../DataSetList/DataSetList';
+import RoundChooser from './widgets/RoundList/RoundList';
+import DatasetMenu from './widgets/DataSetList/DataSetList';
 
 const widgets = {
   text: Text,
