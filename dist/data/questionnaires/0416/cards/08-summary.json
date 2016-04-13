@@ -2,8 +2,44 @@
   "key": "summary",
   "title": "8. Karte - Summary",
   "view": "globe",
-  "dataset": "electro",
+  "dataset": "alcoholConsume",
   "content": [
+    {
+      "answer": {
+        "answerKey": [],
+        "answerContext": {
 
+        },
+        "templates": {
+          "default": {
+            "de": [
+              "Antworten"
+            ],
+            "en": [
+              "default en"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [],
+        "answerContext": {
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeHr7', i.sliderAlcohol + ' Übermorgen Explorer: Vergleiche dich mit der Welt')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeHr7', 'Vergleiche dich mit der Welt - SPIEGEL ONLINE - Übermorgen Explorer')"
+        },
+        "templates": {
+          "default": {
+            "de": [
+              "<div class='sharing'>{{ twitterShare }} {{ facebookShare }}</div>"
+            ],
+            "en": [
+              "default en"
+            ]
+          }
+        }
+      }
+    }
   ]
 }

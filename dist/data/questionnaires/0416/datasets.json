@@ -24,7 +24,7 @@
        40,
        100
     ],
-    "translate": [0,0],
+    "translate": [0,90],
     "scale": 1,
     "colorSet":"Oranges",
     "colorNum":9,
@@ -256,7 +256,7 @@
       40,
       100
     ],
-    "translate": [0,0],
+    "translate": [0,90],
     "scale": 1,
     "colorSet":"Oranges",
     "colorNum":9,
@@ -466,8 +466,8 @@
   {
     "key" : "overweightBoys",
     "name": {
-     "de": "übergewichtiger Jungen",
-     "en": "übergewichtiger Jungen"
+     "de": "Übergewicht Jugendliche",
+     "en": "Übergewicht Jugendliche"
     },
     "description": {
      "de": "Anteil übergewichtiger Jungen unter 20 Jahre",
@@ -488,7 +488,7 @@
       40,
       100
     ],
-    "translate": [0,0],
+    "translate": [0,90],
     "scale": 1,
     "colorSet":"Oranges",
     "colorNum":9,
@@ -687,8 +687,8 @@
   {
     "key" : "overweightGirls",
     "name": {
-     "de": "übergewichtiger Mädchen",
-     "en": "übergewichtiger Mädchen"
+     "de": "Übergewicht Jugendliche",
+     "en": "Übergewicht Jugendliche"
     },
     "description": {
      "de": "Anteil übergewichtiger Mädchen unter 20 Jahre",
@@ -709,7 +709,7 @@
       40,
       100
     ],
-    "translate": [0,0],
+    "translate": [0,90],
     "scale": 1,
     "colorSet":"Oranges",
     "colorNum":9,
@@ -908,8 +908,8 @@
   {
     "key" : "diabetesWoman",
     "name": {
-     "de": "Diabetes Frauen",
-     "en": "Diabetes Frauen"
+     "de": "Diabetes",
+     "en": "Diabetes"
     },
     "description": {
      "de": "Anteil Frauen mit Diabetes 2014",
@@ -930,7 +930,7 @@
       40,
       100
     ],
-    "translate": [0,0],
+    "translate": [0,90],
     "scale": 1,
     "colorSet":"Oranges",
     "colorNum":9,
@@ -1141,8 +1141,8 @@
   {
     "key" : "diabetesMen",
     "name": {
-     "de": "Diabetes Männer",
-     "en": "Diabetes Männer"
+     "de": "Diabetes",
+     "en": "Diabetes"
     },
     "description": {
      "de": "Anteil Männer mit Diabetes 2014",
@@ -1163,7 +1163,7 @@
       40,
       100
     ],
-    "translate": [0,0],
+    "translate": [0,90],
     "scale": 1,
     "colorSet":"Oranges",
     "colorNum":9,
@@ -1392,7 +1392,7 @@
       40,
       100
     ],
-    "translate": [0,0],
+    "translate": [0,90],
     "scale": 1,
     "colorSet":"Oranges",
     "colorNum":9,
@@ -1541,7 +1541,7 @@
       40,
       100
     ],
-    "translate": [0,0],
+    "translate": [0,90],
     "scale": 1,
     "colorSet":"Oranges",
     "colorNum":9,

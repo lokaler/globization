@@ -58,12 +58,13 @@
       "answer": {
         "answerKey": [],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('du trinkst alkohol')"
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeHr7', i.sliderAlcohol + ' Übermorgen Explorer: Vergleiche dich mit der Welt')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeHr7', 'Vergleiche dich mit der Welt - SPIEGEL ONLINE - Übermorgen Explorer')"
         },
         "templates": {
           "default": {
             "de": [
-              "{{ twitterShare }}"
+              "<div class='sharing'>{{ twitterShare }} {{ facebookShare }}</div>"
             ],
             "en": [
               "default en"
