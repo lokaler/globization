@@ -2,14 +2,17 @@
   {
     "key" : "bmiWoman",
     "name": {
-      "de": "BMI Frauen",
-      "en": "BMI Frauen"
+      "de": "Body-Mass-Index",
+      "en": "Body-Mass-Index"
     },
     "description": {
       "de": "Durchschnittlicher BMI Frauen in 2014",
       "en": "Durchschnittlicher BMI Frauen in 2014"
     },
-    "linkedSet": { "bmiMen":"men","bmiWoman":"woman" },
+    "linkedSet": [
+      { "key": "bmiWoman", "value":"female" },
+      { "key": "bmiMan", "value":"male" }
+    ],
     "quelle": "The Lancet",
     "link": "",
     "unit": "",
@@ -229,16 +232,19 @@
     ]
   },
   {
-    "key" : "bmiMen",
+    "key" : "bmiMan",
     "name": {
-     "de": "BMI Männer",
-     "en": "BMI Männer"
+     "de": "Body-Mass-Index",
+     "en": "Body-Mass-Index"
     },
     "description": {
      "de": "Durchschnittlicher BMI Männer in 2014",
      "en": "Durchschnittlicher BMI Männer in 2014"
     },
-    "linkedSet": { "bmiMen":"men","bmiWoman":"woman" },
+    "linkedSet": [
+      { "key": "bmiWoman", "value":"female" },
+      { "key": "bmiMan", "value":"male" }
+    ],
     "quelle": "The Lancet",
     "link": "",
     "unit": "",
@@ -467,6 +473,10 @@
      "de": "Anteil übergewichtiger Jungen unter 20 Jahre",
      "en": "Anteil übergewichtiger Jungen unter 20 Jahre"
     },
+    "linkedSet": [
+      { "key": "overweightBoys", "value":"male" },
+      { "key": "overweightGirls", "value":"female" }
+    ],
     "quelle": "The Lancet",
     "link": "http://www.thelancet.com/journals/lancet/article/PIIS0140-6736%2814%2960460-8/abstract",
     "unit": "%",
@@ -684,6 +694,10 @@
      "de": "Anteil übergewichtiger Mädchen unter 20 Jahre",
      "en": "Anteil übergewichtiger Mädchen unter 20 Jahre"
     },
+    "linkedSet": [
+      { "key": "overweightBoys", "value":"male" },
+      { "key": "overweightGirls", "value":"female" }
+    ],
     "quelle": "The Lancet",
     "link": "http://www.thelancet.com/journals/lancet/article/PIIS0140-6736%2814%2960460-8/abstract",
     "unit": "%",
@@ -901,6 +915,10 @@
      "de": "Anteil Frauen mit Diabetes 2014",
      "en": "Anteil Frauen mit Diabetes 2014"
     },
+    "linkedSet": [
+      { "key": "diabetesWoman", "value":"female" },
+      { "key": "diabetesMen", "value":"male" }
+    ],
     "quelle": "NCD Risk Factor Collaboration",
     "link": "",
     "unit": "%",
@@ -1130,6 +1148,10 @@
      "de": "Anteil Männer mit Diabetes 2014",
      "en": "Anteil Männer mit Diabetes 2014"
     },
+    "linkedSet": [
+      { "key": "diabetesWoman", "value":"female" },
+      { "key": "diabetesMen", "value":"male" }
+    ],
     "quelle": "NCD Risk Factor Collaboration",
     "link": "",
     "unit": "%",

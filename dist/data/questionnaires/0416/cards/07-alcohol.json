@@ -1,9 +1,7 @@
 {
+  "key": "alcohol",
   "title": "7. Karte - Alcohol",
   "dataset": "alcoholConsume",
-  "functions": [
-
-  ],
   "content": [
     {
       "text": {
@@ -33,9 +31,9 @@
       }
     },
     {
-      "answerQuiz": {
-        "key": "answer_alcohol",
-        "actions": ["f.panToRandomCountry()"],
+      "answer": {
+        "//key": "answer_alcohol",
+        "//actions": ["f.panToRandomCountry()"],
         "answerKey": [
             "(i.sliderAlcohol < 8) && 'lessAlcohol'",
             "(i.sliderAlcohol < 10) && 'someAlcohol'",
@@ -51,25 +49,25 @@
               "default en"
             ]
           },
-          "overweight_choice_one": {
+          "lessAlcohol": {
             "de": [
-              "Richtig! In Südafrika leiden 12,6 Prozent der weiblichen Bevölkerung an Diabetes. Wie in vielen afrikanischen Staaten, nimmt dort die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. In Brasilien haben 8,7 in Deutschland 3,9 Prozent der Frauen Diabetes. Weltweit am höchsten ist der Anteil der erkrankten Frauen in [Land_Frauen_Diabetes_max] mit [Wert_Land_Frauen_Diabetes_max] Prozent. "
+              "foo"
             ],
             "en": [
               "foo!"
             ]
           },
-          "overweight_choice_two": {
+          "someAlcohol": {
             "de": [
-              "Nein, in Deutschland leiden 3,9 Prozent der weiblichen Bevölkerung unter Diabetes. In Brasilien hingegen 8,7 und in Südafrika sogar 12,6 Prozent. In Südafrika, wie in vielen afrikanischen Staaten, nimmt die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. Weltweit am höchsten ist der Anteil der erkrankten Frauen in [Land_Frauen_Diabetes_max] mit [Wert_Land_Frauen_Diabetes_max] Prozent."
+              "foo"
             ],
             "en": [
               "foo!"
             ]
           },
-          "overweight_choice_three": {
+          "muchAlcohol": {
             "de": [
-              "Nein, in Südafrika leiden mit 12,6 prozentual mehr Frauen an Diabetes als in Brasilien, wo 8,7 Prozent der Frauen betroffen sind. In Südafrika, wie in vielen afrikanischen Staaten, nimmt die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. Weltweit am höchsten ist der Anteil der erkrankten Frauen in [Land_Frauen_Diabetes_max] mit [Wert_Land_Frauen_Diabetes_max] Prozent. In Deutschland haben 3,9 Prozent der Frauen Diabetes. "
+              "foo"
             ],
             "en": [
               "foo!"

@@ -1,9 +1,7 @@
 {
+  "key": "bmiMen",
   "title": "1. Karte - Foo!!!",
   "dataset": "food",
-  "functions": [
-
-  ],
   "content": [
     {
       "text": {
@@ -29,9 +27,9 @@
       }
     },
     {
-      "answerQuiz": {
+      "answer": {
         "key": "answer1",
-        "actions": ["f.panToRandomCountry()"],
+        "//actions": ["f.panToRandomCountry()"],
         "answerKey": [
           [
             "(i.sliderFoo < 100)",
