@@ -1,0 +1,61 @@
+{
+  "key": "bmiMen",
+  "title": "1. Karte - Foo!!!",
+  "dataset": "food",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# foo de"
+        ],
+        "en": [
+          "# foo en"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "sliderFoo",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 30,
+          "max": 60,
+          "step": 1
+        }
+      }
+    },
+    {
+      "answer": {
+        "key": "answer1",
+        "//actions": ["f.panToRandomCountry()"],
+        "answerKey": [
+          [
+            "(i.sliderFoo < 100)",
+            "&& 'foo1'"
+          ]
+        ],
+        "answerContext": {},
+        "templates": {
+          "default": {
+            "de": [
+              "default de"
+            ],
+            "en": [
+              "default en"
+            ]
+          },
+          "foo1": {
+            "de": [
+              "foo!"
+            ],
+            "en": [
+              "foo!"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

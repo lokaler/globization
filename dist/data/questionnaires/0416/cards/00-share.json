@@ -1,0 +1,76 @@
+{
+  "key": "share",
+  "title": "Share",
+  "dataset": "alcoholConsume",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Gesundheitsrisiko Alkohol"
+        ],
+        "en": [
+          "# foo en"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "sliderAlcohol",
+        "type": "slider",
+        "options": {
+          "min": 1,
+          "value": 6.5,
+          "max": 14.1,
+          "unit": "l",
+          "step": 0.1
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+            "(i.sliderAlcohol < 100) && 'lessAlcohol'"
+          ],
+        "answerContext": {
+          "alcFoo": "i.sliderAlcohol * 4324"
+        },
+        "templates": {
+          "default": {
+            "de": [
+              "Auswahl bestätigen."
+            ],
+            "en": [
+              "default en"
+            ]
+          },
+          "lessAlcohol": {
+            "de": [
+              "foo {{ alcFoo }}"
+            ],
+            "en": [
+              "foo!"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [],
+        "answerContext": {
+          "twitterShare": "f.shareButtonTwitter('du trinkst alkohol')"
+        },
+        "templates": {
+          "default": {
+            "de": [
+              "{{ twitterShare }}"
+            ],
+            "en": [
+              "default en"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

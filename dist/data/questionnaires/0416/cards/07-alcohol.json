@@ -1,0 +1,80 @@
+{
+  "key": "alcohol",
+  "title": "7. Karte - Alcohol",
+  "dataset": "alcoholConsume",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Gesundheitsrisiko Alkohol",
+          "",
+          "In einem WHO-Report zu Alkohol und Gesundheit 2014 kommen die Autoren zu dem Schluss, dass Alkoholkonsum weltweit zu mehr Todesfällen führt als Tuberkulose und HIV zusammen.",
+          "",
+          "Tippen Sie: Wie viel Alkohol trinken die Deutschen durchschnittlich pro Woche? Schätzen Sie in Anzahl von 0,5-Liter-Bieren (Tipp: Rechnen Sie für ein Glas Rotwein ein 0,5l-Bier und für einen Schnaps ein Drittel 0,5l-Bier)"
+        ],
+        "en": [
+          "# foo en"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "sliderAlcohol",
+        "type": "slider",
+        "options": {
+          "min": 1,
+          "value": 6.5,
+          "max": 14.1,
+          "unit": "l",
+          "step": 0.1
+        }
+      }
+    },
+    {
+      "answer": {
+        "//key": "answer_alcohol",
+        "//actions": ["f.panToRandomCountry()"],
+        "answerKey": [
+            "(i.sliderAlcohol < 8) && 'lessAlcohol'",
+            "(i.sliderAlcohol < 10) && 'someAlcohol'",
+            "(i.sliderAlcohol > 10) && 'muchAlcohol'"
+          ],
+        "answerContext": {},
+        "templates": {
+          "default": {
+            "de": [
+              "Auswahl bestätigen."
+            ],
+            "en": [
+              "default en"
+            ]
+          },
+          "lessAlcohol": {
+            "de": [
+              "foo"
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "someAlcohol": {
+            "de": [
+              "foo"
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "muchAlcohol": {
+            "de": [
+              "foo"
+            ],
+            "en": [
+              "foo!"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
