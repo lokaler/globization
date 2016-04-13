@@ -65,26 +65,26 @@ const multiLangArrayOfStrings = object({
 
 export const widgets = {
 
-  text: contentPart('text', multiLangArrayOfStrings),
+  text: multiLangArrayOfStrings,
 
-  input: contentPart('input', object({
+  input: object({
     required: ['key', 'type', 'options'],
     properties: {
       key: string(),
       type: { enum: ['slider', 'choices'] },
       options: { type: 'object' }
     }
-  })),
+  }),
 
-  submit: contentPart('submit', object({
+  submit: object({
     required: ['key'],
     additionalProperties: false,
     properties: {
       key: string()
     }
-  })),
+  }),
 
-  answer: contentPart('answer', object({
+  answer: object({
     required: ['templates'],
     additionalProperties: false,
     properties: {
@@ -97,5 +97,5 @@ export const widgets = {
         patternProperties: { '.*': multiLangArrayOfStrings }
       }
     }
-  }))
+  })
 };

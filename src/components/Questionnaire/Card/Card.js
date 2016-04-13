@@ -40,6 +40,9 @@ export default class Questionnaire extends React.Component {
       (item, index) => {
         const widgetType = Object.keys(item)[0];
         const Widget = widgets[widgetType];
+        if (!Widget) {
+          throw new Error(`No widget "${ widgetType }"`);
+        }
         return (
           <Widget
             key={ `${card.key}_${widgetType}_${index}` }

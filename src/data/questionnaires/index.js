@@ -32,11 +32,15 @@ for (const questionnaire of Object.values(questionnaires)) {
   try {
     validateQuestionnaire(questionnaire);
   } catch (e) {
-    questionnaires = {
-      validationError: {
-        message: e.message
-      }
-    };
+    if (e.name === 'ValidationError') {
+      questionnaires = {
+        validationError: {
+          message: e.message
+        }
+      };
+    } else {
+      throw e;
+    }
   }
 }
 

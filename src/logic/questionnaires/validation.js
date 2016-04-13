@@ -1,6 +1,17 @@
 /* eslint-disable no-shadow */
 
+export class ValidationError extends Error {
+  constructor(msg) {
+    super(msg);
+    this.name = 'ValidationError';
+  }
+}
+
 export function validateQuestionnaire(questionnaire) {
+  function fail(message) {
+    throw new ValidationError(message);
+  }
+
   if (__DEV__) {
     const ajv = require('ajv')();
     const schema = require('./schema');
@@ -8,16 +19,24 @@ export function validateQuestionnaire(questionnaire) {
     const valid = validate(questionnaire.cards);
     if (!valid) {
       const errors = JSON.stringify(validate.errors, null, 2);
-      throw new Error(`Questionnaire "${ questionnaire.title }" is invalid - ${errors}`);
+      fail(
+        `Questionnaire "${ questionnaire.title }" is invalid - ${errors}`
+      );
     }
     for (const card of questionnaire.cards) {
-      for (const widget of card.content) {
-        const type = Object.keys(widget)[0];
-        const validate = ajv.compile(schema.widgets[type]);
+      for (const obj of card.content) {
+        const [type, widget] = Object.entries(obj)[0];
+        const widgetSchema = schema.widgets[type];
+        if (!widgetSchema) {
+          throw new Error(`Schema for widget ${ type } is undefined`);
+        }
+        const validate = ajv.compile(widgetSchema);
         const valid = validate(widget);
         if (!valid) {
           const errors = JSON.stringify(validate.errors, null, 2);
-          throw new Error(`Card "${ card.title }" - Widget "${ type }" is invalid - ${errors}`);
+          fail(
+            `Card "${ card.title }" - Widget "${ type }" is invalid - ${errors}`
+          );
         }
       }
     }
