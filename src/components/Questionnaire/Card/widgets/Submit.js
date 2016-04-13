@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 import { every } from 'lodash';
+import translate from 'logic/translate';
+
 
 export default class Submit extends React.Component {
 
@@ -28,7 +30,7 @@ export default class Submit extends React.Component {
     const showButton = !submitted && inputsEntered;
 
     if (showButton) {
-      return <button onClick={ this.onClick }>SUBMIT</button>;
+      return <button onClick={ this.onClick }>{ translate('submit') }</button>;
     }
 
     return null;

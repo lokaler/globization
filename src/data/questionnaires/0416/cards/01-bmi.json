@@ -92,6 +92,7 @@
         "answerKey": [
           "i.gender === 'man' && f.setDataset('bmiMan')",
           "i.gender === 'woman' && f.setDataset('bmiWoman')",
+          "i.gender && i.sliderWeight && i.sliderHeight && !i.bmiSubmitted && 'allAnswered'",
           "!i.bmiSubmitted && 'notSubmitted'",
           "i.gender === 'man' && f.panToCountry(f.getISO('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight)))",
           "i.gender === 'woman' && f.panToCountry(f.getISO('bmiWoman', f.calculateBmi(i.sliderWeight, i.sliderHeight)))",
@@ -104,7 +105,10 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["notSubmitted"], "en": ["notSubmitted"]
+            "de": ["Bitte beantworten sie die Fragen"], "en": ["notSubmitted"]
+          },
+          "allAnswered": {
+            "de": ["Sind sie sich sicher ?"], "en": ["notSubmitted"]
           },
           "man": {
             "de": [

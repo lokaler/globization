@@ -16,7 +16,7 @@ export default class LinkedDatasetMenu extends React.Component {
 
   render() {
     const linkedSet = this.props.questions.dataset.linkedSet;
-    const sortedSet = Array.from(linkedSet).sort((a,b) => d3.descending(a.value, b.value));
+    const sortedSet = Array.from(linkedSet).sort((a,b) => d3.ascending(a.value, b.value));
 
     return (
       <div className={ styles.component }>
