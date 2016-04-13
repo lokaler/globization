@@ -56,11 +56,11 @@ export default class GlobeComponent extends React.Component {
       .extent([[0, 0], [this.props.width, this.props.height]]);
 
     this.scale = this.props.vis.zoom;
-    window.area = 1 / this.scale / this.scale;
+    let area = 1 / this.scale / this.scale;
 
     this.simplify = d3.geo.transform({
       point: function(x, y, z) {
-        if (z >= window.area) this.stream.point(x, y);
+        if (z >= area) this.stream.point(x, y);
       }
     });
 
@@ -89,7 +89,7 @@ export default class GlobeComponent extends React.Component {
           .rotate(_rotate)
           .scale(_scale);
 
-        window.area = 1 / this.zoom.scale() /  this.zoom.scale();
+        area = 1 / this.zoom.scale() /  this.zoom.scale();
 
         //utils.log("zoom",this.zoom.translate(), this.zoom.scale());
 
