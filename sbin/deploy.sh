@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd ../
-NODE_ENV=production npm run build
+NODE_ENV=production npm run buildDeploy
 cp -r dist /tmp/
 git checkout testing
 cp -r /tmp/dist .
