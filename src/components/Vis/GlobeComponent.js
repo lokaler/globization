@@ -39,7 +39,6 @@ export default class GlobeComponent extends React.Component {
       .clipAngle(90)
       .precision(0.1)
 
-    console.log(this.projection.clipExtent());
 
     this.graticule = d3.geo.graticule()
       .precision(10)

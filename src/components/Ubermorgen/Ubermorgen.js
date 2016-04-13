@@ -28,6 +28,8 @@ export default class UbermorgenApp extends React.Component {
     const { actions, questions } = this.props;
     window.actions = actions; // quickhack for questionnaire functions
     actions.getUrlParameters();
+    console.log(questions.activeQuestionnaireId);
+
     actions.loadQuestionnaires(questionnaires);
     actions.setQuestionnaire(questions.activeQuestionnaireId);
     this.configureHotReload();

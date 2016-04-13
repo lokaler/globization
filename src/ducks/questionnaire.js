@@ -1,4 +1,5 @@
 import { actions as visualizationActions } from './visualization';
+import { getQueryVariable } from 'logic/url';
 
 
 const LOAD_QUESTIONNAIRES = 'LOAD_QUESTIONNAIRES';
@@ -9,6 +10,8 @@ const SUBMIT_CARD = 'SUBMIT_CARD';
 const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
 const SET_DATASET = 'SET_DATASET';
 const SET_DEBUG_EXPRESSIONS = 'SET_DEBUG_EXPRESSIONS';
+const GET_URL_PARAMETERS = 'GET_URL_PARAMETERS';
+
 
 const initialState = {
   validationError: null,
@@ -23,6 +26,12 @@ const initialState = {
 
 export function reducer(state = initialState, action) {
   switch (action.type) {
+
+    case GET_URL_PARAMETERS: {
+      const activeQuestionnaireId = getQueryVariable('round') || '0316';
+      console.log(activeQuestionnaireId);
+      return { ...state, activeQuestionnaireId };
+    }
 
     case LOAD_QUESTIONNAIRES: {
       const questionnaires = action.data;
@@ -119,6 +128,10 @@ export function reducer(state = initialState, action) {
 const setDataSet = (name) => ({ type: SET_DATASET, name });
 
 export const actions = {
+
+  getUrlParameters: () => (
+    { type: GET_URL_PARAMETERS }
+  ),
 
   loadQuestionnaires: (data) => ({ type: LOAD_QUESTIONNAIRES, data }),
 
