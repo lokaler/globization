@@ -146,9 +146,23 @@ export default {
     return weight / ((height * height) / 10000);
   },
 
-  shareButtonTwitter(input) {
+  shareButtonTwitter(url, text) {
+    const language = store.getState().app.language;
+    const linkUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}&lang=${language}&via=SPIEGELONLINE`;
+
     return (
-      `${input} <div class='share twitter'></div><div class='share facebook'></div>`
+      `<a class='share twitter ${language}' target='_blank'
+        title='Twitter' href='${ linkUrl }'></a>`
+    );
+  },
+
+  shareButtonFacebook(url, text) {
+    const language = store.getState().app.language;
+    const linkUrl = `https://www.facebook.com/share.php?u=${url}&t=${text}`;
+
+    return (
+      `<a class='share facebook ${language}' target='_blank'
+        title='Facebook' href='${ linkUrl }'></a>`
     );
   }
 };

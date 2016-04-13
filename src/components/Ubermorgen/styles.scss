@@ -153,21 +153,48 @@
     background: rgba(154, 154, 154, 0.22);
     color: #2B2B2B;
 
-    .share {
-      width: 30px;
-      height: 30px;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
-      padding-bottom: 0px;
+    .sharing {
+      clear: both;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      float: left;
+      width: 100%;
 
-      &.twitter{
-        background-image: url("./img/twitter.png");
+      .label {
+        float: left;
+        padding-top: 7px;
       }
-      &.facebook{
-        background-image: url("./img/facebook.png");
+      .share {
+        width: 102px;
+        height: 35px;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        clear: none;
+        background-repeat: no-repeat;
+        padding-bottom: 0px;
+
+        &.en{
+          background-image: url("./img/sprite-socials-en.png");
+        }
+        &.de{
+          background-image: url("./img/sprite-socials.png");
+        }
+
+        &.twitter{
+          float: left;
+          background-position-x: -6px;
+          background-position-y: -56px;
+        }
+        &.facebook{
+          float: right;
+          background-position-x: -6px;
+          background-position-y: -8px;
+        }
       }
     }
+
 
   }
 
