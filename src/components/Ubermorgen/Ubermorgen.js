@@ -3,7 +3,6 @@ import d3 from 'd3';
 import { debounce } from 'lodash';
 import cssModules from 'react-css-modules';
 
-import store from '../../store';
 import Vis from '../Vis/VisWrapper';
 import Questionnaire from '../Questionnaire/Questionnaire';
 
@@ -36,15 +35,6 @@ export default class UbermorgenApp extends React.Component {
     this.handleResize();
   }
 
-  onDoubleClick = () => {
-    if (__DEV__) {
-      /* eslint-disable no-console */
-      console.clear();
-      console.debug(store.getState());
-      /* eslint-ensable */
-    }
-  }
-
   configureHotReload() {
     const { actions, questions } = this.props;
 
@@ -70,7 +60,7 @@ export default class UbermorgenApp extends React.Component {
     // console.log(this.props.app);
     const responsiveClass = this.props.app.mobile ? 'mq-mobile' : 'mq-desktop';
     return (
-      <div className={ responsiveClass } onDoubleClick={ this.onDoubleClick }>
+      <div className={ responsiveClass }>
         <div styleName="container">
           <div className="left">
             <Vis {...this.props}/>

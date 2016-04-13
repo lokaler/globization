@@ -4,32 +4,88 @@ import MicroMustache from 'micromustache';
 import cssModules from 'react-css-modules';
 import { compileExpression, compileContext } from 'logic/questionnaires/expressions';
 import translate from 'logic/translate';
-import { isUndefined, isString } from 'lodash';
+import { isUndefined, includes } from 'lodash';
 import classNames from 'classnames';
+import Logger from './logging';
+
+class ERROR {}
 
 @cssModules()
 export default class Answer extends React.Component {
 
   static propTypes = {
-    answer: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired
+    actions: PropTypes.object.isRequired,
+    questions: PropTypes.object.isRequired,
+    answer: PropTypes.object.isRequired
   }
 
-  getTemplateKey(userInput) {
+  getLogger() {
+    const { actions, questions } = this.props;
+    return new Logger(actions, __DEV__ && questions.debugExpressions);
+  }
+
+  getTemplateKey(userInput, existingTemplateKeys) {
+    const { log, error } = this.getLogger();
+    function logEnd() {
+      log('------------------------------------------------------------------------------');
+      log('');
+    }
+    function logError(exprlog, errorType, errorMessage) {
+      log(exprlog);
+      error(`${ errorType } ->`, errorMessage);
+      logEnd();
+    }
+    log('------------------------------ getTemplateKey() ------------------------------');
+    log('userInput:', userInput);
+    log('existingTemplateKeys:', existingTemplateKeys);
+
+    let index = 0;
     for (const expr of this.props.answer.answerKey) {
-      const func = compileExpression(expr);
-      const templateKey = func(userInput);
-      if (templateKey && isString(templateKey)) {
+      const exprlog = `[${ index }]: "${ expr }"`;
+
+      let func;
+      try {
+        func = compileExpression(expr);
+      } catch (e) {
+        logError(exprlog, 'Compilation', e);
+        return ERROR;
+      }
+
+      let templateKey;
+      try {
+        templateKey = func(userInput);
+      } catch (e) {
+        logError(exprlog, 'Compilation', e);
+        return ERROR;
+      }
+
+      if (includes(existingTemplateKeys, templateKey)) {
+        log(exprlog, '=', templateKey);
+        log('templateKey:', templateKey);
+        logEnd();
         return templateKey;
       }
+
+      log(exprlog, '=', templateKey);
+
+      index++;
     }
+
+    log('templateKey:', 'default');
+    logEnd();
+
     return 'default';
   }
 
   render() {
     const { answer, questions } = this.props;
 
-    const templateKey = this.getTemplateKey(questions.inputValues);
+    const existingTemplateKeys = Object.keys({ ...answer.templates, default: true });
+    const templateKey = this.getTemplateKey(questions.inputValues, existingTemplateKeys);
+
+    if (templateKey === ERROR) {
+      return null;
+    }
 
     // nonexisting default template is ok
     if (templateKey === 'default' && !('default' in answer.templates)) {

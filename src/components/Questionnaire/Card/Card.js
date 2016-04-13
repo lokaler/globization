@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 
+import Debug from './Debug/Debug';
 import Text from './widgets/Text';
 import Answer from './widgets/Answer';
 import AnswerQuiz from './widgets/AnswerQuiz';
@@ -8,6 +9,7 @@ import Input from './widgets/Input';
 import Submit from './widgets/Submit';
 import RoundChooser from './widgets/RoundList/RoundList';
 import DatasetMenu from './widgets/DataSetList/DataSetList';
+import Logger from './widgets/logging';
 
 const widgets = {
   text: Text,
@@ -45,10 +47,15 @@ export default class Questionnaire extends React.Component {
     }
   }
 
-  clickHandlers = {
+  clickHandlers = { // eslint-disable-line react/sort-comp
     onStartClick: () => {
       this.props.actions.setCard(1);
     }
+  }
+
+  getLogger() {
+    const { actions, questions } = this.props;
+    return new Logger(actions, __DEV__ && questions.debugExpressions);
   }
 
   createWidgets(questions) {
@@ -72,19 +79,18 @@ export default class Questionnaire extends React.Component {
   }
 
   render() {
-    const questions = { ...this.props.questions };
-    const activeCard = questions.activeCard;
-    const firstCard = activeCard === -1;
-    const cardTitle = (questions.cards[activeCard] || {}).title;
+    const { questions } = this.props;
 
     if (questions.cards.length === 0) {
       return <div />;
     }
 
+    this.getLogger().clear();
+
     return (
       <div onClick={ this.onClick }>
-        { __DEV__ && !firstCard &&
-          <span style={{ color: 'green' }}>card: "{ cardTitle }"</span>
+        { __DEV__ &&
+          <Debug { ...this.props }/>
         }
         { this.createWidgets(questions) }
       </div>

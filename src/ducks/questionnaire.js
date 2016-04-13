@@ -8,6 +8,7 @@ const SET_CARD = 'SET_CARD';
 const SUBMIT_CARD = 'SUBMIT_CARD';
 const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
 const SET_DATASET = 'SET_DATASET';
+const SET_DEBUG_EXPRESSIONS = 'SET_DEBUG_EXPRESSIONS';
 
 const initialState = {
   validationError: null,
@@ -16,7 +17,8 @@ const initialState = {
   activeCard: 0,
   inputValues: {},
   cards: [],
-  submittedCards: {}
+  submittedCards: {},
+  debugExpressions: false
 };
 
 export function reducer(state = initialState, action) {
@@ -102,6 +104,13 @@ export function reducer(state = initialState, action) {
       };
     }
 
+    case SET_DEBUG_EXPRESSIONS: {
+      return {
+        ...state,
+        debugExpressions: action.debug
+      };
+    }
+
     default:
       return state;
   }
@@ -131,6 +140,8 @@ export const actions = {
 
   setDataSet,
 
-  quizSubmitCard: (cardKey) => ({ type: SUBMIT_CARD, cardKey })
+  quizSubmitCard: (cardKey) => ({ type: SUBMIT_CARD, cardKey }),
+
+  setDebugExpression: (debug) => ({ type: SET_DEBUG_EXPRESSIONS, debug })
 
 };

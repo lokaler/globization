@@ -141,6 +141,7 @@ function getConfig(env) {
     resolve: {
       alias: {
         ajv: root('node_modules/ajv/dist/ajv.bundle.js'),
+        src: root('src'),
         logic: root('src/logic'),
         data: root('src/data')
       }
