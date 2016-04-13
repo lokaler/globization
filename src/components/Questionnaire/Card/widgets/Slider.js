@@ -3,7 +3,6 @@ import React, { PropTypes } from 'react';
 import Rcslider from 'rc-slider';
 import cssModules from 'react-css-modules';
 import { sponLogger } from 'logic/logging';
-import { logbuch } from 'logic/logbuch';
 import 'rc-slider/assets/index.css';
 
 @cssModules()
@@ -23,7 +22,6 @@ export default class Slider extends React.Component {
     sponLogger();
     const { id, actions } = this.props;
     actions.updateUserInput(id, value);
-    logbuch({ key: id, value });
   }
 
   tipFormatter(val) {

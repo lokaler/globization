@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import { sponLogger } from 'logic/logging';
+import { logbuch } from 'logic/logbuch';
+import { fromPairs } from 'lodash';
 
 @cssModules()
 export default class Footer extends React.Component {
@@ -11,7 +13,9 @@ export default class Footer extends React.Component {
     nextBtnLabel: PropTypes.string,
     prevBtnLabel: PropTypes.string
   }
+
   /* eslint-disable */
+
   getClickHandler(cardIndex) {
     const { questions, actions } = this.props;
     if (cardIndex !== questions.activeCard) {
@@ -22,6 +26,7 @@ export default class Footer extends React.Component {
           && cardIndex > -1
         ) {
           dataId = questions.cards[cardIndex].dataset;
+          this.sendLogbuch();
         }
         else {
           cardIndex = -1;
@@ -30,6 +35,22 @@ export default class Footer extends React.Component {
         actions.setCard(cardIndex, dataId);
       };
     }
+  }
+
+  sendLogbuch(){
+    // console.log(this.props);
+
+    const { questions } = this.props;
+    const card = questions.cards[questions.activeCard];
+
+    const inputs = card.content
+      .filter(widget => 'input' in widget)
+      .map(widget => widget.input)
+      .map(widget => ([ widget.key, questions.inputValues[widget.key] ]))
+
+    // console.log(inputs, fromPairs(inputs));
+
+    logbuch(fromPairs(inputs));
   }
 
   createPagination(questions) {

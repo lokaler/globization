@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import translate from 'logic/translate';
-import { logbuch } from 'logic/logbuch';
 import styles from './widgets.scss';
 
 export default class Choices extends React.Component {
@@ -17,7 +16,6 @@ export default class Choices extends React.Component {
   setValue(value) {
     const { id, actions } = this.props;
     actions.updateUserInput(id, value);
-    logbuch({ key: id, value });
   }
 
   render() {
