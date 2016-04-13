@@ -26,32 +26,6 @@ function contentPart(key, schema = {}) {
   };
 }
 
-export const questionnaire = array({
-
-  $schema: 'http://json-schema.org/draft-04/schema#',
-
-  items: object({
-    additionalProperties: false,
-    required: ['key', 'title', 'content'],
-    properties: {
-      key: string(),
-      title: string(),
-      dataset: string(),
-      view: string(),
-      content: array({
-        items: object({
-          oneOf: [
-            contentPart('text'),
-            contentPart('input'),
-            contentPart('submit'),
-            contentPart('answer')
-          ]
-        })
-      })
-    }
-  })
-});
-
 const arrayOfStrings = array({ items: string() });
 const multiLangArrayOfStrings = object({
   required: ['de', 'en'],
@@ -63,28 +37,58 @@ const multiLangArrayOfStrings = object({
   }
 });
 
+const nullOrString = { type: ['null', 'string'] };
+
+export const questionnaire = array({
+
+  $schema: 'http://json-schema.org/draft-04/schema#',
+
+  items: object({
+    additionalProperties: false,
+    required: ['key', 'title', 'content'],
+    properties: {
+      key: string(),
+      title: string(),
+      dataset: nullOrString,
+      view: nullOrString,
+      content: array({
+        items: object({
+          oneOf: [
+            contentPart('text'),
+            contentPart('input'),
+            contentPart('submit'),
+            contentPart('answer'),
+            contentPart('roundChooser'),
+            contentPart('datasetMenu')
+          ]
+        })
+      })
+    }
+  })
+});
+
 export const widgets = {
 
-  text: contentPart('text', multiLangArrayOfStrings),
+  text: multiLangArrayOfStrings,
 
-  input: contentPart('input', object({
+  input: object({
     required: ['key', 'type', 'options'],
     properties: {
       key: string(),
       type: { enum: ['slider', 'choices'] },
       options: { type: 'object' }
     }
-  })),
+  }),
 
-  submit: contentPart('submit', object({
+  submit: object({
     required: ['key'],
     additionalProperties: false,
     properties: {
       key: string()
     }
-  })),
+  }),
 
-  answer: contentPart('answer', object({
+  answer: object({
     required: ['templates'],
     additionalProperties: false,
     properties: {
@@ -97,5 +101,10 @@ export const widgets = {
         patternProperties: { '.*': multiLangArrayOfStrings }
       }
     }
-  }))
+  }),
+
+  roundChooser: { enum: [true] },
+
+  datasetMenu: { enum: [true] }
+
 };

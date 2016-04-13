@@ -3,6 +3,7 @@ import { actions as visualizationActions } from './visualization';
 
 const LOAD_QUESTIONNAIRES = 'LOAD_QUESTIONNAIRES';
 const SET_QUESTIONNAIRE = 'SET_QUESTIONNAIRE';
+const RESET_QUESTIONNAIRE = 'RESET_QUESTIONNAIRE';
 const SET_CARD = 'SET_CARD';
 const SUBMIT_CARD = 'SUBMIT_CARD';
 const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
@@ -12,7 +13,7 @@ const initialState = {
   validationError: null,
   questionnaires: {},
   activeQuestionnaireId: '0416',
-  activeCard: -1,
+  activeCard: 0,
   inputValues: {},
   cards: [],
   submittedCards: {}
@@ -52,13 +53,19 @@ export function reducer(state = initialState, action) {
         ...state,
         validationError: null,
         activeQuestionnaireId: questionnaireId,
-        // activeCard: -1,
-        // inputValues: {},
-        // submittedCards: {},
         cards: questionnaire.cards,
         datasets: questionnaire.datasets,
         dataset: questionnaire.datasets[0],
         options: questionnaire.options
+      };
+    }
+
+    case RESET_QUESTIONNAIRE: {
+      return {
+        ...state,
+        activeCard: 0,
+        inputValues: {},
+        submittedCards: {}
       };
     }
 
@@ -107,6 +114,8 @@ export const actions = {
   loadQuestionnaires: (data) => ({ type: LOAD_QUESTIONNAIRES, data }),
 
   setQuestionnaire: (questionnaireId) => ({ type: SET_QUESTIONNAIRE, questionnaireId }),
+
+  resetQuestionnaire: () => ({ type: RESET_QUESTIONNAIRE }),
 
   updateUserInput: (key, value) => ({ type: UPDATE_USERINPUT, key, value }),
 

@@ -6,13 +6,17 @@ import Answer from './widgets/Answer';
 import AnswerQuiz from './widgets/AnswerQuiz';
 import Input from './widgets/Input';
 import Submit from './widgets/Submit';
+import RoundChooser from './widgets/RoundList/RoundList';
+import DatasetMenu from './widgets/DataSetList/DataSetList';
 
 const widgets = {
   text: Text,
   answer: Answer,
   answerQuiz: AnswerQuiz,
   input: Input,
-  submit: Submit
+  submit: Submit,
+  roundChooser: RoundChooser,
+  datasetMenu: DatasetMenu
 };
 
 @cssModules()
@@ -34,12 +38,28 @@ export default class Questionnaire extends React.Component {
     );
   }
 
+  onClick = (evt) => {
+    const handler = this.clickHandlers[evt.target.dataset.onclick];
+    if (handler) {
+      handler(evt);
+    }
+  }
+
+  clickHandlers = {
+    onStartClick: () => {
+      this.props.actions.setCard(1);
+    }
+  }
+
   createWidgets(questions) {
     const card = questions.cards[questions.activeCard];
     return card.content.map(
       (item, index) => {
         const widgetType = Object.keys(item)[0];
         const Widget = widgets[widgetType];
+        if (!Widget) {
+          throw new Error(`No widget "${ widgetType }"`);
+        }
         return (
           <Widget
             key={ `${card.key}_${widgetType}_${index}` }
@@ -62,7 +82,7 @@ export default class Questionnaire extends React.Component {
     }
 
     return (
-      <div>
+      <div onClick={ this.onClick }>
         { __DEV__ && !firstCard &&
           <span style={{ color: 'green' }}>card: "{ cardTitle }"</span>
         }

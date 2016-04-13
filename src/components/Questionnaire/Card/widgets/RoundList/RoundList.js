@@ -9,8 +9,10 @@ export default class RoundList extends React.Component {
   };
 
   onChange = (evt) => {
+    const { actions } = this.props;
     const questionnaireKey = evt.target.value;
-    this.props.actions.setQuestionnaire(questionnaireKey);
+    actions.setQuestionnaire(questionnaireKey);
+    actions.resetQuestionnaire();
   }
 
   render() {
