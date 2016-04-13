@@ -12,7 +12,7 @@ const initialState = {
   validationError: null,
   questionnaires: {},
   activeQuestionnaireId: '0416',
-  activeCard: -1,
+  activeCard: 0,
   inputValues: {},
   cards: [],
   submittedCards: {}
@@ -52,7 +52,7 @@ export function reducer(state = initialState, action) {
         ...state,
         validationError: null,
         activeQuestionnaireId: questionnaireId,
-        // activeCard: -1,
+        // activeCard: 0,
         // inputValues: {},
         // submittedCards: {},
         cards: questionnaire.cards,

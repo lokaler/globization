@@ -1,4 +1,5 @@
 export default [
+  require('./00-intro.json'),
   require('./01-geld.json'),
   require('./02-kauf.json'),
   require('./03-kleidung.json'),

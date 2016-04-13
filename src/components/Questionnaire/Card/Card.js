@@ -6,13 +6,17 @@ import Answer from './widgets/Answer';
 import AnswerQuiz from './widgets/AnswerQuiz';
 import Input from './widgets/Input';
 import Submit from './widgets/Submit';
+import RoundChooser from '../RoundList/RoundList';
+import DatasetMenu from '../DataSetList/DataSetList';
 
 const widgets = {
   text: Text,
   answer: Answer,
   answerQuiz: AnswerQuiz,
   input: Input,
-  submit: Submit
+  submit: Submit,
+  roundChooser: RoundChooser,
+  datasetMenu: DatasetMenu
 };
 
 @cssModules()
@@ -32,6 +36,19 @@ export default class Questionnaire extends React.Component {
       || (p.questions !== n.questions)
       || (p.master !== n.master)
     );
+  }
+
+  onClick = (evt) => {
+    const handler = this.clickHandlers[evt.target.dataset.onclick];
+    if (handler) {
+      handler(evt);
+    }
+  }
+
+  clickHandlers = {
+    onStartClick: () => {
+      this.props.actions.setCard(1);
+    }
   }
 
   createWidgets(questions) {
@@ -65,7 +82,7 @@ export default class Questionnaire extends React.Component {
     }
 
     return (
-      <div>
+      <div onClick={ this.onClick }>
         { __DEV__ && !firstCard &&
           <span style={{ color: 'green' }}>card: "{ cardTitle }"</span>
         }

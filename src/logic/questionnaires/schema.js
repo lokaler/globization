@@ -26,6 +26,19 @@ function contentPart(key, schema = {}) {
   };
 }
 
+const arrayOfStrings = array({ items: string() });
+const multiLangArrayOfStrings = object({
+  required: ['de', 'en'],
+  additionalProperties: false,
+  properties: {
+    action: string(),
+    de: arrayOfStrings,
+    en: arrayOfStrings
+  }
+});
+
+const nullOrString = { type: ['null', 'string'] };
+
 export const questionnaire = array({
 
   $schema: 'http://json-schema.org/draft-04/schema#',
@@ -36,31 +49,22 @@ export const questionnaire = array({
     properties: {
       key: string(),
       title: string(),
-      dataset: string(),
-      view: string(),
+      dataset: nullOrString,
+      view: nullOrString,
       content: array({
         items: object({
           oneOf: [
             contentPart('text'),
             contentPart('input'),
             contentPart('submit'),
-            contentPart('answer')
+            contentPart('answer'),
+            contentPart('roundChooser'),
+            contentPart('datasetMenu')
           ]
         })
       })
     }
   })
-});
-
-const arrayOfStrings = array({ items: string() });
-const multiLangArrayOfStrings = object({
-  required: ['de', 'en'],
-  additionalProperties: false,
-  properties: {
-    action: string(),
-    de: arrayOfStrings,
-    en: arrayOfStrings
-  }
 });
 
 export const widgets = {
@@ -97,5 +101,10 @@ export const widgets = {
         patternProperties: { '.*': multiLangArrayOfStrings }
       }
     }
-  })
+  }),
+
+  roundChooser: { enum: [true] },
+
+  datasetMenu: { enum: [true] }
+
 };
