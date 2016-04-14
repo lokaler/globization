@@ -143,7 +143,8 @@ function getConfig(env) {
         ajv: root('node_modules/ajv/dist/ajv.bundle.js'),
         src: root('src'),
         logic: root('src/logic'),
-        data: root('src/data')
+        data: root('src/data'),
+        store: root('src/store')
       }
     }
   };

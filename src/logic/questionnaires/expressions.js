@@ -1,6 +1,6 @@
 import { isArray } from 'lodash';
 import functions from './functions';
-import store from '../../store';
+import store from 'store';
 
 export function compileExpression(expr) {
   if (isArray(expr)) {

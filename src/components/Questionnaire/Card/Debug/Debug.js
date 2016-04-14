@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import store from 'src/store';
+import store from 'store';
 import styles from './Debug.scss';
 
 

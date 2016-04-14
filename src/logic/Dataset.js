@@ -1,5 +1,5 @@
 import { fromPairs, find, sample } from 'lodash';
-import store from '../store';
+import store from 'store';
 
 export default class Dataset {
   constructor(data) {

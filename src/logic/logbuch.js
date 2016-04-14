@@ -1,5 +1,5 @@
 import url from 'url';
-import store from '../store';
+import store from 'store';
 
 export function logbuch(payload) {
   const params = {
