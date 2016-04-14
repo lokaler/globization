@@ -25,6 +25,7 @@ export default {
     const dataset = getDataset(datasetKey);
     if (dataset) {
       const isoCode = maxBy(dataset.data, d => parseFloat(d.value)).iso;
+      // console.log(translate(isoCode, { isCountryCode: true, case: 'locative' }));
       return translate(isoCode, { isCountryCode: true, case: 'locative' });
     }
   },
