@@ -2,14 +2,13 @@ import React, { PropTypes } from 'react';
 import ReactMarkdown from 'react-markdown';
 import MicroMustache from 'micromustache';
 import cssModules from 'react-css-modules';
-import { compileExpression, compileContext } from 'logic/questionnaires/expressions';
+import { compileExpression } from 'logic/questionnaires/expressions';
 import translate from 'logic/translate';
 import { isUndefined, includes } from 'lodash';
+import center from 'underscore.string/lrpad';
 import classNames from 'classnames';
 import Logger from './logging';
 import functions from 'logic/questionnaires/functions';
-
-class ERROR {}
 
 @cssModules()
 export default class Answer extends React.Component {
@@ -20,57 +19,64 @@ export default class Answer extends React.Component {
     answer: PropTypes.object.isRequired
   }
 
-  getLogger() {
+  getLoggingFuncs() {
     const { actions, questions } = this.props;
-    return new Logger(actions, __DEV__ && questions.debugExpressions);
+    const logger = new Logger(actions, __DEV__ && questions.debugExpressions);
+    const { log, error } = logger;
+    const logStart = (s) => {
+      log(center(` ${ s } `, 80, '-'));
+    };
+    const logLine = (s = '-') => {
+      const r = 80 / s.length;
+      log(s.repeat(r));
+    };
+    const logEnd = () => {
+      logLine();
+      log('');
+    };
+    const logError = (info, err) => {
+      error(...info, `${ err.name } ->`, err.message);
+    };
+    return { log, error, logLine, logStart, logEnd, logError };
   }
 
-  getTemplateKey(userInput, existingTemplateKeys) {
-    const { log, error } = this.getLogger();
-    function logEnd() {
-      log('------------------------------------------------------------------------------');
-      log('');
-    }
-    function logError(exprlog, errorType, errorMessage) {
-      log(exprlog);
-      error(`${ errorType } ->`, errorMessage);
-      logEnd();
-    }
-    log('------------------------------ getTemplateKey() ------------------------------');
-    log('i:', userInput);
+  getTemplateKey(inputValues, existingTemplateKeys) {
+    const { log, logLine, logStart, logEnd, logError } = this.getLoggingFuncs();
+
+    logStart('getTemplateKey()');
+    log('i:', inputValues);
     log('f:', functions);
     log('existingTemplateKeys:', existingTemplateKeys);
+    logLine('- ');
 
-    let index = 0;
+    let index = -1;
     for (const expr of this.props.answer.answerKey) {
-      const exprlog = `[${ index }]: "${ expr }"`;
-
-      let func;
-      try {
-        func = compileExpression(expr);
-      } catch (e) {
-        logError(exprlog, 'Compilation', e);
-        return ERROR;
-      }
-
-      let templateKey;
-      try {
-        templateKey = func(userInput);
-      } catch (e) {
-        logError(exprlog, 'Compilation', e);
-        return ERROR;
-      }
-
-      if (includes(existingTemplateKeys, templateKey)) {
-        log(exprlog, '=', templateKey);
-        log('templateKey:', templateKey);
-        logEnd();
-        return templateKey;
-      }
-
-      log(exprlog, '=', templateKey);
-
       index++;
+
+      let info = [`[${ index }]: "${ expr }"`];
+
+      const { func, error } = this.compileExpression(expr);
+      if (error) {
+        logError(info, error);
+        continue;
+      }
+
+      const { value, error_ } = this.runFunction(func, inputValues);
+      if (error_) {
+        logError(info, error_);
+        continue;
+      }
+
+      info = [...info, '=', value];
+
+      if (includes(existingTemplateKeys, value)) {
+        log(...info, '- STOP');
+        log('templateKey:', value);
+        logEnd();
+        return value;
+      }
+
+      log(...info);
     }
 
     log('templateKey:', 'default');
@@ -79,13 +85,73 @@ export default class Answer extends React.Component {
     return 'default';
   }
 
+  compileContext(context, inputValues) {
+    const { log, logLine, logStart, logEnd, logError } = this.getLoggingFuncs();
+
+    logStart('compileContext()');
+    log('i:', inputValues);
+    log('f:', functions);
+    logLine('- ');
+
+    const compiledContext = {};
+    for (const [key, expr] of Object.entries(context)) {
+      let info = [`[${ key }]: "${ expr }"`];
+
+      const { func, error } = this.compileExpression(expr);
+      if (error) {
+        logError(info, error);
+        continue;
+      }
+
+      const { value, error_ } = this.runFunction(func, inputValues);
+      if (error_) {
+        logError(info, error_);
+        continue;
+      }
+
+      info = [...info, '=', value];
+      log(...info);
+      compiledContext[key] = value;
+    }
+
+    logEnd();
+    return compiledContext;
+  }
+
+  compileExpression(expr) {
+    try {
+      return {
+        func: compileExpression(expr),
+        error: null
+      };
+    } catch (e) {
+      return {
+        func: null,
+        error: { name: 'Compilation', message: e }
+      };
+    }
+  }
+
+  runFunction(func, inputValues) {
+    try {
+      return {
+        value: func(inputValues),
+        error_: null
+      };
+    } catch (e) {
+      return {
+        func: null,
+        error_: { name: 'Runtime', message: e }
+      };
+    }
+  }
+
   render() {
     const { answer, questions } = this.props;
 
     const existingTemplateKeys = Object.keys({ ...answer.templates, default: true });
     const templateKey = this.getTemplateKey(questions.inputValues, existingTemplateKeys);
-
-    if (templateKey === ERROR) {
+    if (!templateKey) {
       return null;
     }
 
@@ -102,7 +168,7 @@ export default class Answer extends React.Component {
 
     template = translate(template).join('\n');
 
-    const ctx = compileContext(answer.answerContext, questions.inputValues);
+    const ctx = this.compileContext(answer.answerContext, questions.inputValues);
     for (const k of Object.keys(ctx)) {
       ctx[k] = translate(ctx[k]);
     }

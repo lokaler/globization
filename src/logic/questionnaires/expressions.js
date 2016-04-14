@@ -14,12 +14,3 @@ export function compileExpression(expr) {
     return func(inputs, functions, store.getState());
   };
 }
-
-export function compileContext(context, userInput) {
-  const compiledContext = {};
-  Object.keys(context).forEach((key) => {
-    const func = compileExpression(context[key]);
-    compiledContext[key] = func(userInput);
-  });
-  return compiledContext;
-}
