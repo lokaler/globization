@@ -17,7 +17,7 @@
     },
     {
       "input": {
-        "key": "overweight",
+        "key": "overweightKids",
         "type": "choices",
         "options": {
           "choices": [
@@ -35,16 +35,15 @@
     },
     {
       "answer": {
-        "//key": "answer_overweight",
-        "//actions": ["f.panToRandomCountry()"],
         "answerKey": [
           "!i.kidsSubmitted && 'notSubmitted'",
-          "i.overweight"
+          "f.panToCountry('KIR') && false",
+          "i.overweightKids"
         ],
         "answerContext": {},
         "templates": {
           "notSubmitted": {
-            "de": ["notSubmitted"], "en": ["notSubmitted"]
+            "de": ["Bitte beantworten sie die Fragen"], "en": ["notSubmitted"]
           },
           "choice_1": {
             "de": [
