@@ -27,11 +27,11 @@ export default class Questionnaire extends React.Component {
   render() {
     const { questions } = this.props;
     const activeCard = questions.activeCard;
-    const cardTitle = (questions.cards[activeCard] || {}).title;
+    const cardKey = (questions.cards[activeCard] || {}).key;
     const checked = questions.debugExpressions;
     return (
       <div className={ styles.component }>
-        <span>card: "{ cardTitle }"</span>
+        <span>card: "{ cardKey }"</span>
         &nbsp;&nbsp;&nbsp;
         <input type="checkbox" checked={ checked } onChange={ this.onChangeCheckbox }/>debug
         &nbsp;&nbsp;&nbsp;
