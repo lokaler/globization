@@ -7,6 +7,7 @@ import translate from 'logic/translate';
 import { isUndefined, includes } from 'lodash';
 import classNames from 'classnames';
 import Logger from './logging';
+import functions from 'logic/questionnaires/functions';
 
 class ERROR {}
 
@@ -36,7 +37,8 @@ export default class Answer extends React.Component {
       logEnd();
     }
     log('------------------------------ getTemplateKey() ------------------------------');
-    log('userInput:', userInput);
+    log('i:', userInput);
+    log('f:', functions);
     log('existingTemplateKeys:', existingTemplateKeys);
 
     let index = 0;
