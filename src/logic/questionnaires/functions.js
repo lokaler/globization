@@ -149,6 +149,18 @@ export default {
     return weight / ((height * height) / 10000);
   },
 
+  getBmiClassification(bmi) {
+    if (bmi < 18.5) {
+      return translate('underweight');
+    } else if (bmi > 18.5 && bmi < 24.9) {
+      return translate('nromalweight');
+    } else if (bmi > 25 && bmi < 29.9) {
+      return translate('overweight');
+    } else if (bmi > 29.9) {
+      return translate('veryoverweight');
+    }
+  },
+
   shareButtonTwitter(url, text) {
     const language = store.getState().app.language;
     const linkUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}&lang=${language}&via=SPIEGELONLINE`;

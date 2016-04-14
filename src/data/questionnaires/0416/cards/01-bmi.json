@@ -11,7 +11,7 @@
           "",
           "Starkes Übergewicht schadet der Gesundheit und erhöht das Risiko, früh zu sterben. Ein Anhaltspunkt dafür, ob Sie zu viel oder zu wenig auf die Waage bringen, ist der Body-Mass-Index (BMI). Er berechnet sich aus Ihrer Größe und Ihrem Gewicht.",
           "",
-          "**Geben Sie Ihr Geschlecht an?**"
+          "**Geben Sie Ihr Geschlecht an**"
         ],
         "en": [
 
@@ -34,7 +34,7 @@
     {
       "text": {
         "de": [
-          "**Bitte geben Sie Ihre Körpergröße an?**"
+          "**Bitte geben Sie Ihre Körpergröße an**"
         ],
         "en": [
           "** **"
@@ -57,7 +57,7 @@
     {
       "text": {
         "de": [
-          "**Bitte geben Sie Ihre Gewicht an?**"
+          "**Bitte geben Sie Ihre Gewicht an**"
         ],
         "en": [
           "** **"
@@ -101,7 +101,8 @@
         "answerContext": {
           "bmiCountryMan": "f.getCountryName('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight))",
           "bmiCountryWoman": "f.getCountryName('bmiWoman', f.calculateBmi(i.sliderWeight, i.sliderHeight))",
-          "bmiValue" : "f.fmt('%0.1f',f.calculateBmi(i.sliderWeight, i.sliderHeight))"
+          "bmiValue" : "f.fmt('%0.1f',f.calculateBmi(i.sliderWeight, i.sliderHeight))",
+          "bmiClassification" : "f.getBmiClassification(f.calculateBmi(i.sliderWeight, i.sliderHeight))"
         },
         "templates": {
           "notSubmitted": {
@@ -112,7 +113,9 @@
           },
           "man": {
             "de": [
-              "Man {{ bmiValue }} {{ bmiCountryMan }}"
+              "Mit einem BMI von {{ bmiValue }} gelten Sie laut Weltgesundheitsorganisation als {{ bmiClassification }}",
+              "",
+              "Wenn [Gewicht in kg/(Größe in m)^2] < 20,1 Ihr BMI ist geringer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am niedrigsten ist der durchschnittliche BMI in [Land_Männer_BMI_Min] mit [Wert_land_Männer_BMI_min]."
             ],
             "en": [
               "foo!"
@@ -120,7 +123,9 @@
           },
           "woman": {
             "de": [
-              "Woman {{ bmiValue }} {{ bmiCountryWoman }}"
+              "Mit einem BMI von {{ bmiValue }} gelten Sie laut Weltgesundheitsorganisation als {{ bmiClassification }}",
+              "",
+              "Wenn [Gewicht in kg/(Größe in m)^2] < 20,8 Ihr BMI ist geringer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am niedrigsten ist der durchschnittliche BMI in [Land_Frauen_BMI_Min] mit [Wert_land_Frauen_BMI_min]. "
             ],
             "en": [
               "foo!"
