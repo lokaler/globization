@@ -26,7 +26,7 @@
     ],
     "translate": [0,90],
     "scale": 1,
-    "colorSet":"Oranges",
+    "colorSet":"Blues",
     "colorNum":9,
     "data":[
       { "iso":"AFG" ,"value":23.7 },
@@ -258,7 +258,7 @@
     ],
     "translate": [0,90],
     "scale": 1,
-    "colorSet":"Oranges",
+    "colorSet":"Blues",
     "colorNum":9,
     "data":[
       { "iso":"AFG" ,"value":21.6 },
@@ -490,7 +490,7 @@
     ],
     "translate": [0,90],
     "scale": 1,
-    "colorSet":"Oranges",
+    "colorSet":"Blues",
     "colorNum":9,
     "data":
       [
@@ -711,7 +711,7 @@
     ],
     "translate": [0,90],
     "scale": 1,
-    "colorSet":"Oranges",
+    "colorSet":"Blues",
     "colorNum":9,
     "data":
       [
@@ -932,7 +932,7 @@
     ],
     "translate": [0,90],
     "scale": 1,
-    "colorSet":"Oranges",
+    "colorSet":"Blues",
     "colorNum":9,
     "data":
       [
@@ -1165,7 +1165,7 @@
     ],
     "translate": [0,90],
     "scale": 1,
-    "colorSet":"Oranges",
+    "colorSet":"Blues",
     "colorNum":9,
     "data":
       [
@@ -1394,7 +1394,7 @@
     ],
     "translate": [0,90],
     "scale": 1,
-    "colorSet":"Oranges",
+    "colorSet":"Blues",
     "colorNum":9,
     "data":
       [
@@ -1543,7 +1543,7 @@
     ],
     "translate": [0,90],
     "scale": 1,
-    "colorSet":"Oranges",
+    "colorSet":"Blues",
     "colorNum":9,
     "data":
       [

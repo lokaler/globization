@@ -8,7 +8,7 @@
         "de": [
           " # Gesundheitsrisiko Alkohol",
           "",
-          "In einem WHO-Report zu Alkohol und Gesundheit 2014 kommen die Autoren zu dem Schluss, dass Alkoholkonsum weltweit zu mehr Todesfällen führt als Tuberkulose und HIV zusammen.",
+          "In einem [WHO-Report zu Alkohol und Gesundheit 2014](http://apps.who.int/iris/bitstream/10665/112736/1/9789240692763_eng.pdf?ua=1) kommen die Autoren zu dem Schluss, dass Alkoholkonsum weltweit zu mehr Todesfällen führt als Tuberkulose und HIV zusammen.",
           "",
           "Tippen Sie: Wie viel Alkohol trinken die Deutschen durchschnittlich pro Woche? Schätzen Sie in Anzahl von 0,5-Liter-Bieren (Tipp: Rechnen Sie für ein Glas Rotwein ein 0,5l-Bier und für einen Schnaps ein Drittel 0,5l-Bier)"
         ],
@@ -31,27 +31,29 @@
       }
     },
     {
+      "submit": {
+        "key": "alcoholSubmitted"
+      }
+    },
+    {
       "answer": {
-        "//key": "answer_alcohol",
-        "//actions": ["f.panToRandomCountry()"],
         "answerKey": [
+            "!i.alcoholSubmitted && 'notSubmitted'",
             "(i.sliderAlcohol < 8) && 'lessAlcohol'",
             "(i.sliderAlcohol < 10) && 'someAlcohol'",
             "(i.sliderAlcohol > 10) && 'muchAlcohol'"
           ],
-        "answerContext": {},
+        "answerContext": {
+          "AlcoholCountry": "f.getCountryName('alcoholConsume', 'alcoholSubmitted')"
+
+        },
         "templates": {
-          "default": {
-            "de": [
-              "Auswahl bestätigen."
-            ],
-            "en": [
-              "default en"
-            ]
+          "notSubmitted": {
+            "de": ["Bitte beantworten sie die Fragen"], "en": ["notSubmitted"]
           },
           "lessAlcohol": {
             "de": [
-              "foo"
+              "Nein, etwas mehr ist es schon. Im Schnitt trinken Deutsche wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist. Ihre Schätzung entspricht ungefähr dem Alkoholkonsum der Menschen in **{{ AlcoholCountry }}**."
             ],
             "en": [
               "foo!"
@@ -59,7 +61,7 @@
           },
           "someAlcohol": {
             "de": [
-              "foo"
+              "Ziemlich gut geschätzt! Im Schnitt trinken Deutsche wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist."
             ],
             "en": [
               "foo!"
@@ -67,7 +69,7 @@
           },
           "muchAlcohol": {
             "de": [
-              "foo"
+              "Ganz so viel ist es nicht. Im Schnitt trinken Deutsche wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist. Ihre Schätzung entspricht ungefähr dem Alkoholkonsum der Menschen in [Land_Wert_Alkohol]."
             ],
             "en": [
               "foo!"

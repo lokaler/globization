@@ -43,7 +43,11 @@
         "answerContext": {},
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten sie die Fragen"], "en": ["notSubmitted"]
+            "de": ["Bitte beantworten sie die Frage."], "en": ["notSubmitted"]
+          },
+
+          "allAnswered": {
+            "de": ["Sind sie sich sicher ?"], "en": ["notSubmitted"]
           },
           "choice_1": {
             "de": [

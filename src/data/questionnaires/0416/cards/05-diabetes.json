@@ -48,7 +48,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten sie die Fragen"], "en": ["notSubmitted"]
+            "de": ["Bitte beantworten sie die Frage."], "en": ["notSubmitted"]
           },
           "choice_1": {
             "de": [

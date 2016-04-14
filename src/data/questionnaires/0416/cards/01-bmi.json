@@ -112,7 +112,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten sie die Fragen"], "en": ["notSubmitted"]
+            "de": ["Bitte machen Sie alle drei Angaben"], "en": ["notSubmitted"]
           },
           "allAnswered": {
             "de": ["Sind sie sich sicher ?"], "en": ["notSubmitted"]

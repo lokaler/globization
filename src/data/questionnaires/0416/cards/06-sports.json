@@ -31,22 +31,24 @@
       }
     },
     {
-      "answer": {
-        "//key": "answer_sport",
-        "//actions": ["f.panToRandomCountry()"],
-        "answerKey": [
-            "i.sport"
-          ],
-        "answerContext": {},
-        "templates": {
-          "default": {
-            "de": [
-              "Auswahl bestätigen."
+          "submit": {
+            "key": "sportSubmitted"
+          }
+        },
+        {
+          "answer": {
+            "answerKey": [
+              "!i.sportSubmitted && 'notSubmitted'",
+              "f.panToCountry('ITA') && false",
+              "i.sport"
             ],
-            "en": [
-              "default en"
-            ]
-          },
+            "answerContext": {
+
+            },
+            "templates": {
+              "notSubmitted": {
+                "de": ["Bitte beantworten sie die Fragen"], "en": ["notSubmitted"]
+              },
           "sport_choice_one": {
             "de": [
               "Nein. In China bewegen sich nach Schätzungen der Weltgesundheitsorganisation (WHO) zwar 84 Prozent der 11- bis 17-Jährigen zu wenig. Es gibt aber viele Länder, zum Beispiel Italien, in denen noch weniger Jugendliche ausreichend Sport treiben. In Deutschland sitzen 83 Prozent der Heranwachsenden zu viel herum."
