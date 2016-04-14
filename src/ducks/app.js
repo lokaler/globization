@@ -1,12 +1,8 @@
-// import d3 from 'd3';
 import { includes } from 'lodash';
 import { getQueryVariable } from 'logic/url';
 
-const GET_URL_PARAMETERS = 'GET_URL_PARAMETERS';
+export const GET_URL_PARAMETERS = 'GET_URL_PARAMETERS';
 const SET_WINDOW_SIZE = 'SET_WINDOW_SIZE';
-
-// const bbox = d3.select('body').node().getBoundingClientRect();
-// const width = Math.min(bbox.width, 860);
 
 const initialState = {
   language: 'de',
@@ -19,9 +15,7 @@ export function reducer(state = initialState, action) {
   switch (action.type) {
 
     case GET_URL_PARAMETERS: {
-      let language = getQueryVariable('language') || 'de';
-      if (!includes(['de', 'en'], language)) language = 'de';
-      const mobile = !!parseInt(getQueryVariable('mobile') || '0', 10);
+      const { language, mobile } = action;
       return { ...state, language, mobile };
     }
 
@@ -36,9 +30,15 @@ export function reducer(state = initialState, action) {
 }
 
 export const actions = {
-  getUrlParameters: () => (
-    { type: GET_URL_PARAMETERS }
-  ),
+
+  getUrlParameters: () => {
+    let language = getQueryVariable('language') || 'de';
+    if (!includes(['de', 'en'], language)) language = 'de';
+    const mobile = !!parseInt(getQueryVariable('mobile') || '0', 10);
+    const round = getQueryVariable('round') || null;
+    return { type: GET_URL_PARAMETERS, language, mobile, round };
+  },
+
   setWindowSize: (sizes) => (
     { type: SET_WINDOW_SIZE, sizes }
   )

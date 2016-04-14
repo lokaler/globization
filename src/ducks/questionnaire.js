@@ -1,7 +1,8 @@
+import { includes } from 'lodash';
+
 import { actions as visualizationActions } from './visualization';
-import { getQueryVariable } from 'logic/url';
 
-
+import { GET_URL_PARAMETERS } from './app';
 const LOAD_QUESTIONNAIRES = 'LOAD_QUESTIONNAIRES';
 const SET_QUESTIONNAIRE = 'SET_QUESTIONNAIRE';
 const RESET_QUESTIONNAIRE = 'RESET_QUESTIONNAIRE';
@@ -10,13 +11,12 @@ const SUBMIT_CARD = 'SUBMIT_CARD';
 const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
 const SET_DATASET = 'SET_DATASET';
 const SET_DEBUG_EXPRESSIONS = 'SET_DEBUG_EXPRESSIONS';
-const GET_URL_PARAMETERS = 'GET_URL_PARAMETERS';
 
 
 const initialState = {
   validationError: null,
   questionnaires: {},
-  activeQuestionnaireId: '0416',
+  activeQuestionnaireId: '0316',
   activeCard: 0,
   inputValues: {},
   cards: [],
@@ -28,9 +28,12 @@ export function reducer(state = initialState, action) {
   switch (action.type) {
 
     case GET_URL_PARAMETERS: {
-      const activeQuestionnaireId = getQueryVariable('round') || '0316';
-      console.log(activeQuestionnaireId);
-      return { ...state, activeQuestionnaireId };
+      const keys = Object.keys(state.questionnaires);
+      const newQuestionnaireId = action.round;
+      if (includes(keys, newQuestionnaireId)) {
+        return { ...state, activeQuestionnaireId: newQuestionnaireId };
+      }
+      return state;
     }
 
     case LOAD_QUESTIONNAIRES: {
@@ -128,10 +131,6 @@ export function reducer(state = initialState, action) {
 const setDataSet = (name) => ({ type: SET_DATASET, name });
 
 export const actions = {
-
-  getUrlParameters: () => (
-    { type: GET_URL_PARAMETERS }
-  ),
 
   loadQuestionnaires: (data) => ({ type: LOAD_QUESTIONNAIRES, data }),
 
