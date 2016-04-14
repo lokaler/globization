@@ -38,5 +38,21 @@
   "submit": {
     "de": "Antwort einloggen",
     "en": "Log in answer"
+  },
+  "underweight": {
+    "de": "untergewichtig",
+    "en": "untergewichtig"
+  },
+  "normalweight": {
+    "de": "normalgewichtig",
+    "en": "normalgewichtig"
+  },
+  "overweight": {
+    "de": "übergewichtig",
+    "en": "übergewichtig"
+  },
+  "veryoverweight": {
+    "de": "stark übergewichtig",
+    "en": "stark übergewichtig"
   }
 }
