@@ -51,7 +51,7 @@
             },
             "templates": {
               "notSubmitted": {
-                "de": ["Bitte beantworten sie die Fragen"], "en": ["Please answer the question."]
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
               },
           "sport_choice_one": {
             "de": [
