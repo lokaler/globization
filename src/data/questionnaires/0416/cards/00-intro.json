@@ -12,19 +12,25 @@
         "de": [
           "# ÜberMorgen-Explorer",
           "",
-          "Wissen Sie, wo auf der Welt die Menschen am gesündesten leben? Und wie steht es um Ihre Gesundheit im globalen Vergleich? Testen Sie Ihr Wissen!",
+          "Wissen Sie, wo auf der Welt die Menschen am gesündesten leben? Und wie steht es um Ihre Gesundheit im globalen Vergleich? Testen Sie Ihr Wissen! Oben können Sie das Thema aus dem Vormonat auswählen.",
           "",
-          "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
+          "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>",
+          "",
+          "Oder erkunden Sie die Datensätze:"
         ],
         "en": [
           "# BeyondTomorrow Explorer",
           "",
-          "Compare your consumption habits with those of people from other countries --",
-          "and find out how you can protect the environment and conserve natural resources.",
+          "Do you know where the world’s healthiest people live? Do you know how you compare globally? Test your knowledge!",
           "",
-          "<div class='losButton' data-onclick='onStartClick'>Let's go</div>"
+          "<div class='losButton' data-onclick='onStartClick'>Let's go</div>",
+          "",
+          "Or go ahead explore the data sets."
         ]
       }
+    },
+    {
+      "datasetMenu": true
     }
   ]
 }
