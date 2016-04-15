@@ -25,7 +25,7 @@
           "choices": [
             ["choice_1", { "de": "USA", "en": "USA" }],
             ["choice_2", { "de": "Kiribati", "en": "Kiribati"}],
-            ["choice_3", { "de": "Nordkorea", "en": "North Corea" }]
+            ["choice_3", { "de": "Nordkorea", "en": "North Korea" }]
           ]
         }
       }

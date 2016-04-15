@@ -53,7 +53,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten sie die Fragen"], "en": ["Please anser the question."]
+            "de": ["Bitte beantworten sie die Fragen"], "en": ["Please answer the question."]
           },
           "lessAlcohol": {
             "de": [
