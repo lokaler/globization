@@ -14,12 +14,16 @@
           "",
           "Wissen Sie, wo auf der Welt die Menschen am gesündesten leben? Und wie steht es um Ihre Gesundheit im globalen Vergleich? Testen Sie Ihr Wissen! Oben können Sie das Thema aus dem Vormonat auswählen.",
           "",
+          "Sie können den Datenglobus jederzeit bewegen, anklicken und zwischen verschiedenen Ansichten wählen. Probieren Sie es aus!",
+          "",
           "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
         ],
         "en": [
           "# BeyondTomorrow Explorer",
           "",
           "Do you know where the world’s healthiest people live? Do you know how you compare globally? Test your knowledge!",
+          "",
+          "Go ahead explore the data sets.",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Let's go</div>"
         ]
