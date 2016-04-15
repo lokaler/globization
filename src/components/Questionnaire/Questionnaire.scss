@@ -1,0 +1,154 @@
+:local(.questions) {
+
+  line-height: 1.4em;
+  font-size: 12px;
+
+  :local(.inner) {
+    padding: 20px;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: #A74405;
+  }
+
+  .losButton {
+    font-size: 12px;
+    padding: 10px 30px 10px 30px;
+    font-weight: bold;
+    background: #7d9f89;
+    color: #FFF;
+    text-align: center;
+    border-radius: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    float: left;
+    width:100%;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+    box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);
+
+    &:hover {
+      box-shadow: 0px 3px 4px rgba(0,0,0,0.1);
+      background: #577562;
+      -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+    }
+  }
+
+  h1 {
+    margin-top:0;
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 1.2em;
+  }
+  p {
+    float:left;
+  }
+
+  :local(.widget) {
+    margin-top:1em;
+    float:left;
+    width: 100%;
+
+    .share {
+      clear: both;
+      padding-bottom: 15px;
+    }
+
+    button {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    &:first-of-type {
+      // margin-top:0;
+    }
+
+  }
+
+  button {
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    color: #FFF;
+    background: #7D9F89;
+    padding: 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    float: left;
+  }
+
+  .answer {
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: rgba(154, 154, 154, 0.22);
+    color: #2B2B2B;
+
+    .sharing {
+      clear: both;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      float: left;
+      width: 100%;
+
+      .label {
+        float: left;
+        padding-top: 7px;
+      }
+      .share {
+        width: 102px;
+        height: 35px;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        clear: none;
+        background-repeat: no-repeat;
+        padding-bottom: 0px;
+
+        &.en{
+          background-image: url("../Ubermorgen/img/sprite-socials-en.png");
+        }
+        &.de{
+          background-image: url("../Ubermorgen/img/sprite-socials.png");
+        }
+
+        &.twitter{
+          float: left;
+          background-position-x: -6px;
+          background-position-y: -56px;
+        }
+        &.facebook{
+          float: right;
+          background-position-x: -6px;
+          background-position-y: -8px;
+        }
+      }
+    }
+
+
+  }
+
+  .answer-tip {
+    background: rgba(255, 170, 0, 0.22) !important;
+  }
+
+  .slider{
+    // margin-top:2em!important;
+    margin-bottom:1em;
+
+    .rc-slider-track {
+      background-color: #FD8D3C;
+    }
+    .rc-slider-handle {
+      border-color:#FD8D3C;
+    }
+  }
+
+
+}

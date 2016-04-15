@@ -2,8 +2,9 @@ import React, { PropTypes } from 'react';
 import ReactMarkdown from 'react-markdown';
 import cssModules from 'react-css-modules';
 import translate from 'logic/translate';
+import styles from '../../Questionnaire.scss';
 
-@cssModules()
+@cssModules(styles)
 export default class Text extends React.Component {
 
   static propTypes = {

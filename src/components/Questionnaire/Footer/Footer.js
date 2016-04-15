@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
-import cssModules from 'react-css-modules';
 import { sponLogger } from 'logic/logging';
 import { logbuch } from 'logic/logbuch';
 import { fromPairs } from 'lodash';
+import styles from './Footer.scss';
 
-@cssModules()
+
 export default class Footer extends React.Component {
 
   static propTypes = {
@@ -57,7 +57,7 @@ export default class Footer extends React.Component {
     return questions.cards.map((q, i) =>
       <div
         key={ `${i}_pagination-item` }
-        styleName={ i === questions.activeCard ? 'pagination-item--active' : 'pagination-item' }
+        className={ i === questions.activeCard ? styles.pagination_item__active : styles.pagination_item }
         onClick={ this.getClickHandler(i) }
       />
     );
@@ -74,19 +74,21 @@ export default class Footer extends React.Component {
         .bind(this)(questions) : null;
 
     return (
-      <div styleName="footer">
+      <div className={ styles.footer }>
         {
           showPrevBtn &&
-          <div styleName="btn-prev" onClick={ this.getClickHandler(questions.activeCard - 1) }>
-            <div styleName="btn-arrow"></div>
-            <div styleName="btn-text">{ prevBtnLabel }</div>
+          <div className={ styles.btn_prev } onClick={ this.getClickHandler(questions.activeCard - 1) }>
+            <div className={ styles.btn_arrow }></div>
+            <div className={ styles.btn_text }>{ prevBtnLabel }</div>
           </div>
         }
-        { showPagination && <div styleName="pagination" className="clearfix">{ pagination }</div> }
+        { showPagination &&
+          <div className={ styles.pagination + ' clearfix' }>{ pagination }</div>
+        }
         { showNextBtn && questions.activeCard !== -1 &&
-            <div styleName="btn-next" onClick={ this.getClickHandler(questions.activeCard + 1) }>
-              <div styleName="btn-text">{ nextBtnLabel }</div>
-              <div styleName="btn-arrow"></div>
+            <div className={ styles.btn_next } onClick={ this.getClickHandler(questions.activeCard + 1) }>
+              <div className={ styles.btn_text }>{ nextBtnLabel }</div>
+              <div className={ styles.btn_arrow }></div>
             </div>
         }
       </div>

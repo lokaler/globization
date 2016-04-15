@@ -1,16 +1,15 @@
 import React, { PropTypes } from 'react';
 import d3 from 'd3';
 import { debounce } from 'lodash';
-import cssModules from 'react-css-modules';
 
 import Vis from '../Vis/VisWrapper';
 import Questionnaire from '../Questionnaire/Questionnaire';
 
 import questionnaires from 'data/questionnaires/index';
-import styles from './styles.scss';
+import styles from './Ubermorgen.scss';
 import store from 'store';
 
-@cssModules(styles)
+
 export default class UbermorgenApp extends React.Component {
 
   static propTypes = {
@@ -59,11 +58,10 @@ export default class UbermorgenApp extends React.Component {
   }
 
   render() {
-    // console.log(this.props.app);
     const responsiveClass = this.props.app.mobile ? 'mq-mobile' : 'mq-desktop';
     return (
       <div className={ responsiveClass }>
-        <div styleName="container">
+        <div className={ styles.container }>
           <div className="left">
             <Vis {...this.props}/>
           </div>

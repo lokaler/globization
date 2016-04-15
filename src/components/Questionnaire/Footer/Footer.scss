@@ -1,0 +1,131 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+:local(.footer) {
+
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.92);
+
+  @mixin pagination-item {
+    background: transparent;
+    border: 2px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    float: left;
+    height: 12px;
+    margin-right: 3px;
+    width: 12px;
+
+    &:first-child{
+      display: none;
+    }
+    &:last-child{
+      display: none;
+    }
+  }
+
+  :local(.pagination) {
+    @include clearfix;
+
+  }
+
+  :local(.pagination_item) {
+    @include pagination-item;
+    border-color: #ddd;
+
+    &:hover {
+      border-color: #777;
+    }
+  }
+
+  :local(.pagination_item__active) {
+    @include pagination-item;
+    border-color: #777;
+    background: #ddd;
+    cursor: default;
+  }
+
+  @mixin btn {
+    color: #777;
+    cursor: pointer;
+    position: absolute;
+    user-select: none;
+  }
+
+  @mixin btn-text {
+    text-transform: uppercase;
+    float: left;
+    font-size: 12px;
+
+    background: #7d9f89;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+    border-radius: 2px;
+    text-transform: uppercase;
+    float: left;
+    position: relative;
+    font-size: 12px;
+    margin-right: 5px;
+    font-weight: bold;
+    margin-top:7px;
+
+    &:hover {
+      colors: #000;
+    }
+  }
+
+  @mixin btn-arrow {
+    float: left;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    display: none;
+  }
+
+  :local(.btn_next) {
+    @include btn;
+    right: 5px;
+
+    :local(.btn_text) {
+      @include btn-text;
+      margin-right: 5px;
+    }
+
+    :local(.btn_arrow) {
+      @include btn_arrow;
+      border-width: 8px 0 8px 15px;
+      border-color: transparent transparent transparent #EEE;
+    }
+
+  }
+
+  :local(.btn_prev) {
+    @include btn;
+    left: 5px;
+
+    :local(.btn_text) {
+      @include btn-text;
+      margin-left: 5px;
+      background: #EEE;
+      color: #ACACAC;
+    }
+
+    :local(.btn_arrow) {
+      @include btn-arrow;
+      border-width: 8px 15px 8px 0;
+      border-color: transparent #EEE transparent transparent;
+    }
+
+  }
+}

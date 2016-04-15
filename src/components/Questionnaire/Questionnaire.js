@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react';
-import cssModules from 'react-css-modules';
 
 import Card from './Card/Card';
-import Footer from './Footer';
+import Footer from './Footer/Footer';
 import ShadowScrollbars from './ShadowScrollbars';
 import Error from './Error/Error';
 import translate from 'logic/translate';
+import styles from './Questionnaire.scss';
 
-@cssModules()
+
 export default class Questionnaire extends React.Component {
 
   static propTypes = {
@@ -42,12 +42,12 @@ export default class Questionnaire extends React.Component {
     const scrollHeight = app.mobile ? ((app.height * (1 - 0.3)) - 50) : app.height - 50;
 
     return (
-      <div styleName="questions">
+      <div className={ styles.questions }>
         <ShadowScrollbars
           activeCard={ activeCard }
           style={{ width: '100%', height: scrollHeight }}
         >
-          <div styleName="inner">
+          <div className={ styles.inner }>
             <Card { ...this.props }/>
           </div>
         </ShadowScrollbars>
