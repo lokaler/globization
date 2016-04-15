@@ -106,7 +106,7 @@
           "bmiManCountry": "f.getCountryName('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight))",
           "bmiManMinCountry" : "f.getMinCountryName('bmiMan')",
           "bmiManMinValue" : "f.getMinValue('bmiMan')",
-          "bmiManMaxCounty" : "f.getMaxCountryName('bmiMan')",
+          "bmiManMaxCountry" : "f.getMaxCountryName('bmiMan')",
           "bmiManMaxValue" : "f.getMaxValue('bmiMan')",
           "bmiWomanCountry": "f.getCountryName('bmiWoman', f.calculateBmi(i.sliderWeight, i.sliderHeight))",
           "bmiWomanMinCountry" : "f.getMinCountryName('bmiWoman')",
