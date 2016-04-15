@@ -49,6 +49,7 @@ export default class Slider extends React.Component {
           max={ options.max }
           step = { options.step || 1 }
           onAfterChange={ sliderChangeBind }
+          tipTransitionName="rc-slider-tooltip-zoom-down"
         />
       </div>
     );
