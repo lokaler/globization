@@ -52,7 +52,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten sie die Frage."], "en": ["Please answer the question."]
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
           },
           "choice_1": {
             "de": [

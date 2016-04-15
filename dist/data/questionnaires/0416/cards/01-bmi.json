@@ -116,8 +116,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte machen Sie alle drei Angaben"], "en": ["Please answer all questions."]
-          },
+            "de": ["Bitte alles beantworten und dann bestätigen."], "en": ["Please answer all and confirm after."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },

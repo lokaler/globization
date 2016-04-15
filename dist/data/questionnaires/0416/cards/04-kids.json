@@ -45,7 +45,7 @@
         "answerContext": {},
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten sie die Frage."], "en": ["Please anser the question."]
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
           },
 
           "allAnswered": {

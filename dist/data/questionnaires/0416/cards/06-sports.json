@@ -8,9 +8,9 @@
         "de": [
           " # Sport gegen den Speck",
           "",
-          "Zur Vorbeugung von Übergewicht helfen eine ausgewogene Ernährung – und genug Bewegung. Was glauben Sie: In welchem dieser Länder ist der Anteil der Jugendlichen, die sich zu wenig bewegen, am höchsten?",
+          "Zur Vorbeugung von Übergewicht helfen eine ausgewogene Ernährung – und genug Bewegung.",
           "",
-          "Was glauben Sie: **In welchem dieser Länder leiden, gemessen an der Gesamtbevölkerung, die meisten Frauen unter Diabetes?**"
+          "Was glauben Sie: **In welchem dieser Länder ist der Anteil der Jugendlichen, die sich zu wenig bewegen, am höchsten?**"
         ],
         "en": [
           "# Exercise is the answer",
@@ -51,7 +51,7 @@
             },
             "templates": {
               "notSubmitted": {
-                "de": ["Bitte beantworten sie die Fragen"], "en": ["Please answer the question."]
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
               },
           "sport_choice_one": {
             "de": [
