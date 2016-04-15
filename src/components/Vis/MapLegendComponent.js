@@ -44,9 +44,11 @@ export default class MapLegendComponent extends React.Component {
         <div className="legend">
           { legendFields }
         </div>
-        <div className="label">{ description }</div>
-        <div className="quelle">
-          { translate('Source') }: <a href={ link }>{ quelle }</a>
+        <div className="description">
+          <div className="label">{ description }</div>
+          <div className="quelle">
+            { translate('Source') }: <a href={ link }>{ quelle }</a>
+          </div>
         </div>
       </div>
 
