@@ -76,7 +76,21 @@
       // margin-top:0;
     }
 
+
+    .choice {
+      input {
+        margin-right: 7px;
+      }
+      span {
+        cursor: pointer;
+      }
+      margin-bottom: 4px;
+      margin-left: 5px;
+    }
+
   }
+
+
 
   button {
     margin-top: 10px;

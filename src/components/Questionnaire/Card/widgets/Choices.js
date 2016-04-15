@@ -30,7 +30,7 @@ export default class Choices extends React.Component {
       return (
         <div
           key={ `${ id }_${ value }` }
-          className={ styles.pointer }
+          className="choice"
           onClick={ onClick }
         >
           <input
