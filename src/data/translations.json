@@ -36,23 +36,23 @@
     "en": "no data"
   },
   "submit": {
-    "de": "Antwort einloggen",
-    "en": "Log in answer"
+    "de": "Auswahl bestätigen",
+    "en": "submit choice"
   },
   "underweight": {
     "de": "untergewichtig",
-    "en": "untergewichtig"
+    "en": "underweight"
   },
   "normalweight": {
     "de": "normalgewichtig",
-    "en": "normalgewichtig"
+    "en": "normal weight"
   },
   "overweight": {
     "de": "übergewichtig",
-    "en": "übergewichtig"
+    "en": "overweight"
   },
   "veryoverweight": {
     "de": "stark übergewichtig",
-    "en": "stark übergewichtig"
+    "en": "severely overweight"
   }
 }
