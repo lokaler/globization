@@ -2,7 +2,7 @@ import { includes, clamp } from 'lodash';
 
 import { actions as visualizationActions } from './visualization';
 
-import { GET_URL_PARAMETERS } from './app';
+import { GET_URL_PARAMETERS, GET_STORED_VALUES } from './app';
 const LOAD_QUESTIONNAIRES = 'LOAD_QUESTIONNAIRES';
 const SET_QUESTIONNAIRE = 'SET_QUESTIONNAIRE';
 const RESET_QUESTIONNAIRE = 'RESET_QUESTIONNAIRE';
@@ -39,6 +39,13 @@ export function reducer(state = initialState, action) {
         ...state,
         activeQuestionnaireId: round,
         activeCard: card
+      };
+    }
+
+    case GET_STORED_VALUES: {
+      return {
+        ...state,
+        debugExpressions: action.debugExpressions
       };
     }
 
@@ -160,6 +167,9 @@ export const actions = {
 
   quizSubmitCard: (cardKey) => ({ type: SUBMIT_CARD, cardKey }),
 
-  setDebugExpression: (debug) => ({ type: SET_DEBUG_EXPRESSIONS, debug })
+  setDebugExpression: (debug) => {
+    localStorage.setItem('debugExpressions', debug);
+    return { type: SET_DEBUG_EXPRESSIONS, debug };
+  }
 
 };

@@ -2,6 +2,7 @@ import { includes } from 'lodash';
 import { getQueryVariable } from 'logic/url';
 
 export const GET_URL_PARAMETERS = 'GET_URL_PARAMETERS';
+export const GET_STORED_VALUES = 'GET_STORED_VALUES';
 const SET_WINDOW_SIZE = 'SET_WINDOW_SIZE';
 
 const initialState = {
@@ -39,6 +40,12 @@ export const actions = {
     const round = q('round') || null;
     const card = parseInt(q('card'), 10) || 0;
     return { type: GET_URL_PARAMETERS, language, mobile, round, card };
+  },
+
+  getStoredValues: () => {
+    let debugExpressions = localStorage.getItem('debugExpressions');
+    debugExpressions = { true: true, false: false }[debugExpressions] || false;
+    return { type: GET_STORED_VALUES, debugExpressions };
   },
 
   setWindowSize: (sizes) => (
