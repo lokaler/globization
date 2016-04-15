@@ -1,4 +1,4 @@
-import { includes } from 'lodash';
+import { includes, clamp } from 'lodash';
 
 import { actions as visualizationActions } from './visualization';
 
@@ -29,11 +29,17 @@ export function reducer(state = initialState, action) {
 
     case GET_URL_PARAMETERS: {
       const keys = Object.keys(state.questionnaires);
-      const newQuestionnaireId = action.round;
-      if (includes(keys, newQuestionnaireId)) {
-        return { ...state, activeQuestionnaireId: newQuestionnaireId };
+      let round = action.round;
+      if (!includes(keys, round)) {
+        round = state.activeQuestionnaireId;
       }
-      return state;
+      const numCards = state.questionnaires[round].cards.length;
+      const card = clamp(action.card, 0, numCards - 1);
+      return {
+        ...state,
+        activeQuestionnaireId: round,
+        activeCard: card
+      };
     }
 
     case LOAD_QUESTIONNAIRES: {

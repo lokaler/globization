@@ -32,11 +32,13 @@ export function reducer(state = initialState, action) {
 export const actions = {
 
   getUrlParameters: () => {
-    let language = getQueryVariable('language') || 'de';
+    const q = getQueryVariable;
+    let language = q('language') || 'de';
     if (!includes(['de', 'en'], language)) language = 'de';
-    const mobile = !!parseInt(getQueryVariable('mobile') || '0', 10);
-    const round = getQueryVariable('round') || null;
-    return { type: GET_URL_PARAMETERS, language, mobile, round };
+    const mobile = !!parseInt(q('mobile') || '0', 10);
+    const round = q('round') || null;
+    const card = parseInt(q('card'), 10) || 0;
+    return { type: GET_URL_PARAMETERS, language, mobile, round, card };
   },
 
   setWindowSize: (sizes) => (
