@@ -15,7 +15,11 @@
         ],
         "en": [
 
-          "# "
+          "# Your BMI in a global context",
+          "",
+"Carrying excess weight is damaging to your health and increases the risk of premature death. Your Body Mass Index is one indication of whether you weigh too much or too little. It’s calculated using your height and weight:",
+"",
+          "**Please state your gender**"
         ]
       }
     },
@@ -25,8 +29,8 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["woman", { "de": "Frau", "en": "" }],
-            ["man", { "de": "Mann", "en": ""}]
+            ["woman", { "de": "Frau", "en": "Woman" }],
+            ["man", { "de": "Mann", "en": "Man"}]
           ]
         }
       }
@@ -37,7 +41,7 @@
           "**Bitte geben Sie Ihre Körpergröße an**"
         ],
         "en": [
-          "** **"
+          "**What is your height?**"
         ]
       }
     },
@@ -60,7 +64,7 @@
           "**Bitte geben Sie Ihre Gewicht an**"
         ],
         "en": [
-          "** **"
+          "**What is your weight?**"
         ]
       }
     },
@@ -102,20 +106,20 @@
           "bmiManCountry": "f.getCountryName('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight))",
           "bmiManMinCountry" : "f.getMinCountryName('bmiMan')",
           "bmiManMinValue" : "f.getMinValue('bmiMan')",
-          "bmiManMaxCounty" : "f.getMaxCountryName('bmiMan')",
+          "bmiManMaxCountry" : "f.getMaxCountryName('bmiMan')",
           "bmiManMaxValue" : "f.getMaxValue('bmiMan')",
           "bmiWomanCountry": "f.getCountryName('bmiWoman', f.calculateBmi(i.sliderWeight, i.sliderHeight))",
           "bmiWomanMinCountry" : "f.getMinCountryName('bmiWoman')",
           "bmiWomanMinValue" : "f.getMinValue('bmiWoman')",
-          "bmiWomanMaxCounty" : "f.getMaxCountryName('bmiWoman')",
+          "bmiWomanMaxCountry" : "f.getMaxCountryName('bmiWoman')",
           "bmiWomanMaxValue" : "f.getMaxValue('bmiWoman')"
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte machen Sie alle drei Angaben"], "en": ["notSubmitted"]
+            "de": ["Bitte machen Sie alle drei Angaben"], "en": ["Please answer all questions."]
           },
           "allAnswered": {
-            "de": ["Sind sie sich sicher ?"], "en": ["notSubmitted"]
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
           },
           "man1": {
             "de": [
@@ -124,9 +128,9 @@
               "Ihr BMI ist geringer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am niedrigsten ist der durchschnittliche BMI {{ bmiManMinCountry }} mit {{ bmiManMinValue }}."
             ],
             "en": [
-              "Mit einem BMI von {{ bmiValue }} gelten Sie laut [Weltgesundheitsorganisation](http://www.spiegel.de/gesundheit/ernaehrung/bmi-rechner-so-ermitteln-sie-ihren-body-mass-index-a-824673.html) als {{ bmiClassification }}",
-              "",
-              "Ihr BMI ist geringer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am niedrigsten ist der durchschnittliche BMI {{ bmiManMinCountry }} mit {{ bmiManMinValue }}."
+              "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ Classification }}.",
+              "It is lower than the average BMI value in all countries for which data is available. The country with the lowest average BMI is {{ bmiManMinCountry }}, with a value of {{ bmiManMinValue }}."
+
             ]
           },
           "man2": {
@@ -136,9 +140,9 @@
               "{{ bmiManCountry }} haben Männer im Schnitt einen ähnlichen BMI wie Sie."
             ],
             "en": [
-              "Mit einem BMI von {{ bmiValue }} gelten Sie laut [Weltgesundheitsorganisation](http://www.spiegel.de/gesundheit/ernaehrung/bmi-rechner-so-ermitteln-sie-ihren-body-mass-index-a-824673.html) als {{ bmiClassification }}",
+              "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
               "",
-              "{{ bmiManCountry }} haben Männer im Schnitt einen ähnlichen BMI wie Sie."
+              " In {{ bmiManCountry }}, men have a similar BMI to yours, on average. "
             ]
           },
           "man3": {
@@ -148,9 +152,9 @@
               "Ihr BMI ist größer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am höchsten ist der durchschnittliche BMI {{ bmiManMaxCountry }} mit {{ bmiManMaxValue }}."
             ],
             "en": [
-              "Mit einem BMI von {{ bmiValue }} gelten Sie laut [Weltgesundheitsorganisation](http://www.spiegel.de/gesundheit/ernaehrung/bmi-rechner-so-ermitteln-sie-ihren-body-mass-index-a-824673.html) als {{ bmiClassification }}",
+              "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
               "",
-              "Ihr BMI ist größer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am höchsten ist der durchschnittliche BMI {{ bmiManMaxCountry }} mit {{ bmiManMaxValue }}."
+              "Your BMI is higher than the average BMI in all countries for which data is available. With a value of {{ bmiManMaxCountry }} , {{ bmiManMaxValue }} has the highest average BMI."
             ]
           },
           "woman1": {
@@ -160,9 +164,9 @@
               "Ihr BMI ist geringer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am niedrigsten ist der durchschnittliche BMI {{ bmiWomanMinCountry }} mit {{ bmiWomanMinValue }}."
             ],
             "en": [
-              "Mit einem BMI von {{ bmiValue }} gelten Sie laut [Weltgesundheitsorganisation](http://www.spiegel.de/gesundheit/ernaehrung/bmi-rechner-so-ermitteln-sie-ihren-body-mass-index-a-824673.html) als {{ bmiClassification }}",
+              "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
               "",
-              "Ihr BMI ist geringer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am niedrigsten ist der durchschnittliche BMI {{ bmiWomanMinCountry }} mit {{ bmiWomanMinValue }}."
+              "Your BMI is lower than the average BMI in all countries for which data is available. The country with the lowest average BMI is {{ bmiWomanMinCountry }}, with a value of {{ bmiWomanMinValue }}."
             ]
           },
           "woman2": {
@@ -172,9 +176,9 @@
               "{{ bmiWomanCountry }} haben Frauen im Schnitt einen ähnlichen BMI wie Sie."
             ],
             "en": [
-              "Mit einem BMI von {{ bmiValue }} gelten Sie laut [Weltgesundheitsorganisation](http://www.spiegel.de/gesundheit/ernaehrung/bmi-rechner-so-ermitteln-sie-ihren-body-mass-index-a-824673.html) als {{ bmiClassification }}",
+              "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
               "",
-              "{{ bmiWomanCountry }} haben Frauen im Schnitt einen ähnlichen BMI wie Sie."
+              "{{ bmiWomanCountry }}, women have a similar BMI to yours, on average. "
             ]
           },
           "woman3": {
@@ -184,9 +188,9 @@
               "Ihr BMI ist größer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am höchsten ist der durchschnittliche BMI {{ bmiWomanMaxCountry }} mit {{ bmiWomanMaxValue }}."
             ],
             "en": [
-              "Mit einem BMI von {{ bmiValue }} gelten Sie laut [Weltgesundheitsorganisation](http://www.spiegel.de/gesundheit/ernaehrung/bmi-rechner-so-ermitteln-sie-ihren-body-mass-index-a-824673.html) als {{ bmiClassification }}",
+              "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
               "",
-              "Ihr BMI ist größer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am höchsten ist der durchschnittliche BMI {{ bmiWomanMaxCountry }} mit {{ bmiWomanMaxValue }}."
+              "Your BMI is higher than the average BMI in all countries for which data is available. With a value of {{ bmiWomanMaxValue }}, {{ bmiWomanMaxCountry }} has the highest average BMI"
             ]
           }
         }

@@ -10,10 +10,14 @@
           "",
           "Zur Vorbeugung von Übergewicht helfen eine ausgewogene Ernährung – und genug Bewegung. Was glauben Sie: In welchem dieser Länder ist der Anteil der Jugendlichen, die sich zu wenig bewegen, am höchsten?",
           "",
-          "Was glauben Sie: In welchem dieser Länder leiden, gemessen an der Gesamtbevölkerung, die meisten Frauen unter Diabetes?"
+          "Was glauben Sie: **In welchem dieser Länder leiden, gemessen an der Gesamtbevölkerung, die meisten Frauen unter Diabetes?**"
         ],
         "en": [
-          "# foo en"
+          "# Exercise is the answer",
+          "",
+          "To avoid obesity, both a balanced diet and enough exercise are necessary.",
+          "",
+          " **Which country has the highest proportion of youths engaging in too little physical exercise?**"
         ]
       }
     },
@@ -23,9 +27,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["sport_choice_one", { "de": "China", "en": "" }],
-            ["sport_choice_two", { "de": "Italien", "en": ""}],
-            ["sport_choice_three", { "de": "Indien", "en": " " }]
+            ["sport_choice_one", { "de": "China", "en": "China" }],
+            ["sport_choice_two", { "de": "Italien", "en": "Italy"}],
+            ["sport_choice_three", { "de": "Indien", "en": "India" }]
           ]
         }
       }
@@ -47,30 +51,30 @@
             },
             "templates": {
               "notSubmitted": {
-                "de": ["Bitte beantworten sie die Fragen"], "en": ["notSubmitted"]
+                "de": ["Bitte beantworten sie die Fragen"], "en": ["Please answer the question."]
               },
           "sport_choice_one": {
             "de": [
-              "Nein. In China bewegen sich nach Schätzungen der Weltgesundheitsorganisation (WHO) zwar 84 Prozent der 11- bis 17-Jährigen zu wenig. Es gibt aber viele Länder, zum Beispiel Italien, in denen noch weniger Jugendliche ausreichend Sport treiben. In Deutschland sitzen 83 Prozent der Heranwachsenden zu viel herum."
+              "Nein. In China bewegen sich nach Schätzungen der Weltgesundheitsorganisation (WHO) zwar 84 Prozent der 11- bis 17-Jährigen zu wenig. Es gibt aber viele Länder, zum Beispiel **Italien**, in denen noch weniger Jugendliche ausreichend Sport treiben. In Deutschland sitzen 83 Prozent der Heranwachsenden zu viel herum."
             ],
             "en": [
-              "foo!"
+              "Wrong! Although the WHO believes that 84 percent of 11 to 17 year olds in China do not get enough exercise, there are many countries -- **Italy** for example -- where even fewer take part in sports. In Germany, around 83 percent of the youth population is too sedentary."
             ]
           },
           "sport_choice_two": {
             "de": [
-              "Richtig, in Italien bewegen sich nach Schätzungen der Weltgesundheitsorganisation (WHO) 92 Prozent der 11- bis 17-Jährigen zu wenig. In China sind es 84, in Indien etwa 72 Prozent. In Deutschland sitzen rund 83 Prozent der Heranwachsenden zu viel herum."
+              "**Richtig**, in Italien bewegen sich nach Schätzungen der Weltgesundheitsorganisation (WHO) 92 Prozent der 11- bis 17-Jährigen zu wenig. In China sind es 84, in Indien etwa 72 Prozent. In Deutschland sitzen rund 83 Prozent der Heranwachsenden zu viel herum."
             ],
             "en": [
-              "foo!"
+              "**Correct!** WHO estimates show that 92 percent of 11 to 17 year olds exercise too little. In China, the proportion is 84 percent and in India it is 72 percent. In Germany, around 83 percent of adolescents are too sedentary."
             ]
           },
           "sport_choice_three": {
             "de": [
-              "Nein. In Indien bewegen sich nach Schätzungen der Weltgesundheitsorganisation (WHO) zwar 71 Prozent der 11- bis 17-Jährigen zu wenig. Damit steht der Staat im Vergleich von 121 Ländern aber am besten da. In China etwa sind es rund 84 Prozent der Jugendlichen, die nicht ausreichend Sport treiben, in Deutschland 83 und in Italien sogar 92 Prozent."
+              "Nein. In Indien bewegen sich nach Schätzungen der Weltgesundheitsorganisation (WHO) zwar 71 Prozent der 11- bis 17-Jährigen zu wenig. Damit steht der Staat im Vergleich von 121 Ländern aber am besten da. In China etwa sind es rund 84 Prozent der Jugendlichen, die nicht ausreichend Sport treiben, in Deutschland 83 und in **Italien** sogar 92 Prozent."
             ],
             "en": [
-              "foo!"
+              "Wrong! Although the WHO estimates that 71 percent of 11 to 17 year olds in India exercise too little, the country actually ranks the best out of 121 nations. In China, about 84 percent of the youth population is too inactive. In Germany, the figure is 83 percent and in **Italy**, fully 92 percent are too sedentary."
             ]
           }
         }
