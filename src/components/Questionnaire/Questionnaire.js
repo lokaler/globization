@@ -51,11 +51,13 @@ export default class Questionnaire extends React.Component {
             <Card { ...this.props }/>
           </div>
         </ShadowScrollbars>
-        <Footer
-          nextBtnLabel={ translate(nextBtnLabel) }
-          prevBtnLabel={ translate('prev') }
-          { ...this.props }
-        />
+        { questions.activeCard !== 0 &&
+          <Footer
+            nextBtnLabel={ translate(nextBtnLabel) }
+            prevBtnLabel={ translate('prev') }
+            { ...this.props }
+          />
+        }
       </div>
     );
   }
