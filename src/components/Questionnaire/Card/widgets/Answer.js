@@ -148,6 +148,7 @@ export default class Answer extends React.Component {
 
   render() {
     const { answer, questions } = this.props;
+    const debug = __DEV__ && questions.debugExpressions;
 
     const existingTemplateKeys = Object.keys({ ...answer.templates, default: true });
     const templateKey = this.getTemplateKey(questions.inputValues, existingTemplateKeys);
@@ -169,12 +170,14 @@ export default class Answer extends React.Component {
     template = translate(template).join('\n');
 
     const ctx = this.compileContext(answer.answerContext, questions.inputValues);
-    for (const k of Object.keys(ctx)) {
-      ctx[k] = translate(ctx[k]);
+    for (const [key, value] of Object.entries(ctx)) {
+      ctx[key] = translate(value);
+      if (debug) {
+        ctx[key] = `{{ ${ key }: "${ value }" }}`;
+      }
     }
     const answerContent = MicroMustache.render(template, ctx);
     const className = classNames('answer', answer.className && `answer-${ answer.className }`);
-    const debug = __DEV__ && questions.debugExpressions;
 
     return (
       <div className={ className } styleName="widget">
