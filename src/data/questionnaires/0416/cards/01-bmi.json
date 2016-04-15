@@ -107,7 +107,7 @@
           "bmiWomanCountry": "f.getCountryName('bmiWoman', f.calculateBmi(i.sliderWeight, i.sliderHeight))",
           "bmiWomanMinCountry" : "f.getMinCountryName('bmiWoman')",
           "bmiWomanMinValue" : "f.getMinValue('bmiWoman')",
-          "bmiWomanMaxCounty" : "f.getMaxCountryName('bmiWoman')",
+          "bmiWomanMaxCountry" : "f.getMaxCountryName('bmiWoman')",
           "bmiWomanMaxValue" : "f.getMaxValue('bmiWoman')"
         },
         "templates": {
