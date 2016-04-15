@@ -91,7 +91,7 @@ function getLoaders(env) {
         'css' +
           '?sourceMap' +
           '&importLoaders=1' +
-          '&localIdentName=[local]-[hash:base64:8]',
+          '&localIdentName=[name]-[local]-[hash:base64:8]',
         'sass' +
           '?sourceMap',
         'postcss'
@@ -104,7 +104,7 @@ function getLoaders(env) {
         'css' +
           '?sourceMap' +
           '&importLoaders=1' +
-          '&localIdentName=[local]-[hash:base64:8]' +
+          '&localIdentName=[name]-[local]-[hash:base64:8]' +
         '!sass' +
           '?sourceMap' +
         '!postcss'
