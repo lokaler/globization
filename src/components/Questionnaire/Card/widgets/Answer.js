@@ -174,10 +174,14 @@ export default class Answer extends React.Component {
     }
     const answerContent = MicroMustache.render(template, ctx);
     const className = classNames('answer', answer.className && `answer-${ answer.className }`);
+    const debug = __DEV__ && questions.debugExpressions;
 
     return (
       <div className={ className } styleName="widget">
         <div >
+          { debug &&
+            <span style={{ color: 'green' }}>template: "{ templateKey }"</span>
+          }
           <ReactMarkdown
             source={ answerContent.toString() }
             renderers={{ Link: props => <a href={props.href} target="_blank">{props.children}</a> }}
