@@ -1,0 +1,170 @@
+{
+  "key": "kauf",
+  "title": "2. Karte - Worauf achten Sie beim Kauf?",
+  "dataset": "food",
+  "view": "map",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Worauf achten Sie beim Kauf?",
+          "",
+          "Manche Menschen sind froh, wenn sie mit dem Geld überhaupt über die Runden kommen. Andere können und wollen es sich leisten, beim Kauf auf bestimmte Kriterien zu achten. Wie ist das bei Ihnen?"
+        ],
+        "en": [
+          "# What is important to you when making a purchase?",
+          "",
+          "Some people are happy just to be able to make ends meet. Others can afford to pay attention to criteria beyond just price. Where do you stand?"
+        ]
+      }
+    },
+
+    {
+      "text": {
+        "de": [
+          "**Kaufen Sie Bioprodukte?**"
+        ],
+        "en": [
+          "**Do you buy organic products?**"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "bioproduct",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["never", { "de": "Fast nie", "en": "Almost never" }],
+            ["sometimes", { "de": "Manchmal", "en": "Sometimes"}],
+            ["always", { "de": "Sehr häufig oder immer", "en": "Very often or always" }]
+          ]
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.bioproduct === 'never' && 'never'",
+          "i.bioproduct === 'sometimes' && 'sometimes'",
+          "i.bioproduct === 'always' && 'always'"
+        ],
+        "answerContext": {},
+        "templates": {
+          "default": {
+            "de": [
+              "Bitte wählen Sie eine Antwort."
+            ],
+            "en": [
+              "Please choose."
+            ]
+          },
+          "never": {
+            "de": [
+              "Damit gehören Sie zur Minderheit: Laut einer repräsentativen Umfrage aus dem Jahr 2013 kauft nur jeder vierte Deutsche nie Bioprodukte. Rund jeder Fünfte kauft sie häufig oder fast ausschließlich. Längst werden viele davon aus dem Ausland importiert, um den Bedarf zu decken. Lesen Sie dazu auch unsere [Reportage](http://www.spiegel.de/wissenschaft/uebermorgen/bio-industrie-sind-regionale-bio-lebensmittel-nachhaltiger-a-1082571.html)."
+            ],
+            "en": [
+              "That puts you in the minority. According to a representative survey from 2013, only about one in four Germans never buys organic products. About one in five buys them often or almost exclusively. Many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this [feature story](http://www.spiegel.de/international/tomorrow/organic-industry-is-regional-food-more-sustainable-than-organic-a-1082697.html)"
+            ]
+          },
+          "sometimes": {
+            "de": [
+              "Wie Sie halten es viele Menschen in Deutschland: Bei einer repräsentativen Umfrage aus dem Jahr 2013 gaben 52 Prozent der Befragten an, gelegentlich Bioprodukte zu kaufen. Einer der wichtigsten Beweggründe: die Unterstützung regionaler Betriebe. Doch längst kommen viele Bioprodukte aus dem Ausland. Lesen Sie dazu auch unsere [Reportage](http://www.spiegel.de/wissenschaft/uebermorgen/bio-industrie-sind-regionale-bio-lebensmittel-nachhaltiger-a-1082571.html)."
+            ],
+            "en": [
+              "Your purchasing patterns are similar to many in Germany: In a representative survey from 2013, 52 percent of respondents said they bought organic products occasionally. One of the most important reasons cited was a desire to support local suppliers. Yet many organic products are now being imported from abroad to meet the demand. You can read more about the organic business in this [feature story](http://www.spiegel.de/international/tomorrow/organic-industry-is-regional-food-more-sustainable-than-organic-a-1082697.html)."
+            ]
+          },
+          "always": {
+            "de": [
+              "Nicht schlecht! So konsequent ist nur etwa ein Fünftel der Deutschen. Bei einer repräsentativen Umfrage im Jahr 2013 gaben 22 Prozent der Befragten an, häufig oder ausschließlich Ökoprodukte zu kaufen. Im Schnitt geben Deutsche 93 Euro im Jahr für Biolebensmittel aus. Damit liegen sie im Vergleich von 29 europäischen Ländern auf dem sechsten Platz. Längst müssen für den Biokonsum der Deutschen auch Produkte importiert werden. Lesen Sie dazu unsere [Reportage](http://www.spiegel.de/wissenschaft/uebermorgen/bio-industrie-sind-regionale-bio-lebensmittel-nachhaltiger-a-1082571.html)"
+            ],
+            "en": [
+              "Not bad! Only about a fifth of German consumers have similar purchasing habits. In a representative study from 2013, 22 percent of respondents said they often or exclusively bought organic products. On average, Germans spend €93 per year on organic foodstuffs. In a ranking of 29 European countries, Germany is in sixth place, provided varying purchasing power from country to country is taken into account. To meet the demand in Germany, organic products have been imported from abroad for some time now. You can read more about the organic business in this [feature story](http://www.spiegel.de/international/tomorrow/organic-industry-is-regional-food-more-sustainable-than-organic-a-1082697.html)."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "text": {
+        "de": [
+          "**Kaufen Sie regionale Produkte?**"
+        ],
+        "en": [
+          "**Do you buy local products?**"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "localproducts",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["never", { "de": "Fast nie", "en": "Almost never" }],
+            ["sometimes", { "de": "Manchmal", "en": "Sometimes"}],
+            ["always", { "de": "Sehr häufig oder immer", "en": "Very often or always" }]
+          ]
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": ["i.localproducts"],
+        "answerContext": {},
+        "templates": {
+          "default": {
+            "de": [
+              "Bitte wählen Sie eine Antwort."
+            ],
+            "en": [
+              "Please choose."
+            ]
+          },
+          "never": {
+            "de": [
+              "Ganz allein sind Sie damit nicht: Rund elf Prozent der deutschen Verbraucher achten laut einer Umfrage aus dem Jahr 2013 beim Einkaufen gar nicht auf die Herkunft der Produkte. [Für SPIEGEL-ONLINE-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal.](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html) Erdbeeren im Winter gibt’s dann aber leider nicht und so manche Südfrucht scheidet ganz aus."
+            ],
+            "en": [
+              "You’re not alone: According to a 2013 survey, around 11 percent of German consumers don’t pay any attention to the origin of products when shopping. [SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop.](http://www.spiegel.de/international/tomorrow/a-1082697.html) That means no strawberries in winter and some fruits from the Southern Hemisphere will have to drop off the menu completely."
+            ]
+          },
+          "sometimes": {
+            "de": [
+              "Damit gehören Sie zur Mehrheit: Laut einer Umfrage aus dem Jahr 2013 bevorzugen gut zwei Drittel der deutschen Verbraucher regionale Lebensmittel – Frauen mit 72 Prozent noch etwas häufiger als Männer mit 63 Prozent. [Für SPIEGEL-ONLINE-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal.](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)"
+            ],
+            "en": [
+              "You  belong to the majority: A 2013 survey found that some two-thirds of German consumers preferred local foodstuffs, with women, at 72 percent, beating out the men, at 63 percent. [SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop.](http://www.spiegel.de/international/tomorrow/a-1082697.html)"
+            ]
+          },
+          "always": {
+            "de": [
+              "Damit gehören Sie zu den Menschen, die saisonbedingt auf bestimmte Obst- und Gemüsesorten verzichten. Laut einer repräsentativen Umfrage aus dem Jahr 2013 wären 87 Prozent der Deutschen grundsätzlich bereit, ihre Obst- und Gemüseauswahl für einige Monate im Jahr einzuschränken. [Für SPIEGEL-ONLINE-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal.](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html)"
+            ],
+            "en": [
+              "You are among those people who do without certain fruits and vegetables on a seasonal basis. According to a representative survey conducted in 2013, 87 percent of Germans would be willing to limit the variety of fruits and vegetables they consume for a few months of the year. [SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop.](http://www.spiegel.de/international/tomorrow/a-1082697.html)"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "answer": {
+        "className": "tip",
+        "answerKey": ["i.localproducts && 'tip'"],
+        "answerContext": {},
+        "templates": {
+          "tip": {
+            "de": [
+              "**Nachhaltigkeitstipp**: Ein per Frachtschiff importierter Apfel aus Neuseeland ist nicht unbedingt klimaschädlicher als ein deutscher Apfel, der monatelang im Kühlhaus lagert. Der Naturschutzbund Deutschland empfiehlt jedoch, auf eingeflogene Ware zu verzichten – das sind meist schnell verderbliche Obst- und Gemüsesorten, die von außerhalb Europas importiert werden. Mindestens ebenso gewinnbringend für den Klimaschutz ist jedoch: Kurze Strecken zum Supermarkt nicht mit dem Auto zurücklegen."
+            ],
+            "en": [
+              "**Sustainability Tip**: An apple shipped in from New Zealand is not necessarily more damaging to the climate than is a German apple that spends months in a refrigerated warehouse. Germany’s Nature and Biodiversity Conservation Union recommends, however, avoiding goods that have been flown in -- usually things like fruits and vegetable types that spoil rapidly and are imported from outside of Europe. Just as beneficial to the climate, though, is keeping your car in the garage if the supermarket is close by."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

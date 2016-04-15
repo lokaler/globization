@@ -1,0 +1,252 @@
+{
+  "key": "summary",
+  "title": "8. Karte - Summary",
+  "view": "globe",
+  "dataset": "alcoholConsume",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Zusammenfassung Ihrer Antworten "
+        ],
+        "en": [
+          "# Summary",
+          "**Your consumption in comparison with the world:**"
+        ]
+      }
+    },
+    {
+      "text": {
+        "de": [
+          "**Übergewicht bei Kindern und Jugendlichen**"
+        ],
+        "en": [
+          "# Summary",
+          "**Your consumption in comparison with the world:**"
+        ]
+      }
+    },
+
+
+    {
+      "answer": {
+        "answerKey": [
+          "!i.kidsSubmitted && 'notSubmitted'",
+          "i.overweightKids"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten Sie noch die Frage zum Übergewicht bei Kindern ."], "en": ["notSubmitted"]
+          },
+
+          "allAnswered": {
+            "de": ["Sind sie sich sicher ?"], "en": ["notSubmitted"]
+          },
+
+          "choice_1": {
+            "de": [
+              "Auf der Pazifikinsel Kiribati sind mit 47,7 Prozent weltweit die meisten Jungen unter 20 Jahren übergewichtig. Sie hatten auf die **USA** getippt, dort sind jedoch mit 30 Prozent deutlich weniger Jungen zu dick. Auch bei den Mädchen ist der Anteil der Übergewichtigen auf Kiribati am größten."
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "choice_2": {
+            "de": [
+              "Sie haben richtig getippt: Auf der Pazifikinsel **Kiribati** sind mit 47,7 Prozent weltweit die meisten Jungen unter 20 Jahren übergewichtig. Auch bei den Mädchen ist der Anteil der Übergewichtigen auf Kiribati am größten."
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "choice_3": {
+            "de": [
+              "Auf der Pazifikinsel Kiribati sind mit 47,7 Prozent weltweit die meisten Jungen unter 20 Jahren übergewichtig. Auch bei den Mädchen ist der Anteil der Übergewichtigen auf Kiribati am größten. Sie hatten auf **Nordkorea** getippt, dort sind jedoch laut einer länderübergreifenden Studie mit einem Prozent nur sehr wenige Jungen zu dick. "
+            ],
+            "en": [
+              "foo!"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "text": {
+        "de": [
+          "**Diabetes – ein weltweites Problem**"
+        ],
+        "en": [
+          "# Summary",
+          "**Your consumption in comparison with the world:**"
+        ]
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "!i.diabetesSubmitted && 'notSubmitted'",
+          "i.diabetes"
+        ],
+        "answerContext": {
+          "diabetesWomanMaxCounty" : "f.getMaxCountryName('diabetesWoman')",
+          "diabetesWomanMaxValue" : "f.getMaxValue('diabetesWoman')"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten Sie noch die Frage zu Diabetes."], "en": ["notSubmitted"]
+          },
+          "choice_1": {
+            "de": [
+              "Sie haben richtig getippt: In **Südafrika** leiden 12,6 Prozent der weiblichen Bevölkerung an Diabetes. Wie in vielen afrikanischen Staaten, nimmt dort die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. "
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "choice_2": {
+            "de": [
+              "In Südafrika leiden 12,6 Prozent der weiblichen Bevölkerung an Diabetes. Wie in vielen afrikanischen Staaten, nimmt dort die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. Sie hatten auf **Deutschland** getippt. Dort sind jedoch nur 3,9 Prozent der Frauen zuckerkrank."
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "choice_3": {
+            "de": [
+              "In Südafrika leiden 12,6 Prozent der weiblichen Bevölkerung an Diabetes. Wie in vielen afrikanischen Staaten, nimmt dort die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. Sie hatten auf **Brasilien** getippt. Dort sind jedoch nur 8,7 Prozent der Frauen zuckerkrank."
+            ],
+            "en": [
+              "foo!"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "text": {
+        "de": [
+          "**Sport gegen den Speck**"
+        ],
+        "en": [
+          "# Summary",
+          "**Your consumption in comparison with the world:**"
+        ]
+      }
+    },
+
+        {
+          "answer": {
+            "answerKey": [
+              "!i.sportSubmitted && 'notSubmitted'",
+              "i.sport"
+            ],
+            "answerContext": {
+
+            },
+            "templates": {
+              "notSubmitted": {
+                "de": ["Bitte beantworten Sie noch die Frage zum Sport"], "en": ["notSubmitted"]
+              },
+          "sport_choice_one": {
+            "de": [
+              "In Italien bewegen sich nach Schätzungen der Weltgesundheitsorganisation (WHO) 92 Prozent der 11- bis 17-Jährigen zu wenig. Sie hatten auf **China** getippt, wo dieses Problem immerhin auch 84 Prozent der Jugendlichen betrifft."
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "sport_choice_two": {
+            "de": [
+              "Sie haben richtig getippt: In **Italien** bewegen sich nach Schätzungen der Weltgesundheitsorganisation (WHO) 92 Prozent der 11- bis 17-Jährigen zu wenig. In Deutschland sitzen rund 83 Prozent der Heranwachsenden zu viel herum."
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "sport_choice_three": {
+            "de": [
+              "In Italien bewegen sich nach Schätzungen der Weltgesundheitsorganisation (WHO) 92 Prozent der 11- bis 17-Jährigen zu wenig. Sie hatten auf **Indien** getippt, wo dieses Problem immerhin auch 70 Prozent der Jugendlichen betrifft"
+            ],
+            "en": [
+              "foo!"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "text": {
+        "de": [
+          "**Gesundheitsrisiko Alkohol**"
+        ],
+        "en": [
+          "# Summary",
+          "**Your consumption in comparison with the world:**"
+        ]
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+            "!i.alcoholSubmitted && 'notSubmitted'",
+            "(i.sliderAlcohol < 8) && 'lessAlcohol'",
+            "(i.sliderAlcohol < 10) && 'someAlcohol'",
+            "(i.sliderAlcohol > 10) && 'muchAlcohol'"
+          ],
+        "answerContext": {
+          "AlcoholCountry": "f.getCountryName('alcoholConsume', 'alcoholSubmitted')"
+
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten Sie noch die Frage zum Alkoholkonsum"], "en": ["notSubmitted"]
+          },
+          "lessAlcohol": {
+            "de": [
+              "Sie haben den Bierdurst der Deutschen etwas unterschätzt: Im Schnitt trinken sie wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist. Ihre Schätzung entspricht mit [Wert_regler_Alkohol] großen Bieren pro Woche ungefähr dem Alkoholkonsum der Menschen in [Land_Wert_Alkohol]."
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "someAlcohol": {
+            "de": [
+              "Sie haben ziemlich gut geschätzt: Im Schnitt trinken Deutsche wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist."
+            ],
+            "en": [
+              "foo!"
+            ]
+          },
+          "muchAlcohol": {
+            "de": [
+              "Sie haben den Bierdurst der Deutschen etwas überschätzt: Im Schnitt trinken sie wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist. Ihre Schätzung entspricht mit [Wert_regler_Alkohol] großen Bieren pro Woche ungefähr dem Alkoholkonsum der Menschen in [Land_Wert_Alkohol]"
+            ],
+            "en": [
+              "foo!"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [],
+        "answerContext": {
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeHr7', i.sliderAlcohol + ' Übermorgen Explorer: Vergleiche dich mit der Welt')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeHr7', 'Vergleiche dich mit der Welt - SPIEGEL ONLINE - Übermorgen Explorer')"
+        },
+        "templates": {
+          "default": {
+            "de": [
+              "<div class='sharing'>{{ twitterShare }} {{ facebookShare }}</div>"
+            ],
+            "en": [
+              "default en"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
