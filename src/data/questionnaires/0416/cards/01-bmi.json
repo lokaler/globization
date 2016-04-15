@@ -119,7 +119,7 @@
             "de": ["Bitte machen Sie alle drei Angaben"], "en": ["Please answer all questions."]
           },
           "allAnswered": {
-            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
+            "de": [""], "en": [""]
           },
           "man1": {
             "de": [
