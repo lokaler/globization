@@ -228,8 +228,8 @@
       "answer": {
         "answerKey": [],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeHr7', i.sliderAlcohol + ' Übermorgen Explorer: Vergleiche dich mit der Welt')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeHr7', 'Vergleiche dich mit der Welt - SPIEGEL ONLINE - Übermorgen Explorer')"
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeHr7', i.sliderAlcohol + 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer [LINK kommt noch]')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeHr7', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer [LINK kommt noch]')"
         },
         "templates": {
           "default": {
@@ -246,7 +246,7 @@
     {
       "text": {
         "de": [
-          "Sie können den Datenglobus jederzeit bewegen, anklicken und zwischen verschiedenen Ansichten wählen. Probieren Sie es aus!",
+          "Hier können Sie die Daten noch einmal in Ruhe erkunden:",
           ""
         ],
         "en": [
