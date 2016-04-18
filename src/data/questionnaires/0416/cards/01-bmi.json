@@ -136,7 +136,7 @@
             "de": [
               "Mit einem BMI von {{ bmiValue }} gelten Sie laut [Weltgesundheitsorganisation](http://www.spiegel.de/gesundheit/ernaehrung/bmi-rechner-so-ermitteln-sie-ihren-body-mass-index-a-824673.html) als {{ bmiClassification }}",
               "",
-              "E inen ähnlichen BMI wie Sie haben Männer im Schnitt {{ bmiManCountry }}."
+              "Einen ähnlichen BMI wie Sie haben Männer im Schnitt {{ bmiManCountry }}."
             ],
             "en": [
               "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
