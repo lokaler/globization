@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import d3 from 'd3';
 import { debounce } from 'lodash';
-import classNames from 'classnames';
 
 import Vis from '../Vis/VisWrapper';
 import Questionnaire from '../Questionnaire/Questionnaire';
@@ -59,18 +58,16 @@ export default class UbermorgenApp extends React.Component {
   }
 
   render() {
-    const { app } = this.props;
-    const className = classNames(
-      styles.component,
-      app.mobile ? 'mq-mobile' : 'mq-desktop'
-    );
+    const responsiveClass = this.props.app.mobile ? 'mq-mobile' : 'mq-desktop';
     return (
-      <div className={ className }>
-        <div className={ styles.left }>
-          <Vis {...this.props}/>
-        </div>
-        <div className={ styles.right }>
-          <Questionnaire {...this.props}/>
+      <div className={ responsiveClass }>
+        <div className={ styles.container }>
+          <div className="left">
+            <Vis {...this.props}/>
+          </div>
+          <div className="right">
+            <Questionnaire {...this.props}/>
+          </div>
         </div>
       </div>
     );
