@@ -47,7 +47,7 @@
           "i.diabetes"
         ],
         "answerContext": {
-          "diabetesWomanMaxCounty" : "f.getMaxCountryName('diabetesWoman')",
+          "diabetesWomanMaxCountry" : "f.getMaxCountryName('diabetesWoman')",
           "diabetesWomanMaxValue" : "f.getMaxValue('diabetesWoman')"
         },
         "templates": {

@@ -1532,7 +1532,7 @@
     },
     "quelle": "WHO",
     "link": "http://apps.who.int/gho/data/node.main.A1032?lang=en?showonly=GISAH",
-    "unit": "%",
+    "unit": "",
     "fixed": 0,
     "domain":[0.1, 14.1],
     "skala":[
