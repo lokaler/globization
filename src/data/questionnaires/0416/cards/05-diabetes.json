@@ -8,9 +8,9 @@
         "de": [
           " # Diabetes – ein weltweites Problem",
           "",
-          "Übergewichtige Menschen haben ein höheres Risiko an Diabetes Typ 2 zu erkranken. Seit einigen Jahren sind auch in Ländern mit niedrigem und mittlerem Einkommen immer mehr Männer und Frauen von der [Stoffwechselkrankheit](http://www.spiegel.de/gesundheit/diagnose/diabetes-bericht-der-who-die-welt-ist-zuckerkrank-a-1085458.html) betroffen. Diabetes ist heute ein weltweites Problem.",
+          "Übergewichtige Menschen haben ein höheres Risiko an Diabetes Typ 2 zu erkranken. Seit einigen Jahren sind auch in Ländern mit niedrigem und mittlerem Einkommen immer mehr Männer und Frauen von der [Stoffwechselkrankheit](http://www.spiegel.de/gesundheit/diagnose/diabetes-bericht-der-who-die-welt-ist-zuckerkrank-a-1085458.html) betroffen.",
           "",
-          "Was glauben Sie: **In welchem dieser Länder leiden, gemessen an der Gesamtbevölkerung, die meisten Frauen unter Diabetes?**"
+          "Was glauben Sie: **In welchem dieser Länder leiden, gemessen an der Gesamtbevölkerung, die meisten Frauen an Diabetes?**"
         ],
         "en": [
           "# Diabetes -- a worldwide problem",
@@ -64,7 +64,7 @@
           },
           "choice_2": {
             "de": [
-              "Nein, in Deutschland leiden 3,9 Prozent der weiblichen Bevölkerung unter Diabetes. In Brasilien hingegen 8,7 und in Südafrika sogar 12,6 Prozent. In Südafrika, wie in vielen afrikanischen Staaten, nimmt die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. Weltweit am höchsten ist der Anteil der erkrankten Frauen {{ diabetesWomanMaxCountry }} mit {{ diabetesWomanMaxValue }} Prozent."
+              "Nein, in Deutschland leiden 3,9 Prozent der weiblichen Bevölkerung an Diabetes. In Brasilien hingegen 8,7 und in Südafrika sogar 12,6 Prozent. In Südafrika, wie in vielen afrikanischen Staaten, nimmt die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. Weltweit am höchsten ist der Anteil der erkrankten Frauen {{ diabetesWomanMaxCountry }} mit {{ diabetesWomanMaxValue }} Prozent."
             ],
             "en": [
               "Wrong! In Germany, 3.9 percent of the female population have diabetes. In Brazil, 8.7 percent have the disease and in South Africa, 12.6 percent do. In South Africa, as in many African countries, the number of overweight people has been increasing dramatically for several years. The country with the highest number of women with the disease is {{ diabetesWomanMaxCountry }} with {{ diabetesWomanMaxValue }} percent. "

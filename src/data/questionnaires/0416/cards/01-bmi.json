@@ -136,12 +136,12 @@
             "de": [
               "Mit einem BMI von {{ bmiValue }} gelten Sie laut [Weltgesundheitsorganisation](http://www.spiegel.de/gesundheit/ernaehrung/bmi-rechner-so-ermitteln-sie-ihren-body-mass-index-a-824673.html) als {{ bmiClassification }}",
               "",
-              "{{ bmiManCountry }} haben Männer im Schnitt einen ähnlichen BMI wie Sie."
+              "E inen ähnlichen BMI wie Sie haben Männer im Schnitt {{ bmiManCountry }}."
             ],
             "en": [
               "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
               "",
-              " In {{ bmiManCountry }}, men have a similar BMI to yours, on average. "
+              "Men {{ bmiManCountry }} have a similar BMI to yours, on average. "
             ]
           },
           "man3": {
@@ -172,12 +172,12 @@
             "de": [
               "Mit einem BMI von {{ bmiValue }} gelten Sie laut [Weltgesundheitsorganisation](http://www.spiegel.de/gesundheit/ernaehrung/bmi-rechner-so-ermitteln-sie-ihren-body-mass-index-a-824673.html) als {{ bmiClassification }}",
               "",
-              "{{ bmiWomanCountry }} haben Frauen im Schnitt einen ähnlichen BMI wie Sie."
+              "Frauen {{ bmiWomanCountry }} haben im Schnitt einen ähnlichen BMI wie Sie."
             ],
             "en": [
               "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
               "",
-              "{{ bmiWomanCountry }}, women have a similar BMI to yours, on average. "
+              "Women {{ bmiWomanCountry }} have a similar BMI to yours, on average. "
             ]
           },
           "woman3": {

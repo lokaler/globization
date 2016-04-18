@@ -225,12 +225,23 @@
       }
     },
     {
+      "text": {
+        "de": [
+          "Wie schneiden Ihre Freunde und Follower ab? Hier gibt's den Globus-Link zum Teilen"
+        ],
+        "en": [
+          ""
+        ]
+      }
+    },
+    {
       "answer": {
         "answerKey": [],
         "answerContext": {
           "twitterShare": "f.shareButtonTwitter('http://spon.de/aeHr7', i.sliderAlcohol + 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer [LINK kommt noch]')",
           "facebookShare": "f.shareButtonFacebook('http://spon.de/aeHr7', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer [LINK kommt noch]')"
         },
+
         "templates": {
           "default": {
             "de": [
