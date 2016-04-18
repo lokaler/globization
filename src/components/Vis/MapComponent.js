@@ -107,25 +107,11 @@ export default class MapComponent extends React.Component {
 
 
   componentDidMount() {
-    utils.log("componentDidMount", this.props)
-
     this.svg = d3.select(this.refs.mapSVG).call(this.zoom);
-
-    if(this.props.vis.active){
-      this.zoomToCountry(this.props.vis.active);
-    } else {
-      this.resetGlobe();
-    }
-
-  }
-
-  componentWillUnmount(){
-    utils.log("UNMOUNTING")
-    this.svg.remove();
+    this.resetGlobe();
   }
 
   resetGlobe(){
-    console.log("resetGlobe", this.props.vis)
     const dataset = this.props.questions.dataset;
     const translate = dataset.scale==1 ? this.reset.translate : dataset.translate.map(d=>d*this.reset.scale);
     const scale = this.reset.scale * dataset.scale;
@@ -156,36 +142,26 @@ export default class MapComponent extends React.Component {
 
   zoomToCountry(name){
 
-    this.activeGeometry = _.find(this.geometries, (d)=> d.properties.iso === name);
+    const country = _.find(this.geometries, (d)=> d.properties.iso === name);
+    if(!country){ utils.log("country not found!"); return; }
 
     const value = this.dataset.getValueForCountry(name);
     const unit = this.props.questions.dataset.unit;
-    const c = this.path.centroid(this.activeGeometry);
+    const c = this.path.centroid(country);
 
-    const dataset = this.props.questions.dataset;
-    const translate = dataset.scale==1 ? this.reset.translate : dataset.translate.map(d=>d*this.reset.scale);
-    const scale = this.reset.scale * dataset.scale;
+    // console.log("zoomToCountry", name);
 
-    console.log("zoomToCountry", name);
-
-    this.svg
-      .transition()
-      .duration(1000)
-      .call(this.zoom.scale(scale).translate(translate).event)
-      .each("end", ()=>{
-
-        this.props.actions.changeVis({
-          tooltip: {
-            active: true,
-            iso: name,
-            value,
-            unit,
-            x: c[0],
-            y: c[1]
-          },
-          animation: null
-        });
-
+    defer(()=>{
+      this.props.actions.changeVis({
+        tooltip: {
+          active: true,
+          iso: name,
+          value,
+          unit,
+          x: c[0],
+          y: c[1]
+        }
+      });
     });
   }
 
@@ -199,14 +175,16 @@ export default class MapComponent extends React.Component {
   componentWillReceiveProps(nextProps) {
     //utils.log("shouldComponentUpdate", nextProps.vis.animation ? "no": "yes");
 
-    if(nextProps.vis.animation){
-      console.log(nextProps.vis.animation)
-      this[nextProps.vis.animation.action](nextProps.vis.animation.payload);
-    }
+    // if(nextProps.vis.animation){
+    //   this[nextProps.vis.animation.action](nextProps.vis.animation.payload);
+    // }
 
-    if(this.props.vis.active && nextProps.vis.active != this.props.vis.active) {
-      console.log(nextProps.vis.active, this.props.vis.active)
+    if(nextProps.vis.active != this.props.vis.active) {
       this.activeGeometry = _.find(topofeatures, (d)=> d.properties.iso === nextProps.vis.active);
+      // console.log("activeGeometry",this.activeGeometry)
+      if(nextProps.vis.active){
+        this.zoomToCountry(nextProps.vis.active);
+      }
     }
 
     if(nextProps.questions.dataset != this.props.questions.dataset) {
@@ -223,23 +201,18 @@ export default class MapComponent extends React.Component {
         .translate(translate)
         .event
       )
-
-      this.geometries.forEach((d) =>{
-        d.properties.fillColor = this.getFillColor(d.properties.iso);
+      .tween("colors", ()=>{
+        this.geometries.forEach((d) =>{
+          const a = d.properties.fillColor;
+          const b = this.getFillColor(d.properties.iso);
+          d.interpolate = d3.interpolateRgb(a, b);
+        });
+        return (t) => {
+          this.geometries.forEach((d,i) =>{
+            d.properties.fillColor = d.interpolate(t);
+          })
+        };
       });
-
-      // .tween("colors", ()=>{
-      //   this.geometries.forEach((d) =>{
-      //     const a = d.properties.fillColor;
-      //     const b = this.getFillColor(d.properties.iso);
-      //     d.interpolate = d3.interpolateRgb(a, b);
-      //   });
-      //   return (t) => {
-      //     this.geometries.forEach((d,i) =>{
-      //       d.properties.fillColor = d.interpolate(t);
-      //     })
-      //   };
-      // });
     }
   }
 
@@ -268,8 +241,6 @@ export default class MapComponent extends React.Component {
       }
     });
   }
-
-
 
 
   render() {
