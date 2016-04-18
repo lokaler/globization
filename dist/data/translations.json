@@ -34,5 +34,25 @@
   "no data": {
     "de": "keine Daten",
     "en": "no data"
+  },
+  "submit": {
+    "de": "Auswahl bestätigen",
+    "en": "submit choice"
+  },
+  "underweight": {
+    "de": "untergewichtig",
+    "en": "underweight"
+  },
+  "normalweight": {
+    "de": "normalgewichtig",
+    "en": "normal weight"
+  },
+  "overweight": {
+    "de": "übergewichtig",
+    "en": "overweight"
+  },
+  "veryoverweight": {
+    "de": "stark übergewichtig",
+    "en": "severely overweight"
   }
 }

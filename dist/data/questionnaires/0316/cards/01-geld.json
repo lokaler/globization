@@ -1,0 +1,104 @@
+{
+  "key": "geld",
+  "title": "1. Karte - Wofür geben Sie Ihr Geld aus?",
+  "dataset": "food",
+  "view": "globe",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Wofür geben Sie Ihr Geld aus?",
+          "",
+          "An der Supermarktkasse und im Einkaufszentrum entscheiden wir, ",
+          "welche Produkte uns wie viel wert sind.",
+          "",
+          "**Wie viel Prozent Ihrer Konsumausgaben wenden Sie",
+          "beispielsweise für Lebensmittel auf?**"
+        ],
+        "en": [
+          "# What do you spend your money on?",
+          "",
+          "At the supermarket and in the shopping mall, we decide how much the products we want are worth to us.",
+          "",
+          "**What percent of your total expenditures goes to food?**"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "sliderFoodSpending",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 30,
+          "max": 60,
+          "step": 1
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          [
+            "(i.sliderFoodSpending < 7)",
+            "&& f.panToCountry(f.getMinISO('food'))",
+            "&& 'littleFoodCon'"
+          ],
+          [
+            "(i.sliderFoodSpending < 50)",
+            "&& f.panToCountry(f.getISO('food', i.sliderFoodSpending))",
+            "&& 'mediumFoodCon'"
+          ],
+          [
+            "(i.sliderFoodSpending >= 50)",
+            "&& f.panToCountry(f.getMaxISO('food'))",
+            "&& 'highFoodCon'"
+          ]
+        ],
+        "answerContext": {
+          "landAusgaben": "f.getCountryName('food', i.sliderFoodSpending)",
+          "landMax": "f.getMaxCountryName('food')",
+          "landMin": "f.getMinCountryName('food')",
+          "valueMax": "f.getMaxValue('food')",
+          "valueMin": "f.getMinValue('food')"
+        },
+        "templates": {
+          "default": {
+            "de": [
+              "Bitte bewegen Sie den Schieberegler "
+            ],
+            "en": [
+              "Please move the slider."
+            ]
+          },
+          "littleFoodCon": {
+            "action": "f.getMinCountryName('food')",
+            "de": [
+              "Sie geben einen sehr geringen Anteil Ihres Geldes für Essen aus, noch weniger als Menschen **{{ landMin }}** , die nur **{{ valueMin }}** Prozent Ihrer Konsumausgaben für Nahrungsmittel aufwenden."
+            ],
+            "en": [
+              "You spend a very small percentage of your money on food, even less than people **{{ landMin }}**. There, the share is just **{{ valueMin }}** percent, which is the lowest percentage of all countries"
+            ]
+          },
+          "mediumFoodCon": {
+            "de": [
+              "Menschen **{{ landAusgaben }}** geben, gemessen an den gesamten Konsumausgaben, ähnlich viel für Essen aus wie Sie."
+            ],
+            "en": [
+              "People **{{ landAusgaben }}** spend a similar amount on food as you do, measured as a percentage of total consumption expenditures."
+            ]
+          },
+          "highFoodCon": {
+            "de": [
+              "Sie geben einen sehr großen Anteil Ihres Geldes für Essen aus. Im internationalen Vergleich wenden Menschen **{{ landMax }}** den größten Anteil ihrer Konsumausgaben für Nahrungsmittel auf, nämlich **{{ valueMax }}** Prozent."
+            ],
+            "en": [
+              "You spend a very large share of your money on food. Internationally, people **{{ landMax }}** devote the largest share of their consumption expenditures to food, namely **{{ valueMax }}** percent."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
