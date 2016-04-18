@@ -36,6 +36,13 @@ export default class UbermorgenApp extends React.Component {
     this.handleResize();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.app.mobile !== nextProps.app.mobile && nextProps.app.mobile === true) {
+      const height = window.outerHeight;
+      d3.select(window.frameElement).style('height', `${height}px`);
+    }
+  }
+
   configureHotReload() {
     const { actions } = this.props;
 

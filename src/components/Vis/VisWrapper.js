@@ -90,7 +90,7 @@ export default class Globe extends React.Component {
     const random = this.random.bind(this);
     const app = this.props.app;
 
-    const height = app.mobile ? app.height * 0.3 : app.height;
+    const height = app.mobile ? app.height * 0.4 : app.height;
     const width = app.mobile ? app.width : app.width * 0.65;
 
     return (

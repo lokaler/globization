@@ -39,7 +39,7 @@ export default class Questionnaire extends React.Component {
       nextBtnLabel = 'close';
     }
 
-    const scrollHeight = app.mobile ? ((app.height * (1 - 0.3)) - 50) : app.height - 50;
+    const scrollHeight = app.mobile ? ((app.height * (1 - 0.4)) - 65) : app.height - 65;
 
     return (
       <div className={ styles.questions }>
