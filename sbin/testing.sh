@@ -2,7 +2,7 @@
 set -e
 
 cp -r dist /tmp/
-git checkout deploy
+git checkout testing
 rm -rf dist/
 git pull
 cp -r /tmp/dist .
