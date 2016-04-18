@@ -136,13 +136,11 @@
 
         &.twitter{
           float: left;
-          background-position-x: -6px;
-          background-position-y: -56px;
+          background-position: -6px -56px;
         }
         &.facebook{
           float: right;
-          background-position-x: -6px;
-          background-position-y: -8px;
+          background-position: -6px -8px;
         }
       }
     }

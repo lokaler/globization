@@ -29,9 +29,7 @@
     &:first-child{
       display: none;
     }
-    &:last-child{
-      display: none;
-    }
+
   }
 
   :local(.pagination) {
@@ -58,7 +56,6 @@
   @mixin btn {
     color: #777;
     cursor: pointer;
-    position: absolute;
     user-select: none;
   }
 
@@ -78,7 +75,7 @@
     font-size: 12px;
     margin-right: 5px;
     font-weight: bold;
-    margin-top:7px;
+    margin-top:2px;
 
     &:hover {
       colors: #000;
@@ -95,7 +92,8 @@
 
   :local(.btn_next) {
     @include btn;
-    right: 5px;
+    margin-right: 5px;
+    margin-left: auto;
 
     :local(.btn_text) {
       @include btn-text;
@@ -112,7 +110,8 @@
 
   :local(.btn_prev) {
     @include btn;
-    left: 5px;
+    margin-left: 5px;
+    margin-right: auto;
 
     :local(.btn_text) {
       @include btn-text;
