@@ -26,11 +26,11 @@
         "key": "sliderAlcohol",
         "type": "slider",
         "options": {
-          "min": 1,
+          "min": 0.1,
           "value": 6.5,
           "max": 14.1,
-          "unit": "l",
-          "step": 0.1
+          "unit": "",
+          "step": 1
         }
       }
     },
@@ -43,13 +43,12 @@
       "answer": {
         "answerKey": [
             "!i.alcoholSubmitted && 'notSubmitted'",
-            "(i.sliderAlcohol < 8) && 'lessAlcohol'",
-            "(i.sliderAlcohol < 10) && 'someAlcohol'",
-            "(i.sliderAlcohol > 10) && 'muchAlcohol'"
+            "(i.sliderAlcohol < 8) && f.panToCountry(f.getISO('alcoholConsume', i.sliderAlcohol * 0.5)) && 'lessAlcohol'",
+            "(i.sliderAlcohol >= 8) && (i.sliderAlcohol <= 10) && f.panToCountry('DEU') && 'someAlcohol'",
+            "(i.sliderAlcohol > 10) && f.panToCountry(f.getISO('alcoholConsume', i.sliderAlcohol * 0.5)) && 'muchAlcohol'"
           ],
         "answerContext": {
-          "AlcoholCountry": "f.getCountryName('alcoholConsume', 'alcoholSubmitted')"
-
+          "AlcoholCountry": "f.getCountryName('alcoholConsume', i.sliderAlcohol * 0.5)"
         },
         "templates": {
           "notSubmitted": {
@@ -57,10 +56,10 @@
           },
           "lessAlcohol": {
             "de": [
-              "Nein, etwas mehr ist es schon. Im Schnitt trinken Deutsche wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist. Ihre Schätzung entspricht ungefähr dem Alkoholkonsum der Menschen in **{{ AlcoholCountry }}**."
+              "Nein, etwas mehr ist es schon. Im Schnitt trinken Deutsche wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist. Ihre Schätzung entspricht ungefähr dem Alkoholkonsum der Menschen **{{ AlcoholCountry }}**."
             ],
             "en": [
-              "Wrong! The answer is higher. On average, Germans drink as much alcohol as is contained in nine-and-a-half large beers each week. Your estimate roughly matches the alcohol consumption of people from [Land_Wert_Alkohol]."
+              "Wrong! The answer is higher. On average, Germans drink as much alcohol as is contained in nine-and-a-half large beers each week. Your estimate roughly matches the alcohol consumption of people from **{{ AlcoholCountry }}**."
             ]
           },
           "someAlcohol": {
@@ -73,10 +72,10 @@
           },
           "muchAlcohol": {
             "de": [
-              "Ganz so viel ist es nicht. Im Schnitt trinken Deutsche wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist. Ihre Schätzung entspricht ungefähr dem Alkoholkonsum der Menschen in [Land_Wert_Alkohol]."
+              "Ganz so viel ist es nicht. Im Schnitt trinken Deutsche wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist. Ihre Schätzung entspricht ungefähr dem Alkoholkonsum der Menschen **{{ AlcoholCountry }}**."
             ],
             "en": [
-              "Wrong! The answer is not quite that high. Germans drink the equivalent of nine-and-a-half large beers each week on average. Your estimate matches the alcohol consumption of people in [Land_Wert_Alkohol]."
+              "Wrong! The answer is not quite that high. Germans drink the equivalent of nine-and-a-half large beers each week on average. Your estimate matches the alcohol consumption of people in **{{ AlcoholCountry }}**."
             ]
           }
         }
