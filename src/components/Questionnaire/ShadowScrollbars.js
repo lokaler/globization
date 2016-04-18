@@ -43,6 +43,7 @@ export default createClass({
         const { scrollbars } = this.refs;
         const { scrollTop, scrollHeight, clientHeight } = scrollbars.getValues();
         this.setState({ scrollTop, scrollHeight, clientHeight });
+        scrollbars.scrollToTop();
     },
 
     render() {
