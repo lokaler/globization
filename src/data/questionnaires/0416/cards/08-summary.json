@@ -238,8 +238,8 @@
       "answer": {
         "answerKey": [],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeHr7', i.sliderAlcohol + 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer [LINK kommt noch]')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeHr7', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer [LINK kommt noch]')"
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeHr7', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeHr7', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')"
         },
 
         "templates": {

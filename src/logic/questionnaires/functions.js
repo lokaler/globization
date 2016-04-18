@@ -164,7 +164,7 @@ export default {
 
   shareButtonTwitter(url, text) {
     const language = store.getState().app.language;
-    const linkUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}&lang=${language}&via=SPIEGELONLINE`;
+    const linkUrl = `https://twitter.com/intent/tweet?url=${url}&text=${encodeURIComponent(text)}&lang=${language}&via=SPIEGELONLINE`;
 
     return (
       `<a class='share twitter ${language}' target='_blank'
@@ -174,7 +174,7 @@ export default {
 
   shareButtonFacebook(url, text) {
     const language = store.getState().app.language;
-    const linkUrl = `https://www.facebook.com/share.php?u=${url}&t=${text}`;
+    const linkUrl = `https://www.facebook.com/share.php?u=${url}&t=${encodeURIComponent(text)}`;
 
     return (
       `<a class='share facebook ${language}' target='_blank'
