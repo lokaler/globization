@@ -29,7 +29,7 @@ export default class Footer extends React.Component {
           this.sendLogbuch();
         }
         else {
-          cardIndex = -1;
+          cardIndex = 0;
         }
         sponLogger();
         actions.setCard(cardIndex, dataId);
