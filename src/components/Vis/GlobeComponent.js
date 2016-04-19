@@ -177,7 +177,7 @@ export default class GlobeComponent extends React.Component {
 
 
   zoomToCountry(name){
-    console.log("zoomToCountry");
+    // console.log("zoomToCountry");
 
     this.activeGeometry = _.find(this.geometries, (d)=> d.properties.iso === name);
     // const country = _.find(this.geometries, (d)=> d.properties.iso === name);
