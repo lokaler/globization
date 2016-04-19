@@ -36,13 +36,13 @@ export default class UbermorgenApp extends React.Component {
     this.handleResize();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.app.mobile !== nextProps.app.mobile && nextProps.app.mobile === true) {
-      //const height = window.outerHeight;
-      // d3.select(window.frameElement).style('height', `${height}px`);
-      d3.select(window.frameElement).style('height', '550px');
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (this.props.app.mobile !== nextProps.app.mobile && nextProps.app.mobile === true) {
+  //     const height = window.outerHeight || document.documentElement.clientHeight;
+  //     d3.select(window.frameElement).style('height', `${height}px`);
+  //     // d3.select(window.frameElement).style('height', '550px');
+  //   }
+  // }
 
   configureHotReload() {
     const { actions } = this.props;
@@ -62,11 +62,16 @@ export default class UbermorgenApp extends React.Component {
 
   handleResize() {
     const bbox = d3.select('body').node().getBoundingClientRect();
+    // const width = window.outerWidth || document.documentElement.clientWidth;
+    // console.log(screen.width, screen.height, bbox);
     this.props.actions.setWindowSize({ width: bbox.width, height: bbox.height });
   }
 
   render() {
     const responsiveClass = this.props.app.mobile ? 'mq-mobile' : 'mq-desktop';
+    // console.log(this.props.app);
+    // const ready = !isUndefined(this.props.app.mobile);
+    // d3.select('body').attr('class', responsiveClass);
     return (
       <div className={ responsiveClass }>
         <div className={ styles.container }>
