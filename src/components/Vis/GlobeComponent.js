@@ -45,7 +45,7 @@ export default class GlobeComponent extends React.Component {
       // .extent(this.projection.clipExtent());
     this.graticulePath = d3.geo.path().projection(this.projection);
 
-   this.path = d3.geo.path()
+    this.path = d3.geo.path()
       .projection({
         stream: s => this.simplify.stream(this.projection.stream(this.clip.stream(s)))
       })
@@ -63,6 +63,7 @@ export default class GlobeComponent extends React.Component {
       }
     });
 
+    this.dragging = false;
 
     // dunnow if this should be done here!
     this.geometries = topofeatures;
@@ -94,8 +95,17 @@ export default class GlobeComponent extends React.Component {
 
         this.forceUpdate();
       })
+      .on("zoomstart", () => {
+        this.dragging = true;
+        this.props.actions.changeVis({
+          tooltip: {
+            active: false
+          }
+        });
+      })
       .on("zoomend", () => {
         utils.log("zoomend")
+        this.dragging = false;
         this.props.actions.changeVis({
             translate: this.zoom.translate(),
             zoom: this.zoom.scale(),
@@ -167,6 +177,8 @@ export default class GlobeComponent extends React.Component {
 
 
   zoomToCountry(name){
+    console.log("zoomToCountry");
+
     this.activeGeometry = _.find(this.geometries, (d)=> d.properties.iso === name);
     // const country = _.find(this.geometries, (d)=> d.properties.iso === name);
     // if(!country){ utils.log("country not found!", name); return; }
@@ -202,7 +214,7 @@ export default class GlobeComponent extends React.Component {
   }
 
 
-  componentWillReceiveProps(nextProps) {
+  shouldComponentUpdate(nextProps) {
     utils.log("shouldComponentUpdate", nextProps, this.props);
     let update = false;
 
@@ -210,17 +222,27 @@ export default class GlobeComponent extends React.Component {
       this.projection.translate([nextProps.width / 2, nextProps.height / 2]);
       this.clip.extent([[0, 0], [nextProps.width, nextProps.height]]);
       this.zoom.size([nextProps.width,nextProps.height]);
+      update = false;
     }
 
     if(nextProps.vis.animation) {
       this[nextProps.vis.animation.action](nextProps.vis.animation.payload);
+      this.props.actions.changeVis({ animation: null });
       update = false;
     }
 
     if(nextProps.vis.active != this.props.vis.active) {
       this.activeGeometry = _.find(topofeatures, (d)=> d.properties.iso === nextProps.vis.active);
-      //update = true;
+      update = false;
     }
+
+    // if(nextProps.vis.translate != this.props.vis.translate
+    //   || nextProps.vis.zoom != this.props.vis.zoom
+    //   || nextProps.vis.scale != this.props.vis.scale
+    //   || nextProps.vis.rotate != this.props.vis.rotate
+    // ){
+    //   update = true;
+    // }
 
     if(nextProps.questions.dataset != this.props.questions.dataset) {
       // console.log("new Dataset!", nextProps.color.domain());
@@ -260,7 +282,7 @@ export default class GlobeComponent extends React.Component {
       update = false;
     }
 
-    // utils.log("shouldComponentUpdate", update ? "yes": "no");
+    utils.log("shouldComponentUpdate", update ? "yes": "no");
     return update;
   }
 
@@ -269,6 +291,8 @@ export default class GlobeComponent extends React.Component {
   }
 
   onMouseEnter(d){
+    if(this.dragging) return;
+
     const c = this.path.centroid(d);
     const value = this.dataset.getValueForCountry(d.properties.iso);
     const unit = this.props.questions.dataset.unit;
@@ -287,6 +311,8 @@ export default class GlobeComponent extends React.Component {
   }
 
   onMouseLeave(d){
+    if(this.dragging) return;
+
     this.props.actions.changeVis({
       tooltip: {
         active: false
