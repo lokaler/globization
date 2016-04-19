@@ -146,6 +146,11 @@ export default {
     }
   },
 
+  isMobile() {
+    const state = store.getState();
+    return state.app.mobile;
+  },
+
   calculateBmi(weight, height) {
     return weight / ((height * height) / 10000);
   },
