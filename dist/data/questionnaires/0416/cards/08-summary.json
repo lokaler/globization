@@ -238,8 +238,8 @@
       "answer": {
         "answerKey": [],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeHr7', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeHr7', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')"
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeJbl', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeJbl', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')"
         },
 
         "templates": {
