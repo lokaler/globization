@@ -54,5 +54,9 @@
   "veryoverweight": {
     "de": "stark übergewichtig",
     "en": "severely overweight"
+  },
+  "topic": {
+    "de": "Thema",
+    "en": "Topic"
   }
 }

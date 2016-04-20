@@ -11,7 +11,10 @@ datasets0416.forEach(prepareDataset);
 
 let questionnaires = {
   '0316': {
-    title: 'Konsum',
+    title: {
+      de: 'Konsum',
+      en: 'Consumption'
+    },
     options: {
       showBackButton: true
     },
@@ -19,7 +22,10 @@ let questionnaires = {
     datasets: datasets0316
   },
   '0416': {
-    title: 'Gesundheit',
+    title: {
+      de: 'Gesundheit',
+      en: 'Health'
+    },
     options: {
       showBackButton: true
     },
