@@ -470,7 +470,7 @@
      "en": "Übergewicht Jugendliche"
     },
     "description": {
-     "de": "Anteil übergewichtiger Jungen unter 20 Jahre",
+     "de": "Anteil übergewichtiger Jungen unter 20 Jahre in Prozent",
      "en": "Anteil übergewichtiger Jungen unter 20 Jahre"
     },
     "linkedSet": [
@@ -691,7 +691,7 @@
      "en": "Übergewicht Jugendliche"
     },
     "description": {
-     "de": "Anteil übergewichtiger Mädchen unter 20 Jahre",
+     "de": "Anteil übergewichtiger Mädchen unter 20 Jahre in Prozent",
      "en": "Anteil übergewichtiger Mädchen unter 20 Jahre"
     },
     "linkedSet": [
@@ -912,7 +912,7 @@
      "en": "Diabetes"
     },
     "description": {
-     "de": "Anteil Frauen mit Diabetes 2014",
+     "de": "Anteil Frauen mit Diabetes 2014 in Prozent",
      "en": "Anteil Frauen mit Diabetes 2014"
     },
     "linkedSet": [
@@ -1145,7 +1145,7 @@
      "en": "Diabetes"
     },
     "description": {
-     "de": "Anteil Männer mit Diabetes 2014",
+     "de": "Anteil Männer mit Diabetes 2014 in Prozent",
      "en": "Anteil Männer mit Diabetes 2014"
     },
     "linkedSet": [
@@ -1378,7 +1378,7 @@
      "en": "Bewegungsmangel"
     },
     "description": {
-     "de": "Anteil der Jugendlichen zwischen 11 und 17 Jahren, die sich zu wenig bewegen",
+     "de": "Anteil der Jugendlichen zwischen 11 und 17 Jahren, die sich zu wenig bewegen in Prozent",
      "en": "Anteil der Jugendlichen zwischen 11 und 17 Jahren, die sich zu wenig bewegen"
     },
     "quelle": "WHO",
