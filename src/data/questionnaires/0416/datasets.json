@@ -7,7 +7,7 @@
     },
     "description": {
       "de": "Durchschnittlicher BMI Frauen in 2014",
-      "en": "Durchschnittlicher BMI Frauen in 2014"
+      "en": "Average BMI for women in 2014"
     },
     "linkedSet": [
       { "key": "bmiWoman", "value":"female" },
@@ -239,7 +239,7 @@
     },
     "description": {
      "de": "Durchschnittlicher BMI Männer in 2014",
-     "en": "Durchschnittlicher BMI Männer in 2014"
+     "en": "Average BMI for men in 2014"
     },
     "linkedSet": [
       { "key": "bmiWoman", "value":"female" },
@@ -471,7 +471,7 @@
     },
     "description": {
      "de": "Anteil übergewichtiger Jungen unter 20 Jahre in Prozent",
-     "en": "Anteil übergewichtiger Jungen unter 20 Jahre"
+     "en": "Share of overweight boys under 20 as a percentage"
     },
     "linkedSet": [
       { "key": "overweightBoys", "value":"male" },
@@ -692,7 +692,7 @@
     },
     "description": {
      "de": "Anteil übergewichtiger Mädchen unter 20 Jahre in Prozent",
-     "en": "Anteil übergewichtiger Mädchen unter 20 Jahre"
+     "en": "Share of overweight girls under 20 as a percentage"
     },
     "linkedSet": [
       { "key": "overweightBoys", "value":"male" },
@@ -913,7 +913,7 @@
     },
     "description": {
      "de": "Anteil Frauen mit Diabetes 2014 in Prozent",
-     "en": "Anteil Frauen mit Diabetes 2014"
+     "en": "Share of women with diabetes as a percentage"
     },
     "linkedSet": [
       { "key": "diabetesWoman", "value":"female" },
@@ -1146,7 +1146,7 @@
     },
     "description": {
      "de": "Anteil Männer mit Diabetes 2014 in Prozent",
-     "en": "Anteil Männer mit Diabetes 2014"
+     "en": "Share of men with diabetes in 2014 as a percentage"
     },
     "linkedSet": [
       { "key": "diabetesWoman", "value":"female" },
@@ -1379,7 +1379,7 @@
     },
     "description": {
      "de": "Anteil der Jugendlichen zwischen 11 und 17 Jahren, die sich zu wenig bewegen in Prozent",
-     "en": "Anteil der Jugendlichen zwischen 11 und 17 Jahren, die sich zu wenig bewegen"
+     "en": "Share of youth between 11 and 17 who exercise too little -- as a percentage"
     },
     "quelle": "WHO",
     "link": "http://apps.who.int/gho/data/view.main.2482ADO?lang=en",
@@ -1528,7 +1528,7 @@
     },
     "description": {
      "de": "Pro Woche und Person getrunkener Alkohol in Anzahl 0,5-Liter-Biere umgerechnet",
-     "en": "Pro Woche und Person getrunkener Alkohol in Anzahl 0,5-Liter-Biere umgerechnet"
+     "en": "Alcohol drunken per week by a person in numbers of 0.5 litre beers"
     },
     "quelle": "WHO",
     "link": "http://apps.who.int/gho/data/node.main.A1032?lang=en?showonly=GISAH",
