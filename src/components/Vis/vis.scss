@@ -133,7 +133,67 @@
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 
     .mq-mobile & {
-      display: none;
+      box-shadow: none;
+      background: none;
+      bottom: 5px;
+
+      text-shadow:
+        0px 0px 3px white,
+        0px 0px 3px white,
+        0px 0px 3px white,
+        0px 0px 3px white,
+        0px 0px 3px white,
+        0px 0px 3px white,
+        0px 0px 3px white,
+        0px 0px 3px white,
+        0px 0px 7px white,
+        0px 0px 7px white,
+        0px 0px 7px white,
+        0px 0px 7px white,
+        0px 0px 7px white,
+        0px 0px 7px white,
+        0px 0px 7px white,
+        0px 0px 7px white,
+        0px 0px 7px white,
+        0px 0px 7px white,
+        0px 0px 7px white,
+
+        0px 0px 3px white;
+
+
+      .quelle {
+        display: none;
+      }
+
+      .description {
+        width: 70%;
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 10px;
+      }
+
+      .legend {
+        .item {
+          &:nth-child(2){
+            display: none;
+          }
+          &:nth-child(3){
+            display: none;
+          }
+          &:nth-child(4){
+            display: none;
+          }
+          &:nth-child(6){
+            display: none;
+          }
+          &:nth-child(7){
+            display: none;
+          }
+          &:nth-child(8){
+            display: none;
+          }
+        }
+      }
     }
 
     .label {
