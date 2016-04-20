@@ -46,6 +46,7 @@ export default class Questionnaire extends React.Component {
         <ShadowScrollbars
           activeCard={ activeCard }
           style={{ width: '100%', height: scrollHeight }}
+          { ...this.props }
         >
           <div className={ styles.inner }>
             <Card { ...this.props }/>

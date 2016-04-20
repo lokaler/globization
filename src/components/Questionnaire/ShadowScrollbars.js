@@ -24,6 +24,14 @@ export default createClass({
         window.addEventListener('resize', this.handleWindowResize);
     },
 
+    componentWillReceiveProps(n) {
+      if(n.questions.submittedCards !== this.props.questions.submittedCards) {
+        setTimeout(function() {
+          this.refs.scrollbars.scrollToBottom();
+        }.bind(this),100);
+      }
+    },
+
     componentDidUpdate(nextProps) {
       if(nextProps.activeCard != this.props.activeCard){
         this.handleWindowResize();
