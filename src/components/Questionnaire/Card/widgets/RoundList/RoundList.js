@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import styles from './RoundList.scss';
+import translate from 'logic/translate';
 
 export default class RoundList extends React.Component {
 
@@ -21,7 +22,7 @@ export default class RoundList extends React.Component {
       const [key, questionnaire] = item;
       return (
         <option key={ key } value={ key }>
-          {questionnaire.title}
+          { translate(questionnaire.title) }
         </option>
       );
     });
@@ -29,7 +30,7 @@ export default class RoundList extends React.Component {
     return (
       <div className={ styles.component }>
         <div className="theme">
-          <span className="info">Thema:</span>
+          <span className="info">{ translate('topic') }:</span>
           <select className="dropdown" value={ activeQuestionnaireId } onChange={ this.onChange }>
             { rounds }
           </select>
