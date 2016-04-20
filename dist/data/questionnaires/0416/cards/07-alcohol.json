@@ -1,0 +1,85 @@
+{
+  "key": "alcohol",
+  "title": "7. Karte - Alcohol",
+  "dataset": "alcoholConsume",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Gesundheitsrisiko Alkohol",
+          "",
+          "In einem [WHO-Report zu Alkohol und Gesundheit 2014](http://apps.who.int/iris/bitstream/10665/112736/1/9789240692763_eng.pdf?ua=1) kommen die Autoren zu dem Schluss, dass Alkoholkonsum weltweit zu mehr Todesfällen führt als Tuberkulose und HIV zusammen.",
+          "",
+          "Tippen Sie: Wie viel Alkohol trinken die Deutschen durchschnittlich pro Woche? Schätzen Sie in Anzahl von 0,5-Liter-Bieren (Tipp: Rechnen Sie für ein Glas Rotwein ein 0,5l-Bier und für einen Schnaps ein Drittel 0,5l-Bier)"
+        ],
+        "en": [
+          "# The health risks of alcohol",
+          "",
+          "The authors of a [2014 WHO report on alcohol and health](http://apps.who.int/iris/bitstream/10665/112736/1/9789240692763_eng.pdf?ua=1) came to the conclusion that worldwide alcohol consumption leads to more deaths than tuberculosis and HIV put together.",
+          "",
+          "**Can you guess how many liters of alcohol Germans drink per week on average?** Form your answer as a multiple of half-liters (pints) of beer (assume a glass of red wine is equivalent to a half-liter of beer and that a shot is equivalent to a third of half-liter of beer)."
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "sliderAlcohol",
+        "type": "slider",
+        "options": {
+          "min": 0.1,
+          "value": 6.5,
+          "max": 14.1,
+          "unit": "",
+          "step": 0.1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "alcoholSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+            "!i.alcoholSubmitted && 'notSubmitted'",
+            "(i.sliderAlcohol < 8) && f.panToCountry(f.getISO('alcoholConsume', i.sliderAlcohol * 0.5)) && 'lessAlcohol'",
+            "(i.sliderAlcohol >= 8) && (i.sliderAlcohol <= 10) && f.panToCountry('DEU') && 'someAlcohol'",
+            "(i.sliderAlcohol > 10) && f.panToCountry(f.getISO('alcoholConsume', i.sliderAlcohol * 0.5)) && 'muchAlcohol'"
+          ],
+        "answerContext": {
+          "AlcoholCountry": "f.getCountryName('alcoholConsume', i.sliderAlcohol * 0.5)"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+          "lessAlcohol": {
+            "de": [
+              "Nein, etwas mehr ist es schon. Im Schnitt trinken Deutsche wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist. Ihre Schätzung entspricht ungefähr dem Alkoholkonsum der Menschen **{{ AlcoholCountry }}**."
+            ],
+            "en": [
+              "Wrong! The answer is higher. On average, Germans drink as much alcohol as is contained in nine-and-a-half large beers each week. Your estimate roughly matches the alcohol consumption of people from **{{ AlcoholCountry }}**."
+            ]
+          },
+          "someAlcohol": {
+            "de": [
+              "Ziemlich gut geschätzt! Im Schnitt trinken Deutsche wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist."
+            ],
+            "en": [
+              "Good guess! Germans drink the equivalent of nine-and-a-half large beers each week on average."
+            ]
+          },
+          "muchAlcohol": {
+            "de": [
+              "Ganz so viel ist es nicht. Im Schnitt trinken Deutsche wöchentlich so viel Alkohol, wie in 9,5 großen Bieren enthalten ist. Ihre Schätzung entspricht ungefähr dem Alkoholkonsum der Menschen **{{ AlcoholCountry }}**."
+            ],
+            "en": [
+              "Wrong! The answer is not quite that high. Germans drink the equivalent of nine-and-a-half large beers each week on average. Your estimate matches the alcohol consumption of people in **{{ AlcoholCountry }}**."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
