@@ -134,7 +134,7 @@
 
     .mq-mobile & {
       box-shadow: none;
-      background: none;
+      background: rgba(255, 255, 255, 0.69);
       bottom: 5px;
 
       text-shadow:
@@ -167,9 +167,7 @@
 
       .description {
         width: 70%;
-        position: absolute;
-        bottom: 0;
-        padding-bottom: 10px;
+
       }
 
       .legend {

@@ -33,16 +33,17 @@ export default class UbermorgenApp extends React.Component {
     actions.setQuestionnaire(store.getState().questions.activeQuestionnaireId);
     this.configureHotReload();
     window.addEventListener('resize', this.handleResize.bind(this));
+    // window.parent.addEventListener('scroll', this.handleScroll.bind(this));
     this.handleResize();
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.app.mobile !== nextProps.app.mobile && nextProps.app.mobile === true) {
-  //     const height = window.outerHeight || document.documentElement.clientHeight;
-  //     d3.select(window.frameElement).style('height', `${height}px`);
-  //     // d3.select(window.frameElement).style('height', '550px');
-  //   }
-  // }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.app.mobile) {
+      d3.select(window.frameElement)
+        .style('padding-top', '20px')
+        .style('padding-bottom', '40px');
+    }
+  }
 
   configureHotReload() {
     const { actions } = this.props;
@@ -60,22 +61,49 @@ export default class UbermorgenApp extends React.Component {
     }
   }
 
+  clickFullscreen() {
+    this.props.actions.setFullscreen(true);
+    this.props.actions.setWindowSize({ width: screen.width, height: screen.height });
+
+    d3.select(window.frameElement).style({
+      position: 'fixed',
+      left: 0,
+      top: 0,
+      right: 0,
+      bottom: 0,
+      padding: 0,
+      margin: 0,
+      width: '100%',
+      height: '100%'
+    });
+  }
+
   handleResize() {
     const bbox = d3.select('body').node().getBoundingClientRect();
-    // const width = window.outerWidth || document.documentElement.clientWidth;
-    // console.log(screen.width, screen.height, bbox);
     this.props.actions.setWindowSize({ width: bbox.width, height: bbox.height });
+  }
+
+  handleScroll() {
+    const iframeTop = window.frameElement.getBoundingClientRect().top;
+    const top = iframeTop < 0 ? iframeTop * -1 : 0;
+    d3.select(this.refs.left).style('top', `${top}px`);
   }
 
   render() {
     const responsiveClass = this.props.app.mobile ? 'mq-mobile' : 'mq-desktop';
-    // console.log(this.props.app);
-    // const ready = !isUndefined(this.props.app.mobile);
-    // d3.select('body').attr('class', responsiveClass);
+    const isMobile = this.props.app.mobile;
+    const isFullscreen = this.props.app.fullscreen;
+    const fullscreenClick = this.clickFullscreen.bind(this);
+
     return (
       <div className={ responsiveClass }>
+        { isMobile && !isFullscreen && false &&
+          <div className="mobileFullscreenOverlay" onClick={ fullscreenClick }>
+            Fullscreen
+          </div>
+        }
         <div className={ styles.container }>
-          <div className="left">
+          <div ref="left" className="left">
             <Vis {...this.props}/>
           </div>
           <div className="right">

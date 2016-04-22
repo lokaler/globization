@@ -1,6 +1,8 @@
 :local(.component) {
     float: left;
     width: 100%;
+    display: none;
+
     .theme {
         font-size: 12px;
         /* padding: 8px 10px 8px 10px; */

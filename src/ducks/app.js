@@ -5,11 +5,13 @@ import d3 from 'd3';
 export const GET_URL_PARAMETERS = 'GET_URL_PARAMETERS';
 export const GET_STORED_VALUES = 'GET_STORED_VALUES';
 const SET_WINDOW_SIZE = 'SET_WINDOW_SIZE';
+const SET_FULLSCREEN = 'SET_FULLSCREEN';
 
 const initialState = {
   language: 'de',
   width: 860,
-  height: 500
+  height: 500,
+  fullscreen: false
 };
 
 
@@ -24,6 +26,11 @@ export function reducer(state = initialState, action) {
     case SET_WINDOW_SIZE: {
       const mobile = action.sizes.width < 600;
       return { ...state, ...action.sizes, mobile };
+    }
+
+    case SET_FULLSCREEN: {
+      const fullscreen = action.fullscreen;
+      return { ...state, fullscreen };
     }
 
     default:
@@ -54,5 +61,9 @@ export const actions = {
 
   setWindowSize: (sizes) => (
     { type: SET_WINDOW_SIZE, sizes }
+  ),
+
+  setFullscreen: (fullscreen) => (
+    { type: SET_FULLSCREEN, fullscreen }
   )
 };
