@@ -33,17 +33,17 @@ export default class UbermorgenApp extends React.Component {
     actions.setQuestionnaire(store.getState().questions.activeQuestionnaireId);
     this.configureHotReload();
     window.addEventListener('resize', this.handleResize.bind(this));
-    // window.parent.addEventListener('scroll', this.handleScroll.bind(this));
+    window.parent.addEventListener('scroll', this.handleScroll.bind(this));
     this.handleResize();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.app.mobile) {
-      d3.select(window.frameElement)
-        .style('padding-top', '20px')
-        .style('padding-bottom', '40px');
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.app.mobile) {
+  //     d3.select(window.frameElement)
+  //       .style('padding-top', '20px')
+  //       .style('padding-bottom', '40px');
+  //   }
+  // }
 
   configureHotReload() {
     const { actions } = this.props;
@@ -84,9 +84,12 @@ export default class UbermorgenApp extends React.Component {
   }
 
   handleScroll() {
-    const iframeTop = window.frameElement.getBoundingClientRect().top;
-    const top = iframeTop < 0 ? iframeTop * -1 : 0;
-    d3.select(this.refs.left).style('top', `${top}px`);
+    if (!this.props.app.mobile) { return; }
+    const bbox = window.frameElement.getBoundingClientRect();
+    const top = bbox.top < 0 ? bbox.top * -1 : 0;
+    if (bbox.bottom > screen.height - 50) {
+      d3.select(this.refs.left).style('transform', `translate3d(0,${top}px,0)`);
+    }
   }
 
   render() {

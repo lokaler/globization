@@ -33,6 +33,8 @@
       top: 0px;
       background: #FFF;
       z-index: 500;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
     }
     .mq-desktop & {
       border-right: none;
