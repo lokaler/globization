@@ -43,9 +43,9 @@
       "answer": {
         "answerKey": [
             "!i.alcoholSubmitted && 'notSubmitted'",
-            "(i.sliderAlcohol < 8) && f.panToCountry(f.getISO('alcoholConsume', i.sliderAlcohol * 0.5)) && 'lessAlcohol'",
+            "(i.sliderAlcohol < 8) && f.panToCountry(f.getISO('alcoholConsume', i.sliderAlcohol )) && 'lessAlcohol'",
             "(i.sliderAlcohol >= 8) && (i.sliderAlcohol <= 10) && f.panToCountry('DEU') && 'someAlcohol'",
-            "(i.sliderAlcohol > 10) && f.panToCountry(f.getISO('alcoholConsume', i.sliderAlcohol * 0.5)) && 'muchAlcohol'"
+            "(i.sliderAlcohol > 10) && f.panToCountry(f.getISO('alcoholConsume', i.sliderAlcohol )) && 'muchAlcohol'"
           ],
         "answerContext": {
           "AlcoholCountry": "f.getCountryName('alcoholConsume', i.sliderAlcohol * 0.5)"
