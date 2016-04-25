@@ -48,7 +48,7 @@
             "(i.sliderAlcohol > 10) && f.panToCountry(f.getISO('alcoholConsume', i.sliderAlcohol )) && 'muchAlcohol'"
           ],
         "answerContext": {
-          "AlcoholCountry": "f.getCountryName('alcoholConsume', i.sliderAlcohol * 0.5)"
+          "AlcoholCountry": "f.getCountryName('alcoholConsume', i.sliderAlcohol)"
         },
         "templates": {
           "notSubmitted": {
