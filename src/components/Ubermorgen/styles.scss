@@ -54,6 +54,27 @@
   }
 }
 
+@-webkit-keyframes pulse {
+  0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+  80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+  100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
+}
+@-moz-keyframes pulse {
+  0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+  80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+  100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
+}
+@-ms-keyframes pulse {
+  0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+  80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+  100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
+}
+@keyframes pulse {
+  0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+  80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+  100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
+}
+
 :local(.questions) {
 
   line-height: 1.4em;
@@ -84,12 +105,18 @@
     width:100%;
     margin-bottom: 30px;
     margin-top: 10px;
-    transition: all 0.2s;
+
+    box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);
+    -webkit-animation: pulse 4s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 4s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 4s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 4s infinite cubic-bezier(0.66, 0, 0, 1);
 
 
     &:hover {
       box-shadow: 0px 3px 4px rgba(0,0,0,0.1);
       background: #577562;
+      -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
     }
   }
 
@@ -243,4 +270,3 @@
 
   }
 }
-

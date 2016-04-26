@@ -242,7 +242,7 @@
                 "Ganz allein sind Sie damit nicht: Rund elf Prozent der deutschen Verbraucher achten laut einer Umfrage aus dem Jahr 2013 beim Einkaufen gar nicht auf die Herkunft der Produkte. [Für SPIEGEL-ONLINE-Autor Nicolai Kwasniewski ist klar: Der umweltschonendste Einkauf ist regional, bio und saisonal.](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html) Erdbeeren im Winter gibt’s dann aber leider nicht und so manche Südfrucht scheidet ganz aus."
               ],
               "en": [
-                "You’re not alone: According to a 2013 survey, around 11 percent of German consumers don’t pay any attention to the origin of products when shopping. [SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop.](http://www.spiegel.de/wissenschaft/uebermorgen/a-1082571.html) That means no strawberries in winter and some fruits from the Southern Hemisphere will have to drop off the menu completely."
+                "You’re not alone: According to a 2013 survey, around 11 percent of German consumers don’t pay any attention to the origin of products when shopping. [SPIEGEL ONLINE reporter Nicolai Kwasniewski is convinced that buying local, organic and seasonal products is the most environmentally friendly way to shop.](http://www.spiegel.de/international/tomorrow/a-1082697.html) That means no strawberries in winter and some fruits from the Southern Hemisphere will have to drop off the menu completely."
               ]
             },
             "sometimes": {
@@ -413,7 +413,7 @@
             "unit": "Kg",
             "min": 0,
             "value": 1.5,
-            "max": 4,
+            "max": 3,
             "step": 0.1
           }
         }
@@ -421,16 +421,15 @@
       {
         "answer": {
           "answerKey": [
-            "(i.sliderMeatConsumption = 0) && 'noMeat'",
-            "(i.sliderMeatConsumption*1.31 < 0.1) && 'someMeat'",
-            "(i.sliderMeatConsumption*1.31 < 2.4) && f.panToCountry(f.getISO('meat', i.sliderMeatConsumption)) && 'muchMeat'",
-            "(i.sliderMeatConsumption*1.31 >= 2.4) && f.panToCountry(f.getMaxISO('meat')) && 'muchTooMuchMeat'"
+            "(i.sliderMeatConsumption == 0) && 'noMeat'",
+            "(i.sliderMeatConsumption * 1.31 < 2.4) && f.panToCountry(f.getISO('meat', i.sliderMeatConsumption * 1.31)) && 'muchMeat'",
+            "(i.sliderMeatConsumption * 1.31 >= 2.4) && f.panToCountry(f.getMaxISO('meat')) && 'muchTooMuchMeat'"
           ],
           "answerContext": {
             "wertFleisch": "f.fmt('%0.1f', i.sliderMeatConsumption * 1.31)",
             "landMax": "f.getMaxCountryName('meat')",
             "landMaxValue": "f.getMaxValue('meat')",
-            "landValue": "f.getCountryName('meat', i.sliderMeatConsumption)"
+            "landValue": "f.getCountryName('meat', i.sliderMeatConsumption * 1.31)"
           },
           "templates": {
             "default": {
@@ -443,46 +442,34 @@
             },
             "noMeat": {
               "de": [
-                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnittsfleischesser sparen Sie dadurch pro Jahr etwa 330 Kilogramm CO2-Emissionen pro Jahr. Das entspricht gut 1300 Kilometern Autofahrt mit einem mittelgroßen Benziner."
+                "Sie ernähren sich vegetarisch oder vielleicht sogar vegan! Im Gegensatz zum deutschen Durchschnittsfleischesser **sparen** Sie dadurch pro Jahr etwa **330 Kilogramm** CO2-Emissionen pro Jahr. Das entspricht gut **1300 Kilometern** Autofahrt mit einem mittelgroßen Benziner."
               ],
               "en": [
-                "You are a vegetarian, or even a vegan? The CO2 emissions you produce over the course of a year are around 330 kilograms (727 pounds) less than those of an average German meat-eater. That is the equivalent of driving 1,300 kilometers (810 miles) in a mid-sized, gasoline-powered vehicle. "
+                "You are a vegetarian, or even a vegan? The CO2 emissions you produce over the course of a year are around **330 kilograms (727 pounds) less** than those of an average German meat-eater. That is the equivalent of driving **1,300 kilometers (810 miles)** in a mid-sized, gasoline-powered vehicle. "
               ]
             },
             "someMeat": {
               "de": [
-                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch }}** Kilogramm Fleisch produziert werden",
-                "",
-                "Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
+                "Ihren Wert runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Sie müssen somit **{{ wertFleisch }}** Kilogramm Fleisch pro Woche produziert werden. Ihr Bedarf ließe sich in jedem der Länder, für die Vergleichsdaten vorliegen, decken."
               ],
               "en": [
-                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch }}** kilograms of meat must be produced.",
-                "",
-                "Your level of consumption can be covered in any of the countries for which comparative data is available."
+                "We’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch }}** kilograms of meat must be produced. Your level of consumption can be covered in any of the countries for which comparative data is available."
               ]
             },
             "muchMeat": {
               "de": [
-                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch }}** Kilogramm Fleisch produziert werden",
-                "",
-                "Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ landValue }}**."
+                "Ihren Wert runden wir auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Sie müssen somit **{{ wertFleisch }}** kg Fleisch pro Woche produziert werden. Das entspricht etwa der pro Woche und Person verfügbaren Menge **{{ landValue }}**."
               ],
               "en": [
-                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch }}** kilograms of meat must be produced.",
-                "",
-                "That is comparable to the weekly per capita amount available **{{ landValue }}**."
+                "We’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch }}** kilograms of meat must be produced. That is comparable to the weekly per capita amount available **{{ landValue }}**."
               ]
             },
             "muchTooMuchMeat": {
               "de": [
-                "Um Ihren Wert international vergleichen zu können, runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Ihren wöchentlichen Konsum müssen somit **{{ wertFleisch }}** Kilogramm Fleisch produziert werden",
-                "",
-                "Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
+                "Ihren Wert runden wir etwas auf, denn wo Fleisch gegessen wird, wird auch welches weggeworfen. Für Sie müssen somit **{{ wertFleisch }}** Kilogramm Fleisch pro Woche produziert werden. Ihr Bedarf liegt höher als die durchschnittlich pro Kopf verfügbare Fleischmenge in allen Ländern, für die Vergleichsdaten vorliegen. Am meisten Fleisch pro Person gibt es **{{ landMax }}**, nämlich **{{ landMaxValue }}** Kilogramm pro Kopf und Woche."
               ],
               "en": [
-                "To compare your meat consumption internationally, we’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch }}** kilograms of meat must be produced.",
-                "",
-                "Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
+                "We’ll round up a bit, because where meat is eaten, some is also thrown away as well. For your weekly consumption, **{{ wertFleisch }}** kilograms of meat must be produced. Your consumption is higher than the average amount of meat available per person in all countries for which data is available. The most meat per capita is available **{{ landMax }}**, where **{{ landMaxValue }}** kilograms are available per person and week."
               ]
             }
           }
@@ -574,7 +561,7 @@
             "unit": "",
             "min": 1,
             "value": 4,
-            "max": 7
+            "max": 10
           }
         }
       },
