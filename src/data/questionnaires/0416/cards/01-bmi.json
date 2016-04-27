@@ -126,7 +126,7 @@
               "Ihr BMI ist geringer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am niedrigsten ist der durchschnittliche BMI {{ bmiManMinCountry }} mit {{ bmiManMinValue }}."
             ],
             "en": [
-              "With a BMI of {{ bmiValue }} you are considered to be {{ Classification }} by WHO.",
+              "With a BMI of {{ bmiValue }} you are considered to be {{ bmiClassification }} by WHO.",
               "It is lower than the average BMI value in all countries for which data is available. The country with the lowest average BMI is {{ bmiManMinCountry }}, with a value of {{ bmiManMinValue }}."
             ]
           },
