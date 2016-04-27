@@ -59,7 +59,7 @@
               "Richtig! In Südafrika leiden 12,6 Prozent der weiblichen Bevölkerung an Diabetes. Wie in vielen afrikanischen Staaten, nimmt dort die Anzahl der Übergewichtigen seit einigen Jahren rasant zu. In Brasilien haben 8,7 in Deutschland 3,9 Prozent der Frauen Diabetes. Weltweit am höchsten ist der Anteil der erkrankten Frauen {{diabetesWomanMaxCountry}} mit {{diabetesWomanMaxValue}} Prozent. "
             ],
             "en": [
-              "Correct! In South Africa, 12.6 percent of the female population suffers from diabetes. As in many African countries, the number of overweight people has been increasing dramatically for several years. In Brazil, 8.7 percent of women have diabetes while in Germany, 3.9 percent do. The country with the highest number of women with the disease is [Land_Frauen_Diabetes_max] with [Wert_Land_Frauen_Diabetes_max] percent."
+              "Correct! In South Africa, 12.6 percent of the female population suffers from diabetes. As in many African countries, the number of overweight people has been increasing dramatically for several years. In Brazil, 8.7 percent of women have diabetes while in Germany, 3.9 percent do. The country with the highest number of women with the disease is {{ diabetesWomanMaxCountry }} with {{ diabetesWomanMaxValue }} percent."
             ]
           },
           "choice_2": {
