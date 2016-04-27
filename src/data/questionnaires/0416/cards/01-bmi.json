@@ -126,7 +126,7 @@
               "Ihr BMI ist geringer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am niedrigsten ist der durchschnittliche BMI {{ bmiManMinCountry }} mit {{ bmiManMinValue }}."
             ],
             "en": [
-              "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ Classification }}.",
+              "With a BMI of {{ bmiValue }} you are considered to be {{ Classification }} by WHO.",
               "It is lower than the average BMI value in all countries for which data is available. The country with the lowest average BMI is {{ bmiManMinCountry }}, with a value of {{ bmiManMinValue }}."
             ]
           },
@@ -136,7 +136,7 @@
               "Einen ähnlichen BMI wie Sie haben Männer im Schnitt {{ bmiManCountry }}."
             ],
             "en": [
-              "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
+              "With a BMI of {{ bmiValue }} you are considered to be {{ bmiClassification }} by WHO.",
               "Men {{ bmiManCountry }} have a similar BMI to yours, on average. "
             ]
           },
@@ -146,7 +146,7 @@
               "Ihr BMI ist größer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am höchsten ist der durchschnittliche BMI {{ bmiManMaxCountry }} mit {{ bmiManMaxValue }}."
             ],
             "en": [
-              "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
+              "With a BMI of {{ bmiValue }} you are considered to be {{ bmiClassification }} by WHO.",
               "Your BMI is higher than the average BMI in all countries for which data is available. With a value of {{ bmiManMaxCountry }} , {{ bmiManMaxValue }} has the highest average BMI."
             ]
           },
@@ -156,7 +156,7 @@
               "Ihr BMI ist geringer als der durchschnittliche Body-Mass-Index in allen Ländern, für die Vergleichsdaten vorliegen. Am niedrigsten ist der durchschnittliche BMI {{ bmiWomanMinCountry }} mit {{ bmiWomanMinValue }}."
             ],
             "en": [
-              "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
+              "With a BMI of {{ bmiValue }} you are considered to be {{ bmiClassification }} by WHO.",
               "Your BMI is lower than the average BMI in all countries for which data is available. The country with the lowest average BMI is {{ bmiWomanMinCountry }}, with a value of {{ bmiWomanMinValue }}."
             ]
           },
@@ -166,7 +166,7 @@
               "Frauen {{ bmiWomanCountry }} haben im Schnitt einen ähnlichen BMI wie Sie."
             ],
             "en": [
-              "With a BMI of {{ bmiValue }} according to the WHO you are regarded as {{ bmiClassification }}.",
+              "With a BMI of {{ bmiValue }} you are considered to be {{ bmiClassification }} by WHO.",
               "Women {{ bmiWomanCountry }} have a similar BMI to yours, on average."
             ]
           },
