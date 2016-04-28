@@ -3,7 +3,7 @@
     "key" : "bmiWoman",
     "name": {
       "de": "Body-Mass-Index",
-      "en": "Body-Mass-Index"
+      "en": "Body Mass Index"
     },
     "description": {
       "de": "Durchschnittlicher BMI Frauen in 2014",
@@ -235,7 +235,7 @@
     "key" : "bmiMan",
     "name": {
      "de": "Body-Mass-Index",
-     "en": "Body-Mass-Index"
+     "en": "Body Mass Index"
     },
     "description": {
      "de": "Durchschnittlicher BMI Männer in 2014",
@@ -688,7 +688,7 @@
     "key" : "overweightGirls",
     "name": {
      "de": "Übergewicht Jugendliche",
-     "en": "Lack of exercise"
+     "en": "Overweight youth"
     },
     "description": {
      "de": "Anteil übergewichtiger Mädchen unter 20 Jahre in Prozent",
