@@ -467,7 +467,7 @@
     "key" : "overweightBoys",
     "name": {
      "de": "Übergewicht Jugendliche",
-     "en": "Übergewicht Jugendliche"
+     "en": "Overweight youth"
     },
     "description": {
      "de": "Anteil übergewichtiger Jungen unter 20 Jahre in Prozent",
@@ -688,7 +688,7 @@
     "key" : "overweightGirls",
     "name": {
      "de": "Übergewicht Jugendliche",
-     "en": "Übergewicht Jugendliche"
+     "en": "Lack of exercise"
     },
     "description": {
      "de": "Anteil übergewichtiger Mädchen unter 20 Jahre in Prozent",
@@ -1375,7 +1375,7 @@
     "key" : "notMoving",
     "name": {
      "de": "Bewegungsmangel",
-     "en": "Bewegungsmangel"
+     "en": "Lack of exercise"
     },
     "description": {
      "de": "Anteil der Jugendlichen zwischen 11 und 17 Jahren, die sich zu wenig bewegen in Prozent",
@@ -1524,7 +1524,7 @@
     "key" : "alcoholConsume",
     "name": {
      "de": "Alkoholkonsum",
-     "en": "Alkoholkonsum"
+     "en": "Alcohol consumption"
     },
     "description": {
      "de": "Pro Woche und Person getrunkener Alkohol in Anzahl 0,5-Liter-Biere umgerechnet",
