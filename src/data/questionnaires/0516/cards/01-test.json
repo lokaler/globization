@@ -2,7 +2,7 @@
   "key": "bmi",
   "title": "1. Karte - Test",
   "view": "globe",
-  "dataset": "diabetesMen",
+  "dataset": "none",
   "content": [
     {
       "text": {
@@ -12,18 +12,6 @@
         "en": [
           "Text"
         ]
-      }
-    },
-    {
-      "input": {
-        "key": "gender",
-        "type": "choices",
-        "options": {
-          "choices": [
-            ["woman", { "de": "Frau", "en": "Woman" }],
-            ["man", { "de": "Mann", "en": "Man"}]
-          ]
-        }
       }
     },
     {
@@ -80,10 +68,9 @@
     {
       "answer": {
         "answerKey": [
-          "i.gender === 'man' && f.setDataset('bmiMan')",
-          "i.gender === 'woman' && f.setDataset('bmiWoman')",
-          "i.gender && i.sliderWeight && i.sliderHeight && !i.bmiSubmitted && 'allAnswered'",
+          "i.sliderWeight && i.sliderHeight && !i.bmiSubmitted && 'allAnswered'",
           "!i.bmiSubmitted && 'notSubmitted'",
+          "f.setDataset('bmiMan')",
           "i.gender === 'man' && f.panToCountry(f.getISO('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight))) && f.calculateBmi(i.sliderWeight, i.sliderHeight) < 20.1 && 'man1'",
           "i.gender === 'man' && f.panToCountry(f.getISO('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight))) && f.calculateBmi(i.sliderWeight, i.sliderHeight) > 20.1 && f.calculateBmi(i.sliderWeight, i.sliderHeight) < 32.2 && 'man2'",
           "i.gender === 'man' && f.panToCountry(f.getISO('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight))) && f.calculateBmi(i.sliderWeight, i.sliderHeight) > 32.2 && 'man3'",

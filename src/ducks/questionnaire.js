@@ -75,6 +75,9 @@ export function reducer(state = initialState, action) {
       const questionnaires = state.questionnaires;
       const questionnaireId = action.questionnaireId;
       const questionnaire = questionnaires[questionnaireId];
+      const dataSetId = questionnaire.cards[0].dataset;
+      const dataSet = questionnaire.datasets.find((d) => d.key === dataSetId);
+      // console.log(dataSetId, dataSet, questionnaire.datasets);
 
       return {
         ...state,
@@ -82,7 +85,7 @@ export function reducer(state = initialState, action) {
         activeQuestionnaireId: questionnaireId,
         cards: questionnaire.cards,
         datasets: questionnaire.datasets,
-        dataset: questionnaire.datasets[0],
+        dataset: dataSet,
         options: questionnaire.options
       };
     }
@@ -112,7 +115,11 @@ export function reducer(state = initialState, action) {
       };
 
     case SET_DATASET: {
-      const newDataSet = state.datasets.filter((d) => d.key === action.name)[0];
+      let newDataSet = action.name && state.datasets.filter((d) => d.key === action.name)[0];
+      console.log(newDataSet);
+      if (!newDataSet) {
+        newDataSet = { data: [], key: 'none' };
+      }
       return {
         ...state,
         dataset: newDataSet
@@ -155,9 +162,7 @@ export const actions = {
 
   setCard(index, datasetId) {
     return dispatch => {
-      if (datasetId) {
-        dispatch(setDataSet(datasetId));
-      }
+      dispatch(setDataSet(datasetId));
       dispatch(visualizationActions.changeVis({ active: null, tooltip: { active: false } }));
       dispatch({ type: SET_CARD, index });
     };

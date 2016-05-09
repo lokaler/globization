@@ -8,8 +8,18 @@ import datasets0416 from './0416/datasets.json';
 import cards0516 from './0516/cards/index';
 import datasets0516 from './0516/datasets.json';
 
+const noneDataset = {
+  key: 'none',
+  data: [],
+  translate: [0, 90],
+  scale: 1
+};
+
+datasets0316.push(noneDataset);
 datasets0316.forEach(prepareDataset);
+datasets0416.push(noneDataset);
 datasets0416.forEach(prepareDataset);
+datasets0516.push(noneDataset);
 datasets0516.forEach(prepareDataset);
 
 let questionnaires = {

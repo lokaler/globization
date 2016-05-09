@@ -1,7 +1,7 @@
 {
   "key": "intro",
   "title": "Intro",
-  "dataset": null,
+  "dataset": "bmiMan",
   "view": null,
   "content": [
     {

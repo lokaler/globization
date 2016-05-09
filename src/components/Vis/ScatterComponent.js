@@ -49,7 +49,7 @@ export default class ScatterComponent extends React.Component {
       .clamp(true).nice()
 
 
-    if(dataset){
+    if(dataset && dataset.key !== 'none'){
         this.x.domain(dataset.vergleichDomain);
         this.y.domain(dataset.domain);
     }

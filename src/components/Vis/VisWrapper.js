@@ -37,10 +37,14 @@ export default class Globe extends React.Component {
     utils.log("componentWillUpdate", nextProps)
     const dataset = nextProps.questions.dataset;
 
-    if(dataset){
+    if(dataset && dataset.key !== 'none'){
       this.color
         .range(colorbrewer[dataset.colorSet][dataset.colorNum])
         .domain(dataset.domain);
+    } else {
+      this.color
+        .range(['#FFF', '#FFF'])
+        .domain([0,0]);
     }
 
   }
@@ -107,7 +111,7 @@ export default class Globe extends React.Component {
           <LinkedDatasetMenu {...this.props} />
         }
         <TooltipComponent {...this.props} />
-        { dataset &&
+        { dataset && dataset.key != "none" &&
           <Legend color={this.color} {...this.props} />
         }
 
