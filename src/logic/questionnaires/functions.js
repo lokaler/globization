@@ -146,6 +146,14 @@ export default {
     }
   },
 
+  setView(key) {
+    defer(
+      () => window.actions.changeVis({
+        type: key
+      })
+    );
+  },
+
   isMobile() {
     const state = store.getState();
     return state.app.mobile;
