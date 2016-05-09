@@ -5,9 +5,12 @@ import cards0316 from './0316/cards/index';
 import datasets0316 from './0316/datasets.json';
 import cards0416 from './0416/cards/index';
 import datasets0416 from './0416/datasets.json';
+import cards0516 from './0516/cards/index';
+import datasets0516 from './0516/datasets.json';
 
 datasets0316.forEach(prepareDataset);
 datasets0416.forEach(prepareDataset);
+datasets0516.forEach(prepareDataset);
 
 let questionnaires = {
   '0316': {
@@ -31,6 +34,17 @@ let questionnaires = {
     },
     cards: cards0416,
     datasets: datasets0416
+  },
+  '0516': {
+    title: {
+      de: 'Armut',
+      en: 'Poverty'
+    },
+    options: {
+      showBackButton: true
+    },
+    cards: cards0516,
+    datasets: datasets0516
   }
 };
 
