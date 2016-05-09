@@ -49,7 +49,8 @@ export default class Questionnaire extends React.Component {
 
   clickHandlers = { // eslint-disable-line react/sort-comp
     onStartClick: () => {
-      this.props.actions.setCard(1);
+      const dataId = this.props.questions.cards[1].dataset;
+      this.props.actions.setCard(1, dataId);
     }
   }
 
