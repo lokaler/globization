@@ -68,10 +68,10 @@
     {
       "answer": {
         "answerKey": [
-          "f.setView('map')",
           "i.sliderWeight && i.sliderHeight && !i.bmiSubmitted && 'allAnswered'",
           "!i.bmiSubmitted && 'notSubmitted'",
-          "f.setView('scatter')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('scatter')",
           "f.setDataset('bmiMan')",
           "i.gender === 'man' && f.panToCountry(f.getISO('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight))) && f.calculateBmi(i.sliderWeight, i.sliderHeight) < 20.1 && 'man1'",
           "i.gender === 'man' && f.panToCountry(f.getISO('bmiMan', f.calculateBmi(i.sliderWeight, i.sliderHeight))) && f.calculateBmi(i.sliderWeight, i.sliderHeight) > 20.1 && f.calculateBmi(i.sliderWeight, i.sliderHeight) < 32.2 && 'man2'",
