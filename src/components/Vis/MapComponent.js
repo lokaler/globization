@@ -77,7 +77,8 @@ export default class MapComponent extends React.Component {
       .size([this.props.width,this.props.height])
       .on("zoom", () => {
         const e = d3.event;
-        const _scale = this.props.vis.initialScale * e.scale;
+        const mobileScale = this.props.app.mobile ? 0.7 : 1;
+        const _scale = this.props.vis.initialScale * mobileScale * e.scale;
         const _rotate = [
           (e.translate[0]/e.scale) * this.sensetivity,
           -(e.translate[1]/e.scale) * this.sensetivity,
