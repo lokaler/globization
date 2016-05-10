@@ -1,4 +1,8 @@
 .vis svg.globe, svg.map {
+  .mq-mobile & {
+    pointer-events: none;
+  }
+
   path {
     stroke-width: 1px;
     stroke:rgba(255, 255, 255, 0.79);
