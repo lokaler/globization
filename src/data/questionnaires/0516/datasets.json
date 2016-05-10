@@ -11,7 +11,8 @@
     },
     "linkedSet": [
       { "key": "bmiWoman", "value":"female" },
-      { "key": "bmiMan", "value":"male" }
+      { "key": "bmiMan", "value":"male" },
+      { "key": "bmiMan", "value":"men" }
     ],
     "quelle": "The Lancet",
     "link": "",
