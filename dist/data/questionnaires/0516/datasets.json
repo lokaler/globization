@@ -1,0 +1,599 @@
+[
+  {
+    "key" : "poorNation",
+    "name": {
+      "de": "Armutsgrenze",
+      "en": ""
+    },
+    "description": {
+      "de": "Anteil Bevölkerung unter nationaler Armutsgrenze",
+      "en": ""
+    },
+    "linkedSet": [
+
+    ],
+    "quelle": "UN",
+    "link": "http://data.un.org/Data.aspx?d=MDG&f=seriesRowID%3A581",
+    "unit": "%",
+    "fixed": 0,
+    "domain":[0, 90],
+    "skala":[
+       0,
+       10,
+       20,
+       30
+    ],
+    "translate": [0,90],
+    "scale": 1,
+    "colorSet":"Greens",
+    "colorNum":9,
+    "data":[
+
+        {
+          "iso": "AFG",
+          "value": 35.8
+        },
+        {
+          "iso": "ALB",
+          "value": 14.3
+        },
+        {
+          "iso": "ARM",
+          "value": 32
+        },
+        {
+          "iso": "AZE",
+          "value": 5.3
+        },
+        {
+          "iso": "BGD",
+          "value": 31.5
+        },
+        {
+          "iso": "BLR",
+          "value": 5.5
+        },
+        {
+          "iso": "BEN",
+          "value": 36.2
+        },
+        {
+          "iso": "BTN",
+          "value": 12
+        },
+        {
+          "iso": "BOL",
+          "value": 45
+        },
+        {
+          "iso": "BIH",
+          "value": 17.9
+        },
+        {
+          "iso": "BWA",
+          "value": 19.3
+        },
+        {
+          "iso": "BRA",
+          "value": 8.9
+        },
+        {
+          "iso": "BGR",
+          "value": 21
+        },
+        {
+          "iso": "BFA",
+          "value": 46.7
+        },
+        {
+          "iso": "KHM",
+          "value": 17.7
+        },
+        {
+          "iso": "TCD",
+          "value": 46.7
+        },
+        {
+          "iso": "CHL",
+          "value": 14.4
+        },
+        {
+          "iso": "COL",
+          "value": 30.6
+        },
+        {
+          "iso": "COG",
+          "value": 46.5
+        },
+        {
+          "iso": "CRI",
+          "value": 22.4
+        },
+        {
+          "iso": "HRV",
+          "value": 19.5
+        },
+        {
+          "iso": "CZE",
+          "value": 8.6
+        },
+        {
+          "iso": "COD",
+          "value": 63.6
+        },
+        {
+          "iso": "DOM",
+          "value": 41.1
+        },
+        {
+          "iso": "ECU",
+          "value": 22.5
+        },
+        {
+          "iso": "EGY",
+          "value": 25.2
+        },
+        {
+          "iso": "SLV",
+          "value": 29.6
+        },
+        {
+          "iso": "EST",
+          "value": 18.6
+        },
+        {
+          "iso": "ETH",
+          "value": 29.6
+        },
+        {
+          "iso": "GMB",
+          "value": 48.4
+        },
+        {
+          "iso": "GEO",
+          "value": 14.8
+        },
+        {
+          "iso": "GHA",
+          "value": 24.2
+        },
+        {
+          "iso": "GTM",
+          "value": 53.7
+        },
+        {
+          "iso": "GIN",
+          "value": 55.2
+        },
+        {
+          "iso": "GNB",
+          "value": 69.3
+        },
+        {
+          "iso": "HTI",
+          "value": 58.5
+        },
+        {
+          "iso": "HND",
+          "value": 64.5
+        },
+        {
+          "iso": "HUN",
+          "value": 14.3
+        },
+        {
+          "iso": "IND",
+          "value": 21.9
+        },
+        {
+          "iso": "IDN",
+          "value": 11.3
+        },
+        {
+          "iso": "IRQ",
+          "value": 18.9
+        },
+        {
+          "iso": "JAM",
+          "value": 19.9
+        },
+        {
+          "iso": "JOR",
+          "value": 14.4
+        },
+        {
+          "iso": "KAZ",
+          "value": 2.9
+        },
+        {
+          "iso": "KGZ",
+          "value": 37
+        },
+        {
+          "iso": "LAO",
+          "value": 23.2
+        },
+        {
+          "iso": "LVA",
+          "value": 19.4
+        },
+        {
+          "iso": "LSO",
+          "value": 57.1
+        },
+        {
+          "iso": "LTU",
+          "value": 20.6
+        },
+        {
+          "iso": "MDG",
+          "value": 75.3
+        },
+        {
+          "iso": "MWI",
+          "value": 50.7
+        },
+        {
+          "iso": "MYS",
+          "value": 1.7
+        },
+        {
+          "iso": "MLI",
+          "value": 43.6
+        },
+        {
+          "iso": "MEX",
+          "value": 52.3
+        },
+        {
+          "iso": "MNG",
+          "value": 27.4
+        },
+        {
+          "iso": "MNE",
+          "value": 11.3
+        },
+        {
+          "iso": "MOZ",
+          "value": 54.7
+        },
+        {
+          "iso": "NAM",
+          "value": 28.7
+        },
+        {
+          "iso": "NPL",
+          "value": 25.2
+        },
+        {
+          "iso": "NIC",
+          "value": 42.5
+        },
+        {
+          "iso": "NER",
+          "value": 48.9
+        },
+        {
+          "iso": "NGA",
+          "value": 46
+        },
+        {
+          "iso": "PAN",
+          "value": 25.8
+        },
+        {
+          "iso": "PNG",
+          "value": 39.9
+        },
+        {
+          "iso": "PRY",
+          "value": 23.8
+        },
+        {
+          "iso": "PER",
+          "value": 23.9
+        },
+        {
+          "iso": "PHL",
+          "value": 25.2
+        },
+        {
+          "iso": "POL",
+          "value": 17.3
+        },
+        {
+          "iso": "MDA",
+          "value": 12.7
+        },
+        {
+          "iso": "ROU",
+          "value": 22.4
+        },
+        {
+          "iso": "RUS",
+          "value": 10.8
+        },
+        {
+          "iso": "RWA",
+          "value": 44.9
+        },
+        {
+          "iso": "STP",
+          "value": 61.7
+        },
+        {
+          "iso": "SEN",
+          "value": 46.7
+        },
+        {
+          "iso": "SRB",
+          "value": 24.6
+        },
+        {
+          "iso": "SLE",
+          "value": 52.9
+        },
+        {
+          "iso": "SVK",
+          "value": 12.8
+        },
+        {
+          "iso": "SVN",
+          "value": 14.5
+        },
+        {
+          "iso": "ZAF",
+          "value": 53.8
+        },
+        {
+          "iso": "SSD",
+          "value": 50.6
+        },
+        {
+          "iso": "LKA",
+          "value": 6.7
+        },
+        {
+          "iso": "PSE",
+          "value": 25.8
+        },
+        {
+          "iso": "SDN",
+          "value": 46.5
+        },
+        {
+          "iso": "SWZ",
+          "value": 63
+        },
+        {
+          "iso": "TJK",
+          "value": 47.2
+        },
+        {
+          "iso": "THA",
+          "value": 12.6
+        },
+        {
+          "iso": "MKD",
+          "value": 27.1
+        },
+        {
+          "iso": "TGO",
+          "value": 58.7
+        },
+        {
+          "iso": "TUN",
+          "value": 15.5
+        },
+        {
+          "iso": "TUR",
+          "value": 2.3
+        },
+        {
+          "iso": "UGA",
+          "value": 19.5
+        },
+        {
+          "iso": "UKR",
+          "value": 8.4
+        },
+        {
+          "iso": "TZA",
+          "value": 28.2
+        },
+        {
+          "iso": "URY",
+          "value": 11.5
+        },
+        {
+          "iso": "UZB",
+          "value": 16
+        },
+        {
+          "iso": "VEN",
+          "value": 25.4
+        },
+        {
+          "iso": "VNM",
+          "value": 17.2
+        },
+        {
+          "iso": "ZMB",
+          "value": 60.5
+        },
+        {
+          "iso": "ZWE",
+          "value": 72.3
+        }
+      ]
+
+
+  },
+
+    {
+      "key" : "poorEU",
+      "name": {
+        "de": "Armut in der EU",
+        "en": ""
+      },
+      "description": {
+        "de": "Anteil armutsgefährderter Einwohner",
+        "en": ""
+      },
+      "linkedSet": [
+
+      ],
+      "quelle": "(At-risk-of-poverty rate by poverty threshold, age and sex (source: SILC) (ilc_li02))",
+      "link": "",
+      "unit": "%",
+      "fixed": 0,
+      "domain":[0, 30],
+      "skala":[
+         0,
+         5,
+         10,
+         15
+      ],
+      "translate": [0,30],
+      "scale": 1,
+      "colorSet":"Greens",
+      "colorNum":9,
+      "data":[
+                {
+                  "iso": "AUT",
+                  "value": 14.1
+                },
+                {
+                  "iso": "BEL",
+                  "value": 15.5
+                },
+                {
+                  "iso": "BGR",
+                  "value": 21.8
+                },
+                {
+                  "iso": "HRV",
+                  "value": 19.4
+                },
+                {
+                  "iso": "CYP",
+                  "value": 14.4
+                },
+                {
+                  "iso": "CZE",
+                  "value": 9.7
+                },
+                {
+                  "iso": "DNK",
+                  "value": 12.1
+                },
+                {
+                  "iso": "EST",
+                  "value": 21.8
+                },
+                {
+                  "iso": "FIN",
+                  "value": 12.8
+                },
+                {
+                  "iso": "MKD",
+                  "value": 22.1
+                },
+                {
+                  "iso": "FRA",
+                  "value": 13.3
+                },
+                {
+                  "iso": "DEU",
+                  "value": 16.7
+                },
+                {
+                  "iso": "GRC",
+                  "value": 22.1
+                },
+                {
+                  "iso": "HUN",
+                  "value": 15
+                },
+                {
+                  "iso": "ISL",
+                  "value": 7.9
+                },
+                {
+                  "iso": "IRL",
+                  "value": 15.6
+                },
+                {
+                  "iso": "ITA",
+                  "value": 19.4
+                },
+                {
+                  "iso": "LVA",
+                  "value": 21.2
+                },
+                {
+                  "iso": "LTU",
+                  "value": 19.1
+                },
+                {
+                  "iso": "LUX",
+                  "value": 16.4
+                },
+                {
+                  "iso": "MLT",
+                  "value": 15.9
+                },
+                {
+                  "iso": "NLD",
+                  "value": 11.6
+                },
+                {
+                  "iso": "NOR",
+                  "value": 10.9
+                },
+                {
+                  "iso": "POL",
+                  "value": 17
+                },
+                {
+                  "iso": "PRT",
+                  "value": 19.5
+                },
+                {
+                  "iso": "ROU",
+                  "value": 25.4
+                },
+                {
+                  "iso": "SRB",
+                  "value": 25.4
+                },
+                {
+                  "iso": "SVK",
+                  "value": 12.6
+                },
+                {
+                  "iso": "SVN",
+                  "value": 14.5
+                },
+                {
+                  "iso": "ESP",
+                  "value": 22.2
+                },
+                {
+                  "iso": "SWE",
+                  "value": 15.1
+                },
+                {
+                  "iso": "CHE",
+                  "value": 13.8
+                },
+                {
+                  "iso": "GBR",
+                  "value": 16.8
+                }
+              ]
+
+    }
+
+
+]
