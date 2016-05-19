@@ -47,6 +47,7 @@
         "answerKey": [
           "i.sliderEUpoor && !i.EUpoorSubmitted",
           "!i.EUpoorSubmitted && 'notSubmitted'",
+          "f.setDataset('poorEU')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "(i.sliderEUpoor < 7) && 'EUpoor2'",
@@ -58,9 +59,9 @@
         ],
         "answerContext": {
 
-          "EUpoorMinCountry" : "f.getMinCountryName(i.sliderEUpoor)",
-          "EUpoorCountry" : "f.getCountryName(i.sliderEUpoor)",
-          "EUpoorMaxCountry" : "f.getMaxCountryName(i.sliderEUpoor)"
+          "EUpoorMinCountry" : "f.getMinCountryName('poorNation')",
+          "EUpoorCountry" : "f.getCountryName('poorNation', i.sliderEUpoor)",
+          "EUpoorMaxCountry" : "f.getMaxCountryName('poorNation')"
 
         },
         "templates": {
