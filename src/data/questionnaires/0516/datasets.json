@@ -16,7 +16,7 @@
     "link": "http://data.un.org/Data.aspx?d=MDG&f=seriesRowID%3A581",
     "unit": "%",
     "fixed": 0,
-    "domain":[0, 100],
+    "domain":[0, 90],
     "skala":[
        0,
        10,
