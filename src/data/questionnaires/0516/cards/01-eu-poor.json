@@ -50,7 +50,7 @@
           "f.setDataset('poorEU')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderEUpoor < 7) && 'EUpoor2'",
+          "(i.sliderEUpoor < 7) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && 'EUpoor2'",
           "(i.sliderEUpoor >= 8 && i.sliderEUpoor< 15) && 'EUpoor1'",
           "(i.sliderEUpoor >= 15 && i.sliderEUpoor< 20) && 'EUpoor3'",
           "(i.sliderEUpoor >= 20 && i.sliderEUpoor< 26) && 'EUpoor4'",
