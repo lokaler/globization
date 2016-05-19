@@ -440,9 +440,7 @@
         "de": "Anteil armutsgefährderter Einwohner",
         "en": ""
       },
-      "linkedSet": [
 
-      ],
       "quelle": "(At-risk-of-poverty rate by poverty threshold, age and sex (source: SILC) (ilc_li02))",
       "link": "",
       "unit": "%",
@@ -452,10 +450,10 @@
          0,
          5,
          10,
-         15
+         30
       ],
-      "translate": [0,30],
-      "scale": 1,
+      "translate": [-124, 485],
+      "scale": 2.4,
       "colorSet":"Greens",
       "colorNum":9,
       "data":[

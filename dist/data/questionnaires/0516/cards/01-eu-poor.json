@@ -7,6 +7,8 @@
     {
       "text": {
         "de": [
+          "# Armut in der EU",
+          "",
           "In der Europäischen Union gilt offiziell als armutsgefährdet, wer weniger als 60 Prozent des mittleren Einkommens zur Verfügung hat."
         ],
         "en": [
@@ -50,29 +52,31 @@
           "f.setDataset('poorEU')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderEUpoor < 7) && 'EUpoor2'",
-          "(i.sliderEUpoor >= 8 && i.sliderEUpoor< 15) && 'EUpoor1'",
+          "(i.sliderEUpoor < 7) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && 'EUpoor2'",
+          "(i.sliderEUpoor >= 8 && i.sliderEUpoor< 15) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && i.sliderEUpoor< 15) && 'EUpoor1'",
           "(i.sliderEUpoor >= 15 && i.sliderEUpoor< 20) && 'EUpoor3'",
-          "(i.sliderEUpoor >= 20 && i.sliderEUpoor< 26) && 'EUpoor4'",
-          "(i.sliderEUpoor >= 26 ) && 'EUpoor5'"
+          "(i.sliderEUpoor >= 20 && i.sliderEUpoor< 26) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && i.sliderEUpoor< 26) && 'EUpoor4'",
+          "(i.sliderEUpoor >= 26 ) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && 'EUpoor5'"
 
         ],
         "answerContext": {
 
-          "EUpoorMinCountry" : "f.getMinCountryName('poorNation')",
-          "EUpoorCountry" : "f.getCountryName('poorNation', i.sliderEUpoor)",
-          "EUpoorMaxCountry" : "f.getMaxCountryName('poorNation')"
+          "EUpoorMinCountry" : "f.getMinCountryName('poorEU')",
+          "EUpoorCountry" : "f.getCountryName('poorEU', i.sliderEUpoor)",
+          "EUpoorMaxCountry" : "f.getMaxCountryName('poorEU')"
 
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten und dann bestätigen."], "en": ["Please answer and confirm after."]          },
+            "de": ["Sicher? Dann bitte bestätigen."], "en": ["Please answer and confirm after."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
           "EUpoor1": {
             "de": [
-              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. In {{ EUpoorCountry }} ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
+              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet.",
+              "",
+              "**{{ EUpoorCountry }}** ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
             ],
             "en": [
               ""
@@ -80,7 +84,9 @@
           },
           "EUpoor2": {
             "de": [
-              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. Ihre Schätzung liegt niedriger als die Armutsgefährdungsquote in allen EU-Ländern. Am niedrigsten ist die Quote in der {{ EUpoorMinCountry }} mit 7,9 Prozent. "
+              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet.",
+              "",
+              "Ihre Schätzung liegt niedriger als die Armutsgefährdungsquote in allen EU-Ländern. Am niedrigsten ist die Quote **{{ EUpoorMinCountry }}** mit 7,9 Prozent. "
             ],
             "en": [
               ""
@@ -88,7 +94,7 @@
           },
           "EUpoor3": {
             "de": [
-              "Gut geschätzt! Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet."
+              "Gut geschätzt! Im Jahr 2014 waren in **Deutschland** rund 17 Prozent der Bevölkerung armutsgefährdet."
             ],
             "en": [
               ""
@@ -96,7 +102,7 @@
           },
           "EUpoor4": {
             "de": [
-              "Ganz so hoch ist der Anteil nicht. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. In {{ EUpoorCountry }} ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
+              "Ganz so hoch ist der Anteil nicht. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. In **{{ EUpoorCountry }}** ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
             ],
             "en": [
               ""
@@ -104,7 +110,7 @@
           },
           "EUpoor5": {
             "de": [
-              "Ihre Schätzung liegt höher als die Armutsgefährdungsquote in allen EU-Ländern. Am höchsten ist die Quote in {{ EUpoorMaxCountry }} mit gut 25 Prozent."
+              "Ihre Schätzung liegt höher als die Armutsgefährdungsquote in allen EU-Ländern. Am höchsten ist die Quote  {{ EUpoorMaxCountry }} mit gut 25 Prozent."
             ],
             "en": [
               ""
