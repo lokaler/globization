@@ -1,7 +1,7 @@
 {
   "key": "intro",
   "title": "Intro",
-  "dataset": "bmiMan",
+  "dataset": "poorNation",
   "view": null,
   "content": [
     {
@@ -12,16 +12,16 @@
         "de": [
           "# ÜberMorgen-Explorer",
           "",
-          "Wissen Sie, wo auf der Welt die Menschen am gesündesten leben? Und wie steht es um Ihre Gesundheit im globalen Vergleich? Testen Sie Ihr Wissen!",
+          "Fühlen Sie sich arm? Deutschland ist eins der reichsten Länder der Erde – und doch leben auch hier Menschen in Not. Was genau bedeutet also Armut und wo auf der Welt sind die Menschen auf welche Weise arm? ",
           "",
-          "Tipp: Im WWW-Browser können Sie den Datenglobus jederzeit bewegen, anklicken und zwischen verschiedenen Ansichten wählen. Probieren Sie es aus!",
+          "Gehen Sie mit dem interaktiven Globus auf Entdeckungsreise!",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
         ],
         "en": [
           "# BeyondTomorrow Explorer",
           "",
-          "Do you know where the world’s healthiest people live? Do you know how you compare globally? Test your knowledge!",
+          "",
           "",
                     "Tip: In your web browser, you can move or click on the data globe at any time and may also choose among different views. Try it out!",
           "",
