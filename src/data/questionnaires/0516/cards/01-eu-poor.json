@@ -59,9 +59,9 @@
         ],
         "answerContext": {
 
-          "EUpoorMinCountry" : "f.getMinCountryName('poorNation')",
-          "EUpoorCountry" : "f.getCountryName('poorNation', i.sliderEUpoor)",
-          "EUpoorMaxCountry" : "f.getMaxCountryName('poorNation')"
+          "EUpoorMinCountry" : "f.getMinCountryName('poorEU')",
+          "EUpoorCountry" : "f.getCountryName('poorEU', i.sliderEUpoor)",
+          "EUpoorMaxCountry" : "f.getMaxCountryName('poorEU')"
 
         },
         "templates": {

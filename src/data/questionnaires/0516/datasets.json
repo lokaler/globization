@@ -31,399 +31,399 @@
 
         {
           "iso": "AFG",
-          "value": 35.8
+          "Value": 35.8
         },
         {
           "iso": "ALB",
-          "value": 14.3
+          "Value": 14.3
         },
         {
           "iso": "ARM",
-          "value": 32
+          "Value": 32
         },
         {
           "iso": "AZE",
-          "value": 5.3
+          "Value": 5.3
         },
         {
           "iso": "BGD",
-          "value": 31.5
+          "Value": 31.5
         },
         {
           "iso": "BLR",
-          "value": 5.5
+          "Value": 5.5
         },
         {
           "iso": "BEN",
-          "value": 36.2
+          "Value": 36.2
         },
         {
           "iso": "BTN",
-          "value": 12
+          "Value": 12
         },
         {
           "iso": "BOL",
-          "value": 45
+          "Value": 45
         },
         {
           "iso": "BIH",
-          "value": 17.9
+          "Value": 17.9
         },
         {
           "iso": "BWA",
-          "value": 19.3
+          "Value": 19.3
         },
         {
           "iso": "BRA",
-          "value": 8.9
+          "Value": 8.9
         },
         {
           "iso": "BGR",
-          "value": 21
+          "Value": 21
         },
         {
           "iso": "BFA",
-          "value": 46.7
+          "Value": 46.7
         },
         {
           "iso": "KHM",
-          "value": 17.7
+          "Value": 17.7
         },
         {
           "iso": "TCD",
-          "value": 46.7
+          "Value": 46.7
         },
         {
           "iso": "CHL",
-          "value": 14.4
+          "Value": 14.4
         },
         {
           "iso": "COL",
-          "value": 30.6
+          "Value": 30.6
         },
         {
           "iso": "COG",
-          "value": 46.5
+          "Value": 46.5
         },
         {
           "iso": "CRI",
-          "value": 22.4
+          "Value": 22.4
         },
         {
           "iso": "HRV",
-          "value": 19.5
+          "Value": 19.5
         },
         {
           "iso": "CZE",
-          "value": 8.6
+          "Value": 8.6
         },
         {
           "iso": "COD",
-          "value": 63.6
+          "Value": 63.6
         },
         {
           "iso": "DOM",
-          "value": 41.1
+          "Value": 41.1
         },
         {
           "iso": "ECU",
-          "value": 22.5
+          "Value": 22.5
         },
         {
           "iso": "EGY",
-          "value": 25.2
+          "Value": 25.2
         },
         {
           "iso": "SLV",
-          "value": 29.6
+          "Value": 29.6
         },
         {
           "iso": "EST",
-          "value": 18.6
+          "Value": 18.6
         },
         {
           "iso": "ETH",
-          "value": 29.6
+          "Value": 29.6
         },
         {
           "iso": "GMB",
-          "value": 48.4
+          "Value": 48.4
         },
         {
           "iso": "GEO",
-          "value": 14.8
+          "Value": 14.8
         },
         {
           "iso": "GHA",
-          "value": 24.2
+          "Value": 24.2
         },
         {
           "iso": "GTM",
-          "value": 53.7
+          "Value": 53.7
         },
         {
           "iso": "GIN",
-          "value": 55.2
+          "Value": 55.2
         },
         {
           "iso": "GNB",
-          "value": 69.3
+          "Value": 69.3
         },
         {
           "iso": "HTI",
-          "value": 58.5
+          "Value": 58.5
         },
         {
           "iso": "HND",
-          "value": 64.5
+          "Value": 64.5
         },
         {
           "iso": "HUN",
-          "value": 14.3
+          "Value": 14.3
         },
         {
           "iso": "IND",
-          "value": 21.9
+          "Value": 21.9
         },
         {
           "iso": "IDN",
-          "value": 11.3
+          "Value": 11.3
         },
         {
           "iso": "IRQ",
-          "value": 18.9
+          "Value": 18.9
         },
         {
           "iso": "JAM",
-          "value": 19.9
+          "Value": 19.9
         },
         {
           "iso": "JOR",
-          "value": 14.4
+          "Value": 14.4
         },
         {
           "iso": "KAZ",
-          "value": 2.9
+          "Value": 2.9
         },
         {
           "iso": "KGZ",
-          "value": 37
+          "Value": 37
         },
         {
           "iso": "LAO",
-          "value": 23.2
+          "Value": 23.2
         },
         {
           "iso": "LVA",
-          "value": 19.4
+          "Value": 19.4
         },
         {
           "iso": "LSO",
-          "value": 57.1
+          "Value": 57.1
         },
         {
           "iso": "LTU",
-          "value": 20.6
+          "Value": 20.6
         },
         {
           "iso": "MDG",
-          "value": 75.3
+          "Value": 75.3
         },
         {
           "iso": "MWI",
-          "value": 50.7
+          "Value": 50.7
         },
         {
           "iso": "MYS",
-          "value": 1.7
+          "Value": 1.7
         },
         {
           "iso": "MLI",
-          "value": 43.6
+          "Value": 43.6
         },
         {
           "iso": "MEX",
-          "value": 52.3
+          "Value": 52.3
         },
         {
           "iso": "MNG",
-          "value": 27.4
+          "Value": 27.4
         },
         {
           "iso": "MNE",
-          "value": 11.3
+          "Value": 11.3
         },
         {
           "iso": "MOZ",
-          "value": 54.7
+          "Value": 54.7
         },
         {
           "iso": "NAM",
-          "value": 28.7
+          "Value": 28.7
         },
         {
           "iso": "NPL",
-          "value": 25.2
+          "Value": 25.2
         },
         {
           "iso": "NIC",
-          "value": 42.5
+          "Value": 42.5
         },
         {
           "iso": "NER",
-          "value": 48.9
+          "Value": 48.9
         },
         {
           "iso": "NGA",
-          "value": 46
+          "Value": 46
         },
         {
           "iso": "PAN",
-          "value": 25.8
+          "Value": 25.8
         },
         {
           "iso": "PNG",
-          "value": 39.9
+          "Value": 39.9
         },
         {
           "iso": "PRY",
-          "value": 23.8
+          "Value": 23.8
         },
         {
           "iso": "PER",
-          "value": 23.9
+          "Value": 23.9
         },
         {
           "iso": "PHL",
-          "value": 25.2
+          "Value": 25.2
         },
         {
           "iso": "POL",
-          "value": 17.3
+          "Value": 17.3
         },
         {
           "iso": "MDA",
-          "value": 12.7
+          "Value": 12.7
         },
         {
           "iso": "ROU",
-          "value": 22.4
+          "Value": 22.4
         },
         {
           "iso": "RUS",
-          "value": 10.8
+          "Value": 10.8
         },
         {
           "iso": "RWA",
-          "value": 44.9
+          "Value": 44.9
         },
         {
           "iso": "STP",
-          "value": 61.7
+          "Value": 61.7
         },
         {
           "iso": "SEN",
-          "value": 46.7
+          "Value": 46.7
         },
         {
           "iso": "SRB",
-          "value": 24.6
+          "Value": 24.6
         },
         {
           "iso": "SLE",
-          "value": 52.9
+          "Value": 52.9
         },
         {
           "iso": "SVK",
-          "value": 12.8
+          "Value": 12.8
         },
         {
           "iso": "SVN",
-          "value": 14.5
+          "Value": 14.5
         },
         {
           "iso": "ZAF",
-          "value": 53.8
+          "Value": 53.8
         },
         {
           "iso": "SSD",
-          "value": 50.6
+          "Value": 50.6
         },
         {
           "iso": "LKA",
-          "value": 6.7
+          "Value": 6.7
         },
         {
           "iso": "PSE",
-          "value": 25.8
+          "Value": 25.8
         },
         {
           "iso": "SDN",
-          "value": 46.5
+          "Value": 46.5
         },
         {
           "iso": "SWZ",
-          "value": 63
+          "Value": 63
         },
         {
           "iso": "TJK",
-          "value": 47.2
+          "Value": 47.2
         },
         {
           "iso": "THA",
-          "value": 12.6
+          "Value": 12.6
         },
         {
           "iso": "MKD",
-          "value": 27.1
+          "Value": 27.1
         },
         {
           "iso": "TGO",
-          "value": 58.7
+          "Value": 58.7
         },
         {
           "iso": "TUN",
-          "value": 15.5
+          "Value": 15.5
         },
         {
           "iso": "TUR",
-          "value": 2.3
+          "Value": 2.3
         },
         {
           "iso": "UGA",
-          "value": 19.5
+          "Value": 19.5
         },
         {
           "iso": "UKR",
-          "value": 8.4
+          "Value": 8.4
         },
         {
           "iso": "TZA",
-          "value": 28.2
+          "Value": 28.2
         },
         {
           "iso": "URY",
-          "value": 11.5
+          "Value": 11.5
         },
         {
           "iso": "UZB",
-          "value": 16
+          "Value": 16
         },
         {
           "iso": "VEN",
-          "value": 25.4
+          "Value": 25.4
         },
         {
           "iso": "VNM",
-          "value": 17.2
+          "Value": 17.2
         },
         {
           "iso": "ZMB",
-          "value": 60.5
+          "Value": 60.5
         },
         {
           "iso": "ZWE",
-          "value": 72.3
+          "Value": 72.3
         }
       ]
 
@@ -440,9 +440,7 @@
         "de": "Anteil armutsgefährderter Einwohner",
         "en": ""
       },
-      "linkedSet": [
 
-      ],
       "quelle": "(At-risk-of-poverty rate by poverty threshold, age and sex (source: SILC) (ilc_li02))",
       "link": "",
       "unit": "%",
@@ -452,10 +450,10 @@
          0,
          5,
          10,
-         15
+         30
       ],
-      "translate": [0,30],
-      "scale": 1,
+      "translate": [-124, 485],
+      "scale": 2.4,
       "colorSet":"Greens",
       "colorNum":9,
       "data":[
