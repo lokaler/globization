@@ -1,5 +1,5 @@
 {
-  "key": "bmi",
+  "key": "poverty",
   "title": "2. Karte - Armut bedroht",
   "view": "globe",
   "dataset": "poorEU",
@@ -40,11 +40,6 @@
         }
       }
     },
-    {
-      "submit": {
-        "key": "HomeIncomeSubmitted"
-      }
-    },
 
     {
       "text": {
@@ -69,11 +64,7 @@
         }
       }
     },
-    {
-      "submit": {
-        "key": "PersonsSubmitted"
-      }
-    },
+
     {
       "text": {
         "de": [
@@ -99,22 +90,23 @@
     },
     {
       "submit": {
-        "key": "PersonsUnderFifteenSubmitted"
+        "key": "povertySubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          ""
+          "i.povertySubmitted",
+          "'allAnswered'"
         ],
         "answerContext": {
-
+          "povertyFactor": "i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)"
         },
         "templates": {
           "notSubmitted": {
             "de": ["Bitte alles beantworten und dann bestätigen."], "en": ["Please answer all and confirm after."]          },
           "allAnswered": {
-            "de": [""], "en": [""]
+            "de": ["{{ povertyFactor }}"], "en": [""]
           },
           "1quintil": {
             "de": [
