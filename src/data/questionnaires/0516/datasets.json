@@ -9,9 +9,7 @@
       "de": "Anteil Bevölkerung unter nationaler Armutsgrenze",
       "en": ""
     },
-    "linkedSet": [
-
-    ],
+  
     "quelle": "UN",
     "link": "http://data.un.org/Data.aspx?d=MDG&f=seriesRowID%3A581",
     "unit": "%",
