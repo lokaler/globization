@@ -21,7 +21,7 @@
     },
     {
       "input": {
-        "key": "militaryExp",
+        "key": "facettePov",
         "type": "choices",
         "options": {
           "choices": [
@@ -35,9 +35,9 @@
     {
       "answer": {
         "answerKey": [
-          "i.militaryExp === 'choice_c1' && f.setDataset('poorEU') && 'choice_c1'",
-          "i.militaryExp === 'choice_c2' && f.setDataset('militaryExp2015') && 'choice_c2'",
-          "i.militaryExp === 'choice_c3' && f.setDataset('childMortality') && 'choice_c3'"
+          "i.facettePov === 'choice_c1' && f.setDataset('childMortality') && 'choice_c1'",
+          "i.facettePov === 'choice_c2' && f.setDataset('primaryEdu') && 'choice_c2'",
+          "i.facettePov === 'choice_c3' && f.setDataset('accessSanitary') && 'choice_c3'"
         ],
         "answerContext": {},
         "templates": {
