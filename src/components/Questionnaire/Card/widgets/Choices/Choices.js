@@ -1,16 +1,18 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes as PT } from 'react';
 import translate from 'logic/translate';
 import styles from '../../../Questionnaire.scss';
+import Histogram from './ChoicesHistogram';
 
 export default class Choices extends React.Component {
 
   static propTypes = {
-    actions: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired,
+    actions: PT.object.isRequired,
+    questions: PT.object.isRequired,
     // --- for this component only ---
-    id: PropTypes.string.isRequired,
-    options: PropTypes.object.isRequired,
-    disabled: PropTypes.bool.isRequired
+    id: PT.string.isRequired,
+    options: PT.object.isRequired,
+    disabled: PT.bool.isRequired,
+    histogramData: PT.oneOfType([PT.bool, PT.object])
   }
 
   setValue(value) {
@@ -19,7 +21,7 @@ export default class Choices extends React.Component {
   }
 
   render() {
-    const { questions, id, options, disabled } = this.props;
+    const { questions, id, options, disabled, histogramData } = this.props;
     const currentValue = questions.inputValues[id];
 
     const Radios = options.choices.map((option) => {
@@ -50,6 +52,9 @@ export default class Choices extends React.Component {
     return (
       <div className={ styles.widget }>
         { Radios }
+        { histogramData &&
+          <Histogram histogramData={ histogramData }/>
+        }
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import Slider from './Slider/Slider';
 import Choices from './Choices/Choices';
+import { get } from 'lodash';
 
 const WidgetFactory = {
   slider: React.createFactory(Slider),
@@ -17,13 +18,19 @@ export default class Input extends React.Component {
 
   render() {
     const { card, input, questions } = this.props;
-    const disabled = card.key in questions.submittedCards;
+    const cardSubmitted = card.key in questions.submittedCards;
+    const disabled = cardSubmitted;
+
+    const histograms = questions.histograms;
+    const questionnaireId = questions.activeQuestionnaireId;
+    const histogramData = cardSubmitted && get(histograms, [questionnaireId, input.key]);
 
     const Widget = WidgetFactory[input.type]({
       ...input,
       ...this.props,
       id: input.key,
-      disabled
+      disabled,
+      histogramData
     });
 
     return <span key={ `${+new Date()}_${input.key}` }>{ Widget }</span>;
