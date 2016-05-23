@@ -23,9 +23,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["choice_e1", { "de": "Im Niger", "en": "" }],
-            ["choice_e2", { "de": "In Liberia", "en": ""}],
-            ["choice_e3", { "de": "In Thailand", "en": " " }]
+            ["choice_e1", { "de": "Gar keinen. Gerade in Ländern mit niedrigem BIP pro Kopf sind die Menschen meist viel zufriedener als in Industrienationen mit hohem BIP.", "en": "" }],
+            ["choice_e2", { "de": "Das BIP ist ein wichtiger Faktor unter mehreren. ", "en": ""}],
+            ["choice_e3", { "de": "Das BIP ist sogar der einzige Faktor, der einen Einfluss auf das Glücksempfinden der Menschen zu haben scheint.", "en": " " }]
           ]
         }
       }
@@ -39,9 +39,8 @@
       "answer": {
         "answerKey": [
           "i.moneyHappy && !i.moneyHappySubmitted",
-          "!i.mulitPovertySubmitted && 'notSubmitted'",
+          "!i.moneyHappySubmitted && 'notSubmitted'",
           "f.setDataset('happyWorld')",
-          "f.panToCountry('NER') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('scatter')",
           "i.moneyHappy"
