@@ -1,109 +1,70 @@
 {
-  "key": "bmi",
-  "title": "1. Karte - EU Armut",
-  "view": "globe",
-  "dataset": "poorNation",
+  "key": "facettes",
+  "title": "5. Karte - Facetten Armut",
+  "dataset": "incomeDistEU",
   "content": [
     {
       "text": {
         "de": [
-          "In der Europäischen Union gilt offiziell als armutsgefährdet, wer weniger als 60 Prozent des mittleren Einkommens zur Verfügung hat."
+          " # Facetten der Armut messen",
+          "",
+          "Die Armutsgrenze von 1,25$ pro Tag ist sehr umstritten: Viele Menschen haben mehr Geld zur Verfügung und sind dennoch bettelarm. Diese Menschen soll der Multidimensionale Armutsindex (MPI) erfassen. Er bildet ab, inwiefern jemand in den Bereichen Gesundheit, Bildung und Lebensstandard benachteiligt ist.",
+          "",
+          "**Dabei wird zum Beispiel auf folgende Aspekte geschaut (klicken Sie auf den Knopf, um die Daten zum Thema anzeigen zu lassen):**"
         ],
         "en": [
-          "Text"
-        ]
-      }
-    },
-    {
-      "text": {
-        "de": [
-          "**Schätzen Sie: Welcher Anteil der deutschen Bevölkerung ist nach dieser Definition von Armut bedroht?**"
-        ],
-        "en": [
-          "** **"
+          " # ",
+          "",
+          ""
         ]
       }
     },
     {
       "input": {
-        "key": "sliderEUpoor",
-        "type": "slider",
+        "key": "militaryExp",
+        "type": "choices",
         "options": {
-          "unit": "%",
-          "min": 0,
-          "value": 25,
-          "max": 50,
-          "step": 1
+          "choices": [
+            ["choice_c1", { "de": "Kindersterblichkeit", "en": "" }],
+            ["choice_c2", { "de": "Zugang zu Grundschulbildung", "en": ""}],
+            ["choice_c3", { "de": "Zugang zu Sanitäranlagen", "en": " " }]
+          ]
         }
-      }
-    },
-    {
-      "submit": {
-        "key": "EUpoorSubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          "i.sliderEUpoor && !i.EUpoorSubmitted",
-          "!i.EUpoorSubmitted && 'notSubmitted'",
-          "f.isMobile() && f.setView('map')",
-          "!f.isMobile() && f.setView('globe')",
-          "(i.sliderEUpoor < 7) && 'EUpoor2'",
-          "(i.sliderEUpoor >= 8 && i.sliderEUpoor< 15) && 'EUpoor1'",
-          "(i.sliderEUpoor >= 15 && i.sliderEUpoor< 20) && 'EUpoor3'",
-          "(i.sliderEUpoor >= 20 && i.sliderEUpoor< 26) && 'EUpoor4'",
-          "(i.sliderEUpoor >= 26 ) && 'EUpoor5'"
 
         ],
-        "answerContext": {
-
-          "EUpoorMinCountry" : "f.getMinCountryName(i.sliderEUpoor)",
-          "EUpoorCountry" : "f.getCountryName(i.sliderEUpoor)",
-          "EUpoorMaxCountry" : "f.getMaxCountryName(i.sliderEUpoor)"
-
-        },
+        "answerContext": {},
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten und dann bestätigen."], "en": ["Please answer and confirm after."]          },
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
           "allAnswered": {
-            "de": [""], "en": [""]
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
           },
-          "EUpoor1": {
+          "choice_c1": {
             "de": [
-              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. In {{ EUpoorCountry }} ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
+              "Richtig! Bei 1,2 Milliarden Menschen in extremer Armut bräuchte man jährlich etwa 548 Milliarden Dollar. Die Militärausgaben im Jahr 2015 der USA betrugen nur wenig mehr, nämlich 596 Milliarden US-Dollar."
             ],
             "en": [
               ""
             ]
           },
-          "EUpoor2": {
+          "choice_c2": {
             "de": [
-              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. Ihre Schätzung liegt niedriger als die Armutsgefährdungsquote in allen EU-Ländern. Am niedrigsten ist die Quote in der {{ EUpoorMinCountry }} mit 7,9 Prozent. "
+              "Etwas mehr Geld bräuchte man schon. Bei 1,2 Milliarden Menschen in extremer Armut würden jährlich etwa 548 Milliarden Dollar benötigt. Das ist etwas weniger als die Militärausgaben der USA mit 596 Milliarden Dollar. Deutschland gab 2015 mit 39 Milliarden Dollar wesentlich weniger für militärische Zwecke aus."
             ],
             "en": [
               ""
             ]
           },
-          "EUpoor3": {
+          "choice_c3": {
             "de": [
-              "Gut geschätzt! Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet."
-            ],
-            "en": [
-              ""
-            ]
-          },
-          "EUpoor4": {
-            "de": [
-              "Ganz so hoch ist der Anteil nicht. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. In {{ EUpoorCountry }} ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
-            ],
-            "en": [
-              ""
-            ]
-          },
-          "EUpoor5": {
-            "de": [
-              "Ihre Schätzung liegt höher als die Armutsgefährdungsquote in allen EU-Ländern. Am höchsten ist die Quote in {{ EUpoorMaxCountry }} mit gut 25 Prozent."
+              "Da bräuchte man schon wesentlich mehr Geld. Bei 1,2 Milliarden Menschen in extremer Armut würden jährlich etwa 548 Milliarden Dollar benötigt. Das ist etwas weniger als die Militärausgaben der USA mit 596 Milliarden Dollar und viel mehr als die 0,5 Milliarden Dollar, die Estland im Jahr 2015 für militärische Zwecke ausgab."
             ],
             "en": [
               ""
