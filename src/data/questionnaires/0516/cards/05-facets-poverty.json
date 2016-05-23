@@ -35,7 +35,9 @@
     {
       "answer": {
         "answerKey": [
-
+          "i.militaryExp === 'choice_c1' && f.setDataset('poorEU') && 'choice_c1'",
+          "i.militaryExp === 'choice_c2' && f.setDataset('militaryExp2015') && 'choice_c2'",
+          "i.militaryExp === 'choice_c3' && f.setDataset('childMortality') && 'choice_c3'"
         ],
         "answerContext": {},
         "templates": {
