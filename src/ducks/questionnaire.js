@@ -13,6 +13,9 @@ const SET_DATASET = 'SET_DATASET';
 const SET_DEBUG_EXPRESSIONS = 'SET_DEBUG_EXPRESSIONS';
 
 
+const FETCH_HISTOGRAM_DATA = 'FETCH_HISTOGRAM_DATA';
+const ERROR_HISTOGRAM_DATA = 'ERROR_HISTOGRAM_DATA';
+
 const initialState = {
   validationError: null,
   questionnaires: {},
@@ -21,7 +24,8 @@ const initialState = {
   inputValues: {},
   cards: [],
   submittedCards: {},
-  debugExpressions: false
+  debugExpressions: false,
+  histograms: null
 };
 
 export function reducer(state = initialState, action) {
@@ -143,12 +147,40 @@ export function reducer(state = initialState, action) {
       };
     }
 
+    case FETCH_HISTOGRAM_DATA: {
+      return {
+        ...state,
+        histograms: action.data
+      };
+    }
+
     default:
       return state;
   }
 }
 
 const setDataSet = (name) => ({ type: SET_DATASET, name });
+
+function receiveHistogramData(jsonData) {
+  return { type: FETCH_HISTOGRAM_DATA, data: jsonData };
+}
+
+function errorHistogramData(err) {
+  console.error(err); // eslint-disable-line no-console
+  return { type: ERROR_HISTOGRAM_DATA, error: err };
+}
+
+export function fetchHistogramData(url) {
+  return dispatch => {
+    dispatch(receiveHistogramData());
+    fetch(url)
+      .then(res => res.json())
+      .then(jsonData => {
+        dispatch(receiveHistogramData(jsonData));
+      })
+      .catch((err) => dispatch(errorHistogramData(err)));
+  };
+}
 
 export const actions = {
 
@@ -175,6 +207,10 @@ export const actions = {
   setDebugExpression: (debug) => {
     localStorage.setItem('debugExpressions', debug);
     return { type: SET_DEBUG_EXPRESSIONS, debug };
-  }
+  },
+
+  receiveHistogramData,
+  errorHistogramData,
+  fetchHistogramData
 
 };
