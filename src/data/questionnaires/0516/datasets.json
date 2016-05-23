@@ -143,7 +143,7 @@
          "de":"Anteil armutsgefährderter Einwohner",
          "en":""
       },
-      "quelle":"(At-risk-of-poverty rate by poverty threshold, age and sex (source: SILC) (ilc_li02))",
+      "quelle":"SILC",
       "link":"",
       "unit":"%",
       "fixed":0,
@@ -1150,7 +1150,7 @@
       ]
    },
    {
-      "key":"multiPoverty",
+      "key":"multiPov",
       "name":{
          "de":"Anteil der MPI-armen Bevölkerung",
          "en":""

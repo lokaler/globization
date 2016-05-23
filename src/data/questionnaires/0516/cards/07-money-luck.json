@@ -1,109 +1,79 @@
 {
-  "key": "bmi",
-  "title": "1. Karte - EU Armut",
-  "view": "globe",
-  "dataset": "poorNation",
+  "key": "happymoney",
+  "title": "7. Karte - happy Money",
+  "dataset": "mulitPov",
   "content": [
     {
       "text": {
         "de": [
-          "In der Europäischen Union gilt offiziell als armutsgefährdet, wer weniger als 60 Prozent des mittleren Einkommens zur Verfügung hat."
+          " # Macht Geld glücklich?",
+          "",
+          "**Geld allein macht nicht glücklich – heißt ein Sprichwort. Aber wie wichtig ist Wohlstand zum Glücklichsein? Welchen Einfluss auf das Glück der Menschen hat zum Beispiel das Pro-Kopf-Bruttoinlandsprodukt (BIP) des Heimatlandes?**"
         ],
         "en": [
-          "Text"
-        ]
-      }
-    },
-    {
-      "text": {
-        "de": [
-          "**Schätzen Sie: Welcher Anteil der deutschen Bevölkerung ist nach dieser Definition von Armut bedroht?**"
-        ],
-        "en": [
-          "** **"
+          " # ",
+          "",
+          ""
         ]
       }
     },
     {
       "input": {
-        "key": "sliderEUpoor",
-        "type": "slider",
+        "key": "moneyHappy",
+        "type": "choices",
         "options": {
-          "unit": "%",
-          "min": 0,
-          "value": 25,
-          "max": 50,
-          "step": 1
+          "choices": [
+            ["choice_e1", { "de": "Im Niger", "en": "" }],
+            ["choice_e2", { "de": "In Liberia", "en": ""}],
+            ["choice_e3", { "de": "In Thailand", "en": " " }]
+          ]
         }
       }
     },
     {
       "submit": {
-        "key": "EUpoorSubmitted"
+        "key": "moneyHappySubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          "i.sliderEUpoor && !i.EUpoorSubmitted",
-          "!i.EUpoorSubmitted && 'notSubmitted'",
+          "i.moneyHappy && !i.moneyHappySubmitted",
+          "!i.mulitPovertySubmitted && 'notSubmitted'",
+          "f.setDataset('happyWorld')",
+          "f.panToCountry('NER') && false",
           "f.isMobile() && f.setView('map')",
-          "!f.isMobile() && f.setView('globe')",
-          "(i.sliderEUpoor < 7) && 'EUpoor2'",
-          "(i.sliderEUpoor >= 8 && i.sliderEUpoor< 15) && 'EUpoor1'",
-          "(i.sliderEUpoor >= 15 && i.sliderEUpoor< 20) && 'EUpoor3'",
-          "(i.sliderEUpoor >= 20 && i.sliderEUpoor< 26) && 'EUpoor4'",
-          "(i.sliderEUpoor >= 26 ) && 'EUpoor5'"
-
+          "!f.isMobile() && f.setView('scatter')",
+          "i.moneyHappy"
         ],
-        "answerContext": {
-
-          "EUpoorMinCountry" : "f.getMinCountryName(i.sliderEUpoor)",
-          "EUpoorCountry" : "f.getCountryName(i.sliderEUpoor)",
-          "EUpoorMaxCountry" : "f.getMaxCountryName(i.sliderEUpoor)"
-
-        },
+        "answerContext": {},
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten und dann bestätigen."], "en": ["Please answer and confirm after."]          },
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
           "allAnswered": {
-            "de": [""], "en": [""]
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
           },
-          "EUpoor1": {
+          "choice_e1": {
             "de": [
-              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. In {{ EUpoorCountry }} ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
+              "Falsch! Nach dem Welt-Glücks-Bericht 2016 lässt sich das unterschiedliche Glücksempfinden in verschiedenen Ländern vor allem durch die Unterschiede im Pro-Kopf-BIP, der Aussicht auf ein langes gesundes Leben und der sozialen Unterstützung erklären."
             ],
             "en": [
               ""
             ]
           },
-          "EUpoor2": {
+          "choice_e2": {
             "de": [
-              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. Ihre Schätzung liegt niedriger als die Armutsgefährdungsquote in allen EU-Ländern. Am niedrigsten ist die Quote in der {{ EUpoorMinCountry }} mit 7,9 Prozent. "
+              "Richtig! Nach dem Welt-Glücks-Bericht 2016 lässt sich das unterschiedliche Glücksempfinden in verschiedenen Ländern vor allem durch die Unterschiede im Pro-Kopf-BIP, der Aussicht auf ein langes gesundes Leben und der sozialen Unterstützung erklären."
             ],
             "en": [
               ""
             ]
           },
-          "EUpoor3": {
+          "choice_e3": {
             "de": [
-              "Gut geschätzt! Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet."
-            ],
-            "en": [
-              ""
-            ]
-          },
-          "EUpoor4": {
-            "de": [
-              "Ganz so hoch ist der Anteil nicht. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. In {{ EUpoorCountry }} ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
-            ],
-            "en": [
-              ""
-            ]
-          },
-          "EUpoor5": {
-            "de": [
-              "Ihre Schätzung liegt höher als die Armutsgefährdungsquote in allen EU-Ländern. Am höchsten ist die Quote in {{ EUpoorMaxCountry }} mit gut 25 Prozent."
+              "Falsch! Nach dem Welt-Glücks-Bericht 2016 hängt das unterschiedliche Glücksempfinden in verschiedenen Ländern neben dem Pro-Kopf-BIP auch stark mit der Aussicht auf ein langes gesundes Leben und der sozialen Unterstützung zusammen."
             ],
             "en": [
               ""

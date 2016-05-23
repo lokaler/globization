@@ -1,7 +1,7 @@
 {
   "key": "facettes",
   "title": "5. Karte - Facetten Armut",
-  "dataset": "incomeDistEU",
+  "dataset": "militaryExp2015",
   "content": [
     {
       "text": {
