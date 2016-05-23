@@ -71,7 +71,7 @@
           "**Wie viele Personen unter 15 Jahren leben in Ihrem Haushalt?**"
         ],
         "en": [
-          "****"
+          "** **"
         ]
       }
     },
@@ -97,7 +97,14 @@
       "answer": {
         "answerKey": [
           "i.povertySubmitted",
-          "'allAnswered'"
+          "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 11839) && 'povertyDanger'",
+          "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 11838 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 12819)) && '2quintil'",
+          "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 12818 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 17552)) && '2quintil'",
+          "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 17551 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 22524)) && '3quintil'",
+          "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 22523 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 29973)) && '4quintil'",
+          "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) >= 29972) && '5quintil'"
+
+
         ],
         "answerContext": {
           "povertyFactor": "i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)"
@@ -108,9 +115,18 @@
           "allAnswered": {
             "de": ["{{ povertyFactor }}"], "en": [""]
           },
+
+          "povertyDanger": {
+            "de": [
+              "In Deutschland gelten Sie damit als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum untersten Fünftel.![](http://lokaler.de/img/hu1a.png) "
+            ],
+            "en": [
+              ""
+            ]
+          },
           "1quintil": {
             "de": [
-              ""
+              "In Deutschland gelten Sie damit als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum untersten Fünftel.![](http://lokaler.de/img/Histogramm_U%C3%8C%C2%88bermorgen_1.png) "
             ],
             "en": [
               ""
