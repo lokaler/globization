@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import translate from 'logic/translate';
-import styles from '../../Questionnaire.scss';
+import styles from '../../../Questionnaire.scss';
 
 export default class Choices extends React.Component {
 

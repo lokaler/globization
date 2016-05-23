@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import Slider from './Slider';
-import Choices from './Choices';
+import Slider from './Slider/Slider';
+import Choices from './Choices/Choices';
 
 const WidgetFactory = {
   slider: React.createFactory(Slider),

@@ -4,7 +4,7 @@ import Rcslider from 'rc-slider';
 import cssModules from 'react-css-modules';
 import { sponLogger } from 'logic/logging';
 import 'rc-slider/assets/index.css';
-import styles from '../../Questionnaire.scss';
+import styles from '../../../Questionnaire.scss';
 
 @cssModules(styles)
 export default class Slider extends React.Component {
