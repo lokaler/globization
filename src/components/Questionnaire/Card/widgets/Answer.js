@@ -9,7 +9,7 @@ import center from 'underscore.string/lrpad';
 import classNames from 'classnames';
 import Logger from './logging';
 import functions from 'logic/questionnaires/functions';
-import styles from '../../Questionnaire.scss';
+import styles from './widgets.scss';
 
 @cssModules(styles)
 export default class Answer extends React.Component {

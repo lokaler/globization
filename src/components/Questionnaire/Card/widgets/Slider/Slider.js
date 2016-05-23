@@ -2,12 +2,11 @@ import { isUndefined } from 'lodash';
 import React, { PropTypes as PT } from 'react';
 import Rcslider from 'rc-slider';
 import Histogram from './SliderHistogram';
-import cssModules from 'react-css-modules';
 import { sponLogger } from 'logic/logging';
+import styles from '../widgets.scss';
 import 'rc-slider/assets/index.css';
-import styles from '../../../Questionnaire.scss';
+import './Rcslider.scss';
 
-@cssModules(styles)
 export default class Slider extends React.Component {
 
   static propTypes = {
@@ -42,7 +41,7 @@ export default class Slider extends React.Component {
     }
 
     return (
-      <div styleName="widget" className="slider">
+      <div className={ styles.widget }>
         { histogramData &&
           <Histogram histogramData={ histogramData }/>
         }
