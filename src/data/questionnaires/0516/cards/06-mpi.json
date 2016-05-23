@@ -1,109 +1,79 @@
 {
-  "key": "bmi",
-  "title": "1. Karte - EU Armut",
-  "view": "globe",
-  "dataset": "poorNation",
+  "key": "mpi",
+  "title": "6. Karte - MPI",
+  "dataset": "incomeDistEU",
   "content": [
     {
       "text": {
         "de": [
-          "In der Europäischen Union gilt offiziell als armutsgefährdet, wer weniger als 60 Prozent des mittleren Einkommens zur Verfügung hat."
+          " # Wo die Menschen laut MPI arm sind",
+          "",
+          "**Tippen Sie: In welchem dieser Länder ist der größte Anteil der Bevölkerung laut Multidimensionalem Armutsindex (MPI) extrem arm?**"
         ],
         "en": [
-          "Text"
-        ]
-      }
-    },
-    {
-      "text": {
-        "de": [
-          "**Schätzen Sie: Welcher Anteil der deutschen Bevölkerung ist nach dieser Definition von Armut bedroht?**"
-        ],
-        "en": [
-          "** **"
+          " # ",
+          "",
+          ""
         ]
       }
     },
     {
       "input": {
-        "key": "sliderEUpoor",
-        "type": "slider",
+        "key": "mulitPoverty",
+        "type": "choices",
         "options": {
-          "unit": "%",
-          "min": 0,
-          "value": 25,
-          "max": 50,
-          "step": 1
+          "choices": [
+            ["choice_d1", { "de": "Ungefähr so viel wie die Militärausgaben der USA im Jahr 2015", "en": "" }],
+            ["choice_d2", { "de": "Ungefähr so viel wie die Militärausgaben Deutschlands im Jahr 2015", "en": ""}],
+            ["choice_d3", { "de": "Ungefähr so viel wie die Militärausgaben Estlands im Jahr 2015", "en": " " }]
+          ]
         }
       }
     },
     {
       "submit": {
-        "key": "EUpoorSubmitted"
+        "key": "mulitPovertySubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          "i.sliderEUpoor && !i.EUpoorSubmitted",
-          "!i.EUpoorSubmitted && 'notSubmitted'",
+          "i.mulitPoverty && !i.mulitPovertySubmitted",
+          "!i.mulitPovertySubmitted && 'notSubmitted'",
+          "f.setDataset('lessThan125USD')",
+          "f.panToCountry('USA') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderEUpoor < 7) && 'EUpoor2'",
-          "(i.sliderEUpoor >= 8 && i.sliderEUpoor< 15) && 'EUpoor1'",
-          "(i.sliderEUpoor >= 15 && i.sliderEUpoor< 20) && 'EUpoor3'",
-          "(i.sliderEUpoor >= 20 && i.sliderEUpoor< 26) && 'EUpoor4'",
-          "(i.sliderEUpoor >= 26 ) && 'EUpoor5'"
-
+          "i.mulitPoverty"
         ],
-        "answerContext": {
-
-          "EUpoorMinCountry" : "f.getMinCountryName(i.sliderEUpoor)",
-          "EUpoorCountry" : "f.getCountryName(i.sliderEUpoor)",
-          "EUpoorMaxCountry" : "f.getMaxCountryName(i.sliderEUpoor)"
-
-        },
+        "answerContext": {},
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten und dann bestätigen."], "en": ["Please answer and confirm after."]          },
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
           "allAnswered": {
-            "de": [""], "en": [""]
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
           },
-          "EUpoor1": {
+          "choice_d1": {
             "de": [
-              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. In {{ EUpoorCountry }} ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
+              "Richtig! Laut der 1,25$-Armutsdefinition leben zwar noch mehr extrem arme Menschen in Liberia, schaut man jedoch auf den MPI, sieht die Sache anders aus: Im Niger sind demnach fast Dreiviertel der Bevölkerung sehr arm, in Liberia hingegen rund 35 Prozent. Im Bereich “Zugang zu Bildung” schneidet Liberia nämlich wesentlich besser ab."
             ],
             "en": [
               ""
             ]
           },
-          "EUpoor2": {
+          "choice_d2": {
             "de": [
-              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. Ihre Schätzung liegt niedriger als die Armutsgefährdungsquote in allen EU-Ländern. Am niedrigsten ist die Quote in der {{ EUpoorMinCountry }} mit 7,9 Prozent. "
+              "Falsch! Laut der 1,25$-Armutsdefinition leben zwar noch mehr extrem arme Menschen in Liberia, schaut man jedoch auf den MPI, sieht die Sache anders aus: Im Niger sind demnach fast Dreiviertel der Bevölkerung sehr arm, in Liberia hingegen rund 35 Prozent. Im Bereich “Zugang zu Bildung” schneidet Liberia nämlich wesentlich besser ab."
             ],
             "en": [
               ""
             ]
           },
-          "EUpoor3": {
+          "choice_d3": {
             "de": [
-              "Gut geschätzt! Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet."
-            ],
-            "en": [
-              ""
-            ]
-          },
-          "EUpoor4": {
-            "de": [
-              "Ganz so hoch ist der Anteil nicht. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. In {{ EUpoorCountry }} ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
-            ],
-            "en": [
-              ""
-            ]
-          },
-          "EUpoor5": {
-            "de": [
-              "Ihre Schätzung liegt höher als die Armutsgefährdungsquote in allen EU-Ländern. Am höchsten ist die Quote in {{ EUpoorMaxCountry }} mit gut 25 Prozent."
+              "Nein. In Thailand sind sowohl nach der 1,25$-Armutsdefinition als auch laut MPI nur wenige Menschen von extremer Armut betroffen, nämlich 0,3 beziehungsweise 0,1 Prozent der Bevölkerung. Im Niger hingegen sind laut MPI fast Dreiviertel der Bevölkerung sehr arm, in Liberia rund 35 Prozent. Im Bereich “Zugang zu Bildung” schneidet Liberia nämlich wesentlich besser ab."
             ],
             "en": [
               ""
