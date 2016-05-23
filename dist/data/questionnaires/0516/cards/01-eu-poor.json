@@ -1,5 +1,5 @@
 {
-  "key": "bmi",
+  "key": "eupoor",
   "title": "1. Karte - EU Armut",
   "view": "globe",
   "dataset": "poorNation",
@@ -53,9 +53,9 @@
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "(i.sliderEUpoor < 7) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && 'EUpoor2'",
-          "(i.sliderEUpoor >= 8 && i.sliderEUpoor< 15) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && i.sliderEUpoor< 15) && 'EUpoor1'",
-          "(i.sliderEUpoor >= 15 && i.sliderEUpoor< 20) && 'EUpoor3'",
-          "(i.sliderEUpoor >= 20 && i.sliderEUpoor< 26) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && i.sliderEUpoor< 26) && 'EUpoor4'",
+          "(i.sliderEUpoor >= 8 && i.sliderEUpoor< 15) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && 'EUpoor1'",
+          "(i.sliderEUpoor >= 15 && i.sliderEUpoor< 20) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && 'EUpoor3'",
+          "(i.sliderEUpoor >= 20 && i.sliderEUpoor< 26) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && 'EUpoor4'",
           "(i.sliderEUpoor >= 26 ) && f.panToCountry(f.getISO('poorEU', i.sliderEUpoor)) && 'EUpoor5'"
 
         ],
