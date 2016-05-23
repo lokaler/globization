@@ -120,7 +120,7 @@ export function reducer(state = initialState, action) {
 
     case SET_DATASET: {
       let newDataSet = action.name && state.datasets.filter((d) => d.key === action.name)[0];
-      console.log(newDataSet);
+//       console.log(newDataSet);
       if (!newDataSet) {
         newDataSet = { data: [], key: 'none' };
       }

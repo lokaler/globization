@@ -1,6 +1,6 @@
 import React, { PropTypes as PT } from 'react';
-import translate from 'logic/translate';
 import styles from '../../../Questionnaire.scss';
+import RadioInput from './RadioInput';
 import Histogram from './ChoicesHistogram';
 
 export default class Choices extends React.Component {
@@ -30,22 +30,14 @@ export default class Choices extends React.Component {
       const onClick = disabled ? noop : this.setValue.bind(this, value);
 
       return (
-        <div
+        <RadioInput
           key={ `${ id }_${ value }` }
-          className="choice"
+          value={ value }
+          label={ label }
+          checked={ value === currentValue }
+          disabled={ disabled }
           onClick={ onClick }
-        >
-          <input
-            type="radio"
-            value={ value }
-            checked={ value === currentValue }
-            onChange={ noop } // so react doesn't complain
-            disabled={ disabled }
-          />
-          <span className={ styles.choicelabel }>
-            { translate(label) }
-          </span>
-        </div>
+        />
       );
     });
 
