@@ -118,6 +118,13 @@
     background: rgba(154, 154, 154, 0.22);
     color: #2B2B2B;
 
+    img {
+      border-radius: 5px;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
     .sharing {
       clear: both;
       padding-top: 10px;
