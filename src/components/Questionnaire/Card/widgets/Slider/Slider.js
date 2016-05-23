@@ -43,7 +43,11 @@ export default class Slider extends React.Component {
     return (
       <div className={ styles.widget }>
         { histogramData &&
-          <Histogram histogramData={ histogramData }/>
+          <Histogram
+            min={ options.min }
+            max={ options.max }
+            histogramData={ histogramData }
+          />
         }
         <Rcslider
           disabled={ disabled }
