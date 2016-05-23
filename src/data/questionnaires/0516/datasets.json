@@ -31,401 +31,105 @@
       "colorSet":"Greens",
       "colorNum":9,
       "data":[
-         {
-            "iso":"AFG",
-            "value":35.8
-         },
-         {
-            "iso":"ALB",
-            "value":14.3
-         },
-         {
-            "iso":"ARM",
-            "value":32
-         },
-         {
-            "iso":"AZE",
-            "value":5.3
-         },
-         {
-            "iso":"BGD",
-            "value":31.5
-         },
-         {
-            "iso":"BLR",
-            "value":5.5
-         },
-         {
-            "iso":"BEN",
-            "value":36.2
-         },
-         {
-            "iso":"BTN",
-            "value":12
-         },
-         {
-            "iso":"BOL",
-            "value":45
-         },
-         {
-            "iso":"BIH",
-            "value":17.9
-         },
-         {
-            "iso":"BWA",
-            "value":19.3
-         },
-         {
-            "iso":"BRA",
-            "value":8.9
-         },
-         {
-            "iso":"BGR",
-            "value":21
-         },
-         {
-            "iso":"BFA",
-            "value":46.7
-         },
-         {
-            "iso":"KHM",
-            "value":17.7
-         },
-         {
-            "iso":"TCD",
-            "value":46.7
-         },
-         {
-            "iso":"CHL",
-            "value":14.4
-         },
-         {
-            "iso":"COL",
-            "value":30.6
-         },
-         {
-            "iso":"COG",
-            "value":46.5
-         },
-         {
-            "iso":"CRI",
-            "value":22.4
-         },
-         {
-            "iso":"HRV",
-            "value":19.5
-         },
-         {
-            "iso":"CZE",
-            "value":8.6
-         },
-         {
-            "iso":"COD",
-            "value":63.6
-         },
-         {
-            "iso":"DOM",
-            "value":41.1
-         },
-         {
-            "iso":"ECU",
-            "value":22.5
-         },
-         {
-            "iso":"EGY",
-            "value":25.2
-         },
-         {
-            "iso":"SLV",
-            "value":29.6
-         },
-         {
-            "iso":"EST",
-            "value":18.6
-         },
-         {
-            "iso":"ETH",
-            "value":29.6
-         },
-         {
-            "iso":"GMB",
-            "value":48.4
-         },
-         {
-            "iso":"GEO",
-            "value":14.8
-         },
-         {
-            "iso":"GHA",
-            "value":24.2
-         },
-         {
-            "iso":"GTM",
-            "value":53.7
-         },
-         {
-            "iso":"GIN",
-            "value":55.2
-         },
-         {
-            "iso":"GNB",
-            "value":69.3
-         },
-         {
-            "iso":"HTI",
-            "value":58.5
-         },
-         {
-            "iso":"HND",
-            "value":64.5
-         },
-         {
-            "iso":"HUN",
-            "value":14.3
-         },
-         {
-            "iso":"IND",
-            "value":21.9
-         },
-         {
-            "iso":"IDN",
-            "value":11.3
-         },
-         {
-            "iso":"IRQ",
-            "value":18.9
-         },
-         {
-            "iso":"JAM",
-            "value":19.9
-         },
-         {
-            "iso":"JOR",
-            "value":14.4
-         },
-         {
-            "iso":"KAZ",
-            "value":2.9
-         },
-         {
-            "iso":"KGZ",
-            "value":37
-         },
-         {
-            "iso":"LAO",
-            "value":23.2
-         },
-         {
-            "iso":"LVA",
-            "value":19.4
-         },
-         {
-            "iso":"LSO",
-            "value":57.1
-         },
-         {
-            "iso":"LTU",
-            "value":20.6
-         },
-         {
-            "iso":"MDG",
-            "value":75.3
-         },
-         {
-            "iso":"MWI",
-            "value":50.7
-         },
-         {
-            "iso":"MYS",
-            "value":1.7
-         },
-         {
-            "iso":"MLI",
-            "value":43.6
-         },
-         {
-            "iso":"MEX",
-            "value":52.3
-         },
-         {
-            "iso":"MNG",
-            "value":27.4
-         },
-         {
-            "iso":"MNE",
-            "value":11.3
-         },
-         {
-            "iso":"MOZ",
-            "value":54.7
-         },
-         {
-            "iso":"NAM",
-            "value":28.7
-         },
-         {
-            "iso":"NPL",
-            "value":25.2
-         },
-         {
-            "iso":"NIC",
-            "value":42.5
-         },
-         {
-            "iso":"NER",
-            "value":48.9
-         },
-         {
-            "iso":"NGA",
-            "value":46
-         },
-         {
-            "iso":"PAN",
-            "value":25.8
-         },
-         {
-            "iso":"PNG",
-            "value":39.9
-         },
-         {
-            "iso":"PRY",
-            "value":23.8
-         },
-         {
-            "iso":"PER",
-            "value":23.9
-         },
-         {
-            "iso":"PHL",
-            "value":25.2
-         },
-         {
-            "iso":"POL",
-            "value":17.3
-         },
-         {
-            "iso":"MDA",
-            "value":12.7
-         },
-         {
-            "iso":"ROU",
-            "value":22.4
-         },
-         {
-            "iso":"RUS",
-            "value":10.8
-         },
-         {
-            "iso":"RWA",
-            "value":44.9
-         },
-         {
-            "iso":"STP",
-            "value":61.7
-         },
-         {
-            "iso":"SEN",
-            "value":46.7
-         },
-         {
-            "iso":"SRB",
-            "value":24.6
-         },
-         {
-            "iso":"SLE",
-            "value":52.9
-         },
-         {
-            "iso":"SVK",
-            "value":12.8
-         },
-         {
-            "iso":"SVN",
-            "value":14.5
-         },
-         {
-            "iso":"ZAF",
-            "value":53.8
-         },
-         {
-            "iso":"SSD",
-            "value":50.6
-         },
-         {
-            "iso":"LKA",
-            "value":6.7
-         },
-         {
-            "iso":"PSE",
-            "value":25.8
-         },
-         {
-            "iso":"SDN",
-            "value":46.5
-         },
-         {
-            "iso":"SWZ",
-            "value":63
-         },
-         {
-            "iso":"TJK",
-            "value":47.2
-         },
-         {
-            "iso":"THA",
-            "value":12.6
-         },
-         {
-            "iso":"MKD",
-            "value":27.1
-         },
-         {
-            "iso":"TGO",
-            "value":58.7
-         },
-         {
-            "iso":"TUN",
-            "value":15.5
-         },
-         {
-            "iso":"TUR",
-            "value":2.3
-         },
-         {
-            "iso":"UGA",
-            "value":19.5
-         },
-         {
-            "iso":"UKR",
-            "value":8.4
-         },
-         {
-            "iso":"TZA",
-            "value":28.2
-         },
-         {
-            "iso":"URY",
-            "value":11.5
-         },
-         {
-            "iso":"UZB",
-            "value":16
-         },
-         {
-            "iso":"VEN",
-            "value":25.4
-         },
-         {
-            "iso":"VNM",
-            "value":17.2
-         },
-         {
-            "iso":"ZMB",
-            "value":60.5
-         },
-         {
-            "iso":"ZWE",
-            "value":72.3
+         { "iso":"AFG", "value":35.8 },
+         { "iso":"ALB", "value":14.3 },
+         { "iso":"ARM", "value":32 },
+         { "iso":"AZE", "value":5.3 },
+         { "iso":"BGD", "value":31.5 },
+         { "iso":"BLR", "value":5.5 },
+         { "iso":"BEN", "value":36.2 },
+         { "iso":"BTN", "value":12 },
+         { "iso":"BOL", "value":45 },
+         { "iso":"BIH", "value":17.9 },
+         { "iso":"BWA", "value":19.3 },
+         { "iso":"BRA", "value":8.9 },
+         { "iso":"BGR", "value":21 },
+         { "iso":"BFA", "value":46.7 },
+         { "iso":"KHM", "value":17.7 },
+         { "iso":"TCD", "value":46.7 },
+         { "iso":"CHL", "value":14.4 },
+         { "iso":"COL", "value":30.6 },
+         { "iso":"COG", "value":46.5 },
+         { "iso":"CRI", "value":22.4 },
+         { "iso":"HRV", "value":19.5 },
+         { "iso":"CZE", "value":8.6 },
+         { "iso":"COD", "value":63.6 },
+         { "iso":"DOM", "value":41.1 },
+         { "iso":"ECU", "value":22.5 },
+         { "iso":"EGY", "value":25.2 },
+         { "iso":"SLV", "value":29.6 },
+         { "iso":"EST", "value":18.6 },
+         { "iso":"ETH", "value":29.6 },
+         { "iso":"GMB", "value":48.4 },
+         { "iso":"GEO", "value":14.8 },
+         { "iso":"GHA", "value":24.2 },
+         { "iso":"GTM", "value":53.7 },
+         { "iso":"GIN", "value":55.2 },
+         { "iso":"GNB", "value":69.3 },
+         { "iso":"HTI", "value":58.5 },
+         { "iso":"HND", "value":64.5 },
+         { "iso":"HUN", "value":14.3 },
+         { "iso":"IND", "value":21.9 },
+         { "iso":"IDN", "value":11.3 },
+         { "iso":"IRQ", "value":18.9 },
+         { "iso":"JAM", "value":19.9 },
+         { "iso":"JOR", "value":14.4 },
+         { "iso":"KAZ", "value":2.9 },
+         { "iso":"KGZ", "value":37 },
+         { "iso":"LAO", "value":23.2 },
+         { "iso":"LVA", "value":19.4 },
+         { "iso":"LSO", "value":57.1 },
+         { "iso":"LTU", "value":20.6 },
+         { "iso":"MDG", "value":75.3 },
+         { "iso":"MWI", "value":50.7 },
+         { "iso":"MYS", "value":1.7 },
+         { "iso":"MLI", "value":43.6 },
+         { "iso":"MEX", "value":52.3 },
+         { "iso":"MNG", "value":27.4 },
+         { "iso":"MNE", "value":11.3 },
+         { "iso":"MOZ", "value":54.7 },
+         { "iso":"NAM", "value":28.7 },
+         { "iso":"NPL", "value":25.2 },
+         { "iso":"NIC", "value":42.5 },
+         { "iso":"NER", "value":48.9 },
+         { "iso":"NGA", "value":46 },
+         { "iso":"PAN", "value":25.8 },
+         { "iso":"PNG", "value":39.9 },
+         { "iso":"PRY", "value":23.8 },
+         { "iso":"PER", "value":23.9 },
+         { "iso":"PHL", "value":25.2 },
+         { "iso":"POL", "value":17.3 },
+         { "iso":"MDA", "value":12.7 },
+         { "iso":"ROU", "value":22.4 },
+         { "iso":"RUS", "value":10.8 },
+         { "iso":"RWA", "value":44.9 },
+         { "iso":"STP", "value":61.7 },
+         { "iso":"SEN", "value":46.7 },
+         { "iso":"SRB", "value":24.6 },
+         { "iso":"SLE", "value":52.9 },
+         { "iso":"SVK", "value":12.8 },
+         { "iso":"SVN", "value":14.5 },
+         { "iso":"ZAF", "value":53.8 },
+         { "iso":"SSD", "value":50.6 },
+         { "iso":"LKA", "value":6.7 },
+         { "iso":"PSE", "value":25.8 },
+         { "iso":"SDN", "value":46.5 },
+         { "iso":"SWZ", "value":63 },
+         { "iso":"TJK", "value":47.2 },
+         { "iso":"THA", "value":12.6 },
+         { "iso":"MKD", "value":27.1 },
+         { "iso":"TGO", "value":58.7 },
+         { "iso":"TUN", "value":15.5 },
+         { "iso":"TUR", "value":2.3 },
+         { "iso":"UGA", "value":19.5 },
+         { "iso":"UKR", "value":8.4 },
+         { "iso":"TZA", "value":28.2 },
+         { "iso":"URY", "value":11.5 },
+         { "iso":"UZB", "value":16 },
+         { "iso":"VEN", "value":25.4 },
+         { "iso":"VNM", "value":17.2 },
+         { "iso":"ZMB", "value":60.5 },
+         { "iso":"ZWE", "value":72.3
          }
       ]
    },
@@ -461,137 +165,39 @@
       "colorSet":"Greens",
       "colorNum":9,
       "data":[
-         {
-            "iso":"AUT",
-            "value":14.1
-         },
-         {
-            "iso":"BEL",
-            "value":15.5
-         },
-         {
-            "iso":"BGR",
-            "value":21.8
-         },
-         {
-            "iso":"HRV",
-            "value":19.4
-         },
-         {
-            "iso":"CYP",
-            "value":14.4
-         },
-         {
-            "iso":"CZE",
-            "value":9.7
-         },
-         {
-            "iso":"DNK",
-            "value":12.1
-         },
-         {
-            "iso":"EST",
-            "value":21.8
-         },
-         {
-            "iso":"FIN",
-            "value":12.8
-         },
-         {
-            "iso":"MKD",
-            "value":22.1
-         },
-         {
-            "iso":"FRA",
-            "value":13.3
-         },
-         {
-            "iso":"DEU",
-            "value":16.7
-         },
-         {
-            "iso":"GRC",
-            "value":22.1
-         },
-         {
-            "iso":"HUN",
-            "value":15
-         },
-         {
-            "iso":"ISL",
-            "value":7.9
-         },
-         {
-            "iso":"IRL",
-            "value":15.6
-         },
-         {
-            "iso":"ITA",
-            "value":19.4
-         },
-         {
-            "iso":"LVA",
-            "value":21.2
-         },
-         {
-            "iso":"LTU",
-            "value":19.1
-         },
-         {
-            "iso":"LUX",
-            "value":16.4
-         },
-         {
-            "iso":"MLT",
-            "value":15.9
-         },
-         {
-            "iso":"NLD",
-            "value":11.6
-         },
-         {
-            "iso":"NOR",
-            "value":10.9
-         },
-         {
-            "iso":"POL",
-            "value":17
-         },
-         {
-            "iso":"PRT",
-            "value":19.5
-         },
-         {
-            "iso":"ROU",
-            "value":25.4
-         },
-         {
-            "iso":"SRB",
-            "value":25.4
-         },
-         {
-            "iso":"SVK",
-            "value":12.6
-         },
-         {
-            "iso":"SVN",
-            "value":14.5
-         },
-         {
-            "iso":"ESP",
-            "value":22.2
-         },
-         {
-            "iso":"SWE",
-            "value":15.1
-         },
-         {
-            "iso":"CHE",
-            "value":13.8
-         },
-         {
-            "iso":"GBR",
-            "value":16.8
+         { "iso":"AUT", "value":14.1 },
+         { "iso":"BEL", "value":15.5 },
+         { "iso":"BGR", "value":21.8 },
+         { "iso":"HRV", "value":19.4 },
+         { "iso":"CYP", "value":14.4 },
+         { "iso":"CZE", "value":9.7 },
+         { "iso":"DNK", "value":12.1 },
+         { "iso":"EST", "value":21.8 },
+         { "iso":"FIN", "value":12.8 },
+         { "iso":"MKD", "value":22.1 },
+         { "iso":"FRA", "value":13.3 },
+         { "iso":"DEU", "value":16.7 },
+         { "iso":"GRC", "value":22.1 },
+         { "iso":"HUN", "value":15 },
+         { "iso":"ISL", "value":7.9 },
+         { "iso":"IRL", "value":15.6 },
+         { "iso":"ITA", "value":19.4 },
+         { "iso":"LVA", "value":21.2 },
+         { "iso":"LTU", "value":19.1 },
+         { "iso":"LUX", "value":16.4 },
+         { "iso":"MLT", "value":15.9 },
+         { "iso":"NLD", "value":11.6 },
+         { "iso":"NOR", "value":10.9 },
+         { "iso":"POL", "value":17 },
+         { "iso":"PRT", "value":19.5 },
+         { "iso":"ROU", "value":25.4 },
+         { "iso":"SRB", "value":25.4 },
+         { "iso":"SVK", "value":12.6 },
+         { "iso":"SVN", "value":14.5 },
+         { "iso":"ESP", "value":22.2 },
+         { "iso":"SWE", "value":15.1 },
+         { "iso":"CHE", "value":13.8 },
+         { "iso":"GBR", "value":16.8
          }
       ]
    },
@@ -627,137 +233,39 @@
       "colorSet":"Greens",
       "colorNum":9,
       "data":[
-         {
-            "iso":"BEL",
-            "value":3.8
-         },
-         {
-            "iso":"BGR",
-            "value":6.8
-         },
-         {
-            "iso":"DNK",
-            "value":4.1
-         },
-         {
-            "iso":"DEU",
-            "value":5.1
-         },
-         {
-            "iso":"MKD",
-            "value":7.2
-         },
-         {
-            "iso":"EST",
-            "value":6.5
-         },
-         {
-            "iso":"FIN",
-            "value":3.6
-         },
-         {
-            "iso":"FRA",
-            "value":4.3
-         },
-         {
-            "iso":"GRC",
-            "value":6.5
-         },
-         {
-            "iso":"IRL",
-            "value":4.8
-         },
-         {
-            "iso":"ISL",
-            "value":3.1
-         },
-         {
-            "iso":"ITA",
-            "value":5.8
-         },
-         {
-            "iso":"HRV",
-            "value":5.1
-         },
-         {
-            "iso":"LVA",
-            "value":6.5
-         },
-         {
-            "iso":"LTU",
-            "value":6.1
-         },
-         {
-            "iso":"LUX",
-            "value":4.4
-         },
-         {
-            "iso":"MLT",
-            "value":4
-         },
-         {
-            "iso":"NLD",
-            "value":3.8
-         },
-         {
-            "iso":"NOR",
-            "value":3.4
-         },
-         {
-            "iso":"AUT",
-            "value":4.1
-         },
-         {
-            "iso":"POL",
-            "value":4.9
-         },
-         {
-            "iso":"PRT",
-            "value":6.2
-         },
-         {
-            "iso":"ROU",
-            "value":7.2
-         },
-         {
-            "iso":"SWE",
-            "value":3.9
-         },
-         {
-            "iso":"CHE",
-            "value":4.4
-         },
-         {
-            "iso":"SRB",
-            "value":9.8
-         },
-         {
-            "iso":"SVK",
-            "value":3.9
-         },
-         {
-            "iso":"SVN",
-            "value":3.7
-         },
-         {
-            "iso":"ESP",
-            "value":6.8
-         },
-         {
-            "iso":"CZE",
-            "value":3.5
-         },
-         {
-            "iso":"HUN",
-            "value":4.3
-         },
-         {
-            "iso":"GBR",
-            "value":5.1
-         },
-         {
-            "iso":"CYP",
-            "value":5.4
+         { "iso":"BEL", "value":3.8 },
+         { "iso":"BGR", "value":6.8 },
+         { "iso":"DNK", "value":4.1 },
+         { "iso":"DEU", "value":5.1 },
+         { "iso":"MKD", "value":7.2 },
+         { "iso":"EST", "value":6.5 },
+         { "iso":"FIN", "value":3.6 },
+         { "iso":"FRA", "value":4.3 },
+         { "iso":"GRC", "value":6.5 },
+         { "iso":"IRL", "value":4.8 },
+         { "iso":"ISL", "value":3.1 },
+         { "iso":"ITA", "value":5.8 },
+         { "iso":"HRV", "value":5.1 },
+         { "iso":"LVA", "value":6.5 },
+         { "iso":"LTU", "value":6.1 },
+         { "iso":"LUX", "value":4.4 },
+         { "iso":"MLT", "value":4 },
+         { "iso":"NLD", "value":3.8 },
+         { "iso":"NOR", "value":3.4 },
+         { "iso":"AUT", "value":4.1 },
+         { "iso":"POL", "value":4.9 },
+         { "iso":"PRT", "value":6.2 },
+         { "iso":"ROU", "value":7.2 },
+         { "iso":"SWE", "value":3.9 },
+         { "iso":"CHE", "value":4.4 },
+         { "iso":"SRB", "value":9.8 },
+         { "iso":"SVK", "value":3.9 },
+         { "iso":"SVN", "value":3.7 },
+         { "iso":"ESP", "value":6.8 },
+         { "iso":"CZE", "value":3.5 },
+         { "iso":"HUN", "value":4.3 },
+         { "iso":"GBR", "value":5.1 },
+         { "iso":"CYP", "value":5.4
          }
       ]
    },
@@ -793,309 +301,82 @@
       "colorSet":"Greens",
       "colorNum":9,
       "data":[
-         {
-            "iso":"ALB",
-            "value":0.5
-         },
-         {
-            "iso":"MDG",
-            "value":87.7
-         },
-         {
-            "iso":"LBR",
-            "value":83.8
-         },
-         {
-            "iso":"ZMB",
-            "value":74.3
-         },
-         {
-            "iso":"MWI",
-            "value":72.2
-         },
-         {
-            "iso":"RWA",
-            "value":63
-         },
-         {
-            "iso":"CAF",
-            "value":62.8
-         },
-         {
-            "iso":"NGA",
-            "value":62
-         },
-         {
-            "iso":"MOZ",
-            "value":60.7
-         },
-         {
-            "iso":"SLE",
-            "value":56.6
-         },
-         {
-            "iso":"LSO",
-            "value":56.2
-         },
-         {
-            "iso":"TGO",
-            "value":52.5
-         },
-         {
-            "iso":"BEN",
-            "value":51.6
-         },
-         {
-            "iso":"MLI",
-            "value":50.6
-         },
-         {
-            "iso":"BFA",
-            "value":44.5
-         },
-         {
-            "iso":"STP",
-            "value":43.5
-         },
-         {
-            "iso":"TZA",
-            "value":43.5
-         },
-         {
-            "iso":"AGO",
-            "value":43.4
-         },
-         {
-            "iso":"BGD",
-            "value":43.3
-         },
-         {
-            "iso":"GIN",
-            "value":40.9
-         },
-         {
-            "iso":"NER",
-            "value":40.8
-         },
-         {
-            "iso":"SWZ",
-            "value":39.3
-         },
-         {
-            "iso":"UGA",
-            "value":37.8
-         },
-         {
-            "iso":"ETH",
-            "value":36.8
-         },
-         {
-            "iso":"TCD",
-            "value":36.5
-         },
-         {
-            "iso":"CIV",
-            "value":35
-         },
-         {
-            "iso":"TLS",
-            "value":34.9
-         },
-         {
-            "iso":"SEN",
-            "value":34.1
-         },
-         {
-            "iso":"COG",
-            "value":32.8
-         },
-         {
-            "iso":"LAO",
-            "value":30.3
-         },
-         {
-            "iso":"CMR",
-            "value":27.6
-         },
-         {
-            "iso":"NPL",
-            "value":23.7
-         },
-         {
-            "iso":"IND",
-            "value":23.6
-         },
-         {
-            "iso":"NAM",
-            "value":23.5
-         },
-         {
-            "iso":"MRT",
-            "value":23.4
-         },
-         {
-            "iso":"SDN",
-            "value":19.8
-         },
-         {
-            "iso":"PHL",
-            "value":19
-         },
-         {
-            "iso":"HND",
-            "value":16.5
-         },
-         {
-            "iso":"IDN",
-            "value":16.2
-         },
-         {
-            "iso":"GEO",
-            "value":14.1
-         },
-         {
-            "iso":"CPV",
-            "value":13.7
-         },
-         {
-            "iso":"GTM",
-            "value":13.7
-         },
-         {
-            "iso":"BWA",
-            "value":13.4
-         },
-         {
-            "iso":"PAK",
-            "value":12.7
-         },
-         {
-            "iso":"KHM",
-            "value":10.1
-         },
-         {
-            "iso":"ZAF",
-            "value":9.4
-         },
-         {
-            "iso":"NIC",
-            "value":8.5
-         },
-         {
-            "iso":"BOL",
-            "value":8
-         },
-         {
-            "iso":"TJK",
-            "value":6.5
-         },
-         {
-            "iso":"CHN",
-            "value":6.3
-         },
-         {
-            "iso":"FJI",
-            "value":5.9
-         },
-         {
-            "iso":"COL",
-            "value":5.6
-         },
-         {
-            "iso":"KGZ",
-            "value":5.1
-         },
-         {
-            "iso":"LKA",
-            "value":4.1
-         },
-         {
-            "iso":"PAN",
-            "value":4
-         },
-         {
-            "iso":"ECU",
-            "value":4
-         },
-         {
-            "iso":"IRQ",
-            "value":3.9
-         },
-         {
-            "iso":"BRA",
-            "value":3.8
-         },
-         {
-            "iso":"PRY",
-            "value":3
-         },
-         {
-            "iso":"PER",
-            "value":2.9
-         },
-         {
-            "iso":"MAR",
-            "value":2.6
-         },
-         {
-            "iso":"SLV",
-            "value":2.5
-         },
-         {
-            "iso":"VNM",
-            "value":2.4
-         },
-         {
-            "iso":"BTN",
-            "value":2.4
-         },
-         {
-            "iso":"DOM",
-            "value":2.3
-         },
-         {
-            "iso":"BGR",
-            "value":1.9
-         },
-         {
-            "iso":"ARM",
-            "value":1.8
-         },
-         {
-            "iso":"EGY",
-            "value":1.7
-         },
-         {
-            "iso":"ARG",
-            "value":1.4
-         },
-         {
-            "iso":"CRI",
-            "value":1.4
-         },
-         {
-            "iso":"LVA",
-            "value":1.1
-         },
-         {
-            "iso":"MEX",
-            "value":1
-         },
-         {
-            "iso":"EST",
-            "value":1
-         },
-         {
-            "iso":"CHL",
-            "value":0.8
-         },
-         {
-            "iso":"LTU",
-            "value":0.8
-         },
-         {
-            "iso":"TUN",
-            "value":0.7
+         { "iso":"ALB", "value":0.5 },
+         { "iso":"MDG", "value":87.7 },
+         { "iso":"LBR", "value":83.8 },
+         { "iso":"ZMB", "value":74.3 },
+         { "iso":"MWI", "value":72.2 },
+         { "iso":"RWA", "value":63 },
+         { "iso":"CAF", "value":62.8 },
+         { "iso":"NGA", "value":62 },
+         { "iso":"MOZ", "value":60.7 },
+         { "iso":"SLE", "value":56.6 },
+         { "iso":"LSO", "value":56.2 },
+         { "iso":"TGO", "value":52.5 },
+         { "iso":"BEN", "value":51.6 },
+         { "iso":"MLI", "value":50.6 },
+         { "iso":"BFA", "value":44.5 },
+         { "iso":"STP", "value":43.5 },
+         { "iso":"TZA", "value":43.5 },
+         { "iso":"AGO", "value":43.4 },
+         { "iso":"BGD", "value":43.3 },
+         { "iso":"GIN", "value":40.9 },
+         { "iso":"NER", "value":40.8 },
+         { "iso":"SWZ", "value":39.3 },
+         { "iso":"UGA", "value":37.8 },
+         { "iso":"ETH", "value":36.8 },
+         { "iso":"TCD", "value":36.5 },
+         { "iso":"CIV", "value":35 },
+         { "iso":"TLS", "value":34.9 },
+         { "iso":"SEN", "value":34.1 },
+         { "iso":"COG", "value":32.8 },
+         { "iso":"LAO", "value":30.3 },
+         { "iso":"CMR", "value":27.6 },
+         { "iso":"NPL", "value":23.7 },
+         { "iso":"IND", "value":23.6 },
+         { "iso":"NAM", "value":23.5 },
+         { "iso":"MRT", "value":23.4 },
+         { "iso":"SDN", "value":19.8 },
+         { "iso":"PHL", "value":19 },
+         { "iso":"HND", "value":16.5 },
+         { "iso":"IDN", "value":16.2 },
+         { "iso":"GEO", "value":14.1 },
+         { "iso":"CPV", "value":13.7 },
+         { "iso":"GTM", "value":13.7 },
+         { "iso":"BWA", "value":13.4 },
+         { "iso":"PAK", "value":12.7 },
+         { "iso":"KHM", "value":10.1 },
+         { "iso":"ZAF", "value":9.4 },
+         { "iso":"NIC", "value":8.5 },
+         { "iso":"BOL", "value":8 },
+         { "iso":"TJK", "value":6.5 },
+         { "iso":"CHN", "value":6.3 },
+         { "iso":"FJI", "value":5.9 },
+         { "iso":"COL", "value":5.6 },
+         { "iso":"KGZ", "value":5.1 },
+         { "iso":"LKA", "value":4.1 },
+         { "iso":"PAN", "value":4 },
+         { "iso":"ECU", "value":4 },
+         { "iso":"IRQ", "value":3.9 },
+         { "iso":"BRA", "value":3.8 },
+         { "iso":"PRY", "value":3 },
+         { "iso":"PER", "value":2.9 },
+         { "iso":"MAR", "value":2.6 },
+         { "iso":"SLV", "value":2.5 },
+         { "iso":"VNM", "value":2.4 },
+         { "iso":"BTN", "value":2.4 },
+         { "iso":"DOM", "value":2.3 },
+         { "iso":"BGR", "value":1.9 },
+         { "iso":"ARM", "value":1.8 },
+         { "iso":"EGY", "value":1.7 },
+         { "iso":"ARG", "value":1.4 },
+         { "iso":"CRI", "value":1.4 },
+         { "iso":"LVA", "value":1.1 },
+         { "iso":"MEX", "value":1 },
+         { "iso":"EST", "value":1 },
+         { "iso":"CHL", "value":0.8 },
+         { "iso":"LTU", "value":0.8 },
+         { "iso":"TUN", "value":0.7
          }
       ]
    },
@@ -1131,561 +412,145 @@
       "colorSet":"Greens",
       "colorNum":9,
       "data":[
-         {
-            "iso":"DZA",
-            "value":10413
-         },
-         {
-            "iso":"MAR",
-            "value":3268
-         },
-         {
-            "iso":"TUN",
-            "value":980
-         },
-         {
-            "iso":"AGO",
-            "value":3601
-         },
-         {
-            "iso":"BEN",
-            "value":90.9
-         },
-         {
-            "iso":"BWA",
-            "value":402
-         },
-         {
-            "iso":"BDI",
-            "value":66.4
-         },
-         {
-            "iso":"CMR",
-            "value":354
-         },
-         {
-            "iso":"CPV",
-            "value":8.9
-         },
-         {
-            "iso":"TCD",
-            "value":221
-         },
-         {
-            "iso":"COD",
-            "value":491
-         },
-         {
-            "iso":"CIV",
-            "value":465
-         },
-         {
-            "iso":"ETH",
-            "value":423
-         },
-         {
-            "iso":"GAB",
-            "value":170
-         },
-         {
-            "iso":"GMB",
-            "value":12.5
-         },
-         {
-            "iso":"GHA",
-            "value":180
-         },
-         {
-            "iso":"GNB",
-            "value":18.6
-         },
-         {
-            "iso":"KEN",
-            "value":954
-         },
-         {
-            "iso":"LSO",
-            "value":43.1
-         },
-         {
-            "iso":"LBR",
-            "value":13.5
-         },
-         {
-            "iso":"MDG",
-            "value":61
-         },
-         {
-            "iso":"MWI",
-            "value":41.9
-         },
-         {
-            "iso":"MLI",
-            "value":309
-         },
-         {
-            "iso":"MRT",
-            "value":135
-         },
-         {
-            "iso":"MOZ",
-            "value":148
-         },
-         {
-            "iso":"NAM",
-            "value":554
-         },
-         {
-            "iso":"NGA",
-            "value":2071
-         },
-         {
-            "iso":"RWA",
-            "value":92.9
-         },
-         {
-            "iso":"SEN",
-            "value":215
-         },
-         {
-            "iso":"SYC",
-            "value":18.2
-         },
-         {
-            "iso":"SLE",
-            "value":42.2
-         },
-         {
-            "iso":"ZAF",
-            "value":3460
-         },
-         {
-            "iso":"SSD",
-            "value":1366
-         },
-         {
-            "iso":"SWZ",
-            "value":73.5
-         },
-         {
-            "iso":"TZA",
-            "value":517
-         },
-         {
-            "iso":"TGO",
-            "value":70
-         },
-         {
-            "iso":"UGA",
-            "value":288
-         },
-         {
-            "iso":"ZMB",
-            "value":372
-         },
-         {
-            "iso":"ZWE",
-            "value":377
-         },
-         {
-            "iso":"BLZ",
-            "value":19.6
-         },
-         {
-            "iso":"DOM",
-            "value":443
-         },
-         {
-            "iso":"SLV",
-            "value":223
-         },
-         {
-            "iso":"GTM",
-            "value":274
-         },
-         {
-            "iso":"HND",
-            "value":324
-         },
-         {
-            "iso":"JAM",
-            "value":118
-         },
-         {
-            "iso":"MEX",
-            "value":7738
-         },
-         {
-            "iso":"NIC",
-            "value":71.6
-         },
-         {
-            "iso":"TTO",
-            "value":255
-         },
-         {
-            "iso":"CAN",
-            "value":15031
-         },
-         {
-            "iso":"USA",
-            "value":596024
-         },
-         {
-            "iso":"ARG",
-            "value":5475
-         },
-         {
-            "iso":"BOL",
-            "value":535
-         },
-         {
-            "iso":"BRA",
-            "value":24584
-         },
-         {
-            "iso":"CHL",
-            "value":4615
-         },
-         {
-            "iso":"COL",
-            "value":9871
-         },
-         {
-            "iso":"ECU",
-            "value":2697
-         },
-         {
-            "iso":"GUY",
-            "value":45.2
-         },
-         {
-            "iso":"PRY",
-            "value":462
-         },
-         {
-            "iso":"PER",
-            "value":3040
-         },
-         {
-            "iso":"URY",
-            "value":963
-         },
-         {
-            "iso":"VEN",
-            "value":5265
-         },
-         {
-            "iso":"KAZ",
-            "value":1902
-         },
-         {
-            "iso":"KGZ",
-            "value":236
-         },
-         {
-            "iso":"CHN",
-            "value":214787
-         },
-         {
-            "iso":"JPN",
-            "value":40885
-         },
-         {
-            "iso":"KOR",
-            "value":36435
-         },
-         {
-            "iso":"MNG",
-            "value":102
-         },
-         {
-            "iso":"TWN",
-            "value":9803
-         },
-         {
-            "iso":"AFG",
-            "value":199
-         },
-         {
-            "iso":"BGD",
-            "value":2669
-         },
-         {
-            "iso":"IND",
-            "value":51257
-         },
-         {
-            "iso":"NPL",
-            "value":312
-         },
-         {
-            "iso":"PAK",
-            "value":9510
-         },
-         {
-            "iso":"LKA",
-            "value":1819
-         },
-         {
-            "iso":"BRN",
-            "value":424
-         },
-         {
-            "iso":"IDN",
-            "value":7641
-         },
-         {
-            "iso":"MYS",
-            "value":4549
-         },
-         {
-            "iso":"MMR",
-            "value":2193
-         },
-         {
-            "iso":"PHL",
-            "value":3870
-         },
-         {
-            "iso":"SGP",
-            "value":9417
-         },
-         {
-            "iso":"THA",
-            "value":5737
-         },
-         {
-            "iso":"TLS",
-            "value":37
-         },
-         {
-            "iso":"VNM",
-            "value":4571
-         },
-         {
-            "iso":"AUS",
-            "value":23588
-         },
-         {
-            "iso":"FJI",
-            "value":49.2
-         },
-         {
-            "iso":"NZL",
-            "value":2061
-         },
-         {
-            "iso":"PNG",
-            "value":100
-         },
-         {
-            "iso":"ALB",
-            "value":132
-         },
-         {
-            "iso":"BIH",
-            "value":162
-         },
-         {
-            "iso":"BGR",
-            "value":661
-         },
-         {
-            "iso":"HRV",
-            "value":755
-         },
-         {
-            "iso":"CZE",
-            "value":1778
-         },
-         {
-            "iso":"EST",
-            "value":457
-         },
-         {
-            "iso":"HUN",
-            "value":1023
-         },
-         {
-            "iso":"LVA",
-            "value":286
-         },
-         {
-            "iso":"LTU",
-            "value":471
-         },
-         {
-            "iso":"MKD",
-            "value":107
-         },
-         {
-            "iso":"MNE",
-            "value":64.9
-         },
-         {
-            "iso":"POL",
-            "value":10460
-         },
-         {
-            "iso":"ROU",
-            "value":2481
-         },
-         {
-            "iso":"SRB",
-            "value":724
-         },
-         {
-            "iso":"SVK",
-            "value":973
-         },
-         {
-            "iso":"SVN",
-            "value":407
-         },
-         {
-            "iso":"ARM",
-            "value":447
-         },
-         {
-            "iso":"AZE",
-            "value":3021
-         },
-         {
-            "iso":"BLR",
-            "value":724
-         },
-         {
-            "iso":"GEO",
-            "value":327
-         },
-         {
-            "iso":"MDA",
-            "value":23.1
-         },
-         {
-            "iso":"RUS",
-            "value":66421
-         },
-         {
-            "iso":"UKR",
-            "value":3622
-         },
-         {
-            "iso":"AUT",
-            "value":2537
-         },
-         {
-            "iso":"BEL",
-            "value":4168
-         },
-         {
-            "iso":"CYP",
-            "value":354
-         },
-         {
-            "iso":"DNK",
-            "value":3463
-         },
-         {
-            "iso":"FIN",
-            "value":2979
-         },
-         {
-            "iso":"FRA",
-            "value":50860
-         },
-         {
-            "iso":"DEU",
-            "value":39393
-         },
-         {
-            "iso":"GRC",
-            "value":5083
-         },
-         {
-            "iso":"IRL",
-            "value":995
-         },
-         {
-            "iso":"ITA",
-            "value":23840
-         },
-         {
-            "iso":"LUX",
-            "value":303
-         },
-         {
-            "iso":"MLT",
-            "value":55.9
-         },
-         {
-            "iso":"NLD",
-            "value":8873
-         },
-         {
-            "iso":"NOR",
-            "value":5898
-         },
-         {
-            "iso":"PRT",
-            "value":3684
-         },
-         {
-            "iso":"ESP",
-            "value":14104
-         },
-         {
-            "iso":"SWE",
-            "value":5377
-         },
-         {
-            "iso":"CHE",
-            "value":4770
-         },
-         {
-            "iso":"GBR",
-            "value":55460
-         },
-         {
-            "iso":"BHR",
-            "value":1430
-         },
-         {
-            "iso":"EGY",
-            "value":5477
-         },
-         {
-            "iso":"IRN",
-            "value":10265
-         },
-         {
-            "iso":"IRQ",
-            "value":13121
-         },
-         {
-            "iso":"ISR",
-            "value":16101
-         },
-         {
-            "iso":"JOR",
-            "value":1616
-         },
-         {
-            "iso":"LBN",
-            "value":2239
-         },
-         {
-            "iso":"OMN",
-            "value":9883
-         },
-         {
-            "iso":"SAU",
-            "value":87186
-         },
-         {
-            "iso":"TUR",
-            "value":15275
+         { "iso":"DZA", "value":10413 },
+         { "iso":"MAR", "value":3268 },
+         { "iso":"TUN", "value":980 },
+         { "iso":"AGO", "value":3601 },
+         { "iso":"BEN", "value":90.9 },
+         { "iso":"BWA", "value":402 },
+         { "iso":"BDI", "value":66.4 },
+         { "iso":"CMR", "value":354 },
+         { "iso":"CPV", "value":8.9 },
+         { "iso":"TCD", "value":221 },
+         { "iso":"COD", "value":491 },
+         { "iso":"CIV", "value":465 },
+         { "iso":"ETH", "value":423 },
+         { "iso":"GAB", "value":170 },
+         { "iso":"GMB", "value":12.5 },
+         { "iso":"GHA", "value":180 },
+         { "iso":"GNB", "value":18.6 },
+         { "iso":"KEN", "value":954 },
+         { "iso":"LSO", "value":43.1 },
+         { "iso":"LBR", "value":13.5 },
+         { "iso":"MDG", "value":61 },
+         { "iso":"MWI", "value":41.9 },
+         { "iso":"MLI", "value":309 },
+         { "iso":"MRT", "value":135 },
+         { "iso":"MOZ", "value":148 },
+         { "iso":"NAM", "value":554 },
+         { "iso":"NGA", "value":2071 },
+         { "iso":"RWA", "value":92.9 },
+         { "iso":"SEN", "value":215 },
+         { "iso":"SYC", "value":18.2 },
+         { "iso":"SLE", "value":42.2 },
+         { "iso":"ZAF", "value":3460 },
+         { "iso":"SSD", "value":1366 },
+         { "iso":"SWZ", "value":73.5 },
+         { "iso":"TZA", "value":517 },
+         { "iso":"TGO", "value":70 },
+         { "iso":"UGA", "value":288 },
+         { "iso":"ZMB", "value":372 },
+         { "iso":"ZWE", "value":377 },
+         { "iso":"BLZ", "value":19.6 },
+         { "iso":"DOM", "value":443 },
+         { "iso":"SLV", "value":223 },
+         { "iso":"GTM", "value":274 },
+         { "iso":"HND", "value":324 },
+         { "iso":"JAM", "value":118 },
+         { "iso":"MEX", "value":7738 },
+         { "iso":"NIC", "value":71.6 },
+         { "iso":"TTO", "value":255 },
+         { "iso":"CAN", "value":15031 },
+         { "iso":"USA", "value":596024 },
+         { "iso":"ARG", "value":5475 },
+         { "iso":"BOL", "value":535 },
+         { "iso":"BRA", "value":24584 },
+         { "iso":"CHL", "value":4615 },
+         { "iso":"COL", "value":9871 },
+         { "iso":"ECU", "value":2697 },
+         { "iso":"GUY", "value":45.2 },
+         { "iso":"PRY", "value":462 },
+         { "iso":"PER", "value":3040 },
+         { "iso":"URY", "value":963 },
+         { "iso":"VEN", "value":5265 },
+         { "iso":"KAZ", "value":1902 },
+         { "iso":"KGZ", "value":236 },
+         { "iso":"CHN", "value":214787 },
+         { "iso":"JPN", "value":40885 },
+         { "iso":"KOR", "value":36435 },
+         { "iso":"MNG", "value":102 },
+         { "iso":"TWN", "value":9803 },
+         { "iso":"AFG", "value":199 },
+         { "iso":"BGD", "value":2669 },
+         { "iso":"IND", "value":51257 },
+         { "iso":"NPL", "value":312 },
+         { "iso":"PAK", "value":9510 },
+         { "iso":"LKA", "value":1819 },
+         { "iso":"BRN", "value":424 },
+         { "iso":"IDN", "value":7641 },
+         { "iso":"MYS", "value":4549 },
+         { "iso":"MMR", "value":2193 },
+         { "iso":"PHL", "value":3870 },
+         { "iso":"SGP", "value":9417 },
+         { "iso":"THA", "value":5737 },
+         { "iso":"TLS", "value":37 },
+         { "iso":"VNM", "value":4571 },
+         { "iso":"AUS", "value":23588 },
+         { "iso":"FJI", "value":49.2 },
+         { "iso":"NZL", "value":2061 },
+         { "iso":"PNG", "value":100 },
+         { "iso":"ALB", "value":132 },
+         { "iso":"BIH", "value":162 },
+         { "iso":"BGR", "value":661 },
+         { "iso":"HRV", "value":755 },
+         { "iso":"CZE", "value":1778 },
+         { "iso":"EST", "value":457 },
+         { "iso":"HUN", "value":1023 },
+         { "iso":"LVA", "value":286 },
+         { "iso":"LTU", "value":471 },
+         { "iso":"MKD", "value":107 },
+         { "iso":"MNE", "value":64.9 },
+         { "iso":"POL", "value":10460 },
+         { "iso":"ROU", "value":2481 },
+         { "iso":"SRB", "value":724 },
+         { "iso":"SVK", "value":973 },
+         { "iso":"SVN", "value":407 },
+         { "iso":"ARM", "value":447 },
+         { "iso":"AZE", "value":3021 },
+         { "iso":"BLR", "value":724 },
+         { "iso":"GEO", "value":327 },
+         { "iso":"MDA", "value":23.1 },
+         { "iso":"RUS", "value":66421 },
+         { "iso":"UKR", "value":3622 },
+         { "iso":"AUT", "value":2537 },
+         { "iso":"BEL", "value":4168 },
+         { "iso":"CYP", "value":354 },
+         { "iso":"DNK", "value":3463 },
+         { "iso":"FIN", "value":2979 },
+         { "iso":"FRA", "value":50860 },
+         { "iso":"DEU", "value":39393 },
+         { "iso":"GRC", "value":5083 },
+         { "iso":"IRL", "value":995 },
+         { "iso":"ITA", "value":23840 },
+         { "iso":"LUX", "value":303 },
+         { "iso":"MLT", "value":55.9 },
+         { "iso":"NLD", "value":8873 },
+         { "iso":"NOR", "value":5898 },
+         { "iso":"PRT", "value":3684 },
+         { "iso":"ESP", "value":14104 },
+         { "iso":"SWE", "value":5377 },
+         { "iso":"CHE", "value":4770 },
+         { "iso":"GBR", "value":55460 },
+         { "iso":"BHR", "value":1430 },
+         { "iso":"EGY", "value":5477 },
+         { "iso":"IRN", "value":10265 },
+         { "iso":"IRQ", "value":13121 },
+         { "iso":"ISR", "value":16101 },
+         { "iso":"JOR", "value":1616 },
+         { "iso":"LBN", "value":2239 },
+         { "iso":"OMN", "value":9883 },
+         { "iso":"SAU", "value":87186 },
+         { "iso":"TUR", "value":15275
          }
       ]
    },
@@ -1721,789 +586,202 @@
       "colorSet":"Greens",
       "colorNum":9,
       "data":[
-         {
-            "iso":"AFG",
-            "value":97.3
-         },
-         {
-            "iso":"ALB",
-            "value":14.9
-         },
-         {
-            "iso":"DZA",
-            "value":25.2
-         },
-         {
-            "iso":"AND",
-            "value":3
-         },
-         {
-            "iso":"AGO",
-            "value":167.4
-         },
-         {
-            "iso":"ATG",
-            "value":9.3
-         },
-         {
-            "iso":"ARG",
-            "value":13.3
-         },
-         {
-            "iso":"ARM",
-            "value":15.6
-         },
-         {
-            "iso":"AUS",
-            "value":4
-         },
-         {
-            "iso":"AUT",
-            "value":3.9
-         },
-         {
-            "iso":"AZE",
-            "value":34.2
-         },
-         {
-            "iso":"BHS",
-            "value":12.9
-         },
-         {
-            "iso":"BHR",
-            "value":6.1
-         },
-         {
-            "iso":"BGD",
-            "value":41.1
-         },
-         {
-            "iso":"BRB",
-            "value":14.4
-         },
-         {
-            "iso":"BLR",
-            "value":4.9
-         },
-         {
-            "iso":"BEL",
-            "value":4.4
-         },
-         {
-            "iso":"BLZ",
-            "value":16.7
-         },
-         {
-            "iso":"BEN",
-            "value":85.3
-         },
-         {
-            "iso":"BTN",
-            "value":36.2
-         },
-         {
-            "iso":"BOL",
-            "value":39.1
-         },
-         {
-            "iso":"BIH",
-            "value":6.6
-         },
-         {
-            "iso":"BWA",
-            "value":46.6
-         },
-         {
-            "iso":"BRA",
-            "value":13.7
-         },
-         {
-            "iso":"BRN",
-            "value":9.9
-         },
-         {
-            "iso":"BGR",
-            "value":11.6
-         },
-         {
-            "iso":"BFA",
-            "value":97.6
-         },
-         {
-            "iso":"BDI",
-            "value":82.9
-         },
-         {
-            "iso":"KHM",
-            "value":37.9
-         },
-         {
-            "iso":"CMR",
-            "value":94.5
-         },
-         {
-            "iso":"CAN",
-            "value":5.2
-         },
-         {
-            "iso":"CPV",
-            "value":26
-         },
-         {
-            "iso":"CAF",
-            "value":139.2
-         },
-         {
-            "iso":"TCD",
-            "value":147.5
-         },
-         {
-            "iso":"CHL",
-            "value":8.2
-         },
-         {
-            "iso":"CHN",
-            "value":12.7
-         },
-         {
-            "iso":"COL",
-            "value":16.9
-         },
-         {
-            "iso":"COM",
-            "value":77.9
-         },
-         {
-            "iso":"COG",
-            "value":49.1
-         },
-         {
-            "iso":"COK",
-            "value":8.8
-         },
-         {
-            "iso":"CRI",
-            "value":9.6
-         },
-         {
-            "iso":"CIV",
-            "value":100
-         },
-         {
-            "iso":"HRV",
-            "value":4.5
-         },
-         {
-            "iso":"CUB",
-            "value":6.2
-         },
-         {
-            "iso":"CYP",
-            "value":3.6
-         },
-         {
-            "iso":"CZE",
-            "value":3.6
-         },
-         {
-            "iso":"COD",
-            "value":118.5
-         },
-         {
-            "iso":"DNK",
-            "value":3.5
-         },
-         {
-            "iso":"DJI",
-            "value":69.6
-         },
-         {
-            "iso":"DMA",
-            "value":11.4
-         },
-         {
-            "iso":"DOM",
-            "value":28.1
-         },
-         {
-            "iso":"ECU",
-            "value":22.5
-         },
-         {
-            "iso":"EGY",
-            "value":21.8
-         },
-         {
-            "iso":"SLV",
-            "value":15.7
-         },
-         {
-            "iso":"GNQ",
-            "value":95.8
-         },
-         {
-            "iso":"ERI",
-            "value":49.9
-         },
-         {
-            "iso":"EST",
-            "value":3.4
-         },
-         {
-            "iso":"ETH",
-            "value":64.4
-         },
-         {
-            "iso":"FJI",
-            "value":23.6
-         },
-         {
-            "iso":"FIN",
-            "value":2.6
-         },
-         {
-            "iso":"FRA",
-            "value":4.2
-         },
-         {
-            "iso":"GAB",
-            "value":56.1
-         },
-         {
-            "iso":"GMB",
-            "value":73.8
-         },
-         {
-            "iso":"GEO",
-            "value":13.1
-         },
-         {
-            "iso":"DEU",
-            "value":3.9
-         },
-         {
-            "iso":"GHA",
-            "value":78.4
-         },
-         {
-            "iso":"GRC",
-            "value":4.4
-         },
-         {
-            "iso":"GRD",
-            "value":11.8
-         },
-         {
-            "iso":"GTM",
-            "value":31
-         },
-         {
-            "iso":"GIN",
-            "value":100.7
-         },
-         {
-            "iso":"GNB",
-            "value":123.9
-         },
-         {
-            "iso":"GUY",
-            "value":36.6
-         },
-         {
-            "iso":"HTI",
-            "value":72.8
-         },
-         {
-            "iso":"HND",
-            "value":22.2
-         },
-         {
-            "iso":"HUN",
-            "value":6.1
-         },
-         {
-            "iso":"ISL",
-            "value":2.1
-         },
-         {
-            "iso":"IND",
-            "value":52.7
-         },
-         {
-            "iso":"IDN",
-            "value":29.3
-         },
-         {
-            "iso":"IRN",
-            "value":16.8
-         },
-         {
-            "iso":"IRQ",
-            "value":34
-         },
-         {
-            "iso":"IRL",
-            "value":3.8
-         },
-         {
-            "iso":"ISR",
-            "value":4
-         },
-         {
-            "iso":"ITA",
-            "value":3.6
-         },
-         {
-            "iso":"JAM",
-            "value":16.6
-         },
-         {
-            "iso":"JPN",
-            "value":2.9
-         },
-         {
-            "iso":"JOR",
-            "value":18.7
-         },
-         {
-            "iso":"KAZ",
-            "value":16.3
-         },
-         {
-            "iso":"KEN",
-            "value":70.7
-         },
-         {
-            "iso":"KIR",
-            "value":58.2
-         },
-         {
-            "iso":"PRK",
-            "value":27.4
-         },
-         {
-            "iso":"KOR",
-            "value":3.7
-         },
-         {
-            "iso":"KWT",
-            "value":9.5
-         },
-         {
-            "iso":"KGZ",
-            "value":24.2
-         },
-         {
-            "iso":"LAO",
-            "value":71.4
-         },
-         {
-            "iso":"LVA",
-            "value":8.4
-         },
-         {
-            "iso":"LBN",
-            "value":9.1
-         },
-         {
-            "iso":"LSO",
-            "value":98
-         },
-         {
-            "iso":"LBR",
-            "value":71.1
-         },
-         {
-            "iso":"LBY",
-            "value":14.5
-         },
-         {
-            "iso":"LIE",
-            "value":0
-         },
-         {
-            "iso":"LTU",
-            "value":4.9
-         },
-         {
-            "iso":"LUX",
-            "value":2
-         },
-         {
-            "iso":"MDG",
-            "value":56
-         },
-         {
-            "iso":"MWI",
-            "value":67.9
-         },
-         {
-            "iso":"MYS",
-            "value":8.5
-         },
-         {
-            "iso":"MDV",
-            "value":9.9
-         },
-         {
-            "iso":"MLI",
-            "value":122.7
-         },
-         {
-            "iso":"MLT",
-            "value":6.1
-         },
-         {
-            "iso":"MHL",
-            "value":37.5
-         },
-         {
-            "iso":"MRT",
-            "value":90.1
-         },
-         {
-            "iso":"MUS",
-            "value":14.3
-         },
-         {
-            "iso":"MEX",
-            "value":14.5
-         },
-         {
-            "iso":"FSM",
-            "value":36.4
-         },
-         {
-            "iso":"MCO",
-            "value":3.7
-         },
-         {
-            "iso":"MNG",
-            "value":31.8
-         },
-         {
-            "iso":"MNE",
-            "value":5.3
-         },
-         {
-            "iso":"MAR",
-            "value":30.4
-         },
-         {
-            "iso":"MOZ",
-            "value":87.2
-         },
-         {
-            "iso":"MMR",
-            "value":50.5
-         },
-         {
-            "iso":"NAM",
-            "value":49.8
-         },
-         {
-            "iso":"NRU",
-            "value":36.6
-         },
-         {
-            "iso":"NPL",
-            "value":39.7
-         },
-         {
-            "iso":"NLD",
-            "value":4
-         },
-         {
-            "iso":"NZL",
-            "value":6.3
-         },
-         {
-            "iso":"NIC",
-            "value":23.5
-         },
-         {
-            "iso":"NER",
-            "value":104.2
-         },
-         {
-            "iso":"NGA",
-            "value":117.4
-         },
-         {
-            "iso":"NIU",
-            "value":24.5
-         },
-         {
-            "iso":"NOR",
-            "value":2.8
-         },
-         {
-            "iso":"OMN",
-            "value":11.4
-         },
-         {
-            "iso":"PAK",
-            "value":85.5
-         },
-         {
-            "iso":"PLW",
-            "value":17.5
-         },
-         {
-            "iso":"PAN",
-            "value":17.9
-         },
-         {
-            "iso":"PNG",
-            "value":61.4
-         },
-         {
-            "iso":"PRY",
-            "value":21.9
-         },
-         {
-            "iso":"PER",
-            "value":16.7
-         },
-         {
-            "iso":"PHL",
-            "value":29.9
-         },
-         {
-            "iso":"POL",
-            "value":5.2
-         },
-         {
-            "iso":"PRT",
-            "value":3.8
-         },
-         {
-            "iso":"QAT",
-            "value":8.2
-         },
-         {
-            "iso":"MDA",
-            "value":15.4
-         },
-         {
-            "iso":"ROU",
-            "value":12
-         },
-         {
-            "iso":"RUS",
-            "value":10.1
-         },
-         {
-            "iso":"RWA",
-            "value":52
-         },
-         {
-            "iso":"KNA",
-            "value":10.2
-         },
-         {
-            "iso":"LCA",
-            "value":14.5
-         },
-         {
-            "iso":"VCT",
-            "value":19
-         },
-         {
-            "iso":"WSM",
-            "value":18.1
-         },
-         {
-            "iso":"SMR",
-            "value":3.1
-         },
-         {
-            "iso":"STP",
-            "value":51
-         },
-         {
-            "iso":"SAU",
-            "value":15.5
-         },
-         {
-            "iso":"SEN",
-            "value":55.3
-         },
-         {
-            "iso":"SRB",
-            "value":6.6
-         },
-         {
-            "iso":"SYC",
-            "value":14.2
-         },
-         {
-            "iso":"SLE",
-            "value":160.6
-         },
-         {
-            "iso":"SGP",
-            "value":2.8
-         },
-         {
-            "iso":"SVK",
-            "value":7.2
-         },
-         {
-            "iso":"SVN",
-            "value":2.9
-         },
-         {
-            "iso":"SLB",
-            "value":30.1
-         },
-         {
-            "iso":"SOM",
-            "value":145.6
-         },
-         {
-            "iso":"ZAF",
-            "value":43.9
-         },
-         {
-            "iso":"SSD",
-            "value":99.2
-         },
-         {
-            "iso":"ESP",
-            "value":4.2
-         },
-         {
-            "iso":"LKA",
-            "value":9.6
-         },
-         {
-            "iso":"PSE",
-            "value":21.8
-         },
-         {
-            "iso":"SDN",
-            "value":76.6
-         },
-         {
-            "iso":"SUR",
-            "value":22.8
-         },
-         {
-            "iso":"SWZ",
-            "value":80
-         },
-         {
-            "iso":"SWE",
-            "value":3
-         },
-         {
-            "iso":"CHE",
-            "value":4.2
-         },
-         {
-            "iso":"SYR",
-            "value":14.6
-         },
-         {
-            "iso":"TJK",
-            "value":47.7
-         },
-         {
-            "iso":"THA",
-            "value":13.1
-         },
-         {
-            "iso":"MKD",
-            "value":6.6
-         },
-         {
-            "iso":"TLS",
-            "value":54.6
-         },
-         {
-            "iso":"TGO",
-            "value":84.7
-         },
-         {
-            "iso":"TON",
-            "value":12.1
-         },
-         {
-            "iso":"TTO",
-            "value":21.3
-         },
-         {
-            "iso":"TUN",
-            "value":15.2
-         },
-         {
-            "iso":"TUR",
-            "value":19.2
-         },
-         {
-            "iso":"TKM",
-            "value":55.2
-         },
-         {
-            "iso":"TUV",
-            "value":29.2
-         },
-         {
-            "iso":"UGA",
-            "value":66.1
-         },
-         {
-            "iso":"UKR",
-            "value":10
-         },
-         {
-            "iso":"ARE",
-            "value":8.2
-         },
-         {
-            "iso":"GBR",
-            "value":4.6
-         },
-         {
-            "iso":"TZA",
-            "value":51.8
-         },
-         {
-            "iso":"USA",
-            "value":6.9
-         },
-         {
-            "iso":"URY",
-            "value":11.1
-         },
-         {
-            "iso":"UZB",
-            "value":42.5
-         },
-         {
-            "iso":"VUT",
-            "value":16.9
-         },
-         {
-            "iso":"VEN",
-            "value":14.9
-         },
-         {
-            "iso":"VNM",
-            "value":23.8
-         },
-         {
-            "iso":"YEM",
-            "value":51.3
-         },
-         {
-            "iso":"ZMB",
-            "value":87.4
-         },
-         {
-            "iso":"ZWE",
-            "value":88.5
+         { "iso":"AFG", "value":97.3 },
+         { "iso":"ALB", "value":14.9 },
+         { "iso":"DZA", "value":25.2 },
+         { "iso":"AND", "value":3 },
+         { "iso":"AGO", "value":167.4 },
+         { "iso":"ATG", "value":9.3 },
+         { "iso":"ARG", "value":13.3 },
+         { "iso":"ARM", "value":15.6 },
+         { "iso":"AUS", "value":4 },
+         { "iso":"AUT", "value":3.9 },
+         { "iso":"AZE", "value":34.2 },
+         { "iso":"BHS", "value":12.9 },
+         { "iso":"BHR", "value":6.1 },
+         { "iso":"BGD", "value":41.1 },
+         { "iso":"BRB", "value":14.4 },
+         { "iso":"BLR", "value":4.9 },
+         { "iso":"BEL", "value":4.4 },
+         { "iso":"BLZ", "value":16.7 },
+         { "iso":"BEN", "value":85.3 },
+         { "iso":"BTN", "value":36.2 },
+         { "iso":"BOL", "value":39.1 },
+         { "iso":"BIH", "value":6.6 },
+         { "iso":"BWA", "value":46.6 },
+         { "iso":"BRA", "value":13.7 },
+         { "iso":"BRN", "value":9.9 },
+         { "iso":"BGR", "value":11.6 },
+         { "iso":"BFA", "value":97.6 },
+         { "iso":"BDI", "value":82.9 },
+         { "iso":"KHM", "value":37.9 },
+         { "iso":"CMR", "value":94.5 },
+         { "iso":"CAN", "value":5.2 },
+         { "iso":"CPV", "value":26 },
+         { "iso":"CAF", "value":139.2 },
+         { "iso":"TCD", "value":147.5 },
+         { "iso":"CHL", "value":8.2 },
+         { "iso":"CHN", "value":12.7 },
+         { "iso":"COL", "value":16.9 },
+         { "iso":"COM", "value":77.9 },
+         { "iso":"COG", "value":49.1 },
+         { "iso":"COK", "value":8.8 },
+         { "iso":"CRI", "value":9.6 },
+         { "iso":"CIV", "value":100 },
+         { "iso":"HRV", "value":4.5 },
+         { "iso":"CUB", "value":6.2 },
+         { "iso":"CYP", "value":3.6 },
+         { "iso":"CZE", "value":3.6 },
+         { "iso":"COD", "value":118.5 },
+         { "iso":"DNK", "value":3.5 },
+         { "iso":"DJI", "value":69.6 },
+         { "iso":"DMA", "value":11.4 },
+         { "iso":"DOM", "value":28.1 },
+         { "iso":"ECU", "value":22.5 },
+         { "iso":"EGY", "value":21.8 },
+         { "iso":"SLV", "value":15.7 },
+         { "iso":"GNQ", "value":95.8 },
+         { "iso":"ERI", "value":49.9 },
+         { "iso":"EST", "value":3.4 },
+         { "iso":"ETH", "value":64.4 },
+         { "iso":"FJI", "value":23.6 },
+         { "iso":"FIN", "value":2.6 },
+         { "iso":"FRA", "value":4.2 },
+         { "iso":"GAB", "value":56.1 },
+         { "iso":"GMB", "value":73.8 },
+         { "iso":"GEO", "value":13.1 },
+         { "iso":"DEU", "value":3.9 },
+         { "iso":"GHA", "value":78.4 },
+         { "iso":"GRC", "value":4.4 },
+         { "iso":"GRD", "value":11.8 },
+         { "iso":"GTM", "value":31 },
+         { "iso":"GIN", "value":100.7 },
+         { "iso":"GNB", "value":123.9 },
+         { "iso":"GUY", "value":36.6 },
+         { "iso":"HTI", "value":72.8 },
+         { "iso":"HND", "value":22.2 },
+         { "iso":"HUN", "value":6.1 },
+         { "iso":"ISL", "value":2.1 },
+         { "iso":"IND", "value":52.7 },
+         { "iso":"IDN", "value":29.3 },
+         { "iso":"IRN", "value":16.8 },
+         { "iso":"IRQ", "value":34 },
+         { "iso":"IRL", "value":3.8 },
+         { "iso":"ISR", "value":4 },
+         { "iso":"ITA", "value":3.6 },
+         { "iso":"JAM", "value":16.6 },
+         { "iso":"JPN", "value":2.9 },
+         { "iso":"JOR", "value":18.7 },
+         { "iso":"KAZ", "value":16.3 },
+         { "iso":"KEN", "value":70.7 },
+         { "iso":"KIR", "value":58.2 },
+         { "iso":"PRK", "value":27.4 },
+         { "iso":"KOR", "value":3.7 },
+         { "iso":"KWT", "value":9.5 },
+         { "iso":"KGZ", "value":24.2 },
+         { "iso":"LAO", "value":71.4 },
+         { "iso":"LVA", "value":8.4 },
+         { "iso":"LBN", "value":9.1 },
+         { "iso":"LSO", "value":98 },
+         { "iso":"LBR", "value":71.1 },
+         { "iso":"LBY", "value":14.5 },
+         { "iso":"LIE", "value":0 },
+         { "iso":"LTU", "value":4.9 },
+         { "iso":"LUX", "value":2 },
+         { "iso":"MDG", "value":56 },
+         { "iso":"MWI", "value":67.9 },
+         { "iso":"MYS", "value":8.5 },
+         { "iso":"MDV", "value":9.9 },
+         { "iso":"MLI", "value":122.7 },
+         { "iso":"MLT", "value":6.1 },
+         { "iso":"MHL", "value":37.5 },
+         { "iso":"MRT", "value":90.1 },
+         { "iso":"MUS", "value":14.3 },
+         { "iso":"MEX", "value":14.5 },
+         { "iso":"FSM", "value":36.4 },
+         { "iso":"MCO", "value":3.7 },
+         { "iso":"MNG", "value":31.8 },
+         { "iso":"MNE", "value":5.3 },
+         { "iso":"MAR", "value":30.4 },
+         { "iso":"MOZ", "value":87.2 },
+         { "iso":"MMR", "value":50.5 },
+         { "iso":"NAM", "value":49.8 },
+         { "iso":"NRU", "value":36.6 },
+         { "iso":"NPL", "value":39.7 },
+         { "iso":"NLD", "value":4 },
+         { "iso":"NZL", "value":6.3 },
+         { "iso":"NIC", "value":23.5 },
+         { "iso":"NER", "value":104.2 },
+         { "iso":"NGA", "value":117.4 },
+         { "iso":"NIU", "value":24.5 },
+         { "iso":"NOR", "value":2.8 },
+         { "iso":"OMN", "value":11.4 },
+         { "iso":"PAK", "value":85.5 },
+         { "iso":"PLW", "value":17.5 },
+         { "iso":"PAN", "value":17.9 },
+         { "iso":"PNG", "value":61.4 },
+         { "iso":"PRY", "value":21.9 },
+         { "iso":"PER", "value":16.7 },
+         { "iso":"PHL", "value":29.9 },
+         { "iso":"POL", "value":5.2 },
+         { "iso":"PRT", "value":3.8 },
+         { "iso":"QAT", "value":8.2 },
+         { "iso":"MDA", "value":15.4 },
+         { "iso":"ROU", "value":12 },
+         { "iso":"RUS", "value":10.1 },
+         { "iso":"RWA", "value":52 },
+         { "iso":"KNA", "value":10.2 },
+         { "iso":"LCA", "value":14.5 },
+         { "iso":"VCT", "value":19 },
+         { "iso":"WSM", "value":18.1 },
+         { "iso":"SMR", "value":3.1 },
+         { "iso":"STP", "value":51 },
+         { "iso":"SAU", "value":15.5 },
+         { "iso":"SEN", "value":55.3 },
+         { "iso":"SRB", "value":6.6 },
+         { "iso":"SYC", "value":14.2 },
+         { "iso":"SLE", "value":160.6 },
+         { "iso":"SGP", "value":2.8 },
+         { "iso":"SVK", "value":7.2 },
+         { "iso":"SVN", "value":2.9 },
+         { "iso":"SLB", "value":30.1 },
+         { "iso":"SOM", "value":145.6 },
+         { "iso":"ZAF", "value":43.9 },
+         { "iso":"SSD", "value":99.2 },
+         { "iso":"ESP", "value":4.2 },
+         { "iso":"LKA", "value":9.6 },
+         { "iso":"PSE", "value":21.8 },
+         { "iso":"SDN", "value":76.6 },
+         { "iso":"SUR", "value":22.8 },
+         { "iso":"SWZ", "value":80 },
+         { "iso":"SWE", "value":3 },
+         { "iso":"CHE", "value":4.2 },
+         { "iso":"SYR", "value":14.6 },
+         { "iso":"TJK", "value":47.7 },
+         { "iso":"THA", "value":13.1 },
+         { "iso":"MKD", "value":6.6 },
+         { "iso":"TLS", "value":54.6 },
+         { "iso":"TGO", "value":84.7 },
+         { "iso":"TON", "value":12.1 },
+         { "iso":"TTO", "value":21.3 },
+         { "iso":"TUN", "value":15.2 },
+         { "iso":"TUR", "value":19.2 },
+         { "iso":"TKM", "value":55.2 },
+         { "iso":"TUV", "value":29.2 },
+         { "iso":"UGA", "value":66.1 },
+         { "iso":"UKR", "value":10 },
+         { "iso":"ARE", "value":8.2 },
+         { "iso":"GBR", "value":4.6 },
+         { "iso":"TZA", "value":51.8 },
+         { "iso":"USA", "value":6.9 },
+         { "iso":"URY", "value":11.1 },
+         { "iso":"UZB", "value":42.5 },
+         { "iso":"VUT", "value":16.9 },
+         { "iso":"VEN", "value":14.9 },
+         { "iso":"VNM", "value":23.8 },
+         { "iso":"YEM", "value":51.3 },
+         { "iso":"ZMB", "value":87.4 },
+         { "iso":"ZWE", "value":88.5
          }
       ]
    },
@@ -2539,389 +817,102 @@
       "colorSet":"Greens",
       "colorNum":9,
       "data":[
-         {
-            "iso":"ALB",
-            "value":95.5
-         },
-         {
-            "iso":"AND",
-            "value":96.5
-         },
-         {
-            "iso":"ARM",
-            "value":99.4
-         },
-         {
-            "iso":"AUS",
-            "value":99.9
-         },
-         {
-            "iso":"AZE",
-            "value":98.5
-         },
-         {
-            "iso":"BHS",
-            "value":95.1
-         },
-         {
-            "iso":"BHR",
-            "value":68.3
-         },
-         {
-            "iso":"BEL",
-            "value":93.9
-         },
-         {
-            "iso":"BLZ",
-            "value":93.9
-         },
-         {
-            "iso":"BTN",
-            "value":20.4
-         },
-         {
-            "iso":"BOL",
-            "value":58.6
-         },
-         {
-            "iso":"BIH",
-            "value":78
-         },
-         {
-            "iso":"BRA",
-            "value":76.1
-         },
-         {
-            "iso":"CMR",
-            "value":36.3
-         },
-         {
-            "iso":"CYM",
-            "value":99.8
-         },
-         {
-            "iso":"CHL",
-            "value":85.5
-         },
-         {
-            "iso":"CHN",
-            "value":95
-         },
-         {
-            "iso":"MAC",
-            "value":87.6
-         },
-         {
-            "iso":"COL",
-            "value":75.4
-         },
-         {
-            "iso":"CRI",
-            "value":82
-         },
-         {
-            "iso":"HRV",
-            "value":97
-         },
-         {
-            "iso":"CUB",
-            "value":91.2
-         },
-         {
-            "iso":"CYP",
-            "value":93.9
-         },
-         {
-            "iso":"CZE",
-            "value":99.9
-         },
-         {
-            "iso":"COD",
-            "value":56.8
-         },
-         {
-            "iso":"DNK",
-            "value":100
-         },
-         {
-            "iso":"DOM",
-            "value":66.5
-         },
-         {
-            "iso":"ECU",
-            "value":81.1
-         },
-         {
-            "iso":"SLV",
-            "value":56.4
-         },
-         {
-            "iso":"ETH",
-            "value":24.6
-         },
-         {
-            "iso":"FRA",
-            "value":97.5
-         },
-         {
-            "iso":"GEO",
-            "value":98.8
-         },
-         {
-            "iso":"DEU",
-            "value":100
-         },
-         {
-            "iso":"GHA",
-            "value":64.7
-         },
-         {
-            "iso":"GRC",
-            "value":94.7
-         },
-         {
-            "iso":"GTM",
-            "value":61.8
-         },
-         {
-            "iso":"HND",
-            "value":58.5
-         },
-         {
-            "iso":"HUN",
-            "value":99.5
-         },
-         {
-            "iso":"IDN",
-            "value":76.6
-         },
-         {
-            "iso":"ISR",
-            "value":95.6
-         },
-         {
-            "iso":"ITA",
-            "value":94.4
-         },
-         {
-            "iso":"JAM",
-            "value":99.2
-         },
-         {
-            "iso":"JPN",
-            "value":99.9
-         },
-         {
-            "iso":"JOR",
-            "value":85.1
-         },
-         {
-            "iso":"KEN",
-            "value":51
-         },
-         {
-            "iso":"KWT",
-            "value":57.7
-         },
-         {
-            "iso":"LVA",
-            "value":99.7
-         },
-         {
-            "iso":"LTU",
-            "value":98.7
-         },
-         {
-            "iso":"MYS",
-            "value":91.2
-         },
-         {
-            "iso":"MLI",
-            "value":16.3
-         },
-         {
-            "iso":"MLT",
-            "value":98.5
-         },
-         {
-            "iso":"MHL",
-            "value":96.4
-         },
-         {
-            "iso":"MUS",
-            "value":67
-         },
-         {
-            "iso":"MEX",
-            "value":78.8
-         },
-         {
-            "iso":"MNG",
-            "value":95.5
-         },
-         {
-            "iso":"MNE",
-            "value":97.5
-         },
-         {
-            "iso":"MOZ",
-            "value":23.2
-         },
-         {
-            "iso":"NLD",
-            "value":98.4
-         },
-         {
-            "iso":"NOR",
-            "value":99.7
-         },
-         {
-            "iso":"OMN",
-            "value":64.4
-         },
-         {
-            "iso":"PAK",
-            "value":48.5
-         },
-         {
-            "iso":"PSE",
-            "value":92.7
-         },
-         {
-            "iso":"PAN",
-            "value":82.6
-         },
-         {
-            "iso":"PRY",
-            "value":73.4
-         },
-         {
-            "iso":"PER",
-            "value":79.8
-         },
-         {
-            "iso":"PHL",
-            "value":82.1
-         },
-         {
-            "iso":"POL",
-            "value":98.9
-         },
-         {
-            "iso":"PRT",
-            "value":90
-         },
-         {
-            "iso":"PRI",
-            "value":88.8
-         },
-         {
-            "iso":"QAT",
-            "value":84.2
-         },
-         {
-            "iso":"KOR",
-            "value":94.3
-         },
-         {
-            "iso":"MDA",
-            "value":99.3
-         },
-         {
-            "iso":"ROU",
-            "value":98.6
-         },
-         {
-            "iso":"RUS",
-            "value":99.4
-         },
-         {
-            "iso":"RWA",
-            "value":31.1
-         },
-         {
-            "iso":"WSM",
-            "value":99
-         },
-         {
-            "iso":"SAU",
-            "value":81.3
-         },
-         {
-            "iso":"SEN",
-            "value":27.3
-         },
-         {
-            "iso":"SRB",
-            "value":93.7
-         },
-         {
-            "iso":"SGP",
-            "value":85.2
-         },
-         {
-            "iso":"SVK",
-            "value":99.8
-         },
-         {
-            "iso":"SVN",
-            "value":99.9
-         },
-         {
-            "iso":"ZAF",
-            "value":81.8
-         },
-         {
-            "iso":"ESP",
-            "value":90.1
-         },
-         {
-            "iso":"SWE",
-            "value":100
-         },
-         {
-            "iso":"THA",
-            "value":61.5
-         },
-         {
-            "iso":"TGO",
-            "value":30.4
-         },
-         {
-            "iso":"TON",
-            "value":96
-         },
-         {
-            "iso":"TUR",
-            "value":87.8
-         },
-         {
-            "iso":"UGA",
-            "value":32.5
-         },
-         {
-            "iso":"GBR",
-            "value":99.9
-         },
-         {
-            "iso":"TZA",
-            "value":64.8
-         },
-         {
-            "iso":"USA",
-            "value":98.8
-         },
-         {
-            "iso":"URY",
-            "value":88.9
-         },
-         {
-            "iso":"UZB",
-            "value":100
-         },
-         {
-            "iso":"ZWE",
-            "value":80.9
+         { "iso":"ALB", "value":95.5 },
+         { "iso":"AND", "value":96.5 },
+         { "iso":"ARM", "value":99.4 },
+         { "iso":"AUS", "value":99.9 },
+         { "iso":"AZE", "value":98.5 },
+         { "iso":"BHS", "value":95.1 },
+         { "iso":"BHR", "value":68.3 },
+         { "iso":"BEL", "value":93.9 },
+         { "iso":"BLZ", "value":93.9 },
+         { "iso":"BTN", "value":20.4 },
+         { "iso":"BOL", "value":58.6 },
+         { "iso":"BIH", "value":78 },
+         { "iso":"BRA", "value":76.1 },
+         { "iso":"CMR", "value":36.3 },
+         { "iso":"CYM", "value":99.8 },
+         { "iso":"CHL", "value":85.5 },
+         { "iso":"CHN", "value":95 },
+         { "iso":"MAC", "value":87.6 },
+         { "iso":"COL", "value":75.4 },
+         { "iso":"CRI", "value":82 },
+         { "iso":"HRV", "value":97 },
+         { "iso":"CUB", "value":91.2 },
+         { "iso":"CYP", "value":93.9 },
+         { "iso":"CZE", "value":99.9 },
+         { "iso":"COD", "value":56.8 },
+         { "iso":"DNK", "value":100 },
+         { "iso":"DOM", "value":66.5 },
+         { "iso":"ECU", "value":81.1 },
+         { "iso":"SLV", "value":56.4 },
+         { "iso":"ETH", "value":24.6 },
+         { "iso":"FRA", "value":97.5 },
+         { "iso":"GEO", "value":98.8 },
+         { "iso":"DEU", "value":100 },
+         { "iso":"GHA", "value":64.7 },
+         { "iso":"GRC", "value":94.7 },
+         { "iso":"GTM", "value":61.8 },
+         { "iso":"HND", "value":58.5 },
+         { "iso":"HUN", "value":99.5 },
+         { "iso":"IDN", "value":76.6 },
+         { "iso":"ISR", "value":95.6 },
+         { "iso":"ITA", "value":94.4 },
+         { "iso":"JAM", "value":99.2 },
+         { "iso":"JPN", "value":99.9 },
+         { "iso":"JOR", "value":85.1 },
+         { "iso":"KEN", "value":51 },
+         { "iso":"KWT", "value":57.7 },
+         { "iso":"LVA", "value":99.7 },
+         { "iso":"LTU", "value":98.7 },
+         { "iso":"MYS", "value":91.2 },
+         { "iso":"MLI", "value":16.3 },
+         { "iso":"MLT", "value":98.5 },
+         { "iso":"MHL", "value":96.4 },
+         { "iso":"MUS", "value":67 },
+         { "iso":"MEX", "value":78.8 },
+         { "iso":"MNG", "value":95.5 },
+         { "iso":"MNE", "value":97.5 },
+         { "iso":"MOZ", "value":23.2 },
+         { "iso":"NLD", "value":98.4 },
+         { "iso":"NOR", "value":99.7 },
+         { "iso":"OMN", "value":64.4 },
+         { "iso":"PAK", "value":48.5 },
+         { "iso":"PSE", "value":92.7 },
+         { "iso":"PAN", "value":82.6 },
+         { "iso":"PRY", "value":73.4 },
+         { "iso":"PER", "value":79.8 },
+         { "iso":"PHL", "value":82.1 },
+         { "iso":"POL", "value":98.9 },
+         { "iso":"PRT", "value":90 },
+         { "iso":"PRI", "value":88.8 },
+         { "iso":"QAT", "value":84.2 },
+         { "iso":"KOR", "value":94.3 },
+         { "iso":"MDA", "value":99.3 },
+         { "iso":"ROU", "value":98.6 },
+         { "iso":"RUS", "value":99.4 },
+         { "iso":"RWA", "value":31.1 },
+         { "iso":"WSM", "value":99 },
+         { "iso":"SAU", "value":81.3 },
+         { "iso":"SEN", "value":27.3 },
+         { "iso":"SRB", "value":93.7 },
+         { "iso":"SGP", "value":85.2 },
+         { "iso":"SVK", "value":99.8 },
+         { "iso":"SVN", "value":99.9 },
+         { "iso":"ZAF", "value":81.8 },
+         { "iso":"ESP", "value":90.1 },
+         { "iso":"SWE", "value":100 },
+         { "iso":"THA", "value":61.5 },
+         { "iso":"TGO", "value":30.4 },
+         { "iso":"TON", "value":96 },
+         { "iso":"TUR", "value":87.8 },
+         { "iso":"UGA", "value":32.5 },
+         { "iso":"GBR", "value":99.9 },
+         { "iso":"TZA", "value":64.8 },
+         { "iso":"USA", "value":98.8 },
+         { "iso":"URY", "value":88.9 },
+         { "iso":"UZB", "value":100 },
+         { "iso":"ZWE", "value":80.9
          }
       ]
    },
@@ -2957,797 +948,204 @@
       "colorSet":"Greens",
       "colorNum":9,
       "data":[
-         {
-            "iso":"AFG",
-            "value":32
-         },
-         {
-            "iso":"ALB",
-            "value":93
-         },
-         {
-            "iso":"DZA",
-            "value":88
-         },
-         {
-            "iso":"ASM",
-            "value":63
-         },
-         {
-            "iso":"AND",
-            "value":100
-         },
-         {
-            "iso":"AGO",
-            "value":52
-         },
-         {
-            "iso":"AIA",
-            "value":98
-         },
-         {
-            "iso":"ARG",
-            "value":96
-         },
-         {
-            "iso":"ARM",
-            "value":90
-         },
-         {
-            "iso":"ABW",
-            "value":98
-         },
-         {
-            "iso":"AUS",
-            "value":100
-         },
-         {
-            "iso":"AUT",
-            "value":100
-         },
-         {
-            "iso":"AZE",
-            "value":89
-         },
-         {
-            "iso":"BHS",
-            "value":92
-         },
-         {
-            "iso":"BHR",
-            "value":99
-         },
-         {
-            "iso":"BGD",
-            "value":61
-         },
-         {
-            "iso":"BRB",
-            "value":96
-         },
-         {
-            "iso":"BLR",
-            "value":94
-         },
-         {
-            "iso":"BEL",
-            "value":100
-         },
-         {
-            "iso":"BLZ",
-            "value":91
-         },
-         {
-            "iso":"BEN",
-            "value":20
-         },
-         {
-            "iso":"BTN",
-            "value":50
-         },
-         {
-            "iso":"BOL",
-            "value":50
-         },
-         {
-            "iso":"BIH",
-            "value":95
-         },
-         {
-            "iso":"BWA",
-            "value":63
-         },
-         {
-            "iso":"BRA",
-            "value":83
-         },
-         {
-            "iso":"VGB",
-            "value":98
-         },
-         {
-            "iso":"BGR",
-            "value":86
-         },
-         {
-            "iso":"BFA",
-            "value":20
-         },
-         {
-            "iso":"BDI",
-            "value":48
-         },
-         {
-            "iso":"KHM",
-            "value":42
-         },
-         {
-            "iso":"CMR",
-            "value":46
-         },
-         {
-            "iso":"CAN",
-            "value":100
-         },
-         {
-            "iso":"CPV",
-            "value":72
-         },
-         {
-            "iso":"CYM",
-            "value":96
-         },
-         {
-            "iso":"CAF",
-            "value":22
-         },
-         {
-            "iso":"TCD",
-            "value":12
-         },
-         {
-            "iso":"CHL",
-            "value":99
-         },
-         {
-            "iso":"CHN",
-            "value":77
-         },
-         {
-            "iso":"COL",
-            "value":81
-         },
-         {
-            "iso":"COM",
-            "value":36
-         },
-         {
-            "iso":"COG",
-            "value":15
-         },
-         {
-            "iso":"COK",
-            "value":98
-         },
-         {
-            "iso":"CRI",
-            "value":95
-         },
-         {
-            "iso":"CIV",
-            "value":23
-         },
-         {
-            "iso":"HRV",
-            "value":97
-         },
-         {
-            "iso":"CUB",
-            "value":93
-         },
-         {
-            "iso":"CYP",
-            "value":100
-         },
-         {
-            "iso":"CZE",
-            "value":99
-         },
-         {
-            "iso":"COD",
-            "value":29
-         },
-         {
-            "iso":"DNK",
-            "value":100
-         },
-         {
-            "iso":"DJI",
-            "value":47
-         },
-         {
-            "iso":"DOM",
-            "value":84
-         },
-         {
-            "iso":"ECU",
-            "value":85
-         },
-         {
-            "iso":"EGY",
-            "value":95
-         },
-         {
-            "iso":"SLV",
-            "value":75
-         },
-         {
-            "iso":"GNQ",
-            "value":75
-         },
-         {
-            "iso":"ERI",
-            "value":16
-         },
-         {
-            "iso":"EST",
-            "value":97
-         },
-         {
-            "iso":"ETH",
-            "value":28
-         },
-         {
-            "iso":"FJI",
-            "value":91
-         },
-         {
-            "iso":"FIN",
-            "value":98
-         },
-         {
-            "iso":"FRA",
-            "value":99
-         },
-         {
-            "iso":"PYF",
-            "value":99
-         },
-         {
-            "iso":"GAB",
-            "value":42
-         },
-         {
-            "iso":"GMB",
-            "value":59
-         },
-         {
-            "iso":"GEO",
-            "value":86
-         },
-         {
-            "iso":"DEU",
-            "value":99
-         },
-         {
-            "iso":"GHA",
-            "value":15
-         },
-         {
-            "iso":"GRC",
-            "value":99
-         },
-         {
-            "iso":"GRL",
-            "value":100
-         },
-         {
-            "iso":"GRD",
-            "value":98
-         },
-         {
-            "iso":"GUM",
-            "value":90
-         },
-         {
-            "iso":"GTM",
-            "value":64
-         },
-         {
-            "iso":"GIN",
-            "value":20
-         },
-         {
-            "iso":"GNB",
-            "value":21
-         },
-         {
-            "iso":"GUY",
-            "value":84
-         },
-         {
-            "iso":"HTI",
-            "value":28
-         },
-         {
-            "iso":"HND",
-            "value":83
-         },
-         {
-            "iso":"HUN",
-            "value":98
-         },
-         {
-            "iso":"ISL",
-            "value":99
-         },
-         {
-            "iso":"IND",
-            "value":40
-         },
-         {
-            "iso":"IDN",
-            "value":61
-         },
-         {
-            "iso":"IRN",
-            "value":90
-         },
-         {
-            "iso":"IRQ",
-            "value":86
-         },
-         {
-            "iso":"IRL",
-            "value":91
-         },
-         {
-            "iso":"ISR",
-            "value":100
-         },
-         {
-            "iso":"ITA",
-            "value":100
-         },
-         {
-            "iso":"JAM",
-            "value":82
-         },
-         {
-            "iso":"JPN",
-            "value":100
-         },
-         {
-            "iso":"JOR",
-            "value":99
-         },
-         {
-            "iso":"KAZ",
-            "value":98
-         },
-         {
-            "iso":"KEN",
-            "value":30
-         },
-         {
-            "iso":"KIR",
-            "value":40
-         },
-         {
-            "iso":"PRK",
-            "value":82
-         },
-         {
-            "iso":"KOR",
-            "value":100
-         },
-         {
-            "iso":"KWT",
-            "value":100
-         },
-         {
-            "iso":"KGZ",
-            "value":93
-         },
-         {
-            "iso":"LAO",
-            "value":71
-         },
-         {
-            "iso":"LVA",
-            "value":88
-         },
-         {
-            "iso":"LBN",
-            "value":81
-         },
-         {
-            "iso":"LSO",
-            "value":30
-         },
-         {
-            "iso":"LBR",
-            "value":17
-         },
-         {
-            "iso":"LBY",
-            "value":97
-         },
-         {
-            "iso":"LTU",
-            "value":92
-         },
-         {
-            "iso":"LUX",
-            "value":98
-         },
-         {
-            "iso":"MDG",
-            "value":12
-         },
-         {
-            "iso":"MWI",
-            "value":41
-         },
-         {
-            "iso":"MYS",
-            "value":96
-         },
-         {
-            "iso":"MDV",
-            "value":98
-         },
-         {
-            "iso":"MLI",
-            "value":25
-         },
-         {
-            "iso":"MLT",
-            "value":100
-         },
-         {
-            "iso":"MHL",
-            "value":77
-         },
-         {
-            "iso":"MRT",
-            "value":40
-         },
-         {
-            "iso":"MUS",
-            "value":93
-         },
-         {
-            "iso":"MEX",
-            "value":85
-         },
-         {
-            "iso":"FSM",
-            "value":57
-         },
-         {
-            "iso":"MCO",
-            "value":100
-         },
-         {
-            "iso":"MNG",
-            "value":60
-         },
-         {
-            "iso":"MNE",
-            "value":96
-         },
-         {
-            "iso":"MAR",
-            "value":77
-         },
-         {
-            "iso":"MOZ",
-            "value":21
-         },
-         {
-            "iso":"MMR",
-            "value":80
-         },
-         {
-            "iso":"NAM",
-            "value":34
-         },
-         {
-            "iso":"NRU",
-            "value":66
-         },
-         {
-            "iso":"NPL",
-            "value":46
-         },
-         {
-            "iso":"NLD",
-            "value":98
-         },
-         {
-            "iso":"NCL",
-            "value":100
-         },
-         {
-            "iso":"NIC",
-            "value":68
-         },
-         {
-            "iso":"NER",
-            "value":11
-         },
-         {
-            "iso":"NGA",
-            "value":29
-         },
-         {
-            "iso":"NIU",
-            "value":100
-         },
-         {
-            "iso":"MNP",
-            "value":80
-         },
-         {
-            "iso":"NOR",
-            "value":98
-         },
-         {
-            "iso":"OMN",
-            "value":97
-         },
-         {
-            "iso":"PAK",
-            "value":64
-         },
-         {
-            "iso":"PLW",
-            "value":100
-         },
-         {
-            "iso":"PAN",
-            "value":75
-         },
-         {
-            "iso":"PNG",
-            "value":19
-         },
-         {
-            "iso":"PRY",
-            "value":89
-         },
-         {
-            "iso":"PER",
-            "value":76
-         },
-         {
-            "iso":"PHL",
-            "value":74
-         },
-         {
-            "iso":"POL",
-            "value":97
-         },
-         {
-            "iso":"PRT",
-            "value":100
-         },
-         {
-            "iso":"PRI",
-            "value":99
-         },
-         {
-            "iso":"QAT",
-            "value":98
-         },
-         {
-            "iso":"MDA",
-            "value":76
-         },
-         {
-            "iso":"REU",
-            "value":98
-         },
-         {
-            "iso":"ROU",
-            "value":79
-         },
-         {
-            "iso":"RUS",
-            "value":72
-         },
-         {
-            "iso":"RWA",
-            "value":62
-         },
-         {
-            "iso":"LCA",
-            "value":91
-         },
-         {
-            "iso":"WSM",
-            "value":92
-         },
-         {
-            "iso":"STP",
-            "value":35
-         },
-         {
-            "iso":"SAU",
-            "value":100
-         },
-         {
-            "iso":"SEN",
-            "value":48
-         },
-         {
-            "iso":"SRB",
-            "value":96
-         },
-         {
-            "iso":"SYC",
-            "value":98
-         },
-         {
-            "iso":"SLE",
-            "value":13
-         },
-         {
-            "iso":"SGP",
-            "value":100
-         },
-         {
-            "iso":"SVK",
-            "value":99
-         },
-         {
-            "iso":"SVN",
-            "value":99
-         },
-         {
-            "iso":"SLB",
-            "value":30
-         },
-         {
-            "iso":"SOM",
-            "value":0
-         },
-         {
-            "iso":"ZAF",
-            "value":66
-         },
-         {
-            "iso":"SSD",
-            "value":7
-         },
-         {
-            "iso":"ESP",
-            "value":100
-         },
-         {
-            "iso":"LKA",
-            "value":95
-         },
-         {
-            "iso":"PSE",
-            "value":92
-         },
-         {
-            "iso":"SUR",
-            "value":79
-         },
-         {
-            "iso":"SWZ",
-            "value":58
-         },
-         {
-            "iso":"SWE",
-            "value":99
-         },
-         {
-            "iso":"CHE",
-            "value":100
-         },
-         {
-            "iso":"SYR",
-            "value":96
-         },
-         {
-            "iso":"TJK",
-            "value":95
-         },
-         {
-            "iso":"THA",
-            "value":93
-         },
-         {
-            "iso":"MKD",
-            "value":91
-         },
-         {
-            "iso":"TLS",
-            "value":41
-         },
-         {
-            "iso":"TGO",
-            "value":12
-         },
-         {
-            "iso":"TKL",
-            "value":91
-         },
-         {
-            "iso":"TON",
-            "value":91
-         },
-         {
-            "iso":"TTO",
-            "value":92
-         },
-         {
-            "iso":"TUN",
-            "value":92
-         },
-         {
-            "iso":"TUR",
-            "value":95
-         },
-         {
-            "iso":"UGA",
-            "value":19
-         },
-         {
-            "iso":"UKR",
-            "value":96
-         },
-         {
-            "iso":"ARE",
-            "value":98
-         },
-         {
-            "iso":"GBR",
-            "value":99
-         },
-         {
-            "iso":"TZA",
-            "value":16
-         },
-         {
-            "iso":"USA",
-            "value":100
-         },
-         {
-            "iso":"VIR",
-            "value":96
-         },
-         {
-            "iso":"URY",
-            "value":96
-         },
-         {
-            "iso":"UZB",
-            "value":100
-         },
-         {
-            "iso":"VUT",
-            "value":58
-         },
-         {
-            "iso":"VEN",
-            "value":94
-         },
-         {
-            "iso":"VNM",
-            "value":78
-         },
-         {
-            "iso":"ZMB",
-            "value":44
-         },
-         {
-            "iso":"ZWE",
-            "value":37
+         { "iso":"AFG", "value":32 },
+         { "iso":"ALB", "value":93 },
+         { "iso":"DZA", "value":88 },
+         { "iso":"ASM", "value":63 },
+         { "iso":"AND", "value":100 },
+         { "iso":"AGO", "value":52 },
+         { "iso":"AIA", "value":98 },
+         { "iso":"ARG", "value":96 },
+         { "iso":"ARM", "value":90 },
+         { "iso":"ABW", "value":98 },
+         { "iso":"AUS", "value":100 },
+         { "iso":"AUT", "value":100 },
+         { "iso":"AZE", "value":89 },
+         { "iso":"BHS", "value":92 },
+         { "iso":"BHR", "value":99 },
+         { "iso":"BGD", "value":61 },
+         { "iso":"BRB", "value":96 },
+         { "iso":"BLR", "value":94 },
+         { "iso":"BEL", "value":100 },
+         { "iso":"BLZ", "value":91 },
+         { "iso":"BEN", "value":20 },
+         { "iso":"BTN", "value":50 },
+         { "iso":"BOL", "value":50 },
+         { "iso":"BIH", "value":95 },
+         { "iso":"BWA", "value":63 },
+         { "iso":"BRA", "value":83 },
+         { "iso":"VGB", "value":98 },
+         { "iso":"BGR", "value":86 },
+         { "iso":"BFA", "value":20 },
+         { "iso":"BDI", "value":48 },
+         { "iso":"KHM", "value":42 },
+         { "iso":"CMR", "value":46 },
+         { "iso":"CAN", "value":100 },
+         { "iso":"CPV", "value":72 },
+         { "iso":"CYM", "value":96 },
+         { "iso":"CAF", "value":22 },
+         { "iso":"TCD", "value":12 },
+         { "iso":"CHL", "value":99 },
+         { "iso":"CHN", "value":77 },
+         { "iso":"COL", "value":81 },
+         { "iso":"COM", "value":36 },
+         { "iso":"COG", "value":15 },
+         { "iso":"COK", "value":98 },
+         { "iso":"CRI", "value":95 },
+         { "iso":"CIV", "value":23 },
+         { "iso":"HRV", "value":97 },
+         { "iso":"CUB", "value":93 },
+         { "iso":"CYP", "value":100 },
+         { "iso":"CZE", "value":99 },
+         { "iso":"COD", "value":29 },
+         { "iso":"DNK", "value":100 },
+         { "iso":"DJI", "value":47 },
+         { "iso":"DOM", "value":84 },
+         { "iso":"ECU", "value":85 },
+         { "iso":"EGY", "value":95 },
+         { "iso":"SLV", "value":75 },
+         { "iso":"GNQ", "value":75 },
+         { "iso":"ERI", "value":16 },
+         { "iso":"EST", "value":97 },
+         { "iso":"ETH", "value":28 },
+         { "iso":"FJI", "value":91 },
+         { "iso":"FIN", "value":98 },
+         { "iso":"FRA", "value":99 },
+         { "iso":"PYF", "value":99 },
+         { "iso":"GAB", "value":42 },
+         { "iso":"GMB", "value":59 },
+         { "iso":"GEO", "value":86 },
+         { "iso":"DEU", "value":99 },
+         { "iso":"GHA", "value":15 },
+         { "iso":"GRC", "value":99 },
+         { "iso":"GRL", "value":100 },
+         { "iso":"GRD", "value":98 },
+         { "iso":"GUM", "value":90 },
+         { "iso":"GTM", "value":64 },
+         { "iso":"GIN", "value":20 },
+         { "iso":"GNB", "value":21 },
+         { "iso":"GUY", "value":84 },
+         { "iso":"HTI", "value":28 },
+         { "iso":"HND", "value":83 },
+         { "iso":"HUN", "value":98 },
+         { "iso":"ISL", "value":99 },
+         { "iso":"IND", "value":40 },
+         { "iso":"IDN", "value":61 },
+         { "iso":"IRN", "value":90 },
+         { "iso":"IRQ", "value":86 },
+         { "iso":"IRL", "value":91 },
+         { "iso":"ISR", "value":100 },
+         { "iso":"ITA", "value":100 },
+         { "iso":"JAM", "value":82 },
+         { "iso":"JPN", "value":100 },
+         { "iso":"JOR", "value":99 },
+         { "iso":"KAZ", "value":98 },
+         { "iso":"KEN", "value":30 },
+         { "iso":"KIR", "value":40 },
+         { "iso":"PRK", "value":82 },
+         { "iso":"KOR", "value":100 },
+         { "iso":"KWT", "value":100 },
+         { "iso":"KGZ", "value":93 },
+         { "iso":"LAO", "value":71 },
+         { "iso":"LVA", "value":88 },
+         { "iso":"LBN", "value":81 },
+         { "iso":"LSO", "value":30 },
+         { "iso":"LBR", "value":17 },
+         { "iso":"LBY", "value":97 },
+         { "iso":"LTU", "value":92 },
+         { "iso":"LUX", "value":98 },
+         { "iso":"MDG", "value":12 },
+         { "iso":"MWI", "value":41 },
+         { "iso":"MYS", "value":96 },
+         { "iso":"MDV", "value":98 },
+         { "iso":"MLI", "value":25 },
+         { "iso":"MLT", "value":100 },
+         { "iso":"MHL", "value":77 },
+         { "iso":"MRT", "value":40 },
+         { "iso":"MUS", "value":93 },
+         { "iso":"MEX", "value":85 },
+         { "iso":"FSM", "value":57 },
+         { "iso":"MCO", "value":100 },
+         { "iso":"MNG", "value":60 },
+         { "iso":"MNE", "value":96 },
+         { "iso":"MAR", "value":77 },
+         { "iso":"MOZ", "value":21 },
+         { "iso":"MMR", "value":80 },
+         { "iso":"NAM", "value":34 },
+         { "iso":"NRU", "value":66 },
+         { "iso":"NPL", "value":46 },
+         { "iso":"NLD", "value":98 },
+         { "iso":"NCL", "value":100 },
+         { "iso":"NIC", "value":68 },
+         { "iso":"NER", "value":11 },
+         { "iso":"NGA", "value":29 },
+         { "iso":"NIU", "value":100 },
+         { "iso":"MNP", "value":80 },
+         { "iso":"NOR", "value":98 },
+         { "iso":"OMN", "value":97 },
+         { "iso":"PAK", "value":64 },
+         { "iso":"PLW", "value":100 },
+         { "iso":"PAN", "value":75 },
+         { "iso":"PNG", "value":19 },
+         { "iso":"PRY", "value":89 },
+         { "iso":"PER", "value":76 },
+         { "iso":"PHL", "value":74 },
+         { "iso":"POL", "value":97 },
+         { "iso":"PRT", "value":100 },
+         { "iso":"PRI", "value":99 },
+         { "iso":"QAT", "value":98 },
+         { "iso":"MDA", "value":76 },
+         { "iso":"REU", "value":98 },
+         { "iso":"ROU", "value":79 },
+         { "iso":"RUS", "value":72 },
+         { "iso":"RWA", "value":62 },
+         { "iso":"LCA", "value":91 },
+         { "iso":"WSM", "value":92 },
+         { "iso":"STP", "value":35 },
+         { "iso":"SAU", "value":100 },
+         { "iso":"SEN", "value":48 },
+         { "iso":"SRB", "value":96 },
+         { "iso":"SYC", "value":98 },
+         { "iso":"SLE", "value":13 },
+         { "iso":"SGP", "value":100 },
+         { "iso":"SVK", "value":99 },
+         { "iso":"SVN", "value":99 },
+         { "iso":"SLB", "value":30 },
+         { "iso":"SOM", "value":0 },
+         { "iso":"ZAF", "value":66 },
+         { "iso":"SSD", "value":7 },
+         { "iso":"ESP", "value":100 },
+         { "iso":"LKA", "value":95 },
+         { "iso":"PSE", "value":92 },
+         { "iso":"SUR", "value":79 },
+         { "iso":"SWZ", "value":58 },
+         { "iso":"SWE", "value":99 },
+         { "iso":"CHE", "value":100 },
+         { "iso":"SYR", "value":96 },
+         { "iso":"TJK", "value":95 },
+         { "iso":"THA", "value":93 },
+         { "iso":"MKD", "value":91 },
+         { "iso":"TLS", "value":41 },
+         { "iso":"TGO", "value":12 },
+         { "iso":"TKL", "value":91 },
+         { "iso":"TON", "value":91 },
+         { "iso":"TTO", "value":92 },
+         { "iso":"TUN", "value":92 },
+         { "iso":"TUR", "value":95 },
+         { "iso":"UGA", "value":19 },
+         { "iso":"UKR", "value":96 },
+         { "iso":"ARE", "value":98 },
+         { "iso":"GBR", "value":99 },
+         { "iso":"TZA", "value":16 },
+         { "iso":"USA", "value":100 },
+         { "iso":"VIR", "value":96 },
+         { "iso":"URY", "value":96 },
+         { "iso":"UZB", "value":100 },
+         { "iso":"VUT", "value":58 },
+         { "iso":"VEN", "value":94 },
+         { "iso":"VNM", "value":78 },
+         { "iso":"ZMB", "value":44 },
+         { "iso":"ZWE", "value":37
          }
       ]
    },
@@ -3783,409 +1181,107 @@
       "colorSet":"Greens",
       "colorNum":9,
       "data":[
-         {
-            "iso":"NER",
-            "value":74
-         },
-         {
-            "iso":"SSD",
-            "value":70
-         },
-         {
-            "iso":"TCD",
-            "value":68
-         },
-         {
-            "iso":"ETH",
-            "value":67
-         },
-         {
-            "iso":"BFA",
-            "value":64
-         },
-         {
-            "iso":"SOM",
-            "value":64
-         },
-         {
-            "iso":"GNB",
-            "value":58
-         },
-         {
-            "iso":"MLI",
-            "value":56
-         },
-         {
-            "iso":"GIN",
-            "value":50
-         },
-         {
-            "iso":"CAF",
-            "value":48
-         },
-         {
-            "iso":"BDI",
-            "value":48
-         },
-         {
-            "iso":"MDG",
-            "value":48
-         },
-         {
-            "iso":"MOZ",
-            "value":44
-         },
-         {
-            "iso":"SLE",
-            "value":44
-         },
-         {
-            "iso":"BEN",
-            "value":38
-         },
-         {
-            "iso":"COG",
-            "value":37
-         },
-         {
-            "iso":"LBR",
-            "value":35
-         },
-         {
-            "iso":"RWA",
-            "value":35
-         },
-         {
-            "iso":"UGA",
-            "value":33
-         },
-         {
-            "iso":"CIV",
-            "value":32
-         },
-         {
-            "iso":"TZA",
-            "value":32
-         },
-         {
-            "iso":"SDN",
-            "value":32
-         },
-         {
-            "iso":"GMB",
-            "value":32
-         },
-         {
-            "iso":"TLS",
-            "value":31
-         },
-         {
-            "iso":"SEN",
-            "value":31
-         },
-         {
-            "iso":"NGA",
-            "value":30
-         },
-         {
-            "iso":"MRT",
-            "value":30
-         },
-         {
-            "iso":"AFG",
-            "value":30
-         },
-         {
-            "iso":"MWI",
-            "value":30
-         },
-         {
-            "iso":"IND",
-            "value":28
-         },
-         {
-            "iso":"CMR",
-            "value":27
-         },
-         {
-            "iso":"PAK",
-            "value":26
-         },
-         {
-            "iso":"TGO",
-            "value":23
-         },
-         {
-            "iso":"ZMB",
-            "value":23
-         },
-         {
-            "iso":"BGD",
-            "value":21
-         },
-         {
-            "iso":"HTI",
-            "value":20
-         },
-         {
-            "iso":"YEM",
-            "value":19
-         },
-         {
-            "iso":"LAO",
-            "value":19
-         },
-         {
-            "iso":"NPL",
-            "value":19
-         },
-         {
-            "iso":"LSO",
-            "value":18
-         },
-         {
-            "iso":"KHM",
-            "value":16
-         },
-         {
-            "iso":"STP",
-            "value":16
-         },
-         {
-            "iso":"KEN",
-            "value":16
-         },
-         {
-            "iso":"COM",
-            "value":15
-         },
-         {
-            "iso":"NAM",
-            "value":13
-         },
-         {
-            "iso":"COG",
-            "value":12
-         },
-         {
-            "iso":"GHA",
-            "value":12
-         },
-         {
-            "iso":"DJI",
-            "value":11
-         },
-         {
-            "iso":"BTN",
-            "value":9
-         },
-         {
-            "iso":"BOL",
-            "value":8
-         },
-         {
-            "iso":"ZWE",
-            "value":8
-         },
-         {
-            "iso":"SWZ",
-            "value":7
-         },
-         {
-            "iso":"VUT",
-            "value":7
-         },
-         {
-            "iso":"HND",
-            "value":7
-         },
-         {
-            "iso":"NIC",
-            "value":7
-         },
-         {
-            "iso":"MAR",
-            "value":5
-         },
-         {
-            "iso":"GAB",
-            "value":4
-         },
-         {
-            "iso":"PHL",
-            "value":4
-         },
-         {
-            "iso":"IRQ",
-            "value":3
-         },
-         {
-            "iso":"MNG",
-            "value":2
-         },
-         {
-            "iso":"PER",
-            "value":2
-         },
-         {
-            "iso":"SUR",
-            "value":2
-         },
-         {
-            "iso":"COL",
-            "value":2
-         },
-         {
-            "iso":"BLZ",
-            "value":1
-         },
-         {
-            "iso":"VNM",
-            "value":1
-         },
-         {
-            "iso":"ZAF",
-            "value":1
-         },
-         {
-            "iso":"SYR",
-            "value":1
-         },
-         {
-            "iso":"GUY",
-            "value":1
-         },
-         {
-            "iso":"TJK",
-            "value":1
-         },
-         {
-            "iso":"IDN",
-            "value":1
-         },
-         {
-            "iso":"MEX",
-            "value":1
-         },
-         {
-            "iso":"DOM",
-            "value":1
-         },
-         {
-            "iso":"CHN",
-            "value":1
-         },
-         {
-            "iso":"ECU",
-            "value":1
-         },
-         {
-            "iso":"ARG",
-            "value":1
-         },
-         {
-            "iso":"JAM",
-            "value":0
-         },
-         {
-            "iso":"BRA",
-            "value":0
-         },
-         {
-            "iso":"EGY",
-            "value":0
-         },
-         {
-            "iso":"TTO",
-            "value":0
-         },
-         {
-            "iso":"AZE",
-            "value":0
-         },
-         {
-            "iso":"TUN",
-            "value":0
-         },
-         {
-            "iso":"PSE",
-            "value":0
-         },
-         {
-            "iso":"MKD",
-            "value":0
-         },
-         {
-            "iso":"MDV",
-            "value":0
-         },
-         {
-            "iso":"UZB",
-            "value":0
-         },
-         {
-            "iso":"GEO",
-            "value":0
-         },
-         {
-            "iso":"SRB",
-            "value":0
-         },
-         {
-            "iso":"JOR",
-            "value":0
-         },
-         {
-            "iso":"LBY",
-            "value":0
-         },
-         {
-            "iso":"THA",
-            "value":0
-         },
-         {
-            "iso":"MDA",
-            "value":0
-         },
-         {
-            "iso":"KGZ",
-            "value":0
-         },
-         {
-            "iso":"ALB",
-            "value":0
-         },
-         {
-            "iso":"ARM",
-            "value":0
-         },
-         {
-            "iso":"MNE",
-            "value":0
-         },
-         {
-            "iso":"BIH",
-            "value":0
-         },
-         {
-            "iso":"KAZ",
-            "value":0
-         },
-         {
-            "iso":"BRB",
-            "value":0
-         },
-         {
-            "iso":"BLR",
-            "value":0
-         },
-         {
-            "iso":"LCA",
-            "value":0
-         },
-         {
-            "iso":"UKR",
-            "value":0
+         { "iso":"NER", "value":74 },
+         { "iso":"SSD", "value":70 },
+         { "iso":"TCD", "value":68 },
+         { "iso":"ETH", "value":67 },
+         { "iso":"BFA", "value":64 },
+         { "iso":"SOM", "value":64 },
+         { "iso":"GNB", "value":58 },
+         { "iso":"MLI", "value":56 },
+         { "iso":"GIN", "value":50 },
+         { "iso":"CAF", "value":48 },
+         { "iso":"BDI", "value":48 },
+         { "iso":"MDG", "value":48 },
+         { "iso":"MOZ", "value":44 },
+         { "iso":"SLE", "value":44 },
+         { "iso":"BEN", "value":38 },
+         { "iso":"COG", "value":37 },
+         { "iso":"LBR", "value":35 },
+         { "iso":"RWA", "value":35 },
+         { "iso":"UGA", "value":33 },
+         { "iso":"CIV", "value":32 },
+         { "iso":"TZA", "value":32 },
+         { "iso":"SDN", "value":32 },
+         { "iso":"GMB", "value":32 },
+         { "iso":"TLS", "value":31 },
+         { "iso":"SEN", "value":31 },
+         { "iso":"NGA", "value":30 },
+         { "iso":"MRT", "value":30 },
+         { "iso":"AFG", "value":30 },
+         { "iso":"MWI", "value":30 },
+         { "iso":"IND", "value":28 },
+         { "iso":"CMR", "value":27 },
+         { "iso":"PAK", "value":26 },
+         { "iso":"TGO", "value":23 },
+         { "iso":"ZMB", "value":23 },
+         { "iso":"BGD", "value":21 },
+         { "iso":"HTI", "value":20 },
+         { "iso":"YEM", "value":19 },
+         { "iso":"LAO", "value":19 },
+         { "iso":"NPL", "value":19 },
+         { "iso":"LSO", "value":18 },
+         { "iso":"KHM", "value":16 },
+         { "iso":"STP", "value":16 },
+         { "iso":"KEN", "value":16 },
+         { "iso":"COM", "value":15 },
+         { "iso":"NAM", "value":13 },
+         { "iso":"COG", "value":12 },
+         { "iso":"GHA", "value":12 },
+         { "iso":"DJI", "value":11 },
+         { "iso":"BTN", "value":9 },
+         { "iso":"BOL", "value":8 },
+         { "iso":"ZWE", "value":8 },
+         { "iso":"SWZ", "value":7 },
+         { "iso":"VUT", "value":7 },
+         { "iso":"HND", "value":7 },
+         { "iso":"NIC", "value":7 },
+         { "iso":"MAR", "value":5 },
+         { "iso":"GAB", "value":4 },
+         { "iso":"PHL", "value":4 },
+         { "iso":"IRQ", "value":3 },
+         { "iso":"MNG", "value":2 },
+         { "iso":"PER", "value":2 },
+         { "iso":"SUR", "value":2 },
+         { "iso":"COL", "value":2 },
+         { "iso":"BLZ", "value":1 },
+         { "iso":"VNM", "value":1 },
+         { "iso":"ZAF", "value":1 },
+         { "iso":"SYR", "value":1 },
+         { "iso":"GUY", "value":1 },
+         { "iso":"TJK", "value":1 },
+         { "iso":"IDN", "value":1 },
+         { "iso":"MEX", "value":1 },
+         { "iso":"DOM", "value":1 },
+         { "iso":"CHN", "value":1 },
+         { "iso":"ECU", "value":1 },
+         { "iso":"ARG", "value":1 },
+         { "iso":"JAM", "value":0 },
+         { "iso":"BRA", "value":0 },
+         { "iso":"EGY", "value":0 },
+         { "iso":"TTO", "value":0 },
+         { "iso":"AZE", "value":0 },
+         { "iso":"TUN", "value":0 },
+         { "iso":"PSE", "value":0 },
+         { "iso":"MKD", "value":0 },
+         { "iso":"MDV", "value":0 },
+         { "iso":"UZB", "value":0 },
+         { "iso":"GEO", "value":0 },
+         { "iso":"SRB", "value":0 },
+         { "iso":"JOR", "value":0 },
+         { "iso":"LBY", "value":0 },
+         { "iso":"THA", "value":0 },
+         { "iso":"MDA", "value":0 },
+         { "iso":"KGZ", "value":0 },
+         { "iso":"ALB", "value":0 },
+         { "iso":"ARM", "value":0 },
+         { "iso":"MNE", "value":0 },
+         { "iso":"BIH", "value":0 },
+         { "iso":"KAZ", "value":0 },
+         { "iso":"BRB", "value":0 },
+         { "iso":"BLR", "value":0 },
+         { "iso":"LCA", "value":0 },
+         { "iso":"UKR", "value":0
          }
       ]
    },
@@ -4221,621 +1317,160 @@
       "colorSet":"Greens",
       "colorNum":9,
       "data":[
-         {
-            "iso":"DNK",
-            "value":7.53
-         },
-         {
-            "iso":"CHE",
-            "value":7.51
-         },
-         {
-            "iso":"ISL",
-            "value":7.5
-         },
-         {
-            "iso":"NOR",
-            "value":7.5
-         },
-         {
-            "iso":"FIN",
-            "value":7.41
-         },
-         {
-            "iso":"CAN",
-            "value":7.4
-         },
-         {
-            "iso":"NLD",
-            "value":7.34
-         },
-         {
-            "iso":"NZL",
-            "value":7.33
-         },
-         {
-            "iso":"AUS",
-            "value":7.31
-         },
-         {
-            "iso":"SWE",
-            "value":7.29
-         },
-         {
-            "iso":"ISR",
-            "value":7.27
-         },
-         {
-            "iso":"AUT",
-            "value":7.12
-         },
-         {
-            "iso":"USA",
-            "value":7.1
-         },
-         {
-            "iso":"CRI",
-            "value":7.09
-         },
-         {
-            "iso":"PRI",
-            "value":7.04
-         },
-         {
-            "iso":"DEU",
-            "value":6.99
-         },
-         {
-            "iso":"BRA",
-            "value":6.95
-         },
-         {
-            "iso":"BEL",
-            "value":6.93
-         },
-         {
-            "iso":"IRL",
-            "value":6.91
-         },
-         {
-            "iso":"LUX",
-            "value":6.87
-         },
-         {
-            "iso":"MEX",
-            "value":6.78
-         },
-         {
-            "iso":"SGP",
-            "value":6.74
-         },
-         {
-            "iso":"GBR",
-            "value":6.72
-         },
-         {
-            "iso":"CHL",
-            "value":6.7
-         },
-         {
-            "iso":"PAN",
-            "value":6.7
-         },
-         {
-            "iso":"ARG",
-            "value":6.65
-         },
-         {
-            "iso":"CZE",
-            "value":6.6
-         },
-         {
-            "iso":"ARE",
-            "value":6.57
-         },
-         {
-            "iso":"URY",
-            "value":6.55
-         },
-         {
-            "iso":"MLT",
-            "value":6.49
-         },
-         {
-            "iso":"COL",
-            "value":6.48
-         },
-         {
-            "iso":"FRA",
-            "value":6.48
-         },
-         {
-            "iso":"THA",
-            "value":6.47
-         },
-         {
-            "iso":"SAU",
-            "value":6.38
-         },
-         {
-            "iso":"TWN",
-            "value":6.38
-         },
-         {
-            "iso":"QAT",
-            "value":6.38
-         },
-         {
-            "iso":"ESP",
-            "value":6.36
-         },
-         {
-            "iso":"DZA",
-            "value":6.36
-         },
-         {
-            "iso":"GTM",
-            "value":6.32
-         },
-         {
-            "iso":"SUR",
-            "value":6.27
-         },
-         {
-            "iso":"KWT",
-            "value":6.24
-         },
-         {
-            "iso":"BHR",
-            "value":6.22
-         },
-         {
-            "iso":"TTO",
-            "value":6.17
-         },
-         {
-            "iso":"VEN",
-            "value":6.08
-         },
-         {
-            "iso":"SVK",
-            "value":6.08
-         },
-         {
-            "iso":"SLV",
-            "value":6.07
-         },
-         {
-            "iso":"MYS",
-            "value":6.01
-         },
-         {
-            "iso":"NIC",
-            "value":5.99
-         },
-         {
-            "iso":"UZB",
-            "value":5.99
-         },
-         {
-            "iso":"ITA",
-            "value":5.98
-         },
-         {
-            "iso":"ECU",
-            "value":5.98
-         },
-         {
-            "iso":"BLZ",
-            "value":5.96
-         },
-         {
-            "iso":"JPN",
-            "value":5.92
-         },
-         {
-            "iso":"KAZ",
-            "value":5.92
-         },
-         {
-            "iso":"MDA",
-            "value":5.9
-         },
-         {
-            "iso":"RUS",
-            "value":5.86
-         },
-         {
-            "iso":"POL",
-            "value":5.84
-         },
-         {
-            "iso":"KOR",
-            "value":5.84
-         },
-         {
-            "iso":"BOL",
-            "value":5.82
-         },
-         {
-            "iso":"LTU",
-            "value":5.81
-         },
-         {
-            "iso":"BLR",
-            "value":5.8
-         },
-         {
-            "iso":"SVN",
-            "value":5.77
-         },
-         {
-            "iso":"PER",
-            "value":5.74
-         },
-         {
-            "iso":"TKM",
-            "value":5.66
-         },
-         {
-            "iso":"MUS",
-            "value":5.65
-         },
-         {
-            "iso":"LBY",
-            "value":5.61
-         },
-         {
-            "iso":"LVA",
-            "value":5.56
-         },
-         {
-            "iso":"CYP",
-            "value":5.55
-         },
-         {
-            "iso":"PRY",
-            "value":5.54
-         },
-         {
-            "iso":"ROU",
-            "value":5.53
-         },
-         {
-            "iso":"EST",
-            "value":5.52
-         },
-         {
-            "iso":"JAM",
-            "value":5.51
-         },
-         {
-            "iso":"HRV",
-            "value":5.49
-         },
-         {
-            "iso":"HKG",
-            "value":5.46
-         },
-         {
-            "iso":"SOM",
-            "value":5.44
-         },
-         {
-            "iso":"TUR",
-            "value":5.39
-         },
-         {
-            "iso":"IDN",
-            "value":5.31
-         },
-         {
-            "iso":"JOR",
-            "value":5.3
-         },
-         {
-            "iso":"AZE",
-            "value":5.29
-         },
-         {
-            "iso":"PHL",
-            "value":5.28
-         },
-         {
-            "iso":"CHN",
-            "value":5.24
-         },
-         {
-            "iso":"BTN",
-            "value":5.2
-         },
-         {
-            "iso":"KGZ",
-            "value":5.18
-         },
-         {
-            "iso":"SRB",
-            "value":5.18
-         },
-         {
-            "iso":"BIH",
-            "value":5.16
-         },
-         {
-            "iso":"MNE",
-            "value":5.16
-         },
-         {
-            "iso":"DOM",
-            "value":5.16
-         },
-         {
-            "iso":"MAR",
-            "value":5.15
-         },
-         {
-            "iso":"HUN",
-            "value":5.14
-         },
-         {
-            "iso":"PAK",
-            "value":5.13
-         },
-         {
-            "iso":"LBN",
-            "value":5.13
-         },
-         {
-            "iso":"PRT",
-            "value":5.12
-         },
-         {
-            "iso":"MKD",
-            "value":5.12
-         },
-         {
-            "iso":"VNM",
-            "value":5.06
-         },
-         {
-            "iso":"TUN",
-            "value":5.05
-         },
-         {
-            "iso":"GRC",
-            "value":5.03
-         },
-         {
-            "iso":"TJK",
-            "value":5
-         },
-         {
-            "iso":"MNG",
-            "value":4.91
-         },
-         {
-            "iso":"LAO",
-            "value":4.88
-         },
-         {
-            "iso":"NGA",
-            "value":4.88
-         },
-         {
-            "iso":"HND",
-            "value":4.87
-         },
-         {
-            "iso":"IRN",
-            "value":4.81
-         },
-         {
-            "iso":"ZMB",
-            "value":4.8
-         },
-         {
-            "iso":"NPL",
-            "value":4.79
-         },
-         {
-            "iso":"PSE",
-            "value":4.75
-         },
-         {
-            "iso":"ALB",
-            "value":4.66
-         },
-         {
-            "iso":"BGD",
-            "value":4.64
-         },
-         {
-            "iso":"SLE",
-            "value":4.64
-         },
-         {
-            "iso":"IRQ",
-            "value":4.57
-         },
-         {
-            "iso":"NAM",
-            "value":4.57
-         },
-         {
-            "iso":"CMR",
-            "value":4.51
-         },
-         {
-            "iso":"ETH",
-            "value":4.51
-         },
-         {
-            "iso":"ZAF",
-            "value":4.46
-         },
-         {
-            "iso":"LKA",
-            "value":4.41
-         },
-         {
-            "iso":"IND",
-            "value":4.4
-         },
-         {
-            "iso":"MMR",
-            "value":4.39
-         },
-         {
-            "iso":"EGY",
-            "value":4.36
-         },
-         {
-            "iso":"ARM",
-            "value":4.36
-         },
-         {
-            "iso":"KEN",
-            "value":4.36
-         },
-         {
-            "iso":"UKR",
-            "value":4.32
-         },
-         {
-            "iso":"GHA",
-            "value":4.28
-         },
-         {
-            "iso":"COD",
-            "value":4.27
-         },
-         {
-            "iso":"GEO",
-            "value":4.25
-         },
-         {
-            "iso":"COG",
-            "value":4.24
-         },
-         {
-            "iso":"SEN",
-            "value":4.22
-         },
-         {
-            "iso":"BGR",
-            "value":4.22
-         },
-         {
-            "iso":"MRT",
-            "value":4.2
-         },
-         {
-            "iso":"ZWE",
-            "value":4.19
-         },
-         {
-            "iso":"MWI",
-            "value":4.16
-         },
-         {
-            "iso":"SDN",
-            "value":4.14
-         },
-         {
-            "iso":"GAB",
-            "value":4.12
-         },
-         {
-            "iso":"MLI",
-            "value":4.07
-         },
-         {
-            "iso":"HTI",
-            "value":4.03
-         },
-         {
-            "iso":"BWA",
-            "value":3.97
-         },
-         {
-            "iso":"COM",
-            "value":3.96
-         },
-         {
-            "iso":"CIV",
-            "value":3.92
-         },
-         {
-            "iso":"KHM",
-            "value":3.91
-         },
-         {
-            "iso":"AGO",
-            "value":3.87
-         },
-         {
-            "iso":"NER",
-            "value":3.86
-         },
-         {
-            "iso":"SSD",
-            "value":3.83
-         },
-         {
-            "iso":"TCD",
-            "value":3.76
-         },
-         {
-            "iso":"BFA",
-            "value":3.74
-         },
-         {
-            "iso":"UGA",
-            "value":3.74
-         },
-         {
-            "iso":"YEM",
-            "value":3.72
-         },
-         {
-            "iso":"MDG",
-            "value":3.69
-         },
-         {
-            "iso":"TZA",
-            "value":3.67
-         },
-         {
-            "iso":"LBR",
-            "value":3.62
-         },
-         {
-            "iso":"GIN",
-            "value":3.61
-         },
-         {
-            "iso":"RWA",
-            "value":3.52
-         },
-         {
-            "iso":"BEN",
-            "value":3.48
-         },
-         {
-            "iso":"AFG",
-            "value":3.36
-         },
-         {
-            "iso":"TGO",
-            "value":3.3
-         },
-         {
-            "iso":"SYR",
-            "value":3.07
-         },
-         {
-            "iso":"BDI",
-            "value":2.9
+         { "iso":"DNK", "value":7.53 },
+         { "iso":"CHE", "value":7.51 },
+         { "iso":"ISL", "value":7.5 },
+         { "iso":"NOR", "value":7.5 },
+         { "iso":"FIN", "value":7.41 },
+         { "iso":"CAN", "value":7.4 },
+         { "iso":"NLD", "value":7.34 },
+         { "iso":"NZL", "value":7.33 },
+         { "iso":"AUS", "value":7.31 },
+         { "iso":"SWE", "value":7.29 },
+         { "iso":"ISR", "value":7.27 },
+         { "iso":"AUT", "value":7.12 },
+         { "iso":"USA", "value":7.1 },
+         { "iso":"CRI", "value":7.09 },
+         { "iso":"PRI", "value":7.04 },
+         { "iso":"DEU", "value":6.99 },
+         { "iso":"BRA", "value":6.95 },
+         { "iso":"BEL", "value":6.93 },
+         { "iso":"IRL", "value":6.91 },
+         { "iso":"LUX", "value":6.87 },
+         { "iso":"MEX", "value":6.78 },
+         { "iso":"SGP", "value":6.74 },
+         { "iso":"GBR", "value":6.72 },
+         { "iso":"CHL", "value":6.7 },
+         { "iso":"PAN", "value":6.7 },
+         { "iso":"ARG", "value":6.65 },
+         { "iso":"CZE", "value":6.6 },
+         { "iso":"ARE", "value":6.57 },
+         { "iso":"URY", "value":6.55 },
+         { "iso":"MLT", "value":6.49 },
+         { "iso":"COL", "value":6.48 },
+         { "iso":"FRA", "value":6.48 },
+         { "iso":"THA", "value":6.47 },
+         { "iso":"SAU", "value":6.38 },
+         { "iso":"TWN", "value":6.38 },
+         { "iso":"QAT", "value":6.38 },
+         { "iso":"ESP", "value":6.36 },
+         { "iso":"DZA", "value":6.36 },
+         { "iso":"GTM", "value":6.32 },
+         { "iso":"SUR", "value":6.27 },
+         { "iso":"KWT", "value":6.24 },
+         { "iso":"BHR", "value":6.22 },
+         { "iso":"TTO", "value":6.17 },
+         { "iso":"VEN", "value":6.08 },
+         { "iso":"SVK", "value":6.08 },
+         { "iso":"SLV", "value":6.07 },
+         { "iso":"MYS", "value":6.01 },
+         { "iso":"NIC", "value":5.99 },
+         { "iso":"UZB", "value":5.99 },
+         { "iso":"ITA", "value":5.98 },
+         { "iso":"ECU", "value":5.98 },
+         { "iso":"BLZ", "value":5.96 },
+         { "iso":"JPN", "value":5.92 },
+         { "iso":"KAZ", "value":5.92 },
+         { "iso":"MDA", "value":5.9 },
+         { "iso":"RUS", "value":5.86 },
+         { "iso":"POL", "value":5.84 },
+         { "iso":"KOR", "value":5.84 },
+         { "iso":"BOL", "value":5.82 },
+         { "iso":"LTU", "value":5.81 },
+         { "iso":"BLR", "value":5.8 },
+         { "iso":"SVN", "value":5.77 },
+         { "iso":"PER", "value":5.74 },
+         { "iso":"TKM", "value":5.66 },
+         { "iso":"MUS", "value":5.65 },
+         { "iso":"LBY", "value":5.61 },
+         { "iso":"LVA", "value":5.56 },
+         { "iso":"CYP", "value":5.55 },
+         { "iso":"PRY", "value":5.54 },
+         { "iso":"ROU", "value":5.53 },
+         { "iso":"EST", "value":5.52 },
+         { "iso":"JAM", "value":5.51 },
+         { "iso":"HRV", "value":5.49 },
+         { "iso":"HKG", "value":5.46 },
+         { "iso":"SOM", "value":5.44 },
+         { "iso":"TUR", "value":5.39 },
+         { "iso":"IDN", "value":5.31 },
+         { "iso":"JOR", "value":5.3 },
+         { "iso":"AZE", "value":5.29 },
+         { "iso":"PHL", "value":5.28 },
+         { "iso":"CHN", "value":5.24 },
+         { "iso":"BTN", "value":5.2 },
+         { "iso":"KGZ", "value":5.18 },
+         { "iso":"SRB", "value":5.18 },
+         { "iso":"BIH", "value":5.16 },
+         { "iso":"MNE", "value":5.16 },
+         { "iso":"DOM", "value":5.16 },
+         { "iso":"MAR", "value":5.15 },
+         { "iso":"HUN", "value":5.14 },
+         { "iso":"PAK", "value":5.13 },
+         { "iso":"LBN", "value":5.13 },
+         { "iso":"PRT", "value":5.12 },
+         { "iso":"MKD", "value":5.12 },
+         { "iso":"VNM", "value":5.06 },
+         { "iso":"TUN", "value":5.05 },
+         { "iso":"GRC", "value":5.03 },
+         { "iso":"TJK", "value":5 },
+         { "iso":"MNG", "value":4.91 },
+         { "iso":"LAO", "value":4.88 },
+         { "iso":"NGA", "value":4.88 },
+         { "iso":"HND", "value":4.87 },
+         { "iso":"IRN", "value":4.81 },
+         { "iso":"ZMB", "value":4.8 },
+         { "iso":"NPL", "value":4.79 },
+         { "iso":"PSE", "value":4.75 },
+         { "iso":"ALB", "value":4.66 },
+         { "iso":"BGD", "value":4.64 },
+         { "iso":"SLE", "value":4.64 },
+         { "iso":"IRQ", "value":4.57 },
+         { "iso":"NAM", "value":4.57 },
+         { "iso":"CMR", "value":4.51 },
+         { "iso":"ETH", "value":4.51 },
+         { "iso":"ZAF", "value":4.46 },
+         { "iso":"LKA", "value":4.41 },
+         { "iso":"IND", "value":4.4 },
+         { "iso":"MMR", "value":4.39 },
+         { "iso":"EGY", "value":4.36 },
+         { "iso":"ARM", "value":4.36 },
+         { "iso":"KEN", "value":4.36 },
+         { "iso":"UKR", "value":4.32 },
+         { "iso":"GHA", "value":4.28 },
+         { "iso":"COD", "value":4.27 },
+         { "iso":"GEO", "value":4.25 },
+         { "iso":"COG", "value":4.24 },
+         { "iso":"SEN", "value":4.22 },
+         { "iso":"BGR", "value":4.22 },
+         { "iso":"MRT", "value":4.2 },
+         { "iso":"ZWE", "value":4.19 },
+         { "iso":"MWI", "value":4.16 },
+         { "iso":"SDN", "value":4.14 },
+         { "iso":"GAB", "value":4.12 },
+         { "iso":"MLI", "value":4.07 },
+         { "iso":"HTI", "value":4.03 },
+         { "iso":"BWA", "value":3.97 },
+         { "iso":"COM", "value":3.96 },
+         { "iso":"CIV", "value":3.92 },
+         { "iso":"KHM", "value":3.91 },
+         { "iso":"AGO", "value":3.87 },
+         { "iso":"NER", "value":3.86 },
+         { "iso":"SSD", "value":3.83 },
+         { "iso":"TCD", "value":3.76 },
+         { "iso":"BFA", "value":3.74 },
+         { "iso":"UGA", "value":3.74 },
+         { "iso":"YEM", "value":3.72 },
+         { "iso":"MDG", "value":3.69 },
+         { "iso":"TZA", "value":3.67 },
+         { "iso":"LBR", "value":3.62 },
+         { "iso":"GIN", "value":3.61 },
+         { "iso":"RWA", "value":3.52 },
+         { "iso":"BEN", "value":3.48 },
+         { "iso":"AFG", "value":3.36 },
+         { "iso":"TGO", "value":3.3 },
+         { "iso":"SYR", "value":3.07 },
+         { "iso":"BDI", "value":2.9
          }
       ]
    }
