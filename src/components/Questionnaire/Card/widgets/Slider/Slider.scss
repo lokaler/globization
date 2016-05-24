@@ -1,0 +1,20 @@
+:local(.component) {
+
+  composes: widget from '../widgets.scss';
+
+}
+
+.rc-slider-track {
+  background-color: #FD8D3C;
+}
+
+.rc-slider-handle {
+  border-color:#FD8D3C;
+  .mq-mobile & {
+    margin-left: -15px;
+    margin-top: -13px;
+    width: 30px;
+    height: 30px;
+    border:3px solid;
+  }
+}

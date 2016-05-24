@@ -3,9 +3,8 @@ import React, { PropTypes as PT } from 'react';
 import Rcslider from 'rc-slider';
 import Histogram from './SliderHistogram';
 import { sponLogger } from 'logic/logging';
-import styles from '../widgets.scss';
+import styles from './Slider.scss';
 import 'rc-slider/assets/index.css';
-import './Rcslider.scss';
 
 export default class Slider extends React.Component {
 
@@ -41,7 +40,7 @@ export default class Slider extends React.Component {
     }
 
     return (
-      <div className={ styles.widget }>
+      <div className={ styles.component }>
         { histogramData &&
           <Histogram
             min={ options.min }
