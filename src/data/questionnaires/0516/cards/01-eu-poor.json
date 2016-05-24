@@ -74,7 +74,7 @@
           },
           "EUpoor1": {
             "de": [
-              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet.",
+              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung, also fast 14 Millionen Menschen, armutsgefährdet.",
               "",
               "**{{ EUpoorCountry }}** ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
             ],
@@ -84,7 +84,7 @@
           },
           "EUpoor2": {
             "de": [
-              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet.",
+              "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung, also fast 14 Millionen Menschen, armutsgefährdet.",
               "",
               "Ihre Schätzung liegt niedriger als die Armutsgefährdungsquote in allen EU-Ländern. Am niedrigsten ist die Quote **{{ EUpoorMinCountry }}** mit 7,9 Prozent. "
             ],
@@ -94,7 +94,7 @@
           },
           "EUpoor3": {
             "de": [
-              "Gut geschätzt! Im Jahr 2014 waren in **Deutschland** rund 17 Prozent der Bevölkerung armutsgefährdet."
+              "Gut geschätzt! Im Jahr 2014 waren in **Deutschland** rund 17 Prozent der Bevölkerung, also fast 14 Millionen Menschen, armutsgefährdet."
             ],
             "en": [
               ""
@@ -102,7 +102,7 @@
           },
           "EUpoor4": {
             "de": [
-              "Ganz so hoch ist der Anteil nicht. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung armutsgefährdet. In **{{ EUpoorCountry }}** ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
+              "Ganz so hoch ist der Anteil nicht. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung, also fast 14 Millionen Menschen, armutsgefährdet. In **{{ EUpoorCountry }}** ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
             ],
             "en": [
               ""

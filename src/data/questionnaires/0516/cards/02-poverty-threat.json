@@ -7,7 +7,7 @@
     {
       "text": {
         "de": [
-          "##Sind Sie von Armut bedroht?##"
+          "# Sind Sie von Armut bedroht?"
 
         ],
         "en": [
@@ -119,9 +119,13 @@
 
           "povertyDanger": {
             "de": [
-              "In Deutschland gelten Sie damit als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum untersten Fünftel.![](http://lokaler.de/img/hu1.png) Im Histogramm rot eingerahmt sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das zweitunterste Fünftel verdient.",
+              "In Deutschland gelten Sie damit als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum untersten Fünftel.![](http://lokaler.de/img/hu1.png) **Im Diagramm
+ rot eingefärbt
+ sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das unterste Fünftel verdient.**",
               "",
-              "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Histogramm ganz rechts) durch jenes der am schlechtesten verdienenden (im Histogramm ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
+              "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Diagramm
+ ganz rechts) durch jenes der am schlechtesten verdienenden (im Diagramm
+ ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
 
 
             ],
@@ -131,7 +135,9 @@
           },
           "1quintil": {
             "de": [
-              "In Deutschland gelten Sie damit nicht als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum zweitunterste Fünftel.![](http://lokaler.de/img/hu1.png) Im Histogramm rot eingerahmt sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das zweitunterste Fünftel verdient."
+              "In Deutschland gelten Sie damit nicht als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum zweitunterste Fünftel.![](http://lokaler.de/img/hu1.png) **Im Diagramm
+ rot eingefärbt
+ sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das zweitunterste Fünftel verdient.**"
             ],
             "en": [
               ""
@@ -139,9 +145,13 @@
           },
           "2quintil": {
             "de": [
-              "In Deutschland gelten Sie damit nicht als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum zweitunterste Fünftel.![](http://lokaler.de/img/hu2.png) Im Histogramm rot eingerahmt sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das zweitunterste Fünftel verdient.",
+              "In Deutschland gelten Sie damit nicht als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum zweitunterste Fünftel.![](http://lokaler.de/img/hu2.png) **Im Diagramm
+ rot eingefärbt
+ sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das zweitunterste Fünftel verdient.**",
               "",
-              "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Histogramm ganz rechts) durch jenes der am schlechtesten verdienenden (im Histogramm ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
+              "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Diagramm
+ ganz rechts) durch jenes der am schlechtesten verdienenden (im Diagramm
+ ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
 
             ],
             "en": [
@@ -150,9 +160,13 @@
           },
           "3quintil": {
             "de": [
-              "In Deutschland gelten Sie damit nicht als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum mittleren Fünftel.![](http://lokaler.de/img/hu3.png) Im Histogramm rot eingerahmt sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das mittlerste Fünftel verdient.",
+              "In Deutschland gelten Sie damit nicht als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum mittleren Fünftel.![](http://lokaler.de/img/hu3.png) **Im Diagramm
+ rot eingefärbt
+ sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das mittlerste Fünftel verdient.**",
               "",
-              "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Histogramm ganz rechts) durch jenes der am schlechtesten verdienenden (im Histogramm ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
+              "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Diagramm
+ ganz rechts) durch jenes der am schlechtesten verdienenden (im Diagramm
+ ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
 
             ],
             "en": [
@@ -161,9 +175,13 @@
           },
           "4quintil": {
             "de": [
-              "In Deutschland gelten Sie damit nicht als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum zweitobersten Fünftel.![](http://lokaler.de/img/hu4.png) Im Histogramm rot eingerahmt sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das zweitoberste Fünftel verdient.",
+              "In Deutschland gelten Sie damit nicht als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum zweitobersten Fünftel.![](http://lokaler.de/img/hu4.png) **Im Diagramm
+ rot eingefärbt
+ sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das zweitoberste Fünftel verdient.**",
               "",
-              "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Histogramm ganz rechts) durch jenes der am schlechtesten verdienenden (im Histogramm ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
+              "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Diagramm
+ ganz rechts) durch jenes der am schlechtesten verdienenden (im Diagramm
+ ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
 
             ],
             "en": [
@@ -172,9 +190,13 @@
           },
           "5quintil": {
             "de": [
-              "In Deutschland gelten Sie damit nicht als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum obersten Fünftel.![](http://lokaler.de/img/hu5.png) Im Histogramm rot eingerahmt sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das oberste Fünftel verdient.",
+              "In Deutschland gelten Sie damit nicht als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum obersten Fünftel.![](http://lokaler.de/img/hu5.png) **Im Diagramm
+ rot eingefärbt
+ sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das oberste Fünftel verdient.**",
               "",
-              "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Histogramm ganz rechts) durch jenes der am schlechtesten verdienenden (im Histogramm ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
+              "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Diagramm
+ ganz rechts) durch jenes der am schlechtesten verdienenden (im Diagramm
+ ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
 
             ],
             "en": [
@@ -189,9 +211,13 @@
     {
       "text": {
         "de": [
-          "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Histogramm ganz rechts) durch jenes der am schlechtesten verdienenden (im Histogramm ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit.",
+          "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Diagramm
+ ganz rechts) durch jenes der am schlechtesten verdienenden (im Diagramm
+ ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit.",
           "",
-          "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Histogramm ganz rechts) durch jenes der am schlechtesten verdienenden (im Histogramm ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
+          "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Diagramm
+ ganz rechts) durch jenes der am schlechtesten verdienenden (im Diagramm
+ ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
 
 
         ],
