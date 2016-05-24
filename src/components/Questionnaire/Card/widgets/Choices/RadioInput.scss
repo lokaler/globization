@@ -1,7 +1,6 @@
 :local(.component) {
   input {
     margin-right: 7px;
-    margin-top: 1px;
     float: left;
 
     .mq-mobile & {
@@ -17,10 +16,8 @@
   float: left;
   margin-bottom: 6px;
   margin-left: 5px;
-  width: 100%;
 
   .label {
-    // margin-left: .5em;
-    width: 88%;
+    margin-left: .5em;
   }
 }
