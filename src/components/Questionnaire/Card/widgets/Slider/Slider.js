@@ -33,7 +33,11 @@ export default class Slider extends React.Component {
     const { id, questions, options, disabled, histogramData } = this.props;
     const sliderChangeBind = this.onChange.bind(this);
     const tipFormatter = this.tipFormatter.bind(this);
-    const unit = this.props.options.unit;
+    const unit = options.unit;
+    // const step = (options.max - options.min) / 5;
+    // const marks = {};
+    // range(5).forEach(i => marks[i * step] = i * step);
+    // console.log(marks);
 
     let value = questions.inputValues[id];
     if (isUndefined(value)) {
@@ -56,7 +60,8 @@ export default class Slider extends React.Component {
           defaultValue={ value }
           min={ options.min }
           max={ options.max }
-          step = { options.step || 1 }
+          step={ options.step || 1 }
+          // marks={ marks }
           onAfterChange={ sliderChangeBind }
           tipTransitionName="rc-slider-tooltip-zoom-down"
         />
