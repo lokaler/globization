@@ -23,13 +23,11 @@ export default class SliderHistogram extends React.Component {
       .map(i => {
         const a = (i) * step;
         const b = (i + 1) * step;
-        let count = 0;
 
-        for (const d in histogramData) {
-          if (d > a && d <= b) {
-            count += histogramData[d];
-          }
-        }
+        const count = Object.entries(histogramData)
+          .filter(k => (k[0] > a && k[0] <= b))
+          .map(k => k[1])
+          .reduce((prev, curr) => prev + curr, 0);
 
         return { key: a, value: count };
       });
