@@ -9,9 +9,11 @@ export default class SliderHistogram extends React.Component {
 
   render() {
     const { histogramData } = this.props;
-
     return (
-      <div className={ component } histogramData={ histogramData }>SliderHistogram</div>
+      <div className={ component }>
+        <h1>SliderHistogram</h1>
+        <code>{ JSON.stringify(histogramData) }</code>
+      </div>
     );
   }
 }

@@ -1,7 +1,11 @@
 import React, { PropTypes as PT } from 'react';
-import styles from '../../../Questionnaire.scss';
+import translate from 'logic/translate';
+import styles from './Choices.scss';
 import RadioInput from './RadioInput';
 import Histogram from './ChoicesHistogram';
+
+
+const noop = () => {}; // eslint-disable-line arrow-body-style
 
 export default class Choices extends React.Component {
 
@@ -26,14 +30,13 @@ export default class Choices extends React.Component {
 
     const Radios = options.choices.map((option) => {
       const [value, label] = option;
-      const noop = () => {}; // eslint-disable-line arrow-body-style
       const onClick = disabled ? noop : this.setValue.bind(this, value);
 
       return (
         <RadioInput
           key={ `${ id }_${ value }` }
           value={ value }
-          label={ label }
+          label={ translate(label) }
           checked={ value === currentValue }
           disabled={ disabled }
           onClick={ onClick }
@@ -42,7 +45,7 @@ export default class Choices extends React.Component {
     });
 
     return (
-      <div className={ styles.widget }>
+      <div className={ styles.component }>
         { Radios }
         { histogramData &&
           <Histogram histogramData={ histogramData }/>

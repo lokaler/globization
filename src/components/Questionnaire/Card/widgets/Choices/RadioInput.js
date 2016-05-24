@@ -1,5 +1,4 @@
 import React, { PropTypes as PT } from 'react';
-import translate from 'logic/translate';
 import styles from './RadioInput.scss';
 
 export default class RadioInput extends React.Component {
@@ -18,16 +17,18 @@ export default class RadioInput extends React.Component {
 
     return (
       <div className={ styles.component } onClick={ onClick }>
-        <input
-          type="radio"
-          value={ value }
-          checked={ checked }
-          onChange={ noop } // so react doesn't complain
-          disabled={ disabled }
-        />
-        <span className="label">
-          { translate(label) }
-        </span>
+        <div className={ styles.left }>
+          <input
+            type="radio"
+            value={ value }
+            checked={ checked }
+            onChange={ noop } // so react doesn't complain
+            disabled={ disabled }
+          />
+        </div>
+        <div className={ styles.right }>
+          { label }
+        </div>
       </div>
     );
   }

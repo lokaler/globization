@@ -1,0 +1,10 @@
+:local(.component) {
+
+  //border: 1px solid green;
+
+  composes: widget from '../widgets.scss';
+
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
