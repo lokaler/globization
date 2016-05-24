@@ -1,8 +1,8 @@
 {
   "key": "explore",
   "title": "Explore",
-  "dataset": null,
-  "view": null,
+  "dataset": "multiPov",
+  "view": "globe",
   "content": [
     {
       "text": {
