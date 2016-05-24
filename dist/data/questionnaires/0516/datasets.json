@@ -570,7 +570,7 @@
       "fixed":0,
       "domain":[
          0,
-         100
+         180
       ],
       "skala":[
          0,
@@ -792,7 +792,7 @@
          "en":""
       },
       "description":{
-         "de":"Anteil Bevölkerung mit mindestens Grundschulbildung",
+         "de":"Anteil Bevölkerung mit mindestens Grundschulbildung [%]",
          "en":""
       },
       "quelle":"UNESCO",

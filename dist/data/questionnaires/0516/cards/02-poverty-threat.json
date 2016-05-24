@@ -35,7 +35,7 @@
           "unit": "€",
           "min": 0,
           "value": 0,
-          "max": 20000,
+          "max": 12000,
           "step": 200
         }
       }
@@ -97,7 +97,7 @@
       "answer": {
         "answerKey": [
           "i.povertySubmitted",
-          "f.setDataset('poorEU')",
+          "f.setDataset('incomeDistEU')",
           "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 11839) && 'povertyDanger'",
           "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 11838 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 12819)) && '2quintil'",
           "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 12818 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 17552)) && '2quintil'",
