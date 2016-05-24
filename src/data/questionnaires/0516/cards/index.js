@@ -7,6 +7,5 @@ export default [
   require('./05-facets-poverty.json'),
   require('./06-mpi.json'),
   require('./07-money-luck.json'),
-  require('./08-explore.json'),
-
+  require('./08-explore.json')
 ];
