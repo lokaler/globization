@@ -9,7 +9,7 @@ export default class SliderHistogram extends React.Component {
     histogramData: PropTypes.object.isRequired,
     min: PropTypes.number.isRequired,
     max: PropTypes.number.isRequired,
-    unit: PropTypes.number.isRequired
+    unit: PropTypes.string.isRequired
   }
 
   // constructor(props){
@@ -23,8 +23,8 @@ export default class SliderHistogram extends React.Component {
 
     const data = d3.range(10)
       .map(i => {
-        const a = (i) * step;
-        const b = (i + 1) * step;
+        const a = min + (i) * step;
+        const b = min + (i + 1) * step;
 
         const count = Object.entries(histogramData)
           .filter(k => (k[0] > a && k[0] <= b))
