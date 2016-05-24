@@ -1,13 +1,15 @@
 import React, { PropTypes } from 'react';
 import { component } from './SliderHistogram.scss';
 import d3 from 'd3';
+import Tooltip from 'rc-tooltip';
 
 export default class SliderHistogram extends React.Component {
 
   static propTypes = {
     histogramData: PropTypes.object.isRequired,
     min: PropTypes.number.isRequired,
-    max: PropTypes.number.isRequired
+    max: PropTypes.number.isRequired,
+    unit: PropTypes.number.isRequired
   }
 
   // constructor(props){
@@ -52,14 +54,25 @@ export default class SliderHistogram extends React.Component {
     // const { histogramData } = this.props;
     // console.log(this.makeHistogramData());
 
+    const { min, max, unit } = this.props;
+    const step = (max - min) / 10;
+
     const histograms = this.makeHistogramData().map(d => (
-      <div
+      <Tooltip
+        transitionName="rc-slider-tooltip-zoom-down"
         key={ d.key }
-        style={{ height: `${ d.height }%`, bottom: `${ d.height }%` }}
-        className="bin"
+        placement="top"
+        trigger={['hover']}
+        overlay={<span>{ d.key } - { d.key + step } { unit }</span>}
       >
-        { d.value }
-      </div>
+        <div
+          key={ d.key }
+          style={{ height: `${ d.height }%`, bottom: `${ d.height }%` }}
+          className="bin"
+        >
+          { d.value }
+        </div>
+      </Tooltip>
     ));
 
     return (

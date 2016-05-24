@@ -33,6 +33,7 @@ export default class Slider extends React.Component {
     const { id, questions, options, disabled, histogramData } = this.props;
     const sliderChangeBind = this.onChange.bind(this);
     const tipFormatter = this.tipFormatter.bind(this);
+    const unit = this.props.options.unit;
 
     let value = questions.inputValues[id];
     if (isUndefined(value)) {
@@ -46,6 +47,7 @@ export default class Slider extends React.Component {
             min={ options.min }
             max={ options.max }
             histogramData={ histogramData }
+            unit={ unit }
           />
         }
         <Rcslider
