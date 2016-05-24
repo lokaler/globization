@@ -5,11 +5,11 @@ import cssModules from 'react-css-modules';
 import { compileExpression } from 'logic/questionnaires/expressions';
 import translate from 'logic/translate';
 import { isUndefined, includes } from 'lodash';
-import center from 'underscore.string/lrpad';
+import center from '../../../../../../node_modules/underscore.string/lrpad';
 import classNames from 'classnames';
-import Logger from './logging';
+import Logger from './../logging';
 import functions from 'logic/questionnaires/functions';
-import styles from './widgets.scss';
+import styles from './Answer.scss';
 
 @cssModules(styles)
 export default class Answer extends React.Component {
@@ -178,10 +178,13 @@ export default class Answer extends React.Component {
       }
     }
     const answerContent = MicroMustache.render(template, ctx);
-    const className = classNames('answer', answer.className && `answer-${ answer.className }`);
+    const className = classNames(
+      styles.component,
+      answer.className && `answer-${ answer.className }`
+    );
 
     return (
-      <div className={ className } styleName="widget">
+      <div className={ className }>
         <div >
           { debug &&
             <span style={{ color: 'green' }}>template: "{ templateKey }"</span>

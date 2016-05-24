@@ -3,7 +3,7 @@ import cssModules from 'react-css-modules';
 
 import Debug from './Debug/Debug';
 import Text from './widgets/Text';
-import Answer from './widgets/Answer';
+import Answer from './widgets/Answer/Answer';
 import AnswerQuiz from './widgets/AnswerQuiz';
 import Input from './widgets/Input';
 import Submit from './widgets/Submit';

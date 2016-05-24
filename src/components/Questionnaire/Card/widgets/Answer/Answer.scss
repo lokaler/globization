@@ -1,0 +1,57 @@
+:local(.component) {
+
+  composes: widget from '../widgets.scss';
+
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: rgba(154, 154, 154, 0.22);
+  color: #2B2B2B;
+
+  img {
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .sharing {
+    clear: both;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: left;
+    width: 100%;
+
+    .label {
+      float: left;
+      padding-top: 7px;
+    }
+    .share {
+      width: 102px;
+      height: 35px;
+
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      clear: none;
+      background-repeat: no-repeat;
+      padding-bottom: 0px;
+
+      &.en {
+        background-image: url("./img/sprite-socials-en.png");
+      }
+      &.de {
+        background-image: url("./img/sprite-socials.png");
+      }
+
+      &.twitter{
+        float: left;
+        background-position: -6px -56px;
+      }
+      &.facebook{
+        float: right;
+        background-position: -6px -8px;
+      }
+    }
+  }
+}
