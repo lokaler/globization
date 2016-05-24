@@ -25,9 +25,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["choice_b1", { "de": "Ungefähr so viel wie die Militärausgaben der USA im Jahr 2015", "en": "" }],
-            ["choice_b2", { "de": "Ungefähr so viel wie die Militärausgaben Deutschlands im Jahr 2015", "en": ""}],
-            ["choice_b3", { "de": "Ungefähr so viel wie die Militärausgaben Estlands im Jahr 2015", "en": " " }]
+            ["choice_b1", { "de": "So viel wie die Militärausgaben der USA im Jahr 2015", "en": "" }],
+            ["choice_b2", { "de": "So viel wie die Militärausgaben Deutschlands im Jahr 2015", "en": ""}],
+            ["choice_b3", { "de": "So viel wie die Militärausgaben Estlands im Jahr 2015", "en": " " }]
           ]
         }
       }
