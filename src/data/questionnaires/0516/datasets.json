@@ -6,7 +6,7 @@
         "en":""
      },
      "description":{
-        "de":"Mittleres Haushaltsnettoeinkommen (kaufkraftbereinigte US-Dollar)",
+        "de":"Mittleres Haushaltsnettoeinkommen (kaufkraftbereinigt in 1000 US-Dollar)",
         "en":""
      },
      "quelle":"OECD",
@@ -15,7 +15,7 @@
      "fixed":0,
      "domain":[
         0,
-        40000
+        40
      ],
      "skala":[
         0,
@@ -34,147 +34,147 @@
 
          {
            "iso": "AUS",
-           "value": 31588
+           "value": 31.588
          },
          {
            "iso": "AUT",
-           "value": 31173
+           "value": 31.173
          },
          {
            "iso": "BEL",
-           "value": 28307
+           "value": 28.307
          },
          {
            "iso": "CAN",
-           "value": 29365
+           "value": 29.365
          },
          {
            "iso": "CZE",
-           "value": 18404
+           "value": 18.404
          },
          {
            "iso": "DNK",
-           "value": 26491
+           "value": 26.491
          },
          {
            "iso": "FIN",
-           "value": 27927
+           "value": 27.927
          },
          {
            "iso": "FRA",
-           "value": 28799
+           "value": 28.799
          },
          {
            "iso": "DEU",
-           "value": 31252
+           "value": 31.252
          },
          {
            "iso": "GRC",
-           "value": 18575
+           "value": 18.575
          },
          {
            "iso": "HUN",
-           "value": 15442
+           "value": 15.442
          },
          {
            "iso": "ISL",
-           "value": 23965
+           "value": 23.965
          },
          {
            "iso": "IRL",
-           "value": 23917
+           "value": 23.917
          },
          {
            "iso": "ITA",
-           "value": 25166
+           "value": 25.166
          },
          {
            "iso": "JPN",
-           "value": 26111
+           "value": 26.111
          },
          {
            "iso": "KOR",
-           "value": 19510
+           "value": 19.510
          },
          {
            "iso": "LUX",
-           "value": 38951
+           "value": 38.951
          },
          {
            "iso": "MEX",
-           "value": 13085
+           "value": 13.085
          },
          {
            "iso": "NLD",
-           "value": 27888
+           "value": 27.888
          },
          {
            "iso": "NZL",
-           "value": 23815
+           "value": 23.815
          },
          {
            "iso": "NOR",
-           "value": 33492
+           "value": 33.492
          },
          {
            "iso": "POL",
-           "value": 17852
+           "value": 17.852
          },
          {
            "iso": "PRT",
-           "value": 20086
+           "value": 20.086
          },
          {
            "iso": "SVK",
-           "value": 17503
+           "value": 17.503
          },
          {
            "iso": "ESP",
-           "value": 22477
+           "value": 22.477
          },
          {
            "iso": "SWE",
-           "value": 29185
+           "value": 29.185
          },
          {
            "iso": "CHE",
-           "value": 33491
+           "value": 33.491
          },
          {
            "iso": "TUR",
-           "value": 14095
+           "value": 14.095
          },
          {
            "iso": "GBR",
-           "value": 27029
+           "value": 27.029
          },
          {
            "iso": "USA",
-           "value": 41355
+           "value": 41.355
          },
          {
            "iso": "BRA",
-           "value": 11664
+           "value": 11.664
          },
          {
            "iso": "CHL",
-           "value": 14533
+           "value": 14.533
          },
          {
            "iso": "EST",
-           "value": 15167
+           "value": 15.167
          },
          {
            "iso": "ISR",
-           "value": 22104
+           "value": 22.104
          },
          {
            "iso": "RUS",
-           "value": 19292
+           "value": 19.292
          },
          {
            "iso": "SVN",
-           "value": 19326
+           "value": 19.326
          }
        ]
   },
