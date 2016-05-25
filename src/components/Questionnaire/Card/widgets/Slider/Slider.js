@@ -46,7 +46,7 @@ export default class Slider extends React.Component {
 
     return (
       <div className={ styles.component }>
-        { histogramData &&
+        { histogramData && false &&
           <Histogram
             min={ options.min }
             max={ options.max }

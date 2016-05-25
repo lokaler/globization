@@ -47,7 +47,7 @@ export default class Choices extends React.Component {
     return (
       <div className={ styles.component }>
         { Radios }
-        { histogramData &&
+        { histogramData && false &&
           <Histogram histogramData={ histogramData }/>
         }
       </div>
