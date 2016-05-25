@@ -1,4 +1,183 @@
 [
+  {
+     "key":"nettoHousehold",
+     "name":{
+        "de":"Mittleres Haushaltsnettoeinkommen",
+        "en":""
+     },
+     "description":{
+        "de":"Mittleres Haushaltsnettoeinkommen (kaufkraftbereinigte US-Dollar)",
+        "en":""
+     },
+     "quelle":"OECD",
+     "link":"http://stats.oecd.org/Index.aspx?DataSetCode=BLI",
+     "unit":"$",
+     "fixed":0,
+     "domain":[
+        0,
+        40000
+     ],
+     "skala":[
+        0,
+        10,
+        20,
+        30
+     ],
+     "translate":[
+        0,
+        90
+     ],
+     "scale":1,
+     "colorSet":"Greens",
+     "colorNum":9,
+     "data":[
+
+         {
+           "iso": "AUS",
+           "value": 31588
+         },
+         {
+           "iso": "AUT",
+           "value": 31173
+         },
+         {
+           "iso": "BEL",
+           "value": 28307
+         },
+         {
+           "iso": "CAN",
+           "value": 29365
+         },
+         {
+           "iso": "CZE",
+           "value": 18404
+         },
+         {
+           "iso": "DNK",
+           "value": 26491
+         },
+         {
+           "iso": "FIN",
+           "value": 27927
+         },
+         {
+           "iso": "FRA",
+           "value": 28799
+         },
+         {
+           "iso": "DEU",
+           "value": 31252
+         },
+         {
+           "iso": "GRC",
+           "value": 18575
+         },
+         {
+           "iso": "HUN",
+           "value": 15442
+         },
+         {
+           "iso": "ISL",
+           "value": 23965
+         },
+         {
+           "iso": "IRL",
+           "value": 23917
+         },
+         {
+           "iso": "ITA",
+           "value": 25166
+         },
+         {
+           "iso": "JPN",
+           "value": 26111
+         },
+         {
+           "iso": "KOR",
+           "value": 19510
+         },
+         {
+           "iso": "LUX",
+           "value": 38951
+         },
+         {
+           "iso": "MEX",
+           "value": 13085
+         },
+         {
+           "iso": "NLD",
+           "value": 27888
+         },
+         {
+           "iso": "NZL",
+           "value": 23815
+         },
+         {
+           "iso": "NOR",
+           "value": 33492
+         },
+         {
+           "iso": "POL",
+           "value": 17852
+         },
+         {
+           "iso": "PRT",
+           "value": 20086
+         },
+         {
+           "iso": "SVK",
+           "value": 17503
+         },
+         {
+           "iso": "ESP",
+           "value": 22477
+         },
+         {
+           "iso": "SWE",
+           "value": 29185
+         },
+         {
+           "iso": "CHE",
+           "value": 33491
+         },
+         {
+           "iso": "TUR",
+           "value": 14095
+         },
+         {
+           "iso": "GBR",
+           "value": 27029
+         },
+         {
+           "iso": "USA",
+           "value": 41355
+         },
+         {
+           "iso": "BRA",
+           "value": 11664
+         },
+         {
+           "iso": "CHL",
+           "value": 14533
+         },
+         {
+           "iso": "EST",
+           "value": 15167
+         },
+         {
+           "iso": "ISR",
+           "value": 22104
+         },
+         {
+           "iso": "RUS",
+           "value": 19292
+         },
+         {
+           "iso": "SVN",
+           "value": 19326
+         }
+       ]
+  },
    {
       "key":"poorNation",
       "name":{
