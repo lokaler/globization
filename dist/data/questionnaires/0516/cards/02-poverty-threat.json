@@ -99,7 +99,7 @@
           "i.povertySubmitted",
           "f.setDataset('incomeDistEU')",
           "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 11839) && 'povertyDanger'",
-          "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 11838 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 12819)) && '2quintil'",
+          "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 11838 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 12819)) && '1quintil'",
           "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 12818 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 17552)) && '2quintil'",
           "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 17551 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 22524)) && '3quintil'",
           "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 22523 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 29973)) && '4quintil'",

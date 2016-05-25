@@ -76,7 +76,7 @@
             "de": [
               "Der Anteil ist etwas höher. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung, also fast 14 Millionen Menschen, armutsgefährdet.",
               "",
-              "**{{ EUpoorCountry }}** ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
+              "Die Armutsgefährdungsquote **{{ EUpoorCountry }}** ist ungefähr so hoch wie von Ihnen getippt."
             ],
             "en": [
               ""
