@@ -1,8 +1,8 @@
 {
   "key": "intro",
   "title": "Intro",
-  "dataset": null,
-  "view": null,
+  "dataset": "bmiWoman",
+  "view": "globe",
   "content": [
     {
       "roundChooser": true
