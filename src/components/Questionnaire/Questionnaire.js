@@ -65,7 +65,8 @@ export default class Questionnaire extends React.Component {
     const veryLastCard = activeCard === questions.cards.length - 1;
 
     if (lastCard) {
-      nextBtnLabel = 'last';
+      const label = questions.options.lastButtonLabel;
+      nextBtnLabel = label || 'last';
     } else if (veryLastCard) {
       nextBtnLabel = 'close';
     }

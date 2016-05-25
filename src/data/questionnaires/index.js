@@ -51,7 +51,8 @@ let questionnaires = {
       en: 'Poverty'
     },
     options: {
-      showBackButton: true
+      showBackButton: true,
+      lastButtonLabel: 'explore'
     },
     cards: cards0516,
     datasets: datasets0516
