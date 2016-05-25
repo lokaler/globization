@@ -12,7 +12,7 @@ export default class DataSetList extends React.Component {
   render() {
     const datasets = this.props.questions.datasets;
     const displayDatasets = datasets.filter(d =>
-      d.linkedSet ? d.linkedSet[0].key === d.key : true
+      d.linkedSet ? d.linkedSet[0].key === d.key : true && d.key !== 'none'
     );
 
     return (
