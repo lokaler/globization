@@ -63,8 +63,11 @@ export default class DotsComponent extends React.Component {
   }
 
   renderData() {
-    utils.log("dots render", this.props.xScale.domain(), this.props.yScale.domain(), this.props.questions.dataset.data.length)
+    //utils.log("dots render", this.props.xScale.domain(), this.props.yScale.domain(), this.props.questions.dataset.data.length)
 
+    // console.log(this.props.color.range().pop());
+
+    const color = this.props.color.range()[4];
     const x = this.props.xScale;
     const y = this.props.yScale;
     const data = this.props.questions.dataset.data;
@@ -76,6 +79,7 @@ export default class DotsComponent extends React.Component {
     item.enter()
       .append('circle')
       .attr('class', 'item')
+      .attr('fill', color)
       .style('opacity', 0)
       .on("mouseenter", this.mouseenter.bind(this))
       .on("mouseleave", this.mouseleave.bind(this))
