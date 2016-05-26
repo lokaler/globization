@@ -2,7 +2,7 @@
   "key": "eupoor",
   "title": "1. Karte - EU Armut",
   "view": "globe",
-  "dataset": "poorNation",
+  "dataset": "nettoHousehold",
   "content": [
     {
       "text": {
