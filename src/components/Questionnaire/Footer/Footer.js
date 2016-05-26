@@ -20,19 +20,18 @@ export default class Footer extends React.Component {
     const { questions, actions } = this.props;
     if (cardIndex !== questions.activeCard) {
       return () => {
-        let dataId = null;
         if (
           cardIndex < questions.cards.length
           && cardIndex > -1
         ) {
-          dataId = questions.cards[cardIndex].dataset;
           this.sendLogbuch();
         }
         else {
           cardIndex = 0;
         }
         sponLogger();
-        actions.setCard(cardIndex, dataId);
+        const datasetId = questions.cards[cardIndex].dataset;
+        actions.setCard(cardIndex, datasetId);
       };
     }
   }
