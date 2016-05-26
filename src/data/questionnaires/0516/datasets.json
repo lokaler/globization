@@ -11,7 +11,7 @@
      },
      "quelle":"OECD",
      "link":"http://stats.oecd.org/Index.aspx?DataSetCode=BLI",
-     "unit":"Tsd. $",
+     "unit":"Tsd. USD",
      "fixed":0,
      "domain":[
         0,
@@ -571,7 +571,7 @@
       },
       "quelle":"SIPRI",
       "link":"http://data.un.http://www.sipri.org/research/armaments/milex/milex_database/Data.aspx?d=MDG&f=seriesRowID%3a580",
-      "unit":"USD",
+      "unit":"Mrd. USD",
       "fixed":0,
       "domain":[
          0,

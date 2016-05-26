@@ -7,6 +7,36 @@
     {
       "text": {
         "de": [
+          "Den Link zum interaktiven Globus teilen:"
+        ],
+        "en": [
+          "Den Link zum interaktiven Globus teilen:"
+        ]
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [],
+        "answerContext": {
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeJbl', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeJbl', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')"
+        },
+
+        "templates": {
+          "default": {
+            "de": [
+              "<div class='sharing'>{{ twitterShare }} {{ facebookShare }}</div>"
+            ],
+            "en": [
+              "<div class='sharing'>{{ twitterShare }} {{ facebookShare }}</div>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "text": {
+        "de": [
           "Hier können Sie die Daten noch einmal in Ruhe erkunden:",
           "",
           "",

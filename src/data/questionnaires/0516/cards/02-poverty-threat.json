@@ -2,7 +2,7 @@
   "key": "poverty",
   "title": "2. Karte - Armut bedroht",
   "view": "globe",
-  "dataset": "poorNation",
+  "dataset": "nettoHousehold",
   "content": [
     {
       "text": {
