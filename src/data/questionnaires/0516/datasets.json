@@ -11,7 +11,7 @@
      },
      "quelle":"OECD",
      "link":"http://stats.oecd.org/Index.aspx?DataSetCode=BLI",
-     "unit":"$",
+     "unit":"Tsd. $",
      "fixed":0,
      "domain":[
         0,
@@ -34,147 +34,147 @@
 
          {
            "iso": "AUS",
-           "value": 31.588
+           "value": 31.6
          },
          {
            "iso": "AUT",
-           "value": 31.173
+           "value": 31.2
          },
          {
            "iso": "BEL",
-           "value": 28.307
+           "value": 28.3
          },
          {
            "iso": "CAN",
-           "value": 29.365
+           "value": 29.4
          },
          {
            "iso": "CZE",
-           "value": 18.404
+           "value": 18.4
          },
          {
            "iso": "DNK",
-           "value": 26.491
+           "value": 26.5
          },
          {
            "iso": "FIN",
-           "value": 27.927
+           "value": 27.9
          },
          {
            "iso": "FRA",
-           "value": 28.799
+           "value": 28.8
          },
          {
            "iso": "DEU",
-           "value": 31.252
+           "value": 31.3
          },
          {
            "iso": "GRC",
-           "value": 18.575
+           "value": 18.6
          },
          {
            "iso": "HUN",
-           "value": 15.442
+           "value": 15.4
          },
          {
            "iso": "ISL",
-           "value": 23.965
+           "value": 24.0
          },
          {
            "iso": "IRL",
-           "value": 23.917
+           "value": 24.0
          },
          {
            "iso": "ITA",
-           "value": 25.166
+           "value": 25.2
          },
          {
            "iso": "JPN",
-           "value": 26.111
+           "value": 26.1
          },
          {
            "iso": "KOR",
-           "value": 19.510
+           "value": 19.5
          },
          {
            "iso": "LUX",
-           "value": 38.951
+           "value": 39.0
          },
          {
            "iso": "MEX",
-           "value": 13.085
+           "value": 13.1
          },
          {
            "iso": "NLD",
-           "value": 27.888
+           "value": 27.9
          },
          {
            "iso": "NZL",
-           "value": 23.815
+           "value": 23.8
          },
          {
            "iso": "NOR",
-           "value": 33.492
+           "value": 33.5
          },
          {
            "iso": "POL",
-           "value": 17.852
+           "value": 17.9
          },
          {
            "iso": "PRT",
-           "value": 20.086
+           "value": 20.1
          },
          {
            "iso": "SVK",
-           "value": 17.503
+           "value": 17.5
          },
          {
            "iso": "ESP",
-           "value": 22.477
+           "value": 22.5
          },
          {
            "iso": "SWE",
-           "value": 29.185
+           "value": 29.2
          },
          {
            "iso": "CHE",
-           "value": 33.491
+           "value": 33.5
          },
          {
            "iso": "TUR",
-           "value": 14.095
+           "value": 14.1
          },
          {
            "iso": "GBR",
-           "value": 27.029
+           "value": 27.0
          },
          {
            "iso": "USA",
-           "value": 41.355
+           "value": 41.4
          },
          {
            "iso": "BRA",
-           "value": 11.664
+           "value": 11.7
          },
          {
            "iso": "CHL",
-           "value": 14.533
+           "value": 14.5
          },
          {
            "iso": "EST",
-           "value": 15.167
+           "value": 15.2
          },
          {
            "iso": "ISR",
-           "value": 22.104
+           "value": 22.1
          },
          {
            "iso": "RUS",
-           "value": 19.292
+           "value": 19.3
          },
          {
            "iso": "SVN",
-           "value": 19.326
+           "value": 19.3
          }
        ]
   },
