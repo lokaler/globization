@@ -96,7 +96,8 @@
     {
       "answer": {
         "answerKey": [
-          "i.povertySubmitted",
+          "i.povertySubmitted && !i.povertySubmitted",
+          "!i.povertySubmitted && 'notSubmitted'",
           "f.setDataset('incomeDistEU')",
           "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 11839) && 'povertyDanger'",
           "((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) > 11838 && ((i.sliderHomeIncome*12/(1+(i.sliderPersons-1)*0.5+i.sliderPersonsUnderFifteen*0.3)) < 12819)) && '1quintil'",
