@@ -16,7 +16,9 @@
     },
     {
       "answer": {
-        "answerKey": [],
+        "answerKey": [
+          "f.setView('globe')"
+        ],
         "answerContext": {
           "twitterShare": "f.shareButtonTwitter('http://spon.de/aeJbl', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')",
           "facebookShare": "f.shareButtonFacebook('http://spon.de/aeJbl', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')"
