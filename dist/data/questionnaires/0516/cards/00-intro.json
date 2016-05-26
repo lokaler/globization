@@ -2,7 +2,7 @@
   "key": "intro",
   "title": "Intro",
   "dataset": "nettoHousehold",
-  "view": null,
+  "view": "globe",
   "content": [
     {
       "roundChooser": true
