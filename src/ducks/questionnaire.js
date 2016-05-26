@@ -19,7 +19,7 @@ const ERROR_HISTOGRAM_DATA = 'ERROR_HISTOGRAM_DATA';
 const initialState = {
   validationError: null,
   questionnaires: {},
-  activeQuestionnaireId: '0516',
+  activeQuestionnaireId: '0316',
   activeCard: 0,
   inputValues: {},
   cards: [],

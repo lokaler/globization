@@ -12,6 +12,7 @@ const noneDataset = {
   key: 'none',
   data: [],
   translate: [0, 90],
+  domain: [0, 1],
   scale: 1
 };
 

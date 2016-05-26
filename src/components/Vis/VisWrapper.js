@@ -36,9 +36,9 @@ export default class Globe extends React.Component {
   componentWillReceiveProps(nextProps){
     utils.log("componentWillUpdate", nextProps)
     const dataset = nextProps.questions.dataset;
-    const colors = colorbrewer[dataset.colorSet][dataset.colorNum].filter((d,i) => i!==0);
 
     if(dataset && dataset.key !== 'none'){
+      const colors = colorbrewer[dataset.colorSet][dataset.colorNum].filter((d,i) => i!==0);
       this.color
         .range(colors)
         .domain(dataset.domain);
