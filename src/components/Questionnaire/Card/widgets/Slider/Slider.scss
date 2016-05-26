@@ -2,19 +2,39 @@
 
   composes: widget from '../widgets.scss';
 
-}
-
-.rc-slider-track {
-  background-color: #FD8D3C;
-}
-
-.rc-slider-handle {
-  border-color:#FD8D3C;
-  .mq-mobile & {
-    margin-left: -15px;
-    margin-top: -13px;
-    width: 30px;
-    height: 30px;
-    border:3px solid;
+  .rc-slider-track {
+    background-color: #FD8D3C;
   }
+
+  .rc-slider-handle {
+    border-color:#FD8D3C;
+    .mq-mobile & {
+      margin-left: -15px;
+      margin-top: -13px;
+      width: 30px;
+      height: 30px;
+      border:3px solid;
+    }
+  }
+
+  .r0416 {
+    .rc-slider-track {
+      background-color: #2171b5;
+    }
+    .rc-slider-handle {
+      border-color: #2171b5;
+    }
+  }
+  .r0516 {
+    .rc-slider-track {
+      background-color: #7D9F89;
+    }
+    .rc-slider-handle {
+      border-color: #7D9F89;
+    }
+  }
+
+
 }
+
+
