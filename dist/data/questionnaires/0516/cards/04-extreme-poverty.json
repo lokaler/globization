@@ -1,0 +1,88 @@
+{
+  "key": "extremePoverty",
+  "title": "4. Karte - Militärausgaben",
+  "dataset": "lessThan125USD",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Extreme Armut bekämpfen",
+          "",
+          "Bis zum Jahr 2030 soll es keine extreme Armut mehr auf der Welt geben – dieses Ziel haben sich die Vereinten Nationen gesetzt.",
+          "",
+          "**Angenommen, man könnte das Geld einfach an die Armen verteilen: Welcher Betrag wäre pro Jahr nötig, damit alle heute in Armut lebenden Menschen mindestens 1,25$ pro Tag zur Verfügung haben?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          ""
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "militaryExp",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["choice_b1", { "de": "So viel wie die Militärausgaben der USA im Jahr 2015", "en": "" }],
+            ["choice_b2", { "de": "So viel wie die Militärausgaben Deutschlands im Jahr 2015", "en": ""}],
+            ["choice_b3", { "de": "So viel wie die Militärausgaben Estlands im Jahr 2015", "en": " " }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "militaryExpSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.militaryExp && !i.militaryExpSubmitted",
+          "!i.militaryExpSubmitted && 'notSubmitted'",
+          "f.setDataset('militaryExp2015')",
+          "f.panToCountry('USA') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.militaryExp"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
+          "allAnswered": {
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
+          },
+          "choice_b1": {
+            "de": [
+              "Richtig! Bei 1,2 Milliarden Menschen in extremer Armut bräuchte man jährlich etwa 548 Milliarden Dollar. Die Militärausgaben im Jahr 2015 der USA betrugen nur wenig mehr, nämlich 596 Milliarden US-Dollar."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_b2": {
+            "de": [
+              "Etwas mehr Geld bräuchte man schon. Bei 1,2 Milliarden Menschen in extremer Armut würden jährlich etwa 548 Milliarden Dollar benötigt. Das ist etwas weniger als die Militärausgaben der USA mit 596 Milliarden Dollar. Deutschland gab 2015 mit 39 Milliarden Dollar wesentlich weniger für militärische Zwecke aus."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_b3": {
+            "de": [
+              "Da bräuchte man schon wesentlich mehr Geld. Bei 1,2 Milliarden Menschen in extremer Armut würden jährlich etwa 548 Milliarden Dollar benötigt. Das ist etwas weniger als die Militärausgaben der USA mit 596 Milliarden Dollar und viel mehr als die 0,5 Milliarden Dollar, die Estland im Jahr 2015 für militärische Zwecke ausgab."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

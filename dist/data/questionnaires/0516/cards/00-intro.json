@@ -1,0 +1,33 @@
+{
+  "key": "intro",
+  "title": "Intro",
+  "dataset": "nettoHousehold",
+  "view": "globe",
+  "content": [
+    {
+      "roundChooser": true
+    },
+    {
+      "text": {
+        "de": [
+          "# ÜberMorgen-Explorer",
+          "",
+          "Fühlen Sie sich arm? Deutschland ist eins der reichsten Länder der Erde – und doch leben auch hier Menschen in Not. Was genau bedeutet also Armut und wo auf der Welt sind die Menschen auf welche Weise arm? ",
+          "",
+          "Gehen Sie mit dem interaktiven Globus auf Entdeckungsreise!",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
+        ],
+        "en": [
+          "# BeyondTomorrow Explorer",
+          "",
+          "",
+          "",
+                    "Tip: In your web browser, you can move or click on the data globe at any time and may also choose among different views. Try it out!",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Let's go</div>"
+        ]
+      }
+    }
+  ]
+}

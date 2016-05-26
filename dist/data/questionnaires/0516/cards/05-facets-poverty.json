@@ -1,0 +1,79 @@
+{
+  "key": "facettes",
+  "title": "5. Karte - Facetten Armut",
+  "dataset": "militaryExp2015",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Facetten der Armut messen",
+          "",
+          "Die Armutsgrenze von 1,25$ pro Tag ist sehr umstritten: Viele Menschen haben mehr Geld zur Verfügung und sind dennoch bettelarm. Diese Menschen soll der Multidimensionale Armutsindex (MPI) erfassen. Er bildet ab, inwiefern jemand in den Bereichen Gesundheit, Bildung und Lebensstandard benachteiligt ist.",
+          "",
+          "**Dabei wird zum Beispiel auf folgende Aspekte geschaut (klicken Sie auf den Knopf, um die Daten zum Thema anzeigen zu lassen):**"
+        ],
+        "en": [
+          " # ",
+          "",
+          ""
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "facettePov",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["choice_c1", { "de": "Kindersterblichkeit", "en": "" }],
+            ["choice_c2", { "de": "Zugang zu Grundschulbildung", "en": ""}],
+            ["choice_c3", { "de": "Zugang zu Sanitäranlagen", "en": " " }]
+          ]
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.facettePov === 'choice_c1' && f.setDataset('childMortality') && 'choice_c1'",
+          "i.facettePov === 'choice_c2' && f.setDataset('primaryEdu') && 'choice_c2'",
+          "i.facettePov === 'choice_c3' && f.setDataset('accessSanitary') && 'choice_c3'"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
+          "allAnswered": {
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
+          },
+          "choice_c1": {
+            "de": [
+              "Richtig! Bei 1,2 Milliarden Menschen in extremer Armut bräuchte man jährlich etwa 548 Milliarden Dollar. Die Militärausgaben im Jahr 2015 der USA betrugen nur wenig mehr, nämlich 596 Milliarden US-Dollar."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_c2": {
+            "de": [
+              "Etwas mehr Geld bräuchte man schon. Bei 1,2 Milliarden Menschen in extremer Armut würden jährlich etwa 548 Milliarden Dollar benötigt. Das ist etwas weniger als die Militärausgaben der USA mit 596 Milliarden Dollar. Deutschland gab 2015 mit 39 Milliarden Dollar wesentlich weniger für militärische Zwecke aus."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_c3": {
+            "de": [
+              "Da bräuchte man schon wesentlich mehr Geld. Bei 1,2 Milliarden Menschen in extremer Armut würden jährlich etwa 548 Milliarden Dollar benötigt. Das ist etwas weniger als die Militärausgaben der USA mit 596 Milliarden Dollar und viel mehr als die 0,5 Milliarden Dollar, die Estland im Jahr 2015 für militärische Zwecke ausgab."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

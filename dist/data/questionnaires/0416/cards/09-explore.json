@@ -1,7 +1,7 @@
 {
   "key": "explore",
   "title": "Explore",
-  "dataset": null,
+  "dataset": "alcoholConsume",
   "view": null,
   "content": [
     {

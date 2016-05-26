@@ -1,0 +1,85 @@
+{
+  "key": "happymoney",
+  "title": "7. Karte - happy Money",
+  "dataset": "multiPov",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Macht Geld glücklich?",
+          "",
+          "**Wie wichtig ist Wohlstand zum Glücklichsein? Welchen Einfluss auf das Glück der Menschen hat zum Beispiel das Pro-Kopf-Bruttoinlandsprodukt (BIP) des Heimatlandes?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          ""
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "moneyHappy",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["choice_e1", { "de": "Gar keinen. Gerade in Ländern mit niedrigem BIP pro Kopf sind die Menschen meist viel zufriedener als in Industrienationen mit hohem BIP.", "en": "" }],
+            ["choice_e2", { "de": "Das BIP ist ein wichtiger Faktor unter mehreren. ", "en": ""}],
+            ["choice_e3", { "de": "Das BIP ist sogar der einzige Faktor, der einen Einfluss auf das Glücksempfinden der Menschen zu haben scheint.", "en": " " }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "moneyHappySubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.moneyHappy && !i.moneyHappySubmitted",
+          "!i.moneyHappySubmitted && 'notSubmitted'",
+          "f.setDataset('happyWorld')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('scatter')",
+          "i.moneyHappy"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
+          "allAnswered": {
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
+          },
+          "choice_e1": {
+            "de": [
+              "Falsch! Nach dem Welt-Glücks-Bericht 2016 lässt sich das unterschiedliche Glücksempfinden in verschiedenen Ländern vor allem durch die Unterschiede im Pro-Kopf-BIP, der Aussicht auf ein langes gesundes Leben und der sozialen Unterstützung erklären."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_e2": {
+            "de": [
+              "Richtig! Nach dem Welt-Glücks-Bericht 2016 lässt sich das unterschiedliche Glücksempfinden in verschiedenen Ländern vor allem durch die Unterschiede im Pro-Kopf-BIP, der Aussicht auf ein langes gesundes Leben und der sozialen Unterstützung erklären."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_e3": {
+            "de": [
+              "Falsch! Nach dem Welt-Glücks-Bericht 2016 hängt das unterschiedliche Glücksempfinden in verschiedenen Ländern neben dem Pro-Kopf-BIP auch stark mit der Aussicht auf ein langes gesundes Leben und der sozialen Unterstützung zusammen."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
