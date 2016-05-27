@@ -21,11 +21,11 @@
         "en": [
           "# BeyondTomorrow Explorer",
           "",
+          "Do you feel poor? Germany is one of the richest countries in the world, yet there are plenty of people here too who live in need. So what is the true definition of poverty? And where in the world are people poor, and in which ways?",
           "",
+                    "Embark on a voyage of discovery with our interactive globe!",
           "",
-                    "Tip: In your web browser, you can move or click on the data globe at any time and may also choose among different views. Try it out!",
-          "",
-          "<div class='losButton' data-onclick='onStartClick'>Let's go</div>"
+          "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
         ]
       }
     }

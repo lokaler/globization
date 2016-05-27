@@ -44,7 +44,7 @@
           "!i.militaryExpSubmitted && 'notSubmitted'",
           "f.setDataset('militaryExp2015')",
           "f.panToCountry('USA') && false",
-          "f.isMobile() && f.setView('map')",
+          "f.isMobile() && f.setView('globe')",
           "!f.isMobile() && f.setView('globe')",
           "i.militaryExp"
         ],

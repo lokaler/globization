@@ -1,0 +1,46 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/5.0.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'deployLive' ]
+2 info using npm@3.3.9
+3 info using node@v5.0.0
+4 verbose run-script [ 'predeployLive', 'deployLive', 'postdeployLive' ]
+5 info lifecycle globization@0.0.1~predeployLive: globization@0.0.1
+6 silly lifecycle globization@0.0.1~predeployLive: no script for predeployLive, continuing
+7 info lifecycle globization@0.0.1~deployLive: globization@0.0.1
+8 verbose lifecycle globization@0.0.1~deployLive: unsafe-perm in lifecycle true
+9 verbose lifecycle globization@0.0.1~deployLive: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/lklr/GitHub/globization2/node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/MacGPG2/bin
+10 verbose lifecycle globization@0.0.1~deployLive: CWD: /Users/lklr/GitHub/globization2
+11 silly lifecycle globization@0.0.1~deployLive: Args: [ '-c',
+11 silly lifecycle   'NODE_ENV=production npm run test && babel-node tools/build.js && ./sbin/deploy.sh' ]
+12 silly lifecycle globization@0.0.1~deployLive: Returned: code: 1  signal: null
+13 info lifecycle globization@0.0.1~deployLive: Failed to exec deployLive script
+14 verbose stack Error: globization@0.0.1 deployLive: `NODE_ENV=production npm run test && babel-node tools/build.js && ./sbin/deploy.sh`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:233:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:818:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid globization@0.0.1
+16 verbose cwd /Users/lklr/GitHub/globization2/src/data/questionnaires/0516
+17 error Darwin 15.4.0
+18 error argv "/usr/local/Cellar/node/5.0.0/bin/node" "/usr/local/bin/npm" "run" "deployLive"
+19 error node v5.0.0
+20 error npm  v3.3.9
+21 error code ELIFECYCLE
+22 error globization@0.0.1 deployLive: `NODE_ENV=production npm run test && babel-node tools/build.js && ./sbin/deploy.sh`
+22 error Exit status 1
+23 error Failed at the globization@0.0.1 deployLive script 'NODE_ENV=production npm run test && babel-node tools/build.js && ./sbin/deploy.sh'.
+23 error This is most likely a problem with the globization package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     NODE_ENV=production npm run test && babel-node tools/build.js && ./sbin/deploy.sh
+23 error You can get their info via:
+23 error     npm owner ls globization
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
