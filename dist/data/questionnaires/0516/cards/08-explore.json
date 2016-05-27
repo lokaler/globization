@@ -20,8 +20,8 @@
           "f.setView('globe')"
         ],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeJbl', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeJbl', 'Ihre Gesundheit im weltweiten Vergleich: Der #ÜberMorgen-Explorer')"
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeKPj', 'Der #ÜberMorgen-Explorer: Wissen Sie, wo die Welt wie arm ist?')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeKPj', 'Der #ÜberMorgen-Explorer: Wissen Sie, wo die Welt wie arm ist?')"
         },
 
         "templates": {
