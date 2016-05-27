@@ -3,10 +3,7 @@
 :local(.container) {
   overflow: hidden;
   display: flex;
-
   background: #FFF;
-
-
 
   .mq-mobile & {
     flex-direction: column;
