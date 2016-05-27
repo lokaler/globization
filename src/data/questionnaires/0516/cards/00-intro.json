@@ -1,0 +1,33 @@
+{
+  "key": "intro",
+  "title": "Intro",
+  "dataset": "nettoHousehold",
+  "view": "globe",
+  "content": [
+    {
+      "roundChooser": true
+    },
+    {
+      "text": {
+        "de": [
+          "# ÜberMorgen-Explorer",
+          "",
+          "Fühlen Sie sich arm? Deutschland ist eins der reichsten Länder der Erde – und doch leben auch hier Menschen in Not. Was genau bedeutet also Armut und wo auf der Welt sind die Menschen auf welche Weise arm? ",
+          "",
+          "Gehen Sie mit dem interaktiven Globus auf Entdeckungsreise!",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
+        ],
+        "en": [
+          "# BeyondTomorrow Explorer",
+          "",
+          "Do you feel poor? Germany is one of the richest countries in the world, yet there are plenty of people here too who live in need. So what is the true definition of poverty? And where in the world are people poor, and in which ways?",
+          "",
+                    "Embark on a voyage of discovery with our interactive globe!",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
+        ]
+      }
+    }
+  ]
+}
