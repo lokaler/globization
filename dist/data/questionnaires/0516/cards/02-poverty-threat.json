@@ -11,8 +11,7 @@
 
         ],
         "en": [
-
-          ""
+          "# Are You at Risk of Poverty?"
         ]
       }
     },
@@ -23,7 +22,7 @@
           "**Wie steht es bei Ihnen Zuhause? Welches Nettoeinkommen steht in Ihrem Haushalt monatlich zur Verfügung?**"
         ],
         "en": [
-          "****"
+          "**What is the situation like in your home? What is your household's monthly net income?**"
         ]
       }
     },
@@ -47,7 +46,7 @@
           "**Wie viele Personen über 14 Jahren leben in Ihrem Haushalt?**"
         ],
         "en": [
-          "****"
+          "**How many people over the age of 14 live in your household?**"
         ]
       }
     },
@@ -71,7 +70,7 @@
           "**Wie viele Personen unter 15 Jahren leben in Ihrem Haushalt?**"
         ],
         "en": [
-          "** **"
+          "**How many people under the age of 14 live in your household?**"
         ]
       }
     },
@@ -123,11 +122,11 @@
               "In Deutschland gelten Sie damit als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum untersten Fünftel.![](data/questionnaires/0516/assets/histogram/hu1.png) **Im Diagramm rot eingefärbt sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das unterste Fünftel verdient.**",
                "",
               "Wie ungleich das Einkommen innerhalb der Bevölkerung verteilt ist, drückt das sogenannte S80/S20-Verhältnis aus. Um es zu berechnen, teilt man das Gesamteinkommen der am besten verdienenden 20 Prozent der Bevölkerung (im Diagramm ganz rechts) durch jenes der am schlechtesten verdienenden (im Diagramm ganz links). Diese Größe ist auf dem Globus dargestellt – je größer der Wert, desto stärker die Ungleichheit."
-
-
             ],
             "en": [
-              ""
+              "At that income level, you are considered to be at risk of poverty in Germany. If we divide the German population into five groups of the same size according to income, you belong to the lowest fifth.![](data/questionnaires/0516/assets/histogram/hu1.png) **In the red-framed area of the histogram chart, you can see the share of Germany's total income earned by the lowest fifth.**",
+            "",
+            "The so-called S80/S20 ratio measures the inequality of income distribution among a population. It is calculated by dividing the total income received by the 20 percent of the population with the highest earnings (to the far right of the histogram) by the income received by the lowest 20 percent (on the left of the histogram). The resulting ratio is displayed on the globe -- the higher the value, the greater the inequality."
             ]
           },
           "1quintil": {
@@ -135,7 +134,7 @@
               "In Deutschland gelten Sie damit nicht als armutsgefährdet. Teilt man die deutsche Bevölkerung nach Einkommen in fünf gleich große Gruppen, gehören Sie zum untersten Fünftel.![](data/questionnaires/0516/assets/histogram/hu1.png) **Im Diagramm rot eingefärbt sehen Sie, welchen Anteil des Gesamteinkommens in Deutschland das unterste Fünftel verdient.**"
             ],
             "en": [
-              ""
+              "At that income level, you are not considered to be at risk of poverty in Germany. If we divide the German population into five groups of the same size according to income, you belong to the lowest fifth.![](data/questionnaires/0516/assets/histogram/hu1.png) **In the red-framed area of the histogram chart, you can see the share of Germany's total income earned by the lowest fifth.**"
             ]
           },
           "2quintil": {
@@ -146,7 +145,9 @@
 
             ],
             "en": [
-              ""
+              "At that income level, you are not considered to be at risk of poverty in Germany. If we divide the German population into five groups of the same size according to income, you belong to the second-lowest fifth.![](data/questionnaires/0516/assets/histogram/hu2.png) **In the red-framed area of the histogram chart, you can see the share of Germany's total income earned by the second-lowest fifth.**",
+                "",
+                "The so-called S80/S20 ratio measures the inequality of income distribution among a population. It is calculated by dividing the total income received by the 20 percent of the population with the highest earnings (to the far right of the histogram) by the income received by the lowest 20 percent (on the left of the histogram). The resulting ratio is displayed on the globe -- the higher the value, the greater the inequality."
             ]
           },
           "3quintil": {
@@ -157,7 +158,9 @@
 
             ],
             "en": [
-              ""
+              "At that income level, you are not considered to be at risk of poverty in Germany. If we divide the German population into five groups of the same size according to income, you belong to the middle fifth.![](data/questionnaires/0516/assets/histogram/hu3.png) **In the red-framed area of the histogram chart, you can see the share of Germany's total income earned by the middle fifth.**",
+                "",
+                "The so-called S80/S20 ratio measures the inequality of income distribution among a population. It is calculated by dividing the total income received by the 20 percent of the population with the highest earnings (to the far right of the histogram) by the income received by the lowest 20 percent (on the left of the histogram). The resulting ratio is displayed on the globe -- the higher the value, the greater the inequality."
             ]
           },
           "4quintil": {
@@ -168,7 +171,9 @@
 
             ],
             "en": [
-              ""
+              "At that income level, you are not considered to be at risk of poverty in Germany. If we divide the German population into five groups of the same size according to income, you belong to the second-highest fifth.![](data/questionnaires/0516/assets/histogram/hu4.png) **In the red-framed area of the histogram chart, you can see the share of Germany's total income earned by the second-highest fifth.**",
+                "",
+                "The so-called S80/S20 ratio measures the inequality of income distribution among a population. It is calculated by dividing the total income received by the 20 percent of the population with the highest earnings (to the far right of the histogram) by the income received by the lowest 20 percent (on the left of the histogram). The resulting ratio is displayed on the globe -- the higher the value, the greater the inequality."
             ]
           },
           "5quintil": {
@@ -179,7 +184,9 @@
 
             ],
             "en": [
-              ""
+              "At that income level, you are not considered to be at risk of poverty in Germany. If we divide the German population into five groups of the same size according to income, you belong to the highest fifth.![](data/questionnaires/0516/assets/histogram/hu5.png) **In the red-framed area of the histogram chart, you can see the share of Germany's total income earned by the highest fifth.**",
+                "",
+                "The so-called S80/S20 ratio measures the inequality of income distribution among a population. It is calculated by dividing the total income received by the 20 percent of the population with the highest earnings (to the far right of the histogram) by the income received by the lowest 20 percent (on the left of the histogram). The resulting ratio is displayed on the globe -- the higher the value, the greater the inequality."
             ]
 
           }

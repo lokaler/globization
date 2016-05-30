@@ -11,9 +11,9 @@
           "**Tippen Sie: In welchem dieser Länder ist der größte Anteil der Bevölkerung laut Multidimensionalem Armutsindex (MPI) extrem arm?**"
         ],
         "en": [
-          " # ",
+          " # Where People Are Poor According to MPI",
           "",
-          ""
+          "**Can you guess in which of the following countries the greatest share of the population suffers from extreme poverty according to the Multidimensional Poverty Index (MPI)?**"
         ]
       }
     },
@@ -23,9 +23,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["choice_d1", { "de": "Im Niger", "en": "" }],
-            ["choice_d2", { "de": "In Liberia", "en": ""}],
-            ["choice_d3", { "de": "In Thailand", "en": " " }]
+            ["choice_d1", { "de": "Im Niger", "en": "In Niger" }],
+            ["choice_d2", { "de": "In Liberia", "en": "In Liberia"}],
+            ["choice_d3", { "de": "In Thailand", "en": "In Thailand" }]
           ]
         }
       }
@@ -60,7 +60,7 @@
               "Richtig! Laut der 1,25$-Armutsdefinition leben zwar noch mehr extrem arme Menschen in Liberia, schaut man jedoch auf den MPI, sieht die Sache anders aus: Im **Niger** sind demnach fast Dreiviertel der Bevölkerung sehr arm, in Liberia hingegen rund 35 Prozent. Im Bereich “Zugang zu Bildung” schneidet Liberia nämlich wesentlich besser ab."
             ],
             "en": [
-              ""
+              "Correct! According to the $1.25-per-day definition of poverty, more people suffer from extreme poverty in Liberia, but the results are different if you look at the MPI: According to that measurement, almost three-quarters of the population in **Niger** is extremely poor. In Liberia, it is 35 percent. When it comes to 'access to education', Liberia is significantly ahead of Niger."
             ]
           },
           "choice_d2": {
@@ -68,7 +68,7 @@
               "Falsch! Laut der 1,25$-Armutsdefinition leben zwar noch mehr extrem arme Menschen in Liberia, schaut man jedoch auf den MPI, sieht die Sache anders aus: Im Niger sind demnach fast Dreiviertel der Bevölkerung sehr arm, in Liberia hingegen rund 35 Prozent. Im Bereich “Zugang zu Bildung” schneidet Liberia nämlich wesentlich besser ab."
             ],
             "en": [
-              ""
+              "Wrong! According to the $1.25-per-day definition of poverty, more people suffer from extreme poverty in Liberia, but the results are different if you look at the MPI: According to that measurement, almost three-quarters of the population in Niger is extremely poor. In Liberia, it is 35 percent. When it comes to 'access to education', Liberia is significantly ahead of Niger."
             ]
           },
           "choice_d3": {
@@ -76,7 +76,7 @@
               "Nein. In Thailand sind sowohl nach der 1,25$-Armutsdefinition als auch laut MPI nur wenige Menschen von extremer Armut betroffen, nämlich 0,3 beziehungsweise 0,1 Prozent der Bevölkerung. Im Niger hingegen sind laut MPI fast Dreiviertel der Bevölkerung sehr arm, in Liberia rund 35 Prozent. Im Bereich “Zugang zu Bildung” schneidet Liberia nämlich wesentlich besser ab."
             ],
             "en": [
-              ""
+              " No. According to both the $1.25-per-day definition of poverty and the MPI, only very few people in Thailand suffer from extreme poverty, namely 0.3 percent or 0.1 percent of the population, respectively. In Niger, by contrast, almost three-quarters of the population is extremely poor and in Liberia, around 35 percent. When it comes to 'access to education', Liberia is significantly ahead of Niger."
             ]
           }
         }

@@ -12,7 +12,9 @@
           "In der Europäischen Union gilt offiziell als armutsgefährdet, wer weniger als 60 Prozent des mittleren Einkommens zur Verfügung hat."
         ],
         "en": [
-          "Text"
+          "# Poverty in the EU",
+          "",
+          "In the European Union, those who earn less than 60 percent of the median income are considered to be at risk of poverty."
         ]
       }
     },
@@ -22,7 +24,7 @@
           "**Schätzen Sie: Welcher Anteil der deutschen Bevölkerung ist nach dieser Definition von Armut bedroht?**"
         ],
         "en": [
-          "** **"
+          "**Take a guess: What share of the German population is at risk of poverty according to this definition?**"
         ]
       }
     },
@@ -79,7 +81,9 @@
               "Die Armutsgefährdungsquote **{{ EUpoorCountry }}** ist ungefähr so hoch wie von Ihnen getippt."
             ],
             "en": [
-              ""
+              "The share is actually a bit higher. In 2014, around 17 percent of the population -- almost 14 million people -- was at risk of poverty.",
+              "",
+              "The at-risk-of-poverty rate **{{ EUpoorCountry }}** is roughly equivalent to your guess."
             ]
           },
           "EUpoor2": {
@@ -89,7 +93,9 @@
               "Ihre Schätzung liegt niedriger als die Armutsgefährdungsquote in allen EU-Ländern. Am niedrigsten ist die Quote **{{ EUpoorMinCountry }}** mit 7,9 Prozent. "
             ],
             "en": [
-              ""
+              "The share is actually a bit higher. In 2014, around 17 percent of the population -- almost 14 million people -- was at risk of poverty.",
+              "",
+              "Your guess is lower than the at-risk-of-poverty rate in all EU member states. The lowest share can be found **{{ EUpoorMinCountry }}**, at 7.9 percent"
             ]
           },
           "EUpoor3": {
@@ -97,7 +103,7 @@
               "Gut geschätzt! Im Jahr 2014 waren in **Deutschland** rund 17 Prozent der Bevölkerung, also fast 14 Millionen Menschen, armutsgefährdet."
             ],
             "en": [
-              ""
+              "Good guess! In 2014, around 17 percent of the population -- almost 14 million people -- was at risk of poverty."
             ]
           },
           "EUpoor4": {
@@ -105,7 +111,7 @@
               "Ganz so hoch ist der Anteil nicht. Im Jahr 2014 waren in Deutschland rund 17 Prozent der Bevölkerung, also fast 14 Millionen Menschen, armutsgefährdet. In **{{ EUpoorCountry }}** ist die Armutsgefährdungsquote ungefähr so hoch wie von Ihnen getippt."
             ],
             "en": [
-              ""
+              "The share isn't quite that high. In 2014, around 17 percent of the population -- almost 14 million people -- was at risk of poverty. **{{ EUpoorCountry }}**, the at-risk-of-poverty rate is roughly equivalent to your guess."
             ]
           },
           "EUpoor5": {
@@ -113,7 +119,7 @@
               "Ihre Schätzung liegt höher als die Armutsgefährdungsquote in allen EU-Ländern. Am höchsten ist die Quote  {{ EUpoorMaxCountry }} mit gut 25 Prozent."
             ],
             "en": [
-              ""
+              "Your guess is higher than the at-risk-of-poverty rate in all EU member states. At around 25 percent, the rate is highest {{ EUpoorMaxCountry }}. "
             ]
           }
         }
