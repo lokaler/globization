@@ -20,12 +20,11 @@ export default class Questionnaire extends React.Component {
   componentDidUpdate(prevProps) {
     const { app, questions } = this.props;
     if (app.mobile && prevProps.questions !== questions) {
-      const bbox = d3.select(this.refs.card).node().getBoundingClientRect();
-      const height = 250 + bbox.height + 50;
-      d3.select(window.frameElement)
-        // .transition()
-        // .duration(500)
-        .style('height', `${height}px`);
+      const card = d3.select(this.refs.card);
+      card.selectAll('img').on('load', () => {
+        this.resizeWindow();
+      });
+      this.resizeWindow();
     }
     if (app.mobile && prevProps.questions.activeCard !== questions.activeCard) {
       const iframeTop = window.frameElement.getBoundingClientRect().top;
@@ -36,6 +35,16 @@ export default class Questionnaire extends React.Component {
       //   .tween('scroll', this.scrollTween(iframeTop + scrollTop));
       window.parent.scrollTo(0, iframeTop + scrollTop);
     }
+  }
+
+  resizeWindow() {
+    const card = d3.select(this.refs.card);
+    const bbox = card.node().getBoundingClientRect();
+    const height = 250 + bbox.height + 50;
+    d3.select(window.frameElement)
+      // .transition()
+      // .duration(500)
+      .style('height', `${height}px`);
   }
 
   scrollTween(offset) {
