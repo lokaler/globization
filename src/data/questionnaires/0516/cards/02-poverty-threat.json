@@ -145,7 +145,7 @@
 
             ],
             "en": [
-              "At that income level, you are not considered to be at risk of poverty in Germany. If we divide the German population into five groups of the same size according to income, you belong to the second-lowest fifth.![](data/questionnaires/0516/assets/histogram/hu2.png) **In the red-framed area of the histogram chart, you can see the share of Germany's total income earned by the second-lowest fifth.**"
+              "At that income level, you are not considered to be at risk of poverty in Germany. If we divide the German population into five groups of the same size according to income, you belong to the second-lowest fifth.![](data/questionnaires/0516/assets/histogram/hu2.png) **In the red-framed area of the histogram chart, you can see the share of Germany's total income earned by the second-lowest fifth.**",
                 "",
                 "The so-called S80/S20 ratio measures the inequality of income distribution among a population. It is calculated by dividing the total income received by the 20 percent of the population with the highest earnings (to the far right of the histogram) by the income received by the lowest 20 percent (on the left of the histogram). The resulting ratio is displayed on the globe -- the higher the value, the greater the inequality."
             ]
@@ -159,8 +159,8 @@
             ],
             "en": [
               "At that income level, you are not considered to be at risk of poverty in Germany. If we divide the German population into five groups of the same size according to income, you belong to the middle fifth.![](data/questionnaires/0516/assets/histogram/hu3.png) **In the red-framed area of the histogram chart, you can see the share of Germany's total income earned by the middle fifth.**",
-              "",
-              "The so-called S80/S20 ratio measures the inequality of income distribution among a population. It is calculated by dividing the total income received by the 20 percent of the population with the highest earnings (to the far right of the histogram) by the income received by the lowest 20 percent (on the left of the histogram). The resulting ratio is displayed on the globe -- the higher the value, the greater the inequality."
+                "",
+                "The so-called S80/S20 ratio measures the inequality of income distribution among a population. It is calculated by dividing the total income received by the 20 percent of the population with the highest earnings (to the far right of the histogram) by the income received by the lowest 20 percent (on the left of the histogram). The resulting ratio is displayed on the globe -- the higher the value, the greater the inequality."
             ]
           },
           "4quintil": {
@@ -172,8 +172,8 @@
             ],
             "en": [
               "At that income level, you are not considered to be at risk of poverty in Germany. If we divide the German population into five groups of the same size according to income, you belong to the second-highest fifth.![](data/questionnaires/0516/assets/histogram/hu4.png) **In the red-framed area of the histogram chart, you can see the share of Germany's total income earned by the second-highest fifth.**",
-              "",
-              "The so-called S80/S20 ratio measures the inequality of income distribution among a population. It is calculated by dividing the total income received by the 20 percent of the population with the highest earnings (to the far right of the histogram) by the income received by the lowest 20 percent (on the left of the histogram). The resulting ratio is displayed on the globe -- the higher the value, the greater the inequality."
+                "",
+                "The so-called S80/S20 ratio measures the inequality of income distribution among a population. It is calculated by dividing the total income received by the 20 percent of the population with the highest earnings (to the far right of the histogram) by the income received by the lowest 20 percent (on the left of the histogram). The resulting ratio is displayed on the globe -- the higher the value, the greater the inequality."
             ]
           },
           "5quintil": {
