@@ -2,6 +2,8 @@
 
   composes: widget from '../widgets.scss';
 
+  margin-bottom: 1em;
+
   .rc-slider-track {
     background-color: #FD8D3C;
   }
