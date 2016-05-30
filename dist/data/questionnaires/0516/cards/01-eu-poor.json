@@ -81,7 +81,9 @@
               "Die Armutsgefährdungsquote **{{ EUpoorCountry }}** ist ungefähr so hoch wie von Ihnen getippt."
             ],
             "en": [
-              "The share is actually a bit higher. In 2014, around 17 percent of the population -- almost 14 million people -- was at risk of poverty."
+              "The share is actually a bit higher. In 2014, around 17 percent of the population -- almost 14 million people -- was at risk of poverty.",
+              "",
+              "The at-risk-of-poverty rate **{{ EUpoorCountry }}** is roughly equivalent to your guess."
             ]
           },
           "EUpoor2": {

@@ -10,12 +10,14 @@
           "",
           "Bis zum Jahr 2030 soll es keine extreme Armut mehr auf der Welt geben – dieses Ziel haben sich die Vereinten Nationen gesetzt.",
           "",
-          "**Angenommen, man könnte das Geld einfach an die Armen verteilen: Welcher Betrag wäre pro Jahr nötig, damit alle heute in Armut lebenden Menschen mindestens 1,25$ pro Tag zur Verfügung haben?**"
+          "**Angenommen, man könnte das Geld einfach an die Armen verteilen: Das Militärbudget welches Landes würde ausreichen, damit alle heute in Armut lebenden Menschen mindestens 1,25$ pro Tag zur Verfügung haben?**"
         ],
         "en": [
-          " # ",
+          " # Fighting Extreme Poverty",
           "",
-          ""
+          "The United Nations has set the goal of eradicating extreme poverty by 2030.",
+          "",
+          "**Assuming it would be possible to simply distribute money among the poor, how much would be necessary each year to ensure that all people living in extreme poverty would have $1.25 at their disposal every day?**"
         ]
       }
     },
@@ -25,9 +27,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["choice_b1", { "de": "So viel wie die Militärausgaben der USA im Jahr 2015", "en": "" }],
-            ["choice_b2", { "de": "So viel wie die Militärausgaben Deutschlands im Jahr 2015", "en": ""}],
-            ["choice_b3", { "de": "So viel wie die Militärausgaben Estlands im Jahr 2015", "en": " " }]
+            ["choice_b1", { "de": "So viel wie die Militärausgaben der USA im Jahr 2015", "en": "As much as the US spent on defense in 2015" }],
+            ["choice_b2", { "de": "So viel wie die Militärausgaben Deutschlands im Jahr 2015", "en": "As much as Germany spent on defense in 2015"}],
+            ["choice_b3", { "de": "So viel wie die Militärausgaben Estlands im Jahr 2015", "en": "As much as Estonia spent on defense in 2015" }]
           ]
         }
       }
@@ -59,26 +61,26 @@
           },
           "choice_b1": {
             "de": [
-              "Richtig! Bei 1,2 Milliarden Menschen in extremer Armut bräuchte man jährlich etwa 548 Milliarden Dollar. Die Militärausgaben im Jahr 2015 der USA betrugen nur wenig mehr, nämlich 596 Milliarden US-Dollar."
+              "Richtig! Bei  836 Millionen Menschen in extremer Armut bräuchte man jährlich etwa 381 Milliarden Dollar. Das sind rund zwei Drittel der Militärausgaben der USA im Jahr 2015. Sie betrugen insgesamt 596 Milliarden US-Dollar"
             ],
             "en": [
-              ""
+              "Correct! With 1.2 billion people suffering from extreme poverty, $548 billion would be needed every year. At $596 billion, US defense spending in 2015 was only slightly more than that."
             ]
           },
           "choice_b2": {
             "de": [
-              "Etwas mehr Geld bräuchte man schon. Bei 1,2 Milliarden Menschen in extremer Armut würden jährlich etwa 548 Milliarden Dollar benötigt. Das ist etwas weniger als die Militärausgaben der USA mit 596 Milliarden Dollar. Deutschland gab 2015 mit 39 Milliarden Dollar wesentlich weniger für militärische Zwecke aus."
+              "Etwas mehr Geld bräuchte man schon. Bei 836 Millionen Menschen in extremer Armut würden jährlich etwa 381 Milliarden Dollar benötigt. Das sind rund zwei Drittel der Militärausgaben der USA im Jahr 2015. Deutschland gab 2015 mit 39 Milliarden Dollar wesentlich weniger für militärische Zwecke aus.."
             ],
             "en": [
-              ""
+              "A bit more money than that is necessary. With 1.2 billion people suffering from extreme poverty, $548 billion would be needed every year. That is only slightly less than US defense spending of $596 billion in 2015. At $39 billion, Germany spent far less on its military in 2015."
             ]
           },
           "choice_b3": {
             "de": [
-              "Da bräuchte man schon wesentlich mehr Geld. Bei 1,2 Milliarden Menschen in extremer Armut würden jährlich etwa 548 Milliarden Dollar benötigt. Das ist etwas weniger als die Militärausgaben der USA mit 596 Milliarden Dollar und viel mehr als die 0,5 Milliarden Dollar, die Estland im Jahr 2015 für militärische Zwecke ausgab."
+              "Da bräuchte man schon wesentlich mehr Geld. Bei 836 Millionen Menschen in extremer Armut würden jährlich etwa 381 Milliarden Dollar benötigt. Das sind rund zwei Drittel der Militärausgaben der USA mit 596 Milliarden Dollar und viel mehr als die 0,5 Milliarden Dollar, die Estland im Jahr 2015 für militärische Zwecke ausgab."
             ],
             "en": [
-              ""
+              "Much more than that would be needed. With 1.2 billion people suffering from extreme poverty, $548 billion would be needed every year. That is only slightly less than US defense spending of $596 billion in 2015 and much more than the $0.5 billion that Estonia spent on its military in 2015."
             ]
           }
         }
