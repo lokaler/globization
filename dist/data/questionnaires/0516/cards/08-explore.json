@@ -10,7 +10,7 @@
           "Den Link zum interaktiven Globus teilen:"
         ],
         "en": [
-          "Den Link zum interaktiven Globus teilen:"
+          "Share the link to the interactive globe:"
         ]
       }
     },
@@ -21,7 +21,9 @@
         ],
         "answerContext": {
           "twitterShare": "f.shareButtonTwitter('http://spon.de/aeKPj', 'Der #ÜberMorgen-Explorer: Wissen Sie, wo die Welt wie arm ist?')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeKPj', 'Der #ÜberMorgen-Explorer: Wissen Sie, wo die Welt wie arm ist?')"
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeKPj', 'Der #ÜberMorgen-Explorer: Wissen Sie, wo die Welt wie arm ist?')",
+          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeK2R', '#BeyondTomorrow Explorer: Where in the world are people poor, and in which ways?')",
+          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeK2R', '#BeyondTomorrow Explorer: Where in the world are people poor, and in which ways?')"
         },
 
         "templates": {
@@ -30,7 +32,7 @@
               "<div class='sharing'>{{ twitterShare }} {{ facebookShare }}</div>"
             ],
             "en": [
-              "<div class='sharing'>{{ twitterShare }} {{ facebookShare }}</div>"
+              "<div class='sharing'>{{ twitterShareEn }} {{ facebookShareEn }}</div>"
             ]
           }
         }
