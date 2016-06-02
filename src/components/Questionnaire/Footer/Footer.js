@@ -77,7 +77,6 @@ export default class Footer extends React.Component {
         {
           showPrevBtn &&
           <div className={ styles.btn_prev } onClick={ this.getClickHandler(questions.activeCard - 1) }>
-            <div className={ styles.btn_arrow }></div>
             <div className={ styles.btn_text }>{ prevBtnLabel }</div>
           </div>
         }
@@ -87,7 +86,6 @@ export default class Footer extends React.Component {
         { showNextBtn && questions.activeCard !== -1 &&
             <div className={ styles.btn_next } onClick={ this.getClickHandler(questions.activeCard + 1) }>
               <div className={ styles.btn_text }>{ nextBtnLabel }</div>
-              <div className={ styles.btn_arrow }></div>
             </div>
         }
       </div>
