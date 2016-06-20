@@ -31,11 +31,7 @@ export default class UbermorgenApp extends React.Component {
     actions.getUrlParameters();
     actions.getStoredValues();
     actions.fetchHistogramData('https://uebermorgen-logbuch.lokaler.de/');
-    if (__DEV__) {
-      actions.setQuestionnaire(Object.keys(questionnaires).pop());
-    } else {
-      actions.setQuestionnaire(store.getState().questions.activeQuestionnaireId);
-    }
+    actions.setQuestionnaire(store.getState().questions.activeQuestionnaireId);
     this.configureHotReload();
     window.addEventListener('resize', this.handleResize.bind(this));
     window.parent.addEventListener('scroll', this.handleScroll.bind(this));
