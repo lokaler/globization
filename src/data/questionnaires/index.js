@@ -7,6 +7,8 @@ import cards0416 from './0416/cards/index';
 import datasets0416 from './0416/datasets.json';
 import cards0516 from './0516/cards/index';
 import datasets0516 from './0516/datasets.json';
+import cards0616 from './0616/cards/index';
+import datasets0616 from './0616/datasets.json';
 
 const noneDataset = {
   key: 'none',
@@ -22,6 +24,8 @@ datasets0416.push(noneDataset);
 datasets0416.forEach(prepareDataset);
 datasets0516.push(noneDataset);
 datasets0516.forEach(prepareDataset);
+datasets0616.push(noneDataset);
+datasets0616.forEach(prepareDataset);
 
 let questionnaires = {
   '0316': {
@@ -57,6 +61,18 @@ let questionnaires = {
     },
     cards: cards0516,
     datasets: datasets0516
+  },
+  '0616': {
+    title: {
+      de: 'Korruption',
+      en: 'Corruption'
+    },
+    options: {
+      showBackButton: true,
+      lastButtonLabel: 'explore'
+    },
+    cards: cards0616,
+    datasets: datasets0616
   }
 };
 

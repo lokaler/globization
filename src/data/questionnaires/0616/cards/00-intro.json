@@ -1,0 +1,30 @@
+{
+  "key": "intro",
+  "title": "Intro",
+  "dataset": "none",
+  "view": "globe",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# ÜberMorgen-Explorer",
+          "",
+          "Korruption",
+          "",
+          "Gehen Sie mit dem interaktiven Globus auf Entdeckungsreise!",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
+        ],
+        "en": [
+          "# BeyondTomorrow Explorer",
+          "",
+          "Do you feel poor? Germany is one of the richest countries in the world, yet there are plenty of people here too who live in need. So what is the true definition of poverty? And where in the world are people poor, and in which ways?",
+          "",
+                    "Embark on a voyage of discovery with our interactive globe!",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
+        ]
+      }
+    }
+  ]
+}
