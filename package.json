@@ -25,6 +25,7 @@
     "colorbrewer": "1.0.0",
     "d3": "3.5.16",
     "d3-geo-projection": "0.2.16",
+    "json2csv": "3.4.3",
     "micromustache": "2.1.26",
     "querystring": "0.2.0",
     "rc-slider": "3.6.2",
