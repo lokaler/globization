@@ -6,6 +6,7 @@ import master from 'data/map/master.csv';
 
 
 export function prepareDataset(dataset) {
+  console.log(dataset);
   for (const d of dataset.data) {
     const e = _.find(master, { alpha3: d.iso });
     const t = _.find(topofeatures, (c) => c.properties.iso === d.iso);
