@@ -1,27 +1,15 @@
 import { validateQuestionnaire } from 'logic/questionnaires/validation';
-import { prepareDataset } from './datasets';
+import { prepareDataset, emptyDataset } from './datasets';
 
 import cards0316 from './0316/cards/index';
-import datasets0316 from './0316/datasets.json';
+import datasets0316 from './0316/datasets/index';
 import cards0416 from './0416/cards/index';
-import datasets0416 from './0416/datasets.json';
+import datasets0416 from './0416/datasets/index';
 import cards0516 from './0516/cards/index';
-import datasets0516 from './0516/datasets.json';
+import datasets0516 from './0516/datasets/index';
+import cards0616 from './0616/cards/index';
+import datasets0616 from './0616/datasets/index';
 
-const noneDataset = {
-  key: 'none',
-  data: [],
-  translate: [0, 90],
-  domain: [0, 1],
-  scale: 1
-};
-
-datasets0316.push(noneDataset);
-datasets0316.forEach(prepareDataset);
-datasets0416.push(noneDataset);
-datasets0416.forEach(prepareDataset);
-datasets0516.push(noneDataset);
-datasets0516.forEach(prepareDataset);
 
 let questionnaires = {
   '0316': {
@@ -57,6 +45,18 @@ let questionnaires = {
     },
     cards: cards0516,
     datasets: datasets0516
+  },
+  '0616': {
+    title: {
+      de: 'Korruption',
+      en: 'Corruption'
+    },
+    options: {
+      showBackButton: true,
+      lastButtonLabel: 'explore'
+    },
+    cards: cards0616,
+    datasets: datasets0616
   }
 };
 
@@ -74,6 +74,11 @@ for (const questionnaire of Object.values(questionnaires)) {
       throw e;
     }
   }
+}
+
+for (const questionnaire of Object.values(questionnaires)) {
+  questionnaire.datasets.push(emptyDataset);
+  questionnaire.datasets.forEach(prepareDataset);
 }
 
 export default questionnaires;

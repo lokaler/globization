@@ -1,0 +1,111 @@
+{
+  "key": "violenceThreat",
+  "title": "3. Karte - Gewalt",
+  "view": "globe",
+  "dataset": "",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Wenn Gewalt sich schwer in Zahlen fassen lässt",
+          "",
+          "Zwar gibt es Schätzungen, wie viele Menschen in welchem Krieg jährlich sterben, doch die Angaben klaffen oft um ein Vielfaches auseinander, je nachdem aus welcher Quelle sie stammen.",
+          ""
+
+        ],
+        "en": [
+          "# ",
+          "",
+          "",
+          ""
+        ]
+      }
+    },
+
+    {
+      "text": {
+        "de": [
+          "**Wie viele Menschen sind bislang durch den Syrienkonflikt ums Leben gekommen?** Klatschen Sie in die Hände, um den Schieberegler zu bewegen und sehen Sie, wie sehr sich die Schätzungen unterscheiden! "
+        ],
+        "en": [
+          "** **"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "sliderConflict",
+        "type": "slider",
+        "options": {
+          "unit": "",
+          "min": 100000,
+          "value": 250000,
+          "max": 500000,
+          "step": 5000
+        }
+      }
+    },
+
+
+
+    {
+      "submit": {
+        "key": "conflictSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderConflict && !i.conflictSubmitted",
+          "!i.conflictSubmitted && 'notSubmitted'",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderConflict < 150000)  && 'Conflict1'",
+          "(i.sliderConflict >= 150000 && i.sliderConflict < 300000) && 'Conflict2'",
+
+          "(i.sliderConflict >= 300000) && 'Conflict3'"
+
+
+        ],
+        "answerContext": {
+
+
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Sicher? Dann bitte bestätigen."], "en": ["Please answer and confirm after."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Conflict1": {
+            "de": [
+              "Forscher aus Schweden und Norwegen dokumentieren seit Jahrzehnten die Anzahl der Kriegstoten in den verschiedenen Ländern der Welt. Rund 120.000 Tote verzeichnet ihre Statistik bis einschließlich 2014. Die Vereinten Nationen zählten 2014 bereits 190.000 Tote und räumten ein, dass die Zahl vermutlich in Wahrheit wesentlich höher liegt. Wenig später stellte die Uno ihre Schätzungen ein – die Datenlage sei zu ungewiss.",
+              "",
+              ""
+            ],
+            "en": [
+              ""
+
+            ]
+          },
+          "Conflict2": {
+            "de": [
+              "In dieser Größenordnung lagen die Schätzungen der Uno, bevor sie wegen der ungewissen Datenlage auffhörte, Aussagen über die Todesopfer in Syrien zu treffen. Ein Uno-Bericht vom August 2014 verzeichnete 190.000 Tote, später war von 250.000 Toten die Rede gewesen."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Conflict3": {
+            "de": [
+              "In dieser Größenordnung liegt die Schätzung der Nichtregierungsorganisation Syrian Center for Policy Research: In einem Bericht geht sie von 470.000 Toten in Syrien bis 2015 aus. Die Schätzungen der Vereinten Nationen hält sie für zu niedrig. Die Uno hatte etwa 250.000 Todesopfern dokumentiert, bevor sie 2014 wegen der ungewissen Datenlage auffhörte, Aussagen über die Opfer des Syrienkrieges zu treffen."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

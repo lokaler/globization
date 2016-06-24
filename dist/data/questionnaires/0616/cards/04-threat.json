@@ -1,0 +1,123 @@
+{
+  "key": "violenceThreat",
+  "title": "4. Karte - Morde",
+  "view": "globe",
+  "dataset": "homocides",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Lebensgefahr durch Kriminalität",
+          "",
+          "Nicht nur Kriege können zur Gefahr für Leib und Leben werden. In manchen Ländern sind die Mordraten sehr viel höher als in anderen. In Deutschland liegt sie vergleichsweise niedrig bei knapp einem Mord pro Jahr und 100.000 Einwohner. In einer mittelgroßen Stadt wie Jena passiert also statistisch gesehen etwa ein Mord im Jahr.",
+          ""
+
+        ],
+        "en": [
+          "# ",
+          "",
+          "",
+          ""
+        ]
+      }
+    },
+
+    {
+      "text": {
+        "de": [
+          "**Wissen Sie, wie viele Menschen in Honduras, dem Land mit der höchsten Mordrate weltweit, pro Jahr und 100.000 Einwohner vorsätzlich getötet werden?** Schütteln Sie ihr Gerät, um den Schieberegler zu bewegen!"
+        ],
+        "en": [
+          "** **"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "sliderViolence",
+        "type": "slider",
+        "options": {
+          "unit": "",
+          "min": 2,
+          "value": 10,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+
+
+
+    {
+      "submit": {
+        "key": "violenceSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderViolence && !i.violenceSubmitted",
+          "!i.violenceSubmitted && 'notSubmitted'",
+          "f.setDataset('violence')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderViolence < 30) && f.panToCountry(f.getISO('homocides', i.sliderViolence)) && 'Violence1'",
+          "(i.sliderViolence >= 30 && i.sliderViolence < 70) && f.panToCountry(f.getISO('homocides', i.sliderViolence)) && 'Violence2'",
+          "(i.sliderViolence >= 70 && i.sliderViolence < 80) && f.panToCountry(f.getISO('homocides', i.sliderViolence)) && 'Violence3'",
+          "(i.sliderViolence >= 80) && f.panToCountry(f.getISO('homocides', i.sliderViolence)) && 'Violence4'"
+
+
+        ],
+        "answerContext": {
+
+
+          "ViolenceCountry" : "f.getCountryName('homocides', i.sliderViolence)"
+
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Sicher? Dann bitte bestätigen."], "en": ["Please answer and confirm after."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Violence1": {
+            "de": [
+              "Nein, leider liegt der Wert in Honduras mit 75 Morden pro 100.000 Einwohner wesentlich höher. Gangs kämpfen dort gegeneinander und gegen die Staatsgewalt - und sie terrorisieren die Bevölkerung. Ihre Schätzung entspricht der Mordrate **{{ ViolenceCountry }}**. ",
+              "",
+              ""
+            ],
+            "en": [
+              ""
+
+            ]
+          },
+          "Violence2": {
+            "de": [
+              "Der von Ihnen geschätzte Wert ist im weltweiten Vergleich schon sehr hoch und entspricht etwa der Mordrate **{{ ViolenceCountry }}**. In Honduras ist die Situation mit 75 Morden pro 100.000 Einwohner jedoch noch gefährlicher. Gangs kämpfen dort gegeneinander und gegen die Staatsgewalt - und sie terrorisieren die Bevölkerung. "
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Violence3": {
+            "de": [
+              "Sie haben die Lage in Honduras ziemlich gut eingeschätzt: Erschreckende 75 Morde pro 100.000 Einwohner werden dort im Jahr verübt. Gangs kämpfen dort gegeneinander und gegen die Staatsgewalt - und sie terrorisieren die Bevölkerung. "
+            ],
+            "en": [
+              "Good guess! In 2014, around 17 percent of the population -- almost 14 million people -- was at risk of poverty."
+            ]
+          },
+          "EUpoor4": {
+            "de": [
+              "Ganz so finster wie von Ihnen geschätzt ist die Situation in Honduras nicht. Doch der Wert ist erschreckend genug: 75 Morde pro 100.000 Einwohner werden in dem zentralamerikanischen Staat pro Jahr verübt. Gangs kämpfen dort gegeneinander und gegen die Staatsgewalt - und sie terrorisieren die Bevölkerung. "
+            ],
+            "en": [
+              ""
+
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
