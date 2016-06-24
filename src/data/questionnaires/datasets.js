@@ -9,8 +9,12 @@ export function prepareDataset(dataset) {
   // console.log(dataset);
   for (const d of dataset.data) {
     d.value = +d.value;
-    const e = _.find(master, { alpha3: d.iso });
+    let e = _.find(master, { alpha3: d.iso });
     const t = _.find(topofeatures, (c) => c.properties.iso === d.iso);
+    if (!e) {
+      console.warn(d.iso, 'not in masterdataset');
+      e = { vergleich: 0 };
+    }
     d.onMap = t !== undefined;
     d.vergleich = e.vergleich;
   }
