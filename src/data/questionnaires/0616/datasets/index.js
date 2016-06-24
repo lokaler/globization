@@ -17,13 +17,13 @@ export default [
     "fixed": 0,
     "domain": [
       0,
-      40
+      1700000
     ],
     "skala": [
       0,
-      10,
-      20,
-      30
+      100000,
+      200000,
+
     ],
     "translate": [
       0,
@@ -50,7 +50,7 @@ export default [
     "fixed": 0,
     "domain": [
       0,
-      90
+      36
     ],
     "skala": [
       0,
