@@ -1,29 +1,89 @@
 {
-  "key": "intro",
-  "title": "Intro",
+  "key": "slaveryWorld",
+  "title": "5. Karte - Sklaverei",
   "dataset": "slavery",
-  "view": "globe",
   "content": [
     {
       "text": {
         "de": [
-          "# ÜberMorgen-Explorer",
+          " # Verschleppt, verkauft, verheirate",
           "",
-          "Korruption",
+          "Menschen werden zur Arbeit gezwungen oder für Sex verkauft: Ein Bericht der australischen Menschenrechtsorganisation Walk Free Foundation schätzt die Zahl moderner Sklaven weltweit auf fast 46 Millionen.",
           "",
-          "Gehen Sie mit dem interaktiven Globus auf Entdeckungsreise!",
-          "",
-          "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
+          "**Wissen Sie, in welchem dieser Länder der Anteil moderner Sklaven an der Bevölkerung besonders hoch ist?**"
         ],
         "en": [
-          "# BeyondTomorrow Explorer",
+          " # ",
           "",
-          "Do you feel poor? Germany is one of the richest countries in the world, yet there are plenty of people here too who live in need. So what is the true definition of poverty? And where in the world are people poor, and in which ways?",
           "",
-                    "Embark on a voyage of discovery with our interactive globe!",
           "",
-          "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
+          "** **"
         ]
+      }
+    },
+    {
+      "input": {
+        "key": "slaveryCountry",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["choice_1", { "de": "Nordkorea", "en": "" }],
+            ["choice_2", { "de": "Katar", "en": ""}],
+            ["choice_3", { "de": "Indien", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "slaveryCountrySubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.slaveryCountry && !i.slaveryCountrySubmitted",
+          "!i.slaveryCountrySubmitted && 'notSubmitted'",
+          "f.setDataset('displaced')",
+          "f.panToCountry('PRK') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.slaveryCountry"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
+          "allAnswered": {
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
+          },
+          "choice_1": {
+            "de": [
+              "Richtig! Pro Kopf ist die Konzentration in Nordkorea dem Global Slavery Index zufolge am höchsten: Dort gilt einer von 25 Menschen als moderner Sklave, insgesamt sind es 1,1 Millionen. Seit Jahren verschickt der ostasiatische Staat auch Menschen zur Zwangsarbeit ins Ausland."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_2": {
+            "de": [
+              "Nein, in Katar gilt dem Global Slavery Index zufolge etwa einer von 100 Menschen als moderner Sklave. In Nordkorea ist der Anteil mit einem Sklaven auf 25 Einwohner wesentlich höher. Allerdings werden seit Jahren nordkoreanische Zwangsarbeiter ins Ausland verschickt – auch auf die Baustellen für die Fußball-WM in Katar."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_3": {
+            "de": [
+              "Nein, in absoluten Zahlen sind dem Global Slavery Index zufolge zwar weltweit in Indien die meisten Menschen versklavt – nämlich etwa 18,4 Millionen. Doch pro Kopf auf die Bevölkerung des Landes gerechnet, ist die Konzentration in Nordkorea am höchsten: Dort gilt einer von 25 Menschen als moderner Sklave, insgesamt sind es 1,1 Millionen. Seit Jahren verschickt Nordkorea auch Menschen zur Zwangsarbeit ins Ausland."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
       }
     }
   ]

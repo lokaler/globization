@@ -68,10 +68,10 @@ export default [
     "data": require('./displaced.csv')
   },
   {
-    "key": "threat",
+    "key": "homocides",
     "name": {
       "de": "Lebensgefahr",
-      "en": "Poverty in the EU"
+      "en": ""
     },
     "description": {
       "de": "Morde pro Jahr pro 100.000 Einwohner",
@@ -83,7 +83,7 @@ export default [
     "fixed": 0,
     "domain": [
       0,
-      30
+      80
     ],
     "skala": [
       0,
@@ -92,16 +92,16 @@ export default [
       30
     ],
     "translate": [
-      -124,
-      485
+      0,
+      90
     ],
-    "scale": 2.4,
+    "scale": 1,
     "colorSet": "Reds",
     "colorNum": 9,
     "data": require('./homocides.csv')
   },
   {
-    "key": "slaves",
+    "key": "slavery",
     "name": {
       "de": "Sklaverei",
       "en": ""
@@ -116,7 +116,7 @@ export default [
     "fixed": 0,
     "domain": [
       0,
-      7
+      3
     ],
     "skala": [
       0,
@@ -125,10 +125,10 @@ export default [
       30
     ],
     "translate": [
-      -124,
-      485
+      0,
+      90
     ],
-    "scale": 2.4,
+    "scale": 1,
     "colorSet": "Reds",
     "colorNum": 9,
     "data": require('./slavery.csv')
@@ -136,8 +136,8 @@ export default [
   {
     "key": "journalists",
     "name": {
-      "de": "Ermoderte Journalisten",
-      "en": "Extreme Poverty"
+      "de": "Ermordete Journalisten",
+      "en": ""
     },
     "description": {
       "de": "Seit 1992 ermordete Journalisten, Stand Juni 2016",
