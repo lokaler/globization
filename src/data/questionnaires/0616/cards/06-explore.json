@@ -9,15 +9,18 @@
         "de": [
           "# ÜberMorgen-Explorer",
           "",
-
-          "Die Nachhaltigkeitsziele der Vereinten Nationen zeichnen die Vision einer friedlichen Welt, in der Menschen keine Gefahr für Leib und Leben fürchten müssen. Doch noch sind vielerorts Menschen von Gewalt bedroht. Erkunden Sie mit dem interaktiven Globus, wo die Situation am brenzligsten ist.",
+          "Korruption",
+          "",
+          "Gehen Sie mit dem interaktiven Globus auf Entdeckungsreise!",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
         ],
         "en": [
           "# BeyondTomorrow Explorer",
           "",
+          "Do you feel poor? Germany is one of the richest countries in the world, yet there are plenty of people here too who live in need. So what is the true definition of poverty? And where in the world are people poor, and in which ways?",
           "",
+                    "Embark on a voyage of discovery with our interactive globe!",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
         ]
