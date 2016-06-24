@@ -1,30 +1,58 @@
 {
-  "key": "intro",
-  "title": "Intro",
-  "dataset": "none",
+  "key": "explore",
+  "title": "Explore",
+  "dataset": "",
   "view": "globe",
   "content": [
     {
       "text": {
         "de": [
-          "# ÜberMorgen-Explorer",
-          "",
-          "Korruption",
-          "",
-          "Gehen Sie mit dem interaktiven Globus auf Entdeckungsreise!",
-          "",
-          "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
+          "Den Link zum interaktiven Globus teilen:"
         ],
         "en": [
-          "# BeyondTomorrow Explorer",
-          "",
-          "Do you feel poor? Germany is one of the richest countries in the world, yet there are plenty of people here too who live in need. So what is the true definition of poverty? And where in the world are people poor, and in which ways?",
-          "",
-                    "Embark on a voyage of discovery with our interactive globe!",
-          "",
-          "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
+          "Share the link to the interactive globe:"
         ]
       }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "f.setView('globe')"
+        ],
+        "answerContext": {
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeKPj', 'Der #ÜberMorgen-Explorer:  ?')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeKPj', 'Der #ÜberMorgen-Explorer: ')",
+          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeK2R', '#BeyondTomorrow Explorer: W')",
+          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeK2R', '#BeyondTomorrow Explorer: ')"
+        },
+
+        "templates": {
+          "default": {
+            "de": [
+              "<div class='sharing'>{{ twitterShare }} {{ facebookShare }}</div>"
+            ],
+            "en": [
+              "<div class='sharing'>{{ twitterShareEn }} {{ facebookShareEn }}</div>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "text": {
+        "de": [
+          "Hier können Sie die Daten noch einmal in Ruhe erkunden:",
+          "",
+          "",
+          ""
+        ],
+        "en": [
+          "Go ahead and explore the data sets."
+        ]
+      }
+    },
+    {
+      "datasetMenu": true
     }
   ]
 }
