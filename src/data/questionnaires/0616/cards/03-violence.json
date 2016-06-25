@@ -73,7 +73,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Sicher? Dann bitte bestätigen."], "en": ["Please answer and confirm after."]          },
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm after."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
