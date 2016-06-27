@@ -1,7 +1,7 @@
 {
   "key": "slaveryWorld",
   "title": "5. Karte - Sklaverei",
-  "dataset": "slavery",
+  "dataset": "homocides",
   "content": [
     {
       "text": {
@@ -44,7 +44,7 @@
         "answerKey": [
           "i.slaveryCountry && !i.slaveryCountrySubmitted",
           "!i.slaveryCountrySubmitted && 'notSubmitted'",
-          "f.setDataset('displaced')",
+          "f.setDataset('slavery')",
           "f.panToCountry('PRK') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",

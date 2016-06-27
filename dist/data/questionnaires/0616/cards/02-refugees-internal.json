@@ -1,7 +1,7 @@
 {
-  "key": "incomeDistEU",
+  "key": "refugeesInternal",
   "title": "2. Karte - Binnenflüchtlinge",
-  "dataset": "displaced",
+  "dataset": "refugees",
   "content": [
     {
       "text": {
@@ -57,7 +57,7 @@
           },
 
           "allAnswered": {
-            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
+            "de": ["Bitte beantworten und bestätigen"], "en": ["Are you sure?"]
           },
           "choice_1": {
             "de": [

@@ -1,8 +1,8 @@
 {
-  "key": "violenceThreat",
+  "key": "violenceKills",
   "title": "4. Karte - Morde",
   "view": "globe",
-  "dataset": "homocides",
+  "dataset": "none",
   "content": [
     {
       "text": {
@@ -58,7 +58,7 @@
         "answerKey": [
           "i.sliderViolence && !i.violenceSubmitted",
           "!i.violenceSubmitted && 'notSubmitted'",
-          "f.setDataset('violence')",
+          "f.setDataset('homocides')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "(i.sliderViolence < 30) && f.panToCountry(f.getISO('homocides', i.sliderViolence)) && 'Violence1'",
@@ -76,7 +76,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Sicher? Dann bitte bestätigen."], "en": ["Please answer and confirm after."]          },
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm after."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
