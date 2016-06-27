@@ -45,35 +45,21 @@
         }
       }
     },
-
-
-
-    {
-      "submit": {
-        "key": "conflictSubmitted"
-      }
-    },
     {
       "answer": {
         "answerKey": [
-          "i.sliderConflict && !i.conflictSubmitted",
-          "!i.conflictSubmitted && 'notSubmitted'",
+          "!i.sliderConflict && 'notSubmitted'",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "(i.sliderConflict < 150000)  && 'Conflict1'",
           "(i.sliderConflict >= 150000 && i.sliderConflict < 300000) && 'Conflict2'",
-
           "(i.sliderConflict >= 300000) && 'Conflict3'"
-
-
         ],
         "answerContext": {
-
-
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm after."]          },
+            "de": ["Bitte bewegen Sie den Slider."], "en": ["Please move the slider."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
