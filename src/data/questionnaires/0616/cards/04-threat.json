@@ -1,8 +1,8 @@
 {
-  "key": "violenceThreat",
+  "key": "violenceKills",
   "title": "4. Karte - Morde",
   "view": "globe",
-  "dataset": "",
+  "dataset": "none",
   "content": [
     {
       "text": {

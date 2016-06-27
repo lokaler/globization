@@ -2,7 +2,7 @@
   "key": "violenceThreat",
   "title": "3. Karte - Gewalt",
   "view": "globe",
-  "dataset": "",
+  "dataset": "none",
   "content": [
     {
       "text": {
