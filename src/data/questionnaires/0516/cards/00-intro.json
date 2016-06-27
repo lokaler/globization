@@ -1,7 +1,7 @@
 {
   "key": "intro",
   "title": "Intro",
-  "dataset": "refugees",
+  "dataset": "none",
   "view": "globe",
   "content": [
     {

@@ -1,7 +1,7 @@
 {
   "key": "explore",
   "title": "Explore",
-  "dataset": "",
+  "dataset": "none",
   "view": "globe",
   "content": [
     {
