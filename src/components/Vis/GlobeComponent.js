@@ -1,7 +1,6 @@
 /* eslint-disable */
 
 import React, { PropTypes } from 'react';
-import d3 from 'd3';
 import _ from 'lodash';
 import utils from './VisUtils.js'
 import Dataset from '../../logic/Dataset.js'
@@ -9,6 +8,10 @@ import cssModules from 'react-css-modules';
 import styles from './globe.scss';
 import { topofeatures } from 'data/map/index';
 import classnames from 'classnames';
+
+import { geoCentroid, geoArea, geoTransform, geoClipExtent, geoPath, geoGraticule, geoOrthographic } from 'd3-geo';
+import { zoom } from 'd3-zoom';
+import { event, select, selectAll } from 'd3-selection';
 
 @cssModules(styles)
 
@@ -34,30 +37,29 @@ export default class GlobeComponent extends React.Component {
 
     this.dataset = new Dataset(dataset.data);
 
-    this.projection = d3.geo.orthographic()
+    this.projection = geoOrthographic()
       .translate([this.props.width / 2, this.props.height / 2])
       .clipAngle(90)
       .precision(0.1)
 
-
-    this.graticule = d3.geo.graticule()
+    this.graticule = geoGraticule()
       .precision(10)
       // .extent(this.projection.clipExtent());
-    this.graticulePath = d3.geo.path().projection(this.projection);
+    this.graticulePath = geoPath().projection(this.projection);
 
-    this.path = d3.geo.path()
+    this.path = geoPath()
       .projection({
         stream: s => this.simplify.stream(this.projection.stream(this.clip.stream(s)))
       })
       // .projection(this.projection);
 
-    this.clip = d3.geo.clipExtent()
+    this.clip = geoClipExtent()
       .extent([[0, 0], [this.props.width, this.props.height]]);
 
     this.scale = this.props.vis.zoom;
     let area = 1 / this.scale / this.scale;
 
-    this.simplify = d3.geo.transform({
+    this.simplify = geoTransform({
       point: function(x, y, z) {
         if (z >= area) this.stream.point(x, y);
       }
@@ -71,31 +73,36 @@ export default class GlobeComponent extends React.Component {
       d.properties.fillColor = this.getFillColor(d.properties.iso);
     });
 
-    this.zoom = d3.behavior.zoom()
-      .center([0,0])
+    this.zoom = zoom()
+      //.center([0,0])
       .scaleExtent([1,9])
-      .size([this.props.width,this.props.height])
+      .extent([[0,0],[this.props.width,this.props.height]])
       .on("zoom", () => {
-        const e = d3.event;
+        const e = event.transform;
+        console.log(event.transform);
+
         const mobileScale = this.props.app.mobile ? 0.5 : 1;
-        const _scale = this.props.vis.initialScale * mobileScale * e.scale;
+        const _scale = this.props.vis.initialScale * mobileScale * e.k;
         const _rotate = [
-          (e.translate[0]/e.scale) * this.sensetivity,
-          -(e.translate[1]/e.scale) * this.sensetivity,
+          (e.x/e.k) * this.sensetivity,
+          -(e.y/e.k) * this.sensetivity,
           0
         ];
+
 
         this.projection
           .rotate(_rotate)
           .scale(_scale);
 
-        area = 1 / this.zoom.scale() /  this.zoom.scale();
+        area = 1 / e.k /  e.k;
 
         //utils.log("zoom",this.zoom.translate(), this.zoom.scale());
 
-        this.forceUpdate();
+        //this.forceUpdate();
+
+        this.renderData();
       })
-      .on("zoomstart", () => {
+      .on("start", () => {
         this.dragging = true;
         this.props.actions.changeVis({
           tooltip: {
@@ -103,7 +110,7 @@ export default class GlobeComponent extends React.Component {
           }
         });
       })
-      .on("zoomend", () => {
+      .on("end", () => {
         utils.log("zoomend")
         this.dragging = false;
         this.props.actions.changeVis({
@@ -121,29 +128,35 @@ export default class GlobeComponent extends React.Component {
   resetGlobe(){
     const dataset = this.props.questions.dataset;
 
-    this.svg.call(this.zoom
-      .scale(this.props.vis.zoom)
-      .translate(this.props.vis.translate)
-      .event
-    )
-    .transition()
-    .duration(()=>{
-      const t = Math.abs(dataset.translate[0]) + Math.abs(dataset.translate[1]);
-      const z = this.props.vis.zoom - 0.7;
-      return t+z*200;
-      // return 1000;
-    })
-    .call(this.zoom
-      .scale(dataset.scale)
-      .translate(dataset.translate)
-      .event
-    )
+    // this.svg.call(this.zoom
+    //   .scaleTo(this.props.vis.zoom)
+    //   .translate(this.props.vis.translate)
+    //   .event
+    // )
+    // .transition()
+    // .duration(()=>{
+    //   const t = Math.abs(dataset.translate[0]) + Math.abs(dataset.translate[1]);
+    //   const z = this.props.vis.zoom - 0.7;
+    //   return t+z*200;
+    //   // return 1000;
+    // })
+    // .call(this.zoom
+    //   .scale(dataset.scale)
+    //   .translate(dataset.translate)
+    //   .event
+    // )
   }
 
   componentDidMount() {
     utils.log("componentDidMount", this.props)
 
-    this.svg = d3.select(this.refs.globeSVG).call(this.zoom);
+    this.svg = select(this.refs.globeSVG).call(this.zoom);
+
+    this.gGraticule = this.svg.append("path")
+      .attr("class", "graticule")
+      .datum(this.graticule);
+
+    this.gCountries = this.svg.append("g");
 
     if(this.props.vis.active){
       this.zoomToCountry(this.props.vis.active);
@@ -183,8 +196,8 @@ export default class GlobeComponent extends React.Component {
     // const country = _.find(this.geometries, (d)=> d.properties.iso === name);
     // if(!country){ utils.log("country not found!", name); return; }
 
-    const p = d3.geo.centroid(this.activeGeometry);
-    const area = d3.geo.area(this.activeGeometry);
+    const p = geoCentroid(this.activeGeometry);
+    const area = geoArea(this.activeGeometry);
     // console.log(area);
     const scale = -Math.log(area)*0.7;
     // console.log(scale)
@@ -221,7 +234,7 @@ export default class GlobeComponent extends React.Component {
     if(nextProps.height != this.props.height || nextProps.width != this.props.width){
       this.projection.translate([nextProps.width / 2, nextProps.height / 2]);
       this.clip.extent([[0, 0], [nextProps.width, nextProps.height]]);
-      this.zoom.size([nextProps.width,nextProps.height]);
+      //this.zoom.size([nextProps.width,nextProps.height]);
       update = false;
     }
 
@@ -320,40 +333,37 @@ export default class GlobeComponent extends React.Component {
     });
   }
 
+  renderData(){
+    const s = this.gCountries.selectAll("path").data(this.geometries);
+
+    s.enter()
+      .append("path")
+      .on("mouseenter", this.onMouseEnter.bind(this))
+      .on("mouseleave", this.onMouseLeave.bind(this))
+      .attr("fill", d => d.properties.fillColor)
+      .attr("d", this.path)
+
+    s
+      .attr("fill", d => d.properties.fillColor)
+      .attr("d", this.path)
+
+
+    s.exit().remove();
+
+    this.gGraticule.attr("d", this.graticulePath);
+
+  }
 
   render() {
-    utils.log("render globe")
+    console.log("render globe")
 
-    this.geometries
-      .forEach(d=> d.path=this.path(d))
-
-    const paths = this.geometries.filter(d=>d.path).map((d, i) => {
-      return (
-        <path
-          key={ i }
-          d={d.path}
-          fill={d.properties.fillColor}
-          onMouseLeave={this.onMouseLeave.bind(this,d)}
-          onMouseEnter={this.onMouseEnter.bind(this,d)}
-        />
-      )
-    });
-
-    const activeGeometry = <path className="activeGeometry" d={this.path(this.activeGeometry)}/>;
-    const graticule = <path className="graticule" key="graticule" d={ this.graticulePath(this.graticule()) } />;
+    // const activeGeometry = <path className="activeGeometry" d={this.path(this.activeGeometry)}/>;
+    // const graticule = <path className="graticule" key="graticule" d={ this.graticulePath(this.graticule()) } />;
 
 
     return (
       <div>
         <svg className='globe' ref='globeSVG' width={ this.props.width } height={ this.props.height }>
-          <defs>
-            { utils.svgStripePattern }
-          </defs>
-          <g>
-            { graticule }
-            { paths }
-            { activeGeometry }
-          </g>
         </svg>
       </div>
     );
