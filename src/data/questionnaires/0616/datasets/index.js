@@ -14,7 +14,7 @@ export default [
     "quelle": "Institute for Economics and Peace",
     "link": "http://www.visionofhumanity.org/#page/indexes/global-peace-index/2016/CAN,USA/OVER",
     "unit": "",
-    "fixed": 0,
+    "fixed": 1,
     "domain": [
       1,
       4
