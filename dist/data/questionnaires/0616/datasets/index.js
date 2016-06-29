@@ -2,6 +2,39 @@
 
 export default [
   {
+    "key": "peaceindex",
+    "name": {
+      "de": "Global Peace Index",
+      "en": ""
+    },
+    "description": {
+      "de": "Global Peace Index (1 sehr friedlich, 4 sehr unfriedlich)",
+      "en": ""
+    },
+    "quelle": "Institute for Economics and Peace",
+    "link": "http://www.visionofhumanity.org/#page/indexes/global-peace-index/2016/CAN,USA/OVER",
+    "unit": "",
+    "fixed": 0,
+    "domain": [
+      1,
+      4
+    ],
+    "skala": [
+      0,
+      100000,
+      200000,
+
+    ],
+    "translate": [
+      0,
+      90
+    ],
+    "scale": 1,
+    "colorSet": "Reds",
+    "colorNum": 9,
+    "data": require('./peaceindex.csv')
+  },
+  {
     "key": "refugees",
     "name": {
       "de": "Geflüchtete",
