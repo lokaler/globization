@@ -41,16 +41,16 @@ export default [
       "en": ""
     },
     "description": {
-      "de": "Flüchtlinge und Asylbewerber im Aufnahmeland, Stand 2014",
+      "de": "Flüchtlinge und Asylbewerber im Aufnahmeland in Mio., Stand 2014",
       "en": ""
     },
     "quelle": "UNHCR",
     "link": "http://popstats.unhcr.org/en/persons_of_concern",
-    "unit": "",
-    "fixed": 0,
+    "unit": "Mio.",
+    "fixed": 1,
     "domain": [
       0,
-      1700000
+      1,7
     ],
     "skala": [
       0,
