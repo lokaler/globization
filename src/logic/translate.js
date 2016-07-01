@@ -2,6 +2,8 @@ import store from 'store';
 import { isObject, isString, get } from 'lodash';
 import translations from 'data/translations.json';
 import master from 'data/map/master.csv';
+import { format } from 'd3-format';
+
 
 const countries = {};
 for (const c of master) {
@@ -40,11 +42,13 @@ export default function translate(value, options = {}) {
     && !isNaN(Number(value.replace(/,/g, '')))
   );
   if (_isNumber || _isNumberString) {
-    let translated = value.toString();
+    const v = _isNumberString ? Number(value.replace(/,/g, '')) : value;
+    let translated = format('.2s')(v).toString();
     if (language === 'de') {
       translated = translated.replace(/,/g, '_');
       translated = translated.replace(/\./g, ',');
       translated = translated.replace(/_/g, '.');
+      // translated = translated.replace(/k/g, 'T');
     }
     return translated;
   }
