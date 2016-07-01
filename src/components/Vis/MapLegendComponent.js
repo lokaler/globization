@@ -4,6 +4,8 @@ import React, { PropTypes } from 'react';
 import d3 from 'd3';
 import utils from './VisUtils.js'
 import translate from 'logic/translate';
+import { formatLocale, format } from 'd3-format';
+
 
 export default class MapLegendComponent extends React.Component {
 
@@ -12,7 +14,8 @@ export default class MapLegendComponent extends React.Component {
   };
 
   componentDidMount() {
-
+    // formatLocale("de-DE");
+    // console.log(formatLocale("de-DE"));
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -29,15 +32,20 @@ export default class MapLegendComponent extends React.Component {
     const color = this.props.color;
     const domain = color.domain();
 
-    const legendFields = color.range().map((d,i) =>
-        <div className="item" key={"item-"+i}>
-          <div className="color" key={"color-"+i} style={{ background: d }}>
+    const legendFields = color.range().map((d,i) => {
+        const label = (domain[0]+ (i/9 * (domain[1]-domain[0]))).toFixed(dataset.fixed);
+        // const formated = format(".2s")(label);
+
+        return (
+          <div className="item" key={"item-"+i}>
+            <div className="color" key={"color-"+i} style={{ background: d }}>
+            </div>
+            <div className="label" key={"label-"+i}>
+              { translate(label) }
+            </div>
           </div>
-          <div className="label" key={"label-"+i}>
-            { translate((domain[0]+ (i/9 * (domain[1]-domain[0]))).toFixed(dataset.fixed)) }
-          </div>
-        </div>
-    )
+        )
+    })
 
     return (
       <div className="footer">
