@@ -37,7 +37,7 @@ export default [
   {
     "key": "refugees",
     "name": {
-      "de": "Geflüchtete",
+      "de": "Ins Ausland Geflüchtete",
       "en": ""
     },
     "description": {
@@ -103,7 +103,7 @@ export default [
   {
     "key": "homocides",
     "name": {
-      "de": "Lebensgefahr",
+      "de": "Mordrate",
       "en": ""
     },
     "description": {
