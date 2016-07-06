@@ -145,7 +145,7 @@ export default [
     },
     "quelle": "The Walk Free Foundation",
     "link": "http://www.globalslaveryindex.org/findings/",
-    "unit": "",
+    "unit": "%",
     "fixed": 0,
     "domain": [
       0,
@@ -182,7 +182,7 @@ export default [
     "fixed": 0,
     "domain": [
       0,
-      100
+      110
     ],
     "skala": [
       0,
