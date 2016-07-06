@@ -51,9 +51,10 @@
           "!i.sliderConflict && 'notSubmitted'",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderConflict < 150000)  && 'Conflict1'",
-          "(i.sliderConflict >= 150000 && i.sliderConflict < 300000) && 'Conflict2'",
-          "(i.sliderConflict >= 300000) && 'Conflict3'"
+          "(i.sliderConflict < 120000)  && 'Conflict1'",
+          "(i.sliderConflict >= 120000 && i.sliderConflict < 180000) && 'Conflict2'",
+          "(i.sliderConflict >= 180000 && i.sliderConflict < 400000) && 'Conflict3'",
+          "(i.sliderConflict >= 400000) && 'Conflict4'"
         ],
         "answerContext": {
         },
@@ -65,7 +66,7 @@
           },
           "Conflict1": {
             "de": [
-              "In dieser Größenordnung liegt die Schätzung von Forschern aus Schweden und Norwegen, die seit Jahrzehnten die Anzahl der Kriegstoten in den verschiedenen Ländern der Welt dokumentieren. Rund 120.000 Tote verzeichnet ihre Statistik bis einschließlich 2014. Die Vereinten Nationen zählten 2014 bereits 190.000 Tote und räumten ein, dass die Zahl vermutlich in Wahrheit wesentlich höher liegt. Wenig später stellte die Uno ihre Schätzungen ein – die Datenlage sei zu ungewiss.",
+              "In dieser Größenordnung liegt die Schätzung von Forschern aus Schweden und Norwegen, die seit Jahrzehnten die Anzahl der Kriegstoten in den verschiedenen Ländern der Welt dokumentieren. Rund 120.000 Tote verzeichnet ihre Statistik bis einschließlich 2014 – und somit wesentlich weniger als die Schätzungen anderer Organisationen.",
               "",
               ""
             ],
@@ -76,7 +77,7 @@
           },
           "Conflict2": {
             "de": [
-              "In dieser Größenordnung lagen die Schätzungen der Uno, bevor sie wegen der ungewissen Datenlage auffhörte, Aussagen über die Todesopfer in Syrien zu treffen. Ein Uno-Bericht vom August 2014 verzeichnete 190.000 Tote, später war von 250.000 Toten die Rede gewesen."
+              "In dieser Größenordnung liegen die Angaben des Violence Documentation Center in Syria. Die Nichtregierungsorganisation schätzt die Zahl der Opfer bis März 2016 auf rund 130.000. Damit liegt sie immer noch weit unter den Angaben der Vereinten Nationen und anderer Nichtregierungsorganisationen."
             ],
             "en": [
               ""
@@ -84,7 +85,15 @@
           },
           "Conflict3": {
             "de": [
-              "In dieser Größenordnung liegt die Schätzung der Nichtregierungsorganisation Syrian Center for Policy Research: In einem Bericht geht sie von 470.000 Toten in Syrien bis 2015 aus. Die Schätzungen der Vereinten Nationen hält sie für zu niedrig. Die Uno hatte etwa 250.000 Todesopfern dokumentiert, bevor sie 2014 wegen der ungewissen Datenlage auffhörte, Aussagen über die Opfer des Syrienkrieges zu treffen."
+              "In dieser Größenordnung liegen die Schätzungen der Uno – die allerdings Anfang 2014 wegen der ungewissen Datenlage aufhörte, regelmäßige Berichte über die Todesopfer in Syrien zu veröffentlichen. Ein Uno-Report vom August 2014 verzeichnete 190.000 Tote, später war von 250.000 Toten die Rede gewesen. Im April 2016 sprach der Uno-Sondergesandte Staffan de Mistura von 400.000 Toten."
+            ],
+            "en": [
+              ""
+            ]
+          },
+             "Conflict4": {
+            "de": [
+              "In dieser Größenordnung liegt die Schätzung der Nichtregierungsorganisation Syrian Center for Policy Research: In einem Bericht geht sie von 470.000 Toten in Syrien bis 2015 aus. Die Schätzungen der Vereinten Nationen hält sie für zu niedrig."
             ],
             "en": [
               ""
