@@ -48,6 +48,7 @@ export default [
     "link": "http://popstats.unhcr.org/en/persons_of_concern",
     "unit": "",
     "fixed": 0,
+    "legendCorner": true,
     "domain": [
       0,
       1700000
@@ -149,7 +150,7 @@ export default [
     "fixed": 0,
     "domain": [
       0,
-      3
+      5
     ],
     "skala": [
       0,
