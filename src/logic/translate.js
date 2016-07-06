@@ -2,7 +2,6 @@ import store from 'store';
 import { isObject, isString, get } from 'lodash';
 import translations from 'data/translations.json';
 import master from 'data/map/master.csv';
-import { format } from 'd3-format';
 
 
 const countries = {};
@@ -43,12 +42,20 @@ export default function translate(value, options = {}) {
   );
   if (_isNumber || _isNumberString) {
     const v = _isNumberString ? Number(value.replace(/,/g, '')) : value;
-    let translated = format('.2s')(v).toString();
+    let translated = v.toString();
+    if (v >= 1000 && v < 1000000) {
+      translated = (v / 1000).toFixed(2).toString().replace('.00', '');
+      translated += language === 'de' ? ' Tsd' : 'k';
+    }
+    if (v >= 1000000) {
+      translated = (v / 1000000).toFixed(2).toString().replace('.00', '');
+      translated += language === 'de' ? ' Mio' : 'M';
+    }
+
     if (language === 'de') {
       translated = translated.replace(/,/g, '_');
       translated = translated.replace(/\./g, ',');
       translated = translated.replace(/_/g, '.');
-      // translated = translated.replace(/k/g, 'T');
     }
     return translated;
   }
