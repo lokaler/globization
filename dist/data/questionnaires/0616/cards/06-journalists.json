@@ -1,0 +1,90 @@
+{
+  "key": "violenceJournalists",
+  "title": "6. Karte - Sklaverei",
+  "dataset": "slavery",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Gewalt gegen Journalisten",
+          "",
+          "In manchen Ländern ist es gefährlich, Kritik an den Mächtigen im Land zu üben oder die eigene Meinung öffentlich zu vertreten. Immer wieder kommt es daher vor, dass Journalisten wegen ihrer Arbeit getötet werden.",
+          "",
+          "**Was denken Sie: In welchem dieser drei Länder wurden seit 1992 die meisten Journalisten ermordet – Todesfälle im Rahmen von Kampfhandlungen nicht mitgerechnet?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "** **"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "killedJournalists",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["choice_1", { "de": "Irak", "en": "" }],
+            ["choice_2", { "de": "Philippinen", "en": ""}],
+            ["choice_3", { "de": "Russland", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "killedJournalistsSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.killedJournalists && !i.killedJournalistsSubmitted",
+          "!i.killedJournalistsSubmitted && 'notSubmitted'",
+          "f.setDataset('journalists')",
+          "f.panToCountry('IRQ') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.killedJournalists"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
+          "allAnswered": {
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
+          },
+          "choice_1": {
+            "de": [
+              "Richtig. Mindestens 111 Journalisten wurden seit 1992 im Irak wegen ihrer Arbeit ermordet. Die Nichtregierungsorganisation Reporter ohne Grenzen schreibt zur aktuellen Situation, in Mossul kursiere eine Todesliste unliebsamer Journalisten, in der Provinz Al-Anbar verübe ISIS Anschläge und auch der Staat schütze bedrohte Journalisten nicht."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_2": {
+            "de": [
+              "Nein, der Irak ist statistisch gesehen noch gefährlicher für Journalisten als die Philippinen: In dem südostasiatischen Inselstaat wurden seit Beginn der Neunzigerjahre mindestens 75 Journalisten wegen ihrer Arbeit ermordet, im Irak waren es 111. Doch die Situation bleibt auch auf den Philippinen kritisch: Erst kürzlich hat der künftige Präsident der Philippinen Morde an Journalisten in manchen Fällen für gerechtfertigt erklärt."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_3": {
+            "de": [
+              "Nein, der Irak ist statistisch gesehen noch gefährlicher für Journalisten als Russland. Seit Beginn der Neunzigerjahre wurden im Irak mindestens 111 Journalisten ermordet, in Russland waren es wenigstens 36. Ein prominentes Beispiel: Der Mord an der prominenten russischen Kolumnistin Anna Politkowskaja, die sich durch kritische Reportagen über den Tschetschenien-Krieg einen Namen gemacht hatte."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
