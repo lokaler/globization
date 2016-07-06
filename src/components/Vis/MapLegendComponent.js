@@ -31,8 +31,10 @@ export default class MapLegendComponent extends React.Component {
     const link = dataset.link;
     const color = this.props.color;
     const domain = color.domain();
+    const corner = dataset.legendCorner;
+    const range = color.range();
 
-    const legendFields = color.range().map((d,i) => {
+    const legendFields = range.map((d,i) => {
         const label = (domain[0]+ (i/9 * (domain[1]-domain[0]))).toFixed(dataset.fixed);
         // const formated = format(".2s")(label);
 
@@ -41,7 +43,7 @@ export default class MapLegendComponent extends React.Component {
             <div className="color" key={"color-"+i} style={{ background: d }}>
             </div>
             <div className="label" key={"label-"+i}>
-              { translate(label) }
+              { corner && i != 0 && i != range.length-1 ? '' : translate(label) }
             </div>
           </div>
         )
