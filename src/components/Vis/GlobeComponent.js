@@ -66,6 +66,56 @@ export default class GlobeComponent extends React.Component {
       }
     });
 
+    this.zoom = zoom()
+      //.center([0,0])
+      .scaleExtent([1,9])
+      .extent([[0,0],[this.props.width,this.props.height]])
+      .on("zoom", () => {
+         const t = event.transform;
+         const c = [
+           this.props.width/2 - this.props.width/2/t.k,
+           this.props.height/2 - this.props.height/2/t.k
+         ];
+
+         const mobileScale = this.props.app.mobile ? 0.5 : 1;
+         const _scale = this.props.vis.initialScale * mobileScale * t.k;
+         const _rotate = [
+           (t.x / t.k + c[0] ) * this.sensetivity ,
+           -(t.y / t.k + c[1] ) * this.sensetivity ,
+           0
+         ];
+
+         // console.log(event, _scale, _rotate);
+
+         this.projection
+           .rotate(_rotate)
+           .scale(_scale)
+
+        area = 1 / t.k /  t.k;
+
+         this.renderData();
+      })
+      .on("start", () => {
+        this.dragging = true;
+        this.props.actions.changeVis({
+          tooltip: {
+            active: false
+          }
+        });
+      })
+      .on("end", () => {
+        utils.log("zoomend")
+        this.dragging = false;
+        this.props.actions.changeVis({
+            transform: event.transform,
+            //translate: this.zoom.translate(),
+            //zoom: this.zoom.scale(),
+            rotate: this.projection.rotate(),
+            scale: this.projection.scale(),
+            animation: null
+          });
+      })
+
     this.dragging = false;
 
     // dunnow if this should be done here!
@@ -103,62 +153,9 @@ export default class GlobeComponent extends React.Component {
     // )
   }
 
-  zooming(){
-    const t = event.transform;
-    const c = [
-      this.props.width/2 - this.props.width/2/t.k,
-      this.props.height/2 - this.props.height/2/t.k
-    ];
-
-    const mobileScale = this.props.app.mobile ? 0.5 : 1;
-    const _scale = this.props.vis.initialScale * mobileScale * t.k;
-    const _rotate = [
-      (t.x / t.k + c[0] ) * this.sensetivity ,
-      -(t.y / t.k + c[1] ) * this.sensetivity ,
-      0
-    ];
-
-    // console.log(event, _scale, _rotate);
-
-    this.projection
-      .rotate(_rotate)
-      .scale(_scale)
-
-   // area = 1 / e.k /  e.k;
-
-    this.renderData();
-  }
 
   componentDidMount() {
     utils.log("componentDidMount", this.props)
-
-    // this.svg = d3.select(this.refs.globeSVG).call(this.zoom2);
-    this.zoom = zoom()
-      //.center([0,0])
-      .scaleExtent([1,9])
-      .extent([[0,0],[this.props.width,this.props.height]])
-      .on("zoom", this.zooming.bind(this))
-      .on("start", () => {
-        this.dragging = true;
-        this.props.actions.changeVis({
-          tooltip: {
-            active: false
-          }
-        });
-      })
-      .on("end", () => {
-        utils.log("zoomend")
-        this.dragging = false;
-        this.props.actions.changeVis({
-            transform: event.transform,
-            //translate: this.zoom.translate(),
-            //zoom: this.zoom.scale(),
-            rotate: this.projection.rotate(),
-            scale: this.projection.scale(),
-            animation: null
-          });
-      })
-
 
     this.svg = select(this.refs.globeSVG).call(this.zoom);
 
