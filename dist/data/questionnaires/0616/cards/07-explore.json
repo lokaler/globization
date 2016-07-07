@@ -1,0 +1,58 @@
+{
+  "key": "explore",
+  "title": "Explore",
+  "dataset": "none",
+  "view": "globe",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "Den Link zum interaktiven Globus teilen:"
+        ],
+        "en": [
+          "Share the link to the interactive globe:"
+        ]
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "f.setView('globe')"
+        ],
+        "answerContext": {
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeMkA', 'Interaktiver Globus: So gefährlich sind die Länder der Welt')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeMkA', 'Interaktiver Globus: So gefährlich sind die Länder der Welt')",
+          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeK2R', '')",
+          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeK2R', ' ')"
+        },
+
+        "templates": {
+          "default": {
+            "de": [
+              "<div class='sharing'>{{ twitterShare }} {{ facebookShare }}</div>"
+            ],
+            "en": [
+              "<div class='sharing'>{{ twitterShareEn }} {{ facebookShareEn }}</div>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "text": {
+        "de": [
+          "Hier können Sie die Daten noch einmal in Ruhe erkunden:",
+          "",
+          "",
+          ""
+        ],
+        "en": [
+          "Go ahead and explore the data sets."
+        ]
+      }
+    },
+    {
+      "datasetMenu": true
+    }
+  ]
+}

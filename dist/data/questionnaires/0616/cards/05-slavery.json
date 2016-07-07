@@ -1,0 +1,90 @@
+{
+  "key": "slaveryWorld",
+  "title": "5. Karte - Sklaverei",
+  "dataset": "homocides",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Verschleppt, verkauft, verheiratet",
+          "",
+          "Menschen werden zur Arbeit gezwungen oder für Sex verkauft: Ein Bericht der australischen Menschenrechtsorganisation Walk Free Foundation aus dem Jahr 2016 schätzt die Zahl moderner Sklaven weltweit auf fast 46 Millionen.",
+          "",
+          "**Wissen Sie, in welchem dieser Länder der Anteil moderner Sklaven an der Bevölkerung besonders hoch ist?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "** **"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "slaveryCountry",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["choice_1", { "de": "Nordkorea", "en": "" }],
+            ["choice_2", { "de": "Katar", "en": ""}],
+            ["choice_3", { "de": "Indien", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "slaveryCountrySubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.slaveryCountry && !i.slaveryCountrySubmitted",
+          "!i.slaveryCountrySubmitted && 'notSubmitted'",
+          "f.setDataset('slavery')",
+          "f.panToCountry('PRK') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.slaveryCountry"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
+          "allAnswered": {
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
+          },
+          "choice_1": {
+            "de": [
+              "Richtig! Pro Kopf ist die Konzentration in Nordkorea dem Global Slavery Index zufolge am höchsten: Dort gilt einer von 25 Menschen als moderner Sklave, insgesamt sind es 1,1 Millionen. Seit Jahren verschickt der ostasiatische Staat auch Menschen zur Zwangsarbeit ins Ausland."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_2": {
+            "de": [
+              "Nein, in Katar gilt dem Global Slavery Index zufolge etwa einer von 100 Menschen als moderner Sklave. In Nordkorea ist der Anteil mit einem Sklaven auf 25 Einwohner wesentlich höher. Allerdings werden seit Jahren nordkoreanische Zwangsarbeiter ins Ausland verschickt – auch auf die Baustellen für die Fußball-WM in Katar."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "choice_3": {
+            "de": [
+              "Nein, in absoluten Zahlen sind dem Global Slavery Index zufolge zwar weltweit in Indien die meisten Menschen versklavt – nämlich etwa 18,4 Millionen. Doch pro Kopf auf die Bevölkerung des Landes gerechnet, ist die Konzentration in Nordkorea am höchsten: Dort gilt einer von 25 Menschen als moderner Sklave, insgesamt sind es 1,1 Millionen. Seit Jahren verschickt Nordkorea auch Menschen zur Zwangsarbeit ins Ausland."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
