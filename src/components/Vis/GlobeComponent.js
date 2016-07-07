@@ -10,7 +10,7 @@ import { topofeatures } from 'data/map/index';
 import classnames from 'classnames';
 
 import { geoCentroid, geoArea, geoTransform, geoClipExtent, geoPath, geoGraticule, geoOrthographic } from 'd3-geo';
-import { zoom } from 'd3-zoom';
+import { zoom, zoomIdentity } from 'd3-zoom';
 import { event, select, selectAll } from 'd3-selection';
 
 @cssModules(styles)
@@ -74,35 +74,70 @@ export default class GlobeComponent extends React.Component {
       d.properties.fillColor = this.getFillColor(d.properties.iso);
     });
 
+  }
+
+  resetGlobe(){
+    console.log("reset");
+
+    const dataset = this.props.questions.dataset;
+
+    this.svg
+    .call(this.zoom.transform, zoomIdentity)
+
+    // this.svg.call(this.zoom
+    //   .scaleTo(this.props.vis.zoom)
+    //   .translate(this.props.vis.translate)
+    //   .event
+    // )
+    // .transition()
+    // .duration(()=>{
+    //   const t = Math.abs(dataset.translate[0]) + Math.abs(dataset.translate[1]);
+    //   const z = this.props.vis.zoom - 0.7;
+    //   return t+z*200;
+    //   // return 1000;
+    // })
+    // .call(this.zoom
+    //   .scale(dataset.scale)
+    //   .translate(dataset.translate)
+    //   .event
+    // )
+  }
+
+  zooming(){
+    const t = event.transform;
+    const c = [
+      this.props.width/2 - this.props.width/2/t.k,
+      this.props.height/2 - this.props.height/2/t.k
+    ];
+
+    const mobileScale = this.props.app.mobile ? 0.5 : 1;
+    const _scale = this.props.vis.initialScale * mobileScale * t.k;
+    const _rotate = [
+      (t.x / t.k + c[0] ) * this.sensetivity ,
+      -(t.y / t.k + c[1] ) * this.sensetivity ,
+      0
+    ];
+
+    // console.log(event, _scale, _rotate);
+
+    this.projection
+      .rotate(_rotate)
+      .scale(_scale)
+
+   // area = 1 / e.k /  e.k;
+
+    this.renderData();
+  }
+
+  componentDidMount() {
+    utils.log("componentDidMount", this.props)
+
+    // this.svg = d3.select(this.refs.globeSVG).call(this.zoom2);
     this.zoom = zoom()
       //.center([0,0])
       .scaleExtent([1,9])
       .extent([[0,0],[this.props.width,this.props.height]])
-      .on("zoom", () => {
-        const e = event.transform;
-        // console.log(event.transform);
-
-        const mobileScale = this.props.app.mobile ? 0.5 : 1;
-        const _scale = this.props.vis.initialScale * mobileScale * e.k;
-        const _rotate = [
-          (e.x/e.k) * this.sensetivity,
-          -(e.y/e.k) * this.sensetivity,
-          0
-        ];
-
-
-        this.projection
-          .rotate(_rotate)
-          .scale(_scale);
-
-        area = 1 / e.k /  e.k;
-
-        //utils.log("zoom",this.zoom.translate(), this.zoom.scale());
-
-        //this.forceUpdate();
-
-        this.renderData();
-      })
+      .on("zoom", this.zooming.bind(this))
       .on("start", () => {
         this.dragging = true;
         this.props.actions.changeVis({
@@ -124,33 +159,6 @@ export default class GlobeComponent extends React.Component {
           });
       })
 
-
-  }
-
-  resetGlobe(){
-    const dataset = this.props.questions.dataset;
-
-    // this.svg.call(this.zoom
-    //   .scaleTo(this.props.vis.zoom)
-    //   .translate(this.props.vis.translate)
-    //   .event
-    // )
-    // .transition()
-    // .duration(()=>{
-    //   const t = Math.abs(dataset.translate[0]) + Math.abs(dataset.translate[1]);
-    //   const z = this.props.vis.zoom - 0.7;
-    //   return t+z*200;
-    //   // return 1000;
-    // })
-    // .call(this.zoom
-    //   .scale(dataset.scale)
-    //   .translate(dataset.translate)
-    //   .event
-    // )
-  }
-
-  componentDidMount() {
-    utils.log("componentDidMount", this.props)
 
     this.svg = select(this.refs.globeSVG).call(this.zoom);
 
@@ -206,14 +214,23 @@ export default class GlobeComponent extends React.Component {
     const value = this.dataset.getValueForCountry(name);
     const unit = this.props.questions.dataset.unit;
 
-    p[0] = -p[0]/this.sensetivity * scale,
-    p[1] = p[1]/this.sensetivity * scale
+    const c = [
+      this.props.width/2 - this.props.width/2*scale,
+      this.props.height/2 - this.props.height/2*scale
+    ];
+
+    p[0] = -p[0]/this.sensetivity * scale +c[0],
+    p[1] = p[1]/this.sensetivity * scale +c[1]
+
 
     this.svg
       .transition()
       .duration(1000)
-      .call(this.zoom.scale(scale).translate(p).event)
-      .each("end", ()=>{
+      // .call(this.zoom.scale(scale).translate(p).event)
+      .call(this.zoom.transform, zoomIdentity
+          .translate(p[0], p[1])
+          .scale(scale))
+      .on("end", ()=>{
         const c = this.path.centroid(this.activeGeometry);
         this.props.actions.changeVis({
           tooltip: {
@@ -236,7 +253,7 @@ export default class GlobeComponent extends React.Component {
     if(nextProps.height != this.props.height || nextProps.width != this.props.width){
       this.projection.translate([nextProps.width / 2, nextProps.height / 2]);
       this.clip.extent([[0, 0], [nextProps.width, nextProps.height]]);
-      //this.zoom.size([nextProps.width,nextProps.height]);
+      this.zoom.extent([[0, 0], [nextProps.width, nextProps.height]]);
       update = false;
     }
 
@@ -260,20 +277,23 @@ export default class GlobeComponent extends React.Component {
     // }
 
     if(nextProps.questions.dataset != this.props.questions.dataset) {
-      // console.log("new Dataset!", nextProps.color.domain());
       const dataset = nextProps.questions.dataset;
+
+      // console.log("new Dataset!", dataset, nextProps.color.domain());
 
       this.dataset.setData(dataset.data);
 
-      utils.log(nextProps.color.domain())
+      const c = [
+        this.props.width/2 - this.props.width/2*dataset.scale,
+        this.props.height/2 - this.props.height/2*dataset.scale
+      ];
+
       this.svg
       .transition()
       .duration(1000)
-      .call(this.zoom
-        .scale(dataset.scale)
-        .translate(dataset.translate)
-        .event
-      )
+      .call(this.zoom.transform, zoomIdentity
+          .translate(dataset.translate[0] + c[0], dataset.translate[1] + c[1])
+          .scale(dataset.scale))
 
       this.geometries.forEach((d) =>{
         d.properties.fillColor = this.getFillColor(d.properties.iso);
