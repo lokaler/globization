@@ -20,8 +20,8 @@
           "f.setView('globe')"
         ],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeMkA', 'Interaktiver Globus:: So gefährlich sind die Länder der Welt ?')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeMkA', 'Interaktiver Globus:: ')",
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeMkA', 'Interaktiver Globus: So gefährlich sind die Länder der Welt')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeMkA', 'Interaktiver Globus: So gefährlich sind die Länder der Welt')",
           "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeK2R', '')",
           "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeK2R', ' ')"
         },
