@@ -44,7 +44,8 @@ export default class GlobeComponent extends React.Component {
 
     this.graticule = geoGraticule()
       .precision(10)
-      // .extent(this.projection.clipExtent());
+      //.extent(this.projection.clipExtent());
+
     this.graticulePath = geoPath().projection(this.projection);
 
     this.path = geoPath()
@@ -79,7 +80,7 @@ export default class GlobeComponent extends React.Component {
       .extent([[0,0],[this.props.width,this.props.height]])
       .on("zoom", () => {
         const e = event.transform;
-        console.log(event.transform);
+        // console.log(event.transform);
 
         const mobileScale = this.props.app.mobile ? 0.5 : 1;
         const _scale = this.props.vis.initialScale * mobileScale * e.k;
@@ -114,8 +115,9 @@ export default class GlobeComponent extends React.Component {
         utils.log("zoomend")
         this.dragging = false;
         this.props.actions.changeVis({
-            translate: this.zoom.translate(),
-            zoom: this.zoom.scale(),
+            transform: event.transform,
+            //translate: this.zoom.translate(),
+            //zoom: this.zoom.scale(),
             rotate: this.projection.rotate(),
             scale: this.projection.scale(),
             animation: null
