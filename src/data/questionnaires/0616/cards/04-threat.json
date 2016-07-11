@@ -14,9 +14,9 @@
 
         ],
         "en": [
-          "# ",
+          "# Life-Threatening Criminality",
           "",
-          "",
+          "It's not just wars that can present a threat to life and limb. In some countries, organized and drug-related crime drives up the murder rate. In Germany, the murder rate is comparatively low, with one murder per year for every 100,000 inhabitants. That means that in a mid-sized city like Jena, there is statistically about one murder per year.",
           ""
         ]
       }
@@ -28,7 +28,7 @@
           "**Wissen Sie, wie viele Menschen in Honduras, dem Land mit der höchsten Mordrate weltweit, pro Jahr und 100.000 Einwohner vorsätzlich getötet werden?** Bewegen Sie den Schieberegler, um Ihre Schätzung einzugeben!"
         ],
         "en": [
-          "** **"
+          "**Do you know how many people out of 100,000 are murdered each year in Honduras, the country with the world's highest homicide rate?**"
         ]
       }
     },
@@ -87,7 +87,7 @@
               ""
             ],
             "en": [
-              ""
+              "No, unfortunately the number in Honduras is considerably higher, with 75 murders per 100,000 inhabitants. Gangs in the country fight against each other and against police and security officers -- and they also terrorize the population. Your guess is equivalent to the murder rate **{{ ViolenceCountry }}**."
 
             ]
           },
@@ -96,7 +96,7 @@
               "Der von Ihnen geschätzte Wert ist im weltweiten Vergleich schon sehr hoch und entspricht etwa der Mordrate **{{ ViolenceCountry }}**. In Honduras ist die Situation mit 75 Morden pro 100.000 Einwohner jedoch noch gefährlicher. Gangs kämpfen dort gegeneinander und gegen die Staatsgewalt - und sie terrorisieren die Bevölkerung. "
             ],
             "en": [
-              ""
+              "The value you chose is quite high in global comparison and is roughly equivalent to the murder rate **{{ ViolenceCountry }}**. But the situation in Honduras, with 75 murders per 100,000 inhabitants, is even more dangerous. Gangs in the country fight against each other and against police and security officers -- and they also terrorize the population"
             ]
           },
           "Violence3": {
@@ -104,7 +104,7 @@
               "Sie haben die Lage in Honduras ziemlich gut eingeschätzt: Erschreckende 75 Morde pro 100.000 Einwohner werden dort im Jahr verübt. Gangs kämpfen dort gegeneinander und gegen die Staatsgewalt - und sie terrorisieren die Bevölkerung. "
             ],
             "en": [
-              "Good guess! In 2014, around 17 percent of the population -- almost 14 million people -- was at risk of poverty."
+              "Your assessment of the situation in Honduras is quite accurate. A horrific 75 murders per 100,000 inhabitants occur there each year. Gangs in the country fight against each other and against police and security officers -- and they also terrorize the population."
             ]
           },
           "Violence4": {
@@ -112,7 +112,7 @@
               "Ganz so finster wie von Ihnen geschätzt ist die Situation in Honduras nicht. Doch der Wert ist erschreckend genug: 75 Morde pro 100.000 Einwohner werden in dem zentralamerikanischen Staat pro Jahr verübt. Gangs kämpfen dort gegeneinander und gegen die Staatsgewalt - und sie terrorisieren die Bevölkerung. "
             ],
             "en": [
-              ""
+              "The situation in Honduras isn't quite that grim, but the actual figure is shocking enough: 75 murders per 100,000 inhabitants are committed in the Central American country each year. Gangs in the country fight against each other and against police and security officers -- and they also terrorize the population."
 
             ]
           }

@@ -13,11 +13,11 @@
           "**Wissen Sie, in welchem Land im Jahr 2014 am meisten Menschen als Flüchtlinge anerkannt waren oder auf die Bearbeitung ihres Asylantrags warteten?**"
         ],
         "en": [
-          " # ",
+          " # Fleeing Abroad from War and Conflict",
           "",
+          "Close to a half-million asylum applications were filed in Germany in 2015. Most of those seeking help came from Syria.",
           "",
-          "",
-          "** **"
+          "**Do you know in which country the most people were either recognized as refugees or were waiting for their asylum applications to be processed in 2014?**"
         ]
       }
     },
@@ -27,9 +27,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["choice_1", { "de": "In der Türkei", "en": "" }],
-            ["choice_2", { "de": "In Pakistan", "en": ""}],
-            ["choice_3", { "de": "Im Libanon", "en": "" }]
+            ["choice_1", { "de": "In der Türkei", "en": "in Turkey" }],
+            ["choice_2", { "de": "In Pakistan", "en": "in Pakistan"}],
+            ["choice_3", { "de": "Im Libanon", "en": "in Lebanon" }]
           ]
         }
       }
@@ -64,7 +64,7 @@
               "Richtig! Laut dem Flüchtlingshilfswerk der Vereinten Nationen lebten 2014 gut anderthalb Millionen Flüchtlinge in der Türkei. Außerdem warteten dort zu diesem Zeitpunkt rund 100.000 Menschen auf Bearbeitung ihres Asylantrags. Auf 45 türkische Bürger kommt somit ein Hilfesuchender."
             ],
             "en": [
-              ""
+              "Correct! According to the United Nations Refugee Agency, over 1.5 million refugees were living in Turkey in 2014. In addition, around 100,000 were waiting for their asylum applications to be processed that same year. That translates to one refugee for every 45 Turkish citizens."
             ]
           },
           "choice_2": {
@@ -72,7 +72,7 @@
               "Fast richtig. Die Zahl der Flüchtlinge war 2014 in Pakistan mit rund anderthalb Millionen nur um einige Zehntausend geringer als in der Türkei. Bei einer Bevölkerung von rund 188 Millionen Menschen, kommt somit auf 125 pakistanische Bürger ein Hilfesuchender. Fast alle von ihnen stammen aus Afghanistan. Allerdings beantragen nur wenige Menschen Asyl in dem südasiatischen Staat. "
             ],
             "en": [
-              ""
+              "Almost right. The number of refugees in Pakistan in 2014, at just over 1.5 million, was only slightly lower than in Turkey. With a population of 188 million, that means there was one refugee for every 125 Pakistani citizens. Almost all came from Afghanistan, but very few actually apply for asylum in the South Asian country."
             ]
           },
           "choice_3": {
@@ -80,7 +80,7 @@
               " Nein, in absoluten Zahlen gesprochen, lebten in der Türkei und in Pakistan 2014 mehr Geflüchtete als im Libanon – nämlich jeweils gut 1,5 Millionen. Auf die Bevölkerung bezogen ist der Anteil der aufgenommenen Flüchtlinge im Libanon aber bei Weitem am größten: Knapp 1,2 Millionen Geflüchtete bei einer Bevölkerung von etwa 4,6 Millionen. Damit kommt auf jeden vierten libanesischen Bürger ein Hilfesuchender."
             ],
             "en": [
-              ""
+              "No, in absolute terms, more refugees lived in Turkey and Pakistan in 2014 than in Lebanon -- around 1.5 million in each country. Relative to the country's population, however, the share of refugees taken in by Lebanon is by far the largest. Lebanon is home to 1.2 million refugees and has a population of around 4.6 million. That translates to one refugee for every four Lebanese citizens."
             ]
           }
         }
