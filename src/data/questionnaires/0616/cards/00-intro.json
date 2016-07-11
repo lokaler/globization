@@ -17,7 +17,8 @@
         "en": [
           "# BeyondTomorrow Explorer",
           "",
-          "",
+          
+          "The United Nations sustainability goals sketch out the vision of a peaceful world in which people do not need to fear harm to life or limb. But in many parts of the world, people are still threatened by violence. Using our interactive globe, discover for yourself where the situation is most precarious.",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
         ]
