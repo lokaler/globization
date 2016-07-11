@@ -14,9 +14,9 @@
 
         ],
         "en": [
-          "# ",
+          "# Violence Is Hard To Measure in Numbers",
           "",
-          "",
+          "There are estimates for the number of people killed in each war every year, but the numbers are often widely divergent, depending on their source.",
           ""
         ]
       }
@@ -28,7 +28,7 @@
           "**Wie viele Menschen sind bislang durch den Syrienkonflikt ums Leben gekommen?** Bewegen Sie den Schieberegler, um zu sehen, wie sehr sich die Schätzungen unterscheiden! "
         ],
         "en": [
-          "** **"
+          "**How many people have been killed so far in the Syria conflict?** Move the slider and see for yourself how different the estimates are."
         ]
       }
     },
@@ -71,7 +71,7 @@
               ""
             ],
             "en": [
-              ""
+              "The estimate by researchers from Sweden and Norway, who have been documenting the number of war dead in different countries around the world for decades, is in this range. Their statistics through 2014 presume a death toll of 120,000 – a figure considerably lower than the estimates of other organizations."
 
             ]
           },
@@ -80,7 +80,7 @@
               "In dieser Größenordnung liegen die Angaben des Violence Documentation Center in Syria. Die Nichtregierungsorganisation schätzt die Zahl der Opfer bis März 2016 auf rund 130.000. Damit liegt sie immer noch weit unter den Angaben der Vereinten Nationen und anderer Nichtregierungsorganisationen."
             ],
             "en": [
-              ""
+              "The estimate by the Violence Documentation Center in Syria falls within this range. The non-government organization estimated the number of dead through March 2016 at around 130,000. That figure is still far lower than the estimate provided by the United Nations and other NGOs."
             ]
           },
           "Conflict3": {
@@ -88,7 +88,7 @@
               "In dieser Größenordnung liegen die Schätzungen der Uno – die allerdings Anfang 2014 wegen der ungewissen Datenlage aufhörte, regelmäßige Berichte über die Todesopfer in Syrien zu veröffentlichen. Ein Uno-Report vom August 2014 verzeichnete 190.000 Tote, später war von 250.000 Toten die Rede gewesen. Im April 2016 sprach der Uno-Sondergesandte Staffan de Mistura von 400.000 Toten."
             ],
             "en": [
-              ""
+              "United Nations estimates are in this range, though the UN stopped issuing regular reports on the number of deaths in Syria in early 2014 due to the lack of reliable data. An August 2014 UN report noted 190,000 deaths, but later that estimate rose to 250,000 dead. In April 2016, UN Special Envoy for Syria Staffan de Mistura spoke of 400,000 deaths."
             ]
           },
              "Conflict4": {
@@ -96,7 +96,7 @@
               "In dieser Größenordnung liegt die Schätzung der Nichtregierungsorganisation Syrian Center for Policy Research: In einem Bericht geht sie von 470.000 Toten in Syrien bis 2015 aus. Die Schätzungen der Vereinten Nationen hält sie für zu niedrig."
             ],
             "en": [
-              ""
+              "The projection given by the NGO Syrian Center for Policy Research falls into this range. A report issued by the group assumes 470,000 deaths in Syria through the end of 2015. The organization considers the UN's estimates to be too low."
             ]
           }
         }
