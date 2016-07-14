@@ -22,8 +22,8 @@
         "answerContext": {
           "twitterShare": "f.shareButtonTwitter('http://spon.de/aeMkA', 'Interaktiver Globus: So gefährlich sind die Länder der Welt')",
           "facebookShare": "f.shareButtonFacebook('http://spon.de/aeMkA', 'Interaktiver Globus: So gefährlich sind die Länder der Welt')",
-          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeM3e', '')",
-          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeM3e', ' ')"
+          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeM3e', 'Interactive Globe: How Dangerous Are the Countries of Our World?')",
+          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeM3e', 'Interactive Globe: How Dangerous Are the Countries of Our World?')"
         },
 
         "templates": {
