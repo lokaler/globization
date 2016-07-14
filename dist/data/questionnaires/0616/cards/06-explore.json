@@ -20,10 +20,10 @@
           "f.setView('globe')"
         ],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeMkA', 'Interaktiver Globus: So gefährlich sind die Länder der Welt')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeMkA', 'Interaktiver Globus: So gefährlich sind die Länder der Welt')",
-          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeM3e', '')",
-          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeM3e', ' ')"
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeKPj', 'Der #ÜberMorgen-Explorer:  ?')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeKPj', 'Der #ÜberMorgen-Explorer: ')",
+          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeK2R', '#BeyondTomorrow Explorer: W')",
+          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeK2R', '#BeyondTomorrow Explorer: ')"
         },
 
         "templates": {
