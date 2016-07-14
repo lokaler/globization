@@ -1,6 +1,13 @@
 
 
 :local(.container) {
+
+  * {
+      -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+      -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+      -webkit-user-select:text;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+  }
+
   overflow: hidden;
   display: flex;
   background: #FFF;
