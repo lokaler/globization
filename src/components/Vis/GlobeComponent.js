@@ -335,6 +335,7 @@ export default class GlobeComponent extends React.Component {
           fill={d.properties.fillColor}
           onMouseLeave={this.onMouseLeave.bind(this,d)}
           onMouseEnter={this.onMouseEnter.bind(this,d)}
+          onClick={this.onMouseEnter.bind(this,d)}
         />
       )
     });
