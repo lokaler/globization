@@ -9,7 +9,7 @@ cp -r /tmp/dist .
 git add -A
 git commit -a -m "deploy"
 git push
-git checkout 06-16
+git checkout rounds
 git pull
 
 exit 0
