@@ -1,0 +1,90 @@
+{
+  "key": "refugeesInternal",
+  "title": "2. Karte - Binnenflüchtlinge",
+  "dataset": "refugees",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Flucht vor Krieg und Konflikt –  im Heimatland",
+          "",
+          "Nach Angaben des Uno-Flüchtlingshilfswerks ist etwa jeder 113. Mensch auf der Welt im Jahr 2015 auf der Flucht gewesen. Fast zwei Drittel der Vertriebenen suchen Schutz innerhalb ihres Heimatlandes.",
+          "",
+          "**Ende 2014 gab es die meisten Binnenflüchtlinge in Syrien. Gut ein Drittel der Bevölkerung, also rund 7,6 Millionen Menschen, suchten Zuflucht innerhalb der Staatsgrenzen. Aber welches Land liegt – in absoluten Zahlen – auf Platz zwei dieser traurigen Rangliste?**"
+        ],
+        "en": [
+          " # Internally Displaced as a Result of War and Conflict",
+          "",
+          "According to the UN Refugee Agency, one out of every 113 people in the world was forced to flee violence in 2015. Close to two-thirds of those who have been displaced seek protection within their own country.",
+          "",
+          "**At the end of 2014, Syria was home to the largest number of internally displaced people. One-third of the total population of around 7.6 million people sought refuge within the country's borders. But in this somber ranking, which country -- in absolute numbers -- is in second place?**"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "displacedCountry",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["choice_1", { "de": "Die Demokratische Republik Kongo ", "en": "Democratic Republic of Congo" }],
+            ["choice_2", { "de": "Der Irak", "en": "Iraq"}],
+            ["choice_3", { "de": "Kolumbien", "en": "Colombia" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "displacedCountrySubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.displacedCountry && !i.displacedCountrySubmitted",
+          "!i.displacedCountrySubmitted && 'notSubmitted'",
+          "f.setDataset('displaced')",
+          "f.panToCountry('COL') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.displacedCountry"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
+          "allAnswered": {
+            "de": ["Bitte beantworten und bestätigen"], "en": ["Are you sure?"]
+          },
+          "choice_1": {
+            "de": [
+              "Nein. Den traurigen Rekord hält Kolumbien: Jahrzehnte des Bürgerkriegs haben dazu geführt, dass dort mehr als sechs Millionen Menschen, und somit rund 13 Prozent der Bevölkerung, im eigenen Land auf der Flucht sind. Doch auch in der Demokratischen Republik Kongo haben militärische Konflikte sowie Streit um Land und Rohstoffe dazu geführt, dass im Jahr 2014 dort rund 2,7 Millionen Menschen, also etwa vier Prozent der Bevölkerung, entwurzelt waren. Betrachtet man nur den Anteil der Binnenflüchtlinge an der Gesamtbevölkerung, liegt der Südsudan mit 13,8 Prozent weltweit auf Platz zwei."
+            ],
+            "en": [
+              "No. Colombia is the correct answer. Decades of civil war in Colombia have created a situation where more than 6 million people, or roughly 13 percent of the population, were refugees inside their own country in 2014. But in the Democratic Republic of Congo, armed conflict and battles over raw materials meant that 2.7 million people, or roughly 4 percent of the population, were internally displaced in 2014. If you look only at the share of the population that is internally displaced, South Sudan, at 13.8 percent, is in second place globally."
+            ]
+          },
+          "choice_2": {
+            "de": [
+              "Nein. Den traurigen Rekord hält Kolumbien: Jahrzehnte des Bürgerkriegs haben dazu geführt, dass dort im Jahr 2014 mehr als sechs Millionen Menschen, und somit rund 13 Prozent der Bevölkerung, im eigenen Land auf der Flucht waren. Doch auch die anhaltenden Konflikte im Irak haben dazu geführt, dass dort im gleichen Zeitraum rund 3,6 Millionen Menschen, also etwa zehn Prozent der Bevölkerung, entwurzelt waren. Betrachtet man nur den Anteil der Binnenflüchtlinge an der Gesamtbevölkerung, liegt der Südsudan mit 13,8 Prozent weltweit auf Platz zwei."
+            ],
+            "en": [
+              "No. Colombia is the correct answer. Decades of civil war in Colombia have created a situation where more than 6 million people, or roughly 13 percent of the population, were refugees inside their own country in 2014. But the sustained conflict in Iraq meant that around 3.6 million people, or about 10 percent of the population, were displaced that same year. If you look only at the share of the population that is internally displaced, South Sudan, at 13.8 percent, is in second place globally."
+            ]
+          },
+          "choice_3": {
+            "de": [
+              "Richtig! Jahrzehnte des Bürgerkriegs haben dazu geführt, dass im Jahr 2014 in Kolumbien mehr als sechs Millionen Menschen, und somit rund 13 Prozent der Bevölkerung, im eigenen Land auf der Flucht waren. Mehr als 220.000 Kolumbianer starben seit 1952 in den Konflikten, Tausende gelten noch heute als vermisst. Betrachtet man nur den Anteil der Binnenflüchtlinge an der Gesamtbevölkerung, liegt der Südsudan mit 13,8 Prozent weltweit auf Platz zwei."
+            ],
+            "en": [
+              "Correct! Decades of civil war in Colombia have created a situation where more than 6 million people, or roughly 13 percent of the population, were refugees inside their own country in 2014. More than 220,000 Colombians have died in the conflicts since 1952 and thousands are still considered missing today. If you look only at the share of the population that is internally displaced, South Sudan, at 13.8 percent, is in second place globally."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

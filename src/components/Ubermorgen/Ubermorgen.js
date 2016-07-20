@@ -62,23 +62,6 @@ export default class UbermorgenApp extends React.Component {
     }
   }
 
-  clickFullscreen() {
-    this.props.actions.setFullscreen(true);
-    this.props.actions.setWindowSize({ width: screen.width, height: screen.height });
-
-    d3.select(window.frameElement).style({
-      position: 'fixed',
-      left: 0,
-      top: 0,
-      right: 0,
-      bottom: 0,
-      padding: 0,
-      margin: 0,
-      width: '100%',
-      height: '100%'
-    });
-  }
-
   handleResize() {
     const bbox = d3.select('body').node().getBoundingClientRect();
     this.props.actions.setWindowSize({ width: bbox.width, height: bbox.height });
@@ -95,17 +78,9 @@ export default class UbermorgenApp extends React.Component {
 
   render() {
     const responsiveClass = this.props.app.mobile ? 'mq-mobile' : 'mq-desktop';
-    const isMobile = this.props.app.mobile;
-    const isFullscreen = this.props.app.fullscreen;
-    const fullscreenClick = this.clickFullscreen.bind(this);
 
     return (
       <div className={ responsiveClass }>
-        { isMobile && !isFullscreen && false &&
-          <div className="mobileFullscreenOverlay" onClick={ fullscreenClick }>
-            Fullscreen
-          </div>
-        }
         <div className={ styles.container }>
           <div ref="left" className="left">
             <Vis {...this.props}/>

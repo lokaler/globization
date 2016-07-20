@@ -3,6 +3,7 @@ import { isObject, isString, get } from 'lodash';
 import translations from 'data/translations.json';
 import master from 'data/map/master.csv';
 
+
 const countries = {};
 for (const c of master) {
   const isoCode = c.alpha3;
@@ -40,7 +41,17 @@ export default function translate(value, options = {}) {
     && !isNaN(Number(value.replace(/,/g, '')))
   );
   if (_isNumber || _isNumberString) {
-    let translated = value.toString();
+    const v = _isNumberString ? Number(value.replace(/,/g, '')) : value;
+    let translated = v.toString();
+    if (v >= 1000 && v < 1000000) {
+      translated = (v / 1000).toFixed(2).toString().replace('.00', '');
+      translated += language === 'de' ? ' Tsd' : 'k';
+    }
+    if (v >= 1000000) {
+      translated = (v / 1000000).toFixed(2).toString().replace('.00', '');
+      translated += language === 'de' ? ' Mio' : 'M';
+    }
+
     if (language === 'de') {
       translated = translated.replace(/,/g, '_');
       translated = translated.replace(/\./g, ',');

@@ -1,0 +1,90 @@
+{
+  "key": "violenceJournalists",
+  "title": "6. Karte - Sklaverei",
+  "dataset": "slavery",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Gewalt gegen Journalisten",
+          "",
+          "In manchen Ländern ist es gefährlich, Kritik an den Mächtigen im Land zu üben oder die eigene Meinung öffentlich zu vertreten. Immer wieder kommt es daher vor, dass Journalisten wegen ihrer Arbeit getötet werden.",
+          "",
+          "**Was denken Sie: In welchem dieser drei Länder wurden seit 1992 die meisten Journalisten ermordet – Todesfälle im Rahmen von Kampfhandlungen nicht mitgerechnet?**"
+        ],
+        "en": [
+          " # Violence against Journalists",
+          "",
+          "In some countries, it is dangerous to criticize the nation's powerful or to publicly express an opinion. In such places, it is not uncommon for journalists to be killed because of their work.",
+          "",
+          "**What do you think? In which of these three countries have the most journalists been murdered -- not counting deaths caused by acts of war?**"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "killedJournalists",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["choice_1", { "de": "Irak", "en": "Iraq" }],
+            ["choice_2", { "de": "Philippinen", "en": "Philippines"}],
+            ["choice_3", { "de": "Russland", "en": "Russia" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "killedJournalistsSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.killedJournalists && !i.killedJournalistsSubmitted",
+          "!i.killedJournalistsSubmitted && 'notSubmitted'",
+          "f.setDataset('journalists')",
+          "f.panToCountry('IRQ') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.killedJournalists"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
+          "allAnswered": {
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
+          },
+          "choice_1": {
+            "de": [
+              "Richtig. Mindestens 111 Journalisten wurden seit 1992 im Irak wegen ihrer Arbeit ermordet. Die Nichtregierungsorganisation Reporter ohne Grenzen schreibt zur aktuellen Situation, in Mossul kursiere eine Todesliste unliebsamer Journalisten, in der Provinz Al-Anbar verübe ISIS Anschläge und auch der Staat schütze bedrohte Journalisten nicht."
+            ],
+            "en": [
+              "Correct. At least 111 journalists have been murdered in Iraq since 1992 because of their work. The non-governmental organization Reporters without Borders writes that a kill list of undesired journalists is currently circulating in Mosul. Meanwhile, in Al-Anbar province Islamic State attacks journalists and even the state doesn't protect threatened journalists."
+            ]
+          },
+          "choice_2": {
+            "de": [
+              "Nein, der Irak ist statistisch gesehen noch gefährlicher für Journalisten als die Philippinen: In dem südostasiatischen Inselstaat wurden seit Beginn der Neunzigerjahre mindestens 75 Journalisten wegen ihrer Arbeit ermordet, im Irak waren es 111. Doch die Situation bleibt auch auf den Philippinen kritisch: Erst kürzlich hat der künftige Präsident der Philippinen Morde an Journalisten in manchen Fällen für gerechtfertigt erklärt."
+            ],
+            "en": [
+              "No, Iraq is statistically more dangerous for journalists than the Philippines. At least 75 journalists have been murdered in the Asian island nation because of their work, compared to 111 in Iraq. But the situation remains critical in the Philippines: Just a short time ago, the country's president-elect said that the murder of journalists is justifiable in some cases."
+            ]
+          },
+          "choice_3": {
+            "de": [
+              "Nein, der Irak ist statistisch gesehen noch gefährlicher für Journalisten als Russland. Seit Beginn der Neunzigerjahre wurden im Irak mindestens 111 Journalisten ermordet, in Russland waren es wenigstens 36. Ein prominentes Beispiel: Der Mord an der russischen Kolumnistin Anna Politkowskaja, die sich durch kritische Reportagen über den Tschetschenien-Krieg einen Namen gemacht hatte."
+            ],
+            "en": [
+              "No, in sheer numbers, Iraq is still more dangerous for journalists than Russia. Since the early 1990s, at least 111 journalists have been murdered in Iraq. A minimum of 36 were murdered in Russia in the same timeframe. A prominent example is the 2006 murder of Russian columnist Anna Politkovskaya, who had established herself with her critical reporting on the war in Chechnya."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
