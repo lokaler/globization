@@ -30,7 +30,8 @@ export default class UbermorgenApp extends React.Component {
     actions.loadQuestionnaires(questionnaires);
     actions.getUrlParameters();
     actions.getStoredValues();
-    actions.fetchHistogramData('https://uebermorgen-logbuch.lokaler.de/');
+    // actions.fetchHistogramData('https://uebermorgen-logbuch.lokaler.de/');
+    actions.fetchHistogramData('data/stats.json');
     actions.setQuestionnaire(store.getState().questions.activeQuestionnaireId);
     this.configureHotReload();
     window.addEventListener('resize', this.handleResize.bind(this));

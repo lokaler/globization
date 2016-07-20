@@ -2,7 +2,7 @@ import React, { PropTypes as PT } from 'react';
 import translate from 'logic/translate';
 import styles from './Choices.scss';
 import RadioInput from './RadioInput';
-import Histogram from './ChoicesHistogram';
+import { max, values } from 'lodash';
 
 
 const noop = () => {}; // eslint-disable-line arrow-body-style
@@ -27,29 +27,36 @@ export default class Choices extends React.Component {
   render() {
     const { questions, id, options, disabled, histogramData } = this.props;
     const currentValue = questions.inputValues[id];
+    const histoMax = max(values(histogramData));
 
     const Radios = options.choices.map((option) => {
       const [value, label] = option;
       const onClick = disabled ? noop : this.setValue.bind(this, value);
+      const histoVotes = histogramData[value];
+      const histoSize = `${histoVotes / histoMax * 100}%`;
 
       return (
-        <RadioInput
-          key={ `${ id }_${ value }` }
-          value={ value }
-          label={ translate(label) }
-          checked={ value === currentValue }
-          disabled={ disabled }
-          onClick={ onClick }
-        />
+        <div>
+          <RadioInput
+            key={ `${ id }_${ value }` }
+            value={ value }
+            label={ translate(label) }
+            checked={ value === currentValue }
+            disabled={ disabled }
+            onClick={ onClick }
+          />
+          { histogramData &&
+          <div className="bar" style={{ width: histoSize }}>
+            { histoVotes }
+          </div>
+          }
+        </div>
       );
     });
 
     return (
       <div className={ styles.component }>
         { Radios }
-        { histogramData && false &&
-          <Histogram histogramData={ histogramData }/>
-        }
       </div>
     );
   }

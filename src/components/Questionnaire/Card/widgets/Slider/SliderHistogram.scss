@@ -5,13 +5,22 @@
   position: relative;
 
   .bin {
-    background-color: #A1D99B;
+    background-color: #d2d2d2;
     float: left;
     width: 10%;
     min-height: 1px;
     text-align: center;
     font-size: 10px;
     position: relative;
-    border-right: 1px solid #D5FCD0;
+    border-right: 1px solid #FFF;
+
+    span {
+      position: relative;
+      top: -15px;
+      opacity: 1;
+      &.max {
+        opacity: 1;
+      }
+    }
   }
 }
