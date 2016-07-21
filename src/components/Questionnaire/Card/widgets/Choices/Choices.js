@@ -4,7 +4,6 @@ import styles from './Choices.scss';
 import RadioInput from './RadioInput';
 import { max, values } from 'lodash';
 
-
 const noop = () => {}; // eslint-disable-line arrow-body-style
 
 export default class Choices extends React.Component {
@@ -33,7 +32,7 @@ export default class Choices extends React.Component {
       const [value, label] = option;
       const onClick = disabled ? noop : this.setValue.bind(this, value);
       const histoVotes = histogramData[value];
-      const histoSize = `${histoVotes / histoMax * 100}%`;
+      const histoSize = `${histoVotes / histoMax * 90}%`;
 
       return (
         <div>
@@ -47,7 +46,7 @@ export default class Choices extends React.Component {
           />
           { histogramData &&
           <div className="bar" style={{ width: histoSize }}>
-            { histoVotes }
+            { translate(histoVotes, { isSimpleNumber: true }) }
           </div>
           }
         </div>

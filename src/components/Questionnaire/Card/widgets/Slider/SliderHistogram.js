@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { component } from './SliderHistogram.scss';
 import d3 from 'd3';
 import Tooltip from 'rc-tooltip';
+import translate from 'logic/translate';
 
 export default class SliderHistogram extends React.Component {
 
@@ -14,9 +15,10 @@ export default class SliderHistogram extends React.Component {
 
   makeHistogramData() {
     const { histogramData, min, max } = this.props;
-    const step = (max - min) / 10;
+    const steps = 7;
+    const step = (max - min) / steps;
 
-    const data = d3.range(10)
+    const data = d3.range(steps)
       .map(i => {
         const a = min + (i) * step;
         const b = min + (i + 1) * step;
@@ -49,9 +51,9 @@ export default class SliderHistogram extends React.Component {
   render() {
     // const { histogramData } = this.props;
     // console.log(this.makeHistogramData());
-
+    const steps = 7;
     const { min, max, unit } = this.props;
-    const step = (max - min) / 10;
+    const step = (max - min) / steps;
 
     const histograms = this.makeHistogramData().map(d => (
       <Tooltip
@@ -60,14 +62,18 @@ export default class SliderHistogram extends React.Component {
         placement="top"
         trigger={['hover']}
         align={{ offset: [0, -10] }}
-        overlay={<span>{ d.key } - { d.key + step } { unit }</span>}
+        overlay={ <span>
+          { translate(d.key.toFixed(2)) } - { translate((d.key + step).toFixed(2)) } { unit }
+          </span>}
       >
         <div
           key={ d.key }
-          style={{ height: `${ d.height }%`, bottom: `${ d.height }%` }}
+          style={{ height: `${ d.height }%`, bottom: `${ d.height }%`, width: `${ 100 / steps }%` }}
           className="bin"
         >
-          <span className={ d.isMax ? 'max' : ''}>{ d.value }</span>
+          <span className={ d.isMax ? 'max' : ''}>
+            { translate(d.value, { isSimpleNumber: true }) }
+          </span>
         </div>
       </Tooltip>
     ));

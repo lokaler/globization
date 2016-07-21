@@ -3,8 +3,10 @@ import React, { PropTypes as PT } from 'react';
 import Rcslider from 'rc-slider';
 import Histogram from './SliderHistogram';
 import { sponLogger } from 'logic/logging';
+import translate from 'logic/translate';
 import styles from './Slider.scss';
 import 'rc-slider/assets/index.css';
+
 
 export default class Slider extends React.Component {
 
@@ -26,7 +28,7 @@ export default class Slider extends React.Component {
   }
 
   tipFormatter(val) {
-    return `${val} ${this.props.options.unit}`;
+    return `${translate(val, { isSimpleNumber: true })} ${this.props.options.unit}`;
   }
 
   render() {
