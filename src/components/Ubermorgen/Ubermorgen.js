@@ -32,7 +32,14 @@ export default class UbermorgenApp extends React.Component {
     actions.getStoredValues();
     // actions.fetchHistogramData('https://uebermorgen-logbuch.lokaler.de/');
     actions.fetchHistogramData('data/stats.json');
-    actions.setQuestionnaire(store.getState().questions.activeQuestionnaireId);
+    const state = store.getState();
+    actions.setQuestionnaire(state.questions.activeQuestionnaireId);
+    if (state.app.dataset) {
+      actions.setDataSet(state.app.dataset);
+    }
+    if (state.app.country) {
+      actions.zoomToCountry(state.app.country);
+    }
     this.configureHotReload();
     window.addEventListener('resize', this.handleResize.bind(this));
     window.parent.addEventListener('scroll', this.handleScroll.bind(this));
@@ -79,6 +86,9 @@ export default class UbermorgenApp extends React.Component {
 
   render() {
     const responsiveClass = this.props.app.mobile ? 'mq-mobile' : 'mq-desktop';
+    const vis = this.props.app.vis;
+
+    console.log(vis);
 
     return (
       <div className={ responsiveClass }>
@@ -86,9 +96,11 @@ export default class UbermorgenApp extends React.Component {
           <div ref="left" className="left">
             <Vis {...this.props}/>
           </div>
+          { !vis &&
           <div className="right">
             <Questionnaire {...this.props}/>
           </div>
+          }
         </div>
       </div>
     );

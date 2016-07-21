@@ -19,8 +19,8 @@ export function reducer(state = initialState, action) {
   switch (action.type) {
 
     case GET_URL_PARAMETERS: {
-      const { language, mobile, width, round } = action;
-      return { ...state, language, mobile, width, round };
+      const { language, mobile, width, round, vis, dataset, country } = action;
+      return { ...state, language, mobile, width, round, vis, dataset, country };
     }
 
     case SET_WINDOW_SIZE: {
@@ -48,9 +48,13 @@ export const actions = {
     const round = q('round') || null;
     const card = parseInt(q('card'), 10) || 0;
     const bbox = d3.select('body').node().getBoundingClientRect();
-    const mobile = bbox.width < 600;
+    const width = bbox.width;
+    const mobile = width < 600;
+    const vis = q('vis') || null;
+    const dataset = q('dataset') || null;
+    const country = q('country') || null;
     return { type: GET_URL_PARAMETERS, language, round, card, mobile,
-      width: bbox.width };
+      width, vis, dataset, country };
   },
 
   getStoredValues: () => {

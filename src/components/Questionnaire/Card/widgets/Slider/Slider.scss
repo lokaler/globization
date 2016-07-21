@@ -12,6 +12,11 @@
     display: none;
   }
 
+  .rc-slider-mark {
+    font-size: 10px;
+    top:5px;
+  }
+
   .rc-slider-handle {
     border-color:#FD8D3C;
     .mq-mobile & {
