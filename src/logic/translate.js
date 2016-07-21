@@ -43,15 +43,18 @@ export default function translate(value, options = {}) {
   if (_isNumber || _isNumberString) {
     const v = _isNumberString ? Number(value.replace(/,/g, '')) : value;
     let translated = v.toString();
-    if (v >= 1000 && v < 1000000) {
-      translated = (v / 1000).toFixed(2).toString().replace('.00', '');
-      translated += language === 'de' ? ' Tsd' : 'k';
+    if (options.isSimpleNumber) {
+      translated = translated.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    } else {
+      if (v >= 1000 && v < 1000000) {
+        translated = (v / 1000).toFixed(2).toString().replace('.00', '');
+        translated += language === 'de' ? ' Tsd' : 'k';
+      }
+      if (v >= 1000000) {
+        translated = (v / 1000000).toFixed(2).toString().replace('.00', '');
+        translated += language === 'de' ? ' Mio' : 'M';
+      }
     }
-    if (v >= 1000000) {
-      translated = (v / 1000000).toFixed(2).toString().replace('.00', '');
-      translated += language === 'de' ? ' Mio' : 'M';
-    }
-
     if (language === 'de') {
       translated = translated.replace(/,/g, '_');
       translated = translated.replace(/\./g, ',');
