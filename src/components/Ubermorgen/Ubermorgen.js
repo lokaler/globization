@@ -40,6 +40,9 @@ export default class UbermorgenApp extends React.Component {
     if (state.app.country) {
       actions.zoomToCountry(state.app.country);
     }
+    if (state.app.vis) {
+      actions.changeVis({ type: state.app.vis });
+    }
     this.configureHotReload();
     window.addEventListener('resize', this.handleResize.bind(this));
     window.parent.addEventListener('scroll', this.handleScroll.bind(this));
@@ -87,8 +90,6 @@ export default class UbermorgenApp extends React.Component {
   render() {
     const responsiveClass = this.props.app.mobile ? 'mq-mobile' : 'mq-desktop';
     const vis = this.props.app.vis;
-
-    console.log(vis);
 
     return (
       <div className={ responsiveClass }>

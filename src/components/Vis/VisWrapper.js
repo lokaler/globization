@@ -96,7 +96,7 @@ export default class Globe extends React.Component {
     const app = this.props.app;
 
     const height = app.mobile ? 250 : app.height;
-    const width = app.mobile ? app.width : app.width * 0.65;
+    const width = ( app.mobile || app.vis ) ? app.width : app.width * 0.65;
 
     return (
       <div className="vis">
