@@ -9,6 +9,8 @@ import cards0516 from './0516/cards/index';
 import datasets0516 from './0516/datasets/index';
 import cards0616 from './0616/cards/index';
 import datasets0616 from './0616/datasets/index';
+import cards0716 from './0716/cards/index';
+import datasets0716 from './0716/datasets/index';
 
 
 let questionnaires = {
@@ -57,6 +59,18 @@ let questionnaires = {
     },
     cards: cards0616,
     datasets: datasets0616
+  },
+  '0716': {
+    title: {
+      de: 'Reisen',
+      en: 'Travel'
+    },
+    options: {
+      showBackButton: true,
+      lastButtonLabel: 'explore'
+    },
+    cards: cards0716,
+    datasets: datasets0716
   }
 };
 

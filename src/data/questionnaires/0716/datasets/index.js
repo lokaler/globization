@@ -2,27 +2,26 @@
 
 export default [
   {
-    "key": "depatures",
+    "key": "travels",
     "name": {
       "de": "Urlaubsreisen",
       "en": ""
     },
     "description": {
-      "de": "Global Peace Index (1 sehr friedlich, 4 sehr unfriedlich)",
-      "en": "Anzahl Urlaubsreisen pro Jahr und Einwohner (Stand 2013/14)"
+      "de": "Anzahl Urlaubsreisen pro Jahr und Einwohner (Stand 2013/14)",
+      "en": ""
     },
     "quelle": "Weltbank/UNWTO",
-    "link": "http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators#",
+    "link": "http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators",
     "unit": "",
     "fixed": 1,
     "domain": [
       1,
-      4
+      12
     ],
     "skala": [
       0,
-      100000,
-      200000,
+      11
 
     ],
     "translate": [
@@ -32,7 +31,7 @@ export default [
     "scale": 1,
     "colorSet": "Reds",
     "colorNum": 9,
-    "data": require('./depatures.csv')
+    "data": require('./travels.csv')
   },
   {
     "key": "travelingtofromgermany",
