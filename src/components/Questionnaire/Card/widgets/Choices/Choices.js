@@ -35,7 +35,7 @@ export default class Choices extends React.Component {
       const histoSize = `${histoVotes / histoMax * 90}%`;
 
       return (
-        <div>
+        <div key={ `${ id }_${ value }_outer` }>
           <RadioInput
             key={ `${ id }_${ value }` }
             value={ value }
@@ -45,7 +45,7 @@ export default class Choices extends React.Component {
             onClick={ onClick }
           />
           { histogramData &&
-          <div className="bar" style={{ width: histoSize }}>
+          <div className="bar" style={{ width: histoSize }} key={ `${ id }_${ value }_answer` }>
             { translate(histoVotes, { isSimpleNumber: true }) }
           </div>
           }
