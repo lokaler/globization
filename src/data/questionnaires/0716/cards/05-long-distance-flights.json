@@ -46,13 +46,13 @@
       "answer": {
         "answerKey": [
           "i.longDistanceFlightsAnswer && !i.longDistanceFlightAnswerSubmitted",
-          "!i.cruiseShipsAnswerSubmitted && 'notSubmitted'",
-          "f.setDataset('airportstravelingto')",
-          "ldf_choice_1 && f.panToCountry('PER')",
-          "ldf_choice_2 && f.panToCountry('MMR')",
-          "ldf_choice_3 && f.panToCountry('USA')",
+          "!i.longDistanceFlightsAnswerSubmitted && 'notSubmitted'",
+          "f.setDataset('cruiseships')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
+          "i.longDistanceFlightsAnswer == 'ldf_choice_1' && f.panToCountry('PER') && false",
+          "i.longDistanceFlightsAnswer == 'ldf_choice_2' && f.panToCountry('MMR') && false",
+          "i.longDistanceFlightsAnswer == 'ldf_choice_3' && f.panToCountry('USA') && false",
           "i.longDistanceFlightsAnswer"
         ],
         "answerContext": {},
