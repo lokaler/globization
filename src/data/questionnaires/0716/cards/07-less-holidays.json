@@ -1,0 +1,88 @@
+{
+  "key": "lessHolidays",
+  "title": "7. Karte - Wenig Urlaub",
+  "dataset": "tourismexpenditures",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wer hat den meisten Urlaub?",
+          "",
+          "Wer nachhaltig reisen will, muss natürlich überhaupt freie Zeit für einen Urlaub haben.",
+          "",
+          "**Tippen Sie: Die Bürger welches Landes haben im Schnitt die wenigsten Urlaubstage pro Jahr?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "lessHolidaysAnswers",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["lh_choice_1", { "de": "Deutschland", "en": "" }],
+            ["lh_choice_2", { "de": "Griechenland", "en": ""}],
+            ["lh_choice_3", { "de": "Belgien", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "lessHolidaysAnswersSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.lessHolidaysAnswers && !i.lessHolidaysAnswersSubmitted",
+          "!i.lessHolidaysAnswersSubmitted && 'notSubmitted'",
+          "f.setDataset('amountholidays')",
+          "f.panToCountry('BEL') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.lessHolidaysAnswers"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
+
+          "lh_choice_1": {
+            "de": [
+              "Nein, die Deutschen stehen im Vergleich mit anderen europäischen Ländern gut da: Ebenso wie Menschen in Frankreich oder Dänemark haben sie im Durchschnitt 30 Tage Urlaub. In Griechenland sind es hingegen nur 23 Tage und in Belgien sogar nur 20."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "lh_choice_2": {
+            "de": [
+              "Nein, griechische Bürger haben im Schnitt immerhin 23 Tage Urlaub, Belgier nur 20. Die Deutschen stehen im Vergleich mit anderen europäischen Ländern gut da: Ebenso wie Menschen in Frankreich oder Dänemark haben sie im Durchschnitt 30 Tage Urlaub."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "lh_choice_3": {
+            "de": [
+              "Richtig! Belgier haben im Schnitt nur 20 Tage Urlaub. In Griechenland sind es immerhin 23. Die Deutschen stehen im Vergleich mit anderen europäischen Ländern gut da: Ebenso wie Menschen in Frankreich oder Dänemark haben sie im Durchschnitt 30 Tage Urlaub."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

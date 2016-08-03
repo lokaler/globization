@@ -47,7 +47,7 @@
         "answerKey": [
           "i.longDistanceFlightsAnswer && !i.longDistanceFlightAnswerSubmitted",
           "!i.longDistanceFlightsAnswerSubmitted && 'notSubmitted'",
-          "f.setDataset('cruiseships')",
+          "f.setDataset('airportstravelingto')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "i.longDistanceFlightsAnswer == 'ldf_choice_1' && f.panToCountry('PER') && false",

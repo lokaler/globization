@@ -61,7 +61,7 @@ export default [
       485
     ],
     "scale": 2.4,
-    "colorSet": "Reds",
+    "colorSet": "Purples",
     "colorNum": 9,
     "data": require('./travelingtofromgermany.csv')
   },
@@ -94,7 +94,7 @@ export default [
       485
     ],
     "scale": 2.4,
-    "colorSet": "Reds",
+    "colorSet": "Purples",
     "colorNum": 9,
     "data": require('./cruiseships.csv')
   },
@@ -127,7 +127,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "BuPu",
+    "colorSet": "Purples",
     "colorNum": 9,
     "data": require('./touristsfromgermany.csv')
   },
@@ -143,11 +143,11 @@ export default [
     },
     "quelle": "Weltbank/UNWTO",
     "link": "http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators",
-    "unit": "%",
+    "unit": "€",
     "fixed": 0,
     "domain": [
       0,
-      5
+      5000
     ],
     "skala": [
       0,
@@ -160,7 +160,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Purples",
     "colorNum": 9,
     "data": require('./tourismexpenditures.csv')
   },
@@ -179,8 +179,41 @@ export default [
     "unit": "",
     "fixed": 0,
     "domain": [
+      20,
+      30
+    ],
+    "skala": [
       0,
-      110
+      5,
+      10,
+      30
+    ],
+    "translate": [
+      -124,
+      485
+    ],
+    "scale": 2.4,
+    "colorSet": "Purples",
+    "colorNum": 9,
+    "data": require('./amountholidays.csv')
+  },
+  {
+    "key": "airportstravelingto",
+    "name": {
+      "de": "Abflüge",
+      "en": ""
+    },
+    "description": {
+      "de": "Von deutschen Flughäfen zu diesem Endziel abgeflogene Passagiere in 2015",
+      "en": ""
+    },
+    "quelle": "",
+    "link": "",
+    "unit": "",
+    "fixed": 0,
+    "domain": [
+      0,
+      13500000
     ],
     "skala": [
       0,
@@ -193,8 +226,9 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Purples",
     "colorNum": 9,
-    "data": require('./amountholidays.csv')
+    "data": require('./airportstravelingto.csv')
   }
+
 ];
