@@ -1,16 +1,19 @@
 {
-  "key": "cruiseShips",
-  "title": "3. Karte - Kreuzfahrten",
-  "dataset": "travelingtofromgermany",
+  "key": "longDistanceFlights",
+  "title": "5. Karte - Fluege",
+  "dataset": "touristsfromgermany",
   "content": [
     {
       "text": {
         "de": [
-          " # Eine Seefahrt, die ist …",
+          " # Das Problem mit dem Flugverkehr",
           "",
           "Noch wesentlich schlechter als der Mallorca-Urlaub schnitt bei den Berechnungen des CO2-Fußabdrucks die Mittelmeer-Kreuzfahrt ab: Mit rund 174kg CO2 pro Kopf und Tag ist der Ausstoß hier etwa doppelt so hoch wie beim Urlaub auf der Baleareninsel. Doch Kreuzfahrten sind beliebt: Im Jahr 2014 gingen fast 1,8 Millionen deutsche Gäste an Bord eines Hochseekreuzfahrtschiffs.",
           "",
-          "**Tippen Sie: Aus welchem Land stammten – gemessen an der Größe der Bevölkerung des Landes – im Jahr 2014 die meisten Passagiere an Bord europäischer Kreuzfahrtschiffe?**"
+          "Machu Picchu (und weitere 2 Fotos - Platzhalter)",
+          "![](http://lokaler.de/mp.png)",
+          "",
+          "**Welchen dieser Orte würden Sie gerne einmal besuchen?**"
         ],
         "en": [
           " # ",
@@ -23,32 +26,33 @@
     },
     {
       "input": {
-        "key": "cruiseShipsAnswers",
+        "key": "longDistanceFlightsAnswer",
         "type": "choices",
         "options": {
           "choices": [
-            ["cs_choice_1", { "de": "Norwegen", "en": "" }],
-            ["cs_choice_2", { "de": "Großbritannien und Irland", "en": ""}],
-            ["cs_choice_3", { "de": "Deutschland", "en": "" }]
+            ["ldf_choice_1", { "de": "Den Machu Picchu in Peru", "en": "" }],
+            ["ldf_choice_2", { "de": "Den Ngapali-Strand in Myanmar", "en": ""}],
+            ["ldf_choice_3", { "de": "Den Grand Canyon in den USA", "en": "" }]
           ]
         }
       }
     },
     {
       "submit": {
-        "key": "cruiseShipsAnswersSubmitted"
+        "key": "longDistanceFlightsAnswerSubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          "i.cruiseShipsAnswers && !i.cruiseShipsAnswersSubmitted",
-          "!i.cruiseShipsAnswersSubmitted && 'notSubmitted'",
-          "f.setDataset('cruiseships')",
-          "f.panToCountry('NOR') && false",
+          "i.longDistanceFlightsAnswer && !i.longDistanceFlightAnswerSubmitted",
+          "!i.cruiseShipsAnswerSubmitted && 'notSubmitted'",
+          "f.setDataset('airportstravelingto')",
+          "ldf_choice_1 && f.panToCountry('NOR')",
+          "ldf_choice_2 && f.panToCountry('ESP')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "i.cruiseShipsAnswers"
+          "i.longDistanceFlightsAnswer"
         ],
         "answerContext": {},
         "templates": {
@@ -57,7 +61,7 @@
           },
 
 
-          "cs_choice_1": {
+          "ldf_choice_1": {
             "de": [
               "Richtig! Im Jahr 2014 kamen auf 1000 Norweger 34 norwegische Kreuzfahrtgäste. Das ist unter den europäischen Kreuzfahrtpassagieren Rekord. Auch wenn die Deutschen insgesamt die meisten Kreuzfahrten buchten: Pro 1000 Einwohner waren es nur 22."
             ],
@@ -65,7 +69,7 @@
               ""
             ]
           },
-          "cs_choice_2": {
+          "ldf_choice_2": {
             "de": [
               "Nein, die Briten und Irländer buchen zwar absolut gesehen nach den Deutschen die meisten Kreuzfahrten, doch auf die Bevölkerungsgröße gerechnet, liegt Norwegen vorn: Im Jahr 2014 kamen auf 1000 Einwohner 34 norwegische Kreuzfahrtgäste."
             ],
@@ -73,7 +77,7 @@
               ""
             ]
           },
-          "cs_choice_3": {
+          "ldf_choice_3": {
             "de": [
               " Nein, Deutsche buchten im Jahr 2014 zwar absolut gesehen die meisten Kreuzfahrten, doch pro 1000 Einwohner waren es nur 22. In Norwegen hingegen kamen auf 1000 Einwohner 34 Kreuzfahrtgäste."
             ],
