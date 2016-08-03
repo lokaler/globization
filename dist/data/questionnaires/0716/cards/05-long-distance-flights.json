@@ -1,0 +1,93 @@
+{
+  "key": "longDistanceFlights",
+  "title": "5. Karte - Fluege",
+  "dataset": "touristsfromgermany",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Das Problem mit dem Flugverkehr",
+          "",
+          "Noch wesentlich schlechter als der Mallorca-Urlaub schnitt bei den Berechnungen des CO2-Fußabdrucks die Mittelmeer-Kreuzfahrt ab: Mit rund 174kg CO2 pro Kopf und Tag ist der Ausstoß hier etwa doppelt so hoch wie beim Urlaub auf der Baleareninsel. Doch Kreuzfahrten sind beliebt: Im Jahr 2014 gingen fast 1,8 Millionen deutsche Gäste an Bord eines Hochseekreuzfahrtschiffs.",
+          "",
+          "Machu Picchu (und weitere 2 Fotos - Platzhalter)",
+          "![](http://lokaler.de/mp.png)",
+          "",
+          "**Welchen dieser Orte würden Sie gerne einmal besuchen?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "longDistanceFlightsAnswer",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["ldf_choice_1", { "de": "Den Machu Picchu in Peru", "en": "" }],
+            ["ldf_choice_2", { "de": "Den Ngapali-Strand in Myanmar", "en": ""}],
+            ["ldf_choice_3", { "de": "Den Grand Canyon in den USA", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "longDistanceFlightsAnswerSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.longDistanceFlightsAnswer && !i.longDistanceFlightAnswerSubmitted",
+          "!i.longDistanceFlightsAnswerSubmitted && 'notSubmitted'",
+          "f.setDataset('airportstravelingto')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.longDistanceFlightsAnswer == 'ldf_choice_1' && f.panToCountry('PER') && false",
+          "i.longDistanceFlightsAnswer == 'ldf_choice_2' && f.panToCountry('MMR') && false",
+          "i.longDistanceFlightsAnswer == 'ldf_choice_3' && f.panToCountry('USA') && false",
+          "i.longDistanceFlightsAnswer"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
+
+          "ldf_choice_1": {
+            "de": [
+              "Nach Peru flogen im Jahr 2015 rund 52.000 Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 380.000 Tonnen. Zum Vergleich: Das entspricht der Menge an Treibhausgasen, die die Bewohner einer mittelgroßen Stadt wie Kassel pro Jahr beim Autofahren in die Luft pusten würden – angenommen, sie führen alle einen Mittelklassewagen und etwa 12.000 km pro Jahr. Um einen Flug nach Peru auszugleichen, empfiehlt Atmosfair eine Spende von 169 Euro an Klimaschutzprojekte."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "ldf_choice_2": {
+            "de": [
+              "Nach Myanmar flogen im Jahr 2015 rund 17.000 Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 83.000 Tonnen. Zum Vergleich: Das entspricht der Menge an Treibhausgasen, die die Bewohner einer kleineren Stadt wie Borken pro Jahr beim Autofahren in die Luft pusten würden – angenommen, sie führen alle einen Mittelklassewagen und etwa 12.000 km pro Jahr. Um einen Flug nach Myanmar auszugleichen, empfiehlt Atmosfair eine Spende von 113 Euro an Klimaschutzprojekte."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "ldf_choice_3": {
+            "de": [
+              "In die USA flogen im Jahr 2015 rund 6,4 Millionen Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 38 Millionen Tonnen. Zum Vergleich: Das ist gut das Zehnfache dessen, was die Olympischen Spiele in Brasilien als voraussichtlichen CO2-Fußabdruck angeben. Um einen Flug nach Myanmar auszugleichen, empfiehlt Atmosfair eine Spende von 138 Euro an Klimaschutzprojekte."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
