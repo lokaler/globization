@@ -52,7 +52,7 @@
           "(i.sliderTouristsFromGermany >= 300000) && 'FromGermany3'"
         ],
         "answerContext": {
-          "FromGermanyCountry" : "f.getCountryName('touristsfromgermany', i.sliderTouristsFromGermany)"
+          "FromGermanyCountry" : "f.getCountryName('touristsfromgermany', i.sliderTouristsFromGermany, { case: 'default' })"
 
         },
         "templates": {

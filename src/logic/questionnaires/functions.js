@@ -15,18 +15,26 @@ export default {
     return sprintf(f, ...clean);
   },
 
-  getCountryName(datasetKey, value) {
+  getCountryName(datasetKey, value, options = { case: 'locative' }) {
     const dataset = getDataset(datasetKey);
     const isoCode = dataset.getCountryForValue(value);
-    return translate(isoCode, { isCountryCode: true, case: 'locative' });
+    return translate(isoCode, { isCountryCode: true, ...options });
   },
 
-  getMaxCountryName(datasetKey) {
+  getMinCountryName(datasetKey, options = { case: 'locative' }) {
+    const dataset = getDataset(datasetKey);
+    if (dataset) {
+      const isoCode = minBy(dataset.data, d => parseFloat(d.value)).iso;
+      return translate(isoCode, { isCountryCode: true, ...options });
+    }
+  },
+
+  getMaxCountryName(datasetKey, options = { case: 'locative' }) {
     const dataset = getDataset(datasetKey);
     if (dataset) {
       const isoCode = maxBy(dataset.data, d => parseFloat(d.value)).iso;
       // console.log(translate(isoCode, { isCountryCode: true, case: 'locative' }));
-      return translate(isoCode, { isCountryCode: true, case: 'locative' });
+      return translate(isoCode, { isCountryCode: true, ...options });
     }
   },
 
@@ -34,14 +42,6 @@ export default {
     const dataset = getDataset(datasetKey);
     if (dataset) {
       return maxBy(dataset.data, d => parseFloat(d.value)).value;
-    }
-  },
-
-  getMinCountryName(datasetKey) {
-    const dataset = getDataset(datasetKey);
-    if (dataset) {
-      const isoCode = minBy(dataset.data, d => parseFloat(d.value)).iso;
-      return translate(isoCode, { isCountryCode: true, case: 'locative' });
     }
   },
 
