@@ -48,8 +48,9 @@
           "i.longDistanceFlightsAnswer && !i.longDistanceFlightAnswerSubmitted",
           "!i.cruiseShipsAnswerSubmitted && 'notSubmitted'",
           "f.setDataset('airportstravelingto')",
-          "ldf_choice_1 && f.panToCountry('NOR')",
-          "ldf_choice_2 && f.panToCountry('ESP')",
+          "ldf_choice_1 && f.panToCountry('PER')",
+          "ldf_choice_2 && f.panToCountry('MMR')",
+          "ldf_choice_3 && f.panToCountry('USA')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "i.longDistanceFlightsAnswer"
@@ -63,7 +64,7 @@
 
           "ldf_choice_1": {
             "de": [
-              "Richtig! Im Jahr 2014 kamen auf 1000 Norweger 34 norwegische Kreuzfahrtgäste. Das ist unter den europäischen Kreuzfahrtpassagieren Rekord. Auch wenn die Deutschen insgesamt die meisten Kreuzfahrten buchten: Pro 1000 Einwohner waren es nur 22."
+              "Nach Peru flogen im Jahr 2015 rund 52.000 Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 380.000 Tonnen. Zum Vergleich: Das entspricht der Menge an Treibhausgasen, die die Bewohner einer mittelgroßen Stadt wie Kassel pro Jahr beim Autofahren in die Luft pusten würden – angenommen, sie führen alle einen Mittelklassewagen und etwa 12.000 km pro Jahr. Um einen Flug nach Peru auszugleichen, empfiehlt Atmosfair eine Spende von 169 Euro an Klimaschutzprojekte."
             ],
             "en": [
               ""
@@ -71,7 +72,7 @@
           },
           "ldf_choice_2": {
             "de": [
-              "Nein, die Briten und Irländer buchen zwar absolut gesehen nach den Deutschen die meisten Kreuzfahrten, doch auf die Bevölkerungsgröße gerechnet, liegt Norwegen vorn: Im Jahr 2014 kamen auf 1000 Einwohner 34 norwegische Kreuzfahrtgäste."
+              "Nach Myanmar flogen im Jahr 2015 rund 17.000 Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 83.000 Tonnen. Zum Vergleich: Das entspricht der Menge an Treibhausgasen, die die Bewohner einer kleineren Stadt wie Borken pro Jahr beim Autofahren in die Luft pusten würden – angenommen, sie führen alle einen Mittelklassewagen und etwa 12.000 km pro Jahr. Um einen Flug nach Myanmar auszugleichen, empfiehlt Atmosfair eine Spende von 113 Euro an Klimaschutzprojekte."
             ],
             "en": [
               ""
@@ -79,7 +80,7 @@
           },
           "ldf_choice_3": {
             "de": [
-              " Nein, Deutsche buchten im Jahr 2014 zwar absolut gesehen die meisten Kreuzfahrten, doch pro 1000 Einwohner waren es nur 22. In Norwegen hingegen kamen auf 1000 Einwohner 34 Kreuzfahrtgäste."
+              "In die USA flogen im Jahr 2015 rund 6,4 Millionen Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 38 Millionen Tonnen. Zum Vergleich: Das ist gut das Zehnfache dessen, was die Olympischen Spiele in Brasilien als voraussichtlichen CO2-Fußabdruck angeben. Um einen Flug nach Myanmar auszugleichen, empfiehlt Atmosfair eine Spende von 138 Euro an Klimaschutzprojekte."
             ],
             "en": [
               ""
