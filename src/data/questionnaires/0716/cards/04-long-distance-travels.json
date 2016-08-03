@@ -1,0 +1,94 @@
+{
+  "key": "longDistanceTravelBrasilia",
+  "title": "4. Karte - Brasilien",
+  "dataset": "cruiseships",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Auf nach Rio?",
+          "",
+          "Eine halbe Million Besucher werden zu den Olympischen Spielen in Rio erwartet. Laut einem Nachhaltigkeitsbericht der Veranstalter wird deren Anreise den größten Teil des Treibhausgas-Ausstoßes der Veranstaltung ausmachen, nämlich etwa 1.380.000 Tonnen CO2-Äquivalente. Auch in Deutschland wurden rund 35.000 Eintrittskarten für das Sportevent verkauft.",
+          "",
+          "**Tippen Sie: Wie viele Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien – also in dem Jahr, in dem dort die Fußballweltmeisterschaft stattfand**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderTouristsFromGermany",
+        "type": "slider",
+        "options": {
+          "unit": "",
+          "min": 50000,
+          "value": 200000,
+          "max": 500000,
+          "step": 10000
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "TouristsFromGermanySubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderTouristsFromGermany && !i.TouristsFromGermanySubmitted",
+          "!i.TouristsFromGermanySubmitted && 'notSubmitted'",
+          "f.setDataset('touristsfromgermany')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderTouristsFromGermany < 250000)  && 'FromGermany1'",
+          "(i.sliderTouristsFromGermany >= 250000 && i.sliderConflict < 300000) && 'FromGermany2'",
+          "(i.sliderTouristsFromGermany >= 300000) && 'FromGermany3'"
+        ],
+        "answerContext": {
+          "FromGermanyCountry" : "f.getCountryName('touristsfromgermany', i.sliderTouristsFromGermany)"
+
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach dem Einloggen Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": [""]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "FromGermany1": {
+            "de": [
+              "Nein, mehr! Rund 265.000 Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien. Nach [Land_Slider => kein Lokativ] reisten 2014 in etwa so viele Besucher aus Deutschland wie von ihnen geschätzt. Nicht alle Länder unterscheiden bei der Einreise zwischen Touristen und Geschäftsreisenden, weshalb die Daten auf dem Globus nur einen groben Richtwert bieten."
+
+            ],
+            "en": [
+              ""
+
+            ]
+          },
+          "FromGermany2": {
+            "de": [
+              "Ziemlich gut geschätzt! Rund 265.000 Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien. Beim Vergleich der Länderdaten ist hier jedoch Vorsicht geboten: Nicht alle Länder unterscheiden bei der Einreise zwischen Touristen und Geschäftsreisenden, weshalb die Daten auf dem Globus nur einen groben Richtwert bieten."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "FromGermany3": {
+            "de": [
+              "Nein, ganz so viele waren es nicht. Rund 265.000 Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien. Nach **{{ FromGermanyCountry }}** reisten 2014 in etwa so viele Besucher aus Deutschland wie von ihnen geschätzt. Nicht alle Länder unterscheiden bei der Einreise zwischen Touristen und Geschäftsreisenden, weshalb die Daten auf dem Globus nur einen groben Richtwert bieten."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

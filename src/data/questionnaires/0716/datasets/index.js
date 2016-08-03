@@ -8,7 +8,7 @@ export default [
       "en": ""
     },
     "description": {
-      "de": "Anzahl Urlaubsreisen pro Jahr und Einwohner (Stand 2013/14)",
+      "de": "Anzahl Urlaubsreisen im Jahr pro EW (Stand 2013/14)",
       "en": ""
     },
     "quelle": "Weltbank/UNWTO",
@@ -16,12 +16,12 @@ export default [
     "unit": "",
     "fixed": 1,
     "domain": [
-      1,
-      12
+      0,
+      1.6
     ],
     "skala": [
       0,
-      11
+      3
 
     ],
     "translate": [
@@ -29,7 +29,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Purples",
     "colorNum": 9,
     "data": require('./travels.csv')
   },
@@ -50,19 +50,17 @@ export default [
     "legendCorner": true,
     "domain": [
       0,
-      1700000
+      15
     ],
     "skala": [
-      0,
-      100000,
-      200000,
+      0
 
     ],
     "translate": [
-      0,
-      90
+      -124,
+      485
     ],
-    "scale": 1,
+    "scale": 2.4,
     "colorSet": "Reds",
     "colorNum": 9,
     "data": require('./travelingtofromgermany.csv')
@@ -79,11 +77,11 @@ export default [
     },
     "quelle": "CLIA",
     "link": "http://www.cruising.org/docs/default-source/research/clia_europe_statistics_and_markets_2014.pdf?sfvrsn=2",
-    "unit": "%",
+    "unit": "",
     "fixed": 0,
     "domain": [
       0,
-      36
+      34
     ],
     "skala": [
       0,
@@ -92,10 +90,10 @@ export default [
       30
     ],
     "translate": [
-      0,
-      90
+      -124,
+      485
     ],
-    "scale": 1,
+    "scale": 2.4,
     "colorSet": "Reds",
     "colorNum": 9,
     "data": require('./cruiseships.csv')
@@ -116,7 +114,7 @@ export default [
     "fixed": 0,
     "domain": [
       0,
-      80
+      10500000
     ],
     "skala": [
       0,
@@ -129,7 +127,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "BuPu",
     "colorNum": 9,
     "data": require('./touristsfromgermany.csv')
   },

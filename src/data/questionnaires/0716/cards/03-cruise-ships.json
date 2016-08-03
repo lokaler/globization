@@ -1,0 +1,88 @@
+{
+  "key": "cruiseShips",
+  "title": "3. Karte - Kreuzfahrten",
+  "dataset": "travelingtofromgermany",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Eine Seefahrt, die ist …",
+          "",
+          "Noch wesentlich schlechter als der Mallorca-Urlaub schnitt bei den Berechnungen des CO2-Fußabdrucks die Mittelmeer-Kreuzfahrt ab: Mit rund 174kg CO2 pro Kopf und Tag ist der Ausstoß hier etwa doppelt so hoch wie beim Urlaub auf der Baleareninsel. Doch Kreuzfahrten sind beliebt: Im Jahr 2014 gingen fast 1,8 Millionen deutsche Gäste an Bord eines Hochseekreuzfahrtschiffs.",
+          "",
+          "**Tippen Sie: Aus welchem Land stammten – gemessen an der Größe der Bevölkerung des Landes – im Jahr 2014 die meisten Passagiere an Bord europäischer Kreuzfahrtschiffe?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "cruiseShipsAnswers",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["cs_choice_1", { "de": "![Alt text](http://my-domrep.de/fotos/puerto-plata-strand.jpg)", "en": "" }],
+            ["cs_choice_2", { "de": "Großbritannien und Irland", "en": ""}],
+            ["cs_choice_3", { "de": "Deutschland", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "cruiseShipsAnswersSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.cruiseShipsAnswers && !i.cruiseShipsAnswersSubmitted",
+          "!i.cruiseShipsAnswersSubmitted && 'notSubmitted'",
+          "f.setDataset('cruiseships')",
+          "f.panToCountry('NOR') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.cruiseShipsAnswers"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+          },
+
+
+          "cs_choice_1": {
+            "de": [
+              "Richtig! Im Jahr 2014 kamen auf 1000 Norweger 34 norwegische Kreuzfahrtgäste. Das ist unter den europäischen Kreuzfahrtpassagieren Rekord. Auch wenn die Deutschen insgesamt die meisten Kreuzfahrten buchten: Pro 1000 Einwohner waren es nur 22."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "cs_choice_2": {
+            "de": [
+              "Nein, die Briten und Irländer buchen zwar absolut gesehen nach den Deutschen die meisten Kreuzfahrten, doch auf die Bevölkerungsgröße gerechnet, liegt Norwegen vorn: Im Jahr 2014 kamen auf 1000 Einwohner 34 norwegische Kreuzfahrtgäste."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "cs_choice_3": {
+            "de": [
+              " Nein, Deutsche buchten im Jahr 2014 zwar absolut gesehen die meisten Kreuzfahrten, doch pro 1000 Einwohner waren es nur 22. In Norwegen hingegen kamen auf 1000 Einwohner 34 Kreuzfahrtgäste."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
