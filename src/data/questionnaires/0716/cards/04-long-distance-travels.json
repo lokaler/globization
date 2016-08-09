@@ -47,9 +47,9 @@
           "f.setDataset('touristsfromgermany')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderTouristsFromGermany < 250000)  && 'FromGermany1'",
-          "(i.sliderTouristsFromGermany >= 250000 && i.sliderConflict < 300000) && 'FromGermany2'",
-          "(i.sliderTouristsFromGermany >= 300000) && 'FromGermany3'"
+          "(i.sliderTouristsFromGermany < 250000) && f.panToCountry(f.getISO('touristsfromgermany', i.sliderTouristsFromGermany)  && 'FromGermany1'",
+          "(i.sliderTouristsFromGermany >= 250000 && i.sliderTouristsFromGermany < 300000) && f.panToCountry('BRA') && 'FromGermany2'",
+          "(i.sliderTouristsFromGermany >= 300000) && f.panToCountry(f.getISO('touristsfromgermany', i.sliderTouristsFromGermany) && 'FromGermany3'"
         ],
         "answerContext": {
           "FromGermanyCountry" : "f.getCountryName('touristsfromgermany', i.sliderTouristsFromGermany, { case: 'default' })"
@@ -63,7 +63,7 @@
           },
           "FromGermany1": {
             "de": [
-              "Nein, mehr! Rund 265.000 Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien. Nach [Land_Slider => kein Lokativ] reisten 2014 in etwa so viele Besucher aus Deutschland wie von ihnen geschätzt. Nicht alle Länder unterscheiden bei der Einreise zwischen Touristen und Geschäftsreisenden, weshalb die Daten auf dem Globus nur einen groben Richtwert bieten."
+              "Nein, mehr! Rund 265.000 Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien. Nach **{{ FromGermanyCountry }}** reisten 2014 in etwa so viele Besucher aus Deutschland wie von ihnen geschätzt. Nicht alle Länder unterscheiden bei der Einreise zwischen Touristen und Geschäftsreisenden, weshalb die Daten auf dem Globus nur einen groben Richtwert bieten."
 
             ],
             "en": [

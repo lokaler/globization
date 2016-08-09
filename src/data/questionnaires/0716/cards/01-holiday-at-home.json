@@ -48,10 +48,10 @@
           "f.isMobile() && f.setView('map')",
           "f.panToCountry('GER') && false",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderAmountHolidays < 14)  && 'TravelToGermany1'",
-          "(i.sliderAmountHolidays >= 14 && i.sliderConflict < 26) && 'TravelToGermany2'",
-          "(i.sliderAmountHolidays >= 26 && i.sliderConflict < 35) && 'TravelToGermany3'",
-          "(i.sliderAmountHolidays >= 35) && 'TravelToGermany4'"
+          "(i.sliderAmountHolidays >=0 && i.sliderAmountHolidays < 14) && f.panToCountry(f.getISO('travelingtofromgermany', i.sliderAmountHolidays)) && 'TravelToGermany1'",
+          "(i.sliderAmountHolidays >= 14 && i.sliderAmountHolidays < 26) && f.panToCountry('DEU'') && 'TravelToGermany2'",
+          "(i.sliderAmountHolidays >= 26 && i.sliderAmountHolidays < 35) && f.panToCountry('DEU') && 'TravelToGermany3'",
+          "(i.sliderAmountHolidays >= 35) && f.panToCountry('DEU') && 'TravelToGermany4'"
         ],
         "answerContext": {
           "AmountTravelsToCountry" : "f.getCountryName('travelingtofromgermany', i.sliderAmountHolidays)"
@@ -65,9 +65,7 @@
           },
           "TravelToGermany1": {
             "de": [
-              "Nein, mehr! Im vergangenen Jahr gingen rund 29 Prozent der fünf- oder mehrtätigen Reisen nach Deutschland. Der von Ihnen getippte Wert entspricht etwa dem Anteil der Reisen nach **{{ AmountTravelsToCountry }}**. Nur etwa 12 Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel.",
-              "",
-              ""
+              "Nein, mehr! Im vergangenen Jahr gingen rund 29 Prozent der fünf- oder mehrtätigen Reisen nach Deutschland. Der von Ihnen getippte Wert entspricht etwa dem Anteil der Reisen nach **{{ AmountTravelsToCountry }}**. Nur etwa 12 Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel."
             ],
             "en": [
               ""

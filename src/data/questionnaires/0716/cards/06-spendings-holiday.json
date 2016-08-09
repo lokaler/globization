@@ -47,12 +47,11 @@
           "f.setDataset('tourismexpenditures')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderAmountHolidaysSpending < 14)  && 'SpendingHolidays1'",
-          "(i.sliderAmountHolidaysSpending >= 14 && i.sliderConflict < 26) && 'SpendingHolidays2'",
-          "(i.sliderAmountHolidaysSpending >= 35) && 'SpendingHolidays3'"
+          "(i.sliderAmountHolidaysSpending < 1 )  && 'SpendingHolidays1'",
+          "(i.sliderAmountHolidaysSpending > 1 && i.sliderAmountHolidaysSpending < 5850) && 'SpendingHolidays2'",
+          "(i.sliderAmountHolidaysSpending >= 5850) && 'SpendingHolidays3'"
         ],
         "answerContext": {
-          "AmountTravelsToCountry" : "f.getCountryName('travelingtofromgermany', i.sliderAmountHolidays)"
 
         },
         "templates": {
