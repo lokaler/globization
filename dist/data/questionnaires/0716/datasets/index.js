@@ -114,7 +114,7 @@ export default [
     "fixed": 0,
     "domain": [
       0,
-      10500000
+      36000000
     ],
     "skala": [
       0,
@@ -147,7 +147,7 @@ export default [
     "fixed": 0,
     "domain": [
       0,
-      5000
+      4500
     ],
     "skala": [
       0,

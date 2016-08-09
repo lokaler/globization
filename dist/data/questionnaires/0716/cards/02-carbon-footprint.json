@@ -47,7 +47,7 @@
           "i.carbonFootprint && !i.carboonFootprintSubmitted",
           "!i.carboonFootprintSubmitted && 'notSubmitted'",
           "f.setDataset('travelingtofromgermany')",
-          "f.panToCountry('FIN') && false",
+          "f.panToCountry('ESP') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "i.carbonFootprint"
