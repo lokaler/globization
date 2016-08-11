@@ -48,11 +48,11 @@
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "(i.sliderAmountHolidaysSpending < 1 )  && 'SpendingHolidays1'",
-          "(i.sliderAmountHolidaysSpending > 1 && i.sliderAmountHolidaysSpending < 5850) && 'SpendingHolidays2'",
+          "(i.sliderAmountHolidaysSpending > 1 && i.sliderAmountHolidaysSpending < 5850) && f.panToCountry(f.getISO('tourismexpenditures', i.sliderAmountHolidaysSpending) && 'SpendingHolidays2'",
           "(i.sliderAmountHolidaysSpending >= 5850) && 'SpendingHolidays3'"
         ],
         "answerContext": {
-
+                    "SpendingCountry" : "f.getCountryName('tourismexpenditures', i.sliderAmountHolidaysSpending, { case: 'default' })"
         },
         "templates": {
           "notSubmitted": {
@@ -71,7 +71,7 @@
           },
           "SpendingHolidays2": {
             "de": [
-              "Menschen in [Slider_Land] geben im Schnitt etwa so viel Geld für Urlaubsreisen ins Ausland aus wie Sie. In Deutschland waren es 2014 im Schnitt etwa 1187 Euro pro Kopf. Am meisten Geld pro Kopf geben laut Weltorganisation für Tourismus die Luxemburger mit durchschnittlich 5846 Euro pro Person aus."
+              "Menschen in  **{{ SpendingCountry }}** geben im Schnitt etwa so viel Geld für Urlaubsreisen ins Ausland aus wie Sie. In Deutschland waren es 2014 im Schnitt etwa 1187 Euro pro Kopf. Am meisten Geld pro Kopf geben laut Weltorganisation für Tourismus die Luxemburger mit durchschnittlich 5846 Euro pro Person aus."
             ],
             "en": [
               ""
