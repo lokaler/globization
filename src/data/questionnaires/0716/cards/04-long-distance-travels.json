@@ -47,7 +47,7 @@
           "f.setDataset('touristsfromgermany')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderTouristsFromGermany < 250000) && f.panToCountry(f.getISO('touristsfromgermany', i.sliderTouristsFromGermany)  && 'FromGermany1'",
+          "(i.sliderTouristsFromGermany < 250000) &&  'FromGermany1'",
           "(i.sliderTouristsFromGermany >= 250000 && i.sliderTouristsFromGermany < 300000) && f.panToCountry('BRA') && 'FromGermany2'",
           "(i.sliderTouristsFromGermany >= 300000) && f.panToCountry(f.getISO('touristsfromgermany', i.sliderTouristsFromGermany) && 'FromGermany3'"
         ],

@@ -207,8 +207,8 @@ export default [
       "de": "Von deutschen Flughäfen zu diesem Endziel abgeflogene Passagiere in 2015",
       "en": ""
     },
-    "quelle": "",
-    "link": "",
+    "quelle": "Destatis",
+    "link": "https://www.destatis.de/DE/Publikationen/Thematisch/TransportVerkehr/Luftverkehr/LuftverkehrAusgewaehlteFlugplaetze.html ",
     "unit": "",
     "fixed": 0,
     "domain": [
