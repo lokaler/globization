@@ -47,9 +47,9 @@
           "f.setDataset('tourismexpenditures')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderAmountHolidaysSpending < 1 )  && 'SpendingHolidays1'",
-          "(i.sliderAmountHolidaysSpending > 1 && i.sliderAmountHolidaysSpending < 5850) && f.panToCountry(f.getISO('tourismexpenditures', i.sliderAmountHolidaysSpending) && 'SpendingHolidays2'",
-          "(i.sliderAmountHolidaysSpending >= 5850) && 'SpendingHolidays3'"
+          "(i.sliderAmountHolidaysSpending < 1 ) && f.panToCountry('DEU') && 'SpendingHolidays1'",
+          "(i.sliderAmountHolidaysSpending > 1 && i.sliderAmountHolidaysSpending < 5850) && f.panToCountry(f.getISO('tourismexpenditures', i.sliderAmountHolidaysSpending)) && 'SpendingHolidays2'",
+          "(i.sliderAmountHolidaysSpending >= 5850) && f.panToCountry('LUX') && 'SpendingHolidays3'"
         ],
         "answerContext": {
                     "SpendingCountry" : "f.getCountryName('tourismexpenditures', i.sliderAmountHolidaysSpending, { case: 'default' })"
