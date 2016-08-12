@@ -174,7 +174,7 @@ export default [
       "de": "Durchschnittliche Anzahl Urlaubstage (2014)",
       "en": ""
     },
-    "quelle": "",
+    "quelle": "Eurofound",
     "link": "",
     "unit": "",
     "fixed": 0,
