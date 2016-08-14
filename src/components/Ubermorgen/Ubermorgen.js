@@ -1,14 +1,12 @@
 import React, { PropTypes } from 'react';
 import d3 from 'd3';
 import { debounce } from 'lodash';
-
+import { googleLogger } from 'logic/logging';
 import Vis from '../Vis/VisWrapper';
 import Questionnaire from '../Questionnaire/Questionnaire';
-
 import questionnaires from 'data/questionnaires/index';
 import styles from './Ubermorgen.scss';
 import store from 'store';
-
 
 export default class UbermorgenApp extends React.Component {
 
@@ -47,6 +45,7 @@ export default class UbermorgenApp extends React.Component {
     window.addEventListener('resize', this.handleResize.bind(this));
     window.parent.addEventListener('scroll', this.handleScroll.bind(this));
     this.handleResize();
+    googleLogger('loaded', 1);
   }
 
   // componentWillReceiveProps(nextProps) {
