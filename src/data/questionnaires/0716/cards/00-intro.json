@@ -10,7 +10,7 @@
           "# ÜberMorgen-Explorer",
           "",
 
-          "Wie verreisen die Deutschen im internationalen Vergleich? Und wie nachhaltig sind die deutschen Urlaubsgewohnheiten? Mit jeder Antwort bekommen Sie weitere Informationen zum Thema auf dem Globus angezeigt. Klicken Sie auf 'Los gehts'!.",
+          "Wie verreisen die Deutschen im internationalen Vergleich? Und wie nachhaltig sind die deutschen Urlaubsgewohnheiten? Mit jeder Antwort bekommen Sie weitere Informationen zum Thema auf dem Globus angezeigt. Klicken Sie auf \"Los geht's\"!",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
         ],
