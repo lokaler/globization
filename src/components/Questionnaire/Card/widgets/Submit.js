@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { every } from 'lodash';
 import translate from 'logic/translate';
-
+import { googleLogger } from 'logic/logging';
 
 export default class Submit extends React.Component {
 
@@ -16,6 +16,7 @@ export default class Submit extends React.Component {
     const { actions, card, submit } = this.props;
     actions.quizSubmitCard(card.key);
     actions.updateUserInput(submit.key, true);
+    googleLogger('answered');
   }
 
   render() {

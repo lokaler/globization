@@ -6,7 +6,7 @@ import { sponLogger } from 'logic/logging';
 import translate from 'logic/translate';
 import styles from './Slider.scss';
 import 'rc-slider/assets/index.css';
-
+import { googleLogger } from 'logic/logging';
 
 export default class Slider extends React.Component {
 
@@ -25,6 +25,7 @@ export default class Slider extends React.Component {
     sponLogger();
     const { id, actions } = this.props;
     actions.updateUserInput(id, value);
+    googleLogger('slider');
   }
 
   tipFormatter(val) {

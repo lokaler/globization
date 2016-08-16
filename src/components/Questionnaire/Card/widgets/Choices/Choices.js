@@ -3,6 +3,7 @@ import translate from 'logic/translate';
 import styles from './Choices.scss';
 import RadioInput from './RadioInput';
 import { max, values } from 'lodash';
+import { googleLogger } from 'logic/logging';
 
 const noop = () => {}; // eslint-disable-line arrow-body-style
 
@@ -21,6 +22,7 @@ export default class Choices extends React.Component {
   setValue(value) {
     const { id, actions } = this.props;
     actions.updateUserInput(id, value);
+    googleLogger('choice');
   }
 
   render() {

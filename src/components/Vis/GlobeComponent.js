@@ -10,6 +10,7 @@ import styles from './globe.scss';
 import { topofeatures } from 'data/map/index';
 import classnames from 'classnames';
 
+
 @cssModules(styles)
 
 export default class GlobeComponent extends React.Component {
@@ -290,6 +291,10 @@ export default class GlobeComponent extends React.Component {
     return classnames(this.props.vis.active === name ? "active" : "");
   }
 
+  onMouseClick(d){
+    this.onMouseEnter(d);
+  }
+
   onMouseEnter(d){
     if(this.dragging) return;
 
@@ -335,7 +340,7 @@ export default class GlobeComponent extends React.Component {
           fill={d.properties.fillColor}
           onMouseLeave={this.onMouseLeave.bind(this,d)}
           onMouseEnter={this.onMouseEnter.bind(this,d)}
-          onClick={this.onMouseEnter.bind(this,d)}
+          onClick={this.onMouseClick.bind(this,d)}
         />
       )
     });

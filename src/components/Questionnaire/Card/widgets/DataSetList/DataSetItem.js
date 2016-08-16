@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import translate from 'logic/translate';
+import { googleLogger } from 'logic/logging';
 
 export default class DataSetItem extends React.Component {
 
@@ -13,6 +14,7 @@ export default class DataSetItem extends React.Component {
   handleClick = () => {
     const key = this.props.dataset.key;
     this.props.actions.setDataSet(key);
+    googleLogger('datasetlist', key);
   }
 
   render() {

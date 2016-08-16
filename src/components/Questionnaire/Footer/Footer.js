@@ -3,6 +3,7 @@ import { sponLogger } from 'logic/logging';
 import { logbuch } from 'logic/logbuch';
 import { fromPairs } from 'lodash';
 import styles from './Footer.scss';
+import { googleLogger } from 'logic/logging';
 
 
 export default class Footer extends React.Component {
@@ -29,6 +30,7 @@ export default class Footer extends React.Component {
         else {
           cardIndex = 0;
         }
+        googleLogger('card', cardIndex);
         sponLogger();
         const datasetId = questions.cards[cardIndex].dataset;
         actions.setCard(cardIndex, datasetId);
