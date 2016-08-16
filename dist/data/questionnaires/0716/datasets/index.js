@@ -4,11 +4,11 @@ export default [
   {
     "key": "travels",
     "name": {
-      "de": "Urlaubsreisen",
+      "de": "Urlaubsreisen pro Kopf",
       "en": ""
     },
     "description": {
-      "de": "Anzahl Urlaubsreisen im Jahr pro EW (Stand 2013/14)",
+      "de": "Jährliche Anzahl Urlaubsreisen pro Einwohner (Stand 2013/14)",
       "en": ""
     },
     "quelle": "Weltbank/UNWTO",
@@ -36,7 +36,7 @@ export default [
   {
     "key": "travelingtofromgermany",
     "name": {
-      "de": "Reiseziele",
+      "de": "Anteile Reiseziele",
       "en": ""
     },
     "description": {
@@ -134,7 +134,7 @@ export default [
   {
     "key": "tourismexpenditures",
     "name": {
-      "de": "Ausgaben von Touristen",
+      "de": "Ausgaben Auslandsreisen",
       "en": ""
     },
     "description": {
@@ -168,10 +168,10 @@ export default [
     "key": "amountholidays",
     "name": {
       "de": "Urlaubstage",
-      "en": "Murdered Journalists"
+      "en": ""
     },
     "description": {
-      "de": "Durchschnittliche Anzahl Urlaubstage (2014)",
+      "de": "Durchschnittliche oder gesetzlich vorgeschriebene Anzahl Urlaubstage (2014)",
       "en": ""
     },
     "quelle": "Eurofound",
@@ -200,7 +200,7 @@ export default [
   {
     "key": "airportstravelingto",
     "name": {
-      "de": "Abflüge",
+      "de": "Flüge von Deutschland aus",
       "en": ""
     },
     "description": {
