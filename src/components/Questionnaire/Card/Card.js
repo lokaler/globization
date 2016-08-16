@@ -10,6 +10,7 @@ import Submit from './widgets/Submit';
 import RoundChooser from './widgets/RoundList/RoundList';
 import DatasetMenu from './widgets/DataSetList/DataSetList';
 import Logger from './widgets/logging';
+import { googleLogger } from 'logic/logging';
 
 const widgets = {
   text: Text,
@@ -50,6 +51,7 @@ export default class Questionnaire extends React.Component {
   clickHandlers = { // eslint-disable-line react/sort-comp
     onStartClick: () => {
       const dataId = this.props.questions.cards[1].dataset;
+      googleLogger('los');
       this.props.actions.setCard(1, dataId);
     }
   }

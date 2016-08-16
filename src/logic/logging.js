@@ -12,7 +12,7 @@ export function sponLogger() {
 }
 
 export function googleLogger(action, value = 1) {
-  //console.log('log', action, value);
+  // console.log('log', action, value);
   try {
     const ga = window.parent.ga;
     if (ga) {
