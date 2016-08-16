@@ -8,18 +8,17 @@
         "de": [
           " # Das Problem mit dem Flugverkehr",
           "",
-          "Ja, Flugreisen sind umweltschädlich. Dennoch ist die Verlockung groß, atemberaubende Landschaften und fremde Kulturen in der Ferne zu erkunden. Wenn Sie frei wählen dürften:",
+          "Ja, Flugreisen sind umweltschädlich. Dennoch ist die Verlockung groß, atemberaubende Landschaften und fremde Kulturen in der Ferne zu erkunden. Wenn Sie frei wählen dürften: **Welchen dieser Orte würden Sie gerne einmal besuchen?** (Auswahlmöglichkeit unten auf der Seite)",
           "",
-          "**Machu Picchu** (Peru)",
+          "Den **Machu Picchu** in Peru",
           "![](data/questionnaires/0716/cards/assets/2.png)",
           "",
-          "**Ngapali-Strand** (Myanmar)",
+          "**Den Ngapali-Strand** in Myanmar",
           "![](data/questionnaires/0716/cards/assets/3.png)",
           "",
-          "**Grand Canyon** (USA)",
+          "Den **Grand Canyon** in den USA",
           "![](data/questionnaires/0716/cards/assets/1.png)",
-          "",
-          "**Welchen dieser Orte würden Sie gerne einmal besuchen?**"
+          ""
         ],
         "en": [
           " # ",
@@ -36,9 +35,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["ldf_choice_1", { "de": "Den Machu Picchu in Peru", "en": "" }],
-            ["ldf_choice_2", { "de": "Den Ngapali-Strand in Myanmar", "en": ""}],
-            ["ldf_choice_3", { "de": "Den Grand Canyon in den USA", "en": "" }]
+            ["ldf_choice_1", { "de": "Machu Picchu", "en": "" }],
+            ["ldf_choice_2", { "de": "Ngapali-Strand", "en": ""}],
+            ["ldf_choice_3", { "de": "Grand Canyon", "en": "" }]
           ]
         }
       }
@@ -70,7 +69,7 @@
 
           "ldf_choice_1": {
             "de": [
-              "Nach Peru flogen im Jahr 2015 rund 52.000 Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 380.000 Tonnen. Zum Vergleich: Das entspricht der Menge an Treibhausgasen, die die Bewohner einer mittelgroßen Stadt wie Kassel pro Jahr beim Autofahren in die Luft pusten würden – angenommen, sie führen alle einen Mittelklassewagen und etwa 12.000 km pro Jahr. Um einen Flug nach Peru auszugleichen, empfiehlt Atmosfair eine Spende von 169 Euro an Klimaschutzprojekte."
+              "Nach Peru flogen im Jahr 2015 rund 52.000 Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 380.000 Tonnen. Zum Vergleich: Das entspricht in etwa der Menge an Treibhausgasen, die 190.000 Mittelklassewagen jährlich in die Luft pusten (angenommen, sie werden rund 12.000 Kilometer gefahren, was ungefähr dem deutschen Durchschnitt entspricht). Um die Emissionen eines Flugs nach Peru auszugleichen, empfiehlt Atmosfair eine Spende von 169 Euro an Klimaschutzprojekte."
             ],
             "en": [
               ""
@@ -78,7 +77,7 @@
           },
           "ldf_choice_2": {
             "de": [
-              "Nach Myanmar flogen im Jahr 2015 rund 17.000 Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 83.000 Tonnen. Zum Vergleich: Das entspricht der Menge an Treibhausgasen, die die Bewohner einer kleineren Stadt wie Borken pro Jahr beim Autofahren in die Luft pusten würden – angenommen, sie führen alle einen Mittelklassewagen und etwa 12.000 km pro Jahr. Um einen Flug nach Myanmar auszugleichen, empfiehlt Atmosfair eine Spende von 113 Euro an Klimaschutzprojekte."
+              "Nach Myanmar flogen im Jahr 2015 rund 17.000 Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 83.000 Tonnen. Zum Vergleich: Das entspricht etwa der Menge an Treibhausgasen, die 41.500 Mittelklassewagen jährlich in die Luft pusten (angenommen, sie werden rund 12.000 Kilometer gefahren, was ungefähr dem deutschen Durchschnitt entspricht). Um die Emissionen eines Flugs nach Myanmar auszugleichen, empfiehlt Atmosfair eine Spende von 113 Euro an Klimaschutzprojekte."
             ],
             "en": [
               ""
@@ -86,7 +85,7 @@
           },
           "ldf_choice_3": {
             "de": [
-              "In die USA flogen im Jahr 2015 rund 6,4 Millionen Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 38 Millionen Tonnen. Zum Vergleich: Das ist gut das Zehnfache dessen, was die Olympischen Spiele in Brasilien als voraussichtlichen CO2-Fußabdruck angeben. Um einen Flug nach Myanmar auszugleichen, empfiehlt Atmosfair eine Spende von 138 Euro an Klimaschutzprojekte."
+              "In die USA flogen im Jahr 2015 rund 6,4 Millionen Passagiere aus Deutschland. Angenommen, sie alle flögen an die Westküste zum Grand Canyon, so entspräche dies laut Klimarechner der Kompensationsagentur Atmosfair einem Gesamt-CO2-Ausstoß von rund 38 Millionen Tonnen. Zum Vergleich: Das ist gut das Zehnfache des vorab geschätzten CO2-Fußabdrucks der Olympischen Spiele 2016 in Rio. Um die Emissionen eines Flugs an die Westküste der USA auszugleichen, empfiehlt Atmosfair eine Spende von 138 Euro an Klimaschutzprojekte."
             ],
             "en": [
               ""
