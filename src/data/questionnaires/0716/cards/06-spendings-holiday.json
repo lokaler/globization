@@ -6,7 +6,15 @@
     {
       "text": {
         "de": [
+<<<<<<< Updated upstream
           " # Wer gibt wie viel Geld für Auslandsreisen aus?",
+=======
+<<<<<<< HEAD
+          " # Wer gibt wieviel Geld für Urlaub IM AUSLAND aus?",
+=======
+          " # Wer gibt wie viel Geld für Auslandsreisen aus?",
+>>>>>>> origin/rounds
+>>>>>>> Stashed changes
           "",
           "Nachhaltig soll der Urlaub gerne sein, aber mehr kosten darf er nicht. So denken 55 Prozent der Deutschen laut einer repräsentativen Umfrage aus dem Jahr 2014. Aber wie viel lassen wir uns unseren Urlaub überhaupt kosten?",
           "",
@@ -52,7 +60,7 @@
           "(i.sliderAmountHolidaysSpending >= 5850) && f.panToCountry('LUX') && 'SpendingHolidays3'"
         ],
         "answerContext": {
-                    "SpendingCountry" : "f.getCountryName('tourismexpenditures', i.sliderAmountHolidaysSpending, { case: 'default' })"
+                    "SpendingCountry" : "f.getCountryName('tourismexpenditures', i.sliderAmountHolidaysSpending)"
         },
         "templates": {
           "notSubmitted": {
@@ -71,7 +79,7 @@
           },
           "SpendingHolidays2": {
             "de": [
-              "Menschen in  **{{ SpendingCountry }}** geben im Schnitt etwa so viel Geld für Urlaubsreisen ins Ausland aus wie Sie. In Deutschland waren es 2014 im Schnitt etwa 1187 Euro pro Kopf. Am meisten Geld pro Kopf geben laut Weltorganisation für Tourismus die Luxemburger mit durchschnittlich 5846 Euro pro Person aus."
+              "Menschen **{{ SpendingCountry }}** geben im Schnitt etwa so viel Geld für Urlaubsreisen ins Ausland aus wie Sie. In Deutschland waren es 2014 im Schnitt etwa 1187 Euro pro Kopf. Am meisten Geld pro Kopf geben laut Weltorganisation für Tourismus die Luxemburger mit durchschnittlich 5846 Euro pro Person aus."
             ],
             "en": [
               ""
