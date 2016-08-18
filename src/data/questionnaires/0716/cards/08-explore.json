@@ -20,8 +20,8 @@
           "f.setView('globe')"
         ],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeMkA', 'Interaktiver Globus: Wie nachhaltig verreisen die Deutschen? #ÜberMorgen')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeMkA', '')",
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeOvC', 'Interaktiver Globus: Wie nachhaltig verreisen die Deutschen? #ÜberMorgen')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeOvC', '')",
           "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeM3e', 'Interaktiver Globus: Wie nachhaltig verreisen die Deutschen?')",
           "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeM3e', '')"
         },
