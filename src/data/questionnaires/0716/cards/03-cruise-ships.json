@@ -28,7 +28,7 @@
         "options": {
           "choices": [
             ["cs_choice_1", { "de": "Norwegen", "en": "" }],
-            ["cs_choice_2", { "de": "Großbritannien und Irland", "en": ""}],
+            ["cs_choice_2", { "de": "Vereinigtes Königreich und Irland", "en": ""}],
             ["cs_choice_3", { "de": "Deutschland", "en": "" }]
           ]
         }
@@ -59,7 +59,7 @@
 
           "cs_choice_1": {
             "de": [
-              "Richtig! Im Jahr 2014 kamen auf 1000 Norweger 34 norwegische Kreuzfahrtgäste. Das ist unter den europäischen Kreuzfahrtpassagieren Rekord. Auch wenn die Deutschen insgesamt die meisten Kreuzfahrten buchten: Pro 1000 Einwohner waren es nur 22."
+              "Richtig! Im Jahr 2014 kamen auf 1000 Norweger 34 norwegische Kreuzfahrtgäste. Das ist unter den europäischen Kreuzfahrtpassagieren Rekord. Auch wenn die Deutschen insgesamt die meisten Kreuzfahrten buchten: Pro 1000 Einwohner waren es nur 22. Im Vereinigten Königreich und Irland wurden immerhin 24 Plätze an Bord pro 1000 Einwohner gebucht."
             ],
             "en": [
               ""
@@ -67,7 +67,7 @@
           },
           "cs_choice_2": {
             "de": [
-              "Nein, die Briten und Irländer buchen zwar absolut gesehen nach den Deutschen die meisten Kreuzfahrten, doch auf die Bevölkerungsgröße gerechnet, liegt Norwegen vorn: Im Jahr 2014 kamen auf 1000 Einwohner 34 norwegische Kreuzfahrtgäste."
+              "Nein, die Briten und Irländer buchen zwar absolut gesehen nach den Deutschen die meisten Kreuzfahrten, doch auf 1000 Einwohner kamen im Jahr 2014 nur 24 Kreuzfahrtgäste. An der Bevölkerungsgröße gemessen, liegt Norwegen vorn: Hier kamen auf 1000 Einwohner 34 norwegische Kreuzfahrtgäste."
             ],
             "en": [
               ""
@@ -75,7 +75,7 @@
           },
           "cs_choice_3": {
             "de": [
-              " Nein, Deutsche buchten im Jahr 2014 zwar absolut gesehen die meisten Kreuzfahrten, doch pro 1000 Einwohner waren es nur 22. In Norwegen hingegen kamen auf 1000 Einwohner 34 Kreuzfahrtgäste."
+              " Nein, Deutsche buchten im Jahr 2014 zwar absolut gesehen die meisten Kreuzfahrten, doch pro 1000 Einwohner waren es nur 22. In Norwegen hingegen kamen auf 1000 Einwohner 34 Kreuzfahrtgäste. Im Vereinigten Königreich und Irland wurden 24 Plätze an Bord pro 1000 Einwohner gebucht."
             ],
             "en": [
               ""
