@@ -171,11 +171,11 @@ export default [
       "en": ""
     },
     "description": {
-      "de": "Durchschnittliche oder gesetzlich vorgeschriebene Anzahl Urlaubstage (2014)",
+      "de": "Gesetzlicher Urlaubsanspruch",
       "en": ""
     },
-    "quelle": "Eurofound via Statista",
-    "link": "http://de.statista.com/statistik/daten/studie/197069/umfrage/urlaubstage-und-feiertage-in-europa/",
+    "quelle": "Mercer via Statista",
+    "link": "http://de.statista.com/statistik/daten/studie/38834/umfrage/gesetzlicher-urlaubsanspruch-und-anzahl-der-feiertage/",
     "unit": "",
     "fixed": 0,
     "domain": [
