@@ -21,11 +21,19 @@
           ""
         ],
         "en": [
-          " # ",
+          " # The Trouble with Flying",
           "",
+          "Yes, traveling by air is harmful to the environment, but the idea of discovering breathtaking landscapes and foreign cultures abroad is extremely tempting. If you had a choice: **Which of these places would you like to visit one day?**",
           "",
+          "**Machu Picchu** in Peru",
+          "![](data/questionnaires/0716/cards/assets/2.png)",
           "",
-          "****"
+          "**Ngapali Beach** in Myanmar",
+          "![](data/questionnaires/0716/cards/assets/3.png)",
+          "",
+          "The **Grand Canyon** in the United States",
+          "![](data/questionnaires/0716/cards/assets/1.png)",
+          ""
         ]
       }
     },
@@ -72,7 +80,7 @@
               "Nach Peru flogen im Jahr 2015 rund 52.000 Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 380.000 Tonnen. Zum Vergleich: Das entspricht in etwa der Menge an Treibhausgasen, die 190.000 Mittelklassewagen jährlich in die Luft pusten (angenommen, sie werden rund 12.000 Kilometer gefahren, was ungefähr dem deutschen Durchschnitt entspricht). Um die Emissionen eines Flugs nach Peru auszugleichen, empfiehlt Atmosfair eine Spende von 169 Euro an Klimaschutzprojekte."
             ],
             "en": [
-              ""
+              "In 2015, 52,000 passengers from Germany flew to Peru. According to the emissions calculator created by the climate protection organization Atmosfair, that is equal to total CO2 emissions of around 380,000 tons. That represents approximately the same amount of greenhouse gases spewed into the air each year by 190,000 medium-sized cars (assuming they traveled the German average of 12,000 kilometers). In order to offset the emissions produced by a flight to Peru, Atmosfair recommends a donation of 169 euros to climate protection projects."
             ]
           },
           "ldf_choice_2": {
@@ -80,7 +88,7 @@
               "Nach Myanmar flogen im Jahr 2015 rund 17.000 Passagiere aus Deutschland. Laut Klimarechner der Kompensationsagentur Atmosfair entspricht das einem Gesamt-CO2-Ausstoß von rund 83.000 Tonnen. Zum Vergleich: Das entspricht etwa der Menge an Treibhausgasen, die 41.500 Mittelklassewagen jährlich in die Luft pusten (angenommen, sie werden rund 12.000 Kilometer gefahren, was ungefähr dem deutschen Durchschnitt entspricht). Um die Emissionen eines Flugs nach Myanmar auszugleichen, empfiehlt Atmosfair eine Spende von 113 Euro an Klimaschutzprojekte."
             ],
             "en": [
-              ""
+              "Around 17,000 passengers from Germany traveled to Myanmar in 2015. According to the emissions calculator created by the climate protection organization Atmosfair, that is equal to total CO2 emissions of around 83,000 tons. That represents approximately the amount of greenhouse gases spewed into the air each year by 19,000 medium-sized cars (assuming they traveled the German average of 12,000 kilometers). In order to offset the emissions produced by a flight to Peru, Atmosfair recommends a donation of 113 euros to climate protection projects."
             ]
           },
           "ldf_choice_3": {
@@ -88,7 +96,7 @@
               "In die USA flogen im Jahr 2015 rund 6,4 Millionen Passagiere aus Deutschland. Angenommen, sie alle flögen an die Westküste zum Grand Canyon, so entspräche dies laut Klimarechner der Kompensationsagentur Atmosfair einem Gesamt-CO2-Ausstoß von rund 38 Millionen Tonnen. Zum Vergleich: Das ist gut das Zehnfache des vorab geschätzten CO2-Fußabdrucks der Olympischen Spiele 2016 in Rio. Um die Emissionen eines Flugs an die Westküste der USA auszugleichen, empfiehlt Atmosfair eine Spende von 138 Euro an Klimaschutzprojekte."
             ],
             "en": [
-              ""
+              "In 2015, around 6.4 million passengers from Germany flew to the USA. Assuming that all traveled to the West Coast to connect to the Grand Canyon, carbon offsetting agency Atmosfair's emissions calculator assumes a CO2 footprint of 38 million tons. That is ten times the amount of CO2 emissions estimated for the Olympic Games in Brazil ahead of the event. In order to offset the emissions produced by a flight to the US' West Coast, Atmosfair recommends a donation of 138 euros to climate protection projects."
             ]
           }
         }

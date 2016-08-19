@@ -13,11 +13,11 @@
           "**Tippen Sie: Wie viele Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien – also in dem Jahr, in dem dort die Fußballweltmeisterschaft stattfand?**"
         ],
         "en": [
-          " # ",
+          " # Heading to Rio?",
           "",
+          "Half a million visitors were expected at the 2016 Olympic Games in Rio. According to a sustainability report by the organizers, travel to and from the event would be the greatest source of greenhouse gas emissions tied to the competition, namely around 1.38 million tons of carbon dioxide-equivalent. In Germany, around 35,000 tickets have been sold for the sporting event.",
           "",
-          "",
-          "****"
+          "**Take a guess: How many tourists from Germany traveled to Brazil in 2014, the year the country hosted the World Cup? Please move the slider in order to enter your guess.**"
         ]
       }
     },{
@@ -67,7 +67,7 @@
 
             ],
             "en": [
-              ""
+              "No, more! Around 265,000 tourists from Germany traveled to Brazil in 2014. That year, approximately the same number of people you guessed traveled from Germany to **{{ FromGermanyCountry }}**. Not all states differentiate between visitors who are tourists and those who are business travelers when they enter the country, meaning the data on the globe offers only an approximate value."
 
             ]
           },
@@ -76,7 +76,7 @@
               "Ziemlich gut geschätzt! Rund 265.000 Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien. Beim Vergleich der Länderdaten ist hier jedoch Vorsicht geboten: Nicht alle Länder unterscheiden bei der Einreise zwischen Touristen und Geschäftsreisenden, weshalb die Daten auf dem Globus nur einen groben Richtwert bieten."
             ],
             "en": [
-              ""
+              "That's a pretty good guess. Around 265,000 tourists from Germany traveled in 2014 to Brazil. But one word of caution when comparing the country data: Not all states differentiate between visitors who are tourists and those who are business travelers when they enter the country, meaning the data on the globe offers only an approximate value."
             ]
           },
           "FromGermany3": {
@@ -84,7 +84,7 @@
               "Nein, ganz so viele waren es nicht. Rund 265.000 Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien. Nach **{{ FromGermanyCountry }}** reisten 2014 in etwa so viele Besucher aus Deutschland wie von ihnen geschätzt. Nicht alle Länder unterscheiden bei der Einreise zwischen Touristen und Geschäftsreisenden, weshalb die Daten auf dem Globus nur einen groben Richtwert bieten."
             ],
             "en": [
-              ""
+              "No, there weren't that many. Around 265,000 tourists from Germany traveled to Brazil in 2014.  That year, approximately the same number of people you guessed traveled from Germany to **{{ FromGermanyCountry }}**. Not all states differentiate between visitors who are tourists and those who are business travelers when they enter the country, meaning the data on the globe offers only an approximate value."
             ]
           }
         }

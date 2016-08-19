@@ -13,11 +13,11 @@
           "**Tippen Sie, wie häufig Menschen in Deutschland hierzulande Urlaub machen: Wie viel Prozent der Urlaubsreisen von mehr als fünf Tagen unternimmt jeder im eigenen Land?**"
         ],
         "en": [
-          " # ",
+          " # Where do Germans travel to?",
           "",
+          "Whether going by train to the North Sea or by bus to the Alps, it’s possible to protect the climate when traveling by avoiding planes and cars. The simplest way, of course, is to visit vacation destinations that aren't far away.",
           "",
-          "",
-          "****"
+          "**Guess what percentage of vacation trips lasting longer than five days are taken by the residents of Germany in their own country?**"
         ]
       }
     },{
@@ -68,7 +68,7 @@
               "Nein, mehr! Im vergangenen Jahr gingen rund 29 Prozent der fünf- oder mehrtätigen Reisen nach Deutschland. Der von Ihnen getippte Wert entspricht etwa dem Anteil der Reisen nach **{{ AmountTravelsToCountry }}**. Nur etwa 12 Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel."
             ],
             "en": [
-              ""
+              "No, more! Last year, around 29 percent went on trips that lasted five days or longer within Germany. The amount you guessed was around the same number of trips taken to **{{ AmountTravelsToCountry }}**. Only about 12 percent of vacation trips were to destinations outside of Europe."
 
             ]
           },
@@ -77,7 +77,7 @@
               "Sie liegen nicht völlig daneben, aber etwas höher ist der Anteil schon: Im vergangenen Jahr gingen rund 29 Prozent der fünf- oder mehrtätigen Reisen nach Deutschland. Nur etwa 12 Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel."
             ],
             "en": [
-              ""
+              "You’re not totally off the mark, but the share is in fact a little higher. Last year, around 29 percent of trips lasting five days or longer were within Germany. Only about 12 percent of vacation trips were to destinations outside of Europe."
             ]
           },
           "TravelToGermany3": {
@@ -85,7 +85,7 @@
               "Ziemlich gut geschätzt! Im vergangenen Jahr gingen rund 29 Prozent der fünf- oder mehrtätigen Reisen nach Deutschland. Nur etwa 12 Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel."
             ],
             "en": [
-              ""
+              "That's a very good guess! Last year, around 29 percent of trips lasting five days or longer were within Germany. Only about 12 percent of vacation trips were to destinations outside of Europe."
             ]
           },
              "TravelToGermany4": {
@@ -93,7 +93,7 @@
               "Nein, Deutschland ist zwar das beliebteste Reiseziel der deutschsprachigen Bevölkerung, aber ganz so hoch ist der Anteil der Reisen im eigenen Land nicht. Im vergangenen Jahr gingen rund 29 Prozent der fünf- oder mehrtätigen Reisen an Orte innerhalb der deutschen Staatsgrenzen. Nur etwa 12 Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel. "
             ],
             "en": [
-              ""
+              "No, people living in Germany may prefer going on holidays in their own country, but the share isn’t that high. Last year, around 29 percent of trips lasting five days or longer were to locations inside Germany. Only about 12 percent of vacation trips were to destinations outside of Europe."
             ]
           }
         }
