@@ -45,7 +45,7 @@
         "answerContext": {},
         "templates": {
           "notSubmitted": {
-            "de": ["Bitte beantworten und bestätigen."], "en": ["Please answer and confirm."]
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
           },
 
           "allAnswered": {

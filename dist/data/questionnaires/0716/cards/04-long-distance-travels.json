@@ -57,7 +57,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach dem Einloggen Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": [""]          },
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
