@@ -33,7 +33,7 @@ export default class Choices extends React.Component {
     const Radios = options.choices.map((option) => {
       const [value, label] = option;
       const onClick = disabled ? noop : this.setValue.bind(this, value);
-      const histoVotes = histogramData[value];
+      const histoVotes = histogramData[value] || 0;
       const histoSize = `${histoVotes / histoMax * 90}%`;
 
       return (
