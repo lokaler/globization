@@ -1,0 +1,103 @@
+{
+  "key": "holidayAtHome",
+  "title": "1. Karte - Urlaub zu Hause",
+  "dataset": "travels",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wohin fahren die Deutschen?",
+          "",
+          "Mit der Bahn an die Nordsee oder mit dem Fernbus in die Alpen: Beim Verreisen das Klima schützen – das geht vor allem, indem man Flüge und Autofahrten vermeidet. Am einfachsten ist das natürlich, wenn die Entfernung zum Urlaubsort nicht so weit ist. ",
+          "",
+          "**Tippen Sie, wie häufig Menschen in Deutschland hierzulande Urlaub machen: Wie viel Prozent der Urlaubsreisen von mehr als fünf Tagen unternimmt jeder im eigenen Land?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderAmountHolidays",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountHolidaysSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderAmountHolidays && !i.AmountHolidaysSubmitted",
+          "!i.AmountHolidaysSubmitted && 'notSubmitted'",
+          "f.setDataset('travelingtofromgermany')",
+          "f.isMobile() && f.setView('map')",
+          "f.panToCountry('GER') && false",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderAmountHolidays >= 0 && i.sliderAmountHolidays < 14) && f.panToCountry(f.getISO('travelingtofromgermany', i.sliderAmountHolidays)) && 'TravelToGermany1'",
+          "(i.sliderAmountHolidays >= 14 && i.sliderAmountHolidays < 26) && f.panToCountry('DEU') && 'TravelToGermany2'",
+          "(i.sliderAmountHolidays >= 26 && i.sliderAmountHolidays < 35) && f.panToCountry('DEU') && 'TravelToGermany3'",
+          "(i.sliderAmountHolidays >= 35) && f.panToCountry('DEU') && 'TravelToGermany4'"
+        ],
+        "answerContext": {
+          "AmountTravelsToCountry" : "f.getCountryName('travelingtofromgermany', i.sliderAmountHolidays)"
+
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach dem Einloggen Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": [""]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "TravelToGermany1": {
+            "de": [
+              "Nein, mehr! Im vergangenen Jahr gingen rund 29 Prozent der fünf- oder mehrtätigen Reisen nach Deutschland. Der von Ihnen getippte Wert entspricht etwa dem Anteil der Reisen nach **{{ AmountTravelsToCountry }}**. Nur etwa 12 Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel."
+            ],
+            "en": [
+              ""
+
+            ]
+          },
+          "TravelToGermany2": {
+            "de": [
+              "Sie liegen nicht völlig daneben, aber etwas höher ist der Anteil schon: Im vergangenen Jahr gingen rund 29 Prozent der fünf- oder mehrtätigen Reisen nach Deutschland. Nur etwa 12 Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "TravelToGermany3": {
+            "de": [
+              "Ziemlich gut geschätzt! Im vergangenen Jahr gingen rund 29 Prozent der fünf- oder mehrtätigen Reisen nach Deutschland. Nur etwa 12 Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel."
+            ],
+            "en": [
+              ""
+            ]
+          },
+             "TravelToGermany4": {
+            "de": [
+              "Nein, Deutschland ist zwar das beliebteste Reiseziel der deutschsprachigen Bevölkerung, aber ganz so hoch ist der Anteil der Reisen im eigenen Land nicht. Im vergangenen Jahr gingen rund 29 Prozent der fünf- oder mehrtätigen Reisen an Orte innerhalb der deutschen Staatsgrenzen. Nur etwa 12 Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel. "
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

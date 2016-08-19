@@ -1,0 +1,92 @@
+{
+  "key": "holidaySpendings",
+  "title": "6. Karte - Ausgaben Urlaub",
+  "dataset": "airportstravelingto",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wer gibt wie viel Geld für Auslandsreisen aus?",
+          "",
+          "Nachhaltig soll der Urlaub gerne sein, aber mehr kosten darf er nicht. So denken 55 Prozent der Deutschen laut einer repräsentativen Umfrage aus dem Jahr 2014. Aber wie viel lassen wir uns unseren Urlaub überhaupt kosten?",
+          "",
+          "**Schätzen Sie: Wie viel Geld geben Sie als Einzelperson pro Jahr für Urlaubsreisen ins Ausland aus?** Berücksichtigen Sie dabei sowohl die Kosten für den Transport als auch die Ausgaben am Urlaubsort."
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderAmountHolidaysSpending",
+        "type": "slider",
+        "options": {
+          "unit": "€",
+          "min": 0,
+          "value": 3000,
+          "max": 8000,
+          "step": 10
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountHolidaysSpendingSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderAmountHolidaysSpending && !i.AmountHolidaysSpendingSubmitted",
+          "!i.AmountHolidaysSpendingSubmitted && 'notSubmitted'",
+          "f.setDataset('tourismexpenditures')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderAmountHolidaysSpending < 1 ) && f.panToCountry('DEU') && 'SpendingHolidays1'",
+          "(i.sliderAmountHolidaysSpending > 1 && i.sliderAmountHolidaysSpending < 5850) && f.panToCountry(f.getISO('tourismexpenditures', i.sliderAmountHolidaysSpending)) && 'SpendingHolidays2'",
+          "(i.sliderAmountHolidaysSpending >= 5850) && f.panToCountry('LUX') && 'SpendingHolidays3'"
+        ],
+        "answerContext": {
+                    "SpendingCountry" : "f.getCountryName('tourismexpenditures', i.sliderAmountHolidaysSpending)"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach dem Einloggen Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": [""]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "SpendingHolidays1": {
+            "de": [
+              "Sie verbringen Ihren Urlaub nicht im Ausland? Oder sind Sie so knapp bei Kasse, dass ein Urlaub – egal wohin – nicht drin ist? Falls Letzteres der Grund für Ihre Eingabe ist: So geht es vielen Menschen in Deutschland. Fast jeder Fünfte kann sich keinen Urlaub leisten."
+            ],
+            "en": [
+              ""
+
+            ]
+          },
+          "SpendingHolidays2": {
+            "de": [
+              "Menschen **{{ SpendingCountry }}** geben im Schnitt etwa so viel Geld für Urlaubsreisen ins Ausland aus wie Sie. In Deutschland waren es 2014 im Schnitt etwa 1187 Euro pro Kopf. Am meisten Geld pro Kopf geben laut Weltorganisation für Tourismus die Luxemburger mit durchschnittlich 5846 Euro pro Person aus."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "SpendingHolidays3": {
+            "de": [
+              "Sie geben mehr Geld für Urlaubsreisen ins Ausland aus, als der Durchschnitt in allen Ländern, für die Daten vorliegen. In Deutschland waren es 2014 im Schnitt etwa 1187 Euro pro Kopf. Am meisten Geld pro Kopf geben laut Weltorganisation für Tourismus die Luxemburger mit durchschnittlich 5846 Euro pro Person aus."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
