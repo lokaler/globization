@@ -70,7 +70,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Sicher? Dann bitte bestätigen."], "en": ["Please answer and confirm after."]          },
+            "de": ["Sicher? Dann bitte bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm after. After submitting your choice, you can also see how other readers answered."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
