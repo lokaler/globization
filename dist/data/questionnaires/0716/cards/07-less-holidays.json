@@ -10,7 +10,7 @@
           "",
           "Wer nachhaltig reisen will, muss natürlich überhaupt freie Zeit für einen Urlaub haben.",
           "",
-          "**Tippen Sie: Die Bürger welches Landes haben im Schnitt die wenigsten Urlaubstage pro Jahr?**"
+          "**Tippen Sie: In welchem dieser drei Länder haben Arbeitnehmer den höchsten gesetzlichen Urlaubsanspruch?**"
         ],
         "en": [
           " # ",
@@ -29,7 +29,7 @@
           "choices": [
             ["lh_choice_1", { "de": "Deutschland", "en": "" }],
             ["lh_choice_2", { "de": "Griechenland", "en": ""}],
-            ["lh_choice_3", { "de": "Belgien", "en": "" }]
+            ["lh_choice_3", { "de": "Frankreich", "en": "" }]
           ]
         }
       }
@@ -45,7 +45,7 @@
           "i.lessHolidaysAnswers && !i.lessHolidaysAnswersSubmitted",
           "!i.lessHolidaysAnswersSubmitted && 'notSubmitted'",
           "f.setDataset('amountholidays')",
-          "f.panToCountry('BEL') && false",
+          "f.panToCountry('FRA') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "i.lessHolidaysAnswers"
@@ -59,7 +59,7 @@
 
           "lh_choice_1": {
             "de": [
-              "Nein, die Deutschen stehen im Vergleich mit anderen europäischen Ländern gut da: Ebenso wie Menschen in Frankreich oder Dänemark haben sie im Durchschnitt 30 Tage Urlaub. In Griechenland sind es hingegen nur 23 Tage und in Belgien sogar nur 20."
+              "Nein, in Deutschland besteht bei einer Fünf-Tage-Woche Anspruch auf mindestens 20 Tage Urlaub im Jahr. In Griechenland sind es immerhin 25 Tage und in Frankreich sogar 30. Im Schnitt bekommen deutsche Arbeitnehmer jedoch ebenfalls 30 Tage Urlaub – also deutlich mehr als das gesetzlich vorgegebene Minimum."
             ],
             "en": [
               ""
@@ -75,7 +75,7 @@
           },
           "lh_choice_3": {
             "de": [
-              "Richtig! Belgier haben im Schnitt nur 20 Tage Urlaub. In Griechenland sind es immerhin 23. Die Deutschen stehen im Vergleich mit anderen europäischen Ländern gut da: Ebenso wie Menschen in Frankreich oder Dänemark haben sie im Durchschnitt 30 Tage Urlaub."
+              "Richtig! Französische Arbeitnehmer haben Anspruch auf 30 Tage Urlaub im Jahr. In Griechenland sind es 25 Tage und in Deutschland sogar nur 20. Im Schnitt bekommen deutsche Arbeitnehmer jedoch ebenfalls 30 Tage Urlaub – also deutlich mehr als das gesetzlich vorgegebene Minimum."
             ],
             "en": [
               ""

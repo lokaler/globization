@@ -7,6 +7,7 @@
     {
       "text": {
         "de": [
+          "Sie wollen mehr über nachhaltiges Reisen erfahren? Lesen Sie dazu auch unsere [Reportage](http://www.spiegel.de/reise/aktuell/juist-die-vorzeigeinsel-in-der-nordsee-a-1101367.html) über die nachhaltige Vorzeige-Insel Juist oder ein [Interview](http://www.spiegel.de/reise/aktuell/nachhaltiger-urlaub-lieber-einmal-lang-als-dreimal-kurz-verreisen-a-1104753.html) mit Tipps für nachhaltiges Urlauben.",
           "Den Link zum interaktiven Globus teilen:"
         ],
         "en": [
@@ -20,9 +21,9 @@
           "f.setView('globe')"
         ],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeMkA', '')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeMkA', '')",
-          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeM3e', '')",
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeOvC', 'Interaktiver Globus: Wie nachhaltig verreisen die Deutschen? #ÜberMorgen')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeOvC', '')",
+          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeM3e', 'Interaktiver Globus: Wie nachhaltig verreisen die Deutschen?')",
           "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeM3e', '')"
         },
 
