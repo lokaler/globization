@@ -13,11 +13,11 @@
           "**Schätzen Sie: Wie viel Geld geben Sie als Einzelperson pro Jahr für Urlaubsreisen ins Ausland aus?** Berücksichtigen Sie dabei sowohl die Kosten für den Transport als auch die Ausgaben am Urlaubsort."
         ],
         "en": [
-          " # ",
+          " # Who spends how much on vacations abroad?",
           "",
+          "People are keen on making their vacations sustainable, but they are unwilling to pay more to do so. A poll taken in 2014 found that to be the attitude of 55 percent of Germans. But how much are we actually willing to allow our vacations to cost?",
           "",
-          "",
-          "****"
+          "**Take a guess: How much money do you spend as an individual on vacation travel abroad?** Please also consider the costs for transportation as well as your expenditures once you arrive at your destination. Please move the slider in order to enter your value. "
         ]
       }
     },{
@@ -65,7 +65,7 @@
               "Sie verbringen Ihren Urlaub nicht im Ausland? Oder sind Sie so knapp bei Kasse, dass ein Urlaub – egal wohin – nicht drin ist? Falls Letzteres der Grund für Ihre Eingabe ist: So geht es vielen Menschen in Deutschland. Fast jeder Fünfte kann sich keinen Urlaub leisten."
             ],
             "en": [
-              ""
+              "You don't spend your vacation abroad? Or money is so tight that you are unable to afford a holiday anywhere? If the latter was the reason for your choice, you're not alone in Germany. Almost one in five people is unable to afford any vacation."
 
             ]
           },
@@ -74,7 +74,7 @@
               "Menschen **{{ SpendingCountry }}** geben im Schnitt etwa so viel Geld für Urlaubsreisen ins Ausland aus wie Sie. In Deutschland waren es 2014 im Schnitt etwa 1187 Euro pro Kopf. Am meisten Geld pro Kopf geben laut Weltorganisation für Tourismus die Luxemburger mit durchschnittlich 5846 Euro pro Person aus."
             ],
             "en": [
-              ""
+              "People **{{ SpendingCountry }}** spend around the same amount as you do on vacation trips abroad. In Germany in 2014, the average was 1,187 euros per person. According to the World Tourism Organization, the most money spent per capita is by residents of Luxembourg, who splash out 5,847 euros per person a year on their holiday travel."
             ]
           },
           "SpendingHolidays3": {
@@ -82,7 +82,7 @@
               "Sie geben mehr Geld für Urlaubsreisen ins Ausland aus, als der Durchschnitt in allen Ländern, für die Daten vorliegen. In Deutschland waren es 2014 im Schnitt etwa 1187 Euro pro Kopf. Am meisten Geld pro Kopf geben laut Weltorganisation für Tourismus die Luxemburger mit durchschnittlich 5846 Euro pro Person aus."
             ],
             "en": [
-              ""
+              "You spend more money on your vacation trips abroad than the average in all of the countries for which data is available. In Germany in 2014, the average was 1,187 euros per person. According to the World Tourism Organization, the most money spent per capita is by residents of Luxembourg, who splash out 5,847 euros per person a year on holiday travel."
             ]
           }
         }

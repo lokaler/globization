@@ -13,11 +13,11 @@
           "**Tippen Sie: Welche dieser Reisen hat den größten CO2-Fußabdruck pro Tag pro Person?** (Nach dem Bestätigen Ihrer Antwort bitte nach unten scrollen)"
         ],
         "en": [
-          " # ",
+          " # The CO2 footprint of favored travel destinations",
           "",
+          "The nature conservation organization WWF and researchers with Germany’s Institute for Applied Ecology have together calculated the CO2 footprint of Germans' favorite vacation destinations. They factored in travel, accommodations, meals and activities undertaken at the destination.",
           "",
-          "",
-          "****"
+          "**Guess which one of these trips had the worst ranking in the calculations when it came to their CO2 footprint per day and per person?**"
         ]
       }
     },
@@ -27,11 +27,11 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["choice_1", { "de": "Strandurlaub Mallorca", "en": "" }],
-            ["choice_2", { "de": "Kulturbusreise Südtirol", "en": ""}],
-            ["choice_3", { "de": "Familienurlaub Rügen", "en": "" }],
-            ["choice_4", { "de": "Gesundheitsurlaub Allgäu", "en": ""}],
-            ["choice_5", { "de": "Skiurlaub Österreich", "en": "" }]
+            ["carbonchoice_1", { "de": "Strandurlaub Mallorca", "en": "a beach vacation in Mallorca, Spain" }],
+            ["carbonchoice_2", { "de": "Kulturbusreise Südtirol", "en": "a cultural bus trip to South Tyrol in Italy"}],
+            ["carbonchoice_3", { "de": "Familienurlaub Rügen", "en": "a family vacation on the island of Rügen in Germany" }],
+            ["carbonchoice_4", { "de": "Gesundheitsurlaub Allgäu", "en": "a health holiday to Germany's Allgäu Alps region"}],
+            ["carbonchoice_5", { "de": "Skiurlaub Österreich", "en": "a ski vacation in Austria" }]
           ]
         }
       }
@@ -59,44 +59,44 @@
           },
 
 
-          "choice_1": {
+          "carbonchoice_1": {
             "de": [
               "Richtig! Ausschlaggebend ist die An- und Abreise und die erfolgt beim Mallorca-Urlaub in der Regel per Flugzeug. Pro Tag kamen die Forscher bei dieser Urlaubsvariante auf 87kg CO2 pro Person. Wer hingegen Familienurlaub auf Rügen macht, erzeugt pro Kopf nur etwa 18kg CO2 am Tag und wer den Sommer zu Hause auf Balkonien verbringt, sogar nur 4kg. Doch Spanien ist die zweitbeliebteste Reisedestination der Deutschen. Rund 13 Prozent aller Urlaubsreisen haben die Heimat von Siesta, Tapas und Paella zum Ziel."
             ],
             "en": [
-              ""
+              "Correct! What’s decisive here is how a person gets to and from the destination, and most people get to Mallorca by plane. For this type of vacation, researchers came up with a figure of 87 kilograms of CO2 per person. By contrast, those who took a family vacation to Rügen, a Baltic Sea island in northeastern Germany, only produced around 18 kg of CO2 per capita. Those who enjoyed a staycation at home produced only 4 kg. But Spain is the second most popular travel destination for Germans. Around 13 percent of all vacation trips are taken to the home of the siesta, tapas and paella."
             ]
           },
-          "choice_2": {
+          "carbonchoice_2": {
             "de": [
               "Nein, der Klimasünder unter diesen Urlaubsvarianten ist der Mallorca-Urlaub. Pro Tag kamen die Forscher für diese Reiseform auf 87kg CO2 pro Person – ausschlaggebend ist die An- und Abreise per Flugzeug. Doch Spanien ist die zweitbeliebteste Reisedestination der Deutschen. Rund 13 Prozent aller Urlaubsreisen haben die Heimat von Siesta, Tapas und Paella zum Ziel. Die Kulturbusreise nach Südtirol schnitt mit 43kg CO2 pro Tag und Person mittelmäßig ab. Noch nachhaltiger sind zum Beispiel der Familienurlaub auf Rügen – oder der Sommer zu Hause auf Balkonien."
             ],
             "en": [
-              ""
+              "No, the worst climate offender among these types of trips is the Mallorca vacation. Researchers concluded that this form of travel produced 87 kg of CO2 per person each day -- what’s decisive here is the air travel necessary to get you there and back. Yet Spain remains the second most popular destination for Germans. Around 13 percent of all vacation trips are taken to the home of the siesta, tapas and paella. The cultural bus trip to South Tyrol produced on average 43 kg of CO2 per day and person, putting it in the midrange. Even more sustainable, though, was the family vacation on the German island of Rügen or a staycation at home."
             ]
           },
-          "choice_3": {
+          "carbonchoice_3": {
             "de": [
               "Nein, der Familienurlaub auf Rügen ist mit 18kg CO2 pro Person pro Tag sogar die nachhaltigste dieser Urlaubsvarianten. Der Klimasünder ist der Mallorca-Urlaub. Pro Tag kamen die Forscher für diese Reiseform auf 87kg CO2 pro Person – ausschlaggebend ist die An- und Abreise per Flugzeug. Doch Spanien ist die zweitbeliebteste Reisedestination der Deutschen. Rund 13 Prozent aller Urlaubsreisen haben die Heimat von Siesta, Tapas und Paella zum Ziel."
             ],
             "en": [
-              ""
+              "No, with a footprint of 18 kg of CO2 per day and person, the family vacation on the German island of Rügen is the most sustainable of the vacation types listed. The worst climate offender is the Mallorca holiday. Researchers calculated that type of trip produced 87 kg of CO2 per person. What’s decisive here is the fact that people travel there by plane. Yet Spain remains the second most popular destination for Germans. Around 13 percent of all vacation trips are taken to the home of the siesta, tapas and paella."
             ]
           },
-          "choice_4": {
+          "carbonchoice_4": {
             "de": [
               "Nein, der Klimasünder unter diesen Urlaubsvarianten ist der Mallorca-Urlaub. Pro Tag kamen die Forscher für diese Reiseform auf 87kg CO2 pro Person – ausschlaggebend ist die An- und Abreise per Flugzeug. Doch Spanien ist die zweitbeliebteste Reisedestination der Deutschen. Rund 13 Prozent aller Urlaubsreisen haben die Heimat von Siesta, Tapas und Paella zum Ziel. Der Gesundheitsurlaub im Allgäu schnitt mit 29kg CO2 pro Tag und Person mittelmäßig ab. Noch nachhaltiger sind zum Beispiel der Familienurlaub auf Rügen – oder der Sommer zu Hause auf Balkonien."
             ],
             "en": [
-              ""
+              "No, the worst climate offender among the types of vacations listed is the Mallorca holiday.  Researchers calculated that type of trip produced 87 kg of CO2 per person -- what’s decisive here is the fact that people fly to their destination. Yet Spain remains the second most popular destination for Germans. Around 13 percent of all vacation trips are taken to the home of the siesta, tapas and paella. The health vacation to Germany's Allgäu Alps, with an average CO2 footprint of 29 kg per day and person, produced better results. Even more sustainable, though, was the family vacation on the German island of Rügen or a staycation at home."
             ]
           },
 
-          "choice_5": {
+          "carbonchoice_5": {
             "de": [
               "Nein, der Klimasünder unter diesen Urlaubsvarianten ist der Mallorca-Urlaub. Pro Tag kamen die Forscher für diese Reiseform auf 87kg CO2 pro Person – ausschlaggebend ist die An- und Abreise per Flugzeug. Doch Spanien ist die zweitbeliebteste Reisedestination der Deutschen. Rund 13 Prozent aller Urlaubsreisen haben die Heimat von Siesta, Tapas und Paella zum Ziel. Der Skiurlaub in Österreich schnitt mit 60kg CO2 pro Tag und Person mittelmäßig ab. Deutlich nachhaltiger sind zum Beispiel der Familienurlaub auf Rügen – oder der Sommer zu Hause auf Balkonien."],
             "en": [
-              ""
+              "No, the worst climate offender among the types of vacations listed is the Mallorca holiday. Researchers calculated that this type of trip produced 87 kg of CO2 per person. What’s decisive here is the fact that people travel there by plane. Yet Spain remains the second most popular destination for Germans. Around 13 percent of all vacation trips are taken to the home of the siesta, tapas and paella. With an average footprint of 60 kg per day and person, the Austrian ski vacation produced slightly better results. Significantly more sustainable, though, was the family vacation on the island of Rügen -- or a staycation summer at home."
             ]
           }
         }
