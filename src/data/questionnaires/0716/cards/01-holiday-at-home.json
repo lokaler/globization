@@ -54,8 +54,7 @@
           "(i.sliderAmountHolidays >= 35) && f.panToCountry('DEU') && 'TravelToGermany4'"
         ],
         "answerContext": {
-          "AmountTravelsToCountry" : "f.getCountryName('travelingtofromgermany', i.sliderAmountHolidays)"
-
+          "AmountTravelsToCountry" : "f.getCountryName('travelingtofromgermany', i.sliderAmountHolidays, { case: 'default' })"
         },
         "templates": {
           "notSubmitted": {
