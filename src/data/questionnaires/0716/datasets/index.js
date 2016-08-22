@@ -40,7 +40,7 @@ export default [
       "en": "Share of destinations"
     },
     "description": {
-      "de": "Anteil der Reisen in das jeweilige Land (an allen Reisen der Einwohner Deutschlands von mehr als 5 Tagen in 2015)",
+      "de": "Anteil der Reisen in das jeweilige Land (an allen Reisen der Einwohner Deutschlands von mehr als fünf Tagen in 2015)",
       "en": "Share of trips of longer than five days made by German residents (2015)"
     },
     "quelle": "FUR",
