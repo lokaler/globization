@@ -38,8 +38,6 @@ export default class Slider extends React.Component {
     const tipFormatter = this.tipFormatter.bind(this);
     const unit = options.unit;
     const roundId = `r${ questions.activeQuestionnaireId }`;
-    const marks = { [options.min]: tipFormatter(options.min),
-      [options.max]: tipFormatter(options.max) };
 
     // const step = (options.max - options.min) / 5;
     // range(5).forEach(i => marks[i * step] = i * step);
@@ -68,10 +66,13 @@ export default class Slider extends React.Component {
           max={ options.max }
           step={ options.step || 1 }
           className={ roundId }
-          marks={ marks }
           onAfterChange={ sliderChangeBind }
           tipTransitionName="rc-slider-tooltip-zoom-down"
         />
+        <div className="marks">
+          <div className="min">{ tipFormatter(options.min) }</div>
+          <div className="max">{ tipFormatter(options.max) }</div>
+        </div>
       </div>
     );
   }

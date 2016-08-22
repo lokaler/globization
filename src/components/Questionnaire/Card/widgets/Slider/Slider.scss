@@ -2,7 +2,6 @@
 
   composes: widget from '../widgets.scss';
 
-  margin-bottom: 1em;
 
   .rc-slider-track {
     background-color: #FD8D3C;
@@ -28,16 +27,16 @@
     }
   }
 
-  .rc-slider-mark-text {
-    width: auto !important;
-    width: initial !important;
-    margin-left: inherit !important;
-    &:nth-of-type(1){
-      left: 0px !important;
+  .marks {
+    padding-top: 5px;
+    width: 100%;
+    float: left;
+    font-size: 10px;
+    .min {
+      float: left;
     }
-    &:nth-of-type(2){
-      left: initial !important;
-      right: 0px !important;
+    .max {
+      float: right;
     }
   }
 
