@@ -2,7 +2,7 @@ import React, { PropTypes as PT } from 'react';
 import translate from 'logic/translate';
 import styles from './Choices.scss';
 import RadioInput from './RadioInput';
-import { max, values } from 'lodash';
+import { max, values, has } from 'lodash';
 import { googleLogger } from 'logic/logging';
 
 const noop = () => {}; // eslint-disable-line arrow-body-style
@@ -33,7 +33,7 @@ export default class Choices extends React.Component {
     const Radios = options.choices.map((option) => {
       const [value, label] = option;
       const onClick = disabled ? noop : this.setValue.bind(this, value);
-      const histoVotes = histogramData[value] || 0;
+      const histoVotes = has(histogramData, value) ? histogramData[value] : 0;
       const histoSize = `${histoVotes / histoMax * 90}%`;
 
       return (
