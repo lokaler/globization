@@ -63,7 +63,7 @@ export default class SliderHistogram extends React.Component {
         trigger={['hover']}
         align={{ offset: [0, -10] }}
         overlay={ <span>
-          { translate(d.key.toFixed(2)) } - { translate((d.key + step).toFixed(2)) } { unit }
+          { translate(d.key.toFixed()) } - { translate((d.key + step).toFixed()) } { unit }
           </span>}
       >
         <div
