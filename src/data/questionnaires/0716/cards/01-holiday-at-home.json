@@ -46,11 +46,11 @@
           "!i.AmountHolidaysSubmitted && 'notSubmitted'",
           "f.setDataset('travelingtofromgermany')",
           "f.isMobile() && f.setView('map')",
-          "f.panToCountry('GER') && false",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderAmountHolidays >= 0 && i.sliderAmountHolidays < 14) && f.panToCountry(f.getISO('travelingtofromgermany', i.sliderAmountHolidays)) && 'TravelToGermany1'",
-          "(i.sliderAmountHolidays >= 14 && i.sliderAmountHolidays < 26) && f.panToCountry('DEU') && 'TravelToGermany2'",
-          "(i.sliderAmountHolidays >= 26 && i.sliderAmountHolidays < 35) && f.panToCountry('DEU') && 'TravelToGermany3'",
+          "(i.sliderAmountHolidays >= 0 && i.sliderAmountHolidays < 14)  && f.panToCountry(f.getISO('travelingtofromgermany', i.sliderAmountHolidays)) && 'TravelToGermany1'",
+          "f.panToCountry('DEU') && false",
+          "(i.sliderAmountHolidays >= 14 && i.sliderAmountHolidays < 26) && 'TravelToGermany2'",
+          "(i.sliderAmountHolidays >= 26 && i.sliderAmountHolidays < 35) && 'TravelToGermany3'",
           "(i.sliderAmountHolidays >= 35) && f.panToCountry('DEU') && 'TravelToGermany4'"
         ],
         "answerContext": {
