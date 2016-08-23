@@ -10,7 +10,7 @@
           "",
           "Die Naturschutzorganisation WWF und das Öko-Institut haben die CO2-Bilanz von beliebten Urlaubsreisen berechnet. Dabei berücksichtigten sie An- und Abreise, Unterkunft, Verpflegung und Aktivitäten vor Ort.",
           "",
-          "**Welche dieser Reisen hat den größten CO2-Fußabdruck pro Tag pro Person?** (Nach dem Bestätigen Ihrer Antwort bitte nach unten scrollen)"
+          "**Welche dieser Reisen hat den größten CO2-Fußabdruck pro Tag pro Person?**"
         ],
         "en": [
           " # The CO2 footprint of favored travel destinations",
@@ -30,8 +30,7 @@
             ["carbonchoice_1", { "de": "Strandurlaub Mallorca", "en": "a beach vacation in Mallorca, Spain" }],
             ["carbonchoice_2", { "de": "Kulturbusreise Südtirol", "en": "a cultural bus trip to South Tyrol in Italy"}],
             ["carbonchoice_3", { "de": "Familienurlaub Rügen", "en": "a family vacation on the island of Rügen in Germany" }],
-            ["carbonchoice_4", { "de": "Gesundheitsurlaub Allgäu", "en": "a health holiday to Germany's Allgäu Alps region"}],
-            ["carbonchoice_5", { "de": "Skiurlaub Österreich", "en": "a ski vacation in Austria" }]
+            ["carbonchoice_4", { "de": "Gesundheitsurlaub Allgäu", "en": "a health holiday to Germany's Allgäu Alps region"}]
           ]
         }
       }
