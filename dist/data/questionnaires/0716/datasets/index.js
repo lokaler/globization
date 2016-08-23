@@ -5,11 +5,11 @@ export default [
     "key": "travels",
     "name": {
       "de": "Urlaubsreisen pro Kopf",
-      "en": ""
+      "en": "Per-capita vacation trips"
     },
     "description": {
       "de": "Jährliche Anzahl Urlaubsreisen pro Einwohner (Stand 2013/14)",
-      "en": ""
+      "en": "Number of yearly per-capita vacation trips (for 2013/14)"
     },
     "quelle": "Weltbank/UNWTO",
     "link": "http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators",
@@ -37,11 +37,11 @@ export default [
     "key": "travelingtofromgermany",
     "name": {
       "de": "Anteile Reiseziele",
-      "en": ""
+      "en": "Share of destinations"
     },
     "description": {
-      "de": "Anteil an allen von der in Deutschland lebenden deutschsprachigen Bevölkerung gemachten Reisen ab 5 Tagen (2015)",
-      "en": ""
+      "de": "Anteil der Reisen in das jeweilige Land (an allen Reisen der Einwohner Deutschlands von mehr als fünf Tagen in 2015)",
+      "en": "Share of trips of longer than five days made by German residents (2015)"
     },
     "quelle": "FUR",
     "link": "http://www.fur.de/fileadmin/user_upload/RA_2016/RA2016_Erste_Ergebnisse_DE.pdf",
@@ -69,19 +69,19 @@ export default [
     "key": "cruiseships",
     "name": {
       "de": "Kreuzfahrten",
-      "en": ""
+      "en": "Cruises"
     },
     "description": {
-      "de": "Passagiere auf europäischen Kreuzfahrtschiffen pro Jahr pro 1000 Einwohner (2014)",
-      "en": ""
+      "de": "Passagiere auf europäischen Kreuzfahrtschiffen pro Jahr pro 1000 Einwohner (2015)",
+      "en": "Passengers on European cruise ships per year per 1,000 residents (2015)"
     },
     "quelle": "CLIA",
-    "link": "http://www.cruising.org/docs/default-source/research/clia_europe_statistics_and_markets_2014.pdf?sfvrsn=2",
+    "link": "http://www.irn-research.com/wp-content/uploads/2016/03/CLIA-Europe-Stats-and-marts-2015-1.pdf",
     "unit": "",
     "fixed": 0,
     "domain": [
       0,
-      34
+      40
     ],
     "skala": [
       0,
@@ -106,7 +106,7 @@ export default [
     },
     "description": {
       "de": "An der Grenze angekommene Touristen oder Besucher aus Deutschland (I.d.R. 2014)",
-      "en": ""
+      "en": "Tourists or visitors from Germany crossing the border (most data from 2014)"
     },
     "quelle": "UNWTO",
     "link": "http://statistics.unwto.org/publication/yearbook-tourism-statistics-2016-edition",
@@ -135,11 +135,11 @@ export default [
     "key": "tourismexpenditures",
     "name": {
       "de": "Ausgaben Auslandsreisen",
-      "en": ""
+      "en": "Spending on trips abroad"
     },
     "description": {
       "de": "Von Reisenden pro Kopf pro Jahr im Ausland ausgegebenes Geld [Euro]",
-      "en": ""
+      "en": "Money spent by travelers abroad per capita, per annum [euro]"
     },
     "quelle": "Weltbank/UNWTO",
     "link": "http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators",
@@ -168,18 +168,18 @@ export default [
     "key": "amountholidays",
     "name": {
       "de": "Urlaubstage",
-      "en": ""
+      "en": "Vacation days"
     },
     "description": {
       "de": "Gesetzlicher Urlaubsanspruch",
-      "en": ""
+      "en": "Legally prescribed number of vacation days"
     },
     "quelle": "Mercer via Statista",
     "link": "http://de.statista.com/statistik/daten/studie/38834/umfrage/gesetzlicher-urlaubsanspruch-und-anzahl-der-feiertage/",
     "unit": "",
     "fixed": 0,
     "domain": [
-      20,
+      10,
       30
     ],
     "skala": [
@@ -205,7 +205,7 @@ export default [
     },
     "description": {
       "de": "Von deutschen Flughäfen zu diesem Endziel abgeflogene Passagiere in 2015",
-      "en": ""
+      "en": "The number of passengers flown from German airports to this destination in 2015"
     },
     "quelle": "Destatis",
     "link": "https://www.destatis.de/DE/Publikationen/Thematisch/TransportVerkehr/Luftverkehr/LuftverkehrAusgewaehlteFlugplaetze.html ",

@@ -12,7 +12,7 @@ export function prepareDataset(dataset) {
     let e = _.find(master, { alpha3: d.iso });
     const t = _.find(topofeatures, (c) => c.properties.iso === d.iso);
     if (!e) {
-      console.warn(d.iso, 'not in masterdataset');
+      console.warn(d.iso, 'not in masterdataset origined from', dataset.key);
       e = { vergleich: 0 };
     }
     d.onMap = t !== undefined;
