@@ -10,13 +10,13 @@
           "",
           "Ja, Flugreisen sind umweltschädlich. Dennoch ist die Verlockung groß, atemberaubende Landschaften und fremde Kulturen in der Ferne zu erkunden. Wenn Sie frei wählen dürften: **Welchen dieser Orte würden Sie gerne einmal besuchen?** (Auswahlmöglichkeit unten auf der Seite)",
           "",
-          "Den **Machu Picchu** in Peru (dpa)",
+          "Den **Machu Picchu** in Peru",
           "![](data/questionnaires/0716/cards/assets/2.png)",
           "",
-          "Den **Ngapali-Strand** in Myanmar (AFP)",
+          "Den **Ngapali-Strand** in Myanmar",
           "![](data/questionnaires/0716/cards/assets/3.png)",
           "",
-          "Den **Grand Canyon** in den USA (Reuters)",
+          "Den **Grand Canyon** in den USA",
           "![](data/questionnaires/0716/cards/assets/1.png)",
           ""
         ],
@@ -25,13 +25,13 @@
           "",
           "Yes, traveling by air is harmful to the environment, but the idea of discovering breathtaking landscapes and foreign cultures abroad is extremely tempting. If you had a choice: **Which of these places would you like to visit one day?**",
           "",
-          "**Machu Picchu** in Peru (dpa)",
+          "**Machu Picchu** in Peru",
           "![](data/questionnaires/0716/cards/assets/2.png)",
           "",
-          "**Ngapali Beach** in Myanmar (AFP)",
+          "**Ngapali Beach** in Myanmar",
           "![](data/questionnaires/0716/cards/assets/3.png)",
           "",
-          "The **Grand Canyon** in the United States (Reuters)",
+          "The **Grand Canyon** in the United States",
           "![](data/questionnaires/0716/cards/assets/1.png)",
           ""
         ]
@@ -100,6 +100,17 @@
             ]
           }
         }
+      }
+    },
+    {
+      "text": {
+        "de": [
+          "*Bildnachweis: dpa, AFP, reuters*"
+        ],
+        "en": [
+          "Photo credits: dpa, AFP, reuters*"
+
+        ]
       }
     }
   ]
