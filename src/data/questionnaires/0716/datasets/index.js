@@ -41,7 +41,7 @@ export default [
     },
     "description": {
       "de": "Anteil der Reisen in das jeweilige Land (an allen Reisen der Einwohner Deutschlands von mehr als fünf Tagen in 2015)",
-      "en": "Share of trips of longer than five days made by German residents (2015)"
+      "en": "Share of trips of longer than five days made by residents of Germany (2015)"
     },
     "quelle": "FUR",
     "link": "http://www.fur.de/fileadmin/user_upload/RA_2016/RA2016_Erste_Ergebnisse_DE.pdf",
