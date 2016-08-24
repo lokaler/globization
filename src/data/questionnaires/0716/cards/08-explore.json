@@ -22,9 +22,9 @@
         ],
         "answerContext": {
           "twitterShare": "f.shareButtonTwitter('http://spon.de/aeOvC', 'Interaktiver Globus: Wie nachhaltig verreisen die Deutschen? #ÜberMorgen')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeOvC', 'Interactive Globe: Europeans love to travel, but how sustainable are their trips? #beyondtomorrow')",
-          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeM3e', 'Interaktiver Globus: Wie nachhaltig verreisen die Deutschen?')",
-          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeM3e', 'Interactive Globe: Europeans love to travel, but how sustainable are their trips? #beyondtomorrow')"
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeOvC', 'Interaktiver Globus: Wie nachhaltig verreisen die Deutschen? #ÜberMorgen')",
+          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeOEc', 'Interactive Globe: Europeans love to travel, but how sustainable are their trips? #beyondtomorrow')",
+          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeOEc', 'Interactive Globe: Europeans love to travel, but how sustainable are their trips? #beyondtomorrow')"
         },
 
         "templates": {
