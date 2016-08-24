@@ -43,9 +43,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["ldf_choice_1", { "de": "Machu Picchu", "en": "" }],
-            ["ldf_choice_2", { "de": "Ngapali-Strand", "en": ""}],
-            ["ldf_choice_3", { "de": "Grand Canyon", "en": "" }]
+            ["ldf_choice_1", { "de": "Machu Picchu", "en": "Machu Picchu" }],
+            ["ldf_choice_2", { "de": "Ngapali-Strand", "en": "Ngapali Beach"}],
+            ["ldf_choice_3", { "de": "Grand Canyon", "en": "Grand Canyon" }]
           ]
         }
       }
