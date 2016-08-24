@@ -102,7 +102,7 @@ export default [
     "key": "touristsfromgermany",
     "name": {
       "de": "Touristen aus Deutschland",
-      "en": ""
+      "en": "Tourists from Germany"
     },
     "description": {
       "de": "An der Grenze angekommene Touristen oder Besucher aus Deutschland (I.d.R. 2014)",
@@ -201,7 +201,7 @@ export default [
     "key": "airportstravelingto",
     "name": {
       "de": "Flüge von Deutschland aus",
-      "en": ""
+      "en": "Passengers flown from German airports"
     },
     "description": {
       "de": "Von deutschen Flughäfen zu diesem Endziel abgeflogene Passagiere in 2015",
