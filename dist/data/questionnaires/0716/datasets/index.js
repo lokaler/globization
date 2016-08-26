@@ -11,7 +11,7 @@ export default [
       "de": "Jährliche Anzahl Urlaubsreisen pro Einwohner (Stand 2013/14)",
       "en": "Number of yearly per-capita vacation trips (for 2013/14)"
     },
-    "quelle": "Weltbank/UNWTO",
+    "quelle": "World Bank/UNWTO",
     "link": "http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators",
     "unit": "",
     "fixed": 1,
@@ -141,7 +141,7 @@ export default [
       "de": "Von Reisenden pro Kopf pro Jahr im Ausland ausgegebenes Geld [Euro]",
       "en": "Money spent by travelers abroad per capita, per annum [euro]"
     },
-    "quelle": "Weltbank/UNWTO",
+    "quelle": "World Bank/UNWTO",
     "link": "http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators",
     "unit": "€",
     "fixed": 0,
