@@ -1,0 +1,83 @@
+{
+  "key": "strompreis",
+  "title": "1. Karte - Strompreis",
+  "dataset": "consumption_elect",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Was kostet Strom?",
+          "",
+          "Seit Jahren stönen die Deutschen über ihre Stromrechnung. Aber ist Strom in Deutschland wirklich teurer als anderswo?",
+          "",
+          "**Ein Zwei-­Personen-­Haushalt verbraucht hierzulande im Schnitt 275 Kilowattstunden im Monat. Tippen Sie, wie viel Euro der Haushalt dafür bezahlen muss.**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderStrompreis",
+        "type": "slider",
+        "options": {
+          "unit": "€",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountStrompreisSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderStrompreis && !i.AmountStrompreisSubmitted",
+          "!i.AmountStrompreisSubmitted && 'notSubmitted'",
+          "f.setDataset('strompreis')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderStrompreis <= 78 && f.panToCountry(f.getISO('strompreis', i.sliderStrompreis))) && 'Antwort_Strompreis1'",
+          "(i.sliderStrompreis >= 77) && f.panToCountry('DEU') && 'Antwort_Strompreis2'"
+        ],
+        "answerContext": {
+          "AmountStrompreisCountry" : "f.getCountryName('strompreis', i.sliderStrompreis, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_Strompreis1": {
+            "de": [
+              "Nein, mehr! Der Haushalt muss dafür rund 82 Euro bezahlen. Strom ist in Deutschland im internationalen Vergleich tatsächlich teuer. Der von Ihnen getippte Wert entspricht etwa dem Strompreis in [Slider_LAND => Achtung, kein Lokativ!]. Am teuersten ist Strom in Dänemark, am günstigsten in Serbien"
+            ],
+            "en": [
+              ""
+
+            ]
+          },
+          "Antwort_Strompreis2": {
+            "de": [
+              "Gut geschätzt. Ein Zwei­Personen­Haushalt in Deutschland muss im Schnitt 82 Euro bezahlen ­ tatsächlich viel im internationalen Vergleich. Erkunden Sie im Globus weitere Strompreise in unterschiedlichen Ländern. Am teuersten ist Strom in Dänemark, am günstigsten in Serbien."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
