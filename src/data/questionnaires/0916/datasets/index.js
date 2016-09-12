@@ -77,11 +77,11 @@ export default [
     },
     "quelle": "IEA",
     "link": "http://data.worldbank.org/indicator/EG.ELC.ACCS.ZS",
-    "unit": "€",
+    "unit": "%",
     "fixed": 1,
     "domain": [
       0,
-      145
+      90
     ],
     "skala": [
       0,
