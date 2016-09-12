@@ -1,88 +1,93 @@
 {
-  "key": "holidaySpendings",
-  "title": "6. Karte - Ausgaben Urlaub",
-  "dataset": "airportstravelingto",
+  "key": "cozweigdp",
+  "title": "6. Karte - C02 pro Kopf",
+  "dataset": "cozwei_kopf",
   "content": [
     {
       "text": {
         "de": [
-          " # Wer gibt wie viel Geld für Auslandsreisen aus?",
+          " # Wachstum um welchen Preis?",
           "",
-          "Nachhaltig soll der Urlaub gerne sein, aber mehr kosten darf er nicht. So denken 55 Prozent der Deutschen laut einer repräsentativen Umfrage aus dem Jahr 2014. Aber wie viel lassen wir uns unseren Urlaub überhaupt kosten?",
+          "In Indien und China geht der steigende CO2­Ausstoß einher mit rasantem Wirtschaftswachstum ­ und darauf wollen die Länder kaum verzichten. Doch Wachstum führt nicht überall auf der Welt zur gleichen Menge Treibhausgase.",
           "",
-          "**Schätzen Sie: Wie viel Geld geben Sie als Einzelperson pro Jahr für Urlaubsreisen ins Ausland aus?** Berücksichtigen Sie dabei sowohl die Kosten für den Transport als auch die Ausgaben am Urlaubsort."
+          "**Was glauben Sie: In welchem Land verursacht ein Dollar Wirtschaftswachstum den geringsten CO2­Ausstoß?**"
         ],
         "en": [
-          " # Who spends how much on vacations abroad?",
+          " # ",
           "",
-          "People are keen on making their vacations sustainable, but they are unwilling to pay more to do so. A poll taken in 2014 found that to be the attitude of 55 percent of Germans. But how much are we actually willing to allow our vacations to cost?",
           "",
-          "**Take a guess: How much money do you spend as an individual on vacation travel abroad?** Please also consider the costs for transportation as well as your expenditures once you arrive at your destination. Please move the slider in order to enter your value. "
+          "",
+          "****"
         ]
       }
-    },{
+    },
+    {
       "input": {
-        "key": "sliderAmountHolidaysSpending",
-        "type": "slider",
+        "key": "CO2HeadGDP",
+        "type": "choices",
         "options": {
-          "unit": "€",
-          "min": 0,
-          "value": 3000,
-          "max": 8000,
-          "step": 10
+          "choices": [
+            ["co2gdpchoice_1", { "de": "Südafrika", "en": "" }],
+            ["co2gdpchoice_2", { "de": "Deutschland", "en": ""}],
+            ["co2gdpchoice_3", { "de": "Frankreich", "en": "" }],
+            ["co2gdpchoice_4", { "de": "Norwegen", "en": ""}]
+          ]
         }
       }
     },
     {
       "submit": {
-        "key": "AmountHolidaysSpendingSubmitted"
+        "key": "CO2HeadGDPSubmitted"
       }
     },
-
     {
       "answer": {
         "answerKey": [
-          "i.sliderAmountHolidaysSpending && !i.AmountHolidaysSpendingSubmitted",
-          "!i.AmountHolidaysSpendingSubmitted && 'notSubmitted'",
-          "f.setDataset('tourismexpenditures')",
+          "i.CO2HeadGDP && !i.CO2HeadGDPSubmitted",
+          "!i.CO2HeadGDPSubmitted && 'notSubmitted'",
+          "f.setDataset('cozwei_gdp')",
+          "f.panToCountry('FRA') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderAmountHolidaysSpending < 1 ) && f.panToCountry('DEU') && 'SpendingHolidays1'",
-          "(i.sliderAmountHolidaysSpending > 1 && i.sliderAmountHolidaysSpending < 5850) && f.panToCountry(f.getISO('tourismexpenditures', i.sliderAmountHolidaysSpending)) && 'SpendingHolidays2'",
-          "(i.sliderAmountHolidaysSpending >= 5850) && f.panToCountry('LUX') && 'SpendingHolidays3'"
+          "i.CO2HeadGDP"
         ],
-        "answerContext": {
-                    "SpendingCountry" : "f.getCountryName('tourismexpenditures', i.sliderAmountHolidaysSpending)"
-        },
+        "answerContext": {},
         "templates": {
           "notSubmitted": {
-            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]          },
-          "allAnswered": {
-            "de": [""], "en": [""]
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
           },
-          "SpendingHolidays1": {
-            "de": [
-              "Sie verbringen Ihren Urlaub nicht im Ausland? Oder sind Sie so knapp bei Kasse, dass ein Urlaub – egal wohin – nicht drin ist? Falls Letzteres der Grund für Ihre Eingabe ist: So geht es vielen Menschen in Deutschland. Fast jeder Fünfte kann sich keinen Urlaub leisten."
-            ],
-            "en": [
-              "You don't spend your vacation abroad? Or money is so tight that you are unable to afford a holiday anywhere? If the latter was the reason for your choice, you're not alone in Germany. Almost one in five people is unable to afford any vacation."
 
-            ]
-          },
-          "SpendingHolidays2": {
+
+          "co2gdpchoice_1": {
             "de": [
-              "Menschen **{{ SpendingCountry }}** geben im Schnitt etwa so viel Geld für Urlaubsreisen ins Ausland aus wie Sie. In Deutschland waren es 2014 im Schnitt etwa 1187 Euro pro Kopf. Am meisten Geld pro Kopf geben laut Weltorganisation für Tourismus die Luxemburger mit durchschnittlich 5846 Euro pro Person aus."
+              "Das stimmt. In Frankreich entstehen 0,1 Kilogramm CO2 pro Dollar Wirtschaftswachstum. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
             ],
             "en": [
-              "People **{{ SpendingCountry }}** spend around the same amount as you do on vacation trips abroad. In Germany in 2014, the average was 1,187 euros per person. According to the World Tourism Organization, the most money spent per capita is by residents of Luxembourg, who splash out 5,847 euros per person a year on their holiday travel."
+              ""
             ]
           },
-          "SpendingHolidays3": {
+          "co2gdpchoice_2": {
             "de": [
-              "Sie geben mehr Geld für Urlaubsreisen ins Ausland aus, als der Durchschnitt in allen Ländern, für die Daten vorliegen. In Deutschland waren es 2014 im Schnitt etwa 1187 Euro pro Kopf. Am meisten Geld pro Kopf geben laut Weltorganisation für Tourismus die Luxemburger mit durchschnittlich 5846 Euro pro Person aus."
+              "Leider falsch. Frankreich wäre richtig gewesen, denn dort entstehen nur 0,1 Kilogramm CO2 pro Dollar Wirtschaftswachstum. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
             ],
             "en": [
-              "You spend more money on your vacation trips abroad than the average in all of the countries for which data is available. In Germany in 2014, the average was 1,187 euros per person. According to the World Tourism Organization, the most money spent per capita is by residents of Luxembourg, who splash out 5,847 euros per person a year on holiday travel."
+              ""
+            ]
+          },
+          "co2gdpchoice_3": {
+            "de": [
+              "Leider falsch. Frankreich wäre richtig gewesen, denn dort entstehen nur 0,1 Kilogramm CO2 pro Dollar Wirtschaftswachstum. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "co2gdpchoice_4": {
+            "de": [
+              "Leider falsch. Frankreich wäre richtig gewesen, denn dort entstehen nur 0,1 Kilogramm CO2 pro Dollar Wirtschaftswachstum. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
+            ],
+            "en": [
+              ""
             ]
           }
         }
