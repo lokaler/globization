@@ -11,6 +11,8 @@ import cards0616 from './0616/cards/index';
 import datasets0616 from './0616/datasets/index';
 import cards0716 from './0716/cards/index';
 import datasets0716 from './0716/datasets/index';
+import cards0916 from './0916/cards/index';
+import datasets0916 from './0916/datasets/index';
 
 
 let questionnaires = {
@@ -71,7 +73,20 @@ let questionnaires = {
     },
     cards: cards0716,
     datasets: datasets0716
+  },
+  '0916': {
+    title: {
+      de: 'Energie',
+      en: 'Energy'
+    },
+    options: {
+      showBackButton: true,
+      lastButtonLabel: 'explore'
+    },
+    cards: cards0916,
+    datasets: datasets0916
   }
+
 };
 
 for (const questionnaire of Object.values(questionnaires)) {

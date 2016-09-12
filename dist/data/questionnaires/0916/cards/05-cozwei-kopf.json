@@ -1,0 +1,97 @@
+{
+  "key": "cozweikopf",
+  "title": "4. Karte - C02 pro Kopf",
+  "dataset": "tempfdiffs",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wer am meisten CO2 ausstößt",
+          "",
+          "China, die USA und Indien produzieren im internationalen Vergleich das meiste Kohlendioxid. Doch in diesen Ländern leben auch Hunderte Millionen Menschen. Bei den Emissionen pro Kopf landet Indien damit gerade einmal auf Platz 147.",
+          "",
+          "**Was glauben Sie: Welches Land produziert pro Kopf das meiste Kohlendioxid?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "accessCO2Head",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["co2headchoice_1", { "de": "Katar", "en": "" }],
+            ["co2headchoice_2", { "de": "USA", "en": ""}],
+            ["co2headchoice_3", { "de": "China", "en": "" }],
+            ["co2headchoice_4", { "de": "Russland", "en": ""}]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "accessCO2HeadSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.accessCO2Head && !i.accessCO2HeadSubmitted",
+          "!i.accessCO2HeadSubmitted && 'notSubmitted'",
+          "f.setDataset('cozwei_kopf')",
+          "f.panToCountry('QTR') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.accessCO2Head"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "co2headchoice_1": {
+            "de": [
+              "Richtig. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "co2headchoice_2": {
+            "de": [
+              "Leider falsch. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "co2headchoice_3": {
+            "de": [
+              "Leider falsch. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "co2headchoice_4": {
+            "de": [
+              "Leider falsch. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
