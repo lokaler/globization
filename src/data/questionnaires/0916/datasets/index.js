@@ -109,11 +109,11 @@ export default [
     },
     "quelle": "IEA",
     "link": "https://www.iea.org/statistics/relateddatabases/worldenergystatisticsandbalances/",
-    "unit": "",
+    "unit": "%",
     "fixed": 1,
     "domain": [
       0,
-      1.6
+      99
     ],
     "skala": [
       0,
@@ -145,7 +145,7 @@ export default [
     "fixed": 1,
     "domain": [
       0,
-      2.5
+      3.3
     ],
     "skala": [
       0,

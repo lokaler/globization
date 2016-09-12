@@ -1,59 +1,58 @@
 {
-  "key": "longDistanceTravelBrasilia",
-  "title": "4. Karte - Brasilien",
-  "dataset": "cruiseships",
+  "key": "tempdiff",
+  "title": "4. Karte - Temperaturantstieg",
+  "dataset": "renewable_elect",
   "content": [
     {
       "text": {
         "de": [
-          " # Auf nach Rio?",
+          " # Es wird wärmer",
           "",
-          "Eine halbe Million Besucher wurden zu den Olympischen Spielen 2016 in Rio erwartet. Laut einem Nachhaltigkeitsbericht der Veranstalter macht deren Anreise den größten Teil des Treibhausgasausstoßes der Veranstaltung aus, nämlich etwa 1.380.000 Tonnen CO2-Äquivalente. In Deutschland wurden rund 35.000 Eintrittskarten für das Sportevent verkauft.",
+          "In vielen Ländern wird ein Großteil der Energie noch immer aus Kohle, Gas und Öl gewonnen. Treibhausgase gelangen in die Atmosphäre, der Klimawandel ist die Folge. Seit dem Jahr 1900 haben sich die globalen Landmassen um 1,3 Grad Celsius erwärmt.",
           "",
-          "**Tippen Sie: Wie viele Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien – also in dem Jahr, in dem dort die Fußballweltmeisterschaft stattfand?**"
+          "**Tippen Sie: Wie groß war der Temperaturanstieg in Deutschland?**"
         ],
         "en": [
-          " # Heading to Rio?",
+          " # ",
           "",
-          "Half a million visitors were expected at the 2016 Olympic Games in Rio. According to a sustainability report by the organizers, travel to and from the event would be the greatest source of greenhouse gas emissions tied to the competition, namely around 1.38 million tons of carbon dioxide-equivalent. In Germany, around 35,000 tickets have been sold for the sporting event.",
           "",
-          "**Take a guess: How many tourists from Germany traveled to Brazil in 2014, the year the country hosted the World Cup? Please move the slider in order to enter your guess.**"
+          "",
+          "****"
         ]
       }
     },{
       "input": {
-        "key": "sliderTouristsFromGermany",
+        "key": "sliderTempAnstieg",
         "type": "slider",
         "options": {
-          "unit": "",
-          "min": 50000,
-          "value": 200000,
-          "max": 500000,
-          "step": 10000
+          "unit": "Celsius",
+          "min": 0,
+          "value": 1,
+          "max": 3,
+          "step": 0.1
         }
       }
     },
     {
       "submit": {
-        "key": "TouristsFromGermanySubmitted"
+        "key": "AmountTempAnstiegSubmitted"
       }
     },
 
     {
       "answer": {
         "answerKey": [
-          "i.sliderTouristsFromGermany && !i.TouristsFromGermanySubmitted",
-          "!i.TouristsFromGermanySubmitted && 'notSubmitted'",
-          "f.setDataset('touristsfromgermany')",
+          "i.sliderTempAnstieg && !i.AmountTempAnstiegSubmitted",
+          "!i.AmountTempAnstiegSubmitted && 'notSubmitted'",
+          "f.setDataset('tempdiffs')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderTouristsFromGermany < 230000) && f.panToCountry(f.getISO('touristsfromgermany', i.sliderTouristsFromGermany)) && 'FromGermany1'",
-          "(i.sliderTouristsFromGermany >= 230000 && i.sliderTouristsFromGermany < 300000) && f.panToCountry('BRA') && 'FromGermany2'",
-          "(i.sliderTouristsFromGermany >= 300000) && f.panToCountry(f.getISO('touristsfromgermany', i.sliderTouristsFromGermany)) && 'FromGermany3'"
+          "(i.sliderTempAnstieg <= 0.9 && f.panToCountry(f.getISO('renewable_elect', i.sliderErneuerbare))) && 'Antwort_TempAnstieg1'",
+          "(i.sliderTempAnstieg >= 1 && i.sliderTempAnstieg >= 1.2 && f.panToCountry('DEU')) && 'Antwort_TempAnstieg2'",
+          "(i.sliderTempAnstieg >= 1.3) && f.panToCountry(f.getISO('renewable_elect', i.sliderErneuerbare))) && 'Antwort_TempAnstieg3'"
         ],
         "answerContext": {
-          "FromGermanyCountry" : "f.getCountryName('touristsfromgermany', i.sliderTouristsFromGermany, { case: 'default' })"
-
+          "AmountTempAnstiegCountry" : "f.getCountryName('renewable_elect', i.sliderErneuerbare, { case: 'default' })"
         },
         "templates": {
           "notSubmitted": {
@@ -61,30 +60,30 @@
           "allAnswered": {
             "de": [""], "en": [""]
           },
-          "FromGermany1": {
+          "Antwort_TempAnstieg1": {
             "de": [
-              "Nein, mehr! Rund 265.000 Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien. Nach **{{ FromGermanyCountry }}** reisten 2014 in etwa so viele Besucher aus Deutschland wie von ihnen geschätzt. Nicht alle Länder unterscheiden bei der Einreise zwischen Touristen und Geschäftsreisenden, weshalb die Daten auf dem Globus nur einen groben Richtwert bieten."
-
+              " Nein, die Temperatur ist etwas stärker gestiegen, nämlich um rund 1,1 Grad Celsius. Ihre Schätzung entspricht dem Anstieg in [  Land_Slider => kein Lokativ].  Mit 2,5 Grad Celsius hat sich Grönland am stärksten erwärmt, Indien hat mit 0,6 Grad Celsius den geringsten Anstieg verzeichnet."
             ],
             "en": [
-              "No, more! Around 265,000 tourists from Germany traveled to Brazil in 2014. That year, approximately the same number of people you guessed traveled from Germany to **{{ FromGermanyCountry }}**. Not all states differentiate between visitors who are tourists and those who are business travelers when they enter the country, meaning the data on the globe offers only an approximate value."
+              ""
 
             ]
           },
-          "FromGermany2": {
+          "Antwort_TempAnstieg2": {
             "de": [
-              "Ziemlich gut geschätzt! Rund 265.000 Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien. Beim Vergleich der Länderdaten ist hier jedoch Vorsicht geboten: Nicht alle Länder unterscheiden bei der Einreise zwischen Touristen und Geschäftsreisenden, weshalb die Daten auf dem Globus nur einen groben Richtwert bieten."
+              "Ziemlich gut geschätzt! Die Temperatur ist um rund 1,1 Grad Celsius gestiegen. Mit 2,5 Grad Celsius hat sich Grönland am stärksten erwärmt, Indien hat mit 0,6 Grad Celsius den geringsten Anstieg verzeichnet."
             ],
             "en": [
-              "That's a pretty good guess. Around 265,000 tourists from Germany traveled in 2014 to Brazil. But one word of caution when comparing the country data: Not all states differentiate between visitors who are tourists and those who are business travelers when they enter the country, meaning the data on the globe offers only an approximate value."
+              ""
+
             ]
           },
-          "FromGermany3": {
+          "Antwort_TempAnstieg3": {
             "de": [
-              "Nein, ganz so viele waren es nicht. Rund 265.000 Touristen aus Deutschland reisten im Jahr 2014 nach Brasilien. Nach **{{ FromGermanyCountry }}** reisten 2014 in etwa so viele Besucher aus Deutschland wie von ihnen geschätzt. Nicht alle Länder unterscheiden bei der Einreise zwischen Touristen und Geschäftsreisenden, weshalb die Daten auf dem Globus nur einen groben Richtwert bieten."
+              "Nein, die Temperatur ist etwas weniger stark gestiegen, nämlich um rund 1,1 Grad Celsius. Ihre Schätzung entspricht dem Anstieg in  [Land_Slider => kein Lokativ] . Mit 2,5 Grad Celsius hat sich Grönland am stärksten erwärmt, Indien hat mit 0,6 Grad Celsius den geringsten Anstieg verzeichnet."
             ],
             "en": [
-              "No, there weren't that many. Around 265,000 tourists from Germany traveled to Brazil in 2014.  That year, approximately the same number of people you guessed traveled from Germany to **{{ FromGermanyCountry }}**. Not all states differentiate between visitors who are tourists and those who are business travelers when they enter the country, meaning the data on the globe offers only an approximate value."
+              ""
             ]
           }
         }
