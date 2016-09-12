@@ -1,7 +1,7 @@
 {
   "key": "cozweikopf",
   "title": "5. Karte - C02 pro Kopf",
-  "dataset": "tempfdiffs",
+  "dataset": "tempdiffs",
   "content": [
     {
       "text": {
@@ -46,7 +46,7 @@
           "i.accessCO2Head && !i.accessCO2HeadSubmitted",
           "!i.accessCO2HeadSubmitted && 'notSubmitted'",
           "f.setDataset('cozwei_kopf')",
-          "f.panToCountry('QTR') && false",
+          "f.panToCountry('QAT') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "i.accessCO2Head"
