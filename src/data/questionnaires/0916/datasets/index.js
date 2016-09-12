@@ -36,7 +36,7 @@ export default [
   {
     "key": "strompreis",
     "name": {
-      "de": "Urlaubsreisen pro Kopf",
+      "de": "Ausgaben für Strom",
       "en": ""
     },
     "description": {
@@ -45,7 +45,7 @@ export default [
     },
     "quelle": "IEA/Eurostat",
     "link": "http://www.iea.org/publications/freepublications/publication/key-world-energy-statistics-2015.html",
-    "unit": "",
+    "unit": "€",
     "fixed": 1,
     "domain": [
       0,
@@ -72,16 +72,16 @@ export default [
       "en": ""
     },
     "description": {
-      "de": "Anteil der Bevölkerung mit Zugang zu Strom",
+      "de": "Anteil der Bevölkerung mit Zugang zu Strom (%)",
       "en": ""
     },
     "quelle": "IEA",
     "link": "http://data.worldbank.org/indicator/EG.ELC.ACCS.ZS",
-    "unit": "",
+    "unit": "€",
     "fixed": 1,
     "domain": [
       0,
-      100
+      145
     ],
     "skala": [
       0,

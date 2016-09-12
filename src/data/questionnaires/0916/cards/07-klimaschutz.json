@@ -1,54 +1,55 @@
 {
-  "key": "lessHolidays",
-  "title": "7. Karte - Wenig Urlaub",
-  "dataset": "tourismexpenditures",
+  "key": "climate",
+  "title": "7. Karte - Klimaschutz",
+  "dataset": "cozwei_gdp",
   "content": [
     {
       "text": {
         "de": [
-          " # Wer hat den meisten Urlaub?",
+          " # Wer schützt das Klima??",
           "",
-          "Wer nachhaltig reisen will, muss natürlich überhaupt freie Zeit für einen Urlaub haben.",
+          "Es ist schwer, die Bemühungen im Klimaschutz an einer einzigen Zahl festzumachen. Die Denkfabrik Germanwatch versucht deshalb, in einem Index eine Vielzahl von Faktoren wie CO2­Ausstoß, Energieeffizienz und Umweltpolitik abzubilden.",
           "",
-          "**In welchem dieser drei Länder haben Arbeitnehmer den höchsten gesetzlichen Urlaubsanspruch?**"
+          "**Was glauben Sie: Welches der folgenden Länder tut am meisten für den Klimaschutz?**"
         ],
         "en": [
-          " # Who gets the most time off?",
+          " # ",
           "",
-          "Of course, those wanting to travel sustainably must also have the time off in order to be able to do so.",
           "",
-          "**Take a guess: Which of these three countries has the highest statutory vacation entitlement?**"
+          "",
+          "****"
         ]
       }
     },
     {
       "input": {
-        "key": "lessHolidaysAnswers",
+        "key": "ClimateProtection",
         "type": "choices",
         "options": {
           "choices": [
-            ["lh_choice_1", { "de": "Deutschland", "en": "Germany" }],
-            ["lh_choice_2", { "de": "Griechenland", "en": "Greece"}],
-            ["lh_choice_3", { "de": "Frankreich", "en": "France" }]
+            ["climate_choice_1", { "de": "Deutschland", "en": "" }],
+            ["climate_choice_2", { "de": "Dänemark", "en": ""}],
+            ["climate_choice_3", { "de": "Japan", "en": "" }],
+            ["climate_choice_4", { "de": "Kanada", "en": ""}]
           ]
         }
       }
     },
     {
       "submit": {
-        "key": "lessHolidaysAnswersSubmitted"
+        "key": "ClimateProtectionSubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          "i.lessHolidaysAnswers && !i.lessHolidaysAnswersSubmitted",
-          "!i.lessHolidaysAnswersSubmitted && 'notSubmitted'",
-          "f.setDataset('amountholidays')",
-          "f.panToCountry('FRA') && false",
+          "i.ClimateProtection && !i.ClimateProtectionSubmitted",
+          "!i.ClimateProtectionSubmitted && 'notSubmitted'",
+          "f.setDataset('klimaschutz')",
+          "f.panToCountry('DNK') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "i.lessHolidaysAnswers"
+          "i.ClimateProtection"
         ],
         "answerContext": {},
         "templates": {
@@ -57,28 +58,36 @@
           },
 
 
-          "lh_choice_1": {
+          "climate_choice_1": {
             "de": [
-              "Nein, in Deutschland besteht bei einer Fünftagewoche Anspruch auf mindestens 20 Tage Urlaub im Jahr. In Griechenland sind es immerhin 25 Tage und in Frankreich sogar 30. Im Schnitt bekommen deutsche Arbeitnehmer jedoch ebenfalls 30 Tage Urlaub – also deutlich mehr als das gesetzlich vorgegebene Minimum."
+              "Falsch. Die Deutschen sehen sich zwar selbst gerne als Vorreiter in Sachen Klimaschutz. Die Autoren kritisieren jedoch den hohen CO2­Ausstoß durch Kohlestrom. Deutschland kommt nur auf Rang 19. Platz eins belegt stattdessen Dänemark. Kanada und Japan belegen die hinteren Plätze 53 und 55 von insgesamt 58."
             ],
             "en": [
-              "No, in Germany, a person with a five-day work week has the right to a minimum of 20 days of vacation per year. Greeks get at least 25 days off and the French even more, with 30 days of vacation. Germans likewise get 30 days of vacation on average – considerably more than the statutory minimum."
+              ""
             ]
           },
-          "lh_choice_2": {
+          "climate_choice_2": {
             "de": [
-              "Nein, griechische Arbeitnehmer haben Anspruch auf 25 Tage Urlaub im Jahr. Wer in Frankreich arbeitet, kann hingegen mindestens 30 Tage frei machen. In Deutschland sind zwar nur 20 Tage im Jahr gesetzlich vorgegeben, allerdings bekommen deutsche Arbeitnehmer im Schnitt ebenfalls 30 Tage Urlaub – also deutlich mehr als das gesetzlich vorgegebene Minimum."
+              "Richtig. Die Bemühungen der Dänen sind den Index­Autoren zufolge am größten. Deutschland kommt durch den hohen CO2­Ausstoß aus Kohlestrom nur auf Platz 19. Kanada und Japan belegen die hinteren Plätze 53 und 55 von insgesamt 58."
             ],
             "en": [
-              "No. Greek employees are entitled to 25 days of vacation each year. Those working in France, on the other hand, can take off a minimum of 30 days a year. In Germany, the statutory vacation entitlement is only 20 days, but most German workers get an average of 30 days off – considerably more than the legal requirement."
+              ""
             ]
           },
-          "lh_choice_3": {
+          "climate_choice_3": {
             "de": [
-              "Richtig! Französische Arbeitnehmer haben Anspruch auf 30 Tage Urlaub im Jahr. In Griechenland sind es 25 Tage und in Deutschland sogar nur 20. Im Schnitt bekommen deutsche Arbeitnehmer jedoch ebenfalls 30 Tage Urlaub – also deutlich mehr als das gesetzlich vorgegebene Minimum."
+              "Nein, Kanada und Japan belegen im Index die hinteren Plätze 53 und 55 von insgesamt 58. Platz eins belegt Dänemark. Deutschland kommt durch den hohen CO2­Ausstoß aus Kohlestrom nur auf Platz 19."
             ],
             "en": [
-              "That's right! French workers are entitled to 30 days of vacation a year. In Greece that figure is 25, but in Germany it is lower, at 20. On average, however, German workers also get 30 days of vacation – considerably more than the statutory minimum."
+              ""
+            ]
+          },
+          "climate_choice_4": {
+            "de": [
+              "Nein, Kanada und Japan belegen im Index die hinteren Plätze 53 und 55 von insgesamt 58. Platz eins belegt Dänemark. Deutschland kommt durch den hohen CO2­Ausstoß aus Kohlestrom nur auf Platz 19."
+            ],
+            "en": [
+              ""
             ]
           }
         }
