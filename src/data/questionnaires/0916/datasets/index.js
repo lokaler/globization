@@ -4,7 +4,7 @@ export default [
   {
     "key": "consumption_elect",
     "name": {
-      "de": "",
+      "de": "Stromverbrauch",
       "en": ""
     },
     "description": {
@@ -72,7 +72,7 @@ export default [
       "en": ""
     },
     "description": {
-      "de": "Anteil der Bevölkerung mit Zugang zu Strom (%)",
+      "de": "Anteil der Bevölkerung mit Zugang zu Strom in Prozent",
       "en": ""
     },
     "quelle": "IEA",
@@ -132,7 +132,7 @@ export default [
      {
     "key": "tempdiffs",
     "name": {
-      "de": "Temperaturanstieg in Deutschland",
+      "de": "Temperaturanstieg",
       "en": ""
     },
     "description": {

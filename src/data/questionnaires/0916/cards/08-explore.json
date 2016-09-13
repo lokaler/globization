@@ -21,8 +21,8 @@
           "f.setView('globe')"
         ],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeOvC', 'Interaktiver Globus: Wie nachhaltig verreisen die Deutschen? #ÜberMorgen')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeOvC', 'Interaktiver Globus: Wie nachhaltig verreisen die Deutschen? #ÜberMorgen')",
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeOvC', 'Interaktives Quiz: Sind die Deutschen im Klimaschutz führend? #ÜberMorgen')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeOvC', 'Interaktives Quiz: Sind die Deutschen im Klimaschutz führend? #ÜberMorgen')",
           "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeOEc', 'Interactive Globe: Europeans love to travel, but how sustainable are their trips? #beyondtomorrow')",
           "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeOEc', 'Interactive Globe: Europeans love to travel, but how sustainable are their trips? #beyondtomorrow')"
         },
