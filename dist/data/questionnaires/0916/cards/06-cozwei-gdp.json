@@ -8,9 +8,9 @@
         "de": [
           " # Wachstum um welchen Preis?",
           "",
-          "In Indien und China geht der steigende CO2­Ausstoß einher mit rasantem Wirtschaftswachstum ­ und darauf wollen die Länder kaum verzichten. Doch Wachstum führt nicht überall auf der Welt zur gleichen Menge Treibhausgase.",
+          "In Indien und China geht der steigende CO2­-Ausstoß einher mit rasantem Wirtschaftswachstum ­- und darauf wollen die Länder kaum verzichten. Doch Wachstum führt nicht überall auf der Welt zur gleichen Menge Treibhausgase.",
           "",
-          "**Was glauben Sie: In welchem Land verursacht ein Dollar Wirtschaftswachstum den geringsten CO2­Ausstoß?**"
+          "**Was glauben Sie: In welchem Land verursacht ein Dollar Wirtschaftskraft (BIP) den geringsten CO2­-Ausstoß?**"
         ],
         "en": [
           " # ",
@@ -60,7 +60,7 @@
 
           "co2gdpchoice_1": {
             "de": [
-              "Das stimmt. In Frankreich entstehen 0,1 Kilogramm CO2 pro Dollar Wirtschaftswachstum. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
+              "Das stimmt. In Frankreich entstehen 0,1 Kilogramm CO2 pro Dollar Wirtschaftskraft. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
             ],
             "en": [
               ""
@@ -68,7 +68,7 @@
           },
           "co2gdpchoice_2": {
             "de": [
-              "Leider falsch. Frankreich wäre richtig gewesen, denn dort entstehen nur 0,1 Kilogramm CO2 pro Dollar Wirtschaftswachstum. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
+              "Leider falsch. Frankreich wäre richtig gewesen, denn dort entstehen nur 0,1 Kilogramm CO2 pro Dollar Wirtschaftskraft. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
             ],
             "en": [
               ""
@@ -76,7 +76,7 @@
           },
           "co2gdpchoice_3": {
             "de": [
-              "Leider falsch. Frankreich wäre richtig gewesen, denn dort entstehen nur 0,1 Kilogramm CO2 pro Dollar Wirtschaftswachstum. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
+              "Leider falsch. Frankreich wäre richtig gewesen, denn dort entstehen nur 0,1 Kilogramm CO2 pro Dollar Wirtschaftskraft. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
             ],
             "en": [
               ""
@@ -84,7 +84,7 @@
           },
           "co2gdpchoice_4": {
             "de": [
-              "Leider falsch. Frankreich wäre richtig gewesen, denn dort entstehen nur 0,1 Kilogramm CO2 pro Dollar Wirtschaftswachstum. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
+              "Leider falsch. Frankreich wäre richtig gewesen, denn dort entstehen nur 0,1 Kilogramm CO2 pro Dollar Wirtschaftskraft. Es folgen Norwegen und Deutschland mit 0,2 Kilogramm. In Südafrika entsteht mit 0,7 Kilogramm sogar mehr CO2 als in China."
             ],
             "en": [
               ""
