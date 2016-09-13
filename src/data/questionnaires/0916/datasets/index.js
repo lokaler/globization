@@ -68,11 +68,11 @@ export default [
    {
     "key": "access_elect",
     "name": {
-      "de": "Zugang zu Strom",
+      "de": "Kein Zugang zu Strom",
       "en": ""
     },
     "description": {
-      "de": "Anteil der Bevölkerung mit Zugang zu Strom in Prozent",
+      "de": "Anteil der Bevölkerung mit keinem Zugang zu Strom (%))",
       "en": ""
     },
     "quelle": "IEA",
