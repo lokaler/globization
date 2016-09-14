@@ -6,7 +6,7 @@
     {
       "text": {
         "de": [
-          " # Kohle und Gas oder Wind und Wasser",
+          " # Kohle und Gas oder Wind und Wasser?",
           "",
           "Strom soll laut Uno nicht nur mehr Menschen zur Verfügung stehen -­ er soll auch nachhaltiger erzeugt werden. Im Jahr 2014 kamen in Deutschland 26 Prozent des Stroms aus Erneuerbaren Energiequellen.",
           "",
@@ -49,7 +49,7 @@
           "!f.isMobile() && f.setView('globe')",
           "(i.sliderErneuerbare <= 17 && f.panToCountry(f.getISO('renewable_elect', i.sliderErneuerbare))) && 'Antwort_Erneuerbare1'",
           "(i.sliderErneuerbare >= 18 && i.sliderErneuerbare >= 26 && f.panToCountry(f.getISO('renewable_elect', i.sliderErneuerbare))) && 'Antwort_Erneuerbare2'",
-          "(i.sliderStrompreis >= 27) && f.panToCountry('DEU') && 'Antwort_Erneuerbare3'"
+          "(i.sliderErneuerbare >= 27) && f.panToCountry('DEU') && 'Antwort_Erneuerbare3'"
         ],
         "answerContext": {
           "AmountStrompreisCountry" : "f.getCountryName('renewable_elect', i.sliderErneuerbare, { case: 'default' })"
