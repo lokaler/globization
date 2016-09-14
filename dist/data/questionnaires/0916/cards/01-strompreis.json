@@ -61,7 +61,7 @@
           },
           "Antwort_Strompreis1": {
             "de": [
-              "Nein, mehr! Der Haushalt muss dafür rund 82 Euro bezahlen. Strom ist in Deutschland im internationalen Vergleich tatsächlich teuer. Der von Ihnen getippte Wert entspricht etwa dem Strompreis in [Slider_LAND => Achtung, kein Lokativ!]. Am teuersten ist Strom in Dänemark, am günstigsten in Serbien"
+              "Nein, mehr! Der Haushalt muss dafür rund 82 Euro bezahlen. Strom ist in Deutschland im internationalen Vergleich tatsächlich teuer. Der von Ihnen getippte Wert entspricht etwa dem Strompreis in **{{ AmountStrompreisCountry }}**. Am teuersten ist Strom in Dänemark, am günstigsten in Serbien"
             ],
             "en": [
               ""

@@ -72,7 +72,7 @@ export default [
       "en": ""
     },
     "description": {
-      "de": "Anteil der Bevölkerung mit keinem Zugang zu Strom (%))",
+      "de": "Anteil der Bevölkerung ohne Zugang zu Strom (%)",
       "en": ""
     },
     "quelle": "IEA",

@@ -6,7 +6,7 @@
     {
       "text": {
         "de": [
-          " # Kohle und Gas oder Wind und Wasser",
+          " # Kohle und Gas oder Wind und Wasser?",
           "",
           "Strom soll laut Uno nicht nur mehr Menschen zur Verfügung stehen -­ er soll auch nachhaltiger erzeugt werden. Im Jahr 2014 kamen in Deutschland 26 Prozent des Stroms aus Erneuerbaren Energiequellen.",
           "",
@@ -49,10 +49,10 @@
           "!f.isMobile() && f.setView('globe')",
           "(i.sliderErneuerbare <= 17 && f.panToCountry(f.getISO('renewable_elect', i.sliderErneuerbare))) && 'Antwort_Erneuerbare1'",
           "(i.sliderErneuerbare >= 18 && i.sliderErneuerbare >= 26 && f.panToCountry(f.getISO('renewable_elect', i.sliderErneuerbare))) && 'Antwort_Erneuerbare2'",
-          "(i.sliderStrompreis >= 27) && f.panToCountry('DEU') && 'Antwort_Erneuerbare3'"
+          "(i.sliderErneuerbare >= 27) && f.panToCountry('DEU') && 'Antwort_Erneuerbare3'"
         ],
         "answerContext": {
-          "AmountStrompreisCountry" : "f.getCountryName('renewable_elect', i.sliderErneuerbare, { case: 'default' })"
+          "AmountErneuerbareCountry" : "f.getCountryName('renewable_elect', i.sliderErneuerbare, { case: 'default' })"
         },
         "templates": {
           "notSubmitted": {
@@ -62,7 +62,7 @@
           },
           "Antwort_Erneuerbare1": {
             "de": [
-              "Da tun Sie den Chinesen Unrecht. Der Anteil lag stattdessen bei 22 Prozent ­- fast genauso hoch wie in Deutschland. In beiden Ländern ist der Anteil in den vergangenen Jahren auch etwa gleich schnell gestiegen. Der von Ihnen getippte Wert kommt  [Slider_LAND => Achtung, kein Lokativ!] am nächsten."
+              "Da tun Sie den Chinesen Unrecht. Der Anteil lag stattdessen bei 22 Prozent ­- fast genauso hoch wie in Deutschland. In beiden Ländern ist der Anteil in den vergangenen Jahren auch etwa gleich schnell gestiegen. Der von Ihnen getippte Wert kommt **{{ AmountErneuerbareCountry }}** am nächsten."
             ],
             "en": [
               ""
@@ -71,7 +71,7 @@
           },
           "Antwort_Erneuerbare2": {
             "de": [
-              "Gut geschätzt. Der Anteil in China war mit 22 Prozent fast genauso hoch wie in Deutschland. In beiden Ländern ist der Anteil in den vergangenen Jahren auch etwa gleich schnell gestiegen. Der von Ihnen getippte Wert kommt  [Slider_LAND => Achtung, kein Lokativ!] am nächsten."
+              "Gut geschätzt. Der Anteil in China war mit 22 Prozent fast genauso hoch wie in Deutschland. In beiden Ländern ist der Anteil in den vergangenen Jahren auch etwa gleich schnell gestiegen. Der von Ihnen getippte Wert kommt **{{ AmountErneuerbareCountry }}** am nächsten."
             ],
             "en": [
               ""
@@ -80,7 +80,7 @@
           },
           "Antwort_Erneuerbare3": {
             "de": [
-              "Die Chinesen sind zwar umweltfreundlicher als man denken könnte, aber so hoch ist der Anteil auch wieder nicht gewesen. Trotzdem: Mit 22 Prozent war er fast genauso hoch wie in Deutschland. In beiden Ländern ist der Anteil in den vergangenen Jahren auch etwa gleich schnell gestiegen. Der von Ihnen getippte Wert kommt  [Slider_LAND => Achtung, kein Lokativ!] am nächsten."
+              "Die Chinesen sind zwar umweltfreundlicher als man denken könnte, aber so hoch ist der Anteil auch wieder nicht gewesen. Trotzdem: Mit 22 Prozent war er fast genauso hoch wie in Deutschland. In beiden Ländern ist der Anteil in den vergangenen Jahren auch etwa gleich schnell gestiegen. Der von Ihnen getippte Wert kommt **{{ AmountErneuerbareCountry }}** am nächsten."
             ],
             "en": [
               ""

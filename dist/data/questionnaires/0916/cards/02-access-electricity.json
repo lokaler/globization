@@ -10,7 +10,7 @@
           "",
           "Strom kommt aus der Steckdose ­- zumindest in Deutschland. Weltweit haben jedoch 1,2 Milliarden Menschen keinen Zugang zu Elektrizität. Bis 2030 soll diese Zahl auf null sinken. So steht es in den Uno­-Nachhaltigkeitszielen.",
           "",
-          "**Was glauben Sie: In welchem der folgenden Länder ist der Anteil der Bevölkerung mit Zugang zu Strom am kleinsten?**"
+          "**Was glauben Sie: In welchem der folgenden Länder ist der Anteil der Bevölkerung ohne Zugang zu Strom am größten?**"
         ],
         "en": [
           " # ",
@@ -60,7 +60,7 @@
 
           "accesschoice_1": {
             "de": [
-              "Nein, immerhin jeder Dritte Sudanese hat Zugang zu Strom. In Madagaskar sind es hingegen nur 15 Prozent der Bevölkerung. Lesen Sie hier die SPIEGEL­ONLINE­Multimediareportage (http://www.spiegel.de/wirtschaft/a­1108279.html) über eine madagassische Großmutter, die ihrem Dorf im Dschungel Solarzellen brachte ­ und einen Haufen Probleme."
+              "Nein, zwar haben zwei von drei Sudanesen keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent der Bevölkerung. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf im Dschungel Solarzellen brachte ­ und einen Haufen Probleme."
             ],
             "en": [
               ""
@@ -68,7 +68,7 @@
           },
           "accesshoice_2": {
             "de": [
-              "Nein, immerhin jeder Zweite Jemenite hat Zugang zu Strom. In Madagaskar sind es hingegen nur 15 Prozent der Bevölkerung. Lesen Sie hier die SPIEGEL­ONLINE­Multimediareportage (http://www.spiegel.de/wirtschaft/a­1108279.html) über eine madagassische Großmutter, die ihrem Dorf im Dschungel Solarzellen brachte ­ und einen Haufen Probleme."
+              "Nein, zwar hat jeder zweite Jemenite keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent der Bevölkerung. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf im Dschungel Solarzellen brachte ­ und einen Haufen Probleme."
             ],
             "en": [
               ""
@@ -76,7 +76,7 @@
           },
           "accesschoice_3": {
             "de": [
-              "Richtig. Gerade einmal 15 Prozent der Bevölkerung in Madagaskar haben Zugang zu Strom. Lesen Sie hier die SPIEGEL­ONLINE­ Multimediareportage (http://www.spiegel.de/wirtschaft/a­1108279.html) über eine madagassische Großmutter, die ihrem Dorf im Dschungel Solarzellen brachte ­ und einen Haufen Probleme."
+              "Richtig. 85 Prozent der Bevölkerung in Madagaskar haben keinen Zugang zu Strom. Lesen Sie hier die SPIEGEL­ONLINE­ Multimediareportage (http://www.spiegel.de/wirtschaft/a­1108279.html) über eine madagassische Großmutter, die ihrem Dorf im Dschungel Solarzellen brachte ­ und einen Haufen Probleme."
             ],
             "en": [
               ""
@@ -84,7 +84,7 @@
           },
           "accesschoice_4": {
             "de": [
-              "Nein, immerhin 60 Prozent der Bevölkerung in Bangladesch haben Zugang zu Strom. In Madagaskar sind es hingegen nur 15 Prozent der Bevölkerung. Lesen Sie hier die SPIEGEL­ONLINE­Multimediareportage (http://www.spiegel.de/wirtschaft/a­1108279.html) über eine madagassische Großmutter, die ihrem Dorf im Dschungel Solarzellen brachte ­ und einen Haufen Probleme."
+              "Nein, zwar haben 40 Prozent der Bevölkerung in Bangladesch keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf im Dschungel Solarzellen brachte ­ und einen Haufen Probleme."
             ],
             "en": [
               ""
