@@ -48,8 +48,8 @@
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "(i.sliderErneuerbare <= 17 && f.panToCountry(f.getISO('renewable_elect', i.sliderErneuerbare))) && 'Antwort_Erneuerbare1'",
-          "(i.sliderErneuerbare >= 18 && i.sliderErneuerbare >= 26 && f.panToCountry(f.getISO('renewable_elect', i.sliderErneuerbare))) && 'Antwort_Erneuerbare2'",
-          "(i.sliderErneuerbare >= 27) && f.panToCountry('DEU') && 'Antwort_Erneuerbare3'"
+          "(i.sliderErneuerbare >= 18 && i.sliderErneuerbare <= 26 && f.panToCountry('CHN')) && 'Antwort_Erneuerbare2'",
+          "(i.sliderErneuerbare >= 27 && f.panToCountry(f.getISO('renewable_elect', i.sliderErneuerbare))) && 'Antwort_Erneuerbare3'"
         ],
         "answerContext": {
           "AmountErneuerbareCountry" : "f.getCountryName('renewable_elect', i.sliderErneuerbare, { case: 'default' })"

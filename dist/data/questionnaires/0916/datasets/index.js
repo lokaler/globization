@@ -196,7 +196,7 @@ export default [
        {
     "key": "cozwei_gdp",
     "name": {
-      "de": "CO2 pro $ GDP",
+      "de": "CO2-Ausstoß pro $ BIP",
       "en": ""
     },
     "description": {
