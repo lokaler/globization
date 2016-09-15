@@ -1,0 +1,28 @@
+{
+  "key": "intro",
+  "title": "Intro",
+  "dataset": "consumption_elect",
+  "view": "globe",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# ÜberMorgen-Explorer",
+          "",
+
+          "Energie treibt das moderne Leben an -­ und ihre Erzeugung verändert das Klima. In welchem Land ist Strom am teuersten? Wie hat sich die Temperatur auf der Erde verändert? Und welches Land tut am meisten für den Klimaschutz? Erkunden Sie die Welt der Energie. Klicken Sie auf \"Los geht's\"!",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
+        ],
+        "en": [
+          "# BeyondTomorrow Explorer",
+          "",
+
+          "Click on Let’s Get Started.",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
+        ]
+      }
+    }
+  ]
+}

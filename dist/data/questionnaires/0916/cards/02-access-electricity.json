@@ -1,0 +1,97 @@
+{
+  "key": "access_electricity",
+  "title": "2. Karte - Zugang zu Strom",
+  "dataset": "strompreis",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Strom: (k)eine Selbstverständlichkeit",
+          "",
+          "Strom kommt aus der Steckdose ­- zumindest in Deutschland. Weltweit haben jedoch 1,2 Milliarden Menschen keinen Zugang zu Elektrizität. Bis 2030 soll diese Zahl auf null sinken. So steht es in den Uno­-Nachhaltigkeitszielen.",
+          "",
+          "**Was glauben Sie: In welchem der folgenden Länder ist der Anteil der Bevölkerung ohne Zugang zu Strom am größten?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "accessElectricity",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["accesschoice_1", { "de": "Sudan", "en": "" }],
+            ["accesschoice_2", { "de": "Jemen", "en": ""}],
+            ["accesschoice_3", { "de": "Madagaskar", "en": "" }],
+            ["accesschoice_4", { "de": "Bangladesch", "en": ""}]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "accessElectricitySubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.accessElectricity && !i.accessElectricitySubmitted",
+          "!i.accessElectricitySubmitted && 'notSubmitted'",
+          "f.setDataset('access_elect')",
+          "f.panToCountry('MDG') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.accessElectricity"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "accesschoice_1": {
+            "de": [
+              "Nein, zwar haben zwei von drei Sudanesen keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent der Bevölkerung. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf Solarzellen brachte ­ und einen Haufen Probleme."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "accesschoice_2": {
+            "de": [
+              "Nein, zwar hat jeder zweite Jemenite keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent der Bevölkerung. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf Solarzellen brachte ­ und einen Haufen Probleme."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "accesschoice_3": {
+            "de": [
+              "Richtig. 85 Prozent der Bevölkerung in Madagaskar haben keinen Zugang zu Strom. Lesen Sie hier die [SPIEGEL­ONLINE­ Multimediareportage](http://www.spiegel.de/wirtschaft/a­1108279.html) über eine madagassische Großmutter, die ihrem Dorf Solarzellen brachte ­ und einen Haufen Probleme."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "accesschoice_4": {
+            "de": [
+              "Nein, zwar haben 40 Prozent der Bevölkerung in Bangladesch keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf im Dschungel Solarzellen brachte ­ und einen Haufen Probleme."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

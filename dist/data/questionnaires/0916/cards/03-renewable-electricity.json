@@ -1,0 +1,93 @@
+{
+  "key": "renewable",
+  "title": "3. Karte - Strompreise",
+  "dataset": "access_elect",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Kohle und Gas oder Wind und Wasser?",
+          "",
+          "Strom soll laut Uno nicht nur mehr Menschen zur Verfügung stehen -­ er soll auch nachhaltiger erzeugt werden. Im Jahr 2014 kamen in Deutschland 26 Prozent des Stroms aus Erneuerbaren Energiequellen.",
+          "",
+          "**Tippen Sie: Wie groß war der Anteil der Erneuerbaren in China?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderErneuerbare",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountErneuerbareSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderErneuerbare && !i.AmountErneuerbareSubmitted",
+          "!i.AmountErneuerbareSubmitted && 'notSubmitted'",
+          "f.setDataset('renewable_elect')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderErneuerbare <= 17 && f.panToCountry(f.getISO('renewable_elect', i.sliderErneuerbare))) && 'Antwort_Erneuerbare1'",
+          "(i.sliderErneuerbare >= 18 && i.sliderErneuerbare <= 26 && f.panToCountry('CHN')) && 'Antwort_Erneuerbare2'",
+          "(i.sliderErneuerbare >= 27 && f.panToCountry(f.getISO('renewable_elect', i.sliderErneuerbare))) && 'Antwort_Erneuerbare3'"
+        ],
+        "answerContext": {
+          "AmountErneuerbareCountry" : "f.getCountryName('renewable_elect', i.sliderErneuerbare, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_Erneuerbare1": {
+            "de": [
+              "Da tun Sie den Chinesen Unrecht. Der Anteil lag stattdessen bei 22 Prozent ­- fast genauso hoch wie in Deutschland. In beiden Ländern ist der Anteil in den vergangenen Jahren auch etwa gleich schnell gestiegen. Der von Ihnen getippte Wert kommt **{{ AmountErneuerbareCountry }}** am nächsten."
+            ],
+            "en": [
+              ""
+
+            ]
+          },
+          "Antwort_Erneuerbare2": {
+            "de": [
+              "Gut geschätzt. Der Anteil in China war mit 22 Prozent fast genauso hoch wie in Deutschland. In beiden Ländern ist der Anteil in den vergangenen Jahren auch etwa gleich schnell gestiegen. Der von Ihnen getippte Wert kommt **{{ AmountErneuerbareCountry }}** am nächsten."
+            ],
+            "en": [
+              ""
+
+            ]
+          },
+          "Antwort_Erneuerbare3": {
+            "de": [
+              "Die Chinesen sind zwar umweltfreundlicher als man denken könnte, aber so hoch ist der Anteil auch wieder nicht gewesen. Trotzdem: Mit 22 Prozent war er fast genauso hoch wie in Deutschland. In beiden Ländern ist der Anteil in den vergangenen Jahren auch etwa gleich schnell gestiegen. Der von Ihnen getippte Wert kommt **{{ AmountErneuerbareCountry }}** am nächsten."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
