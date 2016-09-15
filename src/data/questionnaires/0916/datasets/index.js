@@ -241,7 +241,7 @@ export default [
     "fixed": 1,
     "domain": [
       0,
-      100
+      99
     ],
     "skala": [
       0,
