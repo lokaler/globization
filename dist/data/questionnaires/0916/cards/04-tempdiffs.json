@@ -49,7 +49,7 @@
           "!f.isMobile() && f.setView('globe')",
           "(i.sliderTempAnstieg <= 0.9 && f.panToCountry(f.getISO('tempdiffs', i.sliderTempAnstieg))) && 'Antwort_TempAnstieg1'",
           "(i.sliderTempAnstieg >= 1 && i.sliderTempAnstieg <= 1.2 && f.panToCountry('DEU')) && 'Antwort_TempAnstieg2'",
-          "(i.sliderTempAnstieg >= 1.3) && f.panToCountry(f.getISO('tempdiffs', i.sliderTempAnstieg))) && 'Antwort_TempAnstieg3'"
+          "(i.sliderTempAnstieg >= 1.3 && f.panToCountry(f.getISO('tempdiffs', i.sliderTempAnstieg))) && 'Antwort_TempAnstieg3'"
         ],
         "answerContext": {
           "AmountTempAnstiegCountry" : "f.getCountryName('tempdiffs', i.sliderTempAnstieg, { case: 'default' })"
