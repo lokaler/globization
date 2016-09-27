@@ -27,10 +27,10 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["climate_choice_1", { "de": "Deutschland", "en": "" }],
-            ["climate_choice_2", { "de": "Dänemark", "en": ""}],
-            ["climate_choice_3", { "de": "Japan", "en": "" }],
-            ["climate_choice_4", { "de": "Kanada", "en": ""}]
+            ["climate_choice_1", { "de": "Deutschland", "en": "Germany" }],
+            ["climate_choice_2", { "de": "Dänemark", "en": "Denmark"}],
+            ["climate_choice_3", { "de": "Japan", "en": "Japan" }],
+            ["climate_choice_4", { "de": "Kanada", "en": "Canada"}]
           ]
         }
       }

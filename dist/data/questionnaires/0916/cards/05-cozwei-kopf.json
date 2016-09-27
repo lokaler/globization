@@ -27,10 +27,10 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["co2headchoice_1", { "de": "Katar", "en": "" }],
-            ["co2headchoice_2", { "de": "USA", "en": ""}],
-            ["co2headchoice_3", { "de": "China", "en": "" }],
-            ["co2headchoice_4", { "de": "Russland", "en": ""}]
+            ["co2headchoice_1", { "de": "Katar", "en": "Qatar" }],
+            ["co2headchoice_2", { "de": "USA", "en": "USA"}],
+            ["co2headchoice_3", { "de": "China", "en": "China" }],
+            ["co2headchoice_4", { "de": "Russland", "en": "Russia"}]
           ]
         }
       }

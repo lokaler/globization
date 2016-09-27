@@ -5,11 +5,11 @@ export default [
     "key": "consumption_elect",
     "name": {
       "de": "Stromverbrauch",
-      "en": ""
+      "en": "Electricity Consumption"
     },
     "description": {
       "de": "Stromverbrauch pro Kopf in Kilowattstunden (kWh)",
-      "en": ""
+      "en": "Per capita electricity consumption in kilowatt hours (kWh)"
     },
     "quelle": "IEA",
     "link": "http://data.worldbank.org/indicator/EG.USE.ELEC.KH.PC",
@@ -37,7 +37,7 @@ export default [
     "key": "strompreis",
     "name": {
       "de": "Ausgaben für Strom",
-      "en": ""
+      "en": "Expenditures on electricity"
     },
     "description": {
       "de": "Ausgaben für Strom eines 2-Personen-Haushalts in Euro",
@@ -69,11 +69,11 @@ export default [
     "key": "access_elect",
     "name": {
       "de": "Kein Zugang zu Strom",
-      "en": ""
+      "en": "No access to electricity"
     },
     "description": {
       "de": "Anteil der Bevölkerung ohne Zugang zu Strom (%)",
-      "en": ""
+      "en": "Proportion of people without access to electricity (%)"
     },
     "quelle": "IEA",
     "link": "http://data.worldbank.org/indicator/EG.ELC.ACCS.ZS",
@@ -101,11 +101,11 @@ export default [
     "key": "renewable_elect",
     "name": {
       "de": "Anteil erneuerbare Energien",
-      "en": ""
+      "en": "Share of renewable energy"
     },
     "description": {
       "de": "Anteil erneuerbarer Energien an der Stromerzeugung in Prozent",
-      "en": ""
+      "en": "Share of renewable energy in electricity production (%)"
     },
     "quelle": "IEA",
     "link": "https://www.iea.org/statistics/relateddatabases/worldenergystatisticsandbalances/",
@@ -137,7 +137,7 @@ export default [
     },
     "description": {
       "de": "Anstieg der mittleren Temperatur seit 1900",
-      "en": ""
+      "en": "Increase in mean temperature since 1900"
     },
     "quelle": "Berkeley Earth",
     "link": "http://berkeleyearth.lbl.gov/country-list/",
@@ -165,11 +165,11 @@ export default [
     "key": "cozwei_kopf",
     "name": {
       "de": "CO2-Ausstoß pro Kopf",
-      "en": ""
+      "en": "CO2 emissions per capita"
     },
     "description": {
       "de": "CO2-Ausstoß pro Kopf in Tonnen",
-      "en": ""
+      "en": "CO2 emissions per capita in tonnes"
     },
     "quelle": "CDIAC",
     "link": "http://cdiac.ornl.gov/trends/emis/meth_reg.html",
@@ -197,11 +197,11 @@ export default [
     "key": "cozwei_gdp",
     "name": {
       "de": "CO2-Ausstoß pro $ BIP",
-      "en": ""
+      "en": "CO2 emissions per $ GDP"
     },
     "description": {
       "de": "CO2-Ausstoß in Kilogramm pro Dollar BIP",
-      "en": ""
+      "en": "CO2 emissions in kilograms per dollar GDP"
     },
     "quelle": "CDIAC",
     "link": "http://cdiac.ornl.gov/trends/emis/meth_reg.html",
@@ -229,11 +229,11 @@ export default [
     "key": "klimaschutz",
     "name": {
       "de": "Klimaschutzindex",
-      "en": ""
+      "en": "Climate protection index"
     },
     "description": {
       "de": "Klimaschutzindex zwischen 0 und 100 Punkten",
-      "en": ""
+      "en": "Climate protection index between 0 and 100 points"
     },
     "quelle": "Germanwatch",
     "link": "https://germanwatch.org/de/download/13624.pdf",
