@@ -5,7 +5,7 @@ export default [
     "key": "consumption_elect",
     "name": {
       "de": "Stromverbrauch",
-      "en": "Electricity Consumption"
+      "en": "Electricity consumption"
     },
     "description": {
       "de": "Stromverbrauch pro Kopf in Kilowattstunden (kWh)",
@@ -133,7 +133,7 @@ export default [
     "key": "tempdiffs",
     "name": {
       "de": "Temperaturanstieg",
-      "en": ""
+      "en": "Temperature rise"
     },
     "description": {
       "de": "Anstieg der mittleren Temperatur seit 1900",
