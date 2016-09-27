@@ -27,10 +27,10 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["co2gdpchoice_1", { "de": "Südafrika", "en": "" }],
-            ["co2gdpchoice_2", { "de": "Deutschland", "en": ""}],
-            ["co2gdpchoice_3", { "de": "Frankreich", "en": "" }],
-            ["co2gdpchoice_4", { "de": "Norwegen", "en": ""}]
+            ["co2gdpchoice_1", { "de": "Südafrika", "en": "South Africa" }],
+            ["co2gdpchoice_2", { "de": "Deutschland", "en": "Germany"}],
+            ["co2gdpchoice_3", { "de": "Frankreich", "en": "France" }],
+            ["co2gdpchoice_4", { "de": "Norwegen", "en": "Norway"}]
           ]
         }
       }

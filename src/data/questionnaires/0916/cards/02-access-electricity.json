@@ -27,10 +27,10 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["accesschoice_1", { "de": "Sudan", "en": "" }],
-            ["accesschoice_2", { "de": "Jemen", "en": ""}],
-            ["accesschoice_3", { "de": "Madagaskar", "en": "" }],
-            ["accesschoice_4", { "de": "Bangladesch", "en": ""}]
+            ["accesschoice_1", { "de": "Sudan", "en": "Sudan" }],
+            ["accesschoice_2", { "de": "Jemen", "en": "Yemen"}],
+            ["accesschoice_3", { "de": "Madagaskar", "en": "Madagascar" }],
+            ["accesschoice_4", { "de": "Bangladesch", "en": "Bangladesh"}]
           ]
         }
       }
