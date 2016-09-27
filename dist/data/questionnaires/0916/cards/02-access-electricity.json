@@ -8,16 +8,16 @@
         "de": [
           " # Strom: (k)eine Selbstverständlichkeit",
           "",
-          "Strom kommt aus der Steckdose ­- zumindest in Deutschland. Weltweit haben jedoch 1,2 Milliarden Menschen keinen Zugang zu Elektrizität. Bis 2030 soll diese Zahl auf null sinken. So steht es in den Uno­-Nachhaltigkeitszielen.",
+          "Strom kommt aus der Steckdose - zumindest in Deutschland. Weltweit haben jedoch 1,2 Milliarden Menschen keinen Zugang zu Elektrizität. Bis 2030 soll diese Zahl auf null sinken. So steht es in den Uno­-Nachhaltigkeitszielen.",
           "",
           "**Was glauben Sie: In welchem der folgenden Länder ist der Anteil der Bevölkerung ohne Zugang zu Strom am größten?**"
         ],
         "en": [
-          " # ",
+          " # Electricity - (not) a matter of course",
           "",
+          "Electricity comes out of an outlet - in the developed world, at least. Globally, though, 1.2 billion people have no access to electricity. If United Nations sustainability targets are reached, this number will plunge to zero by 2030.",
           "",
-          "",
-          "****"
+          "**What do you think: In which of the following countries is the share of the population with access to electricity the smallest?**"
         ]
       }
     },
@@ -27,10 +27,10 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["accesschoice_1", { "de": "Sudan", "en": "" }],
-            ["accesschoice_2", { "de": "Jemen", "en": ""}],
-            ["accesschoice_3", { "de": "Madagaskar", "en": "" }],
-            ["accesschoice_4", { "de": "Bangladesch", "en": ""}]
+            ["accesschoice_1", { "de": "Sudan", "en": "Sudan" }],
+            ["accesschoice_2", { "de": "Jemen", "en": "Yemen"}],
+            ["accesschoice_3", { "de": "Madagaskar", "en": "Madagascar" }],
+            ["accesschoice_4", { "de": "Bangladesch", "en": "Bangladesh"}]
           ]
         }
       }
@@ -63,7 +63,7 @@
               "Nein, zwar haben zwei von drei Sudanesen keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent der Bevölkerung. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf Solarzellen brachte ­ und einen Haufen Probleme."
             ],
             "en": [
-              ""
+              "No, every third Sudan resident has access to electricity. In Madagascar, only 15 percent of the population has access to electricity. Here you can read a [SPIEGEL ONLINE multimedia report](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html)  about a Malagasy grandmother who brought solar panels to her village - along with a host of problems."
             ]
           },
           "accesschoice_2": {
@@ -71,7 +71,7 @@
               "Nein, zwar hat jeder zweite Jemenite keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent der Bevölkerung. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf Solarzellen brachte ­ und einen Haufen Probleme."
             ],
             "en": [
-              ""
+              "No, every second Yemenite has access to electricity. In Madagascar, however, this is only true of 15 percent of the population. Here you can read a [SPIEGEL ONLINE multimedia report](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) about a Malagasy grandmother who brought solar panels to her village - along with a host of problems."
             ]
           },
           "accesschoice_3": {
@@ -79,7 +79,7 @@
               "Richtig. 85 Prozent der Bevölkerung in Madagaskar haben keinen Zugang zu Strom. Lesen Sie hier die [SPIEGEL­ONLINE­ Multimediareportage](http://www.spiegel.de/wirtschaft/a­1108279.html) über eine madagassische Großmutter, die ihrem Dorf Solarzellen brachte ­ und einen Haufen Probleme."
             ],
             "en": [
-              ""
+              "Correct! Only about 15 percent of Madagascar’s population has access to electricity. Here you can read a [SPIEGEL ONLINE multimedia report](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) about a Malagasy grandmother who brought solar panels to her village - along with a host of problems."
             ]
           },
           "accesschoice_4": {
@@ -87,7 +87,7 @@
               "Nein, zwar haben 40 Prozent der Bevölkerung in Bangladesch keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf Solarzellen brachte ­ und einen Haufen Probleme."
             ],
             "en": [
-              ""
+              "No, 60 percent of Bangladesh’s inhabitants have access to electricity. In Madagascar, however, this is only true of 15 percent of the population. Here you can read a [SPIEGEL ONLINE multimedia report](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) about a Malagasy grandmother who brought solar panels to her village - along with a host of problems."
             ]
           }
         }

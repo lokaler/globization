@@ -13,11 +13,11 @@
           "**Was glauben Sie: Welches Land produziert pro Kopf das meiste Kohlendioxid?**"
         ],
         "en": [
-          " # ",
+          " # Who emits the most CO2?",
           "",
+          "China, the US and India produce the most carbon dioxide internationally, but hundreds of millions of people live in these countries. If you compare per capita emissions, India only comes in at 147th place.",
           "",
-          "",
-          "****"
+          "**Which country emits the most carbon dioxide per capita?**"
         ]
       }
     },
@@ -27,10 +27,10 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["co2headchoice_1", { "de": "Katar", "en": "" }],
-            ["co2headchoice_2", { "de": "USA", "en": ""}],
-            ["co2headchoice_3", { "de": "China", "en": "" }],
-            ["co2headchoice_4", { "de": "Russland", "en": ""}]
+            ["co2headchoice_1", { "de": "Katar", "en": "Qatar" }],
+            ["co2headchoice_2", { "de": "USA", "en": "USA"}],
+            ["co2headchoice_3", { "de": "China", "en": "China" }],
+            ["co2headchoice_4", { "de": "Russland", "en": "Russia"}]
           ]
         }
       }
@@ -63,7 +63,7 @@
               "Richtig. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
             ],
             "en": [
-              ""
+              "Correct! With emissions of 40 tons of CO2 per capita, Qatar is at the top of the list. The US is in 13th place, with per capita emissions of 16 tons while China is in 50th place with eight tons. With its 12 tons of per capita CO2 emissions, Russia is in the middle of the pack."
             ]
           },
           "co2headchoice_2": {
@@ -71,7 +71,7 @@
               "Leider falsch. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
             ],
             "en": [
-              ""
+              "Unfortunately wrong. With emissions of 40 tons of CO2 per capita, Qatar is at the top of the list. The US is in 13th place, with per capita emissions of 16 tons while China is in 50th place with eight tons. With its 12 tons of per capita CO2 emissions, Russia is in the middle of the pack."
             ]
           },
           "co2headchoice_3": {
@@ -79,7 +79,7 @@
               "Leider falsch. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
             ],
             "en": [
-              ""
+              "Unfortunately wrong. With emissions of 40 tons of CO2 per capita, Qatar is at the top of the list. The US is in 13th place, with per capita emissions of 16 tons while China is in 50th place with eight tons. With its 12 tons of per capita CO2 emissions, Russia is in the middle of the pack."
             ]
           },
           "co2headchoice_4": {
@@ -87,7 +87,7 @@
               "Leider falsch. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
             ],
             "en": [
-              ""
+              "Unfortunately wrong. With emissions of 40 tons of CO2 per capita, Qatar is at the top of the list. The US is in 13th place, with per capita emissions of 16 tons while China is in 50th place with eight tons. With its 12 tons of per capita CO2 emissions, Russia is in the middle of the pack."
             ]
           }
         }

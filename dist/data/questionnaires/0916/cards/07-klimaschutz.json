@@ -13,11 +13,11 @@
           "**Was glauben Sie: Welches der folgenden Länder tut am meisten für den Klimaschutz?**"
         ],
         "en": [
-          " # ",
+          " # Who is protecting the climate?",
           "",
+          "It is difficult to capture efforts to save the climate in a single number. The think tank Germanwatch has created an index that incorporates factors like CO2 emissions, energy efficiency and environmental policy.",
           "",
-          "",
-          "****"
+          "**Which of the following countries is doing the most to protect the climate?**"
         ]
       }
     },
@@ -27,10 +27,10 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["climate_choice_1", { "de": "Deutschland", "en": "" }],
-            ["climate_choice_2", { "de": "Dänemark", "en": ""}],
-            ["climate_choice_3", { "de": "Japan", "en": "" }],
-            ["climate_choice_4", { "de": "Kanada", "en": ""}]
+            ["climate_choice_1", { "de": "Deutschland", "en": "Germany" }],
+            ["climate_choice_2", { "de": "Dänemark", "en": "Denmark"}],
+            ["climate_choice_3", { "de": "Japan", "en": "Japan" }],
+            ["climate_choice_4", { "de": "Kanada", "en": "Canada"}]
           ]
         }
       }
@@ -63,7 +63,7 @@
               "Falsch. Die Deutschen sehen sich zwar selbst gerne als Vorreiter in Sachen Klimaschutz. Die Autoren kritisieren jedoch den hohen CO2­-Ausstoß durch Kohlestrom. Deutschland kommt nur auf Rang 19. Platz eins belegt stattdessen Dänemark. Kanada und Japan belegen die hinteren Plätze 53 und 55 von insgesamt 58."
             ],
             "en": [
-              ""
+              "Wrong. The Germans may like to see themselves as pioneers when it comes to climate protection. But Germanwatch is critical of the country’s high CO2 emissions from its coal-fired power plants and Germany is only ranked 19th. Instead, Denmark is in first place. Canada and Japan come in at the bottom of the ranking, in spots 53 and 55 out of a total of 58."
             ]
           },
           "climate_choice_2": {
@@ -71,7 +71,7 @@
               "Richtig. Die Bemühungen der Dänen sind den Index­-Autoren zufolge am größten. Deutschland kommt durch den hohen CO2­-Ausstoß durch Kohlestrom nur auf Platz 19. Kanada und Japan belegen die hinteren Plätze 53 und 55 von insgesamt 58."
             ],
             "en": [
-              ""
+              "Correct! Denmark makes the greatest effort, according to the index. With high CO2 emissions from its coal-fired power plants, Germany is only ranked 19th. Canada and Japan come in at the bottom of the ranking, in spots 53 and 55 out of a total of 58."
             ]
           },
           "climate_choice_3": {
@@ -79,7 +79,7 @@
               "Nein, Kanada und Japan belegen im Index die hinteren Plätze 53 und 55 von insgesamt 58. Platz eins belegt Dänemark. Deutschland kommt durch den hohen CO2­-Ausstoß aus Kohlestrom nur auf Platz 19."
             ],
             "en": [
-              ""
+              "No, Canada and Japan come in at the bottom of the ranking, in spots 53 and 55 out of a total of 58. Denmark is in first place. With high CO2 emissions from its coal-fired power plants, Germany is only ranked 19th."
             ]
           },
           "climate_choice_4": {
@@ -87,7 +87,7 @@
               "Nein, Kanada und Japan belegen im Index die hinteren Plätze 53 und 55 von insgesamt 58. Platz eins belegt Dänemark. Deutschland kommt durch den hohen CO2­-Ausstoß aus Kohlestrom nur auf Platz 19."
             ],
             "en": [
-              ""
+              "No, Canada and Japan come in at the bottom of the ranking, in spots 53 and 55 out of a total of 58. Denmark is in first place. With high CO2 emissions from its coal-fired power plants, Germany is only ranked 19th."
             ]
           }
         }

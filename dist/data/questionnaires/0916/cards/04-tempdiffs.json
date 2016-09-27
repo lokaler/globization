@@ -13,11 +13,11 @@
           "**Tippen Sie: Wie groß war der Temperaturanstieg in Deutschland?**"
         ],
         "en": [
-          " # ",
+          " # It’s getting warmer",
           "",
+          "Many countries still get a significant amount of their energy from coal, gas and oil. Greenhouse gases enter the atmosphere and climate change is the result. Since 1900, the world’s landmasses have warmed by 1.3 degrees Celsius.",
           "",
-          "",
-          "****"
+          "**How large has the temperature increase been in Germany?**"
         ]
       }
     },{
@@ -56,7 +56,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]          },
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
@@ -65,8 +65,7 @@
               " Nein, die Temperatur ist etwas stärker gestiegen, nämlich um rund 1,1 Grad Celsius. Ihre Schätzung entspricht dem Anstieg in **{{ AmountTempAnstiegCountry }}**.  Mit 2,5 Grad Celsius hat sich Grönland am stärksten erwärmt, Indien und Bolivien haben mit 0,6 Grad Celsius den geringsten Anstieg verzeichnet."
             ],
             "en": [
-              ""
-
+              "No, the temperature has risen a bit more than that. The total rise has been about 1.1 degrees Celsius. Your estimate corresponds to the increase in **{{ AmountTempAnstiegCountry }}**. Greenland has experienced the greatest amount of warming, with a rise of 2.5 degrees Celsius, while India and Bolivia have seen the smallest rise, at 0.6 degrees Celsius."
             ]
           },
           "Antwort_TempAnstieg2": {
@@ -74,8 +73,7 @@
               "Ziemlich gut geschätzt! Die Temperatur ist um rund 1,1 Grad Celsius gestiegen. Mit 2,5 Grad Celsius hat sich Grönland am stärksten erwärmt, Indien und Bolivien haben mit 0,6 Grad Celsius den geringsten Anstieg verzeichnet."
             ],
             "en": [
-              ""
-
+              "Pretty good guess! The temperature in Germany has risen by about 1.1 degrees Celsius. Greenland has experienced the greatest amount of warming, with a rise of 2.5 degrees Celsius, while India and Bolivia have seen the smallest rise, at 0.6 degrees Celsius."
             ]
           },
           "Antwort_TempAnstieg3": {
@@ -83,7 +81,7 @@
               "Nein, die Temperatur ist etwas weniger stark gestiegen, nämlich um rund 1,1 Grad Celsius. Ihre Schätzung entspricht dem Anstieg in **{{ AmountTempAnstiegCountry }}**. Mit 2,5 Grad Celsius hat sich Grönland am stärksten erwärmt, Indien und Bolivien haben mit 0,6 Grad Celsius den geringsten Anstieg verzeichnet."
             ],
             "en": [
-              ""
+              "No, the temperature increase has been less than that. The actual increase is 1.1 degrees Celsius. Your estimate corresponds to the increase in **{{ AmountTempAnstiegCountry }}**. Greenland has experienced the greatest amount of warming, with a rise of 2.5 degrees Celsius, while India and Bolivia have seen the smallest rise, at 0.6 degrees Celsius."
             ]
           }
         }
