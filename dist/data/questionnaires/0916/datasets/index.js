@@ -41,7 +41,7 @@ export default [
     },
     "description": {
       "de": "Ausgaben für Strom eines 2-Personen-Haushalts in Euro",
-      "en": ""
+      "en": "Electricity prices"
     },
     "quelle": "IEA/Eurostat",
     "link": "http://www.iea.org/publications/freepublications/publication/key-world-energy-statistics-2015.html",
@@ -69,11 +69,11 @@ export default [
     "key": "access_elect",
     "name": {
       "de": "Kein Zugang zu Strom",
-      "en": "No access to electricity"
+      "en": "Access to electricity"
     },
     "description": {
       "de": "Anteil der Bevölkerung ohne Zugang zu Strom (%)",
-      "en": "Proportion of people without access to electricity (%)"
+      "en": "Share of people with no access to electricity (%)"
     },
     "quelle": "IEA",
     "link": "http://data.worldbank.org/indicator/EG.ELC.ACCS.ZS",
@@ -105,7 +105,7 @@ export default [
     },
     "description": {
       "de": "Anteil erneuerbarer Energien an der Stromerzeugung in Prozent",
-      "en": "Share of renewable energy in electricity production (%)"
+      "en": "Share of renewables in energy mix (%)"
     },
     "quelle": "IEA",
     "link": "https://www.iea.org/statistics/relateddatabases/worldenergystatisticsandbalances/",
@@ -137,7 +137,7 @@ export default [
     },
     "description": {
       "de": "Anstieg der mittleren Temperatur seit 1900",
-      "en": "Increase in mean temperature since 1900"
+      "en": "Mean temperature increase since 1900"
     },
     "quelle": "Berkeley Earth",
     "link": "http://berkeleyearth.lbl.gov/country-list/",
@@ -169,7 +169,7 @@ export default [
     },
     "description": {
       "de": "CO2-Ausstoß pro Kopf in Tonnen",
-      "en": "CO2 emissions per capita in tonnes"
+      "en": "Tons of CO2 emissions per capita"
     },
     "quelle": "CDIAC",
     "link": "http://cdiac.ornl.gov/trends/emis/meth_reg.html",
@@ -201,7 +201,7 @@ export default [
     },
     "description": {
       "de": "CO2-Ausstoß in Kilogramm pro Dollar BIP",
-      "en": "CO2 emissions in kilograms per dollar GDP"
+      "en": "Kilograms of CO2 emissions per dollar of GDP"
     },
     "quelle": "CDIAC",
     "link": "http://cdiac.ornl.gov/trends/emis/meth_reg.html",
@@ -229,11 +229,11 @@ export default [
     "key": "klimaschutz",
     "name": {
       "de": "Klimaschutzindex",
-      "en": "Climate protection index"
+      "en": "Climate Change Performance Index"
     },
     "description": {
       "de": "Klimaschutzindex zwischen 0 und 100 Punkten",
-      "en": "Climate protection index between 0 and 100 points"
+      "en": "Climate Change Performance Index (0-100)"
     },
     "quelle": "Germanwatch",
     "link": "https://germanwatch.org/de/download/13624.pdf",
