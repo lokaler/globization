@@ -11,6 +11,8 @@
   overflow: hidden;
   display: flex;
   background: #FFF;
+  font-family: "SpiegelSansWeb", Calibri, Candara, Arial, Helvetica, sans-serif;
+  font-size:12px;
 
   .mq-mobile & {
     flex-direction: column;

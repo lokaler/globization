@@ -1,6 +1,41 @@
 /* used only for global styles */
 @import "~normalize.css/normalize.css";
 
+@font-face {
+  font-family: "SpiegelSansWeb";
+  src: url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.eot") format("eot");
+  src: url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.eot?#iefix") format("embedded-opentype"), url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.woff2") format("woff2"), url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.woff") format("woff"), url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.ttf") format("truetype"), url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.svg#SpiegelSansWeb") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "SpiegelSansWeb";
+  src: url("http://www.spiegel.de/font/spiegelsans-bold/spiegelsans-bold-web-V1.0.1.eot") format("eot");
+  src: url("http://www.spiegel.de/font/spiegelsans-bold/spiegelsans-bold-web-V1.0.1.eot?#iefix") format("embedded-opentype"), url("http://www.spiegel.de/font/spiegelsans-bold/spiegelsans-bold-web-V1.0.1.woff2") format("woff2"), url("http://www.spiegel.de/font/spiegelsans-bold/spiegelsans-bold-web-V1.0.1.woff") format("woff"), url("http://www.spiegel.de/font/spiegelsans-bold/spiegelsans-bold-web-V1.0.1.ttf") format("truetype"), url("http://www.spiegel.de/font/spiegelsans-bold/spiegelsans-bold-web-V1.0.1.svg#SpiegelSansWeb") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "SpiegelSansWeb";
+  src: url("http://www.spiegel.de/font/spiegelsans-semibold/spiegelsans-semibold-web-V1.0.1.eot") format("eot");
+  src: url("http://www.spiegel.de/font/spiegelsans-semibold/spiegelsans-semibold-web-V1.0.1.eot?#iefix") format("embedded-opentype"), url("http://www.spiegel.de/font/spiegelsans-semibold/spiegelsans-semibold-web-V1.0.1.woff2") format("woff2"), url("http://www.spiegel.de/font/spiegelsans-semibold/spiegelsans-semibold-web-V1.0.1.woff") format("woff"), url("http://www.spiegel.de/font/spiegelsans-semibold/spiegelsans-semibold-web-V1.0.1.ttf") format("truetype"), url("http://www.spiegel.de/font/spiegelsans-semibold/spiegelsans-semibold-web-V1.0.1.svg#SpiegelSansWeb") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "SpiegelSerifWeb";
+  src: url("http://www.spiegel.de/font/spiegelserif-regular/spiegelserif-regular-web-V1.0.1.eot") format("eot");
+  src: url("http://www.spiegel.de/font/spiegelserif-regular/spiegelserif-regular-web-V1.0.1.eot?#iefix") format("embedded-opentype"), url("http://www.spiegel.de/font/spiegelserif-regular/spiegelserif-regular-web-V1.0.1.woff2") format("woff2"), url("http://www.spiegel.de/font/spiegelserif-regular/spiegelserif-regular-web-V1.0.1.woff") format("woff"), url("http://www.spiegel.de/font/spiegelserif-regular/spiegelserif-regular-web-V1.0.1.ttf") format("truetype"), url("http://www.spiegel.de/font/spiegelserif-regular/spiegelserif-regular-web-V1.0.1.svg#SpiegelSerifWeb") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "MisoBold";
+  src: url("http://www.spiegel.de/font/miso-bold/miso-bold-webfont-V1.0.woff") format("woff"), url("http://www.spiegel.de/font/miso-bold/miso-bold-webfont-V1.0.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+
 * {
   box-sizing: border-box
 }
