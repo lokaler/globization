@@ -12,7 +12,7 @@ export default [
       "en": ""
     },
     "quelle": "FAO",
-    "link": "",
+    "link": "http://data.un.org/Data.aspx?q=forest&d=FAO&f=itemCode:6661&c=2,3,4,5,6,7&s=countryName:asc,elementCode:asc,year:desc&v=1",
     "unit": "",
     "fixed": 1,
     "domain": [
@@ -44,7 +44,7 @@ export default [
       "en": ""
     },
     "quelle": "FAO",
-    "link": "",
+    "link": "http://data.worldbank.org/indicator/AG.LND.TOTL.K2",
     "unit": "€",
     "fixed": 1,
     "domain": [
@@ -76,7 +76,7 @@ export default [
       "en": ""
     },
     "quelle": "FAO",
-    "link": "",
+    "link": "http://data.un.org/Data.aspx?q=forest&d=FAO&f=itemCode:6661&c=2,3,4,5,6,7&s=countryName:asc,elementCode:asc,year:desc&v=1",
     "unit": "%",
     "fixed": 1,
     "domain": [
@@ -108,7 +108,7 @@ export default [
       "en": ""
     },
     "quelle": "IUCN",
-    "link": "",
+    "link": "http://data.un.org/Data.aspx?q=red+list+index&d=SDGs&f=series:ER_RSK_LST&c=2,3,11,13,14&s=ref_area_name:asc,time_period:desc&v=1",
     "unit": "%",
     "fixed": 1,
     "domain": [
@@ -140,7 +140,7 @@ export default [
       "en": ""
     },
     "quelle": "UNEP",
-    "link": "",
+    "link": "http://data.un.org/Data.aspx?q=biodiversity&d=SDGs&f=series:ER_PTD_TERR&c=2,3,11,13,14&s=ref_area_name:asc,time_period:desc&v=1",
     "unit": "",
     "fixed": 1,
     "domain": [
