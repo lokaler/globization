@@ -13,6 +13,8 @@ import cards0716 from './0716/cards/index';
 import datasets0716 from './0716/datasets/index';
 import cards0916 from './0916/cards/index';
 import datasets0916 from './0916/datasets/index';
+import cards1016 from './1016/cards/index';
+import datasets1016 from './1016/datasets/index';
 
 
 let questionnaires = {
@@ -85,8 +87,19 @@ let questionnaires = {
     },
     cards: cards0916,
     datasets: datasets0916
+  },
+  '1016': {
+    title: {
+      de: 'Biodiversität',
+      en: 'biodiversity'
+    },
+    options: {
+      showBackButton: true,
+      lastButtonLabel: 'explore'
+    },
+    cards: cards1016,
+    datasets: datasets1016
   }
-
 };
 
 for (const questionnaire of Object.values(questionnaires)) {

@@ -31,7 +31,7 @@ export default [
     "scale": 1,
     "colorSet": "Reds",
     "colorNum": 9,
-    "data": require('./00_00_Flaeche_Wald.csv')
+    "data": require('./00_Flaeche_Wald.csv')
   },
   {
     "key": "size_logging",

@@ -1,8 +1,8 @@
 export default [
   require('./00-intro.json'),
-  require('./01-rainforrest.json'),
+  require('./01-rainforest.json'),
   require('./02-forest-size.json'),
-  require('./03-03-deforestisation.json'),
+  require('./03-deforestisation.json'),
   require('./04-pharma.json'),
   require('./05-redlist.json'),
   require('./06-biodiversity.json'),
