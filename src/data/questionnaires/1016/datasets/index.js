@@ -66,7 +66,7 @@ export default [
     "data": require('./01_FAO_Land_Flaechen.csv')
   },
    {
-    "key": "logging",
+    "key": "deforestation",
     "name": {
       "de": "Abholzung",
       "en": ""
@@ -77,11 +77,11 @@ export default [
     },
     "quelle": "FAO",
     "link": "http://data.un.org/Data.aspx?q=forest&d=FAO&f=itemCode:6661&c=2,3,4,5,6,7&s=countryName:asc,elementCode:asc,year:desc&v=1",
-    "unit": "%",
+    "unit": "",
     "fixed": 1,
     "domain": [
       0,
-      90
+      18000
     ],
     "skala": [
       0,
@@ -109,11 +109,11 @@ export default [
     },
     "quelle": "IUCN",
     "link": "http://data.un.org/Data.aspx?q=red+list+index&d=SDGs&f=series:ER_RSK_LST&c=2,3,11,13,14&s=ref_area_name:asc,time_period:desc&v=1",
-    "unit": "%",
+    "unit": "",
     "fixed": 1,
     "domain": [
       0,
-      99
+      .99
     ],
     "skala": [
       0,

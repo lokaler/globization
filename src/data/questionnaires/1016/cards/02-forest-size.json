@@ -1,6 +1,6 @@
 {
-  "key": "deforestisation",
-  "title": "2. Karte - deforest",
+  "key": "logging",
+  "title": "2. Karte - logging",
   "dataset": "forest",
   "content": [
     {
@@ -45,6 +45,7 @@
           "i.amountLogging && !i.amountLoggingSubmitted",
           "!i.amountLoggingSubmitted && 'notSubmitted'",
           "f.setDataset('amount_logging')",
+          "f.panToCountry('NLD') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
           "i.amountLogging"

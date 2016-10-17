@@ -1,55 +1,53 @@
 {
-  "key": "cozweikopf",
-  "title": "5. Karte - C02 pro Kopf",
-  "dataset": "tempdiffs",
+  "key": "redlist",
+  "title": "5. Karte - redlist",
+  "dataset": "deforestation",
   "content": [
     {
       "text": {
         "de": [
-          " # Wer am meisten CO2 ausstößt",
+          " # Wo die Artenvielfalt bedroht ist",
           "",
-          "China, die USA und Indien produzieren im internationalen Vergleich das meiste Kohlendioxid. Doch in diesen Ländern leben auch Hunderte Millionen Menschen. Bei den Emissionen pro Kopf landet Indien damit gerade einmal auf Platz 147.",
+          "24.000 Tier- und Pflanzenarten weltweit stehen derzeit auf der sogenannten Roten Liste. Sie sind vom Aussterben bedroht. Die Situation in einzelnen Ländern lässt sich mit dem Rote-Liste-Index vergleichen.",
           "",
-          "**Was glauben Sie: Welches Land produziert pro Kopf das meiste Kohlendioxid?**"
+          "**Was glauben Sie: In welchem der folgenden Länder ist die Artenvielfalt am stärksten gefährdet?**"
         ],
         "en": [
-          " # Who emits the most CO2?",
           "",
-          "China, the US and India produce the most carbon dioxide internationally, but hundreds of millions of people live in these countries. If you compare per capita emissions, India only comes in at 147th place.",
           "",
-          "**Which country emits the most carbon dioxide per capita?**"
+          "",
+          "",
+          "** **"
         ]
       }
-    },
-    {
+    },{
       "input": {
-        "key": "accessCO2Head",
+        "key": "amountRedlist",
         "type": "choices",
         "options": {
           "choices": [
-            ["co2headchoice_1", { "de": "Katar", "en": "Qatar" }],
-            ["co2headchoice_2", { "de": "USA", "en": "USA"}],
-            ["co2headchoice_3", { "de": "China", "en": "China" }],
-            ["co2headchoice_4", { "de": "Russland", "en": "Russia"}]
+            ["amountRedlistChoice_1", { "de": "Sri Lanka", "en": "" }],
+            ["amountRedlistChoice_2", { "de": "Indien", "en": ""}],
+            ["amountRedlistChoice_3", { "de": "USA", "en": "" }]
           ]
         }
       }
     },
     {
       "submit": {
-        "key": "accessCO2HeadSubmitted"
+        "key": "amountRedlistSubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          "i.accessCO2Head && !i.accessCO2HeadSubmitted",
-          "!i.accessCO2HeadSubmitted && 'notSubmitted'",
-          "f.setDataset('cozwei_kopf')",
-          "f.panToCountry('QAT') && false",
+          "i.amountRedlist && !i.amountRedlistSubmitted",
+          "!i.amountRedlistSubmitted && 'notSubmitted'",
+          "f.setDataset('biodiversity')",
+          "f.panToCountry('LKA') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "i.accessCO2Head"
+          "i.amountRedlist"
         ],
         "answerContext": {},
         "templates": {
@@ -58,36 +56,28 @@
           },
 
 
-          "co2headchoice_1": {
+          "amountRedlistChoice_1": {
             "de": [
-              "Richtig. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
+              "Nein. In China wächst der Wald so stark wie nirgendwo sonst auf der Welt. 15.000 Quadratkilometer kommen jedes Jahr hinzu. In Brasilien hingegen schrumpfen die Wälder um fast 10.000 Quadratmeter pro Jahr. "
             ],
             "en": [
-              "Correct! With emissions of 40 tons of CO2 per capita, Qatar is at the top of the list. The US is in 13th place, with per capita emissions of 16 tons while China is in 50th place with eight tons. With its 12 tons of per capita CO2 emissions, Russia is in the middle of the pack."
+              ""
             ]
           },
-          "co2headchoice_2": {
+          "amountRedlistChoice_2": {
             "de": [
-              "Leider falsch. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
+              "Richtig. Gut 10.000 Quadratmeter gehen in Brasilien jedes Jahr verloren - so viel wie nirgendwo sonst auf der Welt. In China wächst der Wald hingegen sogar."
             ],
             "en": [
-              "Unfortunately wrong. With emissions of 40 tons of CO2 per capita, Qatar is at the top of the list. The US is in 13th place, with per capita emissions of 16 tons while China is in 50th place with eight tons. With its 12 tons of per capita CO2 emissions, Russia is in the middle of the pack."
+              ""
             ]
           },
-          "co2headchoice_3": {
+          "amountRedlistChoice_3": {
             "de": [
-              "Leider falsch. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
+              "Zwar schrumpft der Wald in Russland, noch stärker jedoch in Brasilien. Dort gehen jedes Jahr rund 10.000 Quadratmeter verloren. In China wächst der Wald hingegen sogar."
             ],
             "en": [
-              "Unfortunately wrong. With emissions of 40 tons of CO2 per capita, Qatar is at the top of the list. The US is in 13th place, with per capita emissions of 16 tons while China is in 50th place with eight tons. With its 12 tons of per capita CO2 emissions, Russia is in the middle of the pack."
-            ]
-          },
-          "co2headchoice_4": {
-            "de": [
-              "Leider falsch. Mit 40 Tonnen CO2 pro Kopf führt Katar das Ranking an. Die USA kommen mit 16 Tonnen auf Platz 13, China mit 8 Tonnen auf Platz 50. Russland liegt mit 12 Tonnen dazwischen."
-            ],
-            "en": [
-              "Unfortunately wrong. With emissions of 40 tons of CO2 per capita, Qatar is at the top of the list. The US is in 13th place, with per capita emissions of 16 tons while China is in 50th place with eight tons. With its 12 tons of per capita CO2 emissions, Russia is in the middle of the pack."
+              ""
             ]
           }
         }

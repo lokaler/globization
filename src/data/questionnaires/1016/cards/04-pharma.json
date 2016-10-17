@@ -1,87 +1,85 @@
 {
-  "key": "tempdiff",
-  "title": "4. Karte - Temperaturantstieg",
-  "dataset": "renewable_elect",
+  "key": "phamra",
+  "title": "4. Karte - Medicine",
+  "dataset": "deforestation",
   "content": [
     {
       "text": {
         "de": [
-          " # Es wird wärmer",
+          " # Der Nutzen der Natur",
           "",
-          "In vielen Ländern wird ein Großteil der Energie noch immer aus Kohle, Gas und Öl gewonnen. Treibhausgase gelangen in die Atmosphäre, der Klimawandel ist die Folge. Seit dem Jahr 1900 hat sich die bodennahe Luft über den Landmassen im Durchschnitt um 1,3 Grad Celsius erwärmt.",
+          "Warum brauchen wir überhaupt Artenvielfalt? Ein Grund: Neue Medikamente haben ihren Ursprung häufig in der Natur. Forscher haben untersucht, wie die zwischen 1940 und 2014 zugelassenen Krebsmedikamente entwickelt wurden.",
           "",
-          "**Tippen Sie: Wie groß war der Temperaturanstieg in Deutschland?**"
+          "**Tippen Sie: Wie groß war der Anteil der Medikamente, die auf Grundlage natürlicher Ausgangsstoffe entwickelt wurden?**"
         ],
         "en": [
-          " # It’s getting warmer",
+          " # ",
           "",
-          "Many countries still get a significant amount of their energy from coal, gas and oil. Greenhouse gases enter the atmosphere and climate change is the result. Since 1900, the world’s landmasses have warmed by 1.3 degrees Celsius.",
           "",
-          "**How large has the temperature increase been in Germany?**"
+          "",
+          "****"
         ]
       }
     },{
       "input": {
-        "key": "sliderTempAnstieg",
+        "key": "slideramountMedicine",
         "type": "slider",
         "options": {
-          "unit": "Grad",
-          "min": 0,
-          "value": 1.3,
-          "max": 3,
-          "step": 0.1
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
         }
       }
     },
     {
       "submit": {
-        "key": "AmountTempAnstiegSubmitted"
+        "key": "amountMedicineSubmitted"
       }
     },
 
     {
       "answer": {
         "answerKey": [
-          "i.sliderTempAnstieg && !i.AmountTempAnstiegSubmitted",
-          "!i.AmountTempAnstiegSubmitted && 'notSubmitted'",
-          "f.setDataset('tempdiffs')",
+          "i.slideramountMedicine && !i.amountMedicineSubmitted",
+          "!i.amountMedicineSubmitted && 'notSubmitted'",
+          "f.setDataset('deforestation')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderTempAnstieg <= 0.9 && f.panToCountry(f.getISO('tempdiffs', i.sliderTempAnstieg))) && 'Antwort_TempAnstieg1'",
-          "(i.sliderTempAnstieg >= 1 && i.sliderTempAnstieg <= 1.2 && f.panToCountry('DEU')) && 'Antwort_TempAnstieg2'",
-          "(i.sliderTempAnstieg >= 1.3 && f.panToCountry(f.getISO('tempdiffs', i.sliderTempAnstieg))) && 'Antwort_TempAnstieg3'"
+          "(i.slideramountMedicine <= 69 && 'Antwort_amountMedicine1'",
+          "(i.slideramountMedicine >= 70 && i.slideramountMedicine <= 84 && 'Antwort_amountMedicine2'",
+          "(i.slideramountMedicine >= 85 && 'Antwort_amountMedicine3'"
         ],
-        "answerContext": {
-          "AmountTempAnstiegCountry" : "f.getCountryName('tempdiffs', i.sliderTempAnstieg, { case: 'default' })"
-        },
+
         "templates": {
           "notSubmitted": {
             "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
-          "Antwort_TempAnstieg1": {
+          "Antwort_amountMedicine1": {
             "de": [
-              " Nein, die Temperatur ist etwas stärker gestiegen, nämlich um rund 1,1 Grad Celsius. Ihre Schätzung entspricht dem Anstieg in **{{ AmountTempAnstiegCountry }}**.  Mit 2,5 Grad Celsius hat sich Grönland am stärksten erwärmt, Indien und Bolivien haben mit 0,6 Grad Celsius den geringsten Anstieg verzeichnet."
+              "Nein, größer. 77 Prozent der Medikamente hatten die Natur als Vorbild. "
             ],
             "en": [
-              "No, the temperature has risen a bit more than that. The total rise has been about 1.1 degrees Celsius. Your estimate corresponds to the increase in **{{ AmountTempAnstiegCountry }}**. Greenland has experienced the greatest amount of warming, with a rise of 2.5 degrees Celsius, while India and Bolivia have seen the smallest rise, at 0.6 degrees Celsius."
+              ""
             ]
           },
-          "Antwort_TempAnstieg2": {
+          "Antwort_amountMedicine2": {
             "de": [
-              "Ziemlich gut geschätzt! Die Temperatur ist um rund 1,1 Grad Celsius gestiegen. Mit 2,5 Grad Celsius hat sich Grönland am stärksten erwärmt, Indien und Bolivien haben mit 0,6 Grad Celsius den geringsten Anstieg verzeichnet."
+              "Gut geschätzt. 77 Prozent der Medikamente hatten die Natur als Vorbild."
             ],
             "en": [
-              "Pretty good guess! The temperature in Germany has risen by about 1.1 degrees Celsius. Greenland has experienced the greatest amount of warming, with a rise of 2.5 degrees Celsius, while India and Bolivia have seen the smallest rise, at 0.6 degrees Celsius."
+              ""
             ]
           },
-          "Antwort_TempAnstieg3": {
+          "Antwort_amountMedicine3": {
             "de": [
-              "Nein, die Temperatur ist etwas weniger stark gestiegen, nämlich um rund 1,1 Grad Celsius. Ihre Schätzung entspricht dem Anstieg in **{{ AmountTempAnstiegCountry }}**. Mit 2,5 Grad Celsius hat sich Grönland am stärksten erwärmt, Indien und Bolivien haben mit 0,6 Grad Celsius den geringsten Anstieg verzeichnet."
+              "Das ist etwas zu viel. 77 Prozent der Medikamente hatten die Natur als Vorbild."
             ],
             "en": [
-              "No, the temperature increase has been less than that. The actual increase is 1.1 degrees Celsius. Your estimate corresponds to the increase in **{{ AmountTempAnstiegCountry }}**. Greenland has experienced the greatest amount of warming, with a rise of 2.5 degrees Celsius, while India and Bolivia have seen the smallest rise, at 0.6 degrees Celsius."
+              ""
             ]
           }
         }
