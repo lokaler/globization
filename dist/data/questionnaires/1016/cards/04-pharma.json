@@ -1,0 +1,91 @@
+{
+  "key": "pharma",
+  "title": "4. Karte - Medicine",
+  "dataset": "deforestation",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Der Nutzen der Natur",
+          "",
+          "Warum brauchen wir überhaupt Artenvielfalt? Ein Grund: Neue Medikamente haben ihren Ursprung häufig in der Natur. Forscher haben untersucht, wie die zwischen 1940 und 2014 zugelassenen Krebsmedikamente entwickelt wurden.",
+          "",
+          "**Tippen Sie: Wie groß war der Anteil der Medikamente, die auf Grundlage natürlicher Ausgangsstoffe entwickelt wurden?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "slideramountMedicine",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "amountMedicineSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.slideramountMedicine && !i.amountMedicineSubmitted",
+          "!i.amountMedicineSubmitted && 'notSubmitted'",
+          "f.setDataset('deforestation')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.slideramountMedicine <= 69) && 'Antwort_amountMedicine1'",
+          "(i.slideramountMedicine >= 70 && i.slideramountMedicine <= 84) && 'Antwort_amountMedicine2'",
+          "(i.slideramountMedicine >= 85) && 'Antwort_amountMedicine3'"
+        ],
+        "answerContext": {
+
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_amountMedicine1": {
+            "de": [
+              "Nein, größer. 77 Prozent der Medikamente hatten die Natur als Vorbild. "
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_amountMedicine2": {
+            "de": [
+              "Gut geschätzt. 77 Prozent der Medikamente hatten die Natur als Vorbild."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_amountMedicine3": {
+            "de": [
+              "Das ist etwas zu viel. 77 Prozent der Medikamente hatten die Natur als Vorbild."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "key": "protection",
+  "title": "6. Karte - Temperaturantstieg",
+  "dataset": "biodiversity",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Gut geschützt",
+          "",
+          "Flächen vor dem Zugriff des Menschen zu schützen, gilt als eines der wichtigsten Mittel, um die Biodiversität zu erhalten. Die Uno hat dies daher zu einem ihrer Nachhaltigkeitsziele gemacht. In jedem Land wurden dafür Flächen ausgewiesen, die - zum Beispiel in Form eines Nationalparks - geschützt werden sollen.",
+          "",
+          "**Schätzen Sie, wieviel Prozent dieser Flächen in Deutschland tatsächlich schon unter Schutz stehen.**"
+        ],
+        "en": [
+          " # ",
+          "",
+          ".",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderProtectedArea",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountProtectedAreaSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderProtectedArea && !i.AmountProtectedAreaSubmitted",
+          "!i.AmountProtectedAreaSubmitted && 'notSubmitted'",
+          "f.setDataset('protected')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderProtectedArea <= 25 && f.panToCountry(f.getISO('protected', i.sliderProtectedArea))) && 'Antwort_ProtectedArea1'",
+          "(i.sliderProtectedArea >= 26 && i.sliderProtectedArea <= 39 && f.panToCountry('DEU')) && 'Antwort_ProtectedArea2'",
+          "(i.sliderProtectedArea >= 40 && f.panToCountry(f.getISO('tempdiffs', i.sliderProtectedArea))) && 'Antwort_ProtectedArea3'"
+        ],
+        "answerContext": {
+          "ProtectedAreaCountry" : "f.getCountryName('protected', i.sliderProtectedArea, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_ProtectedArea1": {
+            "de": [
+              "Nein, Deutschland ist schon etwas weiter und hat 33 Prozent der schützenswerten Flächen bereits unter Schutz gestellt. Der von Ihnen eingegebene Wert entspricht am ehesten dem Status in **{{ ProtectedAreaCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_ProtectedArea2": {
+            "de": [
+              "Gut geschätzt. Bisher wurden 33 Prozent der schützenswerten Flächen unter Schutz gestellt. Erkunden Sie im Globus den Status in anderen Ländern."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_ProtectedArea3": {
+            "de": [
+              "Nein, so weit ist Deutschland noch nicht. Bisher wurden 33 Prozent der schützenswerten Flächen unter Schutz gestellt. Der von Ihnen eingegebene Wert entspricht am ehesten dem Status in [Slider Land] **{{ AmountProtectedAreaCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

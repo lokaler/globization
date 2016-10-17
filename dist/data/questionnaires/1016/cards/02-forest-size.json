@@ -1,0 +1,96 @@
+{
+  "key": "logging",
+  "title": "2. Karte - logging",
+  "dataset": "forest",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Rasantes Tempo",
+          "",
+          "Die weltweiten Waldflächen schrumpfen jedes Jahr um 33.000 Quadratkilometer. Aber wie groß ist das eigentlich?",
+          "",
+          "**Was glauben Sie: 33.000 Quadratkilometer entspricht in etwa der Fläche von ...**"
+        ],
+        "en": [
+          "",
+          "",
+          "",
+          "",
+          "** **"
+        ]
+      }
+    },{
+      "input": {
+        "key": "amountLogging",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["amountLoggingChoice_1", { "de": "Luxemburg", "en": "" }],
+            ["amountLoggingChoice_2", { "de": "der Niederlande", "en": ""}],
+            ["amountLoggingChoice_3", { "de": "Deutschland", "en": "" }],
+            ["amountLoggingChoice_4", { "de": "Dänemark", "en": ""}]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "amountLoggingSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.amountLogging && !i.amountLoggingSubmitted",
+          "!i.amountLoggingSubmitted && 'notSubmitted'",
+          "f.setDataset('amount_logging')",
+          "f.panToCountry('NLD') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.amountLogging"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "amountLoggingChoice_1": {
+            "de": [
+              "Leider falsch. Jedes Jahr verschwindet eine Fläche Wald so groß wie die Niederlande von der Erde. Doch es gibt auch gute Nachrichten: In den Neunzigerjahren ging es noch mehr als doppelt so schnell. Die verlorene Fläche von rund 73.000 Quadratkilometern pro Jahr entsprach damals in etwa der Größe des afrikanischen Staats Sambia."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountLoggingChoice_2": {
+            "de": [
+              "Richtig. Jedes Jahr verschwindet eine Fläche Wald so groß wie die Niederlande von der Erde. Doch es gibt auch gute Nachrichten: In den Neunzigerjahren ging es noch mehr als doppelt so schnell. Die verlorene Fläche von rund 73.000 Quadratkilometern pro Jahr entsprach damals in etwa der Größe des afrikanischen Staats Sambia."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountLoggingChoice_3": {
+            "de": [
+              "Leider falsch. Jedes Jahr verschwindet eine Fläche Wald so groß wie die Niederlande von der Erde. Doch es gibt auch gute Nachrichten: In den Neunzigerjahren ging es noch mehr als doppelt so schnell. Die verlorene Fläche von rund 73.000 Quadratkilometern pro Jahr entsprach damals in etwa der Größe des afrikanischen Staats Sambia."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountLoggingChoice_4": {
+            "de": [
+              " Leider falsch. Jedes Jahr verschwindet eine Fläche Wald so groß wie die Niederlande von der Erde. Doch es gibt auch gute Nachrichten: In den Neunzigerjahren ging es noch mehr als doppelt so schnell. Die verlorene Fläche von rund 73.000 Quadratkilometern pro Jahr entsprach damals in etwa der Größe des afrikanischen Staats Sambia."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
