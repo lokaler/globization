@@ -1,55 +1,53 @@
 {
-  "key": "access_electricity",
-  "title": "2. Karte - Zugang zu Strom",
-  "dataset": "strompreis",
+  "key": "deforestisation",
+  "title": "2. Karte - deforest",
+  "dataset": "forest",
   "content": [
     {
       "text": {
         "de": [
-          " # Strom: (k)eine Selbstverständlichkeit",
+          " # Rasantes Tempo",
           "",
-          "Strom kommt aus der Steckdose - zumindest in Deutschland. Weltweit haben jedoch 1,2 Milliarden Menschen keinen Zugang zu Elektrizität. Bis 2030 soll diese Zahl auf null sinken. So steht es in den Uno­-Nachhaltigkeitszielen.",
+          "Die weltweiten Waldflächen schrumpfen jedes Jahr um 33.000 Quadratkilometer. Aber wie groß ist das eigentlich?",
           "",
-          "**Was glauben Sie: In welchem der folgenden Länder ist der Anteil der Bevölkerung ohne Zugang zu Strom am größten?**"
+          "**Was glauben Sie: 33.000 Quadratkilometer entspricht in etwa der Fläche von ...**"
         ],
         "en": [
-          " # Electricity - (not) a matter of course",
           "",
-          "Electricity comes out of an outlet - in the developed world, at least. Globally, though, 1.2 billion people have no access to electricity. If United Nations sustainability targets are reached, this number will plunge to zero by 2030.",
           "",
-          "**What do you think: In which of the following countries is the share of the population with access to electricity the smallest?**"
+          "",
+          "",
+          "** **"
         ]
       }
-    },
-    {
+    },{
       "input": {
-        "key": "accessElectricity",
+        "key": "amountLogging",
         "type": "choices",
         "options": {
           "choices": [
-            ["accesschoice_1", { "de": "Sudan", "en": "Sudan" }],
-            ["accesschoice_2", { "de": "Jemen", "en": "Yemen"}],
-            ["accesschoice_3", { "de": "Madagaskar", "en": "Madagascar" }],
-            ["accesschoice_4", { "de": "Bangladesch", "en": "Bangladesh"}]
+            ["amountLoggingChoice_1", { "de": "Luxemburg", "en": "" }],
+            ["amountLoggingChoice_2", { "de": "der Niederlande", "en": ""}],
+            ["amountLoggingChoice_3", { "de": "Deutschland", "en": "" }],
+            ["amountLoggingChoice_4", { "de": "Dänemark", "en": ""}]
           ]
         }
       }
     },
     {
       "submit": {
-        "key": "accessElectricitySubmitted"
+        "key": "amountLoggingSubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          "i.accessElectricity && !i.accessElectricitySubmitted",
-          "!i.accessElectricitySubmitted && 'notSubmitted'",
-          "f.setDataset('access_elect')",
-          "f.panToCountry('MDG') && false",
+          "i.amountLogging && !i.amountLoggingSubmitted",
+          "!i.amountLoggingSubmitted && 'notSubmitted'",
+          "f.setDataset('amount_logging')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "i.accessElectricity"
+          "i.amountLogging"
         ],
         "answerContext": {},
         "templates": {
@@ -58,36 +56,36 @@
           },
 
 
-          "accesschoice_1": {
+          "amountLoggingChoice_1": {
             "de": [
-              "Nein, zwar haben zwei von drei Sudanesen keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent der Bevölkerung. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf Solarzellen brachte ­ und einen Haufen Probleme."
+              "Leider falsch. Jedes Jahr verschwindet eine Fläche Wald so groß wie die Niederlande von der Erde. Doch es gibt auch gute Nachrichten: In den Neunzigerjahren ging es noch mehr als doppelt so schnell. Die verlorene Fläche von rund 73.000 Quadratkilometern pro Jahr entsprach damals in etwa der Größe des afrikanischen Staats Sambia."
             ],
             "en": [
-              "No, every third Sudan resident has access to electricity. In Madagascar, only 15 percent of the population has access to electricity. Here you can read a [SPIEGEL ONLINE multimedia report](http://www.spiegel.de/international/tomorrow/a-1112447.html)  about a Malagasy grandmother who brought solar panels to her village - along with a host of problems."
+              ""
             ]
           },
-          "accesschoice_2": {
+          "amountLoggingChoice_2": {
             "de": [
-              "Nein, zwar hat jeder zweite Jemenite keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent der Bevölkerung. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf Solarzellen brachte ­ und einen Haufen Probleme."
+              "Richtig. Jedes Jahr verschwindet eine Fläche Wald so groß wie die Niederlande von der Erde. Doch es gibt auch gute Nachrichten: In den Neunzigerjahren ging es noch mehr als doppelt so schnell. Die verlorene Fläche von rund 73.000 Quadratkilometern pro Jahr entsprach damals in etwa der Größe des afrikanischen Staats Sambia."
             ],
             "en": [
-              "No, every second Yemenite has access to electricity. In Madagascar, however, this is only true of 15 percent of the population. Here you can read a [SPIEGEL ONLINE multimedia report](http://www.spiegel.de/international/tomorrow/a-1112447.html) about a Malagasy grandmother who brought solar panels to her village - along with a host of problems."
+              ""
             ]
           },
-          "accesschoice_3": {
+          "amountLoggingChoice_3": {
             "de": [
-              "Richtig. 85 Prozent der Bevölkerung in Madagaskar haben keinen Zugang zu Strom. Lesen Sie hier die [SPIEGEL­ONLINE­ Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf Solarzellen brachte ­ und einen Haufen Probleme."
+              "Leider falsch. Jedes Jahr verschwindet eine Fläche Wald so groß wie die Niederlande von der Erde. Doch es gibt auch gute Nachrichten: In den Neunzigerjahren ging es noch mehr als doppelt so schnell. Die verlorene Fläche von rund 73.000 Quadratkilometern pro Jahr entsprach damals in etwa der Größe des afrikanischen Staats Sambia."
             ],
             "en": [
-              "Correct! Only about 15 percent of Madagascar’s population has access to electricity. Here you can read a [SPIEGEL ONLINE multimedia report](http://www.spiegel.de/international/tomorrow/a-1112447.html) about a Malagasy grandmother who brought solar panels to her village - along with a host of problems."
+              ""
             ]
           },
-          "accesschoice_4": {
+          "amountLoggingChoice_4": {
             "de": [
-              "Nein, zwar haben 40 Prozent der Bevölkerung in Bangladesch keinen Zugang zu Strom. In Madagaskar sind es jedoch sogar 85 Prozent. Lesen Sie hier die [SPIEGEL­ONLINE­Multimediareportage](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) über eine madagassische Großmutter, die ihrem Dorf Solarzellen brachte ­ und einen Haufen Probleme."
+              " Leider falsch. Jedes Jahr verschwindet eine Fläche Wald so groß wie die Niederlande von der Erde. Doch es gibt auch gute Nachrichten: In den Neunzigerjahren ging es noch mehr als doppelt so schnell. Die verlorene Fläche von rund 73.000 Quadratkilometern pro Jahr entsprach damals in etwa der Größe des afrikanischen Staats Sambia."
             ],
             "en": [
-              "No, 60 percent of Bangladesh’s inhabitants have access to electricity. In Madagascar, however, this is only true of 15 percent of the population. Here you can read a [SPIEGEL ONLINE multimedia report](http://www.spiegel.de/international/tomorrow/a-1112447.html) about a Malagasy grandmother who brought solar panels to her village - along with a host of problems."
+              ""
             ]
           }
         }

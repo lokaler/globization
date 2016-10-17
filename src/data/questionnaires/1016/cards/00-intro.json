@@ -1,7 +1,7 @@
 {
   "key": "intro",
   "title": "Intro",
-  "dataset": "consumption_elect",
+  "dataset": "forest",
   "view": "globe",
   "content": [
     {
@@ -10,7 +10,7 @@
           "# ÜberMorgen-Explorer",
           "",
 
-          "Energie treibt das moderne Leben an -­ und ihre Erzeugung verändert das Klima. In welchem Land ist Strom am teuersten? Wie hat sich die Temperatur auf der Erde verändert? Und welches Land tut am meisten für den Klimaschutz? Erkunden Sie die Welt der Energie. Klicken Sie auf \"Los geht's\"!",
+          "Millionen Tier- und Pflanzenarten leben auf der Erde - doch der Mensch bedroht diese Vielfalt. Wo geht am schnellsten Lebensraum verloren? Welches Land schützt die Artenvielfalt? Und lohnt es sich, für den Regenwald Bier zu trinken? Klicken Sie auf \"Los geht's\"!",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
         ],
@@ -18,7 +18,7 @@
           "# BeyondTomorrow Explorer",
           "",
 
-          "Energy powers modern life - and its production is changing the climate. In which country is electricity most expensive? How much has the Earth’s temperature changed? And which country is doing the most to protect the climate? Discover the world of energy. Click on \"Let's Get Started.\"",
+          "Click on \"Let's Get Started.\"",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
         ]

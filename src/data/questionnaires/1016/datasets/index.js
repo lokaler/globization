@@ -17,7 +17,7 @@ export default [
     "fixed": 1,
     "domain": [
       0,
-      18000
+      8100000
     ],
     "skala": [
       0,
@@ -29,12 +29,12 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Greens",
     "colorNum": 9,
     "data": require('./00_Flaeche_Wald.csv')
   },
   {
-    "key": "size_logging",
+    "key": "amount_logging",
     "name": {
       "de": "Landfläche",
       "en": ""
@@ -45,11 +45,11 @@ export default [
     },
     "quelle": "FAO",
     "link": "http://data.worldbank.org/indicator/AG.LND.TOTL.K2",
-    "unit": "€",
+    "unit": "",
     "fixed": 1,
     "domain": [
       0,
-      90
+      18000000
     ],
     "skala": [
       0,
@@ -61,7 +61,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Greens",
     "colorNum": 9,
     "data": require('./01_FAO_Land_Flaechen.csv')
   },
@@ -93,7 +93,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Greens",
     "colorNum": 9,
     "data": require('./02_FAO_Wald_Abholzung.csv')
   },
@@ -125,7 +125,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Greens",
     "colorNum": 9,
     "data": require('./03_Red_List_Index.csv')
   },
@@ -157,7 +157,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Greens",
     "colorNum": 9,
     "data": require('./04_Proportion_Protected.csv')
   },
@@ -189,7 +189,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Greens",
     "colorNum": 9,
     "data": require('./05_Development_assistance.csv')
   }
