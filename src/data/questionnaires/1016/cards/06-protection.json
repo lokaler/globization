@@ -49,7 +49,7 @@
           "!f.isMobile() && f.setView('globe')",
           "(i.sliderProtectedArea <= 25 && f.panToCountry(f.getISO('protected', i.sliderProtectedArea))) && 'Antwort_ProtectedArea1'",
           "(i.sliderProtectedArea >= 26 && i.sliderProtectedArea <= 39 && f.panToCountry('DEU')) && 'Antwort_ProtectedArea2'",
-          "(i.sliderProtectedArea >= 40 && f.panToCountry(f.getISO('tempdiffs', i.sliderProtectedArea))) && 'Antwort_ProtectedArea3'"
+          "(i.sliderProtectedArea >= 40 && f.panToCountry(f.getISO('protected', i.sliderProtectedArea))) && 'Antwort_ProtectedArea3'"
         ],
         "answerContext": {
           "ProtectedAreaCountry" : "f.getCountryName('protected', i.sliderProtectedArea, { case: 'default' })"
@@ -78,7 +78,7 @@
           },
           "Antwort_ProtectedArea3": {
             "de": [
-              "Nein, so weit ist Deutschland noch nicht. Bisher wurden 33 Prozent der schützenswerten Flächen unter Schutz gestellt. Der von Ihnen eingegebene Wert entspricht am ehesten dem Status in [Slider Land] **{{ AmountProtectedAreaCountry }}**."
+              "Nein, so weit ist Deutschland noch nicht. Bisher wurden 33 Prozent der schützenswerten Flächen unter Schutz gestellt. Der von Ihnen eingegebene Wert entspricht am ehesten dem Status in **{{ ProtectedAreaCountry }}**."
             ],
             "en": [
               ""
