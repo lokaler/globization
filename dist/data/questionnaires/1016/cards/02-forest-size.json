@@ -10,7 +10,7 @@
           "",
           "Die weltweiten Waldflächen schrumpfen jedes Jahr um 33.000 Quadratkilometer. Aber wie groß ist das eigentlich?",
           "",
-          "**Was glauben Sie: 33.000 Quadratkilometer entspricht in etwa der Fläche von ...**"
+          "**Was glauben Sie: 33.000 Quadratkilometer entsprechen in etwa der Fläche von ...**"
         ],
         "en": [
           "",
@@ -27,7 +27,7 @@
         "options": {
           "choices": [
             ["amountLoggingChoice_1", { "de": "Luxemburg", "en": "" }],
-            ["amountLoggingChoice_2", { "de": "der Niederlande", "en": ""}],
+            ["amountLoggingChoice_2", { "de": "den Niederlanden", "en": ""}],
             ["amountLoggingChoice_3", { "de": "Deutschland", "en": "" }],
             ["amountLoggingChoice_4", { "de": "Dänemark", "en": ""}]
           ]

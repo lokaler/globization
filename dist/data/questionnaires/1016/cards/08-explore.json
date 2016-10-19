@@ -7,7 +7,7 @@
     {
       "text": {
         "de": [
-          "Sie wollen mehr rund um nachhaltige Energie und den Klimawandel erfahren? Lesen Sie dazu auch unsere [Reportage aus Madagaskar](http://www.spiegel.de/wirtschaft/madagaskar-wie-ein-dorf-strom-bekam-und-neue-probleme-a-1108279.html) oder eine [Analyse der Orte](http://www.spiegel.de/wissenschaft/natur/wo-der-klimawandel-bereits-wirklich-ein-grosses-problem-ist-a-1110147.html), wo der Klimawandel schon zugeschlagen hat.",
+          "Sie wollen mehr rund um Artenvielfalt erfahren? Lesen Sie dazu auch unsere [Reportage von der Insel Borneo](http://www.spiegel.de/wissenschaft/uebermorgen/borneo-vier-menschen-wollen-den-regenwald-retten-eine-multimedia-story-a-1112452.html)."
           "Den Link zum interaktiven Globus teilen:"
         ],
         "en": [
@@ -21,8 +21,8 @@
           "f.setView('globe')"
         ],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeOvC', 'Interaktives Quiz: Sind die Deutschen im Klimaschutz führend? #ÜberMorgen')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeOvC', 'Interaktives Quiz: Sind die Deutschen im Klimaschutz führend? #ÜberMorgen')",
+          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeOvC', 'Interaktives Quiz: Wo Arten verloren gehen. #ÜberMorgen')",
+          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeOvC', 'Interaktives Quiz: Wo Arten verloren gehen - und ob Bier trinken dagegen hilft. #ÜberMorgen')",
           "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeOEc', 'Interactive Globe: Europeans love to travel, but how sustainable are their trips? #beyondtomorrow')",
           "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeOEc', 'Interactive Globe: Europeans love to travel, but how sustainable are their trips? #beyondtomorrow')"
         },

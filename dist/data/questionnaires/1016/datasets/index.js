@@ -168,11 +168,11 @@ export default [
       "en": ""
     },
     "description": {
-      "de": "Entwicklungshilfe für Artenvielfalt im Jahr 2014 in US Dollar",
+      "de": "Entwicklungshilfe für Artenvielfalt im Jahr 2014 in US-Dollar",
       "en": ""
     },
     "quelle": "OECD",
-    "link": "",
+    "link": "http://data.un.org/Data.aspx?q=biodiversity&d=SDGs&f=series:DC_ODA_BDVDL&c=2,3,11,13,14&s=ref_area_name:asc,time_period:desc&v=1",
     "unit": "",
     "fixed": 1,
     "domain": [
