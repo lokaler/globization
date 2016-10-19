@@ -1,0 +1,87 @@
+{
+  "key": "redlist",
+  "title": "5. Karte - redlist",
+  "dataset": "deforestation",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wo die Artenvielfalt bedroht ist",
+          "",
+          "24.000 Tier- und Pflanzenarten weltweit stehen derzeit auf der sogenannten Roten Liste. Sie sind vom Aussterben bedroht. Die Situation in einzelnen Ländern lässt sich mit dem Rote-Liste-Index vergleichen.",
+          "",
+          "**Was glauben Sie: In welchem der folgenden Länder ist die Artenvielfalt am stärksten gefährdet?**"
+        ],
+        "en": [
+          "",
+          "",
+          "",
+          "",
+          "** **"
+        ]
+      }
+    },{
+      "input": {
+        "key": "amountRedlist",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["amountRedlistChoice_1", { "de": "Sri Lanka", "en": "" }],
+            ["amountRedlistChoice_2", { "de": "Indien", "en": ""}],
+            ["amountRedlistChoice_3", { "de": "USA", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "amountRedlistSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.amountRedlist && !i.amountRedlistSubmitted",
+          "!i.amountRedlistSubmitted && 'notSubmitted'",
+          "f.setDataset('biodiversity')",
+          "f.panToCountry('LKA') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.amountRedlist"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "amountRedlistChoice_1": {
+            "de": [
+              "Richtig. In Sri Lanka beträgt der Rote-Liste-Index nur 0,57. Bei einem Wert von 0 sind alle Arten ausgestorben, bei 1 ist die Artenvielfalt gar nicht gefährdet. Erkunden Sie den Index weiterer Länder im Globus."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountRedlistChoice_2": {
+            "de": [
+              "Leider falsch. Sri Lanka wäre richtig gewesen. Dort beträgt der Rote-Liste- Index nur 0,57. Bei einem Wert von 0 sind alle Arten ausgestorben, bei 1 ist die Artenvielfalt gar nicht gefährdet. Erkunden Sie den Index weiterer Länder im Globus."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountRedlistChoice_3": {
+            "de": [
+              "Leider falsch. Sri Lanka wäre richtig gewesen. Dort beträgt der Rote-Liste- Index nur 0,57. Bei einem Wert von 0 sind alle Arten ausgestorben, bei 1 ist die Artenvielfalt gar nicht gefährdet. Erkunden Sie den Index weiterer Länder im Globus."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

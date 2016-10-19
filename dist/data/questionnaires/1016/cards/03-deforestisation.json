@@ -1,0 +1,87 @@
+{
+  "key": "deforestation",
+  "title": "3. Karte - deforestation",
+  "dataset": "amount_logging",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wo fallen die meisten Bäume?",
+          "",
+          "Wälder beherbergen 80 Prozent aller Tier- und Pflanzenarten, die an Land vorkommen. Ihr Lebensraum wird zerstört, unter anderem um Lebensmittel wie Soja oder Palmöl zu produzieren oder Platz für Staudämme zu schaffen.",
+          "",
+          "**Was meinen Sie: In welchem der folgenden Länder geht die Entwaldung am schnellsten voran?**"
+        ],
+        "en": [
+          "",
+          "",
+          "",
+          "",
+          "** **"
+        ]
+      }
+    },{
+      "input": {
+        "key": "amountDeforestation",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["amountDeforestationChoice_1", { "de": "China", "en": "" }],
+            ["amountDeforestationChoice_2", { "de": "Brasilien", "en": ""}],
+            ["amountDeforestationChoice_3", { "de": "Russland", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "amountDeforestationSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.amountDeforestation && !i.amountDeforestationSubmitted",
+          "!i.amountDeforestationSubmitted && 'notSubmitted'",
+          "f.setDataset('deforestation')",
+          "f.panToCountry('BRA') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.amountDeforestation"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "amountDeforestationChoice_1": {
+            "de": [
+              "Nein. In China wächst der Wald so stark wie nirgendwo sonst auf der Welt. 15.000 Quadratkilometer kommen durch staatliche Programme jedes Jahr hinzu. In Brasilien hingegen schrumpfen die Wälder um fast 10.000 Quadratkilometer pro Jahr. "
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountDeforestationChoice_2": {
+            "de": [
+              "Richtig. Gut 10.000 Quadratkilometer gehen in Brasilien jedes Jahr verloren - so viel wie nirgendwo sonst auf der Welt. In China wächst der Wald durch staatliche Programme hingegen sogar."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountDeforestationChoice_3": {
+            "de": [
+              "Zwar schrumpft der Wald in Russland, noch stärker jedoch in Brasilien. Dort gehen jedes Jahr rund 10.000 Quadratkilometer verloren. In China wächst der Wald durch staatliche Programme hingegen sogar."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

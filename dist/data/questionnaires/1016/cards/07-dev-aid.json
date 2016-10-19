@@ -1,0 +1,87 @@
+{
+  "key": "devpol",
+  "title": "7. Karte - devpol",
+  "dataset": "protected",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Geld für die Artenvielfalt",
+          "",
+          "Viele Industrieländer fördern zudem Projekte zum Erhalt der Artenvielfalt in Entwicklungs- und Schwellenländern. Diese Entwicklungshilfe floss im Jahr 2014 vor allem auf die Philippinen, nach Indien und in die Türkei. ",
+          "",
+          "**Tippen Sie: Wer hat am meisten in den Fördertopf eingezahlt?**"
+        ],
+        "en": [
+          "",
+          "",
+          "",
+          "",
+          "** **"
+        ]
+      }
+    },{
+      "input": {
+        "key": "amountDevpol",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["amountDevpolChoice_1", { "de": "USA", "en": "" }],
+            ["amountDevpolChoice_2", { "de": "Deutschland", "en": ""}],
+            ["amountDevpolChoice_3", { "de": "Norwegen", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "amountDevpolSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.amountDevpol && !i.amountDevpolSubmitted",
+          "!i.amountDevpolSubmitted && 'notSubmitted'",
+          "f.setDataset('developmentaid')",
+          "f.panToCountry('USA') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.amountDevpol"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "amountDevpolChoice_1": {
+            "de": [
+              "Richtig, die USA haben 2014 rund 1,233 Milliarden US-Dollar für Artenvielfalt ausgegeben. Deutschland folgt knapp dahinter auf Platz 2 mit 1,229 Milliarden US-Dollar."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountDevpolChoice_2": {
+            "de": [
+              "Ganz knapp daneben. Deutschland hat 1,229 Milliarden US-Dollar eingezahlt - die Vereinigten Staaten mit 1,233 Milliarden US-Dollar jedoch noch etwas mehr."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountDevpolChoice_3": {
+            "de": [
+              "Leider falsch. Norwegen zahlt zwar gemessen an seiner Wirtschaftskraft am meisten ein. Die USA haben 2014 mit rund 1,233 Milliarden US-Dollar jedoch den größten absoluten Betrag für Artenvielfalt ausgegeben. Deutschland folgt knapp dahinter auf Platz 2 mit 1,229 Milliarden US-Dollar."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

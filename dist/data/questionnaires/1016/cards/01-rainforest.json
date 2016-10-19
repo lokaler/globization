@@ -1,0 +1,95 @@
+{
+  "key": "forest_size",
+  "title": "1. Karte - Forest",
+  "dataset": "forest",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Betrinken für den Regenwald?",
+          "",
+          "Eine große deutsche Brauerei warb vor einigen Jahren damit, für jeden verkauften Bierkasten einen Quadratmeter Regenwald zu retten. Am Ende wurden so nach Unternehmensangaben 14 Quadratkilometer Wald geschützt.",
+          "",
+          "**Gleichzeitig wird an anderen Orten weiter abgeholzt. Schätzen Sie: Wie schnell gehen weltweit 14 Quadratkilometer Wald verloren?**"
+        ],
+        "en": [
+          "",
+          "",
+          "",
+          "",
+          "** **"
+        ]
+      }
+    },{
+      "input": {
+        "key": "forestLoss",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["forestLossChoice_1", { "de": "In 4 Sekunden", "en": "" }],
+            ["forestLossChoice_2", { "de": "In 4 Minuten", "en": ""}],
+            ["forestLossChoice_3", { "de": "In 4 Stunden", "en": "" }],
+            ["forestLossChoice_4", { "de": "In 4 Tagen", "en": ""}]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "forestLossSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.forestLoss && !i.forestLossSubmitted",
+          "!i.forestLossSubmitted && 'notSubmitted'",
+          "f.setDataset('forest')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.forestLoss"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "forestLossChoice_1": {
+            "de": [
+              "Ganz so schnell geht es nicht. Es dauert etwa 4 Stunden bis die Fläche der Brauerei-Aktion andernorts wieder abgeholzt wurde. Der Globus zeigt Ihnen, welches Land wie viel Wald besitzt."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "forestLossChoice_2": {
+            "de": [
+              "Ganz so schnell geht es nicht. Es dauert etwa 4 Stunden bis die Fläche der Brauerei-Aktion andernorts wieder abgeholzt wurde. Der Globus zeigt Ihnen, welches Land wie viel Wald besitzt."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "forestLossChoice_3": {
+            "de": [
+              "Richtig. Es dauert etwa 4 Stunden bis die Fläche der Brauerei-Aktion andernorts wieder abgeholzt wurde. Der Globus zeigt Ihnen, welches Land wie viel Wald besitzt."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "forestLossChoice_4": {
+            "de": [
+              "Nein, schneller. Es dauert etwa 4 Stunden bis die Fläche der Brauerei-Aktion andernorts wieder abgeholzt wurde. Der Globus zeigt Ihnen, welches Land wie viel Wald besitzt."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
