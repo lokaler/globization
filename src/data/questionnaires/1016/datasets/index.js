@@ -17,7 +17,7 @@ export default [
     "fixed": 1,
     "domain": [
       0,
-      100
+      90
     ],
     "skala": [
       0,
