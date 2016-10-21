@@ -27,8 +27,8 @@
         "options": {
           "choices": [
             ["amountRedlistChoice_1", { "de": "Sri Lanka", "en": "" }],
-            ["amountRedlistChoice_2", { "de": "Indien", "en": ""}],
-            ["amountRedlistChoice_3", { "de": "USA", "en": "" }]
+            ["amountRedlistChoice_2", { "de": "Peru", "en": ""}],
+            ["amountRedlistChoice_3", { "de": "Zentralafrikanische Republik", "en": "" }]
           ]
         }
       }
