@@ -8,7 +8,7 @@ export default [
       "en": ""
     },
     "description": {
-      "de": "Legende: Waldfläche in Quadratkilometern",
+      "de": "Anteil der Landfläche, die mit Wald bedeckt ist (%)",
       "en": ""
     },
     "quelle": "FAO",
@@ -17,7 +17,7 @@ export default [
     "fixed": 1,
     "domain": [
       0,
-      9000000
+      90
     ],
     "skala": [
       0,
@@ -31,7 +31,7 @@ export default [
     "scale": 1,
     "colorSet": "Greens",
     "colorNum": 9,
-    "data": require('./00_Flaeche_Wald.csv')
+    "data": require('./00_Flaeche_Wald_Anteil.csv')
   },
   {
     "key": "amount_logging",
