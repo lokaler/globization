@@ -13,11 +13,11 @@
           "**Tippen Sie: Wie groß war der Anteil der Krebsmedikamente, die auf Grundlage natürlicher Ausgangsstoffe entwickelt wurden?**"
         ],
         "en": [
-          " # ",
+          " # Nature's uses",
           "",
+          "Why do we even need biodiversity? One reason is that nature is often the source of new medications. Researchers have studied the development of cancer medications approved for use between 1940 and 2014.",
           "",
-          "",
-          "****"
+          "**Take a guess: How large is the share of cancer medications developed on the basis of natural raw materials?**"
         ]
       }
     },{
@@ -65,7 +65,7 @@
               "Nein, größer. 77 Prozent der Medikamente hatten die Natur als Vorbild. "
             ],
             "en": [
-              ""
+              "No, it’s larger. 77 percent of the medications originated from natural sources."
             ]
           },
           "Antwort_amountMedicine2": {
@@ -73,7 +73,7 @@
               "Gut geschätzt. 77 Prozent der Medikamente hatten die Natur als Vorbild."
             ],
             "en": [
-              ""
+              "That’s a good guess.  77 percent of the medications originated from natural sources."
             ]
           },
           "Antwort_amountMedicine3": {
@@ -81,7 +81,7 @@
               "Das ist etwas zu viel. 77 Prozent der Medikamente hatten die Natur als Vorbild."
             ],
             "en": [
-              ""
+              "That’s a bit too high. 77 percent of the medications originated from natural sources."
             ]
           }
         }

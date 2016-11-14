@@ -13,11 +13,11 @@
           "**Gleichzeitig wird an anderen Orten weiter abgeholzt. Schätzen Sie: Wie schnell gehen weltweit 14 Quadratkilometer Wald verloren?**"
         ],
         "en": [
+          " # Getting drunk for the rainforest?",
           "",
+          "A few years ago, a major German brewery advertised a promotion claiming it would save one square meter of rainforest for each case of beer it sold. In the end, the company claimed it had protected 14 square kilometers of forest.",
           "",
-          "",
-          "",
-          "** **"
+          "**At the same time, deforestation is continuing elsewhere. How much time do you think it takes for 14 square kilometers of forest to be lost around the world?**"
         ]
       }
     },{
@@ -26,10 +26,10 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["forestLossChoice_1", { "de": "In 4 Sekunden", "en": "" }],
-            ["forestLossChoice_2", { "de": "In 4 Minuten", "en": ""}],
-            ["forestLossChoice_3", { "de": "In 4 Stunden", "en": "" }],
-            ["forestLossChoice_4", { "de": "In 4 Tagen", "en": ""}]
+            ["forestLossChoice_1", { "de": "In 4 Sekunden", "en": "4 seconds" }],
+            ["forestLossChoice_2", { "de": "In 4 Minuten", "en": "4 minutes"}],
+            ["forestLossChoice_3", { "de": "In 4 Stunden", "en": "4 hours" }],
+            ["forestLossChoice_4", { "de": "In 4 Tagen", "en": "4 days"}]
           ]
         }
       }
@@ -61,7 +61,7 @@
               "Ganz so schnell geht es nicht. Es dauert etwa 4 Stunden bis die Fläche der Brauerei-Aktion andernorts wieder abgeholzt wurde. Der Globus zeigt Ihnen, welches Land wie viel Wald besitzt."
             ],
             "en": [
-              ""
+              "It doesn’t happen quite that quickly. It takes about four hour for the area protected through the brewery promotion to be deforested elsewhere. The globe shows you the amount of forestland each country has."
             ]
           },
           "forestLossChoice_2": {
@@ -69,7 +69,7 @@
               "Ganz so schnell geht es nicht. Es dauert etwa 4 Stunden bis die Fläche der Brauerei-Aktion andernorts wieder abgeholzt wurde. Der Globus zeigt Ihnen, welches Land wie viel Wald besitzt."
             ],
             "en": [
-              ""
+              "It doesn’t happen quite that quickly. It takes about four hour for the area protected through the brewery promotion to be deforested elsewhere. The globe shows you the amount of forestland each country has."
             ]
           },
           "forestLossChoice_3": {
@@ -77,7 +77,7 @@
               "Richtig. Es dauert etwa 4 Stunden bis die Fläche der Brauerei-Aktion andernorts wieder abgeholzt wurde. Der Globus zeigt Ihnen, welches Land wie viel Wald besitzt."
             ],
             "en": [
-              ""
+              "Correct. It takes about four hour for the area protected through the brewery promotion to be deforested elsewhere. The globe shows you how much forestland each country has."
             ]
           },
           "forestLossChoice_4": {
@@ -85,7 +85,7 @@
               "Nein, schneller. Es dauert etwa 4 Stunden bis die Fläche der Brauerei-Aktion andernorts wieder abgeholzt wurde. Der Globus zeigt Ihnen, welches Land wie viel Wald besitzt."
             ],
             "en": [
-              ""
+              "No, it happens more quickly. It takes about four hour for the area protected through the brewery promotion to be deforested elsewhere. The globe shows you how much forestland each country has."
             ]
           }
         }
