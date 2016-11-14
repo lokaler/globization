@@ -5,11 +5,11 @@ export default [
     "key": "forest",
     "name": {
       "de": "Waldfläche",
-      "en": ""
+      "en": "Forest area"
     },
     "description": {
       "de": "Anteil der Landfläche, die mit Wald bedeckt ist (%)",
-      "en": ""
+      "en": "Share of land area covered by forest (%)"
     },
     "quelle": "FAO",
     "link": "http://data.un.org/Data.aspx?q=forest&d=FAO&f=itemCode:6661&c=2,3,4,5,6,7&s=countryName:asc,elementCode:asc,year:desc&v=1",
@@ -37,11 +37,11 @@ export default [
     "key": "amount_logging",
     "name": {
       "de": "Landfläche",
-      "en": ""
+      "en": "Land area"
     },
     "description": {
       "de": "Landfläche in Quadratkilometern",
-      "en": ""
+      "en": "Land area in square kilometers"
     },
     "quelle": "FAO",
     "link": "http://data.worldbank.org/indicator/AG.LND.TOTL.K2",
@@ -69,11 +69,11 @@ export default [
     "key": "deforestation",
     "name": {
       "de": "Abholzung",
-      "en": ""
+      "en": "Deforestation"
     },
     "description": {
       "de": "Entwaldete Fläche in Quadratkilometern pro Jahr",
-      "en": ""
+      "en": "Deforested areas in square kilometers per year"
     },
     "quelle": "FAO",
     "link": "http://data.un.org/Data.aspx?q=forest&d=FAO&f=itemCode:6661&c=2,3,4,5,6,7&s=countryName:asc,elementCode:asc,year:desc&v=1",
@@ -101,11 +101,11 @@ export default [
     "key": "biodiversity",
     "name": {
       "de": "Rote Liste",
-      "en": ""
+      "en": "Red List"
     },
     "description": {
       "de": "Rote-Liste-Index von 0 bis 1",
-      "en": ""
+      "en": "Red List Index from 0 to 1"
     },
     "quelle": "IUCN",
     "link": "http://data.un.org/Data.aspx?q=red+list+index&d=SDGs&f=series:ER_RSK_LST&c=2,3,11,13,14&s=ref_area_name:asc,time_period:desc&v=1",
@@ -133,11 +133,11 @@ export default [
     "key": "protected",
     "name": {
       "de": "Geschützte Flächen",
-      "en": ""
+      "en": "Protected Areas"
     },
     "description": {
       "de": "Anteil der für Artenvielfalt wichtigen Flächen, die unter Schutz stehen (%)",
-      "en": ""
+      "en": "Share of areas important to biodiversity that have been placed under protection (%)"
     },
     "quelle": "UNEP",
     "link": "http://data.un.org/Data.aspx?q=biodiversity&d=SDGs&f=series:ER_PTD_TERR&c=2,3,11,13,14&s=ref_area_name:asc,time_period:desc&v=1",
@@ -165,11 +165,11 @@ export default [
     "key": "developmentaid",
     "name": {
       "de": "Entwicklungshilfe",
-      "en": ""
+      "en": "Development aid"
     },
     "description": {
       "de": "Entwicklungshilfe für Artenvielfalt im Jahr 2014 in US-Dollar",
-      "en": ""
+      "en": "Development aid for biodiversity in 2014, in US dollars"
     },
     "quelle": "OECD",
     "link": "http://data.un.org/Data.aspx?q=biodiversity&d=SDGs&f=series:DC_ODA_BDVDL&c=2,3,11,13,14&s=ref_area_name:asc,time_period:desc&v=1",

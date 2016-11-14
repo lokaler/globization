@@ -13,11 +13,11 @@
           "**Was glauben Sie: In welchem der folgenden Länder ist die Artenvielfalt am stärksten gefährdet?**"
         ],
         "en": [
+          " # Where biodiversity is threatened",
           "",
+          "24,000 flora and fauna species are currently on the global Red List Index and threatened with extinction. The Red List allows a comparison between individual countries.",
           "",
-          "",
-          "",
-          "** **"
+          "**What do you think? In which of the following countries is biodiversity most imperilled?**"
         ]
       }
     },{
@@ -26,9 +26,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["amountRedlistChoice_1", { "de": "Sri Lanka", "en": "" }],
-            ["amountRedlistChoice_2", { "de": "Peru", "en": ""}],
-            ["amountRedlistChoice_3", { "de": "Zentralafrikanische Republik", "en": "" }]
+            ["amountRedlistChoice_1", { "de": "Sri Lanka", "en": "Sri Lanka" }],
+            ["amountRedlistChoice_2", { "de": "Peru", "en": "Peru"}],
+            ["amountRedlistChoice_3", { "de": "Zentralafrikanische Republik", "en": "Central African Republic" }]
           ]
         }
       }
@@ -61,7 +61,7 @@
               "Richtig. In Sri Lanka beträgt der Rote-Liste-Index nur 0,57. Bei einem Wert von 0 sind alle Arten ausgestorben, bei 1 ist die Artenvielfalt gar nicht gefährdet. Erkunden Sie den Index weiterer Länder im Globus."
             ],
             "en": [
-              ""
+              "Correct. Sri Lanka has a value of only 0.57 on the Red List. A value of 0 means that all species have gone extinct, whereas a value of 1 means that biodiversity is not threatened in any way. You can explore data about other countries on the globe."
             ]
           },
           "amountRedlistChoice_2": {
@@ -69,7 +69,7 @@
               "Leider falsch. Sri Lanka wäre richtig gewesen. Dort beträgt der Rote-Liste- Index nur 0,57. Bei einem Wert von 0 sind alle Arten ausgestorben, bei 1 ist die Artenvielfalt gar nicht gefährdet. Erkunden Sie den Index weiterer Länder im Globus."
             ],
             "en": [
-              ""
+              "That’s unfortunately wrong. The correct answer is Sri Lanka, which has a value of only 0.57 on the Red List Index. A value of 0 means that all species have gone extinct, whereas a value of 1 means that biodiversity is not threatened in any way. You can explore data about other countries on the globe."
             ]
           },
           "amountRedlistChoice_3": {
@@ -77,7 +77,7 @@
               "Leider falsch. Sri Lanka wäre richtig gewesen. Dort beträgt der Rote-Liste- Index nur 0,57. Bei einem Wert von 0 sind alle Arten ausgestorben, bei 1 ist die Artenvielfalt gar nicht gefährdet. Erkunden Sie den Index weiterer Länder im Globus."
             ],
             "en": [
-              ""
+              "That’s unfortunately wrong. The correct answer is Sri Lanka, which has a value of only 0.57 on the Red List Index. A value of 0 means that all species have gone extinct, whereas a value of 1 means that biodiversity is not threatened in any way. You can explore data about other countries on the globe."
             ]
           }
         }
