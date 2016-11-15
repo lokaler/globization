@@ -23,8 +23,8 @@
         "answerContext": {
           "twitterShare": "f.shareButtonTwitter('http://spon.de/aeOvC', 'Interaktives Quiz: Wo Arten verloren gehen. #ÜberMorgen')",
           "facebookShare": "f.shareButtonFacebook('http://spon.de/aeOvC', 'Interaktives Quiz: Wo Arten verloren gehen - und ob Bier trinken dagegen hilft. #ÜberMorgen')",
-          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeOEc', 'Interactive Globe: Europeans love to travel, but how sustainable are their trips? #beyondtomorrow')",
-          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeOEc', 'Interactive Globe: Europeans love to travel, but how sustainable are their trips? #beyondtomorrow')"
+          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeOEc', 'Interactive Quiz: Where Species Are Going Extinct #beyondtomorrow')",
+          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeOEc', 'Interactive Quiz: Where Species Are Going Extinct #beyondtomorrow')"
         },
 
         "templates": {
@@ -48,7 +48,7 @@
           ""
         ],
         "en": [
-          "Go ahead and explore the data sets."
+          "You can explore the data at your own pace here:"
         ]
       }
     },

@@ -8,16 +8,16 @@
         "de": [
           " # Geld für die Artenvielfalt",
           "",
-          "Viele Industrieländer fördern zudem Projekte zum Erhalt der Artenvielfalt in Entwicklungs- und Schwellenländern. Diese Entwicklungshilfe floss im Jahr 2014 vor allem auf die Philippinen, nach Indien und in die Türkei. ",
+          "Viele Industrieländer fördern zudem Projekte zum Erhalt der Artenvielfalt in Entwicklungs- und Schwellenländern. Diese Entwicklungshilfe floss im Jahr 2014 vor allem auf die Philippinen, nach Indien und in die Türkei.",
           "",
           "**Tippen Sie: Wer hat am meisten in den Fördertopf eingezahlt?**"
         ],
         "en": [
+          " # Funding for biodiversity",
           "",
+          "Many industrialized nations are also backing projects aimed at preserving biodiversity in developing and emerging nations. During 2014, much of this development aid flowed to the Philippines, India and Turkey.",
           "",
-          "",
-          "",
-          "** **"
+          "**Take a guess: Which country provided the most money to these funds?**"
         ]
       }
     },{
@@ -26,9 +26,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["amountDevpolChoice_1", { "de": "USA", "en": "" }],
-            ["amountDevpolChoice_2", { "de": "Deutschland", "en": ""}],
-            ["amountDevpolChoice_3", { "de": "Norwegen", "en": "" }]
+            ["amountDevpolChoice_1", { "de": "USA", "en": "USA" }],
+            ["amountDevpolChoice_2", { "de": "Deutschland", "en": "Germany"}],
+            ["amountDevpolChoice_3", { "de": "Norwegen", "en": "Norway" }]
           ]
         }
       }
@@ -61,7 +61,7 @@
               "Richtig, die USA haben 2014 rund 1,233 Milliarden US-Dollar für Artenvielfalt ausgegeben. Deutschland folgt knapp dahinter auf Platz 2 mit 1,229 Milliarden US-Dollar."
             ],
             "en": [
-              ""
+              "Correct. The US contributed around $1.233 billion to efforts to preserve biodiversity in 2014. Germany trailed just slightly in second place with $1.229 billion in contributions."
             ]
           },
           "amountDevpolChoice_2": {
@@ -69,7 +69,7 @@
               "Ganz knapp daneben. Deutschland hat 1,229 Milliarden US-Dollar eingezahlt - die Vereinigten Staaten mit 1,233 Milliarden US-Dollar jedoch noch etwas mehr."
             ],
             "en": [
-              ""
+              "That’s not quite right. Although Germany paid in $1.229 billion, it was still surpassed slightly by the United States, which contributed $1.233 billion."
             ]
           },
           "amountDevpolChoice_3": {
@@ -77,7 +77,7 @@
               "Leider falsch. Norwegen zahlt zwar gemessen an seiner Wirtschaftskraft am meisten ein. Die USA haben 2014 mit rund 1,233 Milliarden US-Dollar jedoch den größten absoluten Betrag für Artenvielfalt ausgegeben. Deutschland folgt knapp dahinter auf Platz 2 mit 1,229 Milliarden US-Dollar."
             ],
             "en": [
-              ""
+              "Unfortunately, that is incorrect. Norway does in fact contribute the most relative to its economic strength, but with the payment of $1.233 billion, the US made the single biggest contribution to biodiversity in 2014. Germany trailed just slightly in second place with $1.229 billion in contributions."
             ]
           }
         }

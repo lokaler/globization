@@ -13,11 +13,11 @@
           "**Schätzen Sie, wieviel Prozent dieser Flächen in Deutschland tatsächlich schon unter Schutz stehen.**"
         ],
         "en": [
-          " # ",
+          " # Well-protected",
           "",
-          ".",
+          "Protecting spaces from human interference is considered one of the most important means for preserving biodiversity. That’s why the UN included it as one of its sustainable development goals. As part of that effort, land was identified in each country that should be protected -- in the form of national parks, for example.",
           "",
-          "****"
+          "**Guess what percentage of these areas identified in Germany have already been given protected status.**"
         ]
       }
     },{
@@ -65,7 +65,7 @@
               "Nein, Deutschland ist schon etwas weiter und hat 33 Prozent der schützenswerten Flächen bereits unter Schutz gestellt. Der von Ihnen eingegebene Wert entspricht am ehesten dem Status in **{{ ProtectedAreaCountry }}**."
             ],
             "en": [
-              ""
+              "No, Germany has already progressed a little further, with 33 percent of its areas worthy of protection already bestowed with that status. The country which comes closest to your guess is **{{ ProtectedAreaCountry }}**."
             ]
           },
           "Antwort_ProtectedArea2": {
@@ -73,7 +73,7 @@
               "Gut geschätzt. Bisher wurden 33 Prozent der schützenswerten Flächen unter Schutz gestellt. Erkunden Sie im Globus den Status in anderen Ländern."
             ],
             "en": [
-              ""
+              "That’s a good guess. So far, 33 percent of areas identified as being worthy of protection have been provided with that status. You can explore data pertaining to other countries using the globe."
             ]
           },
           "Antwort_ProtectedArea3": {
@@ -81,7 +81,7 @@
               "Nein, so weit ist Deutschland noch nicht. Bisher wurden 33 Prozent der schützenswerten Flächen unter Schutz gestellt. Der von Ihnen eingegebene Wert entspricht am ehesten dem Status in **{{ ProtectedAreaCountry }}**."
             ],
             "en": [
-              ""
+              "No, Germany hasn’t made that much progress yet. So far, 33 percent of areas identified as being worthy of protection have been provided with that status. The country which comes closest to your guess is **{{ ProtectedAreaCountry }}**."
             ]
           }
         }
