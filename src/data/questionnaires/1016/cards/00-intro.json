@@ -18,7 +18,7 @@
           "# BeyondTomorrow Explorer",
           "",
 
-          "Millions of animal and plant species live on Earth, but humanity is threatening this diversity. Where is habitat being lost the quickest? Which countries are undertaking efforts to protect biodiversity? And is it worthwhile to drink beer for the rainforest? Test your knowledge by clicking on \"Let's Get Started.\"",
+          "Millions of animal and plant species live on Earth, but humanity is threatening this diversity. Where is habitat being lost the quickest? Which countries are undertaking efforts to protect biodiversity? And is it worthwhile to drink beer to save the rainforest? Test your knowledge by clicking on \"Let's Get Started.\"",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
         ]

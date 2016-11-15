@@ -22,7 +22,6 @@ export default [
     "skala": [
       0,
       3
-
     ],
     "translate": [
       0,
@@ -161,7 +160,7 @@ export default [
     "colorNum": 9,
     "data": require('./04_Proportion_Protected.csv')
   },
-       {
+  {
     "key": "developmentaid",
     "name": {
       "de": "Entwicklungshilfe",
@@ -182,7 +181,6 @@ export default [
     "skala": [
       0,
       3
-
     ],
     "translate": [
       0,
