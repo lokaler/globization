@@ -174,6 +174,7 @@ export default [
     "link": "http://data.un.org/Data.aspx?q=biodiversity&d=SDGs&f=series:DC_ODA_BDVDL&c=2,3,11,13,14&s=ref_area_name:asc,time_period:desc&v=1",
     "unit": "",
     "fixed": 1,
+    "legendCorner": true,
     "domain": [
       0,
       900000000
