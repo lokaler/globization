@@ -101,20 +101,19 @@ let questionnaires = {
     },
     cards: cards1016,
     datasets: datasets1016
+  },
+  1116: {
+    title: {
+      de: 'Bildung',
+      en: 'education'
+    },
+    options: {
+      showBackButton: true,
+      lastButtonLabel: 'explore'
+    },
+    cards: cards1116,
+    datasets: datasets1116
   }
-};
-1116: {
-  title: {
-    de: 'Bildung',
-    en: 'education'
-  },
-  options: {
-    showBackButton: true,
-    lastButtonLabel: 'explore'
-  },
-  cards: cards1116,
-  datasets: datasets1116
-}
 };
 
 for (const questionnaire of Object.values(questionnaires)) {
