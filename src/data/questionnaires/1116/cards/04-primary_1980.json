@@ -1,0 +1,91 @@
+{
+  "key": "school_1980",
+  "title": "4. Karte - #Schulzeit",
+  "dataset": "edu_money",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Ein Blick zurück",
+          "",
+          "Früher war alles besser - das wird vor allem im Bereich Schule oft behauptet. Aber stimmt das? Machen wir eine Zeitreise nach Marokko im Jahr 1980.",
+          "",
+          "**Tippen Sie: Wie viel Prozent der 15- bis 19-Jährigen haben im Jahr 1980 in Marokko nicht einmal eine Grundschule besucht?**"
+        ],
+        "en": [
+          " #",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderSchoolHistoric",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountSchoolHistoricSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderSchoolHistoric && !i.AmountSchoolHistoricSubmitted",
+          "!i.AmountSchoolHistoricSubmitted && 'notSubmitted'",
+          "f.setDataset('edu_1980')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderSchoolHistoric <= 68 && f.panToCountry(f.getISO('edu_1980', i.sliderSchoolHistoric))) && 'Antwort_SchoolHistoric1'",
+          "(i.sliderSchoolHistoric >= 69 && i.sliderSchoolHistoric <= 82 && f.panToCountry('MAR')) && 'Antwort_SchoolHistoric2'",
+          "(i.sliderSchoolHistoric >= 83 && f.panToCountry(f.getISO('edu_1980', i.sliderSchoolHistoric))) && 'Antwort_SchoolHistoric3'"
+        ],
+        "answerContext": {
+          "SchoolHistoricCountry" : "f.getCountryName('edu_1980', i.sliderSchoolHistoric, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_SchoolHistoric1": {
+            "de": [
+              "Da haben Sie zu positiv getippt. Rund 76 Prozent der 15- bis 19-Jährigen haben 1980 in Marokko nicht einmal eine Grundschule besucht. Der von Ihnen getippte Wert entsprach am ehesten der Situation in **{{ SchoolHistoricCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_SchoolHistoric2": {
+            "de": [
+              "Guter Tipp. Rund 76 Prozent der 15- bis 19-Jährigen haben 1980 in Marokko nicht einmal eine Grundschule besucht."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_SchoolHistoric3": {
+            "de": [
+              "Da haben Sie etwas zu negativ getippt. Rund 76 Prozent der 15- bis 19-Jährigen haben 1980 in Marokko nicht einmal eine Grundschule besucht. Der von Ihnen getippte Wert entsprach am ehesten der Situation in **{{ SchoolHistoricCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

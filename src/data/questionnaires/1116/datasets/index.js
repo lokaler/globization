@@ -2,18 +2,18 @@
 
 export default [
   {
-    "key": "forest",
+    "key": "noschool",
     "name": {
-      "de": "Waldfläche",
-      "en": "Forest area"
+      "de": "Keine Schule",
+      "en": ""
     },
     "description": {
-      "de": "Anteil der Landfläche, die mit Wald bedeckt ist (%)",
-      "en": "Share of land area covered by forest (%)"
+      "de": "Anteil der 9- bis 12-Jährigen, die nie eine Schule besucht haben (in %)",
+      "en": ""
     },
-    "quelle": "FAO",
-    "link": "http://data.un.org/Data.aspx?q=forest&d=FAO&f=itemCode:6661&c=2,3,4,5,6,7&s=countryName:asc,elementCode:asc,year:desc&v=1",
-    "unit": "",
+    "quelle": "World Inequality Database on Education",
+    "link": "http://www.education-inequalities.org/indicators/edu0_prim#?sort=mean&dimension=all&group=all&age_group=edu0_prim&countries=all",
+    "unit": "%",
     "fixed": 1,
     "domain": [
       0,
@@ -28,27 +28,27 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Greens",
+    "colorSet": "Blues",
     "colorNum": 9,
-    "data": require('./00_Flaeche_Wald_Anteil.csv')
+    "data": require('./00_no_school.csv')
   },
   {
-    "key": "amount_logging",
+    "key": "years_schooling",
     "name": {
-      "de": "Landfläche",
-      "en": "Land area"
+      "de": "Schulzeit",
+      "en": ""
     },
     "description": {
-      "de": "Landfläche in Quadratkilometern",
-      "en": "Land area in square kilometers"
+      "de": "Durchschnittliche Schulzeit in Jahren",
+      "en": ""
     },
-    "quelle": "FAO",
-    "link": "http://data.worldbank.org/indicator/AG.LND.TOTL.K2",
+    "quelle": "World Inequality Database on Education",
+    "link": "http://www.education-inequalities.org/indicators/eduyears#?sort=disparity&dimension=wealth_quintile&group=|Quintile%205|Quintile%201&age_group=eduyears_20&countries=all",
     "unit": "",
     "fixed": 1,
     "domain": [
       0,
-      18000000
+      18
     ],
     "skala": [
       0,
@@ -60,27 +60,27 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Greens",
+    "colorSet": "Blues",
     "colorNum": 9,
-    "data": require('./01_FAO_Land_Flaechen.csv')
+    "data": require('./01_years_schooling.csv')
   },
    {
-    "key": "deforestation",
+    "key": "school_poor",
     "name": {
-      "de": "Abholzung",
-      "en": "Deforestation"
+      "de": "Schulzeit Arme",
+      "en": ""
     },
     "description": {
-      "de": "Entwaldete Fläche in Quadratkilometern pro Jahr",
-      "en": "Deforested areas in square kilometers per year"
+      "de": "Durchschnittliche Schulzeit von Kindern der ärmsten zehn Prozent in Jahren",
+      "en": ""
     },
-    "quelle": "FAO",
-    "link": "http://data.un.org/Data.aspx?q=forest&d=FAO&f=itemCode:6661&c=2,3,4,5,6,7&s=countryName:asc,elementCode:asc,year:desc&v=1",
+    "quelle": "World Inequality Database on Education",
+    "link": "http://www.education-inequalities.org/indicators/eduyears#?sort=disparity&dimension=wealth_quintile&group=|Quintile%205|Quintile%201&age_group=eduyears_20&countries=all",
     "unit": "",
     "fixed": 1,
     "domain": [
       0,
-      18000
+      18
     ],
     "skala": [
       0,
@@ -92,27 +92,27 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Greens",
+    "colorSet": "Blues",
     "colorNum": 9,
-    "data": require('./02_FAO_Wald_Abholzung.csv')
+    "data": require('./02_years_schooling_poor.csv')
   },
    {
-    "key": "biodiversity",
+    "key": "edu_money",
     "name": {
-      "de": "Rote Liste",
-      "en": "Red List"
+      "de": "Geld für Bildung",
+      "en": ""
     },
     "description": {
-      "de": "Rote-Liste-Index von 0 bis 1",
-      "en": "Red List Index from 0 to 1"
+      "de": "Staatliche Ausgaben für Bildung in Prozent der Wirtschaftskraft",
+      "en": ""
     },
-    "quelle": "IUCN",
-    "link": "http://data.un.org/Data.aspx?q=red+list+index&d=SDGs&f=series:ER_RSK_LST&c=2,3,11,13,14&s=ref_area_name:asc,time_period:desc&v=1",
-    "unit": "",
+    "quelle": "UNESCO",
+    "link": "http://data.uis.unesco.org/Index.aspx?queryid=181",
+    "unit": "&",
     "fixed": 1,
     "domain": [
       0,
-      .99
+      9
     ],
     "skala": [
       0,
@@ -124,23 +124,23 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Greens",
+    "colorSet": "Blues",
     "colorNum": 9,
-    "data": require('./03_Red_List_Index.csv')
+    "data": require('./03_spending_GDP.csv')
   },
      {
-    "key": "protected",
+    "key": "edu_1980",
     "name": {
-      "de": "Geschützte Flächen",
-      "en": "Protected Areas"
+      "de": "Grundschule 1980",
+      "en": ""
     },
     "description": {
-      "de": "Anteil der für Artenvielfalt wichtigen Flächen, die unter Schutz stehen (%)",
-      "en": "Share of areas important to biodiversity that have been placed under protection (%)"
+      "de": "Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht hat, im Jahr 1980",
+      "en": ""
     },
-    "quelle": "UNEP",
-    "link": "http://data.un.org/Data.aspx?q=biodiversity&d=SDGs&f=series:ER_PTD_TERR&c=2,3,11,13,14&s=ref_area_name:asc,time_period:desc&v=1",
-    "unit": "",
+    "quelle": "Wittgenstein Centre for Demography and Global Human Capital",
+    "link": "http://witt.null2.net/shiny/wic/",
+    "unit": "%",
     "fixed": 1,
     "domain": [
       0,
@@ -156,22 +156,54 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Greens",
+    "colorSet": "Blues",
     "colorNum": 9,
-    "data": require('./04_Proportion_Protected.csv')
+    "data": require('./04_primary_attainment_1980.csv')
   },
   {
-    "key": "developmentaid",
+    "key": "edu_2015",
     "name": {
-      "de": "Entwicklungshilfe",
-      "en": "Development aid"
+      "de": "Grundschule 2015",
+      "en": ""
     },
     "description": {
-      "de": "Entwicklungshilfe für Artenvielfalt im Jahr 2014 in US-Dollar",
-      "en": "Development aid for biodiversity in 2014, in US dollars"
+      "de": "Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht hat, im Jahr 2015",
+      "en": ""
     },
-    "quelle": "OECD",
-    "link": "http://data.un.org/Data.aspx?q=biodiversity&d=SDGs&f=series:DC_ODA_BDVDL&c=2,3,11,13,14&s=ref_area_name:asc,time_period:desc&v=1",
+    "quelle": "Wittgenstein Centre for Demography and Global Human Capital",
+    "link": "http://witt.null2.net/shiny/wic/",
+    "unit": "%",
+    "fixed": 1,
+    "legendCorner": true,
+    "domain": [
+      0,
+      90
+    ],
+    "skala": [
+      0,
+      3
+    ],
+    "translate": [
+      0,
+      90
+    ],
+    "scale": 1,
+    "colorSet": "Blues",
+    "colorNum": 9,
+    "data": require('./05_primary_attainment_2015.csv')
+  },
+  {
+    "key": "edu_2015",
+    "name": {
+      "de": "Grundschule 2015",
+      "en": ""
+    },
+    "description": {
+      "de": "Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht hat, im Jahr 2015",
+      "en": ""
+    },
+    "quelle": "Wittgenstein Centre for Demography and Global Human Capital",
+    "link": "http://witt.null2.net/shiny/wic/",
     "unit": "",
     "fixed": 1,
     "legendCorner": true,
@@ -188,9 +220,75 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Greens",
+    "colorSet": "Blues",
     "colorNum": 9,
-    "data": require('./05_Development_assistance.csv')
+    "data": require('./05_primary_attainment_2015.csv')
+  },
+  {
+    "key": "edu_all",
+    "name": {
+      "de": "Bildung für alle",
+      "en": ""
+    },
+    "description": {
+      "de": "Jahr, in dem der Anteil der 15- bis 19-Jährigen ohne Grundschulbesuch unter fünf Prozent fällt",
+      "en": ""
+    },
+    "quelle": "Wittgenstein Centre for Demography and Global Human Capital",
+    "link": "http://witt.null2.net/shiny/wic/",
+    "unit": "",
+    "fixed": 1,
+    "legendCorner": true,
+    "domain": [
+      2020,
+      2100
+    ],
+    "skala": [
+      0,
+      3
+    ],
+    "translate": [
+      0,
+      90
+    ],
+    "scale": 1,
+    "colorSet": "Blues",
+    "colorNum": 9,
+    "data": require('./06_sdg_goal_reached.csv')
+  },
+  {
+    "key": "computer_skills",
+    "name": {
+      "de": "Bildung für alle",
+      "en": ""
+    },
+    "description": {
+      "de": "Anteil der Erwachsenen, die eine Datei oder einen Ordner auf einem Computer verschieben können",
+      "en": ""
+    },
+    "quelle": "Uno",
+    "link": "http://data.un.org/Data.aspx?q=ICT&d=SDGs&f=series%3aSE_ADT_ICTCPY",
+    "unit": "%",
+    "fixed": 1,
+    "legendCorner": true,
+    "domain": [
+      0,
+      90
+    ],
+    "skala": [
+      0,
+      3
+    ],
+    "translate": [
+      0,
+      90
+    ],
+    "scale": 1,
+    "colorSet": "Blues",
+    "colorNum": 9,
+    "data": require('./07_computer_skills.csv')
   }
+
+
 
 ];

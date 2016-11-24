@@ -1,0 +1,91 @@
+{
+  "key": "education2015",
+  "title": "6. Karte - #Schulzeit",
+  "dataset": "edu_all",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Ein Blick nach vorne",
+          "",
+          "Laut der Uno-Nachhaltigkeitsziele soll im Jahr 2030 jedes Kind auf der Welt eine Grundschule und eine weiterführende Schule besucht haben. Bleiben wir bei der Grundschule. Hier gilt das Ziel als erreicht, wenn der Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht haben, unter fünf Prozent gefallen ist.",
+          "",
+          "**Was glauben Sie: Wenn die Entwicklung so weitergeht wie bisher, in welchem Jahr wird das Ziel tatsächlich erreicht?**"
+        ],
+        "en": [
+          " #",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderSchoolFuture",
+        "type": "slider",
+        "options": {
+          "unit": "Jahr",
+          "min": 2020,
+          "value": 5,
+          "max": 2100,
+          "step": 2050
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountSchoolFutureSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderSchoolFuture && !i.AmountSchoolFutureSubmitted",
+          "!i.AmountSchoolFutureSubmitted && 'notSubmitted'",
+          "f.setDataset('edu_all')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderSchoolFuture <= 2049 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture1'",
+          "(i.sliderSchoolFuture >= 2050 && i.sliderSchoolFuture <= 2069 && 'Antwort_SchoolFuture2'",
+          "(i.sliderSchoolFuture >= 2070 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture3'"
+        ],
+        "answerContext": {
+          "SchoolFutureCountry" : "f.getCountryName('edu_all', i.sliderSchoolFuture, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_SchoolFuture1": {
+            "de": [
+              "Nein, so schnell war der Fortschritt in Marokko nicht. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Trotzdem: Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte. Der von Ihnen getippte Wert entsprach am ehesten der Situation in **{{ SchoolFutureCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_SchoolFuture2": {
+            "de": [
+              "Gut getippt. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_SchoolFuture3": {
+            "de": [
+              "Nein, weniger. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte. Der von Ihnen getippte Wert entsprach am ehesten der Situation in  **{{ SchoolFutureCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
