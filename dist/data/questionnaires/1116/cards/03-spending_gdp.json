@@ -1,0 +1,96 @@
+{
+  "key": "spending_edu",
+  "title": "3. Karte - spending_edu",
+  "dataset": "school_poor",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wie viel die Staaten zahlen",
+          "",
+          "Länder rund um den Globus geben bis zu acht Prozent ihrer Wirtschaftskraft für Bildung aus. In Europa sind Finnland und Schweden mit bis zu 7,7 Prozent führend.",
+          "",
+          "**Welches asiatische Land gibt proportional genauso viel Geld für Bildung aus wie Schweden?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          ".",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "amountSpendingEdu",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["amountSpendingEduChoice_1", { "de": "Hongkong", "en": "" }],
+            ["amountSpendingEduChoice_2", { "de": "Osttimor", "en": ""}],
+            ["amountSpendingEduChoice_3", { "de": "Singapur", "en": ""}],
+            ["amountSpendingEduChoice_4", { "de": "Bangladesh", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "amountSpendingEduSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.amountSpendingEdu && !i.amountSpendingEduSubmitted",
+          "!i.amountSpendingEduSubmitted && 'notSubmitted'",
+          "f.setDataset('edu_money')",
+          "f.panToCountry('TLS') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.amountSpendingEdu"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "amountSpendingEduChoice_1": {
+            "de": [
+              "Nein. Im Kongo schrumpft der Wald zwar, aber mit 154 Quadratkilometern pro Jahr deutlich langsamer als in Brasilien. Dort verlieren die Wälder fast 10.000 Quadratkilometer pro Jahr. "
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountSpendingEduChoice_2": {
+            "de": [
+              "Richtig. Gut 10.000 Quadratkilometer gehen in Brasilien jedes Jahr verloren - so viel wie nirgendwo sonst auf der Welt."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountSpendingEduChoice_3": {
+            "de": [
+              "Richtig. Gut 10.000 Quadratkilometer gehen in Brasilien jedes Jahr verloren - so viel wie nirgendwo sonst auf der Welt."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountSpendingEduChoice_4": {
+            "de": [
+              "Zwar schrumpft der Wald in Russland, noch stärker jedoch in Brasilien. Dort gehen jedes Jahr rund 10.000 Quadratkilometer verloren."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

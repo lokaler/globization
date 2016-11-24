@@ -1,0 +1,91 @@
+{
+  "key": "school_attendance",
+  "title": "1. Karte - #Schulzeit",
+  "dataset": "noschool",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Schulzeit",
+          "",
+          "Wie lange sind Sie zur Schule gegangen? Neun Jahre bis zum Hauptschul-abschluss? Oder doch 13 Jahre bis zum Abitur? Während der Schulbesuch in Deutschland Pflicht ist, gehen Kinder in anderen Ländern gar nicht oder nur sehr kurz zur Schule.",
+          "",
+          "**Schätzen Sie: Wieviele Jahre geht ein Kind in Nigeria durchschnittlich zur Schule?**"
+        ],
+        "en": [
+          " #",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderAttendance",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 4,
+          "max": 13,
+          "step": 0.1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountAttendanceSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderAttendance && !i.AmountAttendanceSubmitted",
+          "!i.AmountAttendanceSubmitted && 'notSubmitted'",
+          "f.setDataset('school_poor')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderAttendance <= 7 && f.panToCountry(f.getISO('school_poor', i.sliderAttendance))) && 'Antwort_Attendance1'",
+          "(i.sliderAttendance >= 8 && i.sliderAttendance <= 9 && f.panToCountry('NGA')) && 'Antwort_Attendance2'",
+          "(i.sliderAttendance >= 10 && f.panToCountry(f.getISO('school_poor', i.sliderAttendance))) && 'Antwort_Attendance3'"
+        ],
+        "answerContext": {
+          "AttendanceCountry" : "f.getCountryName('school_poor', i.sliderAttendance, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_Attendance1": {
+            "de": [
+              "Nein, mehr. Die durchschnittliche Schulzeit in Nigeria beträgt 7,7 Jahre. Der von Ihnen getippte Wert entspricht am ehesten der Schulzeit in **{{ AttendanceCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_Attendance2": {
+            "de": [
+              "Gut geschätzt. Die durchschnittliche Schulzeit in Nigeria beträgt 7,7 Jahre."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_Attendance3": {
+            "de": [
+              "Nein, ganz so lange gehen die Kinder in Nigeria nicht zur Schule. Die durchschnittliche Schulzeit dort beträgt 7,7 Jahre. Der von Ihnen getippte Wert entspricht am ehesten der Schulzeit in **{{ AttendanceCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
