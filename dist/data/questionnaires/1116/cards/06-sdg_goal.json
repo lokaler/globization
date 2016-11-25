@@ -8,9 +8,9 @@
         "de": [
           " # Ein Blick nach vorne",
           "",
-          "Laut der Uno-Nachhaltigkeitsziele soll im Jahr 2030 jedes Kind auf der Welt eine Grundschule und eine weiterführende Schule besucht haben. Bleiben wir bei der Grundschule. Hier gilt das Ziel als erreicht, wenn der Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht haben, unter fünf Prozent gefallen ist.",
+          "Laut der Uno-Nachhaltigkeitsziele soll **in 15 Jahren** jedes Kind auf der Welt eine Grundschule und eine weiterführende Schule besucht haben. Bleiben wir bei der Grundschule. Hier gilt das Ziel als erreicht, wenn der Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht haben, unter fünf Prozent gefallen ist.",
           "",
-          "**Was glauben Sie: Wenn die Entwicklung so weitergeht wie bisher, in welchem Jahr wird das Ziel tatsächlich erreicht?**"
+          "**Was glauben Sie: Wenn die Entwicklung so weitergeht wie bisher, in wie vielen Jahren wird das Ziel tatsächlich erreicht?**"
         ],
         "en": [
           " #",
@@ -25,11 +25,11 @@
         "key": "sliderSchoolFuture",
         "type": "slider",
         "options": {
-          "unit": "Jahr",
-          "min": 2020,
-          "value": 5,
-          "max": 2100,
-          "step": 2050
+          "unit": "Jahre",
+          "min": 0,
+          "value": 35,
+          "max": 85,
+          "step": 5
         }
       }
     },
@@ -47,9 +47,9 @@
           "f.setDataset('edu_all')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderSchoolFuture <= 2049 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture1'",
-          "(i.sliderSchoolFuture >= 2050 && i.sliderSchoolFuture <= 2069 && 'Antwort_SchoolFuture2'",
-          "(i.sliderSchoolFuture >= 2070 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture3'"
+          "(i.sliderSchoolFuture <= 34 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture1'",
+          "(i.sliderSchoolFuture >= 35 && i.sliderSchoolFuture <= 54 && 'Antwort_SchoolFuture2'",
+          "(i.sliderSchoolFuture >= 55 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture3'"
         ],
         "answerContext": {
           "SchoolFutureCountry" : "f.getCountryName('edu_all', i.sliderSchoolFuture, { case: 'default' })"
@@ -62,7 +62,7 @@
           },
           "Antwort_SchoolFuture1": {
             "de": [
-              "Nein, so schnell war der Fortschritt in Marokko nicht. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Trotzdem: Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte. Der von Ihnen getippte Wert entsprach am ehesten der Situation in **{{ SchoolFutureCountry }}**."
+              "Das wäre zwar wünschenswert, so schnell wird es aber nicht gehen. Erst 2060 wird der Anteil der 15- bis 19-Jährigen ohne Grundschulbesuch im weltweiten Durchschnitt unter fünf Prozent fallen. In einigen Ländern wird es noch deutlich länger dauern, wie der Globus zeigt. Ihr Tipp entspricht beispielsweise der Entwicklung in **{{ SchoolFutureCountry }}**."
             ],
             "en": [
               ""
@@ -70,7 +70,7 @@
           },
           "Antwort_SchoolFuture2": {
             "de": [
-              "Gut getippt. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte."
+              "Ziemlich gut. 2060 wird der Anteil der 15- bis 19-Jährigen ohne Grundschulbesuch im weltweiten Durchschnitt unter fünf Prozent fallen. In einigen Ländern wird es allerdings deutlich länger dauern, wie der Globus zeigt."
             ],
             "en": [
               ""
@@ -78,7 +78,7 @@
           },
           "Antwort_SchoolFuture3": {
             "de": [
-              "Nein, weniger. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte. Der von Ihnen getippte Wert entsprach am ehesten der Situation in  **{{ SchoolFutureCountry }}**."
+              "In einigen Ländern wird es so lange dauern, da haben Sie leider recht. Weltweit wird das Nachhaltigkeitsziel allerdings schon früher erreicht: Im Jahr 2060 wird der Anteil der 15- bis 19-Jährigen ohne Grundschulbesuch im weltweiten Durchschnitt unter fünf Prozent fallen. Ihr Tipp entspricht beispielsweise der Entwicklung in **{{ SchoolFutureCountry }}**."
             ],
             "en": [
               ""

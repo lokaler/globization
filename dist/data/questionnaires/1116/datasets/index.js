@@ -193,45 +193,13 @@ export default [
     "data": require('./05_primary_attainment_2015.csv')
   },
   {
-    "key": "edu_2015",
-    "name": {
-      "de": "Grundschule 2015",
-      "en": ""
-    },
-    "description": {
-      "de": "Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht hat, im Jahr 2015",
-      "en": ""
-    },
-    "quelle": "Wittgenstein Centre for Demography and Global Human Capital",
-    "link": "http://witt.null2.net/shiny/wic/",
-    "unit": "",
-    "fixed": 1,
-    "legendCorner": true,
-    "domain": [
-      0,
-      900000000
-    ],
-    "skala": [
-      0,
-      3
-    ],
-    "translate": [
-      0,
-      90
-    ],
-    "scale": 1,
-    "colorSet": "Blues",
-    "colorNum": 9,
-    "data": require('./05_primary_attainment_2015.csv')
-  },
-  {
     "key": "edu_all",
     "name": {
       "de": "Bildung für alle",
       "en": ""
     },
     "description": {
-      "de": "Jahr, in dem der Anteil der 15- bis 19-Jährigen ohne Grundschulbesuch unter fünf Prozent fällt",
+      "de": "Anzahl Jahre bis der Anteil der 15- bis 19-Jährigen ohne Grundschulbesuch unter fünf Prozent fällt",
       "en": ""
     },
     "quelle": "Wittgenstein Centre for Demography and Global Human Capital",
@@ -240,8 +208,8 @@ export default [
     "fixed": 1,
     "legendCorner": true,
     "domain": [
-      2020,
-      2100
+      0,
+      90
     ],
     "skala": [
       0,
@@ -259,7 +227,7 @@ export default [
   {
     "key": "computer_skills",
     "name": {
-      "de": "Bildung für alle",
+      "de": "Computer-Kenntnisse",
       "en": ""
     },
     "description": {
