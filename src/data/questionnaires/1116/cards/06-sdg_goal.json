@@ -46,10 +46,10 @@
           "!i.AmountSchoolFutureSubmitted && 'notSubmitted'",
           "f.setDataset('edu_all')",
           "f.isMobile() && f.setView('map')",
-          "!f.isMobile() && f.setView('globe')",
+          "!f.isMobile() && f.setView('map')",
           "(i.sliderSchoolFuture <= 30 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture1'",
-          "(i.sliderSchoolFuture >= 35 && i.sliderSchoolFuture <= 50 && 'Antwort_SchoolFuture2'",
-          "(i.sliderSchoolFuture >= 55 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture3'"
+          "(i.sliderSchoolFuture >= 35 && i.sliderSchoolFuture <= 50 && f.panToCountry('')) && 'Antwort_SchoolFuture2'",
+          "(i.sliderSchoolFuture >= 51 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture3'"
         ],
         "answerContext": {
           "SchoolFutureCountry" : "f.getCountryName('edu_all', i.sliderSchoolFuture, { case: 'default' })"
