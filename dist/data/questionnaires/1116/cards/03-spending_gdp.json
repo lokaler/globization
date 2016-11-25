@@ -1,0 +1,96 @@
+{
+  "key": "spending_edu",
+  "title": "3. Karte - spending_edu",
+  "dataset": "school_poor",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wie viel die Staaten zahlen",
+          "",
+          "Länder rund um den Globus geben bis zu acht Prozent ihrer Wirtschaftskraft für Bildung aus. In Europa sind Finnland und Schweden mit bis zu 7,7 Prozent führend.",
+          "",
+          "**Welches asiatische Land gibt proportional genauso viel Geld für Bildung aus wie Schweden?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          ".",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "amountSpendingEdu",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["amountSpendingEduChoice_1", { "de": "Hongkong", "en": "" }],
+            ["amountSpendingEduChoice_2", { "de": "Osttimor", "en": ""}],
+            ["amountSpendingEduChoice_3", { "de": "Singapur", "en": ""}],
+            ["amountSpendingEduChoice_4", { "de": "Bangladesh", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "amountSpendingEduSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.amountSpendingEdu && !i.amountSpendingEduSubmitted",
+          "!i.amountSpendingEduSubmitted && 'notSubmitted'",
+          "f.setDataset('edu_money')",
+          "f.panToCountry('TLS') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.amountSpendingEdu"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "amountSpendingEduChoice_1": {
+            "de": [
+              "Leider falsch. Auch wenn Hongkong ein verhältnismäßig hohes Bruttoinlandsprodukt hat, für Bildungsausgaben werden lediglich 3,6 Prozent davon ausgegeben. Osttimor wäre richtig gewesen. Das kleine Land mit 1,3 Millionen Einwohnern wurde 2002 unabhängig von Indonesien."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountSpendingEduChoice_2": {
+            "de": [
+              "Richtig. Das kleine Land mit 1,3 Millionen Einwohnern wurde 2002 unabhängig von Indonesien. Jedes Jahr gibt die Regierung 7,7 Prozent der Wirtschaftskraft für Bildung aus."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountSpendingEduChoice_3": {
+            "de": [
+              "Leider falsch. Auch wenn Singapur ein verhältnismäßig hohes Bruttoinlandsprodukt hat, für Bildungsausgaben werden lediglich 2,9 Prozent davon ausgegeben. Osttimor wäre richtig gewesen. Das kleine Land mit 1,3 Millionen Einwohnern wurde 2002 unabhängig von Indonesien."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountSpendingEduChoice_4": {
+            "de": [
+              "Leider falsch. Bangladesch hat im Bildungsbereich große Probleme - und gibt nur zwei Prozent seiner Wirtschaftskraft dafür aus. Osttimor wäre richtig gewesen. Das kleine Land mit 1,3 Millionen Einwohnern wurde 2002 unabhängig von Indonesien."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

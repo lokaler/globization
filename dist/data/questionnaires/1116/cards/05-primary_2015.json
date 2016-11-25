@@ -1,0 +1,91 @@
+{
+  "key": "school_today",
+  "title": "5. Karte - #Schulzeit",
+  "dataset": "edu_1980",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # 35 Jahre später",
+          "",
+          "Wir bleiben in Marokko, reisen aber wieder in die Gegenwart.",
+          "",
+          "**Die Frage bleibt gleich: Wie viel Prozent der 15- bis 19-Jährigen haben im Jahr 2015 in Marokko keine Grundschule besucht?**"
+        ],
+        "en": [
+          " #",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderSchoolToday",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountSchoolTodaySubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderSchoolToday && !i.AmountSchoolTodaySubmitted",
+          "!i.AmountSchoolTodaySubmitted && 'notSubmitted'",
+          "f.setDataset('edu_2015')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderSchoolToday <= 24 && f.panToCountry(f.getISO('edu_2015', i.sliderSchoolToday))) && 'Antwort_SchoolToday1'",
+          "(i.sliderSchoolToday >= 25 && i.sliderSchoolToday <= 39 && f.panToCountry('MAR')) && 'Antwort_SchoolToday2'",
+          "(i.sliderSchoolToday >= 40 && f.panToCountry(f.getISO('edu_2015', i.sliderSchoolToday))) && 'Antwort_SchoolToday3'"
+        ],
+        "answerContext": {
+          "SchoolTodayCountry" : "f.getCountryName('edu_2015', i.sliderSchoolToday, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_SchoolToday1": {
+            "de": [
+              "Nein, so schnell war der Fortschritt in Marokko nicht. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Trotzdem: Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte. Der von Ihnen getippte Wert entsprach am ehesten der Situation in **{{ SchoolTodayCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_SchoolToday2": {
+            "de": [
+              "Gut getippt. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_SchoolToday3": {
+            "de": [
+              "Nein, weniger. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte. Der von Ihnen getippte Wert entsprach am ehesten der Situation in  **{{ SchoolTodayCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

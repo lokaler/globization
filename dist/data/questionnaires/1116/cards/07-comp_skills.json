@@ -1,0 +1,96 @@
+{
+  "key": "computer_skills",
+  "title": "6. Karte - Computerskills",
+  "dataset": "edu_all",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wer kann Dateien kopieren?",
+          "",
+          "Im Zuge der Digitalisierung wird lebenslanges Lernen immer wichtiger, weil Technologien bedeutender werden, die es zur eigenen Schulzeit noch gar nicht gab. Auch dieses Lernen gehört daher zu den Nachhaltigkeitszielen. In der EU konnten 2014 rund 65 Prozent der Erwachsenen eine E-Mail mit Anhang verschicken. ",
+          "",
+          "**Aber wie sieht es damit aus, eine Datei oder einen Ordner auf dem Computer zu verschieben? Tippen Sie, in welchem Land diese Fähigkeit am wenigsten verbreitet ist:**"
+        ],
+        "en": [
+          " # ",
+          "",
+          ".",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "amountCompuSkills",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["amountCompuSkillsChoice_1", { "de": "Brasilien", "en": "" }],
+            ["amountCompuSkillsChoice_2", { "de": "Ägypten", "en": ""}],
+            ["amountCompuSkillsChoice_3", { "de": "Marroko", "en": ""}],
+            ["amountCompuSkillsChoice_4", { "de": "Italien", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "amountCompuSkillsSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.amountCompuSkills && !i.amountCompuSkillsSubmitted",
+          "!i.amountCompuSkillsSubmitted && 'notSubmitted'",
+          "f.setDataset('computer_skills')",
+          "f.panToCountry('EGY') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.amountCompuSkills"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "amountCompuSkillsChoice_1": {
+            "de": [
+              "Falsch. In Brasilien können 27 Prozent der Erwachsenen eine Datei verschieben. Ägypten wäre richtig gewesen. Dort können dies nur elf Prozent."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountCompuSkillsChoice_2": {
+            "de": [
+              "Richtig. Nur elf Prozent der erwachsenen Ägypter können eine Datei verschieben. Der Globus zeigt Ihnen die Werte für andere Länder."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountCompuSkillsChoice_3": {
+            "de": [
+              "Falsch. In Marokko können 37 Prozent der Erwachsenen eine Datei verschieben. Ägypten wäre richtig gewesen. Dort können dies nur elf Prozent."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "amountCompuSkillsChoice_4": {
+            "de": [
+              "Falsch. In Italien können 56 Prozent der Erwachsenen eine Datei verschieben. Ägypten wäre richtig gewesen. Dort können dies nur elf Prozent."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
