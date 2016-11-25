@@ -8,9 +8,9 @@
         "de": [
           " # Ein Blick nach vorne",
           "",
-          "Laut der Uno-Nachhaltigkeitsziele soll im Jahr 2030 jedes Kind auf der Welt eine Grundschule und eine weiterführende Schule besucht haben. Bleiben wir bei der Grundschule. Hier gilt das Ziel als erreicht, wenn der Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht haben, unter fünf Prozent gefallen ist.",
+          "Laut der Uno-Nachhaltigkeitsziele soll **in 15 Jahren** jedes Kind auf der Welt eine Grundschule und eine weiterführende Schule besucht haben. Bleiben wir bei der Grundschule. Hier gilt das Ziel als erreicht, wenn der Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht haben, unter fünf Prozent gefallen ist.",
           "",
-          "**Was glauben Sie: Wenn die Entwicklung so weitergeht wie bisher, in welchem Jahr wird das Ziel tatsächlich erreicht?**"
+          "**Was glauben Sie: Wenn die Entwicklung so weitergeht wie bisher, in wie vielen Jahren wird das Ziel tatsächlich erreicht?**"
         ],
         "en": [
           " #",
@@ -25,11 +25,11 @@
         "key": "sliderSchoolFuture",
         "type": "slider",
         "options": {
-          "unit": "Jahr",
-          "min": 2020,
-          "value": 5,
-          "max": 2100,
-          "step": 2050
+          "unit": "Jahre",
+          "min": 5,
+          "value": 15,
+          "max": 85,
+          "step": 5
         }
       }
     },

@@ -25,7 +25,7 @@
         "key": "sliderAttendance",
         "type": "slider",
         "options": {
-          "unit": "%",
+          "unit": "",
           "min": 1,
           "value": 4,
           "max": 13,
@@ -47,9 +47,9 @@
           "f.setDataset('school_poor')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderAttendance <= 7 && f.panToCountry(f.getISO('school_poor', i.sliderAttendance))) && 'Antwort_Attendance1'",
-          "(i.sliderAttendance >= 8 && i.sliderAttendance <= 9 && f.panToCountry('NGA')) && 'Antwort_Attendance2'",
-          "(i.sliderAttendance >= 10 && f.panToCountry(f.getISO('school_poor', i.sliderAttendance))) && 'Antwort_Attendance3'"
+          "(i.sliderAttendance <= 7.0 && f.panToCountry(f.getISO('school_poor', i.sliderAttendance))) && 'Antwort_Attendance1'",
+          "(i.sliderAttendance >= 7.1 && i.sliderAttendance <= 9.0 && f.panToCountry('NGA')) && 'Antwort_Attendance2'",
+          "(i.sliderAttendance >= 9.1 && f.panToCountry(f.getISO('school_poor', i.sliderAttendance))) && 'Antwort_Attendance3'"
         ],
         "answerContext": {
           "AttendanceCountry" : "f.getCountryName('school_poor', i.sliderAttendance, { case: 'default' })"

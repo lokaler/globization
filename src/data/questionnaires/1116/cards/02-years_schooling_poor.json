@@ -10,7 +10,7 @@
           "",
           "Bleiben wir in Nigeria: Wie Sie wissen, gehen die Kinder dort im Schnitt knapp acht Jahre zur Schule - und eigentlich sollte das für arme und reiche Familien gleichermaßen gelten. So steht es in den Nachhaltigkeitszielen der Uno. Wie sieht die Realität aus?.",
           "",
-          "**Betrachten Sie ein Kind aus einer nigerianischen Familie, die zu den ärmsten zehn Prozent des Landes gehört: Wie lange geht dieses Kind zur Schule?.**"
+          "**Betrachten Sie ein Kind aus einer nigerianischen Familie, die zu den ärmsten zehn Prozent des Landes gehört: Wie lange geht dieses Kind zur Schule?**"
         ],
         "en": [
           " # ",
@@ -47,8 +47,8 @@
           "f.setDataset('school_poor')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderAttendancePoor <= 3 && f.panToCountry('NGA')) && 'Antwort_AttendancePoor1'",
-          "(i.sliderAttendancePoor >= 4  && f.panToCountry('NGA')) && 'Antwort_AttendancePoor2'"
+          "(i.sliderAttendancePoor <= 3.0 && f.panToCountry('NGA')) && 'Antwort_AttendancePoor1'",
+          "(i.sliderAttendancePoor >= 3.1  && f.panToCountry('NGA')) && 'Antwort_AttendancePoor2'"
         ],
         "answerContext": {
           "AttendancePoorCountry" : "f.getCountryName('school_poor', i.sliderAttendancePoor, { case: 'default' })"
