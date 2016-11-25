@@ -44,15 +44,15 @@
         "answerKey": [
           "i.sliderAttendance && !i.AmountAttendanceSubmitted",
           "!i.AmountAttendanceSubmitted && 'notSubmitted'",
-          "f.setDataset('school_poor')",
+          "f.setDataset('years_schooling')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderAttendance <= 7.0 && f.panToCountry(f.getISO('school_poor', i.sliderAttendance))) && 'Antwort_Attendance1'",
+          "(i.sliderAttendance <= 7.0 && f.panToCountry(f.getISO('years_schooling', i.sliderAttendance))) && 'Antwort_Attendance1'",
           "(i.sliderAttendance >= 7.1 && i.sliderAttendance <= 9.0 && f.panToCountry('NGA')) && 'Antwort_Attendance2'",
-          "(i.sliderAttendance >= 9.1 && f.panToCountry(f.getISO('school_poor', i.sliderAttendance))) && 'Antwort_Attendance3'"
+          "(i.sliderAttendance >= 9.1 && f.panToCountry(f.getISO('years_schooling', i.sliderAttendance))) && 'Antwort_Attendance3'"
         ],
         "answerContext": {
-          "AttendanceCountry" : "f.getCountryName('school_poor', i.sliderAttendance, { case: 'default' })"
+          "AttendanceCountry" : "f.getCountryName('years_schooling', i.sliderAttendance, { case: 'default' })"
         },
         "templates": {
           "notSubmitted": {
