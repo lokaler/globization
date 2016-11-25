@@ -208,8 +208,8 @@ export default [
     "fixed": 1,
     "legendCorner": true,
     "domain": [
-      5,
-      85
+      0,
+      90
     ],
     "skala": [
       0,
