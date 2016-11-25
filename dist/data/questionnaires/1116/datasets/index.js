@@ -108,7 +108,7 @@ export default [
     },
     "quelle": "UNESCO",
     "link": "http://data.uis.unesco.org/Index.aspx?queryid=181",
-    "unit": "&",
+    "unit": "%",
     "fixed": 1,
     "domain": [
       0,
@@ -204,7 +204,7 @@ export default [
     },
     "quelle": "Wittgenstein Centre for Demography and Global Human Capital",
     "link": "http://witt.null2.net/shiny/wic/",
-    "unit": "",
+    "unit": "Jahre",
     "fixed": 1,
     "legendCorner": true,
     "domain": [
