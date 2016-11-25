@@ -1,7 +1,7 @@
 {
   "key": "education2015",
   "title": "6. Karte - #Schulzeit",
-  "dataset": "edu_all",
+  "dataset": "edu_2015",
   "content": [
     {
       "text": {
@@ -27,7 +27,7 @@
         "options": {
           "unit": "Jahre",
           "min": 0,
-          "value": 35,
+          "value": 15,
           "max": 85,
           "step": 5
         }
@@ -47,8 +47,8 @@
           "f.setDataset('edu_all')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderSchoolFuture <= 34 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture1'",
-          "(i.sliderSchoolFuture >= 35 && i.sliderSchoolFuture <= 54 && 'Antwort_SchoolFuture2'",
+          "(i.sliderSchoolFuture <= 30 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture1'",
+          "(i.sliderSchoolFuture >= 35 && i.sliderSchoolFuture <= 50 && 'Antwort_SchoolFuture2'",
           "(i.sliderSchoolFuture >= 55 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture3'"
         ],
         "answerContext": {
