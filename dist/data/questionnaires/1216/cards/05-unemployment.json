@@ -1,0 +1,85 @@
+{
+  "key": "unemployment",
+  "title": "5. Karte - Arbeitslosigkeit",
+  "dataset": "youthunemployment",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Eine Frage des Alters?",
+          "",
+          "**Haben es junge Menschen auf dem Arbeitsmarkt schwerer? Was glauben Sie?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          ".",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "ChoiceUnemployment",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["ChoiceUnemploymentChoice_1", { "de": "Ja, sie sind häufiger arbeitslos.", "en": "" }],
+            ["ChoiceUnemploymentChoice_2", { "de": "Das Alter spielt keine Rolle.", "en": ""}],
+            ["ChoiceUnemploymentChoice_3", { "de": "Nein, sie sind seltener arbeitslos.", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "ChoiceUnemploymentSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.ChoiceUnemployment && !i.ChoiceUnemploymentSubmitted",
+          "!i.ChoiceUnemploymentSubmitted && 'notSubmitted'",
+          "f.setDataset('unemployment')",
+          "f.panToCountry('CMR') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('map')",
+          "i.ChoiceUnemployment"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "ChoiceUnemploymentChoice_1": {
+            "de": [
+              "Stimmt. Im Schnitt sind junge Menschen häufiger arbeitslos. Die Jugendarbeitslosigkeit zu reduzieren, steht daher weit oben auf der Agenda der Uno-Nachhaltigkeitsziele."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "ChoiceUnemploymentChoice_2": {
+            "de": [
+              "Falsch. Im Schnitt sind junge Menschen häufiger arbeitslos. Die Jugendarbeitslosigkeit zu reduzieren, steht daher weit oben auf der Agenda der Uno-Nachhaltigkeitsziele."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "ChoiceUnemploymentChoice_3": {
+            "de": [
+              "Falsch. Im Schnitt sind junge Menschen häufiger arbeitslos. Die Jugendarbeitslosigkeit zu reduzieren, steht daher weit oben auf der Agenda der Uno-Nachhaltigkeitsziele."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
