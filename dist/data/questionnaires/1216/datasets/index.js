@@ -2,6 +2,37 @@
 
 export default [
   {
+    "key": "meanworking",
+    "name": {
+      "de": "Durchschittliche Arbeitszeit",
+      "en": ""
+    },
+    "description": {
+      "de": "Durchschittliche Arbeitszeit",
+      "en": ""
+    },
+    "quelle": "ILO",
+    "link": "http://www.ilo.org/ilostat",
+        "unit": "h",
+    "fixed": 1,
+    "domain": [
+      0,
+      63
+    ],
+    "skala": [
+      0,
+      24
+    ],
+    "translate": [
+      0,
+      90
+    ],
+    "scale": 1,
+    "colorSet": "Reds",
+    "colorNum": 9,
+    "data": require('./00_mean_working_hours_globus.csv')
+  },
+  {
     "key": "limitedcontracts1984",
     "name": {
       "de": "Befristung 1984",
