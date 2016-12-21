@@ -17,6 +17,8 @@ import cards1016 from './1016/cards/index';
 import datasets1016 from './1016/datasets/index';
 import cards1116 from './1116/cards/index';
 import datasets1116 from './1116/datasets/index';
+import cards1216 from './1216/cards/index';
+import datasets1216 from './1216/datasets/index';
 
 
 let questionnaires = {
@@ -113,6 +115,18 @@ let questionnaires = {
     },
     cards: cards1116,
     datasets: datasets1116
+  },
+  1216: {
+    title: {
+      de: 'Arbeit',
+      en: 'work'
+    },
+    options: {
+      showBackButton: true,
+      lastButtonLabel: 'explore'
+    },
+    cards: cards1216,
+    datasets: datasets1216
   }
 };
 

@@ -1,0 +1,82 @@
+{
+  "key": "limitedjobs1984",
+  "title": "1. Karte - #limitedjobs1984",
+  "dataset": "meanworking",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Befristete Jobs 1984",
+          "",
+          "Neue Jobs gibt es heute oft nur noch befristet - so scheint es zumindest. Aber stimmt das?.",
+          "",
+          "**Betrachten Sie das Jahr 1984 und schätzen Sie: Wie viel Prozent der Arbeitsverträge waren damals in Deutschland befristet?**"
+        ],
+        "en": [
+          " #",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderLimitedJobsBackthen",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountLimitedJobsBackthen"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderLimitedJobsBackthen && !i.AmountLimitedJobsBackthen",
+          "!i.AmountLimitedJobsBackthen && 'notSubmitted'",
+          "f.setDataset('limitedcontracts1984')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderLimitedJobsBackthen < 15 && f.panToCountry('DEU')) && 'Antwort_LimitedJobsBackthen1'",
+          "(i.sliderLimitedJobsBackthen >= 15 && f.panToCountry('DEU')) && 'Antwort_LimitedJobsBackthen2'"
+        ],
+        "answerContext": {
+          "AttendanceCountry" : "f.getCountryName('years_schooling', i.sliderLimitedJobsBackthen, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_LimitedJobsBackthen1": {
+            "de": [
+              "Gut geschätzt. Im Jahr 1984 waren 10 Prozent der Arbeitsverträge befristet. Dazu zählen auch Ausbildungsverträge, bei denen die Befristung in der Natur des Vertrages liegt.."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_LimitedJobsBackthen2": {
+            "de": [
+              "Nein, weniger. Im Jahr 1984 waren 10 Prozent der Arbeitsverträge befristet. Dazu zählen auch Ausbildungsverträge, bei denen die Befristung in der Natur des Vertrages liegt."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

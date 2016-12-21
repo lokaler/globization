@@ -1,0 +1,91 @@
+{
+  "key": "maternyleave",
+  "title": "6. Karte - #Schulzeit",
+  "dataset": "unemployment",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Mutterschutz",
+          "",
+          "Laut Uno sollen nicht nur mehr Menschen arbeiten - die Arbeit soll auch “gut” sein. Dazu gehört eine soziale Absicherung wie zum Beispiel der Schutz schwangerer Frauen. In Deutschland können Schwangere 14 Wochen Mutterschutz beantragen - und bekommen ihr Gehalt weiter.",
+          "",
+          "**Weltweiter Spitzenreiter beim Mutterschutz ist Schweden: Wie viele Wochen muss eine Frau dort nicht arbeiten?**"
+        ],
+        "en": [
+          " #",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderMaternyLeave",
+        "type": "slider",
+        "options": {
+          "unit": "Wochen",
+          "min": 0,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountMaternyLeaveSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderMaternyLeave && !i.AmountMaternyLeaveSubmitted",
+          "!i.AmountMaternyLeaveSubmitted && 'notSubmitted'",
+          "f.setDataset('maternyleave')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderMaternyLeave <= 61 && f.panToCountry(f.getISO('maternyleave', i.sliderMaternyLeave))) && 'Antwort_MaternyLeave1'",
+          "(i.sliderMaternyLeave >= 62 && i.sliderMaternyLeave <= 76 && f.panToCountry('SWE')) && 'Antwort_MaternyLeave2'",
+          "(i.sliderMaternyLeave >= 77 && f.panToCountry('SWE')) && 'Antwort_MaternyLeave3'"
+        ],
+        "answerContext": {
+          "MaternyLeaveCountry" : "f.getCountryName('maternyleave', i.sliderMaternyLeave, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_MaternyLeave1": {
+            "de": [
+              "Es sind sogar noch mehr. Der Mutterschutz dauert in Schweden 69 Wochen. Ihr Tipp entspricht am ehesten dem Wert in **{{ MaternyLeaveCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_MaternyLeave2": {
+            "de": [
+              "Gut geschätzt. Der Mutterschutz dauert in Schweden 69 Wochen."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_MaternyLeave3": {
+            "de": [
+              "Ganz so lange dann doch nicht. Der Mutterschutz dauert in Schweden 69 Wochen."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
