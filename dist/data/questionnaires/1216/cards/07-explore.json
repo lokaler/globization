@@ -7,7 +7,7 @@
     {
       "text": {
         "de": [
-          "Hier können Sie die Datensätze alle noch einmal in Ruhe erkunden. Oder Sie lesen den [Faktencheck zu den Bildungsausgaben in Deutschland und anderen Bildungsmythen](http://www.spiegel.de/lebenundlernen/schule/gibt-deutschland-wenig-fuer-bildung-aus-der-faktencheck-a-1054522.html).",
+          "Hier können Sie die Datensätze alle noch einmal in Ruhe erkunden.",
           "Den Link zum interaktiven Globus teilen:"
         ],
         "en": [
@@ -21,10 +21,10 @@
           "f.setView('globe')"
         ],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://spon.de/aeOvC', 'Interaktives Quiz: Wann dürfen alle Kinder zur Schule? #ÜberMorgen')",
-          "facebookShare": "f.shareButtonFacebook('http://spon.de/aeOvC', 'Interaktives Quiz: Wann dürfen alle Kinder zur Schule? #ÜberMorgen')",
-          "twitterShareEn": "f.shareButtonTwitter('http://spon.de/aeOEc', 'Interactive Quiz: Where Species Are Going Extinct #beyondtomorrow')",
-          "facebookShareEn": "f.shareButtonFacebook('http://spon.de/aeOEc', 'Interactive Quiz: Where Species Are Going Extinct #beyondtomorrow')"
+          "twitterShare": "f.shareButtonTwitter('http://www.spiegel.de/ce/article/a-1125297.html', 'Quiz zur Arbeit weltweit: Werden befristete Jobs mehr? #ÜberMorgen')",
+          "facebookShare": "f.shareButtonFacebook('http://www.spiegel.de/ce/article/a-1125297.html', 'Quiz zur Arbeit weltweit: Werden befristete Jobs mehr? #ÜberMorgen')",
+          "twitterShareEn": "f.shareButtonTwitter('', ' #beyondtomorrow')",
+          "facebookShareEn": "f.shareButtonFacebook('', '#beyondtomorrow')"
         },
 
         "templates": {

@@ -8,7 +8,7 @@ export default [
       "en": ""
     },
     "description": {
-      "de": "Durchschittliche Arbeitszeit (2012- 2015)",
+      "de": "Durchschnittliche wöchentliche Arbeitszeit (2012- 2015)",
       "en": ""
     },
     "quelle": "ILO",
