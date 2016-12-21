@@ -4,11 +4,11 @@ export default [
   {
     "key": "meanworking",
     "name": {
-      "de": "Durchschittliche Arbeitszeit",
+      "de": "Durchschnittliche wöchentliche Arbeitszeit",
       "en": ""
     },
     "description": {
-      "de": "Durchschittliche Arbeitszeit",
+      "de": "Durchschittliche Arbeitszeit (2012- 2015)",
       "en": ""
     },
     "quelle": "ILO",
