@@ -30,7 +30,7 @@ export default [
     "scale": 1,
     "colorSet": "Reds",
     "colorNum": 9,
-    "data": require('./')
+    "data": []
   },
   {
     "key": "limitedcontracts1984",
@@ -191,7 +191,4 @@ export default [
     "colorNum": 9,
     "data": require('./05_richest_10_percent.csv')
   }
-
-
-
 ];
