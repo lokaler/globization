@@ -1,7 +1,7 @@
 {
   "key": "intro",
   "title": "Intro",
-  "dataset": "",
+  "dataset": "nettoHousehold",
   "view": "globe",
   "content": [
     {

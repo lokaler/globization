@@ -1,7 +1,7 @@
 {
   "key": "toptenincome",
   "title": "1. Karte - Einkommen Top Ten",
-  "dataset": "",
+  "dataset": "nettoHousehold",
   "content": [
     {
       "text": {
