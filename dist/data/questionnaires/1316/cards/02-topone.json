@@ -1,0 +1,91 @@
+{
+  "key": "TopOneIncome",
+  "title": "2. Karte - Einkommen Top One",
+  "dataset": "incometopten",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Das oberste Prozent",
+          "",
+          "Schauen wir das ganz obere Ende der Einkommensverteilung an: das oberste Prozent der Bevölkerung. ",
+          "",
+          "**Wie viel muss jemand monatlich netto verdienen, um zu der Gruppe dazuzugehören?**"
+        ],
+        "en": [
+          " #",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderTopOneIncome",
+        "type": "slider",
+        "options": {
+          "unit": "€",
+          "min": 1,
+          "value": 10000,
+          "max": 20000,
+          "step": 100
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountTopOneIncomeSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderTopOneIncome && !i.AmountTopOneIncomeSubmitted",
+          "!i.AmountTopOneIncomeSubmitted && 'notSubmitted'",
+          "f.setDataset('incometopone')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderTopOneIncome <= 5400 && f.panToCountry(f.getISO('incometopone', i.sliderTopOneIncome))) && 'Antwort_TopOneIncome1'",
+          "(i.sliderTopOneIncome >= 5400 && i.sliderTopOneIncome <= 6400 && f.panToCountry('DEU')) && 'Antwort_TopOneIncome2'",
+          "(i.sliderTopOneIncome >= 6400 && f.panToCountry(f.getISO('incometopone', i.sliderTopOneIncome))) && 'Antwort_TopOneIncome3'"
+        ],
+        "answerContext": {
+          "TopOneIncomeCountry" : "f.getCountryName('incometopone', i.sliderTopOneIncome, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_TopOneIncome1": {
+            "de": [
+              "Falsch. Wer zum obersten Prozent dazugehören will, muss mindestens 5887 Euro monatlich verdienen. Ihre Antwort entspricht am ehesten dem Wert in **{{ TopOneIncomeCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_TopOneIncome2": {
+            "de": [
+              "Guter Tipp. Laut Eurostat sind es 5887 Euro."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_TopOneIncome3": {
+            "de": [
+              "So viel ist es gar nicht. Ab einem Netto-Einkommen von 5887 Euro gehört jemand zum obersten Prozent."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

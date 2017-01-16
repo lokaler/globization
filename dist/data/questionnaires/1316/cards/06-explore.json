@@ -1,0 +1,59 @@
+{
+  "key": "explore",
+  "title": "Explore",
+  "dataset": "none",
+  "view": "globe",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "Hier können Sie die Datensätze alle noch einmal in Ruhe erkunden. Oder sie lesen [unsere Reportage über Kinderarbeiter in Bolivien](http://www.spiegel.de/wirtschaft/soziales/bolivien-die-stolzen-kinderarbeiter-a-1123897.html) – wo Kinderarbeit 2014 legalisiert wurde.",
+          "Den Link zum interaktiven Globus teilen:"
+        ],
+        "en": [
+          "Share the link to the interactive globe:"
+        ]
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "f.setView('globe')"
+        ],
+        "answerContext": {
+          "twitterShare": "f.shareButtonTwitter('http://www.spiegel.de/ce/article/a-1125297.html', 'Quiz zur Arbeit weltweit: Werden befristete Jobs mehr? #ÜberMorgen')",
+          "facebookShare": "f.shareButtonFacebook('http://www.spiegel.de/ce/article/a-1125297.html', 'Quiz zur Arbeit weltweit: Werden befristete Jobs mehr? #ÜberMorgen')",
+          "twitterShareEn": "f.shareButtonTwitter('', ' #beyondtomorrow')",
+          "facebookShareEn": "f.shareButtonFacebook('', '#beyondtomorrow')"
+        },
+
+        "templates": {
+          "default": {
+            "de": [
+              "<div class='sharing'>{{ twitterShare }} {{ facebookShare }}</div>"
+            ],
+            "en": [
+              "<div class='sharing'>{{ twitterShareEn }} {{ facebookShareEn }}</div>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "text": {
+        "de": [
+          "Die Daten im Überblick:",
+          "",
+          "",
+          ""
+        ],
+        "en": [
+          "You can explore the data at your own pace here:"
+        ]
+      }
+    },
+    {
+      "datasetMenu": true
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "key": "TopTenWealth",
+  "title": "5. Karte - Vermögen Top Ten",
+  "dataset": "giniindex",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Das Vermögen der Reichen",
+          "",
+          "Bisher ging es um die Ungleichheit beim Einkommen - doch wer von Arm und Reich spricht, meint häufig das Vermögen von Menschen. In den USA besitzen die reichsten zehn Prozent der Bevölkerung 76 Prozent des Gesamtvermögens. In Schweden sind es nur 33 Prozent.",
+          "",
+          "**Was tippen Sie, wie die Vermögensverteilung in Deutschland aussieht: Wie viel Prozent des Gesamtvermögens ist in der Hand der reichsten zehn Prozent?**"
+        ],
+        "en": [
+          " #",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderTopTenWealth",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountTopTenWealthSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderTopTenWealth && !i.AmountTopTenWealthSubmitted",
+          "!i.AmountTopTenWealthSubmitted && 'notSubmitted'",
+          "f.setDataset('wealthtopten')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderTopTenWealth <= 54 && f.panToCountry(f.getISO('wealthtopten', i.sliderTopTenWealth))) && 'Antwort_TopTenWealth1'",
+          "(i.sliderTopTenWealth >= 54 && i.sliderTopTenWealth <= 64 && f.panToCountry('DEU')) && 'Antwort_TopTenWealth2'",
+          "(i.sliderTopTenWealth >= 64 && f.panToCountry(f.getISO('wealthtopten', i.sliderTopTenWealth))) && 'Antwort_TopTenWealth3'"
+        ],
+        "answerContext": {
+          "TopTenWealthCountry" : "f.getCountryName('wealthtopten', i.sliderTopTenWealth, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_TopTenWealth1": {
+            "de": [
+              "Falsch. Es ist mehr, nämlich rund 59 Prozent. Diese Zahl ist im übrigen nur eine untere Grenze, weil sehr große Vermögen von den Studien kaum erfasst werden. Ihre Antwort entspricht am ehesten dem Wert in **{{ TopTenWealthCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_TopTenWealth2": {
+            "de": [
+              "Da haben Sie gut getippt. Die reichsten zehn Prozent besitzen rund 59 Prozent des Vermögens. Diese Zahl ist im übrigen nur eine untere Grenze, weil sehr große Vermögen von den Studien kaum erfasst werden."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_TopTenWealth3": {
+            "de": [
+              "Das ist wahrscheinlich zu viel. Die reichsten zehn Prozent besitzen rund 59 Prozent des Vermögens. Allerdings ist diese Zahl ist nur eine untere Grenze, weil sehr große Vermögen von den Studien kaum erfasst werden. Ihre Antwort entspricht am ehesten dem Wert in **{{ TopTenWealthCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

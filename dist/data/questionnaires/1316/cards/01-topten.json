@@ -1,0 +1,91 @@
+{
+  "key": "toptenincome",
+  "title": "1. Karte - Einkommen Top Ten",
+  "dataset": "",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Die oberen zehn Prozent",
+          "",
+          "Finanzielle Ungleichheit beginnt beim Einkommen. Meist wird bei dem Thema - mehr oder weniger neidvoll - auf die “oberen zehn Prozent” geschaut. Aber was verdienen die eigentlich?",
+          "",
+          "**Schätzen Sie, wann Sie zu den einkommensstärksten zehn Prozent in Deutschland gehören: Wie viel Geld müssen Sie dafür mindestens netto im Monat zur Verfügung haben?**"
+        ],
+        "en": [
+          " #",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderTopTenIncome",
+        "type": "slider",
+        "options": {
+          "unit": "€",
+          "min": 1,
+          "value": 10000,
+          "max": 20000,
+          "step": 100
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountTopTenIncomeSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderTopTenIncome && !i.AmountTopTenIncomeSubmitted",
+          "!i.AmountTopTenIncomeSubmitted && 'notSubmitted'",
+          "f.setDataset('incometopten')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderTopTenIncome <= 2700 && f.panToCountry(f.getISO('incometopten', i.sliderTopTenIncome))) && 'Antwort_TopTenIncome1'",
+          "(i.sliderTopTenIncome >= 2700 && i.sliderTopTenIncome <= 3300 && f.panToCountry('DEU')) && 'Antwort_TopTenIncome2'",
+          "(i.sliderTopTenIncome >= 3300 && f.panToCountry(f.getISO('incometopten', i.sliderTopTenIncome))) && 'Antwort_TopTenIncome3'"
+        ],
+        "answerContext": {
+          "TopTenIncomeCountry" : "f.getCountryName('incometopten', i.sliderTopTenIncome, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_TopTenIncome1": {
+            "de": [
+              "Nein, mehr. In Deutschland gehören Sie mit einem Netto-Einkommen von mehr als 3073 Euro pro Person zu den oberen zehn Prozent. Ihre Antwort entspricht am ehesten dem Wert in **{{ TopTenIncomeCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_TopTenIncome2": {
+            "de": [
+              "Gut geschätzt. Mit einem Netto-Einkommen von 3073 Euro pro Person gehören Sie in Deutschland zu den oberen zehn Prozent. Der Globus zeigt Ihnen den Wert auch in anderen europäischen Ländern."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_TopTenIncome3": {
+            "de": [
+              "Nein, weniger. In Deutschland gehören Sie mit einem Netto-Einkommen von mehr als 3073 Euro pro Person zu den oberen zehn Prozent. Ihre Antwort entspricht am ehesten dem Wert in **{{ TopTenIncomeCountry }}**."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
