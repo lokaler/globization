@@ -1,7 +1,39 @@
 /* eslint-disable */
 
 export default [
-
+  {
+    "key": "nettoHousehold",
+    "name": {
+      "de": "Mittleres Haushaltsnettoeinkommen",
+      "en": "Median net household income"
+    },
+    "description": {
+      "de": "Mittleres Haushaltsnettoeinkommen [kaufkraftbereinigt in 1000 US-Dollar]",
+      "en": "Median net household income [1000 US dollars, adjusted for purchasing power]"
+    },
+    "quelle": "OECD",
+    "link": "http://stats.oecd.org/Index.aspx?DataSetCode=BLI",
+    "unit": "Tsd. USD",
+    "fixed": 0,
+    "domain": [
+      0,
+      40
+    ],
+    "skala": [
+      0,
+      10,
+      20,
+      30
+    ],
+    "translate": [
+      0,
+      90
+    ],
+    "scale": 1,
+    "colorSet": "Blues",
+    "colorNum": 9,
+    "data": require('./00_nettoHousehold.csv')
+  },
   {
     "key": "incometopten",
     "name": {
