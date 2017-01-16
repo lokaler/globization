@@ -1,50 +1,83 @@
 /* eslint-disable */
 
 export default [
+
   {
-    "key": "meanworking",
+    "key": "incometopten",
     "name": {
-      "de": "Durchschnittliche wöchentliche Arbeitszeit",
+      "de": "Einkommen Top 10%",
       "en": ""
     },
     "description": {
-      "de": "Durchschnittliche wöchentliche Arbeitszeit (2012- 2015)",
+      "de": "Verfügbares Monatseinkommen in Euro, mit dem man mehr als 90 % der Bevölkerung verdient",
       "en": ""
     },
-    "quelle": "ILO",
-    "link": "http://www.ilo.org/ilostat",
-        "unit": "h",
+    "quelle": "Eurostat",
+    "link": "http://ec.europa.eu/eurostat/web/income-and-living-conditions/data/database",
+        "unit": "",
     "fixed": 1,
     "domain": [
       0,
-      63
+      9000
     ],
     "skala": [
       0,
       24
     ],
     "translate": [
-      0,
-      90
+      -124,
+      485
     ],
-    "scale": 1,
-    "colorSet": "Reds",
+    "scale": 2.4,
+    "colorSet": "Blues",
     "colorNum": 9,
-    "data": []
+    "data": require('./01_top_10_percent.csv')
   },
   {
-    "key": "limitedcontracts1984",
+    "key": "incometopone",
     "name": {
-      "de": "Befristung 1984",
+      "de": "Einkommen Top 1%",
       "en": ""
     },
     "description": {
-      "de": "Anteil der Arbeitsverträge, die befristet sind, im Jahr 1984",
+      "de": "Verfügbares Monatseinkommen in Euro, mit dem man mehr als 99 Prozent der Bevölkerung verdient",
       "en": ""
     },
-    "quelle": "ILO",
-    "link": "http://www.ilo.org/ilostat",
-        "unit": "%",
+    "quelle": "Eurostat",
+    "link": " http://ec.europa.eu/eurostat/web/income-and-living-conditions/data/database",
+    "unit": "",
+    "fixed": 1,
+    "domain": [
+      0,
+      9000
+    ],
+    "skala": [
+      0,
+      3
+
+    ],
+    "translate": [
+      -124,
+      485
+    ],
+    "scale": 2.4,
+    "colorSet": "Blues",
+    "colorNum": 9,
+    "data": require('./02_top_1_percent.csv')
+  },
+   {
+    "key": "eightytwenty",
+    "name": {
+      "de": "Einkommens-Ungleichheit",
+      "en": ""
+    },
+    "description": {
+      "de": "Verhältnis des Einkommens der oberen 20 Prozent zu den unteren 20 Prozent",
+      "en": ""
+    },
+    "quelle": "OECD",
+    "link": "http://stats.oecd.org/index.aspx?queryid=66670",
+    "unit": "",
     "fixed": 1,
     "domain": [
       0,
@@ -52,37 +85,6 @@ export default [
     ],
     "skala": [
       0,
-      24
-    ],
-    "translate": [
-      0,
-      90
-    ],
-    "scale": 1,
-    "colorSet": "Reds",
-    "colorNum": 9,
-    "data": require('./01_top_10_percent.csv')
-  },
-  {
-    "key": "limitedcontracts2014",
-    "name": {
-      "de": "Befristung 2014",
-      "en": ""
-    },
-    "description": {
-      "de": "Anteil der Arbeitsverträge, die befristet sind, im Jahr 2014",
-      "en": ""
-    },
-    "quelle": " ILO",
-    "link": " http://www.ilo.org/ilostat",
-    "unit": "%",
-    "fixed": 1,
-    "domain": [
-      0,
-      36
-    ],
-    "skala": [
-      0,
       3
 
     ],
@@ -91,59 +93,27 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
-    "colorNum": 9,
-    "data": require('./02_top_1_percent.csv')
-  },
-   {
-    "key": "childrenlabour",
-    "name": {
-      "de": "Kinderarbeit",
-      "en": ""
-    },
-    "description": {
-      "de": "Anteil der Fünf- bis Siebzehnjährigen, die arbeiten",
-      "en": ""
-    },
-    "quelle": "ILO",
-    "link": "http://www.ilo.org/ilostat",
-    "unit": "%",
-    "fixed": 1,
-    "domain": [
-      0,
-      45
-    ],
-    "skala": [
-      0,
-      3
-
-    ],
-    "translate": [
-      0,
-      90
-    ],
-    "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Blues",
     "colorNum": 9,
     "data": require('./03_s80_s20_ratio.csv')
   },
    {
-    "key": "youthunemployment",
+    "key": "giniindex",
     "name": {
-      "de": "Jugendarbeitslosigkeit",
+      "de": "Gini-Index",
       "en": ""
     },
     "description": {
-      "de": "Arbeitslosenquote bei Unter-25-Jährigen in Prozent",
+      "de": "Gini-Index zwischen 0 (Alle besitzen gleich viel) und 100 (Eine Person besitzt alles)",
       "en": ""
     },
-    "quelle": "ILO",
-    "link": "http://www.ilo.org/ilostat",
-    "unit": "%",
+    "quelle": "Weltbank",
+    "link": "http://data.worldbank.org/indicator/SI.POV.GINI",
+    "unit": "",
     "fixed": 1,
     "domain": [
       0,
-      54
+      70
     ],
     "skala": [
       0,
@@ -155,27 +125,27 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Blues",
     "colorNum": 9,
     "data": require('./04_gini_index.csv')
   },
      {
-    "key": "unemployment",
+    "key": "wealthtopten",
     "name": {
-      "de": "Arbeitslosigkeit",
+      "de": "Vermögen Top 10%",
       "en": ""
     },
     "description": {
-      "de": "Arbeitslosenquote bei Über-24-Jährigen",
+      "de": "Anteil der Top 10 Prozent am Gesamtvermögen in Prozent",
       "en": ""
     },
-    "quelle": "ILO",
-    "link": "http://www.ilo.org/ilostat",
+    "quelle": "OECD",
+    "link": "https://stats.oecd.org/Index.aspx?DataSetCode=WEALTH",
     "unit": "%",
     "fixed": 1,
     "domain": [
       0,
-      27
+      90
     ],
     "skala": [
       0,
@@ -187,7 +157,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Reds",
+    "colorSet": "Blues",
     "colorNum": 9,
     "data": require('./05_richest_10_percent.csv')
   }

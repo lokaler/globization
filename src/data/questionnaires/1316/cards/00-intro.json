@@ -1,7 +1,7 @@
 {
   "key": "intro",
   "title": "Intro",
-  "dataset": "meanworking",
+  "dataset": "",
   "view": "globe",
   "content": [
     {
@@ -10,7 +10,7 @@
           "# ÜberMorgen-Explorer",
           "",
 
-          "Sind Jobs heute öfter befristet als vor 30 Jahren? Wo ist die Jugendarbeitslosigkeit am höchsten? Testen Sie Ihr Wissen - klicken Sie auf \"Los geht's\"!",
+          "Gehören Sie zu den einkommensstärksten zehn Prozent? Und wie ist das Vermögen in unterschiedlichen Ländern verteilt? Testen Sie Ihr Wissen - klicken Sie auf \"Los geht's\"!",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
         ],

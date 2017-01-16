@@ -1,16 +1,16 @@
 {
-  "key": "limitedjobs1984",
-  "title": "1. Karte - #limitedjobs1984",
-  "dataset": "meanworking",
+  "key": "TopOneIncome",
+  "title": "2. Karte - Einkommen Top One",
+  "dataset": "incometopten",
   "content": [
     {
       "text": {
         "de": [
-          " # Befristete Jobs 1984",
+          " # Das oberste Prozent",
           "",
-          "Neue Jobs gibt es heute oft nur noch befristet - so scheint es zumindest. Aber stimmt das?.",
+          "Schauen wir das ganz obere Ende der Einkommensverteilung an: das oberste Prozent der Bevölkerung. ",
           "",
-          "**Betrachten Sie das Jahr 1984 und schätzen Sie: Wie viel Prozent der Arbeitsverträge waren damals in Deutschland befristet?**"
+          "**Wie viel muss jemand monatlich netto verdienen, um zu der Gruppe dazuzugehören?**"
         ],
         "en": [
           " #",
@@ -22,36 +22,37 @@
       }
     },{
       "input": {
-        "key": "sliderLimitedJobsBackthen",
+        "key": "sliderTopOneIncome",
         "type": "slider",
         "options": {
-          "unit": "%",
+          "unit": "€",
           "min": 1,
-          "value": 50,
-          "max": 100,
-          "step": 1
+          "value": 10000,
+          "max": 20000,
+          "step": 100
         }
       }
     },
     {
       "submit": {
-        "key": "AmountLimitedJobsBackthen"
+        "key": "AmountTopOneIncomeSubmitted"
       }
     },
 
     {
       "answer": {
         "answerKey": [
-          "i.sliderLimitedJobsBackthen && !i.AmountLimitedJobsBackthen",
-          "!i.AmountLimitedJobsBackthen && 'notSubmitted'",
-          "f.setDataset('limitedcontracts1984')",
+          "i.sliderTopOneIncome && !i.AmountTopOneIncomeSubmitted",
+          "!i.AmountTopOneIncomeSubmitted && 'notSubmitted'",
+          "f.setDataset('incometopone')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderLimitedJobsBackthen < 15 && f.panToCountry('DEU')) && 'Antwort_LimitedJobsBackthen1'",
-          "(i.sliderLimitedJobsBackthen >= 15 && f.panToCountry('DEU')) && 'Antwort_LimitedJobsBackthen2'"
+          "(i.sliderTopOneIncome <= 5400 && f.panToCountry(f.getISO('incometopone', i.sliderTopOneIncome))) && 'Antwort_TopOneIncome1'",
+          "(i.sliderTopOneIncome >= 5400 && i.sliderTopOneIncome <= 6400 && f.panToCountry('DEU')) && 'Antwort_TopOneIncome2'",
+          "(i.sliderTopOneIncome >= 6400 && f.panToCountry(f.getISO('incometopone', i.sliderTopOneIncome))) && 'Antwort_TopOneIncome3'"
         ],
         "answerContext": {
-          "AttendanceCountry" : "f.getCountryName('years_schooling', i.sliderLimitedJobsBackthen, { case: 'default' })"
+          "TopOneIncomeCountry" : "f.getCountryName('incometopone', i.sliderTopOneIncome, { case: 'default' })"
         },
         "templates": {
           "notSubmitted": {
@@ -59,17 +60,25 @@
           "allAnswered": {
             "de": [""], "en": [""]
           },
-          "Antwort_LimitedJobsBackthen1": {
+          "Antwort_TopOneIncome1": {
             "de": [
-              "Gut geschätzt. Im Jahr 1984 waren 10 Prozent der Arbeitsverträge befristet. Dazu zählen auch Ausbildungsverträge, bei denen die Befristung in der Natur des Vertrages liegt.."
+              "Falsch. Wer zum obersten Prozent dazugehören will, muss mindestens 5887 Euro monatlich verdienen. Ihre Antwort entspricht am ehesten dem Wert in **{{ TopOneIncomeCountry }}**."
             ],
             "en": [
               ""
             ]
           },
-          "Antwort_LimitedJobsBackthen2": {
+          "Antwort_TopOneIncome2": {
             "de": [
-              "Nein, weniger. Im Jahr 1984 waren 10 Prozent der Arbeitsverträge befristet. Dazu zählen auch Ausbildungsverträge, bei denen die Befristung in der Natur des Vertrages liegt."
+              "Guter Tipp. Laut Eurostat sind es 5887 Euro."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_TopOneIncome3": {
+            "de": [
+              "So viel ist es gar nicht. Ab einem Netto-Einkommen von 5887 Euro gehört jemand zum obersten Prozent."
             ],
             "en": [
               ""

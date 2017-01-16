@@ -1,14 +1,14 @@
 {
-  "key": "unemployment",
-  "title": "5. Karte - Arbeitslosigkeit",
-  "dataset": "youthunemployment",
+  "key": "Gini",
+  "title": "4. Karte - Gini",
+  "dataset": "eightytwenty",
   "content": [
     {
       "text": {
         "de": [
-          " # Eine Frage des Alters?",
+          " # Das Land mit der größten Ungleichheit",
           "",
-          "**Haben es junge Menschen auf dem Arbeitsmarkt schwerer? Was glauben Sie?**"
+          "**Der Gini-Index ist ein weiteres Maß für Ungleichheit. Er wird häufig genutzt, weil er für viele Länder zur Verfügung steht. Was glauben Sie: In welchem Land ist die Ungleichheit am größten?**"
         ],
         "en": [
           " # ",
@@ -20,32 +20,32 @@
       }
     },{
       "input": {
-        "key": "ChoiceUnemployment",
+        "key": "ChoiceGini",
         "type": "choices",
         "options": {
           "choices": [
-            ["ChoiceUnemploymentChoice_1", { "de": "Ja, sie sind häufiger arbeitslos.", "en": "" }],
-            ["ChoiceUnemploymentChoice_2", { "de": "Das Alter spielt keine Rolle.", "en": ""}],
-            ["ChoiceUnemploymentChoice_3", { "de": "Nein, sie sind seltener arbeitslos.", "en": "" }]
+            ["ChoiceGiniChoice_1", { "de": "Ukraine", "en": "" }],
+            ["ChoiceGiniChoice_2", { "de": "Südafrika", "en": ""}],
+            ["ChoiceGiniChoice_3", { "de": "Brasilien", "en": "" }]
           ]
         }
       }
     },
     {
       "submit": {
-        "key": "ChoiceUnemploymentSubmitted"
+        "key": "ChoiceGiniSubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          "i.ChoiceUnemployment && !i.ChoiceUnemploymentSubmitted",
-          "!i.ChoiceUnemploymentSubmitted && 'notSubmitted'",
-          "f.setDataset('unemployment')",
-          "f.panToCountry('CMR') && false",
+          "i.ChoiceGini && !i.ChoiceGiniSubmitted",
+          "!i.ChoiceGiniSubmitted && 'notSubmitted'",
+          "f.setDataset('giniindex')",
+          "f.panToCountry('ZAF') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('map')",
-          "i.ChoiceUnemployment"
+          "i.ChoiceGini"
         ],
         "answerContext": {},
         "templates": {
@@ -54,25 +54,25 @@
           },
 
 
-          "ChoiceUnemploymentChoice_1": {
+          "ChoiceGiniChoice_1": {
             "de": [
-              "Stimmt. Im Schnitt sind junge Menschen häufiger arbeitslos. Die Jugendarbeitslosigkeit zu reduzieren, steht daher weit oben auf der Agenda der Uno-Nachhaltigkeitsziele."
+              "Falsch. In der Ukraine ist die Ungleichheit am kleinsten, in Südafrika hingegen am größten."
             ],
             "en": [
               ""
             ]
           },
-          "ChoiceUnemploymentChoice_2": {
+          "ChoiceGiniChoice_2": {
             "de": [
-              "Falsch. Im Schnitt sind junge Menschen häufiger arbeitslos. Die Jugendarbeitslosigkeit zu reduzieren, steht daher weit oben auf der Agenda der Uno-Nachhaltigkeitsziele."
+              "Richtig. In Südafrika ist die Ungleichheit am größten, in der Ukraine am kleinsten."
             ],
             "en": [
               ""
             ]
           },
-          "ChoiceUnemploymentChoice_3": {
+          "ChoiceGiniChoice_3": {
             "de": [
-              "Falsch. Im Schnitt sind junge Menschen häufiger arbeitslos. Die Jugendarbeitslosigkeit zu reduzieren, steht daher weit oben auf der Agenda der Uno-Nachhaltigkeitsziele."
+              "Falsch. Im Vergleich mit anderen Ländern ist die Ungleichheit in Brasilien zwar groß - noch größer jedoch in Südafrika."
             ],
             "en": [
               ""
