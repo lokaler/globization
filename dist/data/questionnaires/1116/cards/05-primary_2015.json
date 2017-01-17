@@ -13,11 +13,11 @@
           "**Die Frage bleibt gleich: Wie viel Prozent der 15- bis 19-Jährigen haben im Jahr 2015 in Marokko keine Grundschule besucht?**"
         ],
         "en": [
-          " #",
+          " # 35 years later",
           "",
+          "We're still in Morocco, but now taking a look at the present-day situation. ",
           "",
-          "",
-          "****"
+          "**The question is the same: In 2015, what percentage of 15- to 19-year-olds in Morocco had not received even a primary school education?**"
         ]
       }
     },{
@@ -65,7 +65,7 @@
               "Nein, so schnell war der Fortschritt in Marokko nicht. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Trotzdem: Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte. Der von Ihnen getippte Wert entsprach am ehesten der Situation in **{{ SchoolTodayCountry }}**."
             ],
             "en": [
-              ""
+              "No, progress hasn’t come that quickly in Morocco. Some 32 percent of 15- to 19-year-olds in 2015 had not received a primary school education. Still, that’s 44 percentage points lower than in 1980, putting Morocco at the forefront of international educational expansion in recent decades. The value you entered most closely matches the 2015 situation in **{{ SchoolTodayCountry }}**."
             ]
           },
           "Antwort_SchoolToday2": {
@@ -73,7 +73,7 @@
               "Gut getippt. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte."
             ],
             "en": [
-              ""
+              "Good guess. Some 32 percent of 15- to 19-year-olds in 2015 had not received a primary school education. Still, that’s 44 percentage points lower than in 1980, putting Morocco at the forefront of international educational expansion in recent decades."
             ]
           },
           "Antwort_SchoolToday3": {
@@ -81,7 +81,7 @@
               "Nein, weniger. 32 Prozent der 15- bis 19-Jährigen haben 2015 in Marokko keine Grundschule besucht. Das sind 44 Prozentpunkte weniger als 1980 - und Marokko ist damit weit vorne bei der internationalen Bildungsexpansion der vergangenen Jahrzehnte. Der von Ihnen getippte Wert entsprach am ehesten der Situation in  **{{ SchoolTodayCountry }}**."
             ],
             "en": [
-              ""
+              "No. It's less than that. Some 32 percent of 15- to 19-year-olds in 2015 had not received a primary school education. Still, that’s 44 percentage points lower than in 1980, putting Morocco at the forefront of international educational expansion in recent decades. The value you entered most closely matches the 2015 situation in **{{ SchoolTodayCountry }}**."
             ]
           }
         }

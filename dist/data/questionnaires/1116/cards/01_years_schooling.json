@@ -13,11 +13,11 @@
           "**Schätzen Sie: Wieviele Jahre geht ein Kind in Nigeria durchschnittlich zur Schule?**"
         ],
         "en": [
-          " #",
+          " # Time spent at school",
           "",
+          "For how many years did you attend school? Whereas school attendance is mandatory in European countries, children in some parts of the world either don't go to school at all or go only for a few years.",
           "",
-          "",
-          "****"
+          "**Take a guess: For how many years does the average child attend school in Nigeria?**"
         ]
       }
     },{
@@ -65,7 +65,7 @@
               "Nein, mehr. Die durchschnittliche Schulzeit in Nigeria beträgt 7,7 Jahre. Der von Ihnen getippte Wert entspricht am ehesten der Schulzeit in **{{ AttendanceCountry }}**."
             ],
             "en": [
-              ""
+              "Nope. It's more than that. The average time spent attending school in Nigeria is 7.7 years. The value you entered is closest to the average years of schooling received by children in **{{ AttendanceCountry }}**."
             ]
           },
           "Antwort_Attendance2": {
@@ -73,7 +73,7 @@
               "Gut geschätzt. Die durchschnittliche Schulzeit in Nigeria beträgt 7,7 Jahre."
             ],
             "en": [
-              ""
+              "Good guess. The average time spent attending school in Nigeria is 7.7 years. "
             ]
           },
           "Antwort_Attendance3": {
@@ -81,7 +81,7 @@
               "Nein, ganz so lange gehen die Kinder in Nigeria nicht zur Schule. Die durchschnittliche Schulzeit dort beträgt 7,7 Jahre. Der von Ihnen getippte Wert entspricht am ehesten der Schulzeit in **{{ AttendanceCountry }}**."
             ],
             "en": [
-              ""
+              "No, children in Nigeria do not spend that much time in school. The average amount of schooling there is 7.7 years. The value you entered is closest to the average years of schooling received by children in **{{ AttendanceCountry }}**."
             ]
           }
         }

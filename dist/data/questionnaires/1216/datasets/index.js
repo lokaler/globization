@@ -5,11 +5,11 @@ export default [
     "key": "meanworking",
     "name": {
       "de": "Durchschnittliche wöchentliche Arbeitszeit",
-      "en": ""
+      "en": "average weekly working time"
     },
     "description": {
       "de": "Durchschnittliche wöchentliche Arbeitszeit (2012- 2015)",
-      "en": ""
+      "en": "average weekly working time (2012 - 2015)"
     },
     "quelle": "ILO",
     "link": "http://www.ilo.org/ilostat",
@@ -36,11 +36,11 @@ export default [
     "key": "limitedcontracts1984",
     "name": {
       "de": "Befristung 1984",
-      "en": ""
+      "en": "Temporary Employment 1984"
     },
     "description": {
       "de": "Anteil der Arbeitsverträge, die befristet sind, im Jahr 1984",
-      "en": ""
+      "en": "Share of fixed-term employment contracts in 1984."
     },
     "quelle": "ILO",
     "link": "http://www.ilo.org/ilostat",
@@ -67,11 +67,11 @@ export default [
     "key": "limitedcontracts2014",
     "name": {
       "de": "Befristung 2014",
-      "en": ""
+      "en": "Temporary Jobs in 2014"
     },
     "description": {
       "de": "Anteil der Arbeitsverträge, die befristet sind, im Jahr 2014",
-      "en": ""
+      "en": "Share of employment contracts with a fixed term in 2014"
     },
     "quelle": " ILO",
     "link": " http://www.ilo.org/ilostat",
@@ -99,11 +99,11 @@ export default [
     "key": "childrenlabour",
     "name": {
       "de": "Kinderarbeit",
-      "en": ""
+      "en": "Child Labor"
     },
     "description": {
       "de": "Anteil der Fünf- bis Siebzehnjährigen, die arbeiten",
-      "en": ""
+      "en": "Share of five- and seven-year-olds who work"
     },
     "quelle": "ILO",
     "link": "http://www.ilo.org/ilostat",
@@ -131,11 +131,11 @@ export default [
     "key": "youthunemployment",
     "name": {
       "de": "Jugendarbeitslosigkeit",
-      "en": ""
+      "en": "Youth Unemployment"
     },
     "description": {
       "de": "Arbeitslosenquote bei Unter-25-Jährigen in Prozent",
-      "en": ""
+      "en": "Unemployment rate of youth under 25 as a percentage"
     },
     "quelle": "ILO",
     "link": "http://www.ilo.org/ilostat",
@@ -163,11 +163,11 @@ export default [
     "key": "unemployment",
     "name": {
       "de": "Arbeitslosigkeit",
-      "en": ""
+      "en": "Unemployment"
     },
     "description": {
       "de": "Arbeitslosenquote bei Über-24-Jährigen",
-      "en": ""
+      "en": "Unemployment rate among over-24-year-olds"
     },
     "quelle": "ILO",
     "link": "http://www.ilo.org/ilostat",
@@ -196,11 +196,11 @@ export default [
     "key": "maternyleave",
     "name": {
       "de": "Mutterschutz",
-      "en": ""
+      "en": "Maternity Leave"
     },
     "description": {
       "de": "Anzahl Wochen des bezahlten Mutterschutzes",
-      "en": ""
+      "en": "Number of weeks of paid maternity leave"
     },
     "quelle": "ILO",
     "link": " http://www.ilo.org/ilostat",

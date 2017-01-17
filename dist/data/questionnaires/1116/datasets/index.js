@@ -5,11 +5,11 @@ export default [
     "key": "noschool",
     "name": {
       "de": "Keine Schule",
-      "en": ""
+      "en": "No School"
     },
     "description": {
       "de": "Anteil der 9- bis 12-Jährigen, die nie eine Schule besucht haben (in %)",
-      "en": ""
+      "en": "Share of children aged 9-12 years who have never been to school."
     },
     "quelle": "World Inequality Database on Education",
     "link": "http://www.education-inequalities.org/indicators/edu0_prim#?sort=mean&dimension=all&group=all&age_group=edu0_prim&countries=all",
@@ -36,11 +36,11 @@ export default [
     "key": "years_schooling",
     "name": {
       "de": "Schulzeit",
-      "en": ""
+      "en": "Time Spent at School"
     },
     "description": {
       "de": "Durchschnittliche Schulzeit in Jahren",
-      "en": ""
+      "en": "Average Number of Years of Schooling"
     },
     "quelle": "World Inequality Database on Education",
     "link": "http://www.education-inequalities.org/indicators/eduyears#?sort=disparity&dimension=wealth_quintile&group=|Quintile%205|Quintile%201&age_group=eduyears_20&countries=all",
@@ -68,11 +68,11 @@ export default [
     "key": "school_poor",
     "name": {
       "de": "Schulzeit Arme",
-      "en": ""
+      "en": "Years of Schooling of Poor"
     },
     "description": {
       "de": "Durchschnittliche Schulzeit von Kindern der ärmsten zehn Prozent in Jahren",
-      "en": ""
+      "en": "The average time spent at school by children in the poorest 10 percent of society in years."
     },
     "quelle": "World Inequality Database on Education",
     "link": "http://www.education-inequalities.org/indicators/eduyears#?sort=disparity&dimension=wealth_quintile&group=|Quintile%205|Quintile%201&age_group=eduyears_20&countries=all",
@@ -100,11 +100,11 @@ export default [
     "key": "edu_money",
     "name": {
       "de": "Geld für Bildung",
-      "en": ""
+      "en": "Expenditure on education"
     },
     "description": {
       "de": "Staatliche Ausgaben für Bildung in Prozent der Wirtschaftskraft",
-      "en": ""
+      "en": "Government expenditure on education as a percentage of GDP"
     },
     "quelle": "UNESCO",
     "link": "http://data.uis.unesco.org/Index.aspx?queryid=181",
@@ -132,11 +132,11 @@ export default [
     "key": "edu_1980",
     "name": {
       "de": "Grundschule 1980",
-      "en": ""
+      "en": "Primary attainment 1980"
     },
     "description": {
       "de": "Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht hat, im Jahr 1980",
-      "en": ""
+      "en": "Share of 15- to 19-year-olds in 1980 who hadn’t ever attended primary school"
     },
     "quelle": "Wittgenstein Centre for Demography and Global Human Capital",
     "link": "http://witt.null2.net/shiny/wic/",
@@ -164,11 +164,11 @@ export default [
     "key": "edu_2015",
     "name": {
       "de": "Grundschule 2015",
-      "en": ""
+      "en": "Primary attainment in 2015"
     },
     "description": {
       "de": "Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht hat, im Jahr 2015",
-      "en": ""
+      "en": "Share of 15- to 19-year-olds in 2015 who had never attended primary school"
     },
     "quelle": "Wittgenstein Centre for Demography and Global Human Capital",
     "link": "http://witt.null2.net/shiny/wic/",
@@ -196,11 +196,11 @@ export default [
     "key": "edu_all",
     "name": {
       "de": "Bildung für alle",
-      "en": ""
+      "en": "Education for all"
     },
     "description": {
       "de": "Anzahl Jahre bis der Anteil der 15- bis 19-Jährigen ohne Grundschulbesuch unter fünf Prozent fällt",
-      "en": ""
+      "en": "Year in which the share of 15- to 19-year-olds without any primary education attainment will fall below 5 percent"
     },
     "quelle": "Wittgenstein Centre for Demography and Global Human Capital",
     "link": "http://witt.null2.net/shiny/wic/",
@@ -228,11 +228,11 @@ export default [
     "key": "computer_skills",
     "name": {
       "de": "Computer-Kenntnisse",
-      "en": ""
+      "en": "Copying files"
     },
     "description": {
       "de": "Anteil der Erwachsenen, die eine Datei oder einen Ordner auf einem Computer verschieben können",
-      "en": ""
+      "en": "Proportion of adults who can copy or move a file or folder on their computer"
     },
     "quelle": "Uno",
     "link": "http://data.un.org/Data.aspx?q=ICT&d=SDGs&f=series%3aSE_ADT_ICTCPY",

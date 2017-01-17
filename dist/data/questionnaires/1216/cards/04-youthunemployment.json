@@ -13,11 +13,11 @@
           "**Was meinen Sie: Wie hoch war die Arbeitslosigkeit der unter 25-Jährigen in Spanien im Jahr 2014?**"
         ],
         "en": [
-          " #",
+          " # Youth Unemployment",
           "",
+          "In the course of the financial and euro crisis in Europe, youth unemployment rose dramatically in Southern European countries. The problem is most severe in Spain.",
           "",
-          "",
-          "****"
+          "**How high do you think the unemployment rate was among under-25-year-olds in Spain in 2014?**"
         ]
       }
     },{
@@ -65,7 +65,7 @@
               "Nein, mehr. Die Arbeitslosenquote unter Jugendlichen lag 2014 in Spanien bei 53 Prozent. Ihr Tipp entspricht am ehesten dem Wert in **{{ YouthUnemploymentCountry }}**."
             ],
             "en": [
-              ""
+              "No, higher. The unemployment rate among youth in Spain was 53 percent in 2014. Your guess is closest to the figure in **{{ YouthUnemploymentCountry }}**."
             ]
           },
           "Antwort_YouthUnemployment2": {
@@ -73,7 +73,7 @@
               "Korrekt. Die Arbeitslosenquote unter Jugendlichen lag 2014 in Spanien bei 53 Prozent. Die Lage besserte sich in den vergangenen Jahren langsam."
             ],
             "en": [
-              ""
+              "Correct. The youth unemployment rate in Spain stood at 53 percent in 2014. The situation has slowly improved in recent years."
             ]
           },
           "Antwort_YouthUnemployment3": {
@@ -81,7 +81,7 @@
               "Nein, weniger. Die Arbeitslosenquote unter Jugendlichen lag 2014 in Spanien bei 53 Prozent. Ihr Tipp entspricht am ehesten dem Wert in **{{ YouthUnemploymentCountry }}**."
             ],
             "en": [
-              ""
+              "No, less. The youth unemployment rate in Spain stood at 53 percent in 2014. Your guess is closest to the figure in **{{ YouthUnemploymentCountry }}**."
             ]
           }
         }
