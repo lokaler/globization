@@ -13,11 +13,11 @@
           "**Betrachten Sie ein Kind aus einer nigerianischen Familie, die zu den ärmsten zehn Prozent des Landes gehört: Wie lange geht dieses Kind zur Schule?**"
         ],
         "en": [
-          " # ",
+          " # Is it a question of money?",
           "",
+          "Let’s stick with Nigeria for a minute. As we just found out, children there attend school on average for just less than eight years. That is supposed to apply equally to both poor and rich families, at least according to the UN’s sustainable development goals. But what is the true situation?",
           "",
-          "",
-          "** **"
+          "**Let’s take a look at a child in a Nigerian family that is part of the country’s poorest 10 percent. How many years will this child spend attending school?**"
         ]
       }
     },{
@@ -64,7 +64,7 @@
               "Da liegen Sie - leider - richtig. Ein armes Kind in Nigeria geht im Schnitt gerade einmal 1,7 Jahre zur Schule. In Nigeria ist der Abstand zwischen Arm und Reich weltweit am größten. Die Kinder der reichsten zehn Prozent gehen rund zwölf Jahre zur Schule. Der Globus zeigt Ihnen auch die Werte für arme Kinder in anderen Ländern."
             ],
             "en": [
-              ""
+              "That, unfortunately, is correct. A poor child in Nigeria attends school for an average of only 1.7 years. Nigeria has the world’s greatest disparity between rich and poor. The children of the richest 10 percent attend school for around 12 years. The globe also displays values for impoverished children in other countries."
             ]
           },
           "Antwort_AttendancePoor2": {
@@ -72,7 +72,7 @@
               "Nein, leider weniger. Ein armes Kind in Nigeria geht im Schnitt gerade einmal 1,7 Jahre zur Schule. In Nigeria ist der Abstand zwischen Arm und Reich weltweit am größten. Die Kinder der reichsten zehn Prozent gehen rund zwölf Jahre zur Schule. Der Globus zeigt Ihnen auch die Werte für arme Kinder in anderen Ländern."
             ],
             "en": [
-              ""
+              "No. It's unfortunately less than that. A poor child in Nigeria attends school for an average of only 1.7 years. Nigeria has the world’s greatest disparity between rich and poor. The children of the richest 10 percent attend school for around 12 years. The globe also displays values for impoverished children in other countries."
             ]
           }
         }

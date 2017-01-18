@@ -13,11 +13,11 @@
           "**Betrachten Sie das Jahr 1984 und schätzen Sie: Wie viel Prozent der Arbeitsverträge waren damals in Deutschland befristet?**"
         ],
         "en": [
-          " #",
+          " # Temporary Work in 1984",
           "",
+          "New jobs today are often only temporary positions – at least that’s how it seems. Is this true though?",
           "",
-          "",
-          "****"
+          "**Look back at the year 1984 and take a guess: What percentage of employment contracts in Germany back then were for limited periods of time?**"
         ]
       }
     },{
@@ -64,7 +64,7 @@
               "Gut geschätzt. Im Jahr 1984 waren 10 Prozent der Arbeitsverträge befristet. Dazu zählen auch Ausbildungsverträge, bei denen die Befristung in der Natur des Vertrages liegt.."
             ],
             "en": [
-              ""
+              "That’s a good guess! In 1984, 10 percent of employment contracts were for temporary positions. That figure also includes contracts that were limited to the duration of training or  apprenticeship programs."
             ]
           },
           "Antwort_LimitedJobsBackthen2": {
@@ -72,7 +72,7 @@
               "Nein, weniger. Im Jahr 1984 waren 10 Prozent der Arbeitsverträge befristet. Dazu zählen auch Ausbildungsverträge, bei denen die Befristung in der Natur des Vertrages liegt."
             ],
             "en": [
-              ""
+              "No. Less. In 1984, 10 percent of employment contracts were for temporary positions. That figure also includes contracts that were limited to the duration of training or apprenticeship programs."
             ]
           }
         }

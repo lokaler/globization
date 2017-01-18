@@ -1,0 +1,28 @@
+{
+  "key": "intro",
+  "title": "Intro",
+  "dataset": "nettoHousehold",
+  "view": "globe",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# ÜberMorgen-Explorer",
+          "",
+
+          "Gehören Sie zu den einkommensstärksten zehn Prozent? Und wie ist das Vermögen in unterschiedlichen Ländern verteilt? Testen Sie Ihr Wissen - klicken Sie auf \"Los geht's\"!",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
+        ],
+        "en": [
+          "# BeyondTomorrow Explorer",
+          "",
+
+          "Test your knowledge by clicking on \"Let's Get Started.\"",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
+        ]
+      }
+    }
+  ]
+}

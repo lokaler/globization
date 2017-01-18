@@ -13,11 +13,11 @@
           "**Aber wie sieht es damit aus, eine Datei oder einen Ordner auf dem Computer zu verschieben? Tippen Sie, in welchem Land diese Fähigkeit am wenigsten verbreitet ist:**"
         ],
         "en": [
-          " # ",
+          " # Who can copy files?",
           "",
-          ".",
+          "As a result of digitalization, it is growing increasingly important that we continue learning throughout our lives, because technologies that didn’t even exist when we went to school are growing in importance. Adult learning is also part of the sustainable development goals. In the EU in 2014, around 65 percent of adults knew how to send an email with an attachment. ",
           "",
-          "****"
+          "**But what about copying or moving a file or folder on a computer? Can you guess the country in which this skill is least widespread:**"
         ]
       }
     },{
@@ -26,10 +26,10 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["amountCompuSkillsChoice_1", { "de": "Brasilien", "en": "" }],
-            ["amountCompuSkillsChoice_2", { "de": "Ägypten", "en": ""}],
-            ["amountCompuSkillsChoice_3", { "de": "Marroko", "en": ""}],
-            ["amountCompuSkillsChoice_4", { "de": "Italien", "en": "" }]
+            ["amountCompuSkillsChoice_1", { "de": "Brasilien", "en": "Brazil"}],
+            ["amountCompuSkillsChoice_2", { "de": "Ägypten", "en": "Egypt"}],
+            ["amountCompuSkillsChoice_3", { "de": "Marroko", "en": "Morocco"}],
+            ["amountCompuSkillsChoice_4", { "de": "Italien", "en": "Italy"}]
           ]
         }
       }
@@ -62,7 +62,7 @@
               "Falsch. In Brasilien können 27 Prozent der Erwachsenen eine Datei verschieben. Ägypten wäre richtig gewesen. Dort können dies nur elf Prozent."
             ],
             "en": [
-              ""
+              "Wrong. In Brazil, 27 percent of all adults can move a file. Egypt would have been correct. There, the figure is just 11 percent."
             ]
           },
           "amountCompuSkillsChoice_2": {
@@ -70,7 +70,7 @@
               "Richtig. Nur elf Prozent der erwachsenen Ägypter können eine Datei verschieben. Der Globus zeigt Ihnen die Werte für andere Länder."
             ],
             "en": [
-              ""
+              "Correct. Only 11 percent of adults in Egypt know how to move a file. The globe also shows you the data for other countries."
             ]
           },
           "amountCompuSkillsChoice_3": {
@@ -78,7 +78,7 @@
               "Falsch. In Marokko können 37 Prozent der Erwachsenen eine Datei verschieben. Ägypten wäre richtig gewesen. Dort können dies nur elf Prozent."
             ],
             "en": [
-              ""
+              "Wrong. Some 37 percent of adults in Morocco know how to move a file. Egypt would have been the correct answer. There, the figure is just 11 percent."
             ]
           },
           "amountCompuSkillsChoice_4": {
@@ -86,7 +86,7 @@
               "Falsch. In Italien können 56 Prozent der Erwachsenen eine Datei verschieben. Ägypten wäre richtig gewesen. Dort können dies nur elf Prozent."
             ],
             "en": [
-              ""
+              "Wrong. In Italy, 56 percent of adults can move a file. Egypt, where only 11 percent of adults know how to do so, would have been the correct answer."
             ]
           }
         }

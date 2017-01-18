@@ -19,6 +19,8 @@ import cards1116 from './1116/cards/index';
 import datasets1116 from './1116/datasets/index';
 import cards1216 from './1216/cards/index';
 import datasets1216 from './1216/datasets/index';
+import cards1316 from './1316/cards/index';
+import datasets1316 from './1316/datasets/index';
 
 
 let questionnaires = {
@@ -127,6 +129,18 @@ let questionnaires = {
     },
     cards: cards1216,
     datasets: datasets1216
+  },
+  1316: {
+    title: {
+      de: 'Ungleichheit',
+      en: 'inequality'
+    },
+    options: {
+      showBackButton: true,
+      lastButtonLabel: 'explore'
+    },
+    cards: cards1316,
+    datasets: datasets1316
   }
 };
 
