@@ -7,7 +7,7 @@
     {
       "text": {
         "de": [
-          "Hier können Sie die Datensätze alle noch einmal in Ruhe erkunden. Oder sie lesen [unsere Reportage über Kinderarbeiter in Bolivien](http://www.spiegel.de/wirtschaft/soziales/bolivien-die-stolzen-kinderarbeiter-a-1123897.html) – wo Kinderarbeit 2014 legalisiert wurde.",
+          "Hier können Sie die Datensätze alle noch einmal in Ruhe erkunden. Oder sie lesen [unsere Reportage über zwei Familienväter in Kenia](http://www.spiegel.de/politik/ausland/kenia-die-ungleichen-nachbarn-a-1124767.html) - der eine wohnt in einer Villa, der andere im Slum. ",
           "Den Link zum interaktiven Globus teilen:"
         ],
         "en": [
@@ -21,8 +21,8 @@
           "f.setView('globe')"
         ],
         "answerContext": {
-          "twitterShare": "f.shareButtonTwitter('http://www.spiegel.de/ce/article/a-1125297.html', 'Quiz zur Arbeit weltweit: Werden befristete Jobs mehr? #ÜberMorgen')",
-          "facebookShare": "f.shareButtonFacebook('http://www.spiegel.de/ce/article/a-1125297.html', 'Quiz zur Arbeit weltweit: Werden befristete Jobs mehr? #ÜberMorgen')",
+          "twitterShare": "f.shareButtonTwitter('http://www.spiegel.de/ce/article/a-1125297.html', 'Quiz: Wie ungleich ist die Welt? #ÜberMorgen')",
+          "facebookShare": "f.shareButtonFacebook('http://www.spiegel.de/ce/article/a-1125297.html', 'Quiz: Wie ungleich ist die Welt? #ÜberMorgen')",
           "twitterShareEn": "f.shareButtonTwitter('', ' #beyondtomorrow')",
           "facebookShareEn": "f.shareButtonFacebook('', '#beyondtomorrow')"
         },
