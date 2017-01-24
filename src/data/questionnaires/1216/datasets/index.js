@@ -5,11 +5,11 @@ export default [
     "key": "meanworking",
     "name": {
       "de": "Durchschnittliche wöchentliche Arbeitszeit",
-      "en": "average weekly working time"
+      "en": "Average weekly working time"
     },
     "description": {
       "de": "Durchschnittliche wöchentliche Arbeitszeit (2012- 2015)",
-      "en": "average weekly working time (2012 - 2015)"
+      "en": "Average weekly working time (2012 - 2015)"
     },
     "quelle": "ILO",
     "link": "http://www.ilo.org/ilostat",
