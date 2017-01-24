@@ -25,7 +25,7 @@
         "key": "sliderMaternyLeave",
         "type": "slider",
         "options": {
-          "unit": "Wochen",
+          "unit": "weeks",
           "min": 0,
           "value": 50,
           "max": 100,
