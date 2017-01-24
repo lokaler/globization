@@ -13,7 +13,7 @@ export default [
     },
     "quelle": "ILO",
     "link": "http://www.ilo.org/ilostat",
-        "unit": "h",
+    "unit": "h",
     "fixed": 1,
     "domain": [
       0,
@@ -44,7 +44,7 @@ export default [
     },
     "quelle": "ILO",
     "link": "http://www.ilo.org/ilostat",
-        "unit": "%",
+    "unit": "%",
     "fixed": 1,
     "domain": [
       0,
@@ -204,7 +204,7 @@ export default [
     },
     "quelle": "ILO",
     "link": " http://www.ilo.org/ilostat",
-    "unit": "Wochen",
+    "unit": "weeks",
     "fixed": 1,
     "legendCorner": true,
     "domain": [

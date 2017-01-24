@@ -25,7 +25,7 @@ export default class TooltipComponent extends React.Component {
 
     const { x, y, active, value, iso, unit } = this.props.vis.tooltip;
     const name = translate(iso, { isCountryCode: true });
-    const slug = value != undefined ? translate(value) + " " + unit : translate("no data");
+    const slug = value != undefined ? translate(value) + " " + translate(unit) : translate("no data");
 
     return (
       <div
