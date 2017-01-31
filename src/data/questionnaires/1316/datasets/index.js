@@ -38,11 +38,11 @@ export default [
     "key": "incometopten",
     "name": {
       "de": "Einkommen Top 10%",
-      "en": ""
+      "en": "Income Top 10%"
     },
     "description": {
       "de": "Verfügbares Monatseinkommen in Euro, mit dem man mehr als 90 % der Bevölkerung verdient",
-      "en": ""
+      "en": "Available monthly income in euro required for a person to earn more than 90 percent of the population."
     },
     "quelle": "Eurostat",
     "link": "http://ec.europa.eu/eurostat/web/income-and-living-conditions/data/database",
@@ -69,11 +69,11 @@ export default [
     "key": "incometopone",
     "name": {
       "de": "Einkommen Top 1%",
-      "en": ""
+      "en": "Income Top 1%"
     },
     "description": {
       "de": "Verfügbares Monatseinkommen in Euro, mit dem man mehr als 99 Prozent der Bevölkerung verdient",
-      "en": ""
+      "en": "Available monthly income in euro required for a person to earn more than 99 percent of the population."
     },
     "quelle": "Eurostat",
     "link": " http://ec.europa.eu/eurostat/web/income-and-living-conditions/data/database",
@@ -101,11 +101,11 @@ export default [
     "key": "eightytwenty",
     "name": {
       "de": "Einkommens-Ungleichheit",
-      "en": ""
+      "en": "Income Inequality"
     },
     "description": {
       "de": "Verhältnis des Einkommens der oberen 20 Prozent zu den unteren 20 Prozent",
-      "en": ""
+      "en": "Income disparity between the top 20 percent and the lowest 20 percent."
     },
     "quelle": "OECD",
     "link": "http://stats.oecd.org/index.aspx?queryid=66670",
@@ -133,11 +133,11 @@ export default [
     "key": "giniindex",
     "name": {
       "de": "Gini-Index",
-      "en": ""
+      "en": "Gini Index"
     },
     "description": {
       "de": "Gini-Index zwischen 0 (Alle besitzen gleich viel) und 100 (Eine Person besitzt alles)",
-      "en": ""
+      "en": "Gini index between 0 (perfect income equality) und 100 (perfect income inequality)"
     },
     "quelle": "Weltbank",
     "link": "http://data.worldbank.org/indicator/SI.POV.GINI",
@@ -165,11 +165,11 @@ export default [
     "key": "wealthtopten",
     "name": {
       "de": "Vermögen Top 10%",
-      "en": ""
+      "en": "Wealth Top 10%"
     },
     "description": {
       "de": "Anteil der Top 10 Prozent am Gesamtvermögen in Prozent",
-      "en": ""
+      "en": "Percent share of total wealth held by the top 10 percent."
     },
     "quelle": "OECD",
     "link": "https://stats.oecd.org/Index.aspx?DataSetCode=WEALTH",
