@@ -13,11 +13,11 @@
           "**Wie viel muss jemand monatlich netto verdienen, um zu der Gruppe dazuzugehören?**"
         ],
         "en": [
-          " #",
+          " # The 1 Percent",
           "",
+          "Let’s take a look at the very highest level of income distribution, the upper 1 percent of the population. ",
           "",
-          "",
-          "****"
+          "**What net income would a person need each month in order to belong to this group? **"
         ]
       }
     },{
@@ -65,7 +65,7 @@
               "Falsch. Wer zum obersten Prozent dazugehören will, muss mindestens 5887 Euro monatlich verdienen. Ihre Antwort entspricht am ehesten dem Wert in **{{ TopOneIncomeCountry }}**."
             ],
             "en": [
-              ""
+              "Wrong. To belong to the upper 1 percent, you would have a net income of at least 5,887 euros per month. Your guess is closest to the figure in **{{ TopOneIncomeCountry }}**."
             ]
           },
           "Antwort_TopOneIncome2": {
@@ -73,7 +73,7 @@
               "Guter Tipp. Laut Eurostat sind es 5887 Euro."
             ],
             "en": [
-              ""
+              "Good guess. According to Eurostat, the amount would be 5,887 euros or more. "
             ]
           },
           "Antwort_TopOneIncome3": {
@@ -81,7 +81,7 @@
               "So viel ist es gar nicht. Ab einem Netto-Einkommen von 5887 Euro gehört jemand zum obersten Prozent."
             ],
             "en": [
-              ""
+              "No, it’s not that much. Those with a net income of at least 5,887 euros per month belong to the top 1 percent. "
             ]
           }
         }
