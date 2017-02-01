@@ -22,6 +22,9 @@ for (const c of master) {
 export default function translate(value, options = {}) {
   const language = store.getState().app.language;
 
+  // if there is an empty string
+  if (value === '') return '';
+
   // multilanguage text object
   if (isObject(value) && 'de' in value && 'en' in value) {
     return value[language];

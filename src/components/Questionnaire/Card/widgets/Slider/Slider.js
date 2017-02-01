@@ -29,7 +29,7 @@ export default class Slider extends React.Component {
   }
 
   tipFormatter(val) {
-    console.log(translate(this.props.options.unit), (this.props.options.unit));
+    // console.log(translate(this.props.options.unit), (this.props.options.unit));
     return `${translate(val, { isSimpleNumber: true })} ${translate(this.props.options.unit)}`;
   }
 

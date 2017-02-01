@@ -46,7 +46,7 @@ export default [
     },
     "quelle": "Eurostat",
     "link": "http://ec.europa.eu/eurostat/web/income-and-living-conditions/data/database",
-        "unit": "",
+    "unit": "€",
     "fixed": 1,
     "domain": [
       0,
@@ -77,7 +77,7 @@ export default [
     },
     "quelle": "Eurostat",
     "link": " http://ec.europa.eu/eurostat/web/income-and-living-conditions/data/database",
-    "unit": "",
+    "unit": "€",
     "fixed": 1,
     "domain": [
       0,
