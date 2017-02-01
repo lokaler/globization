@@ -62,5 +62,9 @@
   "explore": {
     "de": "Erkunden",
     "en": "explore"
+  },
+  "weeks": {
+    "de": "Wochen",
+    "en": "weeks"
   }
 }

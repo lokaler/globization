@@ -11,11 +11,10 @@
           "**Der Gini-Index ist ein weiteres Maß für Ungleichheit. Er wird häufig genutzt, weil er für viele Länder zur Verfügung steht. Was glauben Sie: In welchem Land ist die Ungleichheit am größten?**"
         ],
         "en": [
-          " # ",
+          " # The Country with the Greatest Income Inequality",
           "",
-          ".",
           "",
-          "****"
+          "**The Gini index is a further measure of inequality. It is often used because it can be applied to so many countries. In which country to you think income inequality is greatest? **"
         ]
       }
     },{
@@ -24,9 +23,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["ChoiceGiniChoice_1", { "de": "Ukraine", "en": "" }],
-            ["ChoiceGiniChoice_2", { "de": "Südafrika", "en": ""}],
-            ["ChoiceGiniChoice_3", { "de": "Brasilien", "en": "" }]
+            ["ChoiceGiniChoice_1", { "de": "Ukraine", "en": "Ukraine" }],
+            ["ChoiceGiniChoice_2", { "de": "Südafrika", "en": "South Africa"}],
+            ["ChoiceGiniChoice_3", { "de": "Brasilien", "en": "Brazil" }]
           ]
         }
       }
@@ -59,7 +58,7 @@
               "Falsch. In der Ukraine ist die Ungleichheit am kleinsten, in Südafrika hingegen am größten."
             ],
             "en": [
-              ""
+              "Wrong. Income inequality is actually lowest in Ukraine. It is highest in South Africa."
             ]
           },
           "ChoiceGiniChoice_2": {
@@ -67,7 +66,7 @@
               "Richtig. In Südafrika ist die Ungleichheit am größten, in der Ukraine am kleinsten."
             ],
             "en": [
-              ""
+              "Correct. Income inequality is highest in South Africa. It is lowest in Ukraine."
             ]
           },
           "ChoiceGiniChoice_3": {
@@ -75,7 +74,7 @@
               "Falsch. Im Vergleich mit anderen Ländern ist die Ungleichheit in Brasilien zwar groß - noch größer jedoch in Südafrika."
             ],
             "en": [
-              ""
+              "Wrong. Compared to other countries, income inequality is indeed high in Brazil. However, it is even higher in South Africa."
             ]
           }
         }
