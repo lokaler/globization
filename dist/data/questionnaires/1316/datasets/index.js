@@ -139,7 +139,7 @@ export default [
       "de": "Gini-Index zwischen 0 (Alle besitzen gleich viel) und 100 (Eine Person besitzt alles)",
       "en": "Gini index between 0 (perfect income equality) und 100 (perfect income inequality)"
     },
-    "quelle": "Weltbank",
+    "quelle": "World Bank",
     "link": "http://data.worldbank.org/indicator/SI.POV.GINI",
     "unit": "",
     "fixed": 1,
