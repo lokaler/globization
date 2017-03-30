@@ -30,7 +30,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Blues",
+    "colorSet": "Purples",
     "colorNum": 9,
     "data": require('./1_Grundschule.csv')
   },
@@ -63,27 +63,27 @@ export default [
       485
     ],
     "scale": 2.4,
-    "colorSet": "Blues",
+    "colorSet": "Purples",
     "colorNum": 9,
     "data": require('./2_wahlrecht.csv')
   },
    {
     "key": "vorstaende",
     "name": {
-      "de": "Einkommens-Ungleichheit",
-      "en": "Income Inequality"
+      "de": "Frauenanteil",
+      "en": ""
     },
     "description": {
-      "de": "Verhältnis des Einkommens der oberen 20 Prozent zu den unteren 20 Prozent",
-      "en": "Income disparity between the top 20 percent and the lowest 20 percent."
+      "de": "Frauenanteil in Vorständen und Aufsichtsräten (2015) [in Prozent]",
+      "en": ""
     },
-    "quelle": "OECD",
-    "link": "http://stats.oecd.org/index.aspx?queryid=66670",
-    "unit": "",
+    "quelle": "Credit Suisse Research",
+    "link": "http://publications.credit-suisse.com/tasks/render/file/index.cfm?fileid=5A7755E1-EFDD-1973-A0B5C54AFF3FB0AE",
+    "unit": "%",
     "fixed": 1,
     "domain": [
       0,
-      18
+      45
     ],
     "skala": [
       0,
@@ -95,27 +95,27 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Blues",
+    "colorSet": "Purples",
     "colorNum": 9,
     "data": require('./3_vorstaende.csv')
   },
    {
     "key": "fuehrungspos",
     "name": {
-      "de": "Gini-Index",
-      "en": "Gini Index"
+      "de": "Führungskräfte",
+      "en": ""
     },
     "description": {
-      "de": "Gini-Index zwischen 0 (Alle besitzen gleich viel) und 100 (Eine Person besitzt alles)",
-      "en": "Gini index between 0 (perfect income equality) und 100 (perfect income inequality)"
+      "de": "Frauenanteil unter Führungskräften, Akademikern und Technikern (2015) [in Prozent]",
+      "en": ""
     },
-    "quelle": "World Bank",
-    "link": "http://data.worldbank.org/indicator/SI.POV.GINI",
-    "unit": "",
+    "quelle": "ILO",
+    "link": "http://www.ilo.org/ilostat/faces/oracle/webcenter/portalapp/pagehierarchy/Page3.jspx?MBI_ID=12",
+    "unit": "%",
     "fixed": 1,
     "domain": [
-      0,
-      70
+      9,
+      72
     ],
     "skala": [
       0,
@@ -127,27 +127,27 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Blues",
+    "colorSet": "Purples",
     "colorNum": 9,
     "data": require('./4_fuehrungspositionen.csv')
   },
      {
     "key": "muettersterb",
     "name": {
-      "de": "Vermögen Top 10%",
+      "de": "Müttersterblickkeit",
       "en": "Wealth Top 10%"
     },
     "description": {
-      "de": "Anteil der Top 10 Prozent am Gesamtvermögen in Prozent",
-      "en": "Percent share of total wealth held by the top 10 percent."
+      "de": "Zahl der Frauen, die vor, während oder in den ersten sechs Wochen nach der Geburt sterben (2015) [je 100.000 Geburten]",
+      "en": ""
     },
-    "quelle": "OECD",
-    "link": "https://stats.oecd.org/Index.aspx?DataSetCode=WEALTH",
-    "unit": "%",
+    "quelle": "WHO",
+    "link": "http://apps.who.int/gho/data/node.main.MATMORT?lang=en",
+    "unit": "",
     "fixed": 1,
     "domain": [
       0,
-      90
+      1800
     ],
     "skala": [
       0,
@@ -159,7 +159,7 @@ export default [
       90
     ],
     "scale": 1,
-    "colorSet": "Blues",
+    "colorSet": "Purples",
     "colorNum": 9,
     "data": require('./5_muettersterblichkeit.csv')
   },
@@ -191,7 +191,7 @@ export default [
    90
  ],
  "scale": 1,
- "colorSet": "Blues",
+ "colorSet": "Purples",
  "colorNum": 9,
  "data": require('./6_lohngefaelle.csv')
 },
@@ -223,7 +223,7 @@ export default [
  90
 ],
 "scale": 1,
-"colorSet": "Blues",
+"colorSet": "Purples",
 "colorNum": 9,
 "data": require('./7_regierungsposten.csv')
 }

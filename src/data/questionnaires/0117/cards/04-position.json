@@ -1,50 +1,53 @@
 {
-  "key": "Gini",
-  "title": "4. Karte - Gini",
-  "dataset": "eightytwenty",
+  "key": "glass_ceiling",
+  "title": "4. Karte - glaesernde Decke",
+  "dataset": "vorstaende",
   "content": [
     {
       "text": {
         "de": [
-          " # Das Land mit der größten Ungleichheit",
+          " # Niedrigere Positionen im Job",
           "",
-          "**Der Gini-Index ist ein weiteres Maß für Ungleichheit. Er wird häufig genutzt, weil er für viele Länder zur Verfügung steht. Was glauben Sie: In welchem Land ist die Ungleichheit am größten?**"
+          "Die „gläserne Decke“ wirkt schon unterhalb der Vorstandsebene: In der Gruppe der Führungskräfte, Akademiker und Techniker kommen auf drei Männer im weltweiten Schnitt zwei Frauen.",
+          "",
+          "**Was glauben Sie, wo ist der Frauenanteil in diesen höheren Positionen am höchsten?**"
         ],
         "en": [
-          " # The Country with the Greatest Income Inequality",
+          " # ",
           "",
+          " ",
           "",
-          "**The Gini index is a further measure of inequality. It is often used because it can be applied to so many countries. In which country to you think income inequality is greatest?**"
+          "****"
         ]
       }
     },{
       "input": {
-        "key": "ChoiceGini",
+        "key": "GlassCeiling",
         "type": "choices",
         "options": {
           "choices": [
-            ["ChoiceGiniChoice_1", { "de": "Ukraine", "en": "Ukraine" }],
-            ["ChoiceGiniChoice_2", { "de": "Südafrika", "en": "South Africa"}],
-            ["ChoiceGiniChoice_3", { "de": "Brasilien", "en": "Brazil" }]
+            ["GlassCeilingChoice_1", { "de": "Weißrussland", "en": "" }],
+            ["GlassCeilingChoice_2", { "de": "Südafrika", "en": ""}],
+            ["GlassCeilingChoice_3", { "de": "Pakistan", "en": "" }]
           ]
         }
       }
     },
     {
       "submit": {
-        "key": "ChoiceGiniSubmitted"
+        "key": "GlassCeilingSubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          "i.ChoiceGini && !i.ChoiceGiniSubmitted",
-          "!i.ChoiceGiniSubmitted && 'notSubmitted'",
-          "f.setDataset('giniindex')",
-          "f.panToCountry('ZAF') && false",
+          "i.GlassCeiling && !i.GlassCeilingSubmitted",
+          "!i.GlassCeilingSubmitted && 'notSubmitted'",
+          "f.setDataset('fuehrungspos')",
+          "f.panToCountry('BLR') && false",
           "f.isMobile() && f.setView('map')",
-          "!f.isMobile() && f.setView('map')",
-          "i.ChoiceGini"
+          "!f.isMobile() && f.setView('globe')",
+          "i.GlassCeiling"
         ],
         "answerContext": {},
         "templates": {
@@ -53,28 +56,28 @@
           },
 
 
-          "ChoiceGiniChoice_1": {
+          "GlassCeilingChoice_1": {
             "de": [
-              "Falsch. In der Ukraine ist die Ungleichheit am kleinsten, in Südafrika hingegen am größten."
+              "Ganz genau: In Weißrussland sind 62 Prozent der Führungskräfte, Akademiker und Techniker weiblich."
             ],
             "en": [
-              "Wrong. Income inequality is actually lowest in Ukraine. It is highest in South Africa."
+              ""
             ]
           },
-          "ChoiceGiniChoice_2": {
+          "GlassCeilingChoice_2": {
             "de": [
-              "Richtig. In Südafrika ist die Ungleichheit am größten, in der Ukraine am kleinsten."
+              " Nein, in Südafrika ist die Situation ähnlich wie in Deutschland: Der Frauenanteil liegt bei 49 Prozent. Den höchsten Anteil findet man in **Weißrussland**: 62 Prozent der höheren Positionen sind von Frauen besetzt."
             ],
             "en": [
-              "Correct. Income inequality is highest in South Africa. It is lowest in Ukraine."
+              ""
             ]
           },
-          "ChoiceGiniChoice_3": {
+          "GlassCeilingChoice_3": {
             "de": [
-              "Falsch. Im Vergleich mit anderen Ländern ist die Ungleichheit in Brasilien zwar groß - noch größer jedoch in Südafrika."
+              "Nein, ganz im Gegenteil: Pakistan gehört mit weniger als zehn Prozent zu jenen Ländern mit dem niedrigsten Frauenanteil in solchen Positionen. Den höchsten Anteil hat **Weißrussland** mit 62 Prozent."
             ],
             "en": [
-              "Wrong. Compared to other countries, income inequality is indeed high in Brazil. However, it is even higher in South Africa."
+              ""
             ]
           }
         }

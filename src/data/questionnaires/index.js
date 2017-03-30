@@ -147,8 +147,8 @@ let questionnaires = {
 
   '0117': {
     title: {
-      de: 'Ungleichheit',
-      en: 'inequality'
+      de: 'Frauenrechte',
+      en: 'women_rights'
     },
     options: {
       showBackButton: true,

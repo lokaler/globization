@@ -1,0 +1,87 @@
+{
+  "key": "women_share",
+  "title": "3. Karte - Frauenanteil",
+  "dataset": "",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Die Männer geben den Ton an?",
+          "",
+          "In Vorständen und Aufsichtsräten sind Frauen völlig unterrepräsentiert – weltweit und branchenübergreifend. Deutschland versucht mit der Frauenquote den Anteil auf 30 Prozent zu heben.",
+          "",
+          "**Was meinen Sie, welches Land kommt bereits auf diesen Anteil?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          " ",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "ShareWomenBoards",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["ShareWomenBoardsChoice_1", { "de": "Italien", "en": "" }],
+            ["ShareWomenBoardsChoice_2", { "de": "Japan", "en": ""}],
+            ["ShareWomenBoardsChoice_3", { "de": "Kanada", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "ShareWomenBoardsSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.ShareWomenBoards && !i.ShareWomenBoardsSubmitted",
+          "!i.ShareWomenBoardsSubmitted && 'notSubmitted'",
+          "f.setDataset('vorstaende')",
+          "f.panToCountry('ITA') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.ShareWomenBoards"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "ShareWomenBoardsChoice_1": {
+            "de": [
+              "Ganz richtig, in italienischen Unternehmen sind die Vorstände und Aufsichtsräte zu gut 30 Prozent mit Frauen besetzt. Vorreiter ist übrigens Norwegen: Hier sind Männer und Frauen fast gleich stark vertreten."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "ShareWomenBoardsChoice_2": {
+            "de": [
+              "Nein, Japan bildet das Schlusslicht des Vergleichs: Nur 3,5 Prozent der Vorstands- und Aufsichtsratsposten sind mit Frauen besetzt. Die richtige Antwort wäre **Italien** gewesen, mit gut 30 Prozent. Vorreiter ist übrigens Norwegen: Hier sind Männer und Frauen fast gleich stark vertreten."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "ShareWomenBoardsChoice_3": {
+            "de": [
+              "Nein, in Kanada ist die Situation ähnlich wie in Deutschland: Rund 21 Prozent der Vorstands- und Aufsichtsratsposten sind mit Frauen besetzt. Die richtige Antwort wäre **Italien** gewesen, mit gut 30 Prozent. Vorreiter ist übrigens Norwegen: Hier sind Männer und Frauen fast gleich stark vertreten."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
