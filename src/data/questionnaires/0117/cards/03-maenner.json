@@ -1,0 +1,96 @@
+{
+  "key": "inequality",
+  "title": "3. Karte - Ungleichheit",
+  "dataset": "incometopone",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Eine Frage des Alters?",
+          "",
+          "“Die Schere zwischen Arm und Reich geht immer weiter auf” - heißt es. Stimmt das?",
+          "",
+          "**Im Jahr 1985 haben die obersten 20 Prozent in Deutschland zusammen genommen 3,5 Mal so viel verdient wie die untersten 20 Prozent. Was glauben Sie: Seitdem ...**"
+        ],
+        "en": [
+          " # Is the World Becoming Less Equal?",
+          "",
+          "“The gap between the rich and the poor keeps widening,” it is said. But is it true? ",
+          "",
+          "**In 1985, the top 20 percent in Germany earned 3.5 times as much as the bottom 20 percent. What do you think: Since then …**"
+        ]
+      }
+    },{
+      "input": {
+        "key": "ChoiceInequality",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["ChoiceInequalityChoice_1", { "de": "… ist die Ungleichheit kleiner geworden. Das Verhältnis liegt heute bei etwa 2", "en": "… income inequality has shrunk. Today the ratio is around 2.0." }],
+            ["ChoiceInequalityChoice_2", { "de": "... ist die Ungleichheit gleich geblieben.", "en": "… income inequality has remained the same."}],
+            ["ChoiceInequalityChoice_3", { "de": "... ist die Ungleichheit größer geworden. Das Verhältnis liegt heute bei 4,4.", "en": "… income inequality has become larger. Today they earn 4.4 times more. " }],
+            ["ChoiceInequalityChoice_4", { "de": "... ist die Ungleichheit dramatisch größer geworden. Das Verhältnis liegt heute bei 8,2.", "en": "… income inequality has grown much, much larger. Today they earn 8.2 times more." }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "ChoiceInequalitySubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.ChoiceInequality && !i.ChoiceInequalitySubmitted",
+          "!i.ChoiceInequalitySubmitted && 'notSubmitted'",
+          "f.setDataset('eightytwenty')",
+          "f.panToCountry('DEU') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.ChoiceInequality"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "ChoiceInequalityChoice_1": {
+            "de": [
+              "Falsch. Die Ungleichheit hat zugenommen. 2011/2012 lag das Verhältnis zwischen oberen und unteren 20 Prozent bei 4,4. In den USA beträgt es tatsächlich 8,2."
+            ],
+            "en": [
+              "Wrong. The income gap has grown. In 2011/2012, the top 20 percent earned 4.4 times more than the bottom 20 percent. In the U.S., the ratio is 8.2."
+            ]
+          },
+          "ChoiceInequalityChoice_2": {
+            "de": [
+              "Falsch. Die Ungleichheit hat zugenommen. 2011/2012 lag das Verhältnis zwischen oberen und unteren 20 Prozent bei 4,4. In den USA beträgt es tatsächlich 8,2."
+            ],
+            "en": [
+              "Wrong. The income gap has grown. In 2011/2012, the top 20 percent earned 4.4 times more than the bottom 20 percent. In the U.S., the ratio is 8.2."
+            ]
+          },
+          "ChoiceInequalityChoice_3": {
+            "de": [
+              "Richtig. Die Ungleichheit ist größer geworden. 2011/2012 lag das Verhältnis zwischen oberen und unteren 20 Prozent bei 4,4. In den USA beträgt es tatsächlich 8,2."
+            ],
+            "en": [
+              "Correct. The income gap has grown. In 2011/2012, the top 20 percent earned 4.4 times more than the bottom 20 percent. In the U.S., the ratio is 8.2."
+            ]
+          },
+          "ChoiceInequalityChoice_4": {
+            "de": [
+              "Falsch. Die Ungleichheit hat zwar zugenommen. 2011/2012 lag das Verhältnis zwischen oberen und unteren 20 Prozent jedoch bei 4,4. In den USA beträgt es aber tatsächlich 8,2."
+            ],
+            "en": [
+              "Wrong. The income gap has indeed grown, but the top 20 percent earns 4.4 times more than the bottom 20. In the U.S., the ratio is 8.2."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
