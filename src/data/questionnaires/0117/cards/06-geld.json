@@ -1,58 +1,60 @@
 {
-  "key": "TopTenWealth",
-  "title": "5. Karte - Vermögen Top Ten",
-  "dataset": "giniindex",
+  "key": "money",
+  "title": "6. Karte - Verdienst",
+  "dataset": "muettersterb",
   "content": [
     {
       "text": {
         "de": [
-          " # Das Vermögen der Reichen",
+          " # Weniger Geld im Portemonnaie",
           "",
-          "Bisher ging es um die Ungleichheit beim Einkommen - doch wer von Arm und Reich spricht, meint häufig das Vermögen von Menschen. In den USA besitzen die reichsten zehn Prozent der Bevölkerung 76 Prozent des Gesamtvermögens. In der Slowakei sind es nur 33 Prozent.",
+          "In vielen Ländern verdienen Frauen deutlich schlechter als Männer. Der sogenannte unbereinigte Gender Pay Gap fasst die Ungleichheit in Zahlen: Im europäischen Schnitt verdienen Frauen 16 Prozent weniger.",
           "",
-          "**Was tippen Sie, wie die Vermögensverteilung in Deutschland aussieht: Wie viel Prozent des Gesamtvermögens ist in der Hand der reichsten zehn Prozent?**"
+          "**Wie hoch ist das Lohngefälle wohl in Deutschland?**"
         ],
         "en": [
-          " # The Rich and Their Wealth",
+          " # ",
           "",
-          "Thus far, we have focused on income inequality, but when we use the terms rich and poor, we are often referring to a person's accumulated wealth. In the U.S., the richest 10 percent of the population holds 76 percent of total wealth. In Slovakia that figure is only 33 percent.",
           "",
-          "**How do you think Germany stacks up in terms of wealth distribution? What percentage of the country’s total wealth is in the hands of the richest 10 percent?**"
+          "",
+          "****"
         ]
       }
     },{
       "input": {
-        "key": "sliderTopTenWealth",
+        "key": "sliderPayGap",
         "type": "slider",
         "options": {
           "unit": "%",
           "min": 1,
-          "value": 50,
-          "max": 100,
+          "value": 25,
+          "max": 50,
           "step": 1
         }
       }
     },
     {
       "submit": {
-        "key": "AmountTopTenWealthSubmitted"
+        "key": "AmountPayGapSubmitted"
       }
     },
 
     {
       "answer": {
         "answerKey": [
-          "i.sliderTopTenWealth && !i.AmountTopTenWealthSubmitted",
-          "!i.AmountTopTenWealthSubmitted && 'notSubmitted'",
-          "f.setDataset('wealthtopten')",
+          "i.sliderPayGap && !i.AmountPayGapSubmitted",
+          "!i.AmountPayGapSubmitted && 'notSubmitted'",
+          "f.setDataset('lohngefaelle')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderTopTenWealth <= 54 && f.panToCountry(f.getISO('wealthtopten', i.sliderTopTenWealth))) && 'Antwort_TopTenWealth1'",
-          "(i.sliderTopTenWealth >= 54 && i.sliderTopTenWealth <= 64 && f.panToCountry('DEU')) && 'Antwort_TopTenWealth2'",
-          "(i.sliderTopTenWealth >= 64 && f.panToCountry(f.getISO('wealthtopten', i.sliderTopTenWealth))) && 'Antwort_TopTenWealth3'"
+          "f.panToCountry('DEU') && false",
+          "(i.sliderPayGap <= 19) && 'Antwort_PayGap1'",
+          "(i.sliderPayGap >= 20 && i.sliderPayGap <= 24) && 'Antwort_PayGap2'",
+          "(i.sliderPayGap >= 25 && i.sliderPayGap <= 28) && 'Antwort_PayGap3'",
+          "(i.sliderPayGap >= 29) && 'Antwort_PayGap4'"
         ],
         "answerContext": {
-          "TopTenWealthCountry" : "f.getCountryName('wealthtopten', i.sliderTopTenWealth, { case: 'default' })"
+          "PayGapCountry" : "f.getCountryName('lohngefaelle', i.sliderPayGap, { case: 'default' })"
         },
         "templates": {
           "notSubmitted": {
@@ -60,28 +62,36 @@
           "allAnswered": {
             "de": [""], "en": [""]
           },
-          "Antwort_TopTenWealth1": {
+          "Antwort_PayGap1": {
             "de": [
-              "Falsch. Es ist mehr, nämlich rund 59 Prozent. Diese Zahl ist im übrigen nur eine untere Grenze, weil sehr große Vermögen von den Studien kaum erfasst werden. Ihre Antwort entspricht am ehesten dem Wert in **{{ TopTenWealthCountry }}**."
+              "Nein, in Deutschland verdienen Frauen sogar 22 Prozent weniger als Männer. Dieser unbereinigte Wert berücksichtigt alle Löhne. Es gibt auch einen bereinigten Wert, der Frauen und Männer in gleichen Positionen und mit vergleichbaren Qualifikationen vergleicht. Doch selbst so ergibt sich noch immer ein Unterschied von sechs Prozent. Ihr getippter Wert entspricht etwa dem unbereinigten Gender Pay Gap in **{{ PayGapCountry }}**. "
             ],
             "en": [
-              "That’s incorrect. At around 59 percent, the figure is higher. It could, however, be higher because certain asset classes are not always included in the studies. Your guess is closest to the figure in **{{ TopTenWealthCountry }}**."
+              ""
             ]
           },
-          "Antwort_TopTenWealth2": {
+          "Antwort_PayGap2": {
             "de": [
-              "Da haben Sie gut getippt. Die reichsten zehn Prozent besitzen rund 59 Prozent des Vermögens. Diese Zahl ist im übrigen nur eine untere Grenze, weil sehr große Vermögen von den Studien kaum erfasst werden."
+              "Ja, Frauen verdienen in Deutschland 22 Prozent weniger als Männer. Dieser unbereinigte Wert berücksichtigt alle Löhne. Es gibt auch einen bereinigten Wert, der Frauen und Männer in gleichen Positionen und mit vergleichbaren Qualifikationen vergleicht. Doch selbst so ergibt sich noch immer ein Unterschied von sechs Prozent."
             ],
             "en": [
-              "That’s a good guess. The richest 10 percent possess around 59 percent of the wealth. It could, however, be higher because certain asset classes are not always included in the studies."
+              ""
             ]
           },
-          "Antwort_TopTenWealth3": {
+          "Antwort_PayGap3": {
             "de": [
-              "Das ist wahrscheinlich zu viel. Die reichsten zehn Prozent besitzen rund 59 Prozent des Vermögens. Allerdings ist diese Zahl ist nur eine untere Grenze, weil sehr große Vermögen von den Studien kaum erfasst werden. Ihre Antwort entspricht am ehesten dem Wert in **{{ TopTenWealthCountry }}**."
+              "Nein, in Deutschland verdienen Frauen 22 Prozent weniger als Männer. Dieser unbereinigte Wert berücksichtigt alle Löhne. Es gibt auch einen bereinigten Wert, der Frauen und Männer in gleichen Positionen und mit vergleichbaren Qualifikationen vergleicht. Doch selbst so ergibt sich noch immer ein Unterschied von sechs Prozent. Ihr getippter Wert entspricht etwa dem unbereinigten Gender Pay Gap in Estland."
             ],
             "en": [
-              "That’s probably too high. The richest 10 percent possess at least 59 percent of the wealth, though it could be higher because certain asset classes are not always included in the studies. Your guess is closest to the figure in **{{ TopTenWealthCountry }}**."
+              "."
+            ]
+          },
+          "Antwort_PayGap4": {
+            "de": [
+              "Nein, ein so hohes Lohngefälle gibt es in Europa nirgends. In Deutschland beträgt der unbereinigte Gender Pay Gap. Er berücksichtigt (hier fehlt etwas)"
+            ],
+            "en": [
+              "."
             ]
           }
         }

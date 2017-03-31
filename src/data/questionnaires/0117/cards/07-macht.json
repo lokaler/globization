@@ -1,58 +1,59 @@
 {
-  "key": "TopTenWealth",
-  "title": "5. Karte - Vermögen Top Ten",
-  "dataset": "giniindex",
+  "key": "money",
+  "title": "7. Karte - Macht",
+  "dataset": "lohngefaelle",
   "content": [
     {
       "text": {
         "de": [
-          " # Das Vermögen der Reichen",
+          " # Frauen an der Macht",
           "",
-          "Bisher ging es um die Ungleichheit beim Einkommen - doch wer von Arm und Reich spricht, meint häufig das Vermögen von Menschen. In den USA besitzen die reichsten zehn Prozent der Bevölkerung 76 Prozent des Gesamtvermögens. In der Slowakei sind es nur 33 Prozent.",
+          "Deutsche Jugendliche kennen es gar nicht anders: An der Spitze der Bundesregierung steht eine Frau. Im internationalen Vergleich ist das immer noch eher ungewöhnlich. Auch Ministerposten sind meist männlich besetzt.",
           "",
-          "**Was tippen Sie, wie die Vermögensverteilung in Deutschland aussieht: Wie viel Prozent des Gesamtvermögens ist in der Hand der reichsten zehn Prozent?**"
+          "**In wie vielen Ländern werden weniger als 20 Prozent der Kabinettsposten von Frauen bekleidet?**"
         ],
         "en": [
-          " # The Rich and Their Wealth",
+          " # ",
           "",
-          "Thus far, we have focused on income inequality, but when we use the terms rich and poor, we are often referring to a person's accumulated wealth. In the U.S., the richest 10 percent of the population holds 76 percent of total wealth. In Slovakia that figure is only 33 percent.",
           "",
-          "**How do you think Germany stacks up in terms of wealth distribution? What percentage of the country’s total wealth is in the hands of the richest 10 percent?**"
+          "",
+          "****"
         ]
       }
     },{
       "input": {
-        "key": "sliderTopTenWealth",
+        "key": "sliderCabinetsPosts",
         "type": "slider",
         "options": {
           "unit": "%",
           "min": 1,
-          "value": 50,
-          "max": 100,
+          "value": 25,
+          "max": 50,
           "step": 1
         }
       }
     },
     {
       "submit": {
-        "key": "AmountTopTenWealthSubmitted"
+        "key": "AmountCabinetsPostsSubmitted"
       }
     },
 
     {
       "answer": {
         "answerKey": [
-          "i.sliderTopTenWealth && !i.AmountTopTenWealthSubmitted",
-          "!i.AmountTopTenWealthSubmitted && 'notSubmitted'",
-          "f.setDataset('wealthtopten')",
+          "i.sliderCabinetsPosts && !i.AmountCabinetsPostsSubmitted",
+          "!i.AmountCabinetsPostsSubmitted && 'notSubmitted'",
+          "f.setDataset('regierungsposten')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderTopTenWealth <= 54 && f.panToCountry(f.getISO('wealthtopten', i.sliderTopTenWealth))) && 'Antwort_TopTenWealth1'",
-          "(i.sliderTopTenWealth >= 54 && i.sliderTopTenWealth <= 64 && f.panToCountry('DEU')) && 'Antwort_TopTenWealth2'",
-          "(i.sliderTopTenWealth >= 64 && f.panToCountry(f.getISO('wealthtopten', i.sliderTopTenWealth))) && 'Antwort_TopTenWealth3'"
+          "f.panToCountry('DEU') && false",
+          "(i.sliderCabinetsPosts <= 77) && 'Antwort_CabinetsPosts1'",
+          "(i.sliderCabinetsPosts >= 78 && i.sliderCabinetsPosts <= 82) && 'Antwort_CabinetsPosts2'",
+          "(i.sliderCabinetsPosts >= 83) && 'Antwort_CabinetsPosts3'"
         ],
         "answerContext": {
-          "TopTenWealthCountry" : "f.getCountryName('wealthtopten', i.sliderTopTenWealth, { case: 'default' })"
+          "CabinetsPostsCountry" : "f.getCountryName('regierungsposten', i.sliderCabinetsPosts, { case: 'default' })"
         },
         "templates": {
           "notSubmitted": {
@@ -60,28 +61,28 @@
           "allAnswered": {
             "de": [""], "en": [""]
           },
-          "Antwort_TopTenWealth1": {
+          "Antwort_CabinetsPosts1": {
             "de": [
-              "Falsch. Es ist mehr, nämlich rund 59 Prozent. Diese Zahl ist im übrigen nur eine untere Grenze, weil sehr große Vermögen von den Studien kaum erfasst werden. Ihre Antwort entspricht am ehesten dem Wert in **{{ TopTenWealthCountry }}**."
+              "Nein, es sind mehr: 80 Länder. Darunter etwa die Türkei, Tschechien und Brasilien."
             ],
             "en": [
-              "That’s incorrect. At around 59 percent, the figure is higher. It could, however, be higher because certain asset classes are not always included in the studies. Your guess is closest to the figure in **{{ TopTenWealthCountry }}**."
+              ""
             ]
           },
-          "Antwort_TopTenWealth2": {
+          "Antwort_CabinetsPosts2": {
             "de": [
-              "Da haben Sie gut getippt. Die reichsten zehn Prozent besitzen rund 59 Prozent des Vermögens. Diese Zahl ist im übrigen nur eine untere Grenze, weil sehr große Vermögen von den Studien kaum erfasst werden."
+              "Ja, in 80 Ländern liegt der Frauenanteil in der Regierung bei weniger als 20 Prozent. Darunter sind etwa die Türkei, Tschechien und Brasilien."
             ],
             "en": [
-              "That’s a good guess. The richest 10 percent possess around 59 percent of the wealth. It could, however, be higher because certain asset classes are not always included in the studies."
+              ""
             ]
           },
-          "Antwort_TopTenWealth3": {
+          "Antwort_CabinetsPosts3": {
             "de": [
-              "Das ist wahrscheinlich zu viel. Die reichsten zehn Prozent besitzen rund 59 Prozent des Vermögens. Allerdings ist diese Zahl ist nur eine untere Grenze, weil sehr große Vermögen von den Studien kaum erfasst werden. Ihre Antwort entspricht am ehesten dem Wert in **{{ TopTenWealthCountry }}**."
+              "Nein, es sind weniger Länder: 80 Stück. Darunter etwa die Türkei, Tschechien und Brasilien."
             ],
             "en": [
-              "That’s probably too high. The richest 10 percent possess at least 59 percent of the wealth, though it could be higher because certain asset classes are not always included in the studies. Your guess is closest to the figure in **{{ TopTenWealthCountry }}**."
+              ""
             ]
           }
         }

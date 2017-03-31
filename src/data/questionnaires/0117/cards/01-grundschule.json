@@ -1,7 +1,7 @@
 {
   "key": "PrimarySchool",
   "title": "1. Karte - Einkommen Top Ten",
-  "dataset": "nettoHousehold",
+  "dataset": "",
   "content": [
     {
       "text": {
@@ -47,12 +47,13 @@
           "f.setDataset('grundschule')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderPrimarySchool <= 18 && f.panToCountry(f.getISO('grundschule', i.sliderPrimarySchool))) && 'Antwort_PrimarySchool1'",
-          "(i.sliderPrimarySchool >= 19 && i.sliderPrimarySchool <= 28 && 'Antwort_PrimarySchool2'",
-          "(i.sliderPrimarySchool >= 29 && f.panToCountry(f.getISO('grundschule', i.sliderPrimarySchool))) && 'Antwort_PrimarySchool3'"
+          "f.panToCountry('CAF') && false",
+          "(i.sliderPrimarySchool <= 23 && 'Antwort_PrimarySchool1')",
+          "(i.sliderPrimarySchool >= 24 && i.sliderPrimarySchool <= 28 && 'Antwort_PrimarySchool2')",
+          "(i.sliderPrimarySchool >= 29 && 'Antwort_PrimarySchool3')"
         ],
         "answerContext": {
-          "PrimarySchoolCountry" : "f.getCountryName('incometopten', i.sliderPrimarySchool, { case: 'default' })"
+          "PrimarySchoolCountry" : "f.getCountryName('grundschule', i.sliderPrimarySchool, { case: 'default' })"
         },
         "templates": {
           "notSubmitted": {
@@ -62,7 +63,7 @@
           },
           "Antwort_PrimarySchool1": {
             "de": [
-              " Nein, mehr! In 26 Ländern hat mehr als jedes dritte Mädchen keine abgeschlossene Grundschulausbildung. Bei Jungs ist das übrigens in 19 Ländern so. Am schlimmsten ist die Situation in einigen afrikanischen Ländern, etwa dem Südsudan, dem Tschad und der Zentralafrikanischen Republik. Hier hinken die Mädchen den Jungs auch besonders weit hinterher."
+              "Nein, mehr! In 26 Ländern hat mehr als jedes dritte Mädchen keine abgeschlossene Grundschulausbildung. Bei Jungs ist das übrigens in 19 Ländern so. Am schlimmsten ist die Situation in einigen afrikanischen Ländern, etwa dem Südsudan, dem Tschad und der Zentralafrikanischen Republik. Hier hinken die Mädchen den Jungs auch besonders weit hinterher."
             ],
             "en": [
               ""
@@ -70,7 +71,7 @@
           },
           "Antwort_PrimarySchool2": {
             "de": [
-              "Gut geschätzt. In 26 Ländern hat mehr als jedes dritte Mädchen keine abgeschlossene Grundschulausbildung. Bei Jungs ist das übrigens in 19 Ländern so. Am schlimmsten ist die Situation in einigen afrikanischen Ländern, etwa dem Südsudan, dem Tschad und der Zentralafrikanischen Republik. Hier hinken die Mädchen den Jungs auch besonders weit hinterher."
+              "Ja, in 26 Ländern hat mehr als jedes dritte Mädchen keine abgeschlossene Grundschulausbildung. Bei Jungs ist das übrigens in 19 Ländern so. Am schlimmsten ist die Situation in einigen afrikanischen Ländern, etwa dem Südsudan, dem Tschad und der Zentralafrikanischen Republik. Hier hinken die Mädchen den Jungs auch besonders weit hinterher."
             ],
             "en": [
               ""

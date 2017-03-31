@@ -4,20 +4,20 @@ export default [
   {
     "key": "grundschule",
     "name": {
-      "de": "Mittleres Haushaltsnettoeinkommen",
-      "en": "Median net household income"
+      "de": "Grundschule",
+      "en": ""
     },
     "description": {
-      "de": "Mittleres Haushaltsnettoeinkommen [kaufkraftbereinigt in 1000 US-Dollar]",
-      "en": "Median net household income [1000 US dollars, adjusted for purchasing power]"
+      "de": "Anteil der Mädchen, die die Grundschule abschließen (i.d.R. 2014) [in Prozent], (vorzeitige Einschulungen können zu Anteilen von mehr als 100 % führen)",
+      "en": ""
     },
-    "quelle": "OECD",
-    "link": "http://stats.oecd.org/Index.aspx?DataSetCode=BLI",
-    "unit": "Tsd. USD",
+    "quelle": "UNESCO",
+    "link": "http://data.uis.unesco.org/index.aspx?queryid=160",
+    "unit": "%",
     "fixed": 0,
     "domain": [
       0,
-      40
+      108
     ],
     "skala": [
       0,
@@ -38,20 +38,20 @@ export default [
   {
     "key": "wahlrecht",
     "name": {
-      "de": "Einkommen Top 1%",
-      "en": "Income Top 1%"
+      "de": "Frauenwahlrecht",
+      "en": ""
     },
     "description": {
-      "de": "Verfügbares Monatseinkommen in Euro, mit dem man mehr als 99 Prozent der Bevölkerung verdient",
-      "en": "Available monthly income in euro required for a person to earn more than 99 percent of the population."
+      "de": "Jahre, seit dem Frauen auf nationaler Ebene das gleiche aktive Wahlrecht wie Männer haben",
+      "en": ""
     },
-    "quelle": "Eurostat",
-    "link": " http://ec.europa.eu/eurostat/web/income-and-living-conditions/data/database",
-    "unit": "€",
+    "quelle": "Wikipedia",
+    "link": "https://en.wikipedia.org/wiki/Women%27s_suffrage",
+    "unit": "Jahre",
     "fixed": 1,
     "domain": [
       0,
-      9000
+      135
     ],
     "skala": [
       0,
@@ -166,20 +166,20 @@ export default [
   {
  "key": "lohngefaelle",
  "name": {
-   "de": "Vermögen Top 10%",
-   "en": "Wealth Top 10%"
+   "de": "Lohngefälle",
+   "en": ""
  },
  "description": {
-   "de": "Anteil der Top 10 Prozent am Gesamtvermögen in Prozent",
+   "de": "Unbereinigter Gender Pay Gap (i.d.R. 2015) [in Prozent]",
    "en": "Percent share of total wealth held by the top 10 percent."
  },
- "quelle": "OECD",
- "link": "https://stats.oecd.org/Index.aspx?DataSetCode=WEALTH",
+ "quelle": "Eurostat",
+ "link": "http://ec.europa.eu/eurostat/tgm/table.do?tab=table&init=1&plugin=1&language=en&pcode=tsdsc340",
  "unit": "%",
  "fixed": 1,
  "domain": [
    0,
-   90
+   27
  ],
  "skala": [
    0,
@@ -198,15 +198,15 @@ export default [
 {
 "key": "regierungsposten",
 "name": {
- "de": "Vermögen Top 10%",
- "en": "Wealth Top 10%"
+ "de": "Kabinettsposten",
+ "en": ""
 },
 "description": {
- "de": "Anteil der Top 10 Prozent am Gesamtvermögen in Prozent",
- "en": "Percent share of total wealth held by the top 10 percent."
+ "de": "Frauenanteil an Kabinettsposten (2016) [in mind. … Prozent]",
+ "en": ""
 },
-"quelle": "OECD",
-"link": "https://stats.oecd.org/Index.aspx?DataSetCode=WEALTH",
+"quelle": "WomanStats",
+"link": "http://www.womanstats.org/new/",
 "unit": "%",
 "fixed": 1,
 "domain": [
