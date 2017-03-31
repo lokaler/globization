@@ -1,0 +1,100 @@
+{
+  "key": "Mortality",
+  "title": "5. Karte - Müttersterblichkeit",
+  "dataset": "fuehrungspos",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Versorgungslücken für Mütter",
+          "",
+          "In der Mehrheit der Ländern liegt die Müttersterblichkeit inzwischen bei weniger als 100. Das bedeutet: Je 100.000 Geburten sterben weniger als 100 Mütter vor, während oder in den ersten sechs Wochen nach der Geburt.",
+          "",
+          "**Die mit Abstand höchste Müttersterblichkeit hat das westafrikanische Sierra Leone. Wie hoch ist sie?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderMortality",
+        "type": "slider",
+        "options": {
+          "unit": "Frauen",
+          "min": 100,
+          "value": 1000,
+          "max": 2000,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountMortalitySubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderMortality && !i.AmountMortalitySubmitted",
+          "!i.AmountMortalitySubmitted && 'notSubmitted'",
+          "f.setDataset('muettersterb')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderMortality <= 900 && f.panToCountry('SLE')) && 'Antwort_Mortality1'",
+          "(i.sliderMortality >= 901 && i.sliderMortality <= 1299 && f.panToCountry('SLE')) && 'Antwort_Mortality2'",
+          "(i.sliderMortality >= 1300 && i.sliderMortality <= 1420 && f.panToCountry('SLE')) && 'Antwort_Mortality3'",
+          "(i.sliderMortality >= 1421 && f.panToCountry('SLE')) && 'Antwort_Mortality4'"
+        ],
+        "answerContext": {
+          "MortalityCountry" : "f.getCountryName('muettersterb', i.sliderMortality, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_Mortality1": {
+            "de": [
+              "Nein, Ihr getippter Wert entspricht eher der Müttersterblichkeit in **{{ MortalityCountry }}**. In Sierra Leone hingegen sterben 1360 Mütter je 100.000 Geburten. Und auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit noch immer bei mehr als 500."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_Mortality2": {
+            "de": [
+              "Ihr getippter Wert übertrifft zwar schon die Müttersterblichkeit aller anderen Länder. Aber die Rate von Sierra Leone haben Sie noch immer unterschätzt: Je 100.000 Geburten sterben 1360 Mütter. Auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit noch immer bei mehr als 500."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_Mortality3": {
+            "de": [
+              "Ja, in Sierra Leone sterben tatsächlich 1360 Mütter je 100.000 Geburten. Und auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit noch immer bei mehr als 500."
+            ],
+            "en": [
+              "."
+            ]
+          },
+          "Antwort_Mortality4": {
+            "de": [
+              "Nein, ganz so hoch ist die Müttersterblichkeit in Sierra Leone zwar nicht. Aber je 100.000 Geburten sterben immer noch 1360 Mütter. Auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit bei mehr als 500."
+            ],
+            "en": [
+              "."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "key": "money",
+  "title": "7. Karte - Macht",
+  "dataset": "lohngefaelle",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Frauen an der Macht",
+          "",
+          "Deutsche Jugendliche kennen es gar nicht anders: An der Spitze der Bundesregierung steht eine Frau. Im internationalen Vergleich ist das immer noch eher ungewöhnlich. Auch Ministerposten sind meist männlich besetzt.",
+          "",
+          "**In wie vielen Ländern werden weniger als 20 Prozent der Kabinettsposten von Frauen bekleidet?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderCabinetsPosts",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 25,
+          "max": 50,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountCabinetsPostsSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderCabinetsPosts && !i.AmountCabinetsPostsSubmitted",
+          "!i.AmountCabinetsPostsSubmitted && 'notSubmitted'",
+          "f.setDataset('regierungsposten')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "f.panToCountry('DEU') && false",
+          "(i.sliderCabinetsPosts <= 77) && 'Antwort_CabinetsPosts1'",
+          "(i.sliderCabinetsPosts >= 78 && i.sliderCabinetsPosts <= 82) && 'Antwort_CabinetsPosts2'",
+          "(i.sliderCabinetsPosts >= 83) && 'Antwort_CabinetsPosts3'"
+        ],
+        "answerContext": {
+          "CabinetsPostsCountry" : "f.getCountryName('regierungsposten', i.sliderCabinetsPosts, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_CabinetsPosts1": {
+            "de": [
+              "Nein, es sind mehr: 80 Länder. Darunter etwa die Türkei, Tschechien und Brasilien."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_CabinetsPosts2": {
+            "de": [
+              "Ja, in 80 Ländern liegt der Frauenanteil in der Regierung bei weniger als 20 Prozent. Darunter sind etwa die Türkei, Tschechien und Brasilien."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_CabinetsPosts3": {
+            "de": [
+              "Nein, es sind weniger Länder: 80 Stück. Darunter etwa die Türkei, Tschechien und Brasilien."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
