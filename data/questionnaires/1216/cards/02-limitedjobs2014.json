@@ -1,0 +1,87 @@
+{
+  "key": "limitedcontracts",
+  "title": "2. Karte - #befristet2014",
+  "dataset": "limitedcontracts1984",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Befristete Jobs 2014",
+          "",
+          "**Schauen Sie nun ins Jahr 2014: Wie viel Prozent der Arbeitsverträge waren damals in Deutschland befristet?**"
+        ],
+        "en": [
+          " # Temporary Jobs in 2014",
+          "",
+          "**Take a look at 2014: What percentage of employment contacts in Germany do you think were only temporary that year?**"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderLimitedContracts",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountLimitedContractsSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderLimitedContracts && !i.AmountLimitedContractsSubmitted",
+          "!i.AmountLimitedContractsSubmitted && 'notSubmitted'",
+          "f.setDataset('limitedcontracts2014')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderLimitedContracts <= 5 && f.panToCountry('DEU')) && 'Answer_LimitedContracts1'",
+          "(i.sliderLimitedContracts >= 7 && i.sliderLimitedContracts < 21 && f.panToCountry('DEU')) && 'Answer_LimitedContracts2'",
+          "(i.sliderLimitedContracts >= 22 && f.panToCountry(f.getISO('limitedcontracts2014', i.sliderLimitedContracts))) && 'Answer_LimitedContracts3'"
+        ],
+        "answerContext": {
+          "limitedcontracts2014Country" : "f.getCountryName('limitedcontracts2014', i.sliderLimitedContracts, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Answer_LimitedContracts1": {
+            "de": [
+              "Nein, zurückgegangen ist der Anteil der befristeten Verträge nicht. Stattdessen ist die Zahl um 30 Prozent gestiegen, auf 13 Prozent aller Verträge."
+            ],
+            "en": [
+              "No, the number of fixed-term employment contracts has not gone down. Instead, the number has increased by 30 percent to include 13 percent of all employment contracts issued."
+            ]
+          },
+          "Answer_LimitedContracts2": {
+            "de": [
+              "Guter Tipp. Der Anteil der befristeten Verträge ist um 30 Prozent gestiegen, auf 13 Prozent aller Verträge."
+            ],
+            "en": [
+              "Good guess. The share of fixed-term contracts has increased by 30 percent to include 13 percent of all employment contracts issued."
+            ]
+          },
+          "Answer_LimitedContracts3": {
+            "de": [
+              "Falsch. So stark ist die Zahl der befristeten Verträge nicht angestiegen. Der Anteil lag 2014 bei 13 Prozent - rund 30 Prozent höher als 30 Jahre zuvor. Ihr Tipp entspricht am ehesten dem Wert in **{{ limitedcontracts2014Country }}**."
+            ],
+            "en": [
+              "Wrong. The number of fixed-term contracts hasn’t risen that high. In 2014, these contracts represented 13 percent of all employment agreements issued, a 30-percent increase over three decades earlier. Your guess is closest to the figure in **{{ limitedcontracts2014Country }}**."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

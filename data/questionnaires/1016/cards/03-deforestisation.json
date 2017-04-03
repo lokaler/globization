@@ -1,0 +1,87 @@
+{
+  "key": "deforestation",
+  "title": "3. Karte - deforestation",
+  "dataset": "amount_logging",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wo fallen die meisten Bäume?",
+          "",
+          "Wälder beherbergen 80 Prozent aller Tier- und Pflanzenarten, die an Land vorkommen. Ihr Lebensraum wird zerstört, unter anderem um Lebensmittel wie Soja oder Palmöl zu produzieren oder Platz für Staudämme zu schaffen.",
+          "",
+          "**Was meinen Sie: In welchem der folgenden Länder geht die Entwaldung am schnellsten voran?**"
+        ],
+        "en": [
+          " # Where are the most trees logged?",
+          "",
+          "Our forests are home to 80 percent of all animal and plant species on land. Their habitat is being destroyed, in part for the production of foodstuffs like soy or palm oil or to create space for dams.",
+          "",
+          "**What do you think? In which of the following countries is deforestation happening most quickly?**"
+        ]
+      }
+    },{
+      "input": {
+        "key": "amountDeforestation",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["amountDeforestationChoice_1", { "de": "Kongo", "en": "Congo" }],
+            ["amountDeforestationChoice_2", { "de": "Brasilien", "en": "Brazil"}],
+            ["amountDeforestationChoice_3", { "de": "Russland", "en": "Russia" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "amountDeforestationSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.amountDeforestation && !i.amountDeforestationSubmitted",
+          "!i.amountDeforestationSubmitted && 'notSubmitted'",
+          "f.setDataset('deforestation')",
+          "f.panToCountry('BRA') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.amountDeforestation"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "amountDeforestationChoice_1": {
+            "de": [
+              "Nein. Im Kongo schrumpft der Wald zwar, aber mit 154 Quadratkilometern pro Jahr deutlich langsamer als in Brasilien. Dort verlieren die Wälder fast 10.000 Quadratkilometer pro Jahr. "
+            ],
+            "en": [
+              "No. The forest is indeed shrinking in Congo, but at 154 square kilometers per year, it is happening at a much slower pace than in Brazil. The forest there is shrinking by almost 10,000 square kilometers per year."
+            ]
+          },
+          "amountDeforestationChoice_2": {
+            "de": [
+              "Richtig. Gut 10.000 Quadratkilometer gehen in Brasilien jedes Jahr verloren - so viel wie nirgendwo sonst auf der Welt."
+            ],
+            "en": [
+              "Correct. Around 10,000 square kilometers are lost in Brazil each year -- more than anywhere else in the world."
+            ]
+          },
+          "amountDeforestationChoice_3": {
+            "de": [
+              "Zwar schrumpft der Wald in Russland, noch stärker jedoch in Brasilien. Dort gehen jedes Jahr rund 10.000 Quadratkilometer verloren."
+            ],
+            "en": [
+              "The forest is indeed shrinking in Russia, but deforestation is happening at a faster pace in Brazil. There, around 10,000 square kilometers of forest are lost each year."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "Source": {
+    "de": "Quelle",
+    "en": "Source"
+  },
+  "Globe": {
+    "de": "Globus",
+    "en": "Globe"
+  },
+  "gdp": {
+    "de": "BIP pro Kopf in USD",
+    "en": "GDP per capita in USD"
+  },
+  "countries": {
+    "de": "Länder",
+    "en": "countries"
+  },
+  "prev": {
+    "de": "ZURÜCK",
+    "en": "PREVIOUS"
+  },
+  "next": {
+    "de": "WEITER",
+    "en": "NEXT"
+  },
+  "last": {
+    "de": "Ergebnis",
+    "en": "Result"
+  },
+  "close": {
+    "de": "Beenden",
+    "en": "Close"
+  },
+  "no data": {
+    "de": "keine Daten",
+    "en": "no data"
+  },
+  "submit": {
+    "de": "Auswahl bestätigen",
+    "en": "submit choice"
+  },
+  "underweight": {
+    "de": "untergewichtig",
+    "en": "underweight"
+  },
+  "normalweight": {
+    "de": "normalgewichtig",
+    "en": "normal weight"
+  },
+  "overweight": {
+    "de": "übergewichtig",
+    "en": "overweight"
+  },
+  "veryoverweight": {
+    "de": "stark übergewichtig",
+    "en": "severely overweight"
+  },
+  "topic": {
+    "de": "Thema",
+    "en": "Topic"
+  },
+  "explore": {
+    "de": "Erkunden",
+    "en": "explore"
+  },
+  "weeks": {
+    "de": "Wochen",
+    "en": "weeks"
+  }
+}

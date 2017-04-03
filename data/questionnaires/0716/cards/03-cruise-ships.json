@@ -1,0 +1,88 @@
+{
+  "key": "cruiseShips",
+  "title": "3. Karte - Kreuzfahrten",
+  "dataset": "travelingtofromgermany",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Eine Seefahrt, die ist …",
+          "",
+          "Noch wesentlich schlechter als der Mallorca-Urlaub schnitt bei den Berechnungen des CO2-Fußabdrucks die Mittelmeerkreuzfahrt ab: Mit rund 174 Kilogramm CO2 pro Kopf und Tag ist der Ausstoß hier etwa doppelt so hoch wie beim Urlaub auf der Baleareninsel. Doch Kreuzfahrten sind beliebt: Im Jahr 2015 gingen mehr als 1,8 Millionen deutsche Gäste an Bord eines Hochseekreuzfahrtschiffs.",
+          "",
+          "**Aus welchem Land stammten – gemessen an der Größe der Bevölkerung des Landes – im Jahr 2015 die meisten Passagiere an Bord europäischer Kreuzfahrtschiffe?** (Nach dem Bestätigen Ihrer Antwort bitte nach unten scrollen)"
+        ],
+        "en": [
+          " # A journey on the high seas …",
+          "",
+          "A cruise on the Mediterranean Sea produces an even worse footprint in the carbon calculations than jetting off to Mallorca for vacation. With around 174 kg of CO2 emitted per person per day, the emissions produced here are around twice as high as those for a vacation on the Balearic island. And yet cruises are very popular: In 2015, more than to 1.8 million Germans boarded cruise ships.",
+          "",
+          "**Take a guess: Which country -- in relation to the size of its population -- had the most passengers on board European cruise ships in 2015?**"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "cruiseShipsAnswers",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["cs_choice_1", { "de": "Norwegen", "en": "Norway" }],
+            ["cs_choice_2", { "de": "Vereinigtes Königreich und Irland", "en": "United Kingdom and Republic of Ireland"}],
+            ["cs_choice_3", { "de": "Deutschland", "en": "Germany" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "cruiseShipsAnswersSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.cruiseShipsAnswers && !i.cruiseShipsAnswersSubmitted",
+          "!i.cruiseShipsAnswersSubmitted && 'notSubmitted'",
+          "f.setDataset('cruiseships')",
+          "f.panToCountry('NOR') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.cruiseShipsAnswers"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "cs_choice_1": {
+            "de": [
+              "Richtig! Im Jahr 2015 kamen auf 1000 Norweger 40 norwegische Kreuzfahrtgäste. Das ist unter den europäischen Kreuzfahrtpassagieren Rekord. Auch wenn die Deutschen absolut gesehen die meisten Kreuzfahrten buchten: Pro 1000 Einwohner waren es nur 22. Im Vereinigten Königreich und Irland wurden immerhin 27 Plätze an Bord pro 1000 Einwohner gebucht."
+            ],
+            "en": [
+              "Correct! In 2015, 40 out of every 1,000 Norwegians traveled as passengers on cruise ships, a record among European cruise-ship passengers. Even though Germans booked the greatest number of cruises overall, only 22 Germans per 1,000 took to the high seas."
+            ]
+          },
+          "cs_choice_2": {
+            "de": [
+              "Nein, die Briten und Irländer buchen zwar absolut gesehen nach den Deutschen die meisten Kreuzfahrten, doch auf 1000 Einwohner kamen im Jahr 2015 nur 27 Kreuzfahrtgäste. An der Bevölkerungsgröße gemessen, liegt Norwegen vorn: Hier kamen auf 1000 Einwohner 40 norwegische Kreuzfahrtgäste."
+            ],
+            "en": [
+              "No, the British and the Irish book the largest absolute number of cruises after the Germans, but calculated as a proportion of the overall population, Norway surpasses them. In 2015, 40 out of 1,000 residents of Norway were guests aboard cruise ships."
+            ]
+          },
+          "cs_choice_3": {
+            "de": [
+              " Nein, Deutsche buchten im Jahr 2015 zwar absolut gesehen die meisten Kreuzfahrten, doch pro 1000 Einwohner waren es nur 22. In Norwegen hingegen kamen auf 1000 Einwohner 40 Kreuzfahrtgäste. Im Vereinigten Königreich und Irland wurden 27 Plätze an Bord pro 1000 Einwohner gebucht."
+            ],
+            "en": [
+              "No, even though Germans booked the largest number of cruises, only 22 Germans per 1,000 took to the high seas. In Norway, however, 40 out of 1,000 residents were guests on cruise ships."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

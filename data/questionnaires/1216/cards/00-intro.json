@@ -1,0 +1,27 @@
+{
+  "key": "intro",
+  "title": "Intro",
+  "dataset": "meanworking",
+  "view": "globe",
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# ÜberMorgen-Explorer",
+          "",
+
+          "Sind Jobs heute öfter befristet als vor 30 Jahren? Wo ist die Jugendarbeitslosigkeit am höchsten? Testen Sie Ihr Wissen - klicken Sie auf \"Los geht's\"!",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
+        ],
+        "en": [
+          "# BeyondTomorrow Explorer",
+          "",
+		  "Do jobs today tend to be more temporary than they were 30 years ago? Where is the unemployment rate the highest? Test your knowledge by clicking on \"Let's Get Started.\"",
+          "",
+          "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"
+        ]
+      }
+    }
+  ]
+}

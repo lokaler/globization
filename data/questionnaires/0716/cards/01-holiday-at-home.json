@@ -1,0 +1,102 @@
+{
+  "key": "holidayAtHome",
+  "title": "1. Karte - Urlaub zu Hause",
+  "dataset": "travels",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wohin fahren die Deutschen?",
+          "",
+          "Mit der Bahn an die Nordsee oder mit dem Fernbus in die Alpen: Beim Verreisen das Klima schützen – das geht vor allem, indem man Flüge und Autofahrten minimiert. Am einfachsten ist das natürlich, wenn die Entfernung zum Urlaubsort nicht so weit ist. ",
+          "",
+          "**Tippen Sie, wie viele ihrer Urlaubsreisen die Deutschen innerhalb Deutschlands unternehmen.** (Reisen von mehr als fünf Tagen, in Prozent)"
+        ],
+        "en": [
+          " # Where do Germans travel to?",
+          "",
+          "Whether going by train to the North Sea or by bus to the Alps, it’s possible to protect the climate when traveling by avoiding planes and cars. The simplest way, of course, is to visit vacation destinations that aren't far away.",
+          "",
+          "**Guess what percentage of vacation trips lasting longer than five days are taken by the residents of Germany in their own country?**"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderAmountHolidays",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountHolidaysSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderAmountHolidays && !i.AmountHolidaysSubmitted",
+          "!i.AmountHolidaysSubmitted && 'notSubmitted'",
+          "f.setDataset('travelingtofromgermany')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderAmountHolidays >= 0 && i.sliderAmountHolidays < 14)  && f.panToCountry(f.getISO('travelingtofromgermany', i.sliderAmountHolidays)) && 'TravelToGermany1'",
+          "f.panToCountry('DEU') && false",
+          "(i.sliderAmountHolidays >= 14 && i.sliderAmountHolidays < 26) && 'TravelToGermany2'",
+          "(i.sliderAmountHolidays >= 26 && i.sliderAmountHolidays < 35) && 'TravelToGermany3'",
+          "(i.sliderAmountHolidays >= 35) && f.panToCountry('DEU') && 'TravelToGermany4'"
+        ],
+        "answerContext": {
+          "AmountTravelsToCountry" : "f.getCountryName('travelingtofromgermany', i.sliderAmountHolidays, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "TravelToGermany1": {
+            "de": [
+              "Nein, mehr! Im vergangenen Jahr gingen rund 29 Prozent der Reisen von fünf oder mehr Tagen nach Deutschland. Der von Ihnen getippte Wert entspricht etwa dem Anteil der Reisen nach **{{ AmountTravelsToCountry }}**. Nur etwa zwölf Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel."
+            ],
+            "en": [
+              "No, more! Last year, around 29 percent went on trips that lasted five days or longer within Germany. The amount you guessed was around the same number of trips taken to **{{ AmountTravelsToCountry }}**. Only about 12 percent of vacation trips were to destinations outside of Europe."
+
+            ]
+          },
+          "TravelToGermany2": {
+            "de": [
+              "Sie liegen nicht völlig daneben, aber etwas höher ist der Anteil schon: Im vergangenen Jahr gingen rund 29 Prozent der Reisen von fünf oder mehr Tagen nach Deutschland. Nur etwa zwölf Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel."
+            ],
+            "en": [
+              "You’re not totally off the mark, but the share is in fact a little higher. Last year, around 29 percent of trips lasting five days or longer were within Germany. Only about 12 percent of vacation trips were to destinations outside of Europe."
+            ]
+          },
+          "TravelToGermany3": {
+            "de": [
+              "Ziemlich gut geschätzt! Im vergangenen Jahr gingen rund 29 Prozent der Reisen von fünf oder mehr Tagen nach Deutschland. Nur etwa zwölf Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel."
+            ],
+            "en": [
+              "That's a very good guess! Last year, around 29 percent of trips lasting five days or longer were within Germany. Only about 12 percent of vacation trips were to destinations outside of Europe."
+            ]
+          },
+             "TravelToGermany4": {
+            "de": [
+              "Nein, das eigene Land ist zwar das beliebteste Reiseziel der Bevölkerung von Deutschland, aber ganz so hoch ist der Anteil der Reisen im eigenen Land nicht. Im vergangenen Jahr gingen rund 29 Prozent der  Reisen von fünf oder mehr Tagen an Orte innerhalb der deutschen Grenzen. Nur etwa zwölf Prozent der Urlaubsreisen haben Länder außerhalb Europas zum Ziel. "
+            ],
+            "en": [
+              "No, people living in Germany may prefer going on holidays in their own country, but the share isn’t that high. Last year, around 29 percent of trips lasting five days or longer were to locations inside Germany. Only about 12 percent of vacation trips were to destinations outside of Europe."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

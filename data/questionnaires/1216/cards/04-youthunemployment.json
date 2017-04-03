@@ -1,0 +1,91 @@
+{
+  "key": "youthunemployment",
+  "title": "4. Karte - Jugendarbeitslosigkeit",
+  "dataset": "childrenlabour",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Jugendarbeitslosigkeit",
+          "",
+          "Im Zuge der Finanz- und Eurokrise ist die Jugendarbeitslosigkeit in südeuropäischen Ländern stark gestiegen. Am gravierendsten ist das Problem in Spanien.",
+          "",
+          "**Was meinen Sie: Wie hoch war die Arbeitslosigkeit der unter 25-Jährigen in Spanien im Jahr 2014?**"
+        ],
+        "en": [
+          " # Youth Unemployment",
+          "",
+          "In the course of the financial and euro crisis in Europe, youth unemployment rose dramatically in Southern European countries. The problem is most severe in Spain.",
+          "",
+          "**How high do you think the unemployment rate was among under-25-year-olds in Spain in 2014?**"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderYouthUnemployment",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountYouthUnemploymentSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderYouthUnemployment && !i.AmountYouthUnemploymentSubmitted",
+          "!i.AmountYouthUnemploymentSubmitted && 'notSubmitted'",
+          "f.setDataset('youthunemployment')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "(i.sliderYouthUnemployment <= 45 && f.panToCountry(f.getISO('youthunemployment', i.sliderYouthUnemployment))) && 'Antwort_YouthUnemployment1'",
+          "(i.sliderYouthUnemployment >= 46 && i.sliderYouthUnemployment <= 61 && f.panToCountry('ESP')) && 'Antwort_YouthUnemployment2'",
+          "(i.sliderYouthUnemployment >= 62 && f.panToCountry(f.getISO('youthunemployment', i.sliderYouthUnemployment))) && 'Antwort_YouthUnemployment3'"
+        ],
+        "answerContext": {
+          "YouthUnemploymentCountry" : "f.getCountryName('youthunemployment', i.sliderYouthUnemployment, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_YouthUnemployment1": {
+            "de": [
+              "Nein, mehr. Die Arbeitslosenquote unter Jugendlichen lag 2014 in Spanien bei 53 Prozent. Ihr Tipp entspricht am ehesten dem Wert in **{{ YouthUnemploymentCountry }}**."
+            ],
+            "en": [
+              "No, higher. The unemployment rate among youth in Spain was 53 percent in 2014. Your guess is closest to the figure in **{{ YouthUnemploymentCountry }}**."
+            ]
+          },
+          "Antwort_YouthUnemployment2": {
+            "de": [
+              "Korrekt. Die Arbeitslosenquote unter Jugendlichen lag 2014 in Spanien bei 53 Prozent. Die Lage besserte sich in den vergangenen Jahren langsam."
+            ],
+            "en": [
+              "Correct. The youth unemployment rate in Spain stood at 53 percent in 2014. The situation has slowly improved in recent years."
+            ]
+          },
+          "Antwort_YouthUnemployment3": {
+            "de": [
+              "Nein, weniger. Die Arbeitslosenquote unter Jugendlichen lag 2014 in Spanien bei 53 Prozent. Ihr Tipp entspricht am ehesten dem Wert in **{{ YouthUnemploymentCountry }}**."
+            ],
+            "en": [
+              "No, less. The youth unemployment rate in Spain stood at 53 percent in 2014. Your guess is closest to the figure in **{{ YouthUnemploymentCountry }}**."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

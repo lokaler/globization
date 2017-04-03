@@ -1,0 +1,88 @@
+{
+  "key": "lessHolidays",
+  "title": "7. Karte - Wenig Urlaub",
+  "dataset": "tourismexpenditures",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wer hat den meisten Urlaub?",
+          "",
+          "Wer nachhaltig reisen will, muss natürlich überhaupt freie Zeit für einen Urlaub haben.",
+          "",
+          "**In welchem dieser drei Länder haben Arbeitnehmer den höchsten gesetzlichen Urlaubsanspruch?**"
+        ],
+        "en": [
+          " # Who gets the most time off?",
+          "",
+          "Of course, those wanting to travel sustainably must also have the time off in order to be able to do so.",
+          "",
+          "**Take a guess: Which of these three countries has the highest statutory vacation entitlement?**"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "lessHolidaysAnswers",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["lh_choice_1", { "de": "Deutschland", "en": "Germany" }],
+            ["lh_choice_2", { "de": "Griechenland", "en": "Greece"}],
+            ["lh_choice_3", { "de": "Frankreich", "en": "France" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "lessHolidaysAnswersSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.lessHolidaysAnswers && !i.lessHolidaysAnswersSubmitted",
+          "!i.lessHolidaysAnswersSubmitted && 'notSubmitted'",
+          "f.setDataset('amountholidays')",
+          "f.panToCountry('FRA') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.lessHolidaysAnswers"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "lh_choice_1": {
+            "de": [
+              "Nein, in Deutschland besteht bei einer Fünftagewoche Anspruch auf mindestens 20 Tage Urlaub im Jahr. In Griechenland sind es immerhin 25 Tage und in Frankreich sogar 30. Im Schnitt bekommen deutsche Arbeitnehmer jedoch ebenfalls 30 Tage Urlaub – also deutlich mehr als das gesetzlich vorgegebene Minimum."
+            ],
+            "en": [
+              "No, in Germany, a person with a five-day work week has the right to a minimum of 20 days of vacation per year. Greeks get at least 25 days off and the French even more, with 30 days of vacation. Germans likewise get 30 days of vacation on average – considerably more than the statutory minimum."
+            ]
+          },
+          "lh_choice_2": {
+            "de": [
+              "Nein, griechische Arbeitnehmer haben Anspruch auf 25 Tage Urlaub im Jahr. Wer in Frankreich arbeitet, kann hingegen mindestens 30 Tage frei machen. In Deutschland sind zwar nur 20 Tage im Jahr gesetzlich vorgegeben, allerdings bekommen deutsche Arbeitnehmer im Schnitt ebenfalls 30 Tage Urlaub – also deutlich mehr als das gesetzlich vorgegebene Minimum."
+            ],
+            "en": [
+              "No. Greek employees are entitled to 25 days of vacation each year. Those working in France, on the other hand, can take off a minimum of 30 days a year. In Germany, the statutory vacation entitlement is only 20 days, but most German workers get an average of 30 days off – considerably more than the legal requirement."
+            ]
+          },
+          "lh_choice_3": {
+            "de": [
+              "Richtig! Französische Arbeitnehmer haben Anspruch auf 30 Tage Urlaub im Jahr. In Griechenland sind es 25 Tage und in Deutschland sogar nur 20. Im Schnitt bekommen deutsche Arbeitnehmer jedoch ebenfalls 30 Tage Urlaub – also deutlich mehr als das gesetzlich vorgegebene Minimum."
+            ],
+            "en": [
+              "That's right! French workers are entitled to 30 days of vacation a year. In Greece that figure is 25, but in Germany it is lower, at 20. On average, however, German workers also get 30 days of vacation – considerably more than the statutory minimum."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

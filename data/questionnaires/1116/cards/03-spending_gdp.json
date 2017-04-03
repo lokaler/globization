@@ -1,0 +1,96 @@
+{
+  "key": "spending_edu",
+  "title": "3. Karte - spending_edu",
+  "dataset": "school_poor",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wie viel die Staaten zahlen",
+          "",
+          "Länder rund um den Globus geben bis zu acht Prozent ihrer Wirtschaftskraft für Bildung aus. In Europa sind Finnland und Schweden mit bis zu 7,7 Prozent führend.",
+          "",
+          "**Welches asiatische Land gibt proportional genauso viel Geld für Bildung aus wie Schweden?**"
+        ],
+        "en": [
+          " # How much do countries invest?",
+          "",
+          "Countries around the world spend as much as 8 percent of their gross domestic product on education. In Europe, Finland and Sweden spend the most, at up to 7.7 percent of GDP.",
+          "",
+          "**Which Asian country spends just as great a share of GDP on education as Sweden?**"
+        ]
+      }
+    },{
+      "input": {
+        "key": "amountSpendingEdu",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["amountSpendingEduChoice_1", { "de": "Hongkong", "en": "Hong Kong" }],
+            ["amountSpendingEduChoice_2", { "de": "Osttimor", "en": "East Timor"}],
+            ["amountSpendingEduChoice_3", { "de": "Singapur", "en": "Singapore"}],
+            ["amountSpendingEduChoice_4", { "de": "Bangladesch", "en": "Bangladesh" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "amountSpendingEduSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.amountSpendingEdu && !i.amountSpendingEduSubmitted",
+          "!i.amountSpendingEduSubmitted && 'notSubmitted'",
+          "f.setDataset('edu_money')",
+          "f.panToCountry('TLS') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.amountSpendingEdu"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "amountSpendingEduChoice_1": {
+            "de": [
+              "Leider falsch. Auch wenn Hongkong ein verhältnismäßig hohes Bruttoinlandsprodukt hat, für Bildungsausgaben werden lediglich 3,6 Prozent davon ausgegeben. Osttimor wäre richtig gewesen. Das kleine Land mit 1,3 Millionen Einwohnern wurde 2002 unabhängig von Indonesien."
+            ],
+            "en": [
+              "Unfortunately, that’s incorrect. Even though Hong Kong has comparably large gross domestic product, the country only spends 3.6 percent on education. East Timor is the correct answer. The small country with 1.3 million residents declared its independence from Indonesia in 2002."
+            ]
+          },
+          "amountSpendingEduChoice_2": {
+            "de": [
+              "Richtig. Das kleine Land mit 1,3 Millionen Einwohnern wurde 2002 unabhängig von Indonesien. Jedes Jahr gibt die Regierung 7,7 Prozent der Wirtschaftskraft für Bildung aus."
+            ],
+            "en": [
+              "Correct. The small country with 1.3 million residents declared its independence from Indonesia in 2002. Each year, the government spends 7.7 percent of its gross domestic product on education."
+            ]
+          },
+          "amountSpendingEduChoice_3": {
+            "de": [
+              "Leider falsch. Auch wenn Singapur ein verhältnismäßig hohes Bruttoinlandsprodukt hat, für Bildungsausgaben werden lediglich 2,9 Prozent davon ausgegeben. Osttimor wäre richtig gewesen. Das kleine Land mit 1,3 Millionen Einwohnern wurde 2002 unabhängig von Indonesien."
+            ],
+            "en": [
+              "Unfortunately, that’s incorrect. Even though Singapore has a comparably large gross domestic product, the country only spends 2.9 percent on education. East Timor would have been correct. The small country with 1.3 million residents declared its independence from Indonesia in 2002."
+            ]
+          },
+          "amountSpendingEduChoice_4": {
+            "de": [
+              "Leider falsch. Bangladesch hat im Bildungsbereich große Probleme - und gibt nur zwei Prozent seiner Wirtschaftskraft dafür aus. Osttimor wäre richtig gewesen. Das kleine Land mit 1,3 Millionen Einwohnern wurde 2002 unabhängig von Indonesien."
+            ],
+            "en": [
+              "Unfortunately, that’s incorrect. Bangladesh has serious difficulties when it comes to education, only investing 2 percent of its gross domestic product. East Timor would have been correct. The small country with 1.3 million residents declared its independence from Indonesia in 2002."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

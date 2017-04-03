@@ -1,0 +1,82 @@
+{
+  "key": "kids",
+  "title": "4. Karte - Kids",
+  "dataset": "overweightBoys",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wo leben die meisten übergewichtigen Kinder?",
+          "",
+          "Die Zahl der übergewichtigen Kinder ist in den vergangenen 30 Jahren drastisch angestiegen - selbst in jenen Ländern, in denen viele Kinder unterernährt sind. Tippen Sie: **In welchem dieser Länder leben die meisten übergewichtigen Jungen?**"
+        ],
+        "en": [
+          " # Where do the most overweight children live?",
+          "",
+          "The number of overweight children has risen dramatically in the last 30 years -- even in countries where many children are undernourished. Take a guess: **Which country has the highest proportion of overweight boys?**"
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "overweightKids",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["choice_1", { "de": "USA", "en": "USA" }],
+            ["choice_2", { "de": "Kiribati", "en": "Kiribati"}],
+            ["choice_3", { "de": "Nordkorea", "en": "North Korea" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "kidsSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "!i.kidsSubmitted && 'notSubmitted'",
+          "f.panToCountry('KIR') && false",
+          "i.overweightKids"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+          "allAnswered": {
+            "de": ["Sind sie sich sicher ?"], "en": ["Are you sure?"]
+          },
+          "choice_1": {
+            "de": [
+              "Falsch! Auf der Pazifikinsel Kiribati sind mit 47,7 Prozent die meisten Jungen übergewichtig. Die USA liegen mit rund 30 Prozent auf Rang 29. Bei den Mädchen ist die Verteilung ähnlich, auch hier liegt Kiribati auf Platz eins. Die Weltgesundheitsorganisation (WHO) macht unter anderem die [wachsende Beliebtheit importierter, verarbeiteter Lebensmittel](http://www.who.int/bulletin/volumes/88/7/10-010710/en/) für die Gewichtsprobleme auf den pazifischen Inseln verantwortlich. Die traditionelle Küche hat stark an Popularität verloren."
+            ],
+            "en": [
+              "Wrong! On the Pacific island of Kiribati, 47.7 percent of boys are overweight. With a score of 30 percent, the USA is 29th in the rankings. When it comes to girls, the results are similar, with Kiribati once again topping the list. The WHO says that one factor for the weight problems on the Pacific island is the [growing popularity of imported and processed food](http://www.who.int/bulletin/volumes/88/7/10-010710/en/). Traditional cuisine has become much less popular."
+            ]
+          },
+          "choice_2": {
+            "de": [
+              "Richtig! Fast die Hälfte aller Jungen auf der Pazifik-Insel sind übergewichtig. Bei den Mädchen ist die Verteilung ähnlich, auch hier liegt Kiribati auf Platz eins. Die Weltgesundheitsorganisation (WHO) macht unter anderem die [wachsende Beliebtheit importierter, verarbeiteter Lebensmittel](http://www.who.int/bulletin/volumes/88/7/10-010710/en/) für die Gewichtsprobleme auf den pazifischen Inseln verantwortlich. Die traditionelle Küche hat stark an Popularität verloren."
+            ],
+            "en": [
+              "Correct! Almost half of all boys on the Pacific island are overweight. The results for girls are similar. The WHO says that one factor for the weight problems in Kiribati is the [growing popularity of imported and processed food](http://www.who.int/bulletin/volumes/88/7/10-010710/en/). Traditional cuisine has become much less popular."
+            ]
+          },
+          "choice_3": {
+            "de": [
+              "Falsch! Auf der Pazifikinsel Kiribati sind mit 47,7 Prozent die meisten Jungen übergewichtig. In Nordkorea sind es nur ein Prozent. Bei den Mädchen ist die Verteilung ähnlich, auch hier liegt Kiribati auf Platz eins. Die Weltgesundheitsorganisation (WHO) macht unter anderem die [wachsende Beliebtheit importierter, verarbeiteter Lebensmittel](http://www.who.int/bulletin/volumes/88/7/10-010710/en/) für die Gewichtsprobleme auf den pazifischen Inseln verantwortlich. Die traditionelle Küche hat stark an Popularität verloren."
+            ],
+            "en": [
+              "Wrong! On the Pacific island of Kiribati, 47.7 percent of boys are overweight. In North Korea, only 1 percent are. When it comes to girls, the results are similar, with Kiribati again topping the list. The WHO says that one factor for the weight problems on the Pacific island is [growing popularity of imported and processed food](http://www.who.int/bulletin/volumes/88/7/10-010710/en/). Traditional cuisine has become much less popular."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

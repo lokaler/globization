@@ -1,0 +1,91 @@
+{
+  "key": "education2015",
+  "title": "6. Karte - #Schulzeit",
+  "dataset": "edu_2015",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Ein Blick nach vorne",
+          "",
+          "Laut der Uno-Nachhaltigkeitsziele soll **in 15 Jahren** jedes Kind auf der Welt eine Grundschule und eine weiterführende Schule besucht haben. Bleiben wir bei der Grundschule. Hier gilt das Ziel als erreicht, wenn der Anteil der 15- bis 19-Jährigen, die keine Grundschule besucht haben, unter fünf Prozent gefallen ist.",
+          "",
+          "**Was glauben Sie: Wenn die Entwicklung so weitergeht wie bisher, in wie vielen Jahren wird das Ziel tatsächlich erreicht?**"
+        ],
+        "en": [
+          " # Looking ahead",
+          "",
+          "According to the UN Sustainable Development Goals, in 15 years every child in the world is to have attended a primary school and a secondary school. In terms of a primary education, the goal will have been achieved once the share of 15- to 19-year-olds who have never received any schooling falls beneath the 5 percent mark.",
+          "",
+          "**What do you think? If the rate of development remains unchanged, how many years will it really take to reach that goal?**"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderSchoolFuture",
+        "type": "slider",
+        "options": {
+          "unit": "Jahre",
+          "min": 0,
+          "value": 15,
+          "max": 85,
+          "step": 5
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountSchoolFutureSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderSchoolFuture && !i.AmountSchoolFutureSubmitted",
+          "!i.AmountSchoolFutureSubmitted && 'notSubmitted'",
+          "f.setDataset('edu_all')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('map')",
+          "(i.sliderSchoolFuture <= 30 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture1'",
+          "(i.sliderSchoolFuture >= 35 && i.sliderSchoolFuture <= 50 && f.panToCountry('')) && 'Antwort_SchoolFuture2'",
+          "(i.sliderSchoolFuture >= 51 && f.panToCountry(f.getISO('edu_all', i.sliderSchoolFuture))) && 'Antwort_SchoolFuture3'"
+        ],
+        "answerContext": {
+          "SchoolFutureCountry" : "f.getCountryName('edu_all', i.sliderSchoolFuture, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_SchoolFuture1": {
+            "de": [
+              "Das wäre zwar wünschenswert, so schnell wird es aber nicht gehen. Erst 2060 wird der Anteil der 15- bis 19-Jährigen ohne Grundschulbesuch im weltweiten Durchschnitt unter fünf Prozent fallen. In einigen Ländern wird es noch deutlich länger dauern, wie der Globus zeigt. Ihr Tipp entspricht beispielsweise der Entwicklung in **{{ SchoolFutureCountry }}**."
+            ],
+            "en": [
+              "That would be great, but it unfortunately won’t happen that quickly. At the current rate of development, only in 2060 will the global share of 15- to 19-year-olds without any primary schooling fall to an average of less than 5 percent. As the globe shows, it will take even longer than that in some countries. Your guess matches most closely with developments in **{{ SchoolFutureCountry }}**."
+            ]
+          },
+          "Antwort_SchoolFuture2": {
+            "de": [
+              "Ziemlich gut. 2060 wird der Anteil der 15- bis 19-Jährigen ohne Grundschulbesuch im weltweiten Durchschnitt unter fünf Prozent fallen. In einigen Ländern wird es allerdings deutlich länger dauern, wie der Globus zeigt."
+            ],
+            "en": [
+              "That’s a pretty good guess. At the current rate of development, the global share of 15- to 19-year-olds without any primary schooling will fall to an average of less than 5 percent in 2060. As the globe shows, it will take even longer than that in some countries."
+            ]
+          },
+          "Antwort_SchoolFuture3": {
+            "de": [
+              "In einigen Ländern wird es so lange dauern, da haben Sie leider recht. Weltweit wird das Nachhaltigkeitsziel allerdings schon früher erreicht: Im Jahr 2060 wird der Anteil der 15- bis 19-Jährigen ohne Grundschulbesuch im weltweiten Durchschnitt unter fünf Prozent fallen. Ihr Tipp entspricht beispielsweise der Entwicklung in **{{ SchoolFutureCountry }}**."
+            ],
+            "en": [
+              "You are correct that it will take quite some time. Globally, though, it is expected that this sustainable development goal will be achieved earlier than your guess: By 2060, the global share of 15- to 19-year-olds without any primary schooling is expected to fall to an average of less than 5 percent. Your guess matches most closely with developments in **{{ SchoolFutureCountry }}**."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
