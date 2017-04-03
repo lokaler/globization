@@ -25,10 +25,10 @@
         "key": "sliderCabinetsPosts",
         "type": "slider",
         "options": {
-          "unit": "%",
-          "min": 1,
-          "value": 25,
-          "max": 50,
+          "unit": "Länder",
+          "min": 10,
+          "value": 80,
+          "max": 175,
           "step": 1
         }
       }
