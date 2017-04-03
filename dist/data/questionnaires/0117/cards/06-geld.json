@@ -1,0 +1,101 @@
+{
+  "key": "money",
+  "title": "6. Karte - Verdienst",
+  "dataset": "muettersterb",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Weniger Geld im Portemonnaie",
+          "",
+          "In vielen Ländern verdienen Frauen deutlich schlechter als Männer. Der sogenannte unbereinigte Gender Pay Gap fasst die Ungleichheit in Zahlen: Im europäischen Schnitt verdienen Frauen 16 Prozent weniger.",
+          "",
+          "**Wie hoch ist das Lohngefälle wohl in Deutschland?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderPayGap",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 1,
+          "value": 25,
+          "max": 50,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountPayGapSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderPayGap && !i.AmountPayGapSubmitted",
+          "!i.AmountPayGapSubmitted && 'notSubmitted'",
+          "f.setDataset('lohngefaelle')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "f.panToCountry('DEU') && false",
+          "(i.sliderPayGap <= 19) && 'Antwort_PayGap1'",
+          "(i.sliderPayGap >= 20 && i.sliderPayGap <= 24) && 'Antwort_PayGap2'",
+          "(i.sliderPayGap >= 25 && i.sliderPayGap <= 28) && 'Antwort_PayGap3'",
+          "(i.sliderPayGap >= 29) && 'Antwort_PayGap4'"
+        ],
+        "answerContext": {
+          "PayGapCountry" : "f.getCountryName('lohngefaelle', i.sliderPayGap, { case: 'default' })"
+        },
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_PayGap1": {
+            "de": [
+              "Nein, in Deutschland verdienen Frauen sogar 22 Prozent weniger als Männer. Dieser unbereinigte Wert berücksichtigt alle Löhne. Es gibt auch einen bereinigten Wert, der Frauen und Männer in gleichen Positionen und mit vergleichbaren Qualifikationen vergleicht. Doch selbst so ergibt sich noch immer ein Unterschied von sechs Prozent. Ihr getippter Wert entspricht etwa dem unbereinigten Gender Pay Gap in **{{ PayGapCountry }}**. "
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_PayGap2": {
+            "de": [
+              "Ja, Frauen verdienen in Deutschland 22 Prozent weniger als Männer. Dieser unbereinigte Wert berücksichtigt alle Löhne. Es gibt auch einen bereinigten Wert, der Frauen und Männer in gleichen Positionen und mit vergleichbaren Qualifikationen vergleicht. Doch selbst so ergibt sich noch immer ein Unterschied von sechs Prozent."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_PayGap3": {
+            "de": [
+              "Nein, in Deutschland verdienen Frauen 22 Prozent weniger als Männer. Dieser unbereinigte Wert berücksichtigt alle Löhne. Es gibt auch einen bereinigten Wert, der Frauen und Männer in gleichen Positionen und mit vergleichbaren Qualifikationen vergleicht. Doch selbst so ergibt sich noch immer ein Unterschied von sechs Prozent. Ihr getippter Wert entspricht etwa dem unbereinigten Gender Pay Gap in Estland."
+            ],
+            "en": [
+              "."
+            ]
+          },
+          "Antwort_PayGap4": {
+            "de": [
+              "Nein, ein so hohes Lohngefälle gibt es in Europa nirgends. In Deutschland beträgt der unbereinigte Gender Pay Gap 22 Prozent. Er berücksichtigt alle Löhne. Es gibt auch einen bereinigten Wert, der Frauen und Männer in gleichen Positionen und mit vergleichbaren Qualifikationen vergleicht. Doch selbst so ergibt sich noch immer ein Unterschied von sechs Prozent."
+            ],
+            "en": [
+              "."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

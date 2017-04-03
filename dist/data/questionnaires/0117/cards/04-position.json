@@ -1,0 +1,87 @@
+{
+  "key": "glass_ceiling",
+  "title": "4. Karte - glaesernde Decke",
+  "dataset": "vorstaende",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Niedrigere Positionen im Job",
+          "",
+          "Die „gläserne Decke“ wirkt schon unterhalb der Vorstandsebene: In der Gruppe der Führungskräfte, Akademiker und Techniker kommen auf drei Männer im weltweiten Schnitt zwei Frauen.",
+          "",
+          "**Was glauben Sie, wo ist der Frauenanteil in diesen höheren Positionen am höchsten?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          " ",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "GlassCeiling",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["GlassCeilingChoice_1", { "de": "Weißrussland", "en": "" }],
+            ["GlassCeilingChoice_2", { "de": "Südafrika", "en": ""}],
+            ["GlassCeilingChoice_3", { "de": "Pakistan", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "GlassCeilingSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.GlassCeiling && !i.GlassCeilingSubmitted",
+          "!i.GlassCeilingSubmitted && 'notSubmitted'",
+          "f.setDataset('fuehrungspos')",
+          "f.panToCountry('BLR') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.GlassCeiling"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "GlassCeilingChoice_1": {
+            "de": [
+              "Ganz genau: In Weißrussland sind 62 Prozent der Führungskräfte, Akademiker und Techniker weiblich."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "GlassCeilingChoice_2": {
+            "de": [
+              " Nein, in Südafrika ist die Situation ähnlich wie in Deutschland: Der Frauenanteil liegt bei 49 Prozent. Den höchsten Anteil findet man in **Weißrussland**: 62 Prozent der höheren Positionen sind von Frauen besetzt."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "GlassCeilingChoice_3": {
+            "de": [
+              "Nein, ganz im Gegenteil: Pakistan gehört mit weniger als zehn Prozent zu jenen Ländern mit dem niedrigsten Frauenanteil in solchen Positionen. Den höchsten Anteil hat **Weißrussland** mit 62 Prozent."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

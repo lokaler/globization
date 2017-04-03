@@ -21,6 +21,8 @@ import cards1216 from './1216/cards/index';
 import datasets1216 from './1216/datasets/index';
 import cards1316 from './1316/cards/index';
 import datasets1316 from './1316/datasets/index';
+import cards0117 from './0117/cards/index';
+import datasets0117 from './0117/datasets/index';
 
 
 let questionnaires = {
@@ -141,7 +143,21 @@ let questionnaires = {
     },
     cards: cards1316,
     datasets: datasets1316
+  },
+
+  '0117': {
+    title: {
+      de: 'Frauenrechte',
+      en: 'women_rights'
+    },
+    options: {
+      showBackButton: true,
+      lastButtonLabel: 'explore'
+    },
+    cards: cards0117,
+    datasets: datasets0117
   }
+
 };
 
 for (const questionnaire of Object.values(questionnaires)) {
