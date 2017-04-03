@@ -44,7 +44,7 @@ export const questionnaire = array({
   $schema: 'http://json-schema.org/draft-04/schema#',
 
   items: object({
-    additionalProperties: false,
+    additionalProperties: true,
     required: ['key', 'title', 'content'],
     properties: {
       key: string(),
@@ -90,7 +90,7 @@ export const widgets = {
 
   answer: object({
     required: ['templates'],
-    additionalProperties: false,
+    additionalProperties: true,
     properties: {
       className: { enum: ['tip'] },
       answerKey: array(),

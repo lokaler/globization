@@ -4,7 +4,7 @@
   "dataset": "meanworking",
   "transition": {
     "type": "map/globe/scatter/iframe/image",
-    "source": "datasetID/URL",
+    "source": "datasetID/URL"
   },
   "content": [
     {
@@ -45,7 +45,7 @@
 
     {
       "answer": {
-        "dataset": "meanworking",
+        "datasets": "limitedcontracts1984",
         "answerKey": [
           "i.sliderLimitedJobsBackthen && !i.AmountLimitedJobsBackthen",
           "!i.AmountLimitedJobsBackthen && 'notSubmitted'",
