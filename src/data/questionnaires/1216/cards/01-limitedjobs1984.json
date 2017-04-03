@@ -2,6 +2,10 @@
   "key": "limitedjobs1984",
   "title": "1. Karte - #limitedjobs1984",
   "dataset": "meanworking",
+  "transition": {
+    "type": "map/globe/scatter/iframe/image",
+    "source": "datasetID/URL",
+  },
   "content": [
     {
       "text": {
@@ -41,6 +45,7 @@
 
     {
       "answer": {
+        "dataset": "meanworking",
         "answerKey": [
           "i.sliderLimitedJobsBackthen && !i.AmountLimitedJobsBackthen",
           "!i.AmountLimitedJobsBackthen && 'notSubmitted'",
