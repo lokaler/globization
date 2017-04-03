@@ -1,7 +1,7 @@
 {
   "key": "intro",
   "title": "Intro",
-  "dataset": "",
+  "dataset": "fuehrungspos",
   "view": "globe",
   "content": [
     {
