@@ -43,7 +43,7 @@ export default class UbermorgenApp extends React.Component {
     }
     this.configureHotReload();
     window.addEventListener('resize', this.handleResize.bind(this));
-    window.parent.addEventListener('scroll', this.handleScroll.bind(this));
+    // window.parent.addEventListener('scroll', this.handleScroll.bind(this));
     this.handleResize();
     googleLogger('loaded', 1);
   }
@@ -73,7 +73,8 @@ export default class UbermorgenApp extends React.Component {
   }
 
   handleResize() {
-    const bbox = d3.select('body').node().getBoundingClientRect();
+    const { container } = this.refs;
+    const bbox = d3.select(container).node().getBoundingClientRect();
     this.props.actions.setWindowSize({ width: bbox.width, height: bbox.height });
   }
 
@@ -91,7 +92,7 @@ export default class UbermorgenApp extends React.Component {
     const vis = this.props.app.vis;
 
     return (
-      <div className={ responsiveClass }>
+      <div className={ responsiveClass } ref="container">
         <div className={ styles.container }>
           <div ref="left" className="left">
             <Vis {...this.props}/>

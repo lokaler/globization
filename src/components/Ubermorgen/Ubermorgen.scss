@@ -3,9 +3,10 @@
 :local(.container) {
 
   * {
-      -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
-      -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
-      -webkit-user-select:text;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+    -webkit-user-select:text;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    box-sizing: border-box;
   }
 
   display: flex;
@@ -64,7 +65,6 @@
 
 .right {
   width: 80%;
-  position: absolute;
   background: #FFF;
   margin: 10%;
   z-index: 100;
@@ -74,6 +74,7 @@
 
 .left {
   width: 100%;
+  position: absolute;
 }
 
 ::-webkit-scrollbar {

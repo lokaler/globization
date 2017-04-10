@@ -36,11 +36,11 @@
   font-style: normal;
   font-display: swap; }
 
-* {
+*s {
   box-sizing: border-box
 }
 
-body {
+bodys {
   @media screen and (max-width: 530px) {
     height: 100%;
     width: 100%;
@@ -52,7 +52,7 @@ body {
   min-height: 500px;
 }
 
-html {
+htmls {
   @media screen and (max-width: 530px) {
     height: 100%;
     width: 100%;
