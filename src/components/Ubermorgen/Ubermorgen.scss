@@ -8,23 +8,27 @@
       -webkit-user-select:text;                  /* prevent copy paste, to allow, change 'none' to 'text' */
   }
 
-  overflow: hidden;
   display: flex;
   background: #FFF;
   font-family: "SpiegelSansWeb", Calibri, Candara, Arial, Helvetica, sans-serif;
   font-size:12px;
+  position: relative;
 
-  .mq-mobile & {
+  .mq-mobiles & {
     flex-direction: column;
     width: 100%;
   }
-  .mq-desktop & {
+  .mq-desktops & {
     flex-direction: row;
     // width: 860px;
     height: 500px;
   }
 
-  .left {
+  .mq-desktop {
+    width: 100%;
+  }
+
+  .lefts {
     .mq-mobile & {
       overflow: hidden;
       position: absolute;
@@ -43,7 +47,7 @@
     }
   }
 
-  .right {
+  .rights {
     .mq-mobile & {
       width: 100%;
       margin-top: 250px;
@@ -56,6 +60,20 @@
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     position: relative;
   }
+}
+
+.right {
+  width: 80%;
+  position: absolute;
+  background: #FFF;
+  margin: 10%;
+  z-index: 100;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  width: 100%;
 }
 
 ::-webkit-scrollbar {

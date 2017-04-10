@@ -93,10 +93,10 @@ export default class Globe extends React.Component {
     const changeMap = this.changeType.bind(this, 'map');
     const changeScatter = this.changeType.bind(this, 'scatter');
     const random = this.random.bind(this);
-    const app = this.props.app;
+    const { app } = this.props;
 
-    const height = app.mobile ? 250 : app.height;
-    const width = ( app.mobile || app.vis ) ? app.width : app.width * 0.65;
+    const height = app.height;
+    const width = app.width;
 
     return (
       <div className="vis">
@@ -108,11 +108,11 @@ export default class Globe extends React.Component {
           <div className={ this.getActiveClass('map') } onClick={ changeMap }></div>
           <div className={ this.getActiveClass('scatter') } onClick={ changeScatter }></div>
         </div>
-        { dataset && dataset.linkedSet &&
+        { dataset && dataset.linkedSet && false &&
           <LinkedDatasetMenu {...this.props} />
         }
         <TooltipComponent {...this.props} />
-        { dataset && dataset.key != "none" &&
+        { dataset && dataset.key != "none" && false &&
           <Legend color={this.color} {...this.props} />
         }
 

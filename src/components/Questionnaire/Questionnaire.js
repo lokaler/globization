@@ -57,7 +57,7 @@ export default class Questionnaire extends React.Component {
   }
 
   render() {
-    const { app, questions } = this.props;
+    const { questions } = this.props;
 
     if (questions.validationError) {
       return <Error>{ questions.validationError.message }</Error>;
@@ -80,20 +80,19 @@ export default class Questionnaire extends React.Component {
       nextBtnLabel = 'close';
     }
 
-    const scrollHeight = !app.mobile ? { height: app.height - 50 } : null;
 
     return (
       <div className={ styles.questions }>
-        <div ref="card" className={ styles.inner } style={ scrollHeight }>
+        <div ref="card" className={ styles.inner } >
           <Card { ...this.props }/>
+          { questions.activeCard !== 0 &&
+            <Footer
+              nextBtnLabel={ translate(nextBtnLabel) }
+              prevBtnLabel={ translate('prev') }
+              { ...this.props }
+            />
+          }
         </div>
-        { questions.activeCard !== 0 &&
-          <Footer
-            nextBtnLabel={ translate(nextBtnLabel) }
-            prevBtnLabel={ translate('prev') }
-            { ...this.props }
-          />
-        }
       </div>
     );
   }

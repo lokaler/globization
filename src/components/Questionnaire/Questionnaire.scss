@@ -22,10 +22,10 @@
   }
 
   line-height: 1.4em;
-  font-size: 14px;
+  font-size: 1rem;
 
   :local(.inner) {
-    padding: 20px;
+    padding: 30px;
     position: relative;
     float: left;
     width: 100%;
@@ -38,7 +38,6 @@
   }
 
   .losButton {
-    font-size: 12px;
     padding: 10px 30px 10px 30px;
     font-weight: bold;
     background: #7d9f89;
