@@ -12,6 +12,15 @@ export default class Submit extends React.Component {
     submit: PropTypes.object.isRequired
   }
 
+  constructor(props) {
+    super(props);
+    this.state = { progress: 0 };
+  }
+
+  componentDidMount() {
+
+  }
+
   onClick = () => {
     const { actions, card, submit } = this.props;
     actions.quizSubmitCard(card.key);
@@ -31,7 +40,9 @@ export default class Submit extends React.Component {
     const showButton = !submitted && inputsEntered;
 
     if (showButton) {
-      return <button onClick={ this.onClick }>{ translate('submit') }</button>;
+      return (
+        <button onClick={ this.onClick }>{ translate('submit') }</button>
+      );
     }
 
     return null;

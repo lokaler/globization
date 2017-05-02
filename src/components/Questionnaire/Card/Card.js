@@ -91,8 +91,8 @@ export default class Questionnaire extends React.Component {
     this.getLogger().clear();
 
     return (
-      <div onClick={ this.onClick }>
-        { __DEV__ &&
+      <div className="card" onClick={ this.onClick }>
+        { __DEV__ && false &&
           <Debug { ...this.props }/>
         }
         { this.createWidgets(questions) }

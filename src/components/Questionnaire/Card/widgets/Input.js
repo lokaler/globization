@@ -33,6 +33,7 @@ export default class Input extends React.Component {
       histogramData
     });
 
-    return <span key={ `${+new Date()}_${input.key}` }>{ Widget }</span>;
+    // return <div className="widget" key={ `${+new Date()}_${input.key}` }>{ Widget }</div>;
+    return Widget;
   }
 }

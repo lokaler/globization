@@ -1,6 +1,6 @@
 import { includes } from 'lodash';
 import { getQueryVariable } from 'logic/url';
-import d3 from 'd3';
+// import d3 from 'd3';
 
 export const GET_URL_PARAMETERS = 'GET_URL_PARAMETERS';
 export const GET_STORED_VALUES = 'GET_STORED_VALUES';
@@ -11,7 +11,9 @@ const initialState = {
   language: 'de',
   width: 860,
   height: 500,
-  fullscreen: false
+  fullscreen: false,
+  mobile: false,
+  mounted: false
 };
 
 
@@ -19,13 +21,13 @@ export function reducer(state = initialState, action) {
   switch (action.type) {
 
     case GET_URL_PARAMETERS: {
-      const { language, mobile, width, round, vis, dataset, country } = action;
-      return { ...state, language, mobile, width, round, vis, dataset, country };
+      const { language, round, vis, dataset, country } = action;
+      return { ...state, language, round, vis, dataset, country };
     }
 
     case SET_WINDOW_SIZE: {
       const mobile = action.sizes.width < 600;
-      return { ...state, ...action.sizes, mobile };
+      return { ...state, ...action.sizes, mobile, mounted: true };
     }
 
     case SET_FULLSCREEN: {
@@ -47,14 +49,13 @@ export const actions = {
     // const mobile = !!parseInt(q('mobile') || '0', 10);
     const round = q('round') || null;
     const card = parseInt(q('card'), 10) || 0;
-    const bbox = d3.select('body').node().getBoundingClientRect();
-    const width = bbox.width;
-    const mobile = width < 600;
+    // const bbox = d3.select('body').node().getBoundingClientRect();
+    // const width = bbox.width;
+    // const mobile = width < 600;
     const vis = q('vis') || null;
     const dataset = q('dataset') || null;
     const country = q('country') || null;
-    return { type: GET_URL_PARAMETERS, language, round, card, mobile,
-      width, vis, dataset, country };
+    return { type: GET_URL_PARAMETERS, language, round, card, vis, dataset, country };
   },
 
   getStoredValues: () => {

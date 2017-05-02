@@ -21,21 +21,26 @@
     100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
   }
 
+
+  position: relative;
+  width: 100%;
+  height: 100%;
   line-height: 1.4em;
   font-size: 1rem;
 
-  :local(.inner) {
-    padding: 30px;
-    position: relative;
-    float: left;
-    width: 100%;
-    overflow-y: scroll;
+  .card {
+      .mq-desktop & {
+        padding: 30px;
+      }
+      float: left;
+      background: #FFF;
   }
 
   a {
     text-decoration: none;
     color: #A74405;
   }
+
 
   .losButton {
     padding: 10px 30px 10px 30px;
@@ -66,7 +71,7 @@
 
   h1 {
     margin-top:0;
-    font-size: 1.4em;
+    font-size: 1em;
     font-weight: bold;
     line-height: 1.2em;
   }
@@ -75,16 +80,28 @@
     float:left;
   }
 
+  @-webkit-keyframes countdown {
+    0%   {
+      background-position:right bottom;
+    }
+    100% {
+      background-position:left bottom;
+    }
+  }
+
+
   button {
     margin-top: 20px;
     width: 100%;
     border: none;
     color: #FFF;
-    background: #7D9F89;
     padding: 10px;
     border-radius: 2px;
     font-weight: bold;
     float: left;
+    background: linear-gradient(to right, #7D9F89 50%, #395844 50%);
+    background-size: 200% 100%;
+    animation: countdown 10s;
   }
 
   .answer-tip {

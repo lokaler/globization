@@ -42,10 +42,14 @@ export default class UbermorgenApp extends React.Component {
       actions.changeVis({ type: state.app.vis });
     }
     this.configureHotReload();
-    window.addEventListener('resize', this.handleResize.bind(this));
+    // window.addEventListener('resize', this.handleResize.bind(this));
     // window.parent.addEventListener('scroll', this.handleScroll.bind(this));
-    this.handleResize();
+    // this.handleResize();
     googleLogger('loaded', 1);
+  }
+
+  componentDidMount() {
+    this.handleResize();
   }
 
   // componentWillReceiveProps(nextProps) {
@@ -78,30 +82,30 @@ export default class UbermorgenApp extends React.Component {
     this.props.actions.setWindowSize({ width: bbox.width, height: bbox.height });
   }
 
-  handleScroll() {
-    if (!this.props.app.mobile) { return; }
-    const bbox = window.frameElement.getBoundingClientRect();
-    const top = bbox.top < 0 ? bbox.top * -1 : 0;
-    if (bbox.bottom > screen.height - 50) {
-      d3.select(this.refs.left).style('transform', `translate3d(0,${top}px,0)`);
-    }
-  }
+  // handleScroll() {
+  //   if (!this.props.app.mobile) { return; }
+  //   const bbox = window.frameElement.getBoundingClientRect();
+  //   const top = bbox.top < 0 ? bbox.top * -1 : 0;
+  //   if (bbox.bottom > screen.height - 50) {
+  //     d3.select(this.refs.left).style('transform', `translate3d(0,${top}px,0)`);
+  //   }
+  // }
 
   render() {
-    const responsiveClass = this.props.app.mobile ? 'mq-mobile' : 'mq-desktop';
-    const vis = this.props.app.vis;
+    const { mobile, mounted } = this.props.app;
+    const responsiveClass = mobile ? 'mq-mobile' : 'mq-desktop';
 
     return (
-      <div className={ responsiveClass } ref="container">
-        <div className={ styles.container }>
+      <div className={ responsiveClass }>
+        <div className={ styles.container } ref="container">
           <div ref="left" className="left">
-            <Vis {...this.props}/>
+            { mounted &&
+              <Vis {...this.props}/>
+            }
           </div>
-          { !vis &&
           <div className="right">
             <Questionnaire {...this.props}/>
           </div>
-          }
         </div>
       </div>
     );

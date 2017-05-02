@@ -9,73 +9,47 @@
     box-sizing: border-box;
   }
 
-  display: flex;
+  float: left;
   background: #FFF;
-  font-family: "SpiegelSansWeb", Calibri, Candara, Arial, Helvetica, sans-serif;
-  font-size:12px;
   position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
-  .mq-mobiles & {
-    flex-direction: column;
-    width: 100%;
-  }
-  .mq-desktops & {
-    flex-direction: row;
-    // width: 860px;
-    height: 500px;
-  }
+  border-bottom: 2px solid #EEE;
+  border-top: 2px solid #EEE;
 
-  .mq-desktop {
-    width: 100%;
-  }
 
-  .lefts {
-    .mq-mobile & {
-      overflow: hidden;
-      position: absolute;
-      top: 0px;
-      background: #FFF;
-      z-index: 500;
-      -webkit-backface-visibility: hidden;
-      -webkit-perspective: 1000;
-      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-    }
-    .mq-desktop & {
-      border-right: none;
-      flex-grow: 1;
-      width: 65%;
-      overflow: hidden;
-    }
+  .mq-mobile {
+    float: left;
   }
 
-  .rights {
+  .right {
     .mq-mobile & {
       width: 100%;
-      margin-top: 250px;
     }
     .mq-desktop & {
-      width: 35%;
+      width: 80%;
+      background: #FFF;
+      margin: 10%;
+      z-index: 400;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     }
     z-index: 200;
-
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    float: left;
     position: relative;
   }
+
+  .left {
+    width: 100%;
+    position: absolute;
+  }
+
 }
 
-.right {
-  width: 80%;
-  background: #FFF;
-  margin: 10%;
-  z-index: 100;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-}
-
-.left {
-  width: 100%;
-  position: absolute;
-}
 
 ::-webkit-scrollbar {
     -webkit-appearance: none;
