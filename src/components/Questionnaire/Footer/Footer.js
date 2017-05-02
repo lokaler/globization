@@ -11,8 +11,7 @@ export default class Footer extends React.Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
-    nextBtnLabel: PropTypes.string,
-    prevBtnLabel: PropTypes.string
+    label: PropTypes.string
   }
 
   /* eslint-disable */
@@ -54,40 +53,19 @@ export default class Footer extends React.Component {
     logbuch(fromPairs(inputs));
   }
 
-  createPagination(questions) {
-    return questions.cards.map((q, i) =>
-      <div
-        key={ `${i}_pagination-item` }
-        className={ i === questions.activeCard ? styles.pagination_item__active : styles.pagination_item }
-        onClick={ this.getClickHandler(i) }
-      />
-    );
-  }
+
 
   render() {
-    const { questions, prevBtnLabel, nextBtnLabel } = this.props;
-    const showNextBtn = questions.activeCard < questions.cards.length ;
-    const showPrevBtn = questions.activeCard > -1 && questions.options.showBackButton;
-    const showPagination = questions.activeCard >= 0
-      && questions.activeCard < questions.cards.length;
-
-    const pagination = showPagination ? this.createPagination
-        .bind(this)(questions) : null;
+    const { questions, label } = this.props;
+    const showBtn = (questions.activeCard < questions.cards.length) && (questions.activeCard !== -1);
+    const card = questions.cards[questions.activeCard]
+    const cardSubmitted = card.key in questions.submittedCards;
 
     return (
       <div className={ styles.footer }>
-        {
-          showPrevBtn &&
-          <div className={ styles.btn_prev } onClick={ this.getClickHandler(questions.activeCard - 1) }>
-            <div className={ styles.btn_text }>{ prevBtnLabel }</div>
-          </div>
-        }
-        { showPagination &&
-          <div className={ styles.pagination + ' clearfix' }>{ pagination }</div>
-        }
-        { showNextBtn && questions.activeCard !== -1 &&
-            <div className={ styles.btn_next } onClick={ this.getClickHandler(questions.activeCard + 1) }>
-              <div className={ styles.btn_text }>{ nextBtnLabel }</div>
+        { showBtn && cardSubmitted &&
+            <div className={ styles.btn } onClick={ this.getClickHandler(questions.activeCard + 1) }>
+              <div>{ label }</div>
             </div>
         }
       </div>
