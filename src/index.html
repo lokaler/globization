@@ -1,75 +1,47 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Übermorgen DEV</title>
-    <script src="js/browser-polyfill.min.js"></script>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testframe</title>
     <style type="text/css">
-      .spinner {
-        margin: 100px auto;
-        width: 50px;
-        height: 40px;
-        text-align: center;
-        font-size: 10px;
-      }
 
-      .spinner > div {
-        background-color: #7d9f89;
-        height: 100%;
-        width: 6px;
-        display: inline-block;
+      @font-face {
+        font-family: "SpiegelSansWeb";
+        src: url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.eot") format("eot");
+        src: url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.eot?#iefix") format("embedded-opentype"), url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.woff2") format("woff2"), url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.woff") format("woff"), url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.ttf") format("truetype"), url("http://www.spiegel.de/font/spiegelsans-regular/spiegelsans-regular-web-V1.0.1.svg#SpiegelSansWeb") format("svg");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap; }
 
-        -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-        animation: sk-stretchdelay 1.2s infinite ease-in-out;
-      }
+      body {
+        font-family: "SpiegelSansWeb";
+        font-size: 1.0625em;
+        line-height: 1.475em;
+        padding: 20px 10px;
 
-      .spinner .rect2 {
-        -webkit-animation-delay: -1.1s;
-        animation-delay: -1.1s;
-      }
-
-      .spinner .rect3 {
-        -webkit-animation-delay: -1.0s;
-        animation-delay: -1.0s;
-      }
-
-      .spinner .rect4 {
-        -webkit-animation-delay: -0.9s;
-        animation-delay: -0.9s;
-      }
-
-      .spinner .rect5 {
-        -webkit-animation-delay: -0.8s;
-        animation-delay: -0.8s;
-      }
-
-      @-webkit-keyframes sk-stretchdelay {
-        0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
-        20% { -webkit-transform: scaleY(1.0) }
-      }
-
-      @keyframes sk-stretchdelay {
-        0%, 40%, 100% {
-          transform: scaleY(0.4);
-          -webkit-transform: scaleY(0.4);
-        }  20% {
-          transform: scaleY(1.0);
-          -webkit-transform: scaleY(1.0);
-        }
       }
     </style>
   </head>
   <body>
-    <div id="app">
-      <div class="spinner">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-      </div>
-    </div>
+    <section style="max-width: 640px; margin: 0 auto">
+      <p>
+        Enninful kommt vom Magazin "W", wo er als Mode- und Kreativdirektor tätig war, zur britischen "Vogue". Zuvor hatte er bereits für die italienische und die amerikanische Ausgabe der renommierten Modezeitschrift gearbeitet.
+      </p>
+      <p>
+      Der erste männliche Chefredakteur in der rund hundertjährigen Geschichte des Blattes wuchs in West-London als eines von sechs Kindern einer Näherin auf. Die Modewelt lernte er als 16-jähriges Model näher kennen, mit 18 wurde er bereits Style Director bei dem Londoner Magazin "i-D".
+      </p>
+      <!-- <iframe width="100%" height="650" src="http://localhost:3000/" frameborder="0" allowfullscreen></iframe> -->
+      <div id="app"></div>
+      <p>
+      Jonathan Newhouse, als Vorsitzender von Condé Nast International Herausgeber des Magazins, nannte Enninful eine "einflussreiche Persönlichkeit in den Welten der Mode, Hollywoods und der Musik", er sei herausragend vorbereitet für den Job.
+      </p>
+      <p>
+      Bei der italienischen Ausgabe der "Vogue" war im Januar ebenfalls ein Mann als Nachfolger der im Dezember 2016 verstorbenen langjährigen Chefredakteurin Franca Sozzani ernannt worden: Emanuele Farneti.
+      </p>
+    </section>
+    <script src="js/browser-polyfill.min.js"></script>
     <script src="bundle.js"></script>
   </body>
 </html>
