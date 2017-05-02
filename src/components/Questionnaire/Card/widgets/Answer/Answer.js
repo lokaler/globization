@@ -16,6 +16,7 @@ export default class Answer extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
+    card: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
     answer: PropTypes.object.isRequired
   }
@@ -148,8 +149,12 @@ export default class Answer extends React.Component {
   }
 
   render() {
-    const { answer, questions } = this.props;
+    const { card, answer, questions } = this.props;
     const debug = __DEV__ && questions.debugExpressions;
+    const cardSubmitted = card.key in questions.submittedCards;
+    if (!cardSubmitted) {
+      return null;
+    }
 
     const existingTemplateKeys = Object.keys({ ...answer.templates, default: true });
     const templateKey = this.getTemplateKey(questions.inputValues, existingTemplateKeys);
@@ -182,6 +187,8 @@ export default class Answer extends React.Component {
       styles.component,
       answer.className && `answer-${ answer.className }`
     );
+
+    console.log(answer, questions);
 
     return (
       <div className={ className }>
