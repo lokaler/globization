@@ -84,6 +84,8 @@ function getLoaders(env) {
       loader: 'dsv'
     },
 
+    { test: /\.woff$/, loader: 'url-loader?limit=100000' },
+
     dev && {
       test: /(\.css|\.scss)$/,
       loaders: [
