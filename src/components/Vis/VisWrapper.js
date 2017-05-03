@@ -97,25 +97,29 @@ export default class Globe extends React.Component {
 
     const height = app.height;
     const width = app.width;
+    const mobile = app.mobile;
 
     return (
       <div className="vis">
-        { dataset &&
-          <Component color={this.color} {...this.props} width={width} height={height} />
+        { !mobile &&
+          <div>
+            { dataset &&
+              <Component color={this.color} {...this.props} width={width} height={height} />
+            }
+            <div className="menu">
+              <div className={ this.getActiveClass('globe') } onClick={ changeGlobe }></div>
+              <div className={ this.getActiveClass('map') } onClick={ changeMap }></div>
+              <div className={ this.getActiveClass('scatter') } onClick={ changeScatter }></div>
+            </div>
+            { dataset && dataset.linkedSet && false &&
+              <LinkedDatasetMenu {...this.props} />
+            }
+            <TooltipComponent {...this.props} />
+            { dataset && dataset.key != "none" && false &&
+              <Legend color={this.color} {...this.props} />
+            }
+          </div>
         }
-        <div className="menu">
-          <div className={ this.getActiveClass('globe') } onClick={ changeGlobe }></div>
-          <div className={ this.getActiveClass('map') } onClick={ changeMap }></div>
-          <div className={ this.getActiveClass('scatter') } onClick={ changeScatter }></div>
-        </div>
-        { dataset && dataset.linkedSet && false &&
-          <LinkedDatasetMenu {...this.props} />
-        }
-        <TooltipComponent {...this.props} />
-        { dataset && dataset.key != "none" && false &&
-          <Legend color={this.color} {...this.props} />
-        }
-
       </div>
     );
   }
