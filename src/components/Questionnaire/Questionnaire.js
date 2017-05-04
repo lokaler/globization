@@ -83,7 +83,9 @@ export default class Questionnaire extends React.Component {
 
     return (
       <div ref="card" className={ styles.questions } >
-        <Card { ...this.props }/>
+        { !questions.hideCard &&
+          <Card { ...this.props }/>
+        }
         { questions.activeCard !== 0 &&
           <Footer
             label={ translate(nextBtnLabel) }

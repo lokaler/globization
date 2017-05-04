@@ -17,10 +17,11 @@
   margin-bottom: 30px;
   padding-top: 30px;
   padding-bottom: 30px;
+  width: 100%;
 
   border-bottom: 2px solid #EEE;
   border-top: 2px solid #EEE;
-
+  min-height: 500px;
 
   .mq-mobile {
     float: left;
@@ -41,7 +42,6 @@
     z-index: 200;
     float: left;
     position: relative;
-    min-height: 400px;
     background: #FFF;
   }
 

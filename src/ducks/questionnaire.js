@@ -7,6 +7,7 @@ const LOAD_QUESTIONNAIRES = 'LOAD_QUESTIONNAIRES';
 const SET_QUESTIONNAIRE = 'SET_QUESTIONNAIRE';
 const RESET_QUESTIONNAIRE = 'RESET_QUESTIONNAIRE';
 const SET_CARD = 'SET_CARD';
+const HIDE_CARD = 'HIDE_CARD';
 const SUBMIT_CARD = 'SUBMIT_CARD';
 const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
 const SET_DATASET = 'SET_DATASET';
@@ -115,7 +116,14 @@ export function reducer(state = initialState, action) {
     case SET_CARD:
       return {
         ...state,
-        activeCard: action.index
+        activeCard: action.index,
+        hideCard: false
+      };
+
+    case HIDE_CARD:
+      return {
+        ...state,
+        hideCard: true
       };
 
     case SET_DATASET: {
@@ -188,6 +196,8 @@ export const actions = {
   resetQuestionnaire: () => ({ type: RESET_QUESTIONNAIRE }),
 
   updateUserInput: (key, value) => ({ type: UPDATE_USERINPUT, key, value }),
+
+  hideCard: () => ({ type: HIDE_CARD }),
 
   setCard(index, datasetId) {
     return dispatch => {

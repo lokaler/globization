@@ -93,6 +93,7 @@ export default class UbermorgenApp extends React.Component {
 
   render() {
     const { mobile, mounted } = this.props.app;
+    // const { hideCard } = this.props.questions;
     const responsiveClass = mobile ? 'mq-mobile' : 'mq-desktop';
 
     return (
@@ -103,9 +104,11 @@ export default class UbermorgenApp extends React.Component {
               <Vis {...this.props}/>
             }
           </div>
-          <div className="right">
-            <Questionnaire {...this.props}/>
-          </div>
+
+            <div className="right">
+              <Questionnaire {...this.props}/>
+            </div>
+
         </div>
       </div>
     );

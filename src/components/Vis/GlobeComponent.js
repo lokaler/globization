@@ -111,8 +111,7 @@ export default class GlobeComponent extends React.Component {
             translate: this.zoom.translate(),
             zoom: this.zoom.scale(),
             rotate: this.projection.rotate(),
-            scale: this.projection.scale(),
-            animation: null
+            scale: this.projection.scale()
           });
       })
 
@@ -217,6 +216,7 @@ export default class GlobeComponent extends React.Component {
 
   shouldComponentUpdate(nextProps) {
     utils.log("shouldComponentUpdate", nextProps, this.props);
+    console.log(nextProps.questions.hideCard, nextProps.vis.animation);
     let update = false;
 
     if(nextProps.height != this.props.height || nextProps.width != this.props.width){
@@ -226,7 +226,8 @@ export default class GlobeComponent extends React.Component {
       update = false;
     }
 
-    if(nextProps.vis.animation) {
+    if(nextProps.questions.hideCard && nextProps.vis.animation) {
+      console.log("do animation", nextProps.vis.animation, this.props.vis.animation)
       this[nextProps.vis.animation.action](nextProps.vis.animation.payload);
       this.props.actions.changeVis({ animation: null });
       update = false;
