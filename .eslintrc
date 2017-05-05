@@ -1,26 +1,13 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
-  "plugins": [
-    "react"
-  ],
   "env": {
-    "es6": true,
-    "browser": true,
-    "node": true,
-    "jquery": true,
-    "mocha": true
+    "browser": true
   },
-  "ecmaFeatures": {
-    "jsx": true,
-    "modules": true
-  },
-  "rules": {
-    "comma-dangle": 0,
-    "no-shadow": [1, {"allow": ["args"]}],
-    "spaced-comment": 1
-  },
-  "globals": {
-    "__DEV__": true
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack/webpack.config.dev.js"
+      }
+    }
   }
 }

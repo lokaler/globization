@@ -2,11 +2,11 @@
 
 import React, { PropTypes } from 'react';
 // import utils from './VisUtils';
-import cssModules from 'react-css-modules';
+// import cssModules from 'react-css-modules';
 import styles from './vis.scss';
-import translate from 'logic/translate';
+import translate from '../../logic/translate';
 
-@cssModules(styles)
+// @cssModules(styles)
 
 export default class TooltipComponent extends React.Component {
 

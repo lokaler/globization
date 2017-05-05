@@ -1,7 +1,14 @@
 {
-  "plugins": [
-    "transform-runtime",
-    "transform-decorators-legacy"
+  "presets": [
+    "react-app",
+    "es2015"
   ],
-  "presets": ["es2015", "stage-1", "react"]
+  "plugins": [
+    "transform-class-properties"
+  ],
+  "env": {
+    "production": {
+      "presets": ["react-optimize"]
+    }
+  }
 }

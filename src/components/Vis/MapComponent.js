@@ -7,13 +7,13 @@ import topojson from 'topojson';
 import ReactDom from 'react-dom';
 import utils from './VisUtils.js'
 import styles from './globe.scss';
-import cssModules from 'react-css-modules';
+// import cssModules from 'react-css-modules';
 import classnames from 'classnames';
 import Dataset from '../../logic/Dataset.js'
 import { defer } from 'lodash';
 import { topofeatures } from 'data/map/index';
 
-@cssModules(styles)
+// @cssModules(styles)
 
 export default class MapComponent extends React.Component {
 

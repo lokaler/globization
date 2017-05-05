@@ -2,8 +2,10 @@
 
   //border: 1px solid green;
 
-  composes: widget from '../widgets.scss';
-
+  // composes: widget from '../widgets.scss';
+  float: left;
+  width: 100%;
+  
   padding-left: 5px;
   padding-right: 5px;
 

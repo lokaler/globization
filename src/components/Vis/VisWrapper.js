@@ -6,7 +6,7 @@ import MapComponent from './MapComponent';
 import ScatterComponent from './ScatterComponent';
 import TooltipComponent from './TooltipComponent';
 import utils from './VisUtils';
-import cssModules from 'react-css-modules';
+// import cssModules from 'react-css-modules';
 import styles from './vis.scss';
 import classnames from 'classnames';
 import colorbrewer from 'colorbrewer'
@@ -16,7 +16,7 @@ import LinkedDatasetMenu from './LinkedDatasetMenu/LinkedDatasetMenu';
 import { sponLogger } from 'logic/logging';
 
 
-@cssModules(styles)
+// @cssModules(styles)
 
 export default class Globe extends React.Component {
 
@@ -101,7 +101,6 @@ export default class Globe extends React.Component {
 
     return (
       <div className="vis">
-
         <div>
           { dataset &&
             <Component color={this.color} {...this.props} width={width} height={height} />
@@ -119,7 +118,6 @@ export default class Globe extends React.Component {
             <Legend color={this.color} {...this.props} />
           }
         </div>
-
       </div>
     );
   }

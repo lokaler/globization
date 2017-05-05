@@ -1,7 +1,8 @@
 :local(.component) {
 
-  composes: widget from '../widgets.scss';
-
+  // composes: widget from '../widgets.scss';
+  float: left;
+  width: 100%;
   border-radius: 5px;
   padding-left: 15px;
   padding-right: 15px;

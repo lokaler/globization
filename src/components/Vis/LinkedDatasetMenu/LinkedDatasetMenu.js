@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import React, { PropTypes } from 'react';
-import cssModules from 'react-css-modules';
+// import cssModules from 'react-css-modules';
 import translate from 'logic/translate';
 import styles from './LinkedDatasetMenu.scss';
 import d3 from 'd3';

@@ -8,8 +8,22 @@ import './styles/styles.scss';
 render(
   (
     <Provider store={store}>
-      <App/>
+      <App />
     </Provider>
   ),
   document.getElementById('app')
 );
+
+
+if (module.hot) {
+  module.hot.accept('./App.js', () => {
+    const NewApp = require('./App').default;
+    console.log(store.getState())
+    render(
+      <Provider store={store}>
+        <NewApp />
+      </Provider>,
+      document.getElementById('app')
+    );
+  });
+}

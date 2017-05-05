@@ -40,10 +40,11 @@ export function reducer(state = initialState, action) {
       }
       const numCards = state.questionnaires[round].cards.length;
       const card = clamp(action.card, 0, numCards - 1);
+      const activeCard = card || state.activeCard; 
       return {
         ...state,
         activeQuestionnaireId: round,
-        activeCard: card
+        activeCard
       };
     }
 

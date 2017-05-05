@@ -12,7 +12,7 @@ export function validateQuestionnaire(questionnaire) {
     throw new ValidationError(message);
   }
 
-  if (__DEV__) {
+  if (__DEV__ && false) {
     const ajv = require('ajv')();
     const schema = require('./schema');
     const validate = ajv.compile(schema.questionnaire);

@@ -5,13 +5,13 @@ import d3 from 'd3';
 import _ from 'lodash';
 import utils from './VisUtils.js'
 import Dataset from '../../logic/Dataset.js'
-import cssModules from 'react-css-modules';
+// import cssModules from 'react-css-modules';
 import styles from './globe.scss';
 import { topofeatures } from 'data/map/index';
 import classnames from 'classnames';
 
 
-@cssModules(styles)
+// @cssModules(styles)
 
 export default class GlobeComponent extends React.Component {
 
@@ -216,7 +216,6 @@ export default class GlobeComponent extends React.Component {
 
   shouldComponentUpdate(nextProps) {
     utils.log("shouldComponentUpdate", nextProps, this.props);
-    console.log(nextProps.questions.hideCard, nextProps.vis.animation);
     let update = false;
 
     if(nextProps.height != this.props.height || nextProps.width != this.props.width){

@@ -1,8 +1,10 @@
 :local(.component) {
 
-  composes: widget from '../widgets.scss';
-
-
+  // composes: widget from '../widgets.scss';
+  // import '../widgets.scss'
+  float: left;
+  width: 100%;
+  
   .rc-slider-track {
     background-color: #FD8D3C;
   }

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import cssModules from 'react-css-modules';
+// import cssModules from 'react-css-modules';
 
 import Debug from './Debug/Debug';
 import Text from './widgets/Text';
@@ -22,7 +22,7 @@ const widgets = {
   datasetMenu: DatasetMenu
 };
 
-@cssModules()
+// @cssModules()
 export default class Questionnaire extends React.Component {
 
   static propTypes = {
@@ -72,6 +72,7 @@ export default class Questionnaire extends React.Component {
         }
         return (
           <Widget
+            className="widget"
             key={ `${card.key}_${widgetType}_${index}` }
             card={ card }
             { ...item }

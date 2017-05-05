@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import ReactMarkdown from 'react-markdown';
 import MicroMustache from 'micromustache';
-import cssModules from 'react-css-modules';
+// import cssModules from 'react-css-modules';
 import { compileExpression } from 'logic/questionnaires/expressions';
 import translate from 'logic/translate';
 import { isUndefined, includes } from 'lodash';
@@ -11,7 +11,7 @@ import Logger from './../logging';
 import functions from 'logic/questionnaires/functions';
 import styles from './Answer.scss';
 
-@cssModules(styles)
+// @cssModules(styles)
 export default class Answer extends React.Component {
 
   static propTypes = {

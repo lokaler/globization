@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import d3 from 'd3';
 import { debounce } from 'lodash';
-import { googleLogger } from 'logic/logging';
+import { googleLogger } from '../../logic/logging';
 import Vis from '../Vis/VisWrapper';
 import Questionnaire from '../Questionnaire/Questionnaire';
 import questionnaires from 'data/questionnaires/index';
@@ -80,7 +80,7 @@ export default class UbermorgenApp extends React.Component {
     const { container } = this.refs;
     const bbox = d3.select(container).node().getBoundingClientRect();
     this.props.actions.setWindowSize({ width: bbox.width, height: bbox.height });
-  }
+ }
 
   // handleScroll() {
   //   if (!this.props.app.mobile) { return; }

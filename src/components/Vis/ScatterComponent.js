@@ -6,7 +6,7 @@ import _ from 'lodash';
 import utils from './VisUtils.js'
 import colorbrewer from 'colorbrewer'
 import Dataset from '../../logic/Dataset.js'
-import cssModules from 'react-css-modules';
+// import cssModules from 'react-css-modules';
 import styles from './globe.scss';
 import classnames from 'classnames';
 import AxisComponent from './AxisComponent.js';
@@ -15,7 +15,7 @@ import translate from 'logic/translate';
 import { numberWithThousandsSeparator } from 'logic/formatting';
 
 
-@cssModules(styles)
+// @cssModules(styles)
 
 export default class ScatterComponent extends React.Component {
 

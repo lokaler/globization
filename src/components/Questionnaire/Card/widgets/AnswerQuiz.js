@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react';
 import ReactMarkdown from 'react-markdown';
 import MicroMustache from 'micromustache';
-import cssModules from 'react-css-modules';
+// import cssModules from 'react-css-modules';
 import { compileExpression, compileContext } from 'logic/questionnaires/expressions';
 import translate from 'logic/translate';
 import { isUndefined } from 'lodash';
 import classNames from 'classnames';
 import styles from './widgets.scss';
 
-@cssModules(styles)
+// @cssModules(styles)
 export default class AnswerQuiz extends React.Component {
 
   static propTypes = {
