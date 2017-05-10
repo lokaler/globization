@@ -13,11 +13,11 @@
           "**Die mit Abstand höchste Müttersterblichkeit hat das westafrikanische Sierra Leone. Wie hoch ist sie?**"
         ],
         "en": [
-          " # ",
+          " # Coverage Gaps for Women",
           "",
+          "In most countries, the maternal mortality rate is less than 100. This means that for every 100,000 births, fewer than 100 women die before, during or in the first six weeks after birth.",
           "",
-          "",
-          "****"
+          "**By far the highest maternal mortality rate is in Sierra Leone. How high is it?**"
         ]
       }
     },{
@@ -57,7 +57,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate. After submitting your choice, you can also see how other readers answered."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
@@ -66,7 +66,7 @@
               "Nein, Ihr getippter Wert entspricht eher der Müttersterblichkeit in **{{ MortalityCountry }}**. In Sierra Leone hingegen sterben 1360 Mütter je 100.000 Geburten. Und auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit noch immer bei mehr als 500."
             ],
             "en": [
-              ""
+              "No, the number you you've selected describes the maternal mortality rate in **{{ MortalityCountry }}**. In Sierra Leone, by comparison, 1,360 mothers die per 100,000 births. And in many other African countries, the mortality rate remains at over 500."
             ]
           },
           "Antwort_Mortality2": {
@@ -74,7 +74,7 @@
               "Ihr getippter Wert übertrifft zwar schon die Müttersterblichkeit aller anderen Länder. Aber die Rate von Sierra Leone haben Sie noch immer unterschätzt: Je 100.000 Geburten sterben 1360 Mütter. Auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit noch immer bei mehr als 500."
             ],
             "en": [
-              ""
+              "The value you've selected is still higher than the maternal mortality rate in all other countries. But you've still underestimated the rate in Sierra Leone: There, for every 100,000 births, 1,360 mothers die. And in many other African countries, the mortality rate remains at over 500."
             ]
           },
           "Antwort_Mortality3": {
@@ -82,7 +82,7 @@
               "Ja, in Sierra Leone sterben tatsächlich 1360 Mütter je 100.000 Geburten. Und auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit noch immer bei mehr als 500."
             ],
             "en": [
-              "."
+              "Yes, in Sierra Leone, 1,360 mothers die per 100,000 births. And in many other African countries the mortality rate remains at over 500."
             ]
           },
           "Antwort_Mortality4": {
@@ -90,7 +90,7 @@
               "Nein, ganz so hoch ist die Müttersterblichkeit in Sierra Leone zwar nicht. Aber je 100.000 Geburten sterben immer noch 1360 Mütter. Auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit bei mehr als 500."
             ],
             "en": [
-              "."
+              "No, maternal mortality isn’t quite so high in Sierra Leone. But 1,360 mothers die there per 100,000 births. And in many other African countries the mortality remains over 500."
             ]
           }
         }
