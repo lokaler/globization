@@ -43,7 +43,7 @@ export default [
     },
     "description": {
       "de": "Jahre, seit dem Frauen auf nationaler Ebene das gleiche aktive Wahlrecht wie Männer haben",
-      "en": "Number of years since women were granted the same right to vote as men at the national level."
+      "en": "Years that have passed since women were granted the same voting rights as men at the national level"
     },
     "quelle": "Wikipedia",
     "link": "https://en.wikipedia.org/wiki/Women%27s_suffrage",
