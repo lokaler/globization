@@ -1,5 +1,5 @@
 {
-  "key": "money",
+  "key": "power",
   "title": "7. Karte - Macht",
   "dataset": "lohngefaelle",
   "content": [
@@ -13,11 +13,11 @@
           "**In wie vielen Ländern werden weniger als 20 Prozent der Kabinettsposten von Frauen bekleidet?**"
         ],
         "en": [
-          " # ",
+          " # Women in Power",
           "",
+          "Young people in Germany don't know it any other way: Here, a woman leads the government. That is still unconventional internationally. Government minister positions are also mostly occupied by men.",
           "",
-          "",
-          "****"
+          "**In how many countries are fewer than 20 percent of cabinet posts occupied by women?**"
         ]
       }
     },{
@@ -57,7 +57,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate. After submitting your choice, you can also see how other readers answered."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
@@ -66,7 +66,7 @@
               "Nein, es sind mehr: 80 Länder. Darunter etwa die Türkei, Tschechien und Brasilien."
             ],
             "en": [
-              ""
+              "No, it is more: 80 countries. This includes Turkey, the Czech Republic and Brazil."
             ]
           },
           "Antwort_CabinetsPosts2": {
@@ -74,7 +74,7 @@
               "Ja, in 80 Ländern liegt der Frauenanteil in der Regierung bei weniger als 20 Prozent. Darunter sind etwa die Türkei, Tschechien und Brasilien."
             ],
             "en": [
-              ""
+              "Yes, in 80 countries, the share of women in the government is lower than 20 percent. This includes Turkey, the Czech Republic and Brazil."
             ]
           },
           "Antwort_CabinetsPosts3": {
@@ -82,7 +82,7 @@
               "Nein, es sind weniger Länder: 80 Stück. Darunter etwa die Türkei, Tschechien und Brasilien."
             ],
             "en": [
-              ""
+              "No, it is fewer countries: 80. This includes Turkey, the Czech Republic and Brazil."
             ]
           }
         }

@@ -13,11 +13,11 @@
           "**Was glauben Sie, wo ist der Frauenanteil in diesen höheren Positionen am höchsten?**"
         ],
         "en": [
-          " # ",
+          " # Lower Professional Ranks",
           "",
-          " ",
+          "The “glass ceiling” also exists at professional levels below the board: When it comes to management, academics and engineering positions, there is an average of two women for every three men.",
           "",
-          "****"
+          "**Where do you think the proportion of women in these higher position is the largest?**"
         ]
       }
     },{
@@ -26,9 +26,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["GlassCeilingChoice_1", { "de": "Weißrussland", "en": "" }],
-            ["GlassCeilingChoice_2", { "de": "Südafrika", "en": ""}],
-            ["GlassCeilingChoice_3", { "de": "Pakistan", "en": "" }]
+            ["GlassCeilingChoice_1", { "de": "Weißrussland", "en": "Belarus" }],
+            ["GlassCeilingChoice_2", { "de": "Südafrika", "en": "South Africa"}],
+            ["GlassCeilingChoice_3", { "de": "Pakistan", "en": "Pakistan" }]
           ]
         }
       }
@@ -61,7 +61,7 @@
               "Ganz genau: In Weißrussland sind 62 Prozent der Führungskräfte, Akademiker und Techniker weiblich."
             ],
             "en": [
-              ""
+              "Correct: In Belarus, 62 percent of all managers, academics and engineers are women."
             ]
           },
           "GlassCeilingChoice_2": {
@@ -69,7 +69,7 @@
               " Nein, in Südafrika ist die Situation ähnlich wie in Deutschland: Der Frauenanteil liegt bei 49 Prozent. Den höchsten Anteil findet man in **Weißrussland**: 62 Prozent der höheren Positionen sind von Frauen besetzt."
             ],
             "en": [
-              ""
+              "No, in South Africa the situation is like the one in Germany: The proportion of women is 49 percent. The largest proportion can be found in Belarus, where 62 percent of higher positions are occupied by women."
             ]
           },
           "GlassCeilingChoice_3": {
@@ -77,7 +77,7 @@
               "Nein, ganz im Gegenteil: Pakistan gehört mit weniger als zehn Prozent zu jenen Ländern mit dem niedrigsten Frauenanteil in solchen Positionen. Den höchsten Anteil hat **Weißrussland** mit 62 Prozent."
             ],
             "en": [
-              ""
+              "No, just the opposite: With just less than 10 percent of women in higher positions, the country is among those with the lowest proportion of women. Belarus has the largest proportion with 62 percent."
             ]
           }
         }

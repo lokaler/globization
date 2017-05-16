@@ -13,11 +13,11 @@
           "**In welchen Ländern wurde erst in der 2000er-Jahren, also zwischen Anfang 2000 und Ende 2009, das Frauenwahlrecht eingeführt?**"
         ],
         "en": [
-          " # ",
+          " # Political Participation",
           "",
-          " ",
+          "In most countries today, is it is self-evident that women have the same voting rights as men. That wasn't always the case.",
           "",
-          "****"
+          "**In which countries was female suffrage introduced in the 2000s, meaning between the start of 2000 and the end of 2009?**"
         ]
       }
     },{
@@ -26,9 +26,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["PartiCiPationChoice_1", { "de": "Zentralafrikanische Republik und Namibia", "en": "" }],
-            ["PartiCiPationChoice_2", { "de": "Bahrain und Oman", "en": ""}],
-            ["PartiCiPationChoice_3", { "de": "Chile und Venezuela", "en": "" }]
+            ["PartiCiPationChoice_1", { "de": "Zentralafrikanische Republik und Namibia", "en": "Central African Republic and Namibia" }],
+            ["PartiCiPationChoice_2", { "de": "Bahrain und Oman", "en": "Bahrain and Oman"}],
+            ["PartiCiPationChoice_3", { "de": "Chile und Venezuela", "en": "Chile and Venezuela" }]
           ]
         }
       }
@@ -61,7 +61,7 @@
               "Nein, in der Zentralfrikanischen Republik und Namibia dürfen Frauen seit den 1980ern wählen. In den 2000ern haben Bahrain und Oman das Frauenwahlrecht eingeführt."
             ],
             "en": [
-              ""
+              "No, in the Central African Republic and Namibia, women have had the right to vote since the 1980s. Female suffrage was introduced in Bahrain and Oman in the 2000s."
             ]
           },
           "PartiCiPationChoice_2": {
@@ -69,7 +69,7 @@
               "Richtig, Bahrain und Oman haben erst in den 2000er-Jahren das Frauenwahlrecht eingeführt."
             ],
             "en": [
-              ""
+              "Correct, Bahrain and Oman didn't introduce female suffrage until the 2000s."
             ]
           },
           "PartiCiPationChoice_3": {
@@ -77,7 +77,7 @@
               "Nein, in Chile und Venezuela dürfen Frauen schon seit den 1940ern wählen. In den 2000ern haben Bahrain und Oman das Frauenwahlrecht eingeführt."
             ],
             "en": [
-              ""
+              "No, in Chile and Venezuela, women have had the right to vote since the 1940s. Female suffrage was introduced in Bahrain and Oman in the 2000s."
             ]
           }
         }
