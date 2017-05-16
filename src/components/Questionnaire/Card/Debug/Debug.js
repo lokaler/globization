@@ -11,7 +11,7 @@ export default class Questionnaire extends React.Component {
   }
 
   onClickState = () => {
-    if (__DEV__) {
+    if (process.env.NODE_ENV === "development") {
       /* eslint-disable no-console */
       console.clear();
       console.debug(store.getState());

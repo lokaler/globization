@@ -3,13 +3,12 @@
 import React, { PropTypes } from 'react';
 import d3 from 'd3';
 import d3_projection from './libs/d3.projection.js';
-import topojson from 'topojson';
 import ReactDom from 'react-dom';
 import utils from './VisUtils.js'
 import styles from './globe.scss';
 // import cssModules from 'react-css-modules';
 import classnames from 'classnames';
-import Dataset from '../../logic/Dataset.js'
+import Dataset from 'logic/Dataset.js'
 import { defer } from 'lodash';
 import { topofeatures } from 'data/map/index';
 

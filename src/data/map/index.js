@@ -1,14 +1,16 @@
-// import _ from 'lodash';
-import topojson from 'topojson';
+import { presimplify } from 'topojson-simplify';
+import { feature } from 'topojson-client';
 
-import mastercsv from './master.csv';
+// import mastercsv from './master.csv';
+import masterjson from './master.json';
 import worldData from './world-50m-custom-hq.json';
 // import worldData from './world-50m-custom-mq.json';
 // import worldData from './world-50m-custom-lq.json';
 
 function getTopoJson() {
-  topojson.presimplify(worldData);
-  const t = topojson.feature(worldData, worldData.objects.countries).features;
+  let worldDataSimple = presimplify(worldData);
+  // worldDataSimple = simplify(worldDataSimple)
+  const t = feature(worldDataSimple, worldDataSimple.objects.countries).features;
 
   for (const d of t) {
     // console.log(d);
@@ -20,12 +22,13 @@ function getTopoJson() {
 }
 
 function getMaster() {
-  for (const d of mastercsv) {
+  // masterjson instead of mastercsv because of the missing loader
+  for (const d of masterjson) {
     d.gdp = Number(d.gdp);
     d.population = Number(d.population);
     d.vergleich = d.gdp / d.population;
   }
-  return mastercsv;
+  return masterjson;
 }
 
 export const topofeatures = getTopoJson();

@@ -1,23 +1,15 @@
 # Globization
 
-The build system used by "Globization" is based on [react-starter](https://github.com/wbkd/react-starter).
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 See there for information on setting up your machine, using the development server and building the app.
 
 
 ## Deployment
 
-- live: http://www.spiegel.de/staticgen/data_imports/lokaler/deploy/dist/ 
-- testing: http://www.spiegel.de/staticgen/data_imports/lokaler/testing/dist/
-
-Every minute a machine at SPON checks if there are new commits to the 'deploy' and 'testing' branch. If so, the branch gets pulled (and deployed afterwards) automatically.
-
-_(If the interval should change or a different branch should be deployed, please speak to Georg.)_ 
-
-To deploy for run ``npm run deploy`` (for testing) or ``npm run deployLive`` (for live).
 
 ## Development
 
-The React-App consists of 2 main components: the [visualization](https://github.com/lokaler/globization/tree/master/src/components/Vis) on the left and the [questionaire](https://github.com/lokaler/globization/tree/master/src/components/Questionnaire) on the right.
+The Create React App consists of 2 main components: the [visualization](https://github.com/lokaler/globization/tree/master/src/components/Vis) on the left and the [questionaire](https://github.com/lokaler/globization/tree/master/src/components/Questionnaire) on the right.
 
 ### questionaire
 json js parser...

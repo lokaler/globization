@@ -2,14 +2,16 @@ import _ from 'lodash';
 import d3 from 'd3';
 
 import { topofeatures } from 'data/map/index';
-import master from 'data/map/master.csv';
+import masterjson from 'data/map/master.json';
+import dummyData from './dummy.json';
 
 
 export function prepareDataset(dataset) {
-  // console.log(dataset);
-  for (const d of dataset.data) {
+  // dummy datahack for testing because of the missing loader
+  dataset.data = dummyData;
+  for (let d of dataset.data) {
     d.value = +d.value;
-    let e = _.find(master, { alpha3: d.iso });
+    let e = _.find(masterjson, { alpha3: d.iso });
     const t = _.find(topofeatures, (c) => c.properties.iso === d.iso);
     if (!e) {
       console.warn(d.iso, 'not in masterdataset origined from', dataset.key);

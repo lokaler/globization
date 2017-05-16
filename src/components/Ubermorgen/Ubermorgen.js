@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import d3 from 'd3';
 import { debounce } from 'lodash';
 import { googleLogger } from '../../logic/logging';
 import Vis from '../Vis/VisWrapper';
@@ -66,7 +65,7 @@ export default class UbermorgenApp extends React.Component {
     if (module.hot) {
       // Enable Webpack hot module replacement for questionnaires
       module.hot.accept('../../data/questionnaires/index', () => {
-        if (__DEV__) {
+        if (process.env.NODE_ENV === "development") {
           console.debug('reloading questionnaires...'); // eslint-disable-line no-console
         }
         const newQuestionnaires = require('../../data/questionnaires/index').default;

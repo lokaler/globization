@@ -6,9 +6,7 @@ import { compileExpression, compileContext } from 'logic/questionnaires/expressi
 import translate from 'logic/translate';
 import { isUndefined } from 'lodash';
 import classNames from 'classnames';
-import styles from './widgets.scss';
 
-// @cssModules(styles)
 export default class AnswerQuiz extends React.Component {
 
   static propTypes = {

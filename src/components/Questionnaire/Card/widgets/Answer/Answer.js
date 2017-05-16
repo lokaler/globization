@@ -23,7 +23,7 @@ export default class Answer extends React.Component {
 
   getLoggingFuncs() {
     const { actions, questions } = this.props;
-    const logger = new Logger(actions, __DEV__ && questions.debugExpressions);
+    const logger = new Logger(actions, process.env.NODE_ENV === "development" && questions.debugExpressions);
     const { log, error } = logger;
     const logStart = (s) => {
       log(center(` ${ s } `, 80, '-'));
@@ -150,7 +150,7 @@ export default class Answer extends React.Component {
 
   render() {
     const { card, answer, questions } = this.props;
-    const debug = __DEV__ && questions.debugExpressions;
+    const debug = process.env.NODE_ENV === "development" && questions.debugExpressions;
     const cardSubmitted = card.key in questions.submittedCards;
     if (!cardSubmitted) {
       return null;

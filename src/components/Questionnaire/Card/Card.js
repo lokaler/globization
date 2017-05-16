@@ -58,7 +58,7 @@ export default class Questionnaire extends React.Component {
 
   getLogger() {
     const { actions, questions } = this.props;
-    return new Logger(actions, __DEV__ && questions.debugExpressions);
+    return new Logger(actions, process.env.NODE_ENV === "development" && questions.debugExpressions);
   }
 
   createWidgets(questions) {
@@ -93,7 +93,7 @@ export default class Questionnaire extends React.Component {
 
     return (
       <div className="card" onClick={ this.onClick }>
-        { __DEV__ && false &&
+        { process.env.NODE_ENV === "development" && false &&
           <Debug { ...this.props }/>
         }
         { this.createWidgets(questions) }
