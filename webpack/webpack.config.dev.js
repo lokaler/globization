@@ -59,12 +59,12 @@ module.exports = {
       inject: true,
       template: Path.resolve(__dirname, '../src/index.html')
     }),
-    // new HtmlWebpackPlugin({
-    //   title: 'iframe testpage',
-    //   inject: false,
-    //   filename: 'index_iframe.html',
-    //   template: Path.resolve(__dirname, '../src/index_iframe.html')
-    // }),
+    new HtmlWebpackPlugin({
+      title: 'iframe testpage',
+      inject: false,
+      filename: 'iframe.html',
+      template: Path.resolve(__dirname, '../src/iframe.html')
+    }),
     // copy data folder to make it available in redux loadData action
     new CopyWebpackPlugin([
       { from: Path.resolve(__dirname, '../src/data'), to: 'data' }

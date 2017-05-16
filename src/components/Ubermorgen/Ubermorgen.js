@@ -77,8 +77,7 @@ export default class UbermorgenApp extends React.Component {
   }
 
   handleResize() {
-    const { container } = this.refs;
-    const bbox = d3.select(container).node().getBoundingClientRect();
+    const bbox = document.body.getBoundingClientRect();
     this.props.actions.setWindowSize({ width: bbox.width, height: bbox.height });
  }
 
