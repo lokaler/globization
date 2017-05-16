@@ -1,0 +1,34 @@
+.vis svg.globe path, svg.map path {
+  stroke-width: 1px;
+  stroke: rgba(255, 255, 255, 0.79);
+  cursor: pointer; }
+
+.vis svg.globe .graticule, svg.map .graticule {
+  fill: none;
+  stroke: #EEE;
+  stroke-width: 0.7px; }
+
+.vis svg.globe .activeGeometry, svg.map .activeGeometry {
+  stroke-width: 2px;
+  stroke: #000000;
+  stroke-opacity: 0.8;
+  fill: none; }
+
+.scatter .axis path,
+.scatter .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges; }
+
+.scatter .axis text {
+  font-size: 11px; }
+
+.scatter .domain {
+  display: none; }
+
+.scatter .item {
+  cursor: pointer;
+  fill-opacity: 0.6; }
+  .scatter .item.active {
+    stroke: #5A2507;
+    stroke-width: 2px; }

@@ -1,0 +1,35 @@
+:local(.component) {
+  float: left;
+  width: 100%; }
+  :local(.component) .rc-slider-track {
+    background-color: #FD8D3C; }
+  :local(.component) .rc-slider-dot-active, :local(.component) .rc-slider-dot {
+    display: none; }
+  :local(.component) .rc-slider-mark {
+    font-size: 10px;
+    top: 5px; }
+  :local(.component) .rc-slider-handle {
+    border-color: #FD8D3C; }
+    .mq-mobile :local(.component) .rc-slider-handle {
+      margin-left: -12px;
+      margin-top: -11px;
+      width: 25px;
+      height: 25px;
+      border: 3px solid; }
+  :local(.component) .marks {
+    padding-top: 5px;
+    width: 100%;
+    float: left;
+    font-size: 10px; }
+    :local(.component) .marks .min {
+      float: left; }
+    :local(.component) .marks .max {
+      float: right; }
+  :local(.component) .r0416 .rc-slider-track {
+    background-color: #2171b5; }
+  :local(.component) .r0416 .rc-slider-handle {
+    border-color: #2171b5; }
+  :local(.component) .r0516 .rc-slider-track {
+    background-color: #7D9F89; }
+  :local(.component) .r0516 .rc-slider-handle {
+    border-color: #7D9F89; }

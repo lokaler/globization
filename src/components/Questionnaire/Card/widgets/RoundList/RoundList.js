@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import styles from './RoundList.scss';
+import styles from './RoundList.css';
 import translate from 'logic/translate';
 
 export default class RoundList extends React.Component {

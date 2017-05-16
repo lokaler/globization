@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { component } from './SliderHistogram.scss';
+import { component } from './SliderHistogram.css';
 import d3 from 'd3';
 import Tooltip from 'rc-tooltip';
 import translate from 'logic/translate';

@@ -3,7 +3,7 @@
 import React, { PropTypes } from 'react';
 // import cssModules from 'react-css-modules';
 import translate from 'logic/translate';
-import styles from './LinkedDatasetMenu.scss';
+import styles from './LinkedDatasetMenu.css';
 import d3 from 'd3';
 import classnames from 'classnames';
 import LinkedDatasetItem from './LinkedDatasetItem';

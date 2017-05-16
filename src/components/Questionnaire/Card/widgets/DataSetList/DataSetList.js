@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import DataSetItem from './DataSetItem';
-import styles from './DataSetList.scss';
+import styles from './DataSetList.css';
 
 export default class DataSetList extends React.Component {
 

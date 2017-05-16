@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { sponLogger } from 'logic/logging';
 import { logbuch } from 'logic/logbuch';
 import { fromPairs } from 'lodash';
-import styles from './Footer.scss';
+import styles from './Footer.css';
 import { googleLogger } from 'logic/logging';
 
 

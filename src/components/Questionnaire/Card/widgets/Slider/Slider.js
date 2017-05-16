@@ -4,7 +4,7 @@ import Rcslider from 'rc-slider';
 import Histogram from './SliderHistogram';
 import { sponLogger } from 'logic/logging';
 import translate from 'logic/translate';
-import styles from './Slider.scss';
+import styles from './Slider.css';
 import 'rc-slider/assets/index.css';
 import { googleLogger } from 'logic/logging';
 

@@ -1,0 +1,40 @@
+:local(.component) {
+  float: left;
+  width: 100%;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: rgba(154, 154, 154, 0.22);
+  color: #2B2B2B; }
+  :local(.component) img {
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  :local(.component) .sharing {
+    clear: both;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: left;
+    width: 100%; }
+    :local(.component) .sharing .label {
+      float: left;
+      padding-top: 7px; }
+    :local(.component) .sharing .share {
+      width: 102px;
+      height: 35px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      clear: none;
+      background-repeat: no-repeat;
+      padding-bottom: 0px; }
+      :local(.component) .sharing .share.en {
+        background-image: url("./img/sprite-socials-en.png"); }
+      :local(.component) .sharing .share.de {
+        background-image: url("./img/sprite-socials.png"); }
+      :local(.component) .sharing .share.twitter {
+        float: left;
+        background-position: -6px -56px; }
+      :local(.component) .sharing .share.facebook {
+        float: right;
+        background-position: -6px -8px; }

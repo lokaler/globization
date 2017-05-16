@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import ReactMarkdown from 'react-markdown';
 // import cssModules from 'react-css-modules';
 import translate from 'logic/translate';
-// import styles from './widgets.scss';
+// import styles from './widgets.css';
 
 // @cssModules(styles)
 export default class Text extends React.Component {

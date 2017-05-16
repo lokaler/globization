@@ -1,5 +1,5 @@
 import React, { PropTypes as PT } from 'react';
-import styles from './RadioInput.scss';
+import styles from './RadioInput.css';
 
 export default class RadioInput extends React.Component {
 

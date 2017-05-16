@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import store from 'store';
-import styles from './Debug.scss';
+import styles from './Debug.css';
 
 
 export default class Questionnaire extends React.Component {

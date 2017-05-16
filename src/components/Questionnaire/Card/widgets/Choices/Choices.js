@@ -1,6 +1,6 @@
 import React, { PropTypes as PT } from 'react';
 import translate from 'logic/translate';
-import styles from './Choices.scss';
+import styles from './Choices.css';
 import RadioInput from './RadioInput';
 import { max, values, has } from 'lodash';
 import { googleLogger } from 'logic/logging';

@@ -6,7 +6,7 @@ import _ from 'lodash';
 import utils from './VisUtils.js'
 import Dataset from '../../logic/Dataset.js'
 // import cssModules from 'react-css-modules';
-import styles from './globe.scss';
+import styles from './globe.css';
 import { topofeatures } from 'data/map/index';
 import classnames from 'classnames';
 

@@ -7,7 +7,7 @@ import ScatterComponent from './ScatterComponent';
 import TooltipComponent from './TooltipComponent';
 import utils from './VisUtils';
 // import cssModules from 'react-css-modules';
-import styles from './vis.scss';
+import styles from './vis.css';
 import classnames from 'classnames';
 import colorbrewer from 'colorbrewer'
 import MapLegendComponent from './MapLegendComponent.js';

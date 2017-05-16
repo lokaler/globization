@@ -3,7 +3,7 @@
 import React, { PropTypes } from 'react';
 // import utils from './VisUtils';
 // import cssModules from 'react-css-modules';
-import styles from './vis.scss';
+import styles from './vis.css';
 import translate from '../../logic/translate';
 
 // @cssModules(styles)

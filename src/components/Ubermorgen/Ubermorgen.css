@@ -1,0 +1,61 @@
+:local(.container) {
+  float: left;
+  background: #FFF;
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  border-bottom: 2px solid #EEE;
+  border-top: 2px solid #EEE;
+  min-height: 500px; }
+  :local(.container) * {
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-tap-highlight-color: transparent;
+    /* prevent tap highlight color / shadow */
+    -webkit-user-select: text;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    box-sizing: border-box; }
+  :local(.container) .mq-mobile {
+    float: left; }
+  :local(.container) .right {
+    z-index: 200;
+    float: left;
+    position: relative;
+    background: #FFF; }
+    .mq-mobile :local(.container) .right {
+      width: 100%; }
+    .mq-desktop :local(.container) .right {
+      width: 80%;
+      background: #FFF;
+      margin: 10%;
+      z-index: 400;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); }
+  :local(.container) .left {
+    width: 100%;
+    position: absolute; }
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3); }
+
+.rc-tooltips {
+  z-index: 400; }
+  .rc-tooltips-inner {
+    line-height: 1em;
+    padding-bottom: 20px;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-right: 8px;
+    font-weight: bold;
+    text-size: 12px;
+    background: #000; }

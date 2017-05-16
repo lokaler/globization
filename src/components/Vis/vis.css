@@ -1,0 +1,149 @@
+.vis {
+  position: relative; }
+  .vis .menu {
+    padding: 5px;
+    clear: left;
+    top: 10px;
+    right: -6px;
+    position: absolute;
+    z-index: 100;
+    width: 50px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    background: #FFF;
+    display: none; }
+    .vis .menu.linked {
+      top: 130px; }
+    .vis .menu div {
+      width: 20px;
+      height: 20px;
+      padding: 10px;
+      float: left;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+      margin: 5px;
+      cursor: pointer;
+      opacity: 0.3; }
+    .vis .menu .active {
+      opacity: 1; }
+    .vis .menu :hover {
+      opacity: 1; }
+    .vis .menu .globe {
+      background-image: url("./img/globe.svg"); }
+    .vis .menu .map {
+      background-image: url("./img/map.svg"); }
+    .vis .menu .scatter {
+      background-image: url("./img/scatter.svg"); }
+      .mq-mobile .vis .menu .scatter {
+        display: none; }
+  .vis .tooltip {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0; }
+    .vis .tooltip .inner {
+      position: relative;
+      left: -50%;
+      background: #000;
+      color: #FFF;
+      padding: 7px;
+      font-weight: bold;
+      top: -39px;
+      border-radius: 4px; }
+    .vis .tooltip.active {
+      opacity: 1; }
+  .vis .scatterLegend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 100%;
+    width: 100%;
+    font-size: 12px;
+    pointer-events: none; }
+    .vis .scatterLegend .label {
+      top: 20px;
+      left: 20px;
+      position: absolute; }
+    .vis .scatterLegend .vergleich {
+      position: absolute;
+      right: 20px;
+      bottom: 20px; }
+    .vis .scatterLegend .quelle {
+      bottom: 20px;
+      left: 20px;
+      position: absolute;
+      font-size: 10px;
+      color: #797979; }
+      .vis .scatterLegend .quelle a {
+        text-decoration: none;
+        color: #797979; }
+        .vis .scatterLegend .quelle a:hover {
+          color: #000; }
+  .vis .footer {
+    font-size: 12px;
+    padding: 10px;
+    background: white;
+    clear: left;
+    bottom: 10px;
+    left: 10px;
+    position: absolute;
+    z-index: 100;
+    width: 95%;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+    .mq-mobile .vis .footer {
+      box-shadow: none;
+      background: rgba(255, 255, 255, 0.69);
+      bottom: 5px;
+      text-shadow: 0px 0px 3px white, 0px 0px 3px white, 0px 0px 3px white, 0px 0px 7px white, 0px 0px 7px white, 0px 0px 7px white, 0px 0px 7px white,  0px 0px 3px white; }
+      .mq-mobile .vis .footer .description {
+        width: 70%; }
+      .mq-mobile .vis .footer .legend .item:nth-child(2) {
+        display: none; }
+      .mq-mobile .vis .footer .legend .item:nth-child(4) {
+        display: none; }
+      .mq-mobile .vis .footer .legend .item:nth-child(6) {
+        display: none; }
+      .mq-mobile .vis .footer .legend .item:nth-child(8) {
+        display: none; }
+    .vis .footer .label {
+      float: left;
+      padding-top: 2px; }
+    .vis .footer .quelle {
+      clear: left;
+      float: left;
+      font-size: 10px;
+      color: #797979;
+      padding-top: 2px; }
+      .vis .footer .quelle a {
+        text-decoration: none;
+        color: #797979; }
+        .vis .footer .quelle a:hover {
+          color: #000; }
+    .vis .footer .description {
+      float: left;
+      width: 60%; }
+    .vis .footer .legend {
+      float: right;
+      font-size: 10px;
+      position: relative;
+      cursor: default; }
+      .vis .footer .legend .item {
+        text-align: center;
+        margin-right: 1px;
+        width: 20px;
+        float: left; }
+        .vis .footer .legend .item .color {
+          float: left;
+          height: 16px;
+          width: 20px; }
+        .vis .footer .legend .item .label {
+          position: relative;
+          float: left;
+          text-align: center;
+          width: 20px;
+          padding-top: 3px;
+          left: -10px; }

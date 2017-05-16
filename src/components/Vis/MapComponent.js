@@ -5,7 +5,7 @@ import d3 from 'd3';
 import d3_projection from './libs/d3.projection.js';
 import ReactDom from 'react-dom';
 import utils from './VisUtils.js'
-import styles from './globe.scss';
+import styles from './globe.css';
 // import cssModules from 'react-css-modules';
 import classnames from 'classnames';
 import Dataset from 'logic/Dataset.js'

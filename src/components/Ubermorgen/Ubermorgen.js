@@ -4,7 +4,7 @@ import { googleLogger } from '../../logic/logging';
 import Vis from '../Vis/VisWrapper';
 import Questionnaire from '../Questionnaire/Questionnaire';
 import questionnaires from 'data/questionnaires/index';
-import styles from './Ubermorgen.scss';
+import styles from './Ubermorgen.css';
 import store from 'store';
 
 export default class UbermorgenApp extends React.Component {

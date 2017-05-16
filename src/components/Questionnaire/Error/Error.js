@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import styles from './Error.scss';
+import styles from './Error.css';
 
 export default function (props) {
   return (

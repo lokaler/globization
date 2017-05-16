@@ -5,7 +5,7 @@ import Footer from './Footer/Footer';
 // import ShadowScrollbars from './ShadowScrollbars';
 import Error from './Error/Error';
 import translate from 'logic/translate';
-import styles from './Questionnaire.scss';
+import styles from './Questionnaire.css';
 // import d3 from 'd3';
 // import renderIf from 'render-if';
 

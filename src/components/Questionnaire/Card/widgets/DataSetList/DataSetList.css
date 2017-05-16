@@ -1,0 +1,28 @@
+:local(.component) {
+  float: left;
+  width: 100%;
+  margin-top: 1em; }
+  :local(.component) ul {
+    margin: 0;
+    padding: 0; }
+    :local(.component) ul li {
+      padding: 8px 10px 8px 10px;
+      cursor: pointer;
+      background: #EEE;
+      list-style: none;
+      margin-bottom: 5px;
+      border-radius: 2px;
+      color: #1D1D1D; }
+      :local(.component) ul li.active {
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+        background: #FDAE6B;
+        color: #FFF; }
+        :local(.component) ul li.active .info {
+          color: #FFF;
+          opacity: 1; }
+      :local(.component) ul li:hover {
+        background: #FDAE6B;
+        color: #FFF; }
+      :local(.component) ul li .info {
+        float: right;
+        opacity: 0; }
