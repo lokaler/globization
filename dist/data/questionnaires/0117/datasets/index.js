@@ -5,11 +5,11 @@ export default [
     "key": "grundschule",
     "name": {
       "de": "Grundschule",
-      "en": ""
+      "en": "Primary school"
     },
     "description": {
       "de": "Anteil der Mädchen, die die Grundschule abschließen (i.d.R. 2014) [in Prozent], (vorzeitige Einschulungen können zu Anteilen von mehr als 100 % führen)",
-      "en": ""
+      "en": "Share of girls who complete primary school (most data from 2014) [as a percentage], (entering into school early can lead to shares of greater than 100%)"
     },
     "quelle": "UNESCO",
     "link": "http://data.uis.unesco.org/index.aspx?queryid=160",
@@ -39,11 +39,11 @@ export default [
     "key": "wahlrecht",
     "name": {
       "de": "Frauenwahlrecht",
-      "en": ""
+      "en": "Women's right to vote"
     },
     "description": {
       "de": "Jahre, seit dem Frauen auf nationaler Ebene das gleiche aktive Wahlrecht wie Männer haben",
-      "en": ""
+      "en": "Years that have passed since women were granted the same voting rights as men at the national level"
     },
     "quelle": "Wikipedia",
     "link": "https://en.wikipedia.org/wiki/Women%27s_suffrage",
@@ -71,11 +71,11 @@ export default [
     "key": "vorstaende",
     "name": {
       "de": "Frauenanteil",
-      "en": ""
+      "en": "Proportion of women"
     },
     "description": {
       "de": "Frauenanteil in Vorständen und Aufsichtsräten (2015) [in Prozent]",
-      "en": ""
+      "en": "Share of women on management and supervisory boards (2015) [as a percentage]"
     },
     "quelle": "Credit Suisse Research",
     "link": "http://publications.credit-suisse.com/tasks/render/file/index.cfm?fileid=5A7755E1-EFDD-1973-A0B5C54AFF3FB0AE",
@@ -103,11 +103,11 @@ export default [
     "key": "fuehrungspos",
     "name": {
       "de": "Führungskräfte",
-      "en": ""
+      "en": "Management"
     },
     "description": {
       "de": "Frauenanteil unter Führungskräften, Akademikern und Technikern (2015) [in Prozent]",
-      "en": ""
+      "en": "Share of women among managers, academics and engineers (2015) [as a percentage]"
     },
     "quelle": "ILO",
     "link": "http://www.ilo.org/ilostat/faces/oracle/webcenter/portalapp/pagehierarchy/Page3.jspx?MBI_ID=12",
@@ -135,11 +135,11 @@ export default [
     "key": "muettersterb",
     "name": {
       "de": "Müttersterblickkeit",
-      "en": "Wealth Top 10%"
+      "en": "Maternal mortality"
     },
     "description": {
       "de": "Zahl der Frauen, die vor, während oder in den ersten sechs Wochen nach der Geburt sterben (2015) [je 100.000 Geburten]",
-      "en": ""
+      "en": "The number of women who die before, during or in the first six weeks after giving birth (2015) [per 100,000 births]"
     },
     "quelle": "WHO",
     "link": "http://apps.who.int/gho/data/node.main.MATMORT?lang=en",
@@ -167,11 +167,11 @@ export default [
  "key": "lohngefaelle",
  "name": {
    "de": "Lohngefälle",
-   "en": ""
+   "en": "Pay gap"
  },
  "description": {
    "de": "Unbereinigter Gender Pay Gap (i.d.R. 2015) [in Prozent]",
-   "en": "Percent share of total wealth held by the top 10 percent."
+   "en": "Gender pay gap in unadjusted form (most data from 2015) [as a percentage]"
  },
  "quelle": "Eurostat",
  "link": "http://ec.europa.eu/eurostat/tgm/table.do?tab=table&init=1&plugin=1&language=en&pcode=tsdsc340",
@@ -199,11 +199,11 @@ export default [
 "key": "regierungsposten",
 "name": {
  "de": "Kabinettsposten",
- "en": ""
+ "en": "Cabinet posts"
 },
 "description": {
  "de": "Frauenanteil an Kabinettsposten (2016) [in mind. … Prozent]",
- "en": ""
+ "en": "Share of women in government cabinet posts (2016) [minimum percentage]"
 },
 "quelle": "WomanStats",
 "link": "http://www.womanstats.org/new/",

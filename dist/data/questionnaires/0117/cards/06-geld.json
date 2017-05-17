@@ -13,11 +13,11 @@
           "**Wie hoch ist das Lohngefälle wohl in Deutschland?**"
         ],
         "en": [
-          " # ",
+          " # Less Money in the Wallet",
           "",
+          "In many countries, women earn far less than men. The unadjusted gender pay gap translates this inequality into numbers: On average in Europe, women earn 16 percent less.",
           "",
-          "",
-          "****"
+          "**How big is the pay gap in Germany?**"
         ]
       }
     },{
@@ -58,7 +58,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate. After submitting your choice, you can also see how other readers answered."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
@@ -67,7 +67,7 @@
               "Nein, in Deutschland verdienen Frauen sogar 22 Prozent weniger als Männer. Dieser unbereinigte Wert berücksichtigt alle Löhne. Es gibt auch einen bereinigten Wert, der Frauen und Männer in gleichen Positionen und mit vergleichbaren Qualifikationen vergleicht. Doch selbst so ergibt sich noch immer ein Unterschied von sechs Prozent. Ihr getippter Wert entspricht etwa dem unbereinigten Gender Pay Gap in **{{ PayGapCountry }}**. "
             ],
             "en": [
-              ""
+              "No, in Germany women earn 22 percent less than men. This unadjusted number factors in all salaries. There is also an adjusted value that compares women and men who have equal positions and similar qualifications. But even there, the difference is 6 percent. The value you selected describes the unadjusted pay gap in **{{ PayGapCountry }}**."
             ]
           },
           "Antwort_PayGap2": {
@@ -75,7 +75,7 @@
               "Ja, Frauen verdienen in Deutschland 22 Prozent weniger als Männer. Dieser unbereinigte Wert berücksichtigt alle Löhne. Es gibt auch einen bereinigten Wert, der Frauen und Männer in gleichen Positionen und mit vergleichbaren Qualifikationen vergleicht. Doch selbst so ergibt sich noch immer ein Unterschied von sechs Prozent."
             ],
             "en": [
-              ""
+              "Yes, women in Germany earn 22 percent less than men. This unadjusted number factors in all salaries. There is also an adjusted value that compares women and men who have equal positions and similar qualifications. But even there, the difference is 6 percent."
             ]
           },
           "Antwort_PayGap3": {
@@ -83,7 +83,7 @@
               "Nein, in Deutschland verdienen Frauen 22 Prozent weniger als Männer. Dieser unbereinigte Wert berücksichtigt alle Löhne. Es gibt auch einen bereinigten Wert, der Frauen und Männer in gleichen Positionen und mit vergleichbaren Qualifikationen vergleicht. Doch selbst so ergibt sich noch immer ein Unterschied von sechs Prozent. Ihr getippter Wert entspricht etwa dem unbereinigten Gender Pay Gap in Estland."
             ],
             "en": [
-              "."
+              "No, in Germany women earn 22 percent less than men. This unadjusted number factors in all salaries. There is also an adjusted value that compares women and men who have equal positions and similar qualifications. But even there, the difference is 6 percent. The value you selected describes the unadjusted gender pay gap in Estonia."
             ]
           },
           "Antwort_PayGap4": {
@@ -91,7 +91,7 @@
               "Nein, ein so hohes Lohngefälle gibt es in Europa nirgends. In Deutschland beträgt der unbereinigte Gender Pay Gap 22 Prozent. Er berücksichtigt alle Löhne. Es gibt auch einen bereinigten Wert, der Frauen und Männer in gleichen Positionen und mit vergleichbaren Qualifikationen vergleicht. Doch selbst so ergibt sich noch immer ein Unterschied von sechs Prozent."
             ],
             "en": [
-              "."
+              "No, such a big pay gap doesn't exist anywhere in Europe. In Germany, the unadjusted pay gap is 22 percent. There is also an adjusted value that compares women and men who have equal positions and similar qualifications. But even there, the difference is 6 percent."
             ]
           }
         }

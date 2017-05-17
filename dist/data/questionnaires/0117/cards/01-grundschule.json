@@ -13,11 +13,11 @@
           "**Was glauben Sie, in wie vielen Ländern schließt mehr als jedes dritte Mädchen noch nicht mal die Grundschule ab?**"
         ],
         "en": [
-          " # ",
+          " # It Begins in School",
           "",
+          "Education provides the foundations for a life of self-determination. But in many countries, it's not the norm for children to attend primary school – especially girls.",
           "",
-          "",
-          "****"
+          "**What do you think? In how many countries do one-third of girls not finish primary school?**"
         ]
       }
     },{
@@ -25,7 +25,7 @@
         "key": "sliderPrimarySchool",
         "type": "slider",
         "options": {
-          "unit": " Länder",
+          "unit": "",
           "min": 2,
           "value": 89,
           "max": 178,
@@ -57,7 +57,7 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate. After submitting your choice, you can also see how other readers answered."]          },
           "allAnswered": {
             "de": [""], "en": [""]
           },
@@ -66,7 +66,7 @@
               "Nein, mehr! In 26 Ländern hat mehr als jedes dritte Mädchen keine abgeschlossene Grundschulausbildung. Bei Jungs ist das übrigens in 19 Ländern so. Am schlimmsten ist die Situation in einigen afrikanischen Ländern, etwa dem Südsudan, dem Tschad und der Zentralafrikanischen Republik. Hier hinken die Mädchen den Jungs auch besonders weit hinterher."
             ],
             "en": [
-              ""
+              "No, it's more! In 26 countries, more than a third of girls have not completed a primary school education. For boys, this is true in 19 countries. Several African countries, like South Sudan, Chad and the Central African Republic, have the worst situation and girls lag especially far behind boys."
             ]
           },
           "Antwort_PrimarySchool2": {
@@ -74,7 +74,7 @@
               "Ja, in 26 Ländern hat mehr als jedes dritte Mädchen keine abgeschlossene Grundschulausbildung. Bei Jungs ist das übrigens in 19 Ländern so. Am schlimmsten ist die Situation in einigen afrikanischen Ländern, etwa dem Südsudan, dem Tschad und der Zentralafrikanischen Republik. Hier hinken die Mädchen den Jungs auch besonders weit hinterher."
             ],
             "en": [
-              ""
+              "Yes, in 26 countries, more than a third of girls have not completed a primary school education. For boys, this is true in 19 countries. Several African countries, like South Sudan, Chad and the Central African Republic, have the worst situation and girls lag especially far behind boys."
             ]
           },
           "Antwort_PrimarySchool3": {
@@ -82,7 +82,7 @@
               "Es sind weniger: In 26 Ländern hat mehr als jedes dritte Mädchen keine abgeschlossene Grundschulausbildung. Bei Jungs ist das übrigens in 19 Ländern so. Am schlimmsten ist die Situation in einigen afrikanischen Ländern, etwa dem Südsudan, dem Tschad und der Zentralafrikanischen Republik. Hier hinken die Mädchen den Jungs auch besonders weit hinterher."
             ],
             "en": [
-              "."
+              "It's less: In 26 countries, more than a third of girls have not completed a primary school education. For boys, this is true in 19 countries. Several African countries, like South Sudan, Chad and the Central African Republic, have the worst situation and girls lag especially far behind boys."
             ]
           }
         }
