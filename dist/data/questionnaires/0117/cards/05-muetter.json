@@ -25,7 +25,7 @@
         "key": "sliderMortality",
         "type": "slider",
         "options": {
-          "unit": "Frauen",
+          "unit": "",
           "min": 100,
           "value": 1000,
           "max": 2000,

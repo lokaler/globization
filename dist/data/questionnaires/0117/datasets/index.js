@@ -107,7 +107,7 @@ export default [
     },
     "description": {
       "de": "Frauenanteil unter Führungskräften, Akademikern und Technikern (2015) [in Prozent]",
-      "en": "Beschriftung: Share of women among managers, academics and engineers (2015) [as a percentage]"
+      "en": "Share of women among managers, academics and engineers (2015) [as a percentage]"
     },
     "quelle": "ILO",
     "link": "http://www.ilo.org/ilostat/faces/oracle/webcenter/portalapp/pagehierarchy/Page3.jspx?MBI_ID=12",

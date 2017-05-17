@@ -25,7 +25,7 @@
         "key": "sliderCabinetsPosts",
         "type": "slider",
         "options": {
-          "unit": "Länder",
+          "unit": "",
           "min": 10,
           "value": 80,
           "max": 175,
