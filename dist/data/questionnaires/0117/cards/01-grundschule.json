@@ -25,7 +25,7 @@
         "key": "sliderPrimarySchool",
         "type": "slider",
         "options": {
-          "unit": " Länder",
+          "unit": "",
           "min": 2,
           "value": 89,
           "max": 178,
