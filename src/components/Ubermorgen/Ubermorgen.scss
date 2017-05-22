@@ -12,14 +12,10 @@
   background: #FFF;
   position: relative;
   overflow: hidden;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+
   width: 100%;
 
-  border-bottom: 2px solid #EEE;
-  border-top: 2px solid #EEE;
+
   min-height: 500px;
 
   .mq-mobile {
@@ -46,6 +42,7 @@
 
   .left {
     width: 100%;
+    height: 100%;
     position: absolute;
   }
 

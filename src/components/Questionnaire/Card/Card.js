@@ -11,6 +11,7 @@ import RoundChooser from './widgets/RoundList/RoundList';
 import DatasetMenu from './widgets/DataSetList/DataSetList';
 import Logger from './widgets/logging';
 import { googleLogger } from 'logic/logging';
+import Footer from '../Footer/Footer';
 
 const widgets = {
   text: Text,
@@ -96,7 +97,10 @@ export default class Questionnaire extends React.Component {
         { process.env.NODE_ENV === "development" && false &&
           <Debug { ...this.props }/>
         }
-        { this.createWidgets(questions) }
+        { 
+          this.createWidgets(questions)
+        }
+        <Footer { ...this.props }/>
       </div>
     );
   }

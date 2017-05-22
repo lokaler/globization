@@ -1,76 +1,74 @@
 import React, { PropTypes } from 'react';
 import { sponLogger } from 'logic/logging';
-import { logbuch } from 'logic/logbuch';
-import { fromPairs } from 'lodash';
+import { createLogbuchEntry } from 'logic/logbuch';
 import styles from './Footer.css';
 import { googleLogger } from 'logic/logging';
-
+import translate from 'logic/translate';
+import SubmitButton from './SubmitButton'
 
 export default class Footer extends React.Component {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
-    label: PropTypes.string
   }
 
   /* eslint-disable */
 
-  getClickHandler(cardIndex) {
+  handleNextClick = () => {
     const { questions, actions } = this.props;
-    if (cardIndex !== questions.activeCard) {
-      return () => {
-        if (
-          cardIndex < questions.cards.length
-          && cardIndex > -1
-        ) {
-          this.sendLogbuch();
-        }
-        else {
-          cardIndex = 0;
-        }
-        googleLogger('card', cardIndex);
-        sponLogger();
-        const datasetId = questions.cards[cardIndex].dataset;
-        if(questions.hideCard){
-          actions.setCard(cardIndex, datasetId);
-        } else {
-          actions.hideCard();
-        }
-      };
+    let cardIndex = questions.activeCard + 1;
+    
+    if (cardIndex < questions.cards.length && cardIndex > -1) {
+      createLogbuchEntry(questions);
+    } else { 
+      cardIndex = 0;
+    }
+
+    googleLogger('card', cardIndex);
+    sponLogger();
+
+    const datasetId = questions.cards[cardIndex].dataset;
+    if(cardIndex == 1 || questions.hideCard){
+      actions.setCard(cardIndex, datasetId);
+    } else {
+      actions.hideCard();
     }
   }
 
-  sendLogbuch(){
-    // console.log(this.props);
-
-    const { questions } = this.props;
-    const card = questions.cards[questions.activeCard];
-
-    const inputs = card.content
-      .filter(widget => 'input' in widget)
-      .map(widget => widget.input)
-      .map(widget => ([ widget.key, questions.inputValues[widget.key] ]))
-
-    // console.log(inputs, fromPairs(inputs));
-
-    logbuch(fromPairs(inputs));
-  }
-
-
-
   render() {
-    const { questions, label } = this.props;
-    const showBtn = (questions.activeCard < questions.cards.length) && (questions.activeCard !== -1);
-    const card = questions.cards[questions.activeCard]
+    const { questions } = this.props;
+    const activeCard = questions.activeCard;
+    const showBtn = activeCard < questions.cards.length;
+    const card = questions.cards[activeCard]
     const cardSubmitted = card.key in questions.submittedCards;
+
+    const firstCard = activeCard === 0;
+    const lastCard = activeCard === questions.cards.length - 2;
+    const veryLastCard = activeCard === questions.cards.length - 1;
+    let label = 'next';
+
+    if (lastCard) {
+      label = questions.options.lastButtonLabel || 'last';
+    } else if (veryLastCard) {
+      label = 'close';
+    } else if (firstCard) {
+      label = 'lets go';
+    }
+
+    if(!showBtn){
+      return null;
+    }
 
     return (
       <div className={ styles.footer }>
-        { showBtn && cardSubmitted &&
-            <div className={ styles.btn } onClick={ this.getClickHandler(questions.activeCard + 1) }>
-              <div>{ label }</div>
-            </div>
+        { !cardSubmitted && !firstCard &&
+          <SubmitButton { ...this.props } card={ card } />
+        }
+        { (cardSubmitted || firstCard) &&
+          <div className={ styles.btn } onClick={ this.handleNextClick }>
+            <div>{ translate(label) }</div>
+          </div>
         }
       </div>
     );

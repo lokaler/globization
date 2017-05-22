@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import Card from './Card/Card';
-import Footer from './Footer/Footer';
+// import Footer from './Footer/Footer';
 // import ShadowScrollbars from './ShadowScrollbars';
 import Error from './Error/Error';
 import translate from 'logic/translate';
@@ -58,40 +58,19 @@ export default class Questionnaire extends React.Component {
 
   render() {
     const { questions } = this.props;
-    
+    const { hideCard } = questions;
+
     if (questions.validationError) {
       return <Error>{ questions.validationError.message }</Error>;
     }
 
-    if (questions.cards.length === 0) {
+    if (hideCard || questions.cards.length === 0) {
       return <div />;
     }
 
-    let nextBtnLabel = 'next';
-
-    const activeCard = questions.activeCard;
-    const lastCard = activeCard === questions.cards.length - 2;
-    const veryLastCard = activeCard === questions.cards.length - 1;
-
-    if (lastCard) {
-      const label = questions.options.lastButtonLabel;
-      nextBtnLabel = label || 'last';
-    } else if (veryLastCard) {
-      nextBtnLabel = 'close';
-    }
-
-
     return (
       <div ref="card" className={ styles.questions } >
-        { !questions.hideCard &&
-          <Card { ...this.props }/>
-        }
-        { questions.activeCard !== 0 &&
-          <Footer
-            label={ translate(nextBtnLabel) }
-            { ...this.props }
-          />
-        }
+        <Card { ...this.props }/>
       </div>
     );
   }

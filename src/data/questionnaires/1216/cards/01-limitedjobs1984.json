@@ -38,12 +38,6 @@
       }
     },
     {
-      "submit": {
-        "key": "AmountLimitedJobsBackthen"
-      }
-    },
-
-    {
       "answer": {
         "datasets": "limitedcontracts1984",
         "answerKey": [

@@ -12,6 +12,7 @@
     "node-sass-chokidar": "^0.0.1",
     "normalize.css": "^7.0.0",
     "npm-run-all": "^4.0.2",
+    "prop-types": "^15.5.10",
     "rc-slider": "^7.0.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

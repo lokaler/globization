@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { debounce } from 'lodash';
 import { googleLogger } from '../../logic/logging';
 import Vis from '../Vis/VisWrapper';
@@ -41,7 +42,7 @@ export default class UbermorgenApp extends React.Component {
       actions.changeVis({ type: state.app.vis });
     }
     this.configureHotReload();
-    // window.addEventListener('resize', this.handleResize.bind(this));
+    window.addEventListener('resize', this.handleResize.bind(this));
     // window.parent.addEventListener('scroll', this.handleScroll.bind(this));
     // this.handleResize();
     googleLogger('loaded', 1);
@@ -76,8 +77,9 @@ export default class UbermorgenApp extends React.Component {
   }
 
   handleResize() {
-    const bbox = document.body.getBoundingClientRect();
-    this.props.actions.setWindowSize({ width: bbox.width, height: bbox.height });
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    this.props.actions.setWindowSize({ width, height });
  }
 
   // handleScroll() {
