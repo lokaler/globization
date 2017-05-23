@@ -1,8 +1,9 @@
 :local(.component) {
   width: 100%;
-  height: 30px;
+  height: 45px;
   bottom: -29px;
-  position: relative; }
+  position: relative;
+  padding-top: 15px; }
   :local(.component) .bin {
     background-color: #cdded3;
     float: left;

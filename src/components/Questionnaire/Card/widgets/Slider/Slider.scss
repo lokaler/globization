@@ -2,7 +2,6 @@
 
   // composes: widget from '../widgets.css';
   // import '../widgets.css'
-  float: left;
   width: 100%;
   
   .rc-slider-track {
@@ -30,15 +29,18 @@
   }
 
   .marks {
-    padding-top: 5px;
     width: 100%;
-    float: left;
     font-size: 10px;
     .min {
       float: left;
     }
     .max {
       float: right;
+    }
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
     }
   }
 

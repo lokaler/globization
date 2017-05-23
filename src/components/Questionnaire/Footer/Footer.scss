@@ -6,12 +6,16 @@
   }
 }
 
+:local(.showcard) {
+  background: #EEE;
+  padding: 20px;
+}
+
 :local(.footer) {
 
   // position: absolute;
   // bottom:0px;
   margin-top: 10px;
-  float: left;
   width: 100%;
 
   :local(.btn){
@@ -23,7 +27,6 @@
     border-radius: 2px;
     text-transform: uppercase;
     cursor: pointer;
-    float: left;
     width:100%;
     box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);
 
