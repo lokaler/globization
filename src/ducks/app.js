@@ -9,8 +9,8 @@ const SET_FULLSCREEN = 'SET_FULLSCREEN';
 
 const initialState = {
   language: 'de',
-  width: 860,
-  height: 500,
+  width: 640,
+  height: 650,
   fullscreen: false,
   mobile: false,
   mounted: false
@@ -49,9 +49,6 @@ export const actions = {
     // const mobile = !!parseInt(q('mobile') || '0', 10);
     const round = q('round') || null;
     const card = parseInt(q('card'), 10) || 0;
-    // const bbox = d3.select('body').node().getBoundingClientRect();
-    // const width = bbox.width;
-    // const mobile = width < 600;
     const vis = q('vis') || null;
     const dataset = q('dataset') || null;
     const country = q('country') || null;
