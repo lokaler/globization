@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { every } from 'lodash';
 import translate from 'logic/translate';
 import { googleLogger } from 'logic/logging';
+import styles from './Footer.css';
 
 export default class SubmitButton extends React.Component {
 
@@ -38,7 +39,9 @@ export default class SubmitButton extends React.Component {
 
     if (inputsEntered) {
       return (
-        <button onClick={ this.onClick }>{ translate('submit') }</button>
+        <div className={ styles.btn } onClick={ this.onClick }>
+          <div>{ translate('submit') }</div>
+        </div>
       );
     }
 
