@@ -6,7 +6,6 @@ import MapComponent from './MapComponent';
 import ScatterComponent from './ScatterComponent';
 import TooltipComponent from './TooltipComponent';
 import utils from './VisUtils';
-// import cssModules from 'react-css-modules';
 import styles from './vis.css';
 import classnames from 'classnames';
 import colorbrewer from 'colorbrewer'
@@ -14,9 +13,6 @@ import MapLegendComponent from './MapLegendComponent.js';
 import ScatterLegendComponent from './ScatterLegendComponent.js';
 import LinkedDatasetMenu from './LinkedDatasetMenu/LinkedDatasetMenu';
 import { sponLogger } from 'logic/logging';
-
-
-// @cssModules(styles)
 
 export default class Globe extends React.Component {
 
@@ -92,12 +88,7 @@ export default class Globe extends React.Component {
     const changeGlobe = this.changeType.bind(this, 'globe');
     const changeMap = this.changeType.bind(this, 'map');
     const changeScatter = this.changeType.bind(this, 'scatter');
-    const random = this.random.bind(this);
-    const { app } = this.props;
-
-    const height = app.height;
-    const width = app.width;
-    const mobile = app.mobile;
+    const { width, height, mobile } = this.props.app;
 
     return (
       <div className="vis">

@@ -347,11 +347,11 @@ export default class GlobeComponent extends React.Component {
 
     const activeGeometry = <path className="activeGeometry" d={this.path(this.activeGeometry)}/>;
     const graticule = <path className="graticule" key="graticule" d={ this.graticulePath(this.graticule()) } />;
-
+    const { width, height } = this.props;
 
     return (
       <div>
-        <svg className='globe' ref='globeSVG' width={ this.props.width } height={ this.props.height }>
+        <svg className='globe' ref='globeSVG' width={ width } height={ height }>
           <defs>
             { utils.svgStripePattern }
           </defs>
