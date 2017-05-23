@@ -39,10 +39,8 @@
     },
     {
       "answer": {
-        "datasets": "limitedcontracts1984",
         "answerKey": [
-          "i.sliderLimitedJobsBackthen && !i.AmountLimitedJobsBackthen",
-          "!i.AmountLimitedJobsBackthen && 'notSubmitted'",
+          "!i.sliderLimitedJobsBackthen && 'notSubmitted'",
           "f.setDataset('limitedcontracts1984')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
@@ -54,9 +52,8 @@
         },
         "templates": {
           "notSubmitted": {
-            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate."]          },
-          "allAnswered": {
-            "de": [""], "en": [""]
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."],
+            "en": ["Use the slider to enter your estimate."]
           },
           "Antwort_LimitedJobsBackthen1": {
             "de": [

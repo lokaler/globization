@@ -30,16 +30,9 @@
       }
     },
     {
-      "submit": {
-        "key": "AmountLimitedContractsSubmitted"
-      }
-    },
-
-    {
       "answer": {
         "answerKey": [
-          "i.sliderLimitedContracts && !i.AmountLimitedContractsSubmitted",
-          "!i.AmountLimitedContractsSubmitted && 'notSubmitted'",
+          "!i.sliderLimitedContracts && 'notSubmitted'",
           "f.setDataset('limitedcontracts2014')",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
