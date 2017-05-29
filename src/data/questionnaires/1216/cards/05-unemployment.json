@@ -33,11 +33,6 @@
       }
     },
     {
-      "submit": {
-        "key": "ChoiceUnemploymentSubmitted"
-      }
-    },
-    {
       "answer": {
         "answerKey": [
           "!i.ChoiceUnemployment && 'notSubmitted'",
