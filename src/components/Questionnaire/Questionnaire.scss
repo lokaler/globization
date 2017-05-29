@@ -2,35 +2,38 @@
 
   line-height: 1.4em;
   font-size: 1rem;
+  background: #FFF;
 
-  .card {
-     background: #FFF;
-
-    .mq-desktop & {
-      width: 80%;
-      margin: 10%;
-      border-radius: 20px;
-      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-    }
-
-    .widget {
-      &:first-child {
-        margin-top: 0;
-      }
-      margin-top:1em;
-      width: 100%;
-
-      .share {
-        clear: both;
-        padding-bottom: 15px;
-      }
-    }
-
+  .mq-desktop & {
+    width: 80%;
+    margin: 10%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px;
   }
 
-  p {
-    margin-bottom: 30px;
+  > div {
+    position: relative;
+  }
+
+  .widget {
+    &:first-child {
+      margin-top: 0;
+    }
+    margin-top:1em;
+    width: 100%;
+
+    .share {
+      clear: both;
+      padding-bottom: 15px;
+    }
+  }
+
+  .header {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    color: #b7b7b7;
   }
 
   a {
@@ -70,7 +73,6 @@
     margin-top: -10px;
     font-size: 1em;
     font-weight: bold;
-    text-align: right;
     line-height: 1.2em;
     padding-bottom: 6px;
     margin-bottom: 27px;

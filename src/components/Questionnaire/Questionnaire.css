@@ -1,24 +1,28 @@
 :local(.questions) {
   line-height: 1.4em;
-  font-size: 1rem; }
-  :local(.questions) .card {
-    background: #FFF; }
-    .mq-desktop :local(.questions) .card {
-      width: 80%;
-      margin: 10%;
-      border-radius: 20px;
-      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-      padding: 30px; }
-    :local(.questions) .card .widget {
-      margin-top: 1em;
-      width: 100%; }
-      :local(.questions) .card .widget:first-child {
-        margin-top: 0; }
-      :local(.questions) .card .widget .share {
-        clear: both;
-        padding-bottom: 15px; }
-  :local(.questions) p {
-    margin-bottom: 30px; }
+  font-size: 1rem;
+  background: #FFF; }
+  .mq-desktop :local(.questions) {
+    width: 80%;
+    margin: 10%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px; }
+  :local(.questions) > div {
+    position: relative; }
+  :local(.questions) .widget {
+    margin-top: 1em;
+    width: 100%; }
+    :local(.questions) .widget:first-child {
+      margin-top: 0; }
+    :local(.questions) .widget .share {
+      clear: both;
+      padding-bottom: 15px; }
+  :local(.questions) .header {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    color: #b7b7b7; }
   :local(.questions) a {
     text-decoration: none;
     color: #A74405; }
@@ -51,7 +55,6 @@
     margin-top: -10px;
     font-size: 1em;
     font-weight: bold;
-    text-align: right;
     line-height: 1.2em;
     padding-bottom: 6px;
     margin-bottom: 27px;
