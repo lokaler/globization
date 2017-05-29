@@ -12,6 +12,7 @@ const SUBMIT_CARD = 'SUBMIT_CARD';
 const UPDATE_USERINPUT = 'UPDATE_USERINPUT';
 const SET_DATASET = 'SET_DATASET';
 const SET_DEBUG_EXPRESSIONS = 'SET_DEBUG_EXPRESSIONS';
+const SET_DATASETFORCARD = 'SET_DATASETFORCARD';
 
 
 const FETCH_HISTOGRAM_DATA = 'FETCH_HISTOGRAM_DATA';
@@ -21,12 +22,17 @@ const initialState = {
   validationError: null,
   questionnaires: {},
   activeQuestionnaireId: '1216',
-  activeCard: 0,
+  activeCard: null,
   inputValues: {},
   cards: [],
   submittedCards: {},
   debugExpressions: false,
-  histograms: null
+  histograms: null,
+  hideCard: false,
+  background: {
+    type: null,
+    source: null
+  }
 };
 
 export function reducer(state = initialState, action) {
@@ -115,10 +121,18 @@ export function reducer(state = initialState, action) {
       };
 
     case SET_CARD:
+      const background = state.cards[action.index].background;
+      let dataset = null;
+      if(['globe', 'map', 'scatterplot'].indexOf(background.type) >= 0){
+        dataset = state.datasets.filter((d) => d.key === background.source)[0];
+      } 
+
       return {
         ...state,
         activeCard: action.index,
-        hideCard: false
+        hideCard: false,
+        dataset,
+        background
       };
 
     case HIDE_CARD:
@@ -134,6 +148,16 @@ export function reducer(state = initialState, action) {
         ...state,
         dataset: newDataSet
       };
+    }
+
+    case SET_DATASETFORCARD: {
+      if (!action.cardId) return state;
+      const datasetId = state.cards[action.cardId].dataset
+      const dataset = state.datasets.filter((d) => d.key === datasetId)[0];
+      return {
+        ...state,
+        dataset
+      }
     }
 
     case SUBMIT_CARD: {
@@ -200,9 +224,9 @@ export const actions = {
 
   hideCard: () => ({ type: HIDE_CARD }),
 
-  setCard(index, datasetId) {
+  setCard(index) {
     return dispatch => {
-      dispatch(setDataSet(datasetId));
+      // dispatch({ type: SET_DATASETFORCARD, index });
       dispatch(visualizationActions.changeVis({ active: null, tooltip: { active: false } }));
       dispatch({ type: SET_CARD, index });
     };

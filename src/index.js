@@ -17,12 +17,12 @@ render(
 if (module.hot) {
   module.hot.accept('./App.js', () => {
     const NewApp = require('./App').default;
-    console.log(store.getState())
+    console.log(store.getState().questions)
     render(
       <Provider store={store}>
         <NewApp />
       </Provider>,
-      document.getElementById('app')
+      document.getElementById('root')
     );
   });
 }
