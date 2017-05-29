@@ -42,21 +42,6 @@ export default class Questionnaire extends React.Component {
     );
   }
 
-  onClick = (evt) => {
-    const handler = this.clickHandlers[evt.target.dataset.onclick];
-    if (handler) {
-      handler(evt);
-    }
-  }
-
-  clickHandlers = { // eslint-disable-line react/sort-comp
-    onStartClick: () => {
-      const dataId = this.props.questions.cards[1].dataset;
-      googleLogger('los');
-      this.props.actions.setCard(1, dataId);
-    }
-  }
-
   getLogger() {
     const { actions, questions } = this.props;
     return new Logger(actions, process.env.NODE_ENV === "development" && questions.debugExpressions);
@@ -93,7 +78,7 @@ export default class Questionnaire extends React.Component {
     this.getLogger().clear();
 
     return (
-      <div className="card" onClick={ this.onClick }>
+      <div className="card">
         { process.env.NODE_ENV === "development" && false &&
           <Debug { ...this.props }/>
         }

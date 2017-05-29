@@ -13,8 +13,7 @@ export default class ShowCardButton extends React.PureComponent {
   onClick = () => {
     const { actions, questions } = this.props;
     const cardIndex = questions.activeCard + 1;
-    const datasetId = questions.cards[cardIndex].dataset;
-    actions.setCard(cardIndex, datasetId);
+    actions.setCard(cardIndex);
   }
 
   render() {

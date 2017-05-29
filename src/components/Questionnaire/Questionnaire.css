@@ -6,7 +6,7 @@
     .mq-desktop :local(.questions) .card {
       width: 80%;
       margin: 10%;
-      border-radius: 10px;
+      border-radius: 20px;
       box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
       padding: 30px; }
     :local(.questions) .card .widget {
@@ -17,6 +17,8 @@
       :local(.questions) .card .widget .share {
         clear: both;
         padding-bottom: 15px; }
+  :local(.questions) p {
+    margin-bottom: 30px; }
   :local(.questions) a {
     text-decoration: none;
     color: #A74405; }
@@ -46,10 +48,17 @@
       -ms-animation: none;
       animation: none; }
   :local(.questions) h1 {
-    margin-top: 0;
+    margin-top: -10px;
     font-size: 1em;
     font-weight: bold;
-    line-height: 1.2em; }
+    text-align: right;
+    line-height: 1.2em;
+    padding-bottom: 6px;
+    margin-bottom: 27px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #b7b7b7;
+    border-bottom: 1px solid #ececec; }
   :local(.questions) button {
     margin-top: 20px;
     width: 100%;

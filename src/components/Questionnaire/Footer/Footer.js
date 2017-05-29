@@ -28,9 +28,8 @@ export default class Footer extends React.Component {
     googleLogger('card', cardIndex);
     sponLogger();
 
-    const datasetId = questions.cards[cardIndex].dataset;
     if(cardIndex == 1 || questions.hideCard){
-      actions.setCard(cardIndex, datasetId);
+      actions.setCard(cardIndex);
     } else {
       actions.hideCard();
     }
