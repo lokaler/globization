@@ -1,35 +1,19 @@
 /* eslint-disable */
 
 import React, { PropTypes } from 'react';
-// import utils from './VisUtils';
-// import cssModules from 'react-css-modules';
 import styles from './vis.css';
 import translate from '../../logic/translate';
 
-// @cssModules(styles)
-
-export default class TooltipComponent extends React.Component {
+export default class TooltipComponent extends React.PureComponent {
 
   static propTypes = {
-    actions: PropTypes.object.isRequired,
-    vis: PropTypes.object.isRequired
+    tooltip: PropTypes.object.isRequired
   };
 
-  componentDidMount() {
-
-  }
-
-
   render() {
-    // console.log('render tooltip', this.props.vis.tooltip);
-    const { hideCard } = this.props.questions;
-    const { x, y, active, value, iso, unit } = this.props.vis.tooltip;
+    const { x, y, active, value, iso, unit } = this.props.tooltip;
     const name = translate(iso, { isCountryCode: true });
     const slug = value != undefined ? translate(value) + " " + translate(unit) : translate("no data");
-
-    if(!hideCard){
-      return null;
-    }
 
     return (
       <div

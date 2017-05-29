@@ -54,15 +54,6 @@ export default class Globe extends React.Component {
     sponLogger();
   }
 
-  random(){
-    this.props.actions.changeVis({
-      animation: {
-        action: "zoomToCountry",
-        payload: "random"
-      }
-    });
-  }
-
   getActiveClass(name){
     return classnames([ name, this.props.vis.type === name ? "active" : ""]);
   }
@@ -71,7 +62,6 @@ export default class Globe extends React.Component {
     utils.log("render vis");
 
     const dataset = this.props.questions.dataset;
-    const type = this.props.questions.dataset;
 
     const Component = {
       globe: GlobeComponent,
@@ -90,9 +80,10 @@ export default class Globe extends React.Component {
     const changeScatter = this.changeType.bind(this, 'scatter');
     const { width, height, mobile } = this.props.app;
     const { hideCard } = this.props.questions;
+    const disableEvents = !hideCard ? { pointerEvents: 'none' } : { };
 
     return (
-      <div className="vis">
+      <div className="vis" style={ disableEvents }>
         <div>
           { dataset &&
             <Component color={this.color} {...this.props} width={width} height={height} />
@@ -105,7 +96,9 @@ export default class Globe extends React.Component {
           { dataset && dataset.linkedSet && false &&
             <LinkedDatasetMenu {...this.props} />
           }
-          <TooltipComponent {...this.props} />
+          { hideCard && 
+            <TooltipComponent tooltip={this.props.vis.tooltip} />
+          }
           { dataset && dataset.key != "none" && hideCard &&
             <Legend color={this.color} {...this.props} />
           }
