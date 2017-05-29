@@ -13,3 +13,16 @@ render(
   ),
   document.getElementById('root')
 );
+
+if (module.hot) {
+  module.hot.accept('./App.js', () => {
+    const NewApp = require('./App').default;
+    console.log(store.getState())
+    render(
+      <Provider store={store}>
+        <NewApp />
+      </Provider>,
+      document.getElementById('app')
+    );
+  });
+}
