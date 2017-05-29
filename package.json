@@ -1,5 +1,6 @@
 {
-  "name": "globalisation-v2",
+  "name": "globalisation",
+  "homepage": "https://lokaler.github.io/globization",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +10,7 @@
     "d3-format": "^1.2.0",
     "lodash": "^4.17.4",
     "micromustache": "^5.2.0",
+    "mustache": "^2.3.0",
     "node-sass-chokidar": "^0.0.1",
     "normalize.css": "^7.0.0",
     "npm-run-all": "^4.0.2",
@@ -24,7 +26,8 @@
     "underscore.string": "^3.3.4"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "gh-pages": "^1.0.0",
+    "react-scripts": "1.0.7"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
@@ -33,6 +36,8 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
