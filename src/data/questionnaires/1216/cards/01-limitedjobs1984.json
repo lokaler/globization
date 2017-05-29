@@ -1,7 +1,7 @@
 {
   "key": "limitedjobs1984",
   "title": "1. Karte - #limitedjobs1984",
-  "dataset": "meanworking",
+  "dataset": "limitedcontracts1984",
   "transition": {
     "type": "map/globe/scatter/iframe/image",
     "source": "datasetID/URL"
@@ -41,9 +41,6 @@
       "answer": {
         "answerKey": [
           "!i.sliderLimitedJobsBackthen && 'notSubmitted'",
-          "f.setDataset('limitedcontracts1984')",
-          "f.isMobile() && f.setView('map')",
-          "!f.isMobile() && f.setView('globe')",
           "(i.sliderLimitedJobsBackthen < 15 && f.panToCountry('DEU')) && 'Antwort_LimitedJobsBackthen1'",
           "(i.sliderLimitedJobsBackthen >= 15 && f.panToCountry('DEU')) && 'Antwort_LimitedJobsBackthen2'"
         ],

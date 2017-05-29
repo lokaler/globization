@@ -1,7 +1,7 @@
 {
   "key": "child_labour",
   "title": "3. Karte - Kinderarbeit",
-  "dataset": "limitedcontracts2014",
+  "dataset": "childrenlabour",
   "content": [
     {
       "text": {
@@ -34,16 +34,9 @@
       }
     },
     {
-      "submit": {
-        "key": "amountChildLabourSubmitted"
-      }
-    },
-    {
       "answer": {
         "answerKey": [
-          "i.amountChildLabour && !i.amountChildLabourSubmitted",
-          "!i.amountChildLabourSubmitted && 'notSubmitted'",
-          "f.setDataset('childrenlabour')",
+          "!i.amountChildLabour && 'notSubmitted'",
           "f.panToCountry('CMR') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",

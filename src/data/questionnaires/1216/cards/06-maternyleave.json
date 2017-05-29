@@ -1,7 +1,7 @@
 {
   "key": "maternyleave",
   "title": "6. Karte - #Schulzeit",
-  "dataset": "unemployment",
+  "dataset": "maternyleave",
   "content": [
     {
       "text": {
@@ -34,19 +34,9 @@
       }
     },
     {
-      "submit": {
-        "key": "AmountMaternyLeaveSubmitted"
-      }
-    },
-
-    {
       "answer": {
         "answerKey": [
-          "i.sliderMaternyLeave && !i.AmountMaternyLeaveSubmitted",
-          "!i.AmountMaternyLeaveSubmitted && 'notSubmitted'",
-          "f.setDataset('maternyleave')",
-          "f.isMobile() && f.setView('map')",
-          "!f.isMobile() && f.setView('globe')",
+          "!i.sliderMaternyLeave && 'notSubmitted'",
           "(i.sliderMaternyLeave <= 61 && f.panToCountry(f.getISO('maternyleave', i.sliderMaternyLeave))) && 'Antwort_MaternyLeave1'",
           "(i.sliderMaternyLeave >= 62 && i.sliderMaternyLeave <= 76 && f.panToCountry('SWE')) && 'Antwort_MaternyLeave2'",
           "(i.sliderMaternyLeave >= 77 && f.panToCountry('SWE')) && 'Antwort_MaternyLeave3'"

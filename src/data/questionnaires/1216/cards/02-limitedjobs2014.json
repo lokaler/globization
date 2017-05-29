@@ -1,7 +1,7 @@
 {
   "key": "limitedcontracts",
   "title": "2. Karte - #befristet2014",
-  "dataset": "limitedcontracts1984",
+  "dataset": "limitedcontracts2014",
   "content": [
     {
       "text": {
@@ -33,9 +33,6 @@
       "answer": {
         "answerKey": [
           "!i.sliderLimitedContracts && 'notSubmitted'",
-          "f.setDataset('limitedcontracts2014')",
-          "f.isMobile() && f.setView('map')",
-          "!f.isMobile() && f.setView('globe')",
           "(i.sliderLimitedContracts <= 5 && f.panToCountry('DEU')) && 'Answer_LimitedContracts1'",
           "(i.sliderLimitedContracts >= 7 && i.sliderLimitedContracts < 21 && f.panToCountry('DEU')) && 'Answer_LimitedContracts2'",
           "(i.sliderLimitedContracts >= 22 && f.panToCountry(f.getISO('limitedcontracts2014', i.sliderLimitedContracts))) && 'Answer_LimitedContracts3'"

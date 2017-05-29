@@ -1,7 +1,7 @@
 {
   "key": "unemployment",
   "title": "5. Karte - Arbeitslosigkeit",
-  "dataset": "youthunemployment",
+  "dataset": "unemployment",
   "content": [
     {
       "text": {
@@ -37,12 +37,8 @@
     {
       "answer": {
         "answerKey": [
-          "i.ChoiceUnemployment && !i.ChoiceUnemploymentSubmitted",
-          "!i.ChoiceUnemploymentSubmitted && 'notSubmitted'",
-          "f.setDataset('unemployment')",
+          "!i.ChoiceUnemployment && 'notSubmitted'",
           "f.panToCountry('CMR') && false",
-          "f.isMobile() && f.setView('map')",
-          "!f.isMobile() && f.setView('map')",
           "i.ChoiceUnemployment"
         ],
         "answerContext": {},
@@ -50,8 +46,6 @@
           "notSubmitted": {
             "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
           },
-
-
           "ChoiceUnemploymentChoice_1": {
             "de": [
               "Stimmt. Im Schnitt sind junge Menschen häufiger arbeitslos. Die Jugendarbeitslosigkeit zu reduzieren, steht daher weit oben auf der Agenda der Uno-Nachhaltigkeitsziele."

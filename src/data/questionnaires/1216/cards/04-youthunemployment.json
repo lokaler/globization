@@ -1,7 +1,7 @@
 {
   "key": "youthunemployment",
   "title": "4. Karte - Jugendarbeitslosigkeit",
-  "dataset": "childrenlabour",
+  "dataset": "youthunemployment",
   "content": [
     {
       "text": {
@@ -42,11 +42,7 @@
     {
       "answer": {
         "answerKey": [
-          "i.sliderYouthUnemployment && !i.AmountYouthUnemploymentSubmitted",
-          "!i.AmountYouthUnemploymentSubmitted && 'notSubmitted'",
-          "f.setDataset('youthunemployment')",
-          "f.isMobile() && f.setView('map')",
-          "!f.isMobile() && f.setView('globe')",
+          "!i.sliderYouthUnemployment && 'notSubmitted'",
           "(i.sliderYouthUnemployment <= 45 && f.panToCountry(f.getISO('youthunemployment', i.sliderYouthUnemployment))) && 'Antwort_YouthUnemployment1'",
           "(i.sliderYouthUnemployment >= 46 && i.sliderYouthUnemployment <= 61 && f.panToCountry('ESP')) && 'Antwort_YouthUnemployment2'",
           "(i.sliderYouthUnemployment >= 62 && f.panToCountry(f.getISO('youthunemployment', i.sliderYouthUnemployment))) && 'Antwort_YouthUnemployment3'"
