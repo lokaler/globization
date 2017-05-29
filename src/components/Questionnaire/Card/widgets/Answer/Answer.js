@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import ReactMarkdown from 'react-markdown';
-import MicroMustache from 'micromustache';
-// import cssModules from 'react-css-modules';
+// import MicroMustache from 'micromustache';
+import Mustache from 'mustache';
 import { compileExpression } from 'logic/questionnaires/expressions';
 import translate from 'logic/translate';
 import { isUndefined, includes } from 'lodash';
@@ -182,7 +182,7 @@ export default class Answer extends React.Component {
         ctx[key] = `{{ ${ key }: "${ value }" }}`;
       }
     }
-    const answerContent = MicroMustache.render(template, ctx);
+    const answerContent = Mustache.render(template, ctx);
     const className = classNames(
       styles.component,
       answer.className && `answer-${ answer.className }`
