@@ -1,7 +1,10 @@
 {
   "key": "maternyleave",
   "title": "6. Karte - #Schulzeit",
-  "dataset": "maternyleave",
+  "background": {
+    "type": "globe",
+    "source": "maternyleave"
+  },
   "content": [
     {
       "text": {

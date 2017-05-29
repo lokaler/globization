@@ -1,7 +1,10 @@
 {
   "key": "unemployment",
   "title": "5. Karte - Arbeitslosigkeit",
-  "dataset": "unemployment",
+  "background": {
+    "type": "globe",
+    "source": "unemployment"
+  },
   "content": [
     {
       "text": {

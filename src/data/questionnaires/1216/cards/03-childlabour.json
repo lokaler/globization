@@ -1,7 +1,10 @@
 {
   "key": "child_labour",
   "title": "3. Karte - Kinderarbeit",
-  "dataset": "childrenlabour",
+  "background": {
+    "type": "globe",
+    "source": "childrenlabour"
+  },
   "content": [
     {
       "text": {

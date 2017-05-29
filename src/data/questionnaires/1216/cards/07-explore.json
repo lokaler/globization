@@ -1,8 +1,10 @@
 {
   "key": "explore",
   "title": "Explore",
-  "dataset": "none",
-  "view": "globe",
+  "background": {
+    "type": "globe",
+    "source": "none"
+  },
   "content": [
     {
       "text": {
@@ -18,9 +20,6 @@
     },
     {
       "answer": {
-        "answerKey": [
-          "f.setView('globe')"
-        ],
         "answerContext": {
           "twitterShare": "f.shareButtonTwitter('http://www.spiegel.de/ce/article/a-1125297.html', 'Quiz zur Arbeit weltweit: Werden befristete Jobs mehr? #ÜberMorgen')",
           "facebookShare": "f.shareButtonFacebook('http://www.spiegel.de/ce/article/a-1125297.html', 'Quiz zur Arbeit weltweit: Werden befristete Jobs mehr? #ÜberMorgen')",

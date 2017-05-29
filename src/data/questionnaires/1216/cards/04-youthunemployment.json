@@ -1,7 +1,10 @@
 {
   "key": "youthunemployment",
   "title": "4. Karte - Jugendarbeitslosigkeit",
-  "dataset": "youthunemployment",
+  "background": {
+    "type": "globe",
+    "source": "youthunemployment"
+  },
   "content": [
     {
       "text": {
