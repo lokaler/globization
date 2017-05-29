@@ -1,0 +1,87 @@
+{
+  "key": "participation",
+  "title": "2. Karte - Teilhabe",
+  "dataset": "grundschule",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Politische Teilhabe",
+          "",
+          "In den allermeisten Ländern ist es heute selbstverständlich, dass Frauen bei Wahlen die gleichen Rechte haben wie Männer. Das war nicht immer so.",
+          "",
+          "**In welchen Ländern wurde erst in der 2000er-Jahren, also zwischen Anfang 2000 und Ende 2009, das Frauenwahlrecht eingeführt?**"
+        ],
+        "en": [
+          " # Political Participation",
+          "",
+          "In most countries today, it is self-evident that women have the same voting rights as men. That wasn't always the case.",
+          "",
+          "**In which countries was female suffrage introduced in the 2000s, meaning between the start of 2000 and the end of 2009?**"
+        ]
+      }
+    },{
+      "input": {
+        "key": "PartiCiPation",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["PartiCiPationChoice_1", { "de": "Zentralafrikanische Republik und Namibia", "en": "Central African Republic and Namibia" }],
+            ["PartiCiPationChoice_2", { "de": "Bahrain und Oman", "en": "Bahrain and Oman"}],
+            ["PartiCiPationChoice_3", { "de": "Chile und Venezuela", "en": "Chile and Venezuela" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "PartiCiPationSubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.PartiCiPation && !i.PartiCiPationSubmitted",
+          "!i.PartiCiPationSubmitted && 'notSubmitted'",
+          "f.setDataset('wahlrecht')",
+          "f.panToCountry('OMN') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.PartiCiPation"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "PartiCiPationChoice_1": {
+            "de": [
+              "Nein, in der Zentralfrikanischen Republik und Namibia dürfen Frauen seit den 1980ern wählen. In den 2000ern haben Bahrain und Oman das Frauenwahlrecht eingeführt."
+            ],
+            "en": [
+              "No, in the Central African Republic and Namibia, women have had the right to vote since the 1980s. Female suffrage was introduced in Bahrain and Oman in the 2000s."
+            ]
+          },
+          "PartiCiPationChoice_2": {
+            "de": [
+              "Richtig, Bahrain und Oman haben erst in den 2000er-Jahren das Frauenwahlrecht eingeführt."
+            ],
+            "en": [
+              "Correct, Bahrain and Oman didn't introduce female suffrage until the 2000s."
+            ]
+          },
+          "PartiCiPationChoice_3": {
+            "de": [
+              "Nein, in Chile und Venezuela dürfen Frauen schon seit den 1940ern wählen. In den 2000ern haben Bahrain und Oman das Frauenwahlrecht eingeführt."
+            ],
+            "en": [
+              "No, in Chile and Venezuela, women have had the right to vote since the 1940s. Female suffrage was introduced in Bahrain and Oman in the 2000s."
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
