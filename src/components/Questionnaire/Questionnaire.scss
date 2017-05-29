@@ -1,50 +1,31 @@
 :local(.questions) {
 
-  @-webkit-keyframes pulse {
-    0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
-    80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
-    100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
-  }
-  @-moz-keyframes pulse {
-    0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
-    80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
-    100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
-  }
-  @-ms-keyframes pulse {
-    0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
-    80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
-    100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
-  }
-  @keyframes pulse {
-    0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
-    80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
-    100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
-  }
-
-
-  position: relative;
-  width: 100%;
-  height: 100%;
   line-height: 1.4em;
   font-size: 1rem;
 
   .card {
-      .mq-desktop & {
-        padding: 30px;
-      }
+     background: #FFF;
 
-      .widget {
-        &:first-child {
-          margin-top: 0;
-        }
-        margin-top:1em;
-        width: 100%;
+    .mq-desktop & {
+      width: 80%;
+      margin: 10%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
 
-        .share {
-          clear: both;
-          padding-bottom: 15px;
-        }
+    .widget {
+      &:first-child {
+        margin-top: 0;
       }
+      margin-top:1em;
+      width: 100%;
+
+      .share {
+        clear: both;
+        padding-bottom: 15px;
+      }
+    }
 
   }
 
@@ -88,16 +69,6 @@
     line-height: 1.2em;
   }
 
-  @-webkit-keyframes countdown {
-    0%   {
-      background-position:right bottom;
-    }
-    100% {
-      background-position:left bottom;
-    }
-  }
-
-
   button {
     margin-top: 20px;
     width: 100%;
@@ -114,6 +85,36 @@
 
   .answer-tip {
     background: rgba(255, 170, 0, 0.22) !important;
+  }
+
+  @-webkit-keyframes countdown {
+    0%   {
+      background-position:right bottom;
+    }
+    100% {
+      background-position:left bottom;
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+    80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+    100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
+  }
+  @-moz-keyframes pulse {
+    0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+    80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+    100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
+  }
+  @-ms-keyframes pulse {
+    0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+    80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+    100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
+  }
+  @keyframes pulse {
+    0%   {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+    80%  {box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7);}
+    100% {box-shadow: 0 0 0 15px rgba(125, 159, 137, 0);}
   }
 
 }

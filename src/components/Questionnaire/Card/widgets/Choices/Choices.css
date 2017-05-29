@@ -1,6 +1,4 @@
 :local(.component) {
-  float: left;
-  width: 100%;
   padding-left: 5px;
   padding-right: 5px; }
   :local(.component) .bar {

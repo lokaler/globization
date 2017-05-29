@@ -8,15 +8,8 @@
   box-sizing: border-box; }
 
 :local(.container) .right {
-  background: #FFF;
   z-index: 200;
   position: relative; }
-  .mq-desktop :local(.container) .right {
-    width: 80%;
-    margin: 10%;
-    z-index: 400;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); }
 
 :local(.container) .left {
   position: absolute;

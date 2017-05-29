@@ -7,8 +7,18 @@
 }
 
 :local(.showcard) {
-  background: #EEE;
+  text-align: center;
+  width: 120px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
   padding: 20px;
+  right: 30px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 260px;
+  background: #7d9f89;
+  border-radius: 70px;
 }
 
 :local(.footer) {
