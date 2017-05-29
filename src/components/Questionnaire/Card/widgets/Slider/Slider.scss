@@ -1,11 +1,10 @@
 :local(.component) {
 
-  // composes: widget from '../widgets.css';
-  // import '../widgets.css'
-  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   
   .rc-slider-track {
-    background-color: #FD8D3C;
+    background-color: #b1c1b7;
   }
 
   .rc-slider-dot-active, .rc-slider-dot {
@@ -18,7 +17,7 @@
   }
 
   .rc-slider-handle {
-    border-color:#FD8D3C;
+    border-color:#b1c1b7;
     .mq-mobile & {
       margin-left: -12px;
       margin-top: -11px;
@@ -26,6 +25,10 @@
       height: 25px;
       border:3px solid;
     }
+  }
+
+  .rc-slider-disabled {
+    background: none;
   }
 
   .marks {

@@ -1,12 +1,32 @@
 import { isUndefined } from 'lodash';
 import React, { PropTypes as PT } from 'react';
-import Rcslider from 'rc-slider';
+import RcSlider from 'rc-slider';
+import Tooltip from 'rc-tooltip';
 import Histogram from './SliderHistogram';
-import { sponLogger } from 'logic/logging';
+import { sponLogger, googleLogger } from 'logic/logging';
 import translate from 'logic/translate';
 import styles from './Slider.css';
 import 'rc-slider/assets/index.css';
-import { googleLogger } from 'logic/logging';
+import 'rc-slider/assets/index.css';
+
+// const SliderWithTooltip = RcSlider.createSliderWithTooltip(RcSlider.slider);
+const Handle = RcSlider.Handle;
+
+const handle = (props) => {
+    const { value, dragging, index, ...restProps } = props;
+    return (
+      <Tooltip
+        prefixCls="rc-slider-tooltip"
+        overlay={value}
+        visible={dragging}
+        placement="top"
+        key={index}
+        transitionName="zoom-down"
+      >
+        <Handle {...restProps} />
+      </Tooltip>
+    );
+  };
 
 export default class Slider extends React.Component {
 
@@ -34,6 +54,8 @@ export default class Slider extends React.Component {
   }
 
   render() {
+    console.log(this.props);
+
     const { id, questions, options, disabled, histogramData } = this.props;
     const sliderChangeBind = this.onChange.bind(this);
     const tipFormatter = this.tipFormatter.bind(this);
@@ -59,16 +81,16 @@ export default class Slider extends React.Component {
             unit={ unit }
           />
         }
-        <Rcslider
+        <RcSlider
           disabled={ disabled }
           tipFormatter={ tipFormatter }
           defaultValue={ value }
+          handle={handle} 
           min={ options.min }
           max={ options.max }
           step={ options.step || 1 }
           className={ roundId }
           onAfterChange={ sliderChangeBind }
-          tipTransitionName="rc-slider-tooltip-zoom-down"
         />
         <div className="marks">
           <div className="min">{ tipFormatter(options.min) }</div>
