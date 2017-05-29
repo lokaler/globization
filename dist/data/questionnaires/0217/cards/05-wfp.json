@@ -1,0 +1,87 @@
+{
+  "key": "worldfoodprogramme",
+  "title": "4. Karte - WFP",
+  "dataset": "growthdelay",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Welternährungsprogramm",
+          "",
+          "Das Welternährungsprogramm der UN ist eine der größten Initiativen im Kampf gegen den Hunger. Jedes Jahr unterstützt es 80 Millionen Menschen. Deutschland zählt zu den größten Geldgebern – zumindest in absoluten Zahlen.",
+          "",
+          "**Doch welche Länder geben am meisten, gemessen an ihrer Wirtschaftskraft?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "WFP_",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["WFP_Choice_1", { "de": "USA und Großbritannien", "en": "" }],
+            ["WFP_Choice_2", { "de": "Malawi und Lesotho", "en": ""}],
+            ["WFP_Choice_3", { "de": "Irland und Simbabwe", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "WFP_Submitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.WFP_ && !i.WFP_Submitted",
+          "!i.WFP_Submitted && 'notSubmitted'",
+          "f.setDataset('worldfoodpro')",
+          "f.panToCountry('MWI') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.WFP_"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "WFP_Choice_1": {
+            "de": [
+              "Die beiden Länder zahlen absolut zwar noch mehr als Deutschland. Doch gemessen am Bruttoinlandsprodukt geben Malawi und Lesotho am meisten – sie sind auch Empfänger im Welternährungsprogramm. Wie die Organisation arbeitet und Lebensmittel verteilt, lesen Sie in unserer Reportage Die Hungermaschine."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "WFP_Choice_2": {
+            "de": [
+              "Ganz genau, gemessen an ihrem geringen Bruttoinlandsprodukt zahlen Malawi und Lesotho am meistens ins Welternährungsprogramm ein – sie gehören gleichzeitig zu den Empfängerländern. Wie das Programm arbeitet und Lebensmittel verteilt, lesen Sie in unserer Reportage Die Hungermaschine."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "WFP_Choice_3": {
+            "de": [
+              "Nein, die beiden Länder zahlen, wie Deutschland, rund 0,1 Promille ihres Bruttoinlandsprodukts ein. Malawi und Lesotho geben deutlich mehr – sie sind auch Empfänger im Welternährungsprogramm. Wie die Organisation arbeitet und Lebensmittel verteilt, lesen Sie in unserer Reportage Die Hungermaschine."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

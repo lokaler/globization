@@ -1,0 +1,99 @@
+{
+  "key": "Calories",
+  "title": "1. Karte - Kalorien",
+  "dataset": "",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Kalorienbedarf gedeckt?",
+          "",
+          "Beginnen wir im eigenen Land. Zwischen 1300 und 5000 Kilokalorien benötigen die meisten Menschen am Tag – je nach Geschlecht, Alter, Gewicht und Aktivitäten.",
+          "",
+          "**Was glauben Sie, wie viel Prozent unseres Bedarfs steht uns in Deutschland pro Kopf tatsächlich zur Verfügung?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderCalories",
+        "type": "slider",
+        "options": {
+          "unit": "",
+          "min": 1,
+          "value": 100,
+          "max": 200,
+          "step": 1
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "AmountCaloriesSubmitted"
+      }
+    },
+
+    {
+      "answer": {
+        "answerKey": [
+          "i.sliderCalories && !i.AmountCaloriesSubmitted",
+          "!i.AmountCaloriesSubmitted && 'notSubmitted'",
+          "f.setDataset('calories')",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "f.panToCountry('DEU') && false",
+          "(i.sliderCalories <= 100 && 'Antwort_Calories1')",
+          "(i.sliderCalories >= 101 && i.sliderCalories <= 133 && 'Antwort_Calories2')",
+            "(i.sliderCalories >= 134 && i.sliderCalories <= 144 && 'Antwort_Calories3')",
+          "(i.sliderCalories >= 145 && 'Antwort_Calories3')"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate. After submitting your choice, you can also see how other readers answered."]          },
+          "allAnswered": {
+            "de": [""], "en": [""]
+          },
+          "Antwort_Calories1": {
+            "de": [
+              "Nein, in Deutschland stehen uns pro Kopf 139 Prozent des Energiebedarfs zur Verfügung. In den meisten Ländern liegt der Wert bei mehr als 100 Prozent – rechnerisch würden die vorhandenen Lebensmittel also reichen, den Bedarf zu decken."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_Calories2": {
+            "de": [
+              "Es ist noch mehr: In Deutschland stehen uns pro Kopf 139 Prozent des Energiebedarfs zur Verfügung. In den meisten Ländern liegt der Wert bei mehr als 100 Prozent – rechnerisch würden die vorhandenen Lebensmittel also reichen, den Bedarf zu decken."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_Calories3": {
+            "de": [
+              "Richtig, in Deutschland stehen uns pro Kopf 139 Prozent des Energiebedarfs zur Verfügung. In den meisten Ländern liegt der Wert bei mehr als 100 Prozent – rechnerisch würden die vorhandenen Lebensmittel also reichen, den Bedarf zu decken."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "Antwort_Calories4": {
+            "de": [
+              "Ganz so viel ist es nicht: In Deutschland stehen uns pro Kopf 139 Prozent des Energiebedarfs zur Verfügung. In den meisten Ländern liegt der Wert bei mehr als 100 Prozent – rechnerisch würden die vorhandenen Lebensmittel also reichen, den Bedarf zu decken."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
