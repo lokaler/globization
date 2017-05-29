@@ -11,6 +11,7 @@ import DatasetMenu from './widgets/DataSetList/DataSetList';
 import Logger from './widgets/logging';
 import { googleLogger } from 'logic/logging';
 import Footer from '../Footer/Footer';
+import Header from './Header';
 
 const widgets = {
   text: Text,
@@ -76,10 +77,11 @@ export default class Questionnaire extends React.Component {
     this.getLogger().clear();
 
     return (
-      <div className="card">
+      <div>
         { process.env.NODE_ENV === "development" && false &&
           <Debug { ...this.props }/>
         }
+        <Header { ...this.props }/>
         { 
           this.createWidgets(questions)
         }
