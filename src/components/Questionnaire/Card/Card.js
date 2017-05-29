@@ -4,7 +4,6 @@ import React, { PropTypes } from 'react';
 import Debug from './Debug/Debug';
 import Text from './widgets/Text';
 import Answer from './widgets/Answer/Answer';
-import AnswerQuiz from './widgets/AnswerQuiz';
 import Input from './widgets/Input';
 import Submit from './widgets/Submit';
 import RoundChooser from './widgets/RoundList/RoundList';
@@ -16,7 +15,6 @@ import Footer from '../Footer/Footer';
 const widgets = {
   text: Text,
   answer: Answer,
-  answerQuiz: AnswerQuiz,
   input: Input,
   submit: Submit,
   roundChooser: RoundChooser,
