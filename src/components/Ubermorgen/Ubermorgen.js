@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { debounce } from 'lodash';
 import { googleLogger } from '../../logic/logging';
-import Vis from '../Vis/VisWrapper';
+import Background from '../Background/Background';
 import Questionnaire from '../Questionnaire/Questionnaire';
 import questionnaires from 'data/questionnaires/index';
 import styles from './Ubermorgen.css';
@@ -31,25 +31,33 @@ export default class UbermorgenApp extends React.Component {
     actions.fetchHistogramData('https://uebermorgen-logbuch.lokaler.de/');
     // actions.fetchHistogramData('data/stats.json');
     const state = store.getState();
+    console.log(state.questions.activeCard)
     actions.setQuestionnaire(state.questions.activeQuestionnaireId);
-    if (state.app.dataset) {
-      actions.setDataSet(state.app.dataset);
+    if (!state.questions.activeCard){
+      actions.setCard(0);
     }
-    if (state.app.country) {
-      actions.zoomToCountry(state.app.country);
-    }
-    if (state.app.vis) {
-      actions.changeVis({ type: state.app.vis });
-    }
+    // if (state.app.dataset) {
+    //   actions.setDataSet(state.app.dataset);
+    // }
+    // if (state.app.country) {
+    //   actions.zoomToCountry(state.app.country);
+    // }
+    // if (state.app.vis) {
+    //   actions.changeVis({ type: state.app.vis });
+    // }
     this.configureHotReload();
     window.addEventListener('resize', this.handleResize.bind(this));
-    // window.parent.addEventListener('scroll', this.handleScroll.bind(this));
-    // this.handleResize();
-    googleLogger('loaded', 1);
+  }
+
+  handleResize() {
+     const width = window.innerWidth;
+     const height = window.innerHeight;
+     this.props.actions.setWindowSize({ width, height });
   }
 
   componentDidMount() {
     this.handleResize();
+    googleLogger('loaded', 1);
   }
 
   // componentWillReceiveProps(nextProps) {
@@ -76,25 +84,16 @@ export default class UbermorgenApp extends React.Component {
     }
   }
 
-  handleResize() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    this.props.actions.setWindowSize({ width, height });
- }
-
   render() {
-    const { mobile, mounted } = this.props.app;
+    const { mobile } = this.props.app;
     const responsiveClass = mobile ? 'mq-mobile' : 'mq-desktop';
 
     return (
       <div className={ responsiveClass }>
         <div className={ styles.container } ref="container">
           <div ref="left" className="left">
-            { mounted &&
-              <Vis {...this.props}/>
-            }
+            <Background {...this.props}/>
           </div>
-
           <div className="right">
             <Questionnaire {...this.props}/>
           </div>

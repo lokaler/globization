@@ -1,10 +1,9 @@
 {
   "key": "limitedjobs1984",
   "title": "1. Karte - #limitedjobs1984",
-  "dataset": "limitedcontracts1984",
-  "transition": {
-    "type": "map/globe/scatter/iframe/image",
-    "source": "datasetID/URL"
+  "background": {
+    "type": "globe",
+    "source": "limitedcontracts1984"
   },
   "content": [
     {

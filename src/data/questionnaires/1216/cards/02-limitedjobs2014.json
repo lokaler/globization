@@ -1,7 +1,10 @@
 {
   "key": "limitedcontracts",
   "title": "2. Karte - #befristet2014",
-  "dataset": "limitedcontracts2014",
+  "background": {
+    "type": "image",
+    "source": "http://cdn1.spiegel.de/images/image-1147890-860_galleryfree-vgmp-1147890.jpg"
+  },
   "content": [
     {
       "text": {

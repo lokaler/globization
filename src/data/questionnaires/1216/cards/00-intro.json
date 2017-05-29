@@ -1,8 +1,10 @@
 {
   "key": "intro",
   "title": "Intro",
-  "dataset": "meanworking",
-  "view": "globe",
+  "background": {
+    "type": "globe",
+    "source": "meanworking"
+  },
   "content": [
     {
       "text": {
