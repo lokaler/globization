@@ -23,8 +23,8 @@ import cards1316 from './1316/cards/index';
 import datasets1316 from './1316/datasets/index';
 import cards0117 from './0117/cards/index';
 import datasets0117 from './0117/datasets/index';
-import cards0117 from './0217/cards/index';
-import datasets0117 from './0217/datasets/index';
+import cards0217 from './0217/cards/index';
+import datasets0217 from './0217/datasets/index';
 
 
 let questionnaires = {

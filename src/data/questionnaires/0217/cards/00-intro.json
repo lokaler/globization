@@ -1,7 +1,7 @@
 {
   "key": "intro",
   "title": "Intro",
-  "dataset": "fuehrungspos",
+  "dataset": "malnutrition",
   "view": "globe",
   "content": [
     {
@@ -10,7 +10,7 @@
           "# ÜberMorgen-Explorer",
           "",
 
-          "Weniger Geld, Bildungschancen, mangelnde Gesundheitsversorgung – Frauen ergeht es in vielen Dingen schlechter als Männern. Klar, im weltweiten Vergleich ist die Ungleichheit in Deutschland noch überschaubar. Doch selbst bei uns gibt es noch große Unterschiede. Testen Sie Ihr Wissen - klicken Sie auf \"Los geht's\"!",
+          "Es gäbe genug Essen auf der Welt, um alle gut sieben Milliarden Menschen satt zu bekommen. Warum müssen dann noch immer so viele Hunger leiden. Gehen Sie mit dem interaktiven Globus auf Spurensuche - klicken Sie auf \"Los geht's\"!",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
         ],
@@ -18,7 +18,7 @@
           "# BeyondTomorrow Explorer",
           "",
 
-		  "Less money, fewer opportunities to attain education, lacking health care – in many areas, woman are at a disadvantage compared to men. In a global context, of course, the disparities in Germany are less severe than elsewhere, but even here, many exist. Test your knowledge by clicking on “Let’s Get Started.”",
+		  " Test your knowledge by clicking on “Let’s Get Started.”",
 
           "",
           "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"

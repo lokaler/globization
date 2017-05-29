@@ -1,53 +1,53 @@
 {
-  "key": "glass_ceiling",
-  "title": "4. Karte - glaesernde Decke",
-  "dataset": "vorstaende",
+  "key": "growth_delay",
+  "title": "4. Karte - Verzögerung",
+  "dataset": "foodprice",
   "content": [
     {
       "text": {
         "de": [
-          " # Niedrigere Positionen im Job",
+          " # Wachstumsverzögerungen",
           "",
-          "Die „gläserne Decke“ wirkt schon unterhalb der Vorstandsebene: In der Gruppe der Führungskräfte, Akademiker und Techniker kommen auf drei Männer im weltweiten Schnitt zwei Frauen.",
+          "Für Kinder sind die Folgen von Unterernährung besonders verheerend: Die ersten Lebensjahre sind entscheidend für die körperliche und geistige Entwicklung. Hunger verzögert das Wachstum und macht Kinder anfällig für Krankheiten.",
           "",
-          "**Was glauben Sie, wo ist der Frauenanteil in diesen höheren Positionen am höchsten?**"
+          "**Wo leiden besonders viele Kinder an Wachstumsverzögerungen?**"
         ],
         "en": [
-          " # Lower Professional Ranks",
+          " # ",
           "",
-          "The “glass ceiling” also exists at professional levels below the board: When it comes to management, academics and engineering positions, there is an average of two women for every three men.",
           "",
-          "**Where do you think the proportion of women in these higher position is the largest?**"
+          "",
+          "****"
         ]
       }
     },{
       "input": {
-        "key": "GlassCeiling",
+        "key": "GrowthDelay",
         "type": "choices",
         "options": {
           "choices": [
-            ["GlassCeilingChoice_1", { "de": "Weißrussland", "en": "Belarus" }],
-            ["GlassCeilingChoice_2", { "de": "Südafrika", "en": "South Africa"}],
-            ["GlassCeilingChoice_3", { "de": "Pakistan", "en": "Pakistan" }]
+            ["GrowthDelayChoice_1", { "de": "Chile und Trinidad und Tobago", "en": "" }],
+            ["GrowthDelayChoice_2", { "de": "Haiti und Namibia", "en": ""}],
+            ["GrowthDelayChoice_3", { "de": "Burundi und Ostimor", "en": "" }]
           ]
         }
       }
     },
     {
       "submit": {
-        "key": "GlassCeilingSubmitted"
+        "key": "GrowthDelaySubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          "i.GlassCeiling && !i.GlassCeilingSubmitted",
-          "!i.GlassCeilingSubmitted && 'notSubmitted'",
-          "f.setDataset('fuehrungspos')",
-          "f.panToCountry('BLR') && false",
+          "i.GrowthDelay && !i.GrowthDelaySubmitted",
+          "!i.GrowthDelaySubmitted && 'notSubmitted'",
+          "f.setDataset('growthdelay')",
+          "f.panToCountry('BDI') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "i.GlassCeiling"
+          "i.GrowthDelay"
         ],
         "answerContext": {},
         "templates": {
@@ -56,28 +56,28 @@
           },
 
 
-          "GlassCeilingChoice_1": {
+          "GrowthDelayChoice_1": {
             "de": [
-              "Ganz genau: In Weißrussland sind 62 Prozent der Führungskräfte, Akademiker und Techniker weiblich."
+              "Nein, hier gibt es glücklicherweise nur wenige Kinder mit verzögertem Wachstum. In Burundi und Osttimor hingegen ist mehr als jedes zweite Kind betroffen."
             ],
             "en": [
-              "Correct: In Belarus, 62 percent of all managers, academics and engineers are women."
+              ""
             ]
           },
-          "GlassCeilingChoice_2": {
+          "GrowthDelayChoice_2": {
             "de": [
-              " Nein, in Südafrika ist die Situation ähnlich wie in Deutschland: Der Frauenanteil liegt bei 49 Prozent. Den höchsten Anteil findet man in **Weißrussland**: 62 Prozent der höheren Positionen sind von Frauen besetzt."
+              "Gut aufgepasst: Hier sind viele Menschen unterernährt. Doch der Anteil an Kindern mit verzögertem Wachstum ist woanders deutlich höher: In Burundi und Osttimor ist mehr als jedes zweite Kind betroffen."
             ],
             "en": [
-              "No, in South Africa the situation is like the one in Germany: The proportion of women is 49 percent. The largest proportion can be found in Belarus, where 62 percent of higher positions are occupied by women."
+              ""
             ]
           },
-          "GlassCeilingChoice_3": {
+          "GrowthDelayChoice_3": {
             "de": [
-              "Nein, ganz im Gegenteil: Pakistan gehört mit weniger als zehn Prozent zu jenen Ländern mit dem niedrigsten Frauenanteil in solchen Positionen. Den höchsten Anteil hat **Weißrussland** mit 62 Prozent."
+              "Korrekt, in Burundi und Osttimor leidet mehr als jedes zweite Kind an einem verzögerten Wachstum. Die Lage in Burundi gilt auch mehr als zehn Jahre nach Ende eines langen Bürgerkriegs als brüchig, die Versorgung mit Lebensmitteln ist instabil."
             ],
             "en": [
-              "No, just the opposite: With just less than 10 percent of women in higher positions, the country is among those with the lowest proportion of women. Belarus has the largest proportion with 62 percent."
+              ""
             ]
           }
         }

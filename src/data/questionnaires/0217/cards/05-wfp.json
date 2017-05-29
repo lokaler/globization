@@ -1,96 +1,83 @@
 {
-  "key": "Mortality",
-  "title": "5. Karte - Müttersterblichkeit",
-  "dataset": "fuehrungspos",
+  "key": "worldfoodprogramme",
+  "title": "4. Karte - WFP",
+  "dataset": "growthdelay",
   "content": [
     {
       "text": {
         "de": [
-          " # Versorgungslücken für Mütter",
+          " # Welternährungsprogramm",
           "",
-          "In der Mehrheit der Ländern liegt die Müttersterblichkeit inzwischen bei weniger als 100. Das bedeutet: Je 100.000 Geburten sterben weniger als 100 Mütter vor, während oder in den ersten sechs Wochen nach der Geburt.",
+          "Das Welternährungsprogramm der UN ist eine der größten Initiativen im Kampf gegen den Hunger. Jedes Jahr unterstützt es 80 Millionen Menschen. Deutschland zählt zu den größten Geldgebern – zumindest in absoluten Zahlen.",
           "",
-          "**Die mit Abstand höchste Müttersterblichkeit hat das westafrikanische Sierra Leone. Wie hoch ist sie?**"
+          "**Doch welche Länder geben am meisten, gemessen an ihrer Wirtschaftskraft?**"
         ],
         "en": [
-          " # Coverage Gaps for Mothers",
+          " # ",
           "",
-          "In most countries, the maternal mortality rate is less than 100. This means that for every 100,000 births, fewer than 100 women die before, during or in the first six weeks after birth.",
           "",
-          "**By far the highest maternal mortality rate is in Sierra Leone. How high is it?**"
+          "",
+          "****"
         ]
       }
     },{
       "input": {
-        "key": "sliderMortality",
-        "type": "slider",
+        "key": "WFP_",
+        "type": "choices",
         "options": {
-          "unit": "",
-          "min": 100,
-          "value": 1000,
-          "max": 2000,
-          "step": 1
+          "choices": [
+            ["WFP_Choice_1", { "de": "USA und Großbritannien", "en": "" }],
+            ["WFP_Choice_2", { "de": "Malawi und Lesotho", "en": ""}],
+            ["WFP_Choice_3", { "de": "Irland und Simbabwe", "en": "" }]
+          ]
         }
       }
     },
     {
       "submit": {
-        "key": "AmountMortalitySubmitted"
+        "key": "WFP_Submitted"
       }
     },
-
     {
       "answer": {
         "answerKey": [
-          "i.sliderMortality && !i.AmountMortalitySubmitted",
-          "!i.AmountMortalitySubmitted && 'notSubmitted'",
-          "f.setDataset('muettersterb')",
+          "i.WFP_ && !i.WFP_Submitted",
+          "!i.WFP_Submitted && 'notSubmitted'",
+          "f.setDataset('worldfoodpro')",
+          "f.panToCountry('MWI') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "(i.sliderMortality <= 900 && f.panToCountry('SLE')) && 'Antwort_Mortality1'",
-          "(i.sliderMortality >= 901 && i.sliderMortality <= 1299 && f.panToCountry('SLE')) && 'Antwort_Mortality2'",
-          "(i.sliderMortality >= 1300 && i.sliderMortality <= 1420 && f.panToCountry('SLE')) && 'Antwort_Mortality3'",
-          "(i.sliderMortality >= 1421 && f.panToCountry('SLE')) && 'Antwort_Mortality4'"
+          "i.WFP_"
         ],
-        "answerContext": {
-          "MortalityCountry" : "f.getCountryName('muettersterb', i.sliderMortality, { case: 'default' })"
-        },
+        "answerContext": {},
         "templates": {
           "notSubmitted": {
-            "de": ["Betätigen Sie den Schieberegler, um Ihre Schätzung einzugeben. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Use the slider to enter your estimate. After submitting your choice, you can also see how other readers answered."]          },
-          "allAnswered": {
-            "de": [""], "en": [""]
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
           },
-          "Antwort_Mortality1": {
+
+
+          "WFP_Choice_1": {
             "de": [
-              "Nein, Ihr getippter Wert entspricht eher der Müttersterblichkeit in **{{ MortalityCountry }}**. In Sierra Leone hingegen sterben 1360 Mütter je 100.000 Geburten. Und auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit noch immer bei mehr als 500."
+              "Die beiden Länder zahlen absolut zwar noch mehr als Deutschland. Doch gemessen am Bruttoinlandsprodukt geben Malawi und Lesotho am meisten – sie sind auch Empfänger im Welternährungsprogramm. Wie die Organisation arbeitet und Lebensmittel verteilt, lesen Sie in unserer Reportage Die Hungermaschine."
             ],
             "en": [
-              "No, the number you you've selected describes the maternal mortality rate in **{{ MortalityCountry }}**. In Sierra Leone, by comparison, 1,360 mothers die per 100,000 births. And in many other African countries, the mortality rate remains at over 500."
+              ""
             ]
           },
-          "Antwort_Mortality2": {
+          "WFP_Choice_2": {
             "de": [
-              "Ihr getippter Wert übertrifft zwar schon die Müttersterblichkeit aller anderen Länder. Aber die Rate von Sierra Leone haben Sie noch immer unterschätzt: Je 100.000 Geburten sterben 1360 Mütter. Auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit noch immer bei mehr als 500."
+              "Ganz genau, gemessen an ihrem geringen Bruttoinlandsprodukt zahlen Malawi und Lesotho am meistens ins Welternährungsprogramm ein – sie gehören gleichzeitig zu den Empfängerländern. Wie das Programm arbeitet und Lebensmittel verteilt, lesen Sie in unserer Reportage Die Hungermaschine."
             ],
             "en": [
-              "The value you've selected is still higher than the maternal mortality rate in all other countries. But you've still underestimated the rate in Sierra Leone: There, for every 100,000 births, 1,360 mothers die. And in many other African countries, the mortality rate remains at over 500."
+              ""
             ]
           },
-          "Antwort_Mortality3": {
+          "WFP_Choice_3": {
             "de": [
-              "Ja, in Sierra Leone sterben tatsächlich 1360 Mütter je 100.000 Geburten. Und auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit noch immer bei mehr als 500."
+              "Nein, die beiden Länder zahlen, wie Deutschland, rund 0,1 Promille ihres Bruttoinlandsprodukts ein. Malawi und Lesotho geben deutlich mehr – sie sind auch Empfänger im Welternährungsprogramm. Wie die Organisation arbeitet und Lebensmittel verteilt, lesen Sie in unserer Reportage Die Hungermaschine."
             ],
             "en": [
-              "Yes, in Sierra Leone, 1,360 mothers die per 100,000 births. And in many other African countries the mortality rate remains at over 500."
-            ]
-          },
-          "Antwort_Mortality4": {
-            "de": [
-              "Nein, ganz so hoch ist die Müttersterblichkeit in Sierra Leone zwar nicht. Aber je 100.000 Geburten sterben immer noch 1360 Mütter. Auch in vielen anderen afrikanischen Ländern liegt die Sterblichkeit bei mehr als 500."
-            ],
-            "en": [
-              "No, maternal mortality isn’t quite so high in Sierra Leone. But 1,360 mothers die there per 100,000 births. And in many other African countries the mortality remains over 500."
+              ""
             ]
           }
         }

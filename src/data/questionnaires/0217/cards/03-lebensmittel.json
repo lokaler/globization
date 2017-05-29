@@ -1,53 +1,53 @@
 {
-  "key": "women_share",
-  "title": "3. Karte - Frauenanteil",
-  "dataset": "",
+  "key": "foodprice",
+  "title": "3. Karte - Lebensmittel",
+  "dataset": "malnutrition",
   "content": [
     {
       "text": {
         "de": [
-          " # Die Männer geben den Ton an?",
+          " # Teure Lebensmittel",
           "",
-          "In Vorständen und Aufsichtsräten sind Frauen völlig unterrepräsentiert – weltweit und branchenübergreifend. Deutschland versucht mit der Frauenquote den Anteil auf 30 Prozent zu heben.",
+          "Die Gründe für Hunger sind vielfältig. Dürreperioden können Schuld sein, aber auch Armut und hohe Nahrungspreise – nicht zuletzt wegen bewaffneter Konflikte. Sehen wir uns die Preise für Lebensmittel näher an. Um sie weltweit zu vergleichen, messen wir, wie teuer sie im Vergleich zu anderen Gütern des täglichen Lebens im jeweiligen Land sind.",
           "",
-          "**Was meinen Sie, welches Land kommt bereits auf diesen Anteil?**"
+          "**Was glauben Sie, wo sind Lebensmittel demnach am teuersten?**"
         ],
         "en": [
-          " # The Men Set the Tone",
+          " # ",
           "",
-          "Women are seriously underrepresented on management and supervisory boards –  in many countries around the world and in many industries. Germany is trying to use a quota to raise the proportion to 30 percent.",
           "",
-          "**Which country do you think already has this proportion?**"
+          "",
+          "****"
         ]
       }
     },{
       "input": {
-        "key": "ShareWomenBoards",
+        "key": "FoodPrice",
         "type": "choices",
         "options": {
           "choices": [
-            ["ShareWomenBoardsChoice_1", { "de": "Italien", "en": "Italy" }],
-            ["ShareWomenBoardsChoice_2", { "de": "Japan", "en": "Japan"}],
-            ["ShareWomenBoardsChoice_3", { "de": "Kanada", "en": "Canada" }]
+            ["FoodPriceChoice_1", { "de": "Katar, Island und Bermuda", "en": "" }],
+            ["FoodPriceChoice_2", { "de": "Tansania, Sambia und Mauretanien", "en": ""}],
+            ["FoodPriceChoice_3", { "de": "Irak, Pakistan und Fidschi", "en": "" }]
           ]
         }
       }
     },
     {
       "submit": {
-        "key": "ShareWomenBoardsSubmitted"
+        "key": "FoodPriceSubmitted"
       }
     },
     {
       "answer": {
         "answerKey": [
-          "i.ShareWomenBoards && !i.ShareWomenBoardsSubmitted",
-          "!i.ShareWomenBoardsSubmitted && 'notSubmitted'",
-          "f.setDataset('vorstaende')",
-          "f.panToCountry('ITA') && false",
+          "i.FoodPrice && !i.FoodPriceSubmitted",
+          "!i.FoodPriceSubmitted && 'notSubmitted'",
+          "f.setDataset('foodprice')",
+          "f.panToCountry('TZA') && false",
           "f.isMobile() && f.setView('map')",
           "!f.isMobile() && f.setView('globe')",
-          "i.ShareWomenBoards"
+          "i.FoodPrice"
         ],
         "answerContext": {},
         "templates": {
@@ -56,28 +56,28 @@
           },
 
 
-          "ShareWomenBoardsChoice_1": {
+          "FoodPriceChoice_1": {
             "de": [
-              "Ganz richtig, in italienischen Unternehmen sind die Vorstände und Aufsichtsräte zu gut 30 Prozent mit Frauen besetzt. Vorreiter ist übrigens Norwegen: Hier sind Männer und Frauen fast gleich stark vertreten."
+              "Nein, hier sind Lebensmittel relativ erschwinglich, ähnlich wie in Deutschland. In Tansania, Sambia und Mauretanien hingegen ist Essen, verglichen mit anderen Gütern, am teuersten."
             ],
             "en": [
-              "That's correct, in Italian companies, management and supervisory boards are made up of about 30 percent women. The global leader in this regard, by the way, is Norway: Men and women are almost equally represented in the country."
+              ""
             ]
           },
-          "ShareWomenBoardsChoice_2": {
+          "FoodPriceChoice_2": {
             "de": [
-              "Nein, Japan bildet das Schlusslicht des Vergleichs: Nur 3,5 Prozent der Vorstands- und Aufsichtsratsposten sind mit Frauen besetzt. Die richtige Antwort wäre **Italien** gewesen, mit gut 30 Prozent. Vorreiter ist übrigens Norwegen: Hier sind Männer und Frauen fast gleich stark vertreten."
+              "Richtig! In Tansania, Sambia und Mauretanien ist Essen, verglichen mit anderen Gütern, am teuersten. Eine hohe Abhängigkeit von Importen und Spekulationen am Weltmarkt können die Preise nach oben treiben."
             ],
             "en": [
-              "No, Japan is the worst performing country: Only 3.5 percent of the management and supervisory boards are made up of women. The correct answer is Italy, with about 30 percent. The global leader in this regard, by the way, is Norway: Men and women are almost equally represented in the country."
+              ""
             ]
           },
-          "ShareWomenBoardsChoice_3": {
+          "FoodPriceChoice_3": {
             "de": [
-              "Nein, in Kanada ist die Situation ähnlich wie in Deutschland: Rund 21 Prozent der Vorstands- und Aufsichtsratsposten sind mit Frauen besetzt. Die richtige Antwort wäre **Italien** gewesen, mit gut 30 Prozent. Vorreiter ist übrigens Norwegen: Hier sind Männer und Frauen fast gleich stark vertreten."
+              "In der Tat sind Lebensmittel hier sehr viel weniger erschwinglich als etwa in Deutschland. Doch noch deutlich teurer ist Essen, verglichen mit anderen Gütern, in Tansania, Sambia und Mauretanien."
             ],
             "en": [
-              "No, in Canada the situation is like the one in Germany: About 21 percent of management and supervisory board members are women. The correct answer is Italy, with about 30 percent. The global leader in this regard, by the way, is Norway: Men and women are almost equally represented in the country."
+              ""
             ]
           }
         }
