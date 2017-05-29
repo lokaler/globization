@@ -82,18 +82,8 @@ export default class UbermorgenApp extends React.Component {
     this.props.actions.setWindowSize({ width, height });
  }
 
-  // handleScroll() {
-  //   if (!this.props.app.mobile) { return; }
-  //   const bbox = window.frameElement.getBoundingClientRect();
-  //   const top = bbox.top < 0 ? bbox.top * -1 : 0;
-  //   if (bbox.bottom > screen.height - 50) {
-  //     d3.select(this.refs.left).style('transform', `translate3d(0,${top}px,0)`);
-  //   }
-  // }
-
   render() {
     const { mobile, mounted } = this.props.app;
-    // const { hideCard } = this.props.questions;
     const responsiveClass = mobile ? 'mq-mobile' : 'mq-desktop';
 
     return (
@@ -105,9 +95,9 @@ export default class UbermorgenApp extends React.Component {
             }
           </div>
 
-            <div className="right">
-              <Questionnaire {...this.props}/>
-            </div>
+          <div className="right">
+            <Questionnaire {...this.props}/>
+          </div>
 
         </div>
       </div>

@@ -22,10 +22,14 @@ export default class TooltipComponent extends React.Component {
 
   render() {
     // console.log('render tooltip', this.props.vis.tooltip);
-
+    const { hideCard } = this.props.questions;
     const { x, y, active, value, iso, unit } = this.props.vis.tooltip;
     const name = translate(iso, { isCountryCode: true });
     const slug = value != undefined ? translate(value) + " " + translate(unit) : translate("no data");
+
+    if(!hideCard){
+      return null;
+    }
 
     return (
       <div

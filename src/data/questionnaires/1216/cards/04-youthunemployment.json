@@ -34,12 +34,6 @@
       }
     },
     {
-      "submit": {
-        "key": "AmountYouthUnemploymentSubmitted"
-      }
-    },
-
-    {
       "answer": {
         "answerKey": [
           "!i.sliderYouthUnemployment && 'notSubmitted'",

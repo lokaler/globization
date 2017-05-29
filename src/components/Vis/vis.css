@@ -84,21 +84,22 @@
         .vis .scatterLegend .quelle a:hover {
           color: #000; }
   .vis .footer {
+    line-height: 1.2em;
     font-size: 12px;
     padding: 10px;
     background: white;
     clear: left;
-    bottom: 10px;
-    left: 10px;
+    bottom: 6px;
     position: absolute;
     z-index: 100;
-    width: 95%;
+    margin: 10px;
+    width: 97%;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
     .mq-mobile .vis .footer {
       box-shadow: none;
       background: rgba(255, 255, 255, 0.69);
       bottom: 5px;
-      text-shadow: 0px 0px 3px white, 0px 0px 3px white, 0px 0px 3px white, 0px 0px 7px white, 0px 0px 7px white, 0px 0px 7px white, 0px 0px 7px white,  0px 0px 3px white; }
+      text-shadow: 0px 0px 3px white, 0px 0px 3px white, 0px 0px 3px white, 0px 0px 7px white, 0px 0px 7px white, 0px 0px 7px white, 0px 0px 7px white, 0px 0px 3px white; }
       .mq-mobile .vis .footer .description {
         width: 70%; }
       .mq-mobile .vis .footer .legend .item:nth-child(2) {

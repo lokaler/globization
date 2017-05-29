@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-
+import React from 'react';
+import PropTypes from 'prop-types'
 import Card from './Card/Card';
 import Error from './Error/Error';
 import styles from './Questionnaire.css';
@@ -13,36 +13,12 @@ export default class Questionnaire extends React.Component {
     app: PropTypes.object.isRequired
   }
 
-  // componentDidUpdate(prevProps) {
-  //   const { app, questions } = this.props;
-  //   if (app.mobile && prevProps.questions !== questions) {
-  //     const card = d3.select(this.refs.card);
-  //     card.selectAll('img').on('load', () => {
-  //       this.resizeWindow();
-  //     });
-  //     this.resizeWindow();
-  //   }
-  //   if (app.mobile && prevProps.questions.activeCard !== questions.activeCard) {
-  //     const iframeTop = window.frameElement.getBoundingClientRect().top;
-  //     const scrollTop = window.parent.pageYOffset || parent.document.documentElement.scrollTop;
-  //     // d3
-  //     //   .transition()
-  //     //   .duration(500)
-  //     //   .tween('scroll', this.scrollTween(iframeTop + scrollTop));
-  //     window.parent.scrollTo(0, iframeTop + scrollTop);
-  //   }
-  // }
-
   render() {
     const { questions } = this.props;
     const { hideCard } = questions;
 
     if (questions.validationError) {
       return <Error>{ questions.validationError.message }</Error>;
-    }
-
-    if (questions.cards.length === 0) {
-      return <div />;
     }
 
     if (hideCard) {
@@ -52,7 +28,7 @@ export default class Questionnaire extends React.Component {
     }
 
     return (
-      <div ref="card" className={ styles.questions } >
+      <div className={ styles.questions } >
         <Card { ...this.props }/>
       </div>
     );

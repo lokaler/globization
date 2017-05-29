@@ -1,10 +1,8 @@
 import React, { PropTypes } from 'react';
-import { every } from 'lodash';
 import translate from 'logic/translate';
-import { googleLogger } from 'logic/logging';
 import styles from './Footer.css';
 
-export default class ShowCardButton extends React.Component {
+export default class ShowCardButton extends React.PureComponent {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,

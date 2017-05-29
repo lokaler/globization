@@ -89,6 +89,7 @@ export default class Globe extends React.Component {
     const changeMap = this.changeType.bind(this, 'map');
     const changeScatter = this.changeType.bind(this, 'scatter');
     const { width, height, mobile } = this.props.app;
+    const { hideCard } = this.props.questions;
 
     return (
       <div className="vis">
@@ -105,7 +106,7 @@ export default class Globe extends React.Component {
             <LinkedDatasetMenu {...this.props} />
           }
           <TooltipComponent {...this.props} />
-          { dataset && dataset.key != "none" && false &&
+          { dataset && dataset.key != "none" && hideCard &&
             <Legend color={this.color} {...this.props} />
           }
         </div>
