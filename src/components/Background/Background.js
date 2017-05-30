@@ -15,15 +15,16 @@ export default class Background extends React.PureComponent {
   render() {
     const { hideCard, background } = this.props.questions;
     const showVis = (['globe', 'map', 'scatterplot'].indexOf(background.type) >= 0)
-    console.log(background)
 
     if(showVis) {
       return <Vis { ...this.props } />;
     }
 
+    // Prototype for Background
+
     return (
       <div>
-        <img src={background.source} />
+        <img src={background.source} alt="background"/>
       </div>
     );
   }

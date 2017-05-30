@@ -1,6 +1,8 @@
 :local(.component) {
   margin-top: 20px;
   margin-bottom: 20px; }
+  .mq-mobile :local(.component) {
+    margin-left: 2px; }
   :local(.component) .bar {
     border-top: 4px solid #cdded3;
     font-size: 10px;

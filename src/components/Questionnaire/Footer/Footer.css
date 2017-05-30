@@ -18,8 +18,9 @@
   :local(.footer) :local(.btn) {
     padding: 10px 30px 10px 30px;
     font-weight: bold;
-    background: #7d9f89;
-    color: #FFF;
+    border: 1px solid #7d9f89;
+    /* background: #7d9f89; */
+    color: #7d9f89;
     text-align: center;
     border-radius: 2px;
     text-transform: uppercase;
@@ -28,4 +29,5 @@
     box-shadow: 0 0 0 0 rgba(125, 159, 137, 0.7); }
     :local(.footer) :local(.btn):hover {
       box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
-      background: #577562; }
+      background: #577562;
+      color: #FFF; }

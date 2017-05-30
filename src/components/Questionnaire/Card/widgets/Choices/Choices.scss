@@ -2,7 +2,10 @@
 
 	margin-top: 20px;
 	margin-bottom: 20px;
-	
+
+  .mq-mobile & {
+    margin-left: 2px;
+  }
 
   .bar {
     border-top: 4px solid #cdded3;

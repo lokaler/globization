@@ -3,11 +3,15 @@
   font-size: 1rem;
   background: #FFF; }
   .mq-desktop :local(.questions) {
-    width: 80%;
-    margin: 10%;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10%;
     border-radius: 20px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     padding: 30px; }
+  .mq-mobile :local(.questions) {
+    height: 100vh;
+    padding-top: 10px; }
   :local(.questions) > div {
     position: relative; }
   :local(.questions) .widget {
@@ -52,16 +56,21 @@
       -ms-animation: none;
       animation: none; }
   :local(.questions) h1 {
-    margin-top: -10px;
     font-size: 1em;
-    font-weight: bold;
-    line-height: 1.2em;
-    padding-bottom: 6px;
-    margin-bottom: 27px;
-    font-weight: normal;
-    text-transform: uppercase;
-    color: #b7b7b7;
-    border-bottom: 1px solid #ececec; }
+    margin-top: 0px; }
+    .mq-desktop :local(.questions) h1 {
+      margin-top: -10px;
+      font-weight: bold;
+      line-height: 1.2em;
+      padding-bottom: 6px;
+      margin-bottom: 27px;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #b7b7b7;
+      border-bottom: 1px solid #ececec; }
+    .mq-mobile :local(.questions) h1 {
+      font-weight: normal;
+      color: #a7a7a7; }
   :local(.questions) button {
     margin-top: 20px;
     width: 100%;

@@ -5,11 +5,17 @@
   background: #FFF;
 
   .mq-desktop & {
-    width: 80%;
-    margin: 10%;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10%;
     border-radius: 20px;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px   0px 20px 0px rgba(0, 0, 0, 0.1);
     padding: 30px;
+  }
+
+  .mq-mobile & {
+    height: 100vh;
+    padding-top: 10px;
   }
 
   > div {
@@ -70,16 +76,24 @@
   }
 
   h1 {
-    margin-top: -10px;
     font-size: 1em;
-    font-weight: bold;
-    line-height: 1.2em;
-    padding-bottom: 6px;
-    margin-bottom: 27px;
-    font-weight: normal;
-    text-transform: uppercase;
-    color: #b7b7b7;
-    border-bottom: 1px solid #ececec;
+    margin-top: 0px;
+
+    .mq-desktop & {
+      margin-top: -10px;
+      font-weight: bold;
+      line-height: 1.2em;
+      padding-bottom: 6px;
+      margin-bottom: 27px;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #b7b7b7;
+      border-bottom: 1px solid #ececec;
+    }
+    .mq-mobile & {
+      font-weight: normal;
+      color: #a7a7a7;
+    }
   }
 
   button {
