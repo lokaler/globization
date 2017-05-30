@@ -6,6 +6,7 @@ import Text from './widgets/Text';
 import Answer from './widgets/Answer/Answer';
 import Input from './widgets/Input';
 import Submit from './widgets/Submit';
+import Grid from './widgets/Grid/Grid';
 import RoundChooser from './widgets/RoundList/RoundList';
 import DatasetMenu from './widgets/DataSetList/DataSetList';
 import Logger from './widgets/logging';
@@ -18,6 +19,7 @@ const widgets = {
   answer: Answer,
   input: Input,
   submit: Submit,
+  grid: Grid,
   roundChooser: RoundChooser,
   datasetMenu: DatasetMenu
 };

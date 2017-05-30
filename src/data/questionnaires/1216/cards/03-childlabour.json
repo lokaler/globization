@@ -24,13 +24,16 @@
         ]
       }
     },{
-      "input": {
+      "grid": {
         "key": "amountChildLabour",
-        "type": "choices",
+        "type": "grid",
         "options": {
           "choices": [
-            ["amountChildLabourChoice_1", { "de": "Kamerun", "en": "Cameroon" }],
-            ["amountChildLabourChoice_2", { "de": "Sudan", "en": "Sudan"}],
+            ["A1",
+              { "color": "red", "alpha": 1 },
+              { "de": "Kamerun", "en": "Cameroon" }
+            ],
+            ["B5", { "de": "Sudan", "en": "Sudan"}],
             ["amountChildLabourChoice_3", { "de": "Bangladesch", "en": "Bangladesh" }]
           ]
         }
