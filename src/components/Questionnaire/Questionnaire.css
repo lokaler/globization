@@ -1,14 +1,15 @@
 :local(.questions) {
   line-height: 1.4em;
-  font-size: 1rem;
-  background: #FFF; }
+  background: #FFF;
+  color: #333; }
   .mq-desktop :local(.questions) {
     width: 70%;
     margin-left: 15%;
     margin-top: 10%;
     border-radius: 20px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-    padding: 30px; }
+    padding: 30px;
+    font-size: 1rem; }
   .mq-mobile :local(.questions) {
     height: 100vh;
     padding-top: 10px; }
