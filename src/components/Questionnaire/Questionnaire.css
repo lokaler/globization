@@ -1,7 +1,172 @@
+.card1 {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background: #FFF;
+  height: 500px;
+  position: absolute;
+  transform: translate(5px, 4px) rotate(1deg);
+  z-index: 19; }
+  .inactive .card1 {
+    opacity: 0;
+    pointer-events: none; }
+
+.card2 {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background: #FFF;
+  height: 500px;
+  position: absolute;
+  transform: translate(10px, 8px) rotate(2deg);
+  z-index: 18; }
+  .inactive .card2 {
+    opacity: 0;
+    pointer-events: none; }
+
+.card3 {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background: #FFF;
+  height: 500px;
+  position: absolute;
+  transform: translate(15px, 12px) rotate(3deg);
+  z-index: 17; }
+  .inactive .card3 {
+    opacity: 0;
+    pointer-events: none; }
+
+.card4 {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background: #FFF;
+  height: 500px;
+  position: absolute;
+  transform: translate(20px, 16px) rotate(4deg);
+  z-index: 16; }
+  .inactive .card4 {
+    opacity: 0;
+    pointer-events: none; }
+
+.card5 {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background: #FFF;
+  height: 500px;
+  position: absolute;
+  transform: translate(25px, 20px) rotate(5deg);
+  z-index: 15; }
+  .inactive .card5 {
+    opacity: 0;
+    pointer-events: none; }
+
+.card6 {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background: #FFF;
+  height: 500px;
+  position: absolute;
+  transform: translate(30px, 24px) rotate(6deg);
+  z-index: 14; }
+  .inactive .card6 {
+    opacity: 0;
+    pointer-events: none; }
+
+.card7 {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background: #FFF;
+  height: 500px;
+  position: absolute;
+  transform: translate(35px, 28px) rotate(7deg);
+  z-index: 13; }
+  .inactive .card7 {
+    opacity: 0;
+    pointer-events: none; }
+
+.card8 {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background: #FFF;
+  height: 500px;
+  position: absolute;
+  transform: translate(40px, 32px) rotate(8deg);
+  z-index: 12; }
+  .inactive .card8 {
+    opacity: 0;
+    pointer-events: none; }
+
+.card9 {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background: #FFF;
+  height: 500px;
+  position: absolute;
+  transform: translate(45px, 36px) rotate(9deg);
+  z-index: 11; }
+  .inactive .card9 {
+    opacity: 0;
+    pointer-events: none; }
+
+.card10 {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background: #FFF;
+  height: 500px;
+  position: absolute;
+  transform: translate(50px, 40px) rotate(10deg);
+  z-index: 10; }
+  .inactive .card10 {
+    opacity: 0;
+    pointer-events: none; }
+
 :local(.questions) {
   line-height: 1.4em;
   background: #FFF;
-  color: #333; }
+  color: #333;
+  transition: transform 0.2s, opacity 0.2s; }
+  .inactive :local(.questions) {
+    transform: translate(0, -50px) scale(1.5);
+    opacity: 0;
+    pointer-events: none; }
   .mq-desktop :local(.questions) {
     width: 70%;
     margin-left: 15%;
@@ -9,7 +174,10 @@
     border-radius: 20px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    position: absolute;
+    z-index: 100;
+    min-height: 500px; }
   .mq-mobile :local(.questions) {
     height: 100vh;
     padding-top: 10px; }

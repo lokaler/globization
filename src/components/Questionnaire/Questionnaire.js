@@ -13,23 +13,39 @@ export default class Questionnaire extends React.Component {
     app: PropTypes.object.isRequired
   }
 
+  cardDummys(size) {
+    const cards = Array(size).fill(0).map((c,i) => <div key={i} className={`card${i}`}/>)
+    return cards;
+  }
+
   render() {
-    const { questions } = this.props;
-    const { hideCard } = questions;
+    const { questions, app } = this.props;
+    const { hideCard, cards, activeCard } = questions;
+    const totalCards = cards.length-1-activeCard;
+
+    console.log(app, totalCards)
 
     if (questions.validationError) {
       return <Error>{ questions.validationError.message }</Error>;
     }
 
-    if (hideCard) {
-      return (
-        <ShowCardButton { ...this.props }/>
-      )
-    }
+    // if (hideCard) {
+    //   return (
+    //     <ShowCardButton { ...this.props }/>
+    //   )
+    // }
 
     return (
-      <div className={ styles.questions } >
-        <Card { ...this.props }/>
+      <div className={hideCard ? 'inactive': ''}>
+        <div className={ styles.questions } >
+          <Card { ...this.props }/>
+        </div>
+        { !app.mobile && totalCards > 0 &&
+          this.cardDummys(totalCards)
+        }
+        { hideCard && 
+          <ShowCardButton { ...this.props }/>
+        }
       </div>
     );
   }

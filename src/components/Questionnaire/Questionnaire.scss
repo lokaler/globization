@@ -1,8 +1,38 @@
+@for $i from 1 through 10 {
+  .card#{$i} {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10%;
+    border-radius: 20px;
+    box-shadow: 0px   0px 10px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background: #FFF;
+    height: 500px;
+    position: absolute;
+    transform: translate(#{5*$i}px, #{4*$i}px) rotate(#{$i}deg);
+    z-index: #{20-$i};
+    
+    .inactive & {
+      opacity: 0;
+      pointer-events:none;
+    }
+  }
+}
+
+
+
 :local(.questions) {
 
   line-height: 1.4em;
   background: #FFF;
   color: #333;
+  transition:transform 0.2s, opacity 0.2s;
+
+  .inactive & {
+    transform: translate(0,-50px) scale(1.5);
+    opacity: 0;
+    pointer-events:none;
+  }
 
   .mq-desktop & {
     width: 70%;
@@ -12,6 +42,9 @@
     box-shadow: 0px   0px 20px 0px rgba(0, 0, 0, 0.1);
     padding: 30px;
     font-size: 1rem;
+    position: absolute;
+    z-index: 100;
+    min-height: 500px;
   }
 
   .mq-mobile & {
@@ -47,7 +80,6 @@
     text-decoration: none;
     color: #A74405;
   }
-
 
   .losButton {
     padding: 10px 30px 10px 30px;
