@@ -31,7 +31,6 @@ export default class UbermorgenApp extends React.Component {
     actions.fetchHistogramData('https://uebermorgen-logbuch.lokaler.de/');
     // actions.fetchHistogramData('data/stats.json');
     const state = store.getState();
-    console.log(state.questions.activeCard)
     actions.setQuestionnaire(state.questions.activeQuestionnaireId);
     if (!state.questions.activeCard){
       actions.setCard(0);
@@ -60,13 +59,11 @@ export default class UbermorgenApp extends React.Component {
     googleLogger('loaded', 1);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.app.mobile) {
-  //     d3.select(window.frameElement)
-  //       .style('padding-top', '20px')
-  //       .style('padding-bottom', '40px');
-  //   }
-  // }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.app.mobile) {
+      window.frameElement.style.height = window.parent.innerHeight + 'px'
+    }
+  }
 
   configureHotReload() {
     const { actions } = this.props;
