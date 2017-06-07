@@ -23,7 +23,11 @@ export default class Questionnaire extends React.Component {
     const { hideCard, cards, activeCard } = questions;
     const totalCards = cards.length-1-activeCard;
 
-    console.log(app, totalCards)
+    console.log(questions, totalCards)
+
+    if (!activeCard){
+      return null
+    }
 
     if (questions.validationError) {
       return <Error>{ questions.validationError.message }</Error>;

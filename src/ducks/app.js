@@ -51,7 +51,8 @@ export const actions = {
     const vis = q('vis') || null;
     const dataset = q('dataset') || null;
     const country = q('country') || null;
-    return { type: GET_URL_PARAMETERS, language, round, vis, dataset, country };
+    const card = q('card') || null;
+    return { type: GET_URL_PARAMETERS, language, round, card, vis, dataset, country };
   },
 
   getStoredValues: () => {
