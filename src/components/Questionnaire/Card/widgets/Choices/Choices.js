@@ -21,8 +21,10 @@ export default class Choices extends React.Component {
   }
 
   setValue(value) {
-    const { id, actions } = this.props;
+    const { id, actions, card } = this.props;
     actions.updateUserInput(id, value);
+    actions.quizSubmitCard(card.key);
+    actions.updateUserInput(card.key, true);
     googleLogger('choice');
   }
 
