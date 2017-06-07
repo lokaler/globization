@@ -57,6 +57,7 @@ export const questionnaire = array({
             contentPart('text'),
             contentPart('input'),
             contentPart('submit'),
+            contentPart('grid'),
             contentPart('answer'),
             contentPart('roundChooser'),
             contentPart('datasetMenu')

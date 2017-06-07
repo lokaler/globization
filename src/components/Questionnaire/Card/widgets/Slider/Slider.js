@@ -8,7 +8,6 @@ import { sponLogger, googleLogger } from 'logic/logging';
 import translate from 'logic/translate';
 import styles from './Slider.css';
 import 'rc-slider/assets/index.css';
-import 'rc-slider/assets/index.css';
 
 // const SliderWithTooltip = RcSlider.createSliderWithTooltip(RcSlider.slider);
 const Handle = RcSlider.Handle;

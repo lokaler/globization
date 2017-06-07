@@ -1,25 +1,52 @@
 import React from 'react';
-import { PropTypes as PT } from 'prop-types'
+import PropTypes from 'prop-types'
+import './Grid.css';
 
-export default class Matrix extends React.Component {
+export default class Grid extends React.Component {
 
   static propTypes = {
-    actions: PT.object.isRequired,
-    questions: PT.object.isRequired,
+    actions: PropTypes.object.isRequired,
+    questions: PropTypes.object.isRequired,
     // --- for this component only ---
-    id: PT.string.isRequired,
-    options: PT.object.isRequired,
-    disabled: PT.bool.isRequired
+    id: PropTypes.string.isRequired,
+    options: PropTypes.object.isRequired,
+    disabled: PropTypes.bool.isRequired
+  }
+
+  grid2percent(pos) {
+    const gridSize = 5;
+    const alpha = 'ABCDEFGH'.split('')
+    const xPos = alpha.indexOf(pos[0])+1
+    const yPos = pos[1]
+    return [xPos/gridSize, yPos/gridSize]
   }
 
 
   render() {
-    const { questions, id, options, disabled } = this.props;
     console.log(this.props)
+    const { source, questions, id, options, disabled, grid } = this.props;
+
+    const gridOverlay = options.choices.map(o => {
+      const pos = this.grid2percent(o.pos)
+      console.log(pos, o)
+      return (
+        <div 
+          className="choice"
+          key={o.pos}
+          style={{ 
+            left: pos[0]*70 + '%',
+            top: pos[1]*70 + '%',
+          }}
+        >{o.name}</div>
+      )
+    })
 
     return (
       <div>
-        Matrix
+        <div className="choices">
+          <img src={source} alt="grid" />
+          {gridOverlay}
+        </div>
       </div>
     );
   }

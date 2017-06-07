@@ -12,29 +12,41 @@
           " # Kinderarbeit",
           "",
           "In den Uno-Nachhaltigkeitszielen haben sich die Regierungen das Ziel gesetzt, Kinderarbeit abzuschaffen. Im Jahr 2012 hat trotzdem weltweit jedes zehnte Kind gearbeitet.",
-          "",
-          "**Was glauben Sie: In welchem der folgenden Länder mussten relativ gesehen die meisten Kinder mit anpacken?**"
+          ""
         ],
         "en": [
           " # Child Labor",
           "",
           "Governments have set the target of eliminating child labor as part of the UN Sustainability Goals. Despite this, one out of 10 children around the world worked in 2012.",
-          "",
-          "**Which of the following countries do you think has the greatest number of child laborers?**"
+          ""
         ]
       }
     },{
-      "grid": {
+      "input": {
         "key": "amountChildLabour",
         "type": "grid",
+        "source": "http://cdn1.spiegel.de/images/image-1147890-860_galleryfree-vgmp-1147890.jpg",
         "options": {
           "choices": [
-            ["A1",
-              { "color": "red", "alpha": 1 },
-              { "de": "Kamerun", "en": "Cameroon" }
-            ],
-            ["B5", { "de": "Sudan", "en": "Sudan"}],
-            ["amountChildLabourChoice_3", { "de": "Bangladesch", "en": "Bangladesh" }]
+            {
+              "pos": "B2",
+              "color": "red",
+              "alpha": 1,
+              "name": "A",
+              "correct": true
+            },
+            {
+              "pos": "C5",
+              "color": "red",
+              "alpha": 1,
+              "name": "A"
+            },
+            {
+              "pos": "E4",
+              "color": "red",
+              "alpha": 1,
+              "name": "A"
+            }
           ]
         }
       }

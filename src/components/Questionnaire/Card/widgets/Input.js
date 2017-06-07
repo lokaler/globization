@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from './Slider/Slider';
+import Grid from './Grid/Grid';
 import Choices from './Choices/Choices';
 import { get } from 'lodash';
 
 const WidgetFactory = {
   slider: React.createFactory(Slider),
   choices: React.createFactory(Choices),
+  grid: React.createFactory(Grid),
 };
 
 export default class Input extends React.Component {
