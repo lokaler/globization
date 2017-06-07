@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import Option from './Option'
 import './Grid.css';
 
 export default class Grid extends React.Component {
@@ -13,39 +14,27 @@ export default class Grid extends React.Component {
     disabled: PropTypes.bool.isRequired
   }
 
-  grid2percent(pos) {
-    const gridSize = 5;
-    const alpha = 'ABCDEFGH'.split('')
-    const xPos = alpha.indexOf(pos[0])+1
-    const yPos = pos[1]
-    return [xPos/gridSize, yPos/gridSize]
+  setValue = (value) => {
+    const { id, actions, card } = this.props;
+    actions.updateUserInput(id, value);
+    actions.quizSubmitCard(card.key);
+    actions.updateUserInput(card.key, true);
+    // googleLogger('choice');
   }
-
 
   render() {
     console.log(this.props)
     const { source, questions, id, options, disabled, grid } = this.props;
 
-    const gridOverlay = options.choices.map(o => {
-      const pos = this.grid2percent(o.pos)
-      console.log(pos, o)
-      return (
-        <div 
-          className="choice"
-          key={o.pos}
-          style={{ 
-            left: pos[0]*70 + '%',
-            top: pos[1]*70 + '%',
-          }}
-        >{o.name}</div>
-      )
-    })
-
     return (
       <div>
-        <div className="choices">
+        <div className="options">
           <img src={source} alt="grid" />
-          {gridOverlay}
+          {
+            options.choices.map(entry => {
+              return <Option {...entry} onClick={this.setValue} key={entry.position} />
+            })
+          }
         </div>
       </div>
     );
