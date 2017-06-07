@@ -1,11 +1,9 @@
 /* eslint-disable */
 
-import React, { PropTypes } from 'react';
-// import cssModules from 'react-css-modules';
+import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './vis.css';
 import translate from 'logic/translate';
-
-// @cssModules(styles)
 
 export default class LinkedDatasetMenuComponent extends React.Component {
 

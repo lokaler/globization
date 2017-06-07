@@ -1,4 +1,5 @@
-import React, { PropTypes as PT } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import translate from 'logic/translate';
 import styles from './Choices.css';
 import RadioInput from './RadioInput';
@@ -10,13 +11,13 @@ const noop = () => {}; // eslint-disable-line arrow-body-style
 export default class Choices extends React.Component {
 
   static propTypes = {
-    actions: PT.object.isRequired,
-    questions: PT.object.isRequired,
+    actions: PropTypes.object.isRequired,
+    questions: PropTypes.object.isRequired,
     // --- for this component only ---
-    id: PT.string.isRequired,
-    options: PT.object.isRequired,
-    disabled: PT.bool.isRequired,
-    histogramData: PT.oneOfType([PT.bool, PT.object])
+    id: PropTypes.string.isRequired,
+    options: PropTypes.object.isRequired,
+    disabled: PropTypes.bool.isRequired,
+    histogramData: PropTypes.oneOfType([PropTypes.bool, PropTypes.object])
   }
 
   setValue(value) {

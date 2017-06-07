@@ -1,21 +1,18 @@
 /* eslint-disable */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import d3 from 'd3';
 import _ from 'lodash';
 import utils from './VisUtils.js'
 import colorbrewer from 'colorbrewer'
 import Dataset from '../../logic/Dataset.js'
-// import cssModules from 'react-css-modules';
 import styles from './globe.css';
 import classnames from 'classnames';
 import AxisComponent from './AxisComponent.js';
 import DotsComponent from './DotsComponent.js';
 import translate from 'logic/translate';
 import { numberWithThousandsSeparator } from 'logic/formatting';
-
-
-// @cssModules(styles)
 
 export default class ScatterComponent extends React.Component {
 

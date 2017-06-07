@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { sponLogger } from 'logic/logging';
 import { createLogbuchEntry } from 'logic/logbuch';
 import styles from './Footer.css';

@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { component } from './ChoicesHistogram.css';
 
 export default class SliderHistogram extends React.Component {

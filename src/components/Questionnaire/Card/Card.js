@@ -1,6 +1,5 @@
-import React, { PropTypes } from 'react';
-// import cssModules from 'react-css-modules';
-
+import React from 'react';
+import PropTypes from 'prop-types';
 import Debug from './Debug/Debug';
 import Text from './widgets/Text';
 import Answer from './widgets/Answer/Answer';

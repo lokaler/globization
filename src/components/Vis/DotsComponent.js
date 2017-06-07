@@ -1,15 +1,16 @@
 /* eslint-disable */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import d3 from 'd3';
 import utils from './VisUtils.js'
 
 export default class DotsComponent extends React.Component {
 
   static propTypes = {
-    xScale: React.PropTypes.func.isRequired,
-    yScale: React.PropTypes.func.isRequired,
-    transitionDuration: React.PropTypes.number.isRequired
+    xScale: PropTypes.func.isRequired,
+    yScale: PropTypes.func.isRequired,
+    transitionDuration: PropTypes.number.isRequired
   };
 
   componentDidMount() {

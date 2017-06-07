@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 // import MicroMustache from 'micromustache';
 import Mustache from 'mustache';
@@ -11,7 +12,6 @@ import Logger from './../logging';
 import functions from 'logic/questionnaires/functions';
 import styles from './Answer.css';
 
-// @cssModules(styles)
 export default class Answer extends React.Component {
 
   static propTypes = {
@@ -198,7 +198,7 @@ export default class Answer extends React.Component {
           }
           <ReactMarkdown
             source={ answerContent.toString() }
-            renderers={{ Link: props => <a href={props.href} target="_blank">{props.children}</a> }}
+            renderers={{ Link: props => <a href={props.href} rel="noopener noreferrer" target="_blank">{props.children}</a> }}
           />
         </div>
       </div>

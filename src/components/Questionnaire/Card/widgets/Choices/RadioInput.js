@@ -1,14 +1,15 @@
-import React, { PropTypes as PT } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './RadioInput.css';
 
 export default class RadioInput extends React.Component {
 
   static propTypes = {
-    value: PT.string.isRequired,
-    label: PT.string.isRequired,
-    checked: PT.bool.isRequired,
-    disabled: PT.bool.isRequired,
-    onClick: PT.func.isRequired
+    value: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    checked: PropTypes.bool.isRequired,
+    disabled: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired
   }
 
   render() {

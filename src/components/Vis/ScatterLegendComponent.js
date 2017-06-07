@@ -1,6 +1,7 @@
 /* eslint-disable */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import d3 from 'd3';
 import utils from './VisUtils.js'
 import translate from 'logic/translate';
