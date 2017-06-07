@@ -16,6 +16,8 @@
   position: absolute;
   bottom: 0px;
   width: 100%; }
+  .mq-mobile :local(.footer) {
+    bottom: 20px; }
   :local(.footer) :local(.btn) {
     padding: 10px 30px 10px 30px;
     font-weight: bold;
