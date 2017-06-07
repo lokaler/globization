@@ -13,7 +13,8 @@
   border-radius: 70px; }
 
 :local(.footer) {
-  margin-top: 30px;
+  position: absolute;
+  bottom: 0px;
   width: 100%; }
   :local(.footer) :local(.btn) {
     padding: 10px 30px 10px 30px;

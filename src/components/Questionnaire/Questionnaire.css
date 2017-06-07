@@ -177,12 +177,14 @@
     font-size: 1rem;
     position: absolute;
     z-index: 100;
-    min-height: 500px; }
+    min-height: 500px;
+    height: 100%; }
   .mq-mobile :local(.questions) {
     height: 100vh;
     padding-top: 10px; }
   :local(.questions) > div {
-    position: relative; }
+    position: relative;
+    height: 100%; }
   :local(.questions) .widget {
     margin-top: 1em;
     width: 100%; }

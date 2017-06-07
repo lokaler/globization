@@ -23,7 +23,9 @@
 
 :local(.footer) {
 
-  margin-top: 30px;
+  // margin-top: 30px;
+  position: absolute;
+  bottom:0px;
   width: 100%;
 
   :local(.btn){
