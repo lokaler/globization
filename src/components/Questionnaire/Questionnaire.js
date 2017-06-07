@@ -25,19 +25,13 @@ export default class Questionnaire extends React.Component {
 
     console.log(questions, totalCards)
 
-    if (!activeCard){
+    if (activeCard === null){
       return null
     }
 
     if (questions.validationError) {
       return <Error>{ questions.validationError.message }</Error>;
     }
-
-    // if (hideCard) {
-    //   return (
-    //     <ShowCardButton { ...this.props }/>
-    //   )
-    // }
 
     return (
       <div className={hideCard ? 'inactive': ''}>

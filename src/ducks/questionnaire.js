@@ -121,6 +121,7 @@ export function reducer(state = initialState, action) {
       };
 
     case SET_CARD:
+      // not sure background should riside here...
       const background = state.cards[action.index].background;
       let dataset = null;
       if(['globe', 'map', 'scatterplot'].indexOf(background.type) >= 0){

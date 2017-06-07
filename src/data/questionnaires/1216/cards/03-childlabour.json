@@ -3,7 +3,7 @@
   "title": "3. Karte - Kinderarbeit",
   "background": {
     "type": "globe",
-    "source": "childrenlabour"
+    "source": "limitedcontracts1984"
   },
   "content": [
     {
@@ -23,29 +23,26 @@
       }
     },{
       "input": {
-        "key": "amountChildLabour",
+        "key": "coal",
         "type": "grid",
         "source": "http://cdn1.spiegel.de/images/image-1147890-860_galleryfree-vgmp-1147890.jpg",
         "options": {
           "choices": [
             {
-              "pos": "B2",
-              "color": "red",
-              "alpha": 1,
-              "name": "A",
+              "position": "B2",
+              "opacity": 1,
+              "label": "A",
               "correct": true
             },
             {
-              "pos": "C5",
-              "color": "red",
-              "alpha": 1,
-              "name": "A"
+              "position": "C5",
+              "label": "B"
             },
             {
-              "pos": "E4",
-              "color": "red",
-              "alpha": 1,
-              "name": "A"
+              "position": "E4",
+              "opacity": 1,
+              "label": "C",
+              "color": "#FFF"
             }
           ]
         }
@@ -54,20 +51,15 @@
     {
       "answer": {
         "answerKey": [
-          "!i.amountChildLabour && 'notSubmitted'",
-          "f.panToCountry('CMR') && false",
-          "f.isMobile() && f.setView('map')",
-          "!f.isMobile() && f.setView('globe')",
-          "i.amountChildLabour"
+          "!i.coal && 'notSubmitted'",
+          "i.coal"
         ],
         "answerContext": {},
         "templates": {
           "notSubmitted": {
             "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
           },
-
-
-          "amountChildLabourChoice_1": {
+          "B2": {
             "de": [
               "Stimmt. Fast jedes zweite Kind in Kamerun muss arbeiten - das ist weltweit gesehen ein trauriger Spitzenwert."
             ],
@@ -75,7 +67,7 @@
               "That’s correct. Almost half of all children in Cameroon must work. Compared to other figures around the world, it is a tragically high figure."
             ]
           },
-          "amountChildLabourChoice_2": {
+          "C5": {
             "de": [
               "Falsch. Im Sudan muss zwar jedes fünfte Kind arbeiten. In Kamerun ist es jedoch jedes zweite."
             ],
@@ -83,7 +75,7 @@
               "Wrong. One-fifth of Sudan’s children must work. The figure is higher in Cameroon, where every second child works."
             ]
           },
-          "amountChildLabourChoice_3": {
+          "E4": {
             "de": [
               "Falsch. In Bangladesch müssen rund 4 Prozent der Kinder arbeiten - das ist im weltweiten Vergleich ein recht guter Wert. In Kamerun hingegen muss fast jedes zweite Kind arbeiten - das ist weltweit gesehen traurige Spitze."
             ],
