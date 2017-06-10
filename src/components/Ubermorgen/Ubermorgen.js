@@ -88,7 +88,7 @@ export default class UbermorgenApp extends React.Component {
     return (
       <div className={ responsiveClass }>
         <div className={ styles.container } ref="container">
-          <div ref="left" className="left">
+          <div className="left">
             <Background {...this.props}/>
           </div>
           <div className="right">

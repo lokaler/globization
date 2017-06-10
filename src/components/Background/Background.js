@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Vis from '../Vis/VisWrapper';
-import './Background.css';
+import style from './Background.css';
 
 export default class Background extends React.PureComponent {
 
@@ -23,7 +23,7 @@ export default class Background extends React.PureComponent {
     // Prototype for Background
 
     return (
-      <div>
+      <div className={style.container}>
         <img src={background.source} alt="background"/>
       </div>
     );

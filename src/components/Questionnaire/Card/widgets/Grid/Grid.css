@@ -1,5 +1,5 @@
-img {
+:local(.container) img {
   width: 100%; }
 
-.options {
+:local(.container) .options {
   position: relative; }

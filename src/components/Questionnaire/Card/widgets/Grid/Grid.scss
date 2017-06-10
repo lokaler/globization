@@ -1,7 +1,10 @@
-img {
-	width: 100%;
-}
+:local(.container) {
 
-.options {
-	position: relative;
+	img {
+		width: 100%;
+	}
+
+	.options {
+		position: relative;
+	}
 }

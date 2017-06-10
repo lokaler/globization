@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import Option from './Option'
-import './Grid.css';
+import style from './Grid.css';
 
 export default class Grid extends React.Component {
 
@@ -27,7 +27,7 @@ export default class Grid extends React.Component {
     const { source, questions, id, options, disabled, grid } = this.props;
 
     return (
-      <div>
+      <div className={style.container}>
         <div className="options">
           <img src={source} alt="grid" />
           {

@@ -12,7 +12,8 @@
 
 :local(.container) .left {
   position: absolute;
-  top: 0px; }
+  top: 0px;
+  height: 100%; }
 
 .rc-slider-tooltip {
   z-index: 400; }
