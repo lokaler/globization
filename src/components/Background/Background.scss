@@ -1,7 +1,17 @@
 :local(.container) {
 	height: 100%;
+	width: 100%;
+
+	&.inactive {
+		filter: blur(50px);
+		opacity: 0.4;
+	}
 	
 	img {
 		height: 100%;
+	}
+
+	iframe {
+		padding-top: 20px;
 	}
 }

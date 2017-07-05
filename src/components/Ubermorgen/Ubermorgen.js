@@ -23,6 +23,7 @@ export default class UbermorgenApp extends React.Component {
   }
 
   componentWillMount() {
+    console.log('remount')
     const { actions } = this.props;
     window.actions = actions; // quickhack for questionnaire functions
     actions.loadQuestionnaires(questionnaires);
@@ -32,9 +33,9 @@ export default class UbermorgenApp extends React.Component {
     // actions.fetchHistogramData('data/stats.json');
     const state = store.getState();
     actions.setQuestionnaire(state.questions.activeQuestionnaireId);
-    if (!state.questions.activeCard){
-      actions.setCard(0);
-    }
+    // if (!state.questions.activeCard){
+    //   actions.setCard(0);
+    // }
     // if (state.app.dataset) {
     //   actions.setDataSet(state.app.dataset);
     // }

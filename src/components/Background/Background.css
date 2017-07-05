@@ -1,4 +1,10 @@
 :local(.container) {
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
+  :local(.container).inactive {
+    filter: blur(50px);
+    opacity: 0.4; }
   :local(.container) img {
     height: 100%; }
+  :local(.container) iframe {
+    padding-top: 20px; }

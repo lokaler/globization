@@ -8,7 +8,7 @@ import dummyData from './dummy.json';
 
 export function prepareDataset(dataset) {
   // dummy datahack for testing because of the missing loader
-  dataset.data = dummyData;
+  // dataset.data = dummyData;
   for (let d of dataset.data) {
     d.value = +d.value;
     let e = _.find(masterjson, { alpha3: d.iso });
@@ -19,6 +19,7 @@ export function prepareDataset(dataset) {
     }
     d.onMap = t !== undefined;
     d.vergleich = e.vergleich;
+    // console.log(d)
   }
   /* eslint-disable */
   dataset.vergleichDomain = d3.extent(dataset.data, (d) => d.vergleich);

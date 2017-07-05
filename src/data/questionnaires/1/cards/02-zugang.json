@@ -1,0 +1,66 @@
+{
+  "key": "zugang",
+  "title": "zugang",
+  "background": {
+    "type": "globe",
+    "source": "trinkwasser"
+  },
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Zugang zu Trinkwasser",
+          "",
+          "Hierzulande hat jeder Zugang zu sauberem Trinkwasser. Das ist nicht überall so.",
+          "",
+          "**Was glauben Sie, in welchem Land ist gerade mal jeder dritte Mensch versorgt?**"
+        ],
+        "en": [
+          ""
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "choicesZugang",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["Answer_1", { "de": "Afghanistan", "en": "Afghanistan" }],
+            ["Answer_2", { "de": "Ecuador", "en": "Ecuador" }],
+            ["Answer_3", { "de": "Somalia", "en": "Somalia" }]
+           ]
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "f.panToCountry('SOM') && i.choicesZugang"
+        ],
+        "answerContext": {
+        },
+        "templates": {
+          "Answer_1": {
+            "de": [
+              "Nein, in Afghanistan hat gut die Hälfte der Menschen Zugang zu sauberem Trinkwasser. Am dramatischsten in die Situation in Somalia. Unter anderem führt dort der anhaltende Bürgerkrieg dazu, dass Wasserleitungen nicht instand gehalten werden können."
+            ],
+            "en": [""]
+          },
+          "Answer_2": {
+            "de": [
+              "Nein, in Ecuador haben die meisten Menschen Zugang zu sauberem Trinkwasser. Nicht so in Somalia: Unter anderem führt dort der anhaltende Bürgerkrieg dazu, dass Wasserleitungen nicht instand gehalten werden können."
+            ],
+            "en": [""]
+          },
+          "Answer_3": {
+            "de": [
+              "Korrekt. Unter anderem führt der anhaltende Bürgerkrieg in Somalia dazu, dass die Wasserleitungen nicht instand gehalten werden können, sodass die Mehrheit der Bevölkerung keinen dauerhaften Zugang zu sauberem Trinkwasser hat."
+            ],
+            "en": [""]
+          }
+        }
+      }
+    }
+  ]
+}

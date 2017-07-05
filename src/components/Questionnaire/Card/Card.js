@@ -77,7 +77,7 @@ export default class Questionnaire extends React.Component {
 
     return (
       <div>
-        { process.env.NODE_ENV === "development" && false &&
+        { process.env.NODE_ENV === "development" && false && 
           <Debug { ...this.props }/>
         }
         <Header { ...this.props }/>

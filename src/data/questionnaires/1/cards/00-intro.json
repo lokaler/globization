@@ -3,17 +3,17 @@
   "title": "Intro",
   "background": {
     "type": "globe",
-    "source": "meanworking"
+    "source": "trinkwasser"
   },
   "content": [
     {
       "text": {
         "de": [
-          "# Ungleichheit",
+          "# Wasser",
           "",
-          "Sind Jobs heute öfter befristet als vor 30 Jahren? Wo ist die Jugendarbeitslosigkeit am höchsten? Testen Sie Ihr Wissen",
+          "Jeder Mensch soll Zugang zu sauberem Trinkwasser und Sanitärversorgung haben. Von diesem Ziel ist die Weltgemeinschaft noch weit entfernt. Wie viel muss noch getan werden und wo hakt es?",
           "",
-          "Erkunden Sie im Quiz die Welt der Ungleichheit: Wie ungleich sind die Länder der Welt? Wann ist man eigentlich reich? Mit jeder Antwort bekommen Sie weitere Informationen auf der Weltkugel angezeigt."
+          "Gehen Sie mit dem interaktiven Globus auf Spurensuche!"
         ],
         "en": [
           "# BeyondTomorrow Explorer",

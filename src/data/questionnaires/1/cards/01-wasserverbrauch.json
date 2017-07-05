@@ -1,0 +1,70 @@
+{
+  "key": "wasserverbrauch",
+  "title": "wasserverbrauch",
+  "background": {
+    "type": "iframe",
+    "source": "https://datawrapper.dwcdn.net/ffbYs/1/"
+  },
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Wasserverbrauch",
+          "",
+          "Ob zum Trinken, Kochen, Duschen, Putzen oder Toilette Spülen: Der Mensch braucht Wasser – viel Wasser. Versuchen SIe einmal zu überschlagen:",
+          "",
+          "**Wie hoch schätzen Sie Ihren persönlichen Verbrauch am Tag ein?**"
+        ],
+        "en": [
+        
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderWasserverbrauch",
+        "type": "slider",
+        "options": {
+          "unit": "Liter",
+          "min": 0,
+          "value": 50,
+          "max": 400,
+          "step": 1
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "(i.sliderWasserverbrauch >= 0 && i.sliderWasserverbrauch <= 80) && 'Antwort_1'",
+          "(i.sliderWasserverbrauch >= 81 && i.sliderWasserverbrauch <= 143) && 'Antwort_2'",
+          "(i.sliderWasserverbrauch >= 144 && i.sliderWasserverbrauch <= 400) && 'Antwort_3'"
+        ],
+        "answerContext": {
+        },
+        "templates": {
+          "Antwort_1": {
+            "de": [
+              "Das würde Sie zu einem vergleichsweise sparsamen Deutschen machen. Der durchschnittliche Pro-Kopf-Verbrauch liegt laut Statistischem Bundesamt bei 121 Litern am Tag."
+            ],
+            "en": [
+            ]
+          },
+          "Antwort_2": {
+            "de": [
+              "Damit lägen Sie in der in Deutschland üblichen Spannbreite. Der durchschnittliche Pro-Kopf-Verbrauch liegt laut Statistischem Bundesamt bei 121 Litern am Tag."
+            ],
+            "en": [
+            ]
+          },
+          "Antwort_3": {
+            "de": [
+              "Das würde Sie zu einem vergleichsweise großzügigen Wasserverbraucher machen. Der Pro-Kopf-Durchschnitt liegt in Deutschland laut Statistischem Bundesamt bei 121 Litern am Tag."
+            ],
+            "en": [
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

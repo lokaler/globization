@@ -1,22 +1,22 @@
 import { validateQuestionnaire } from 'logic/questionnaires/validation';
 import { prepareDataset, emptyDataset } from './datasets';
 
-import cards1216 from './1216/cards/index';
-import datasets1216 from './1216/datasets/index';
+import cards1 from './1/cards/index';
+import datasets1 from './1/datasets/index';
 
 
 let questionnaires = {
-  1216: {
+  1: {
     title: {
-      de: 'Arbeit',
+      de: 'Quiz zu Wasser',
       en: 'work'
     },
     options: {
       showBackButton: true,
       lastButtonLabel: 'explore'
     },
-    cards: cards1216,
-    datasets: datasets1216
+    cards: cards1,
+    datasets: datasets1
   }
 };
 

@@ -39,6 +39,7 @@ export default class Globe extends React.Component {
       this.color
         .range(colors)
         .domain(dataset.domain);
+
     } else {
       this.color
         .range(['#FFF', '#FFF'])

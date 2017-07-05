@@ -1,7 +1,8 @@
 import store from 'store';
 import { isObject, isString, get } from 'lodash';
 import translations from 'data/translations.json';
-import master from '../data/map/master.csv';
+// import master from '../data/map/master.csv';
+import master from '../data/map/master.json';
 
 
 const countries = {};

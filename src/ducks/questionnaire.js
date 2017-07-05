@@ -21,7 +21,7 @@ const ERROR_HISTOGRAM_DATA = 'ERROR_HISTOGRAM_DATA';
 const initialState = {
   validationError: null,
   questionnaires: {},
-  activeQuestionnaireId: '1216',
+  activeQuestionnaireId: '1',
   activeCard: null,
   inputValues: {},
   cards: [],
@@ -46,7 +46,7 @@ export function reducer(state = initialState, action) {
       }
       const numCards = state.questionnaires[round].cards.length;
       const card = clamp(action.card, 0, numCards - 1);
-      const activeCard = card || state.activeCard; 
+      const activeCard = state.activeCard ? state.activeCard : card; 
       return {
         ...state,
         activeQuestionnaireId: round,
@@ -83,13 +83,14 @@ export function reducer(state = initialState, action) {
       if (state.validationError) {
         return state;
       }
-
       const questionnaires = state.questionnaires;
       const questionnaireId = action.questionnaireId;
       const questionnaire = questionnaires[questionnaireId];
-      const dataSetId = questionnaire.cards[0].dataset;
-      const dataSet = questionnaire.datasets.find((d) => d.key === dataSetId);
-      // console.log(dataSetId, dataSet, questionnaire.datasets);
+      const background = questionnaire.cards[state.activeCard].background;
+      let dataset = null;
+      if(['globe', 'map', 'scatterplot'].indexOf(background.type) >= 0){
+        dataset = questionnaire.datasets.find((d) => d.key === background.source);
+      }
 
       return {
         ...state,
@@ -97,7 +98,8 @@ export function reducer(state = initialState, action) {
         activeQuestionnaireId: questionnaireId,
         cards: questionnaire.cards,
         datasets: questionnaire.datasets,
-        dataset: dataSet,
+        dataset,
+        background,
         options: questionnaire.options
       };
     }
@@ -121,7 +123,6 @@ export function reducer(state = initialState, action) {
       };
 
     case SET_CARD:
-      // not sure background should riside here...
       const background = state.cards[action.index].background;
       let dataset = null;
       if(['globe', 'map', 'scatterplot'].indexOf(background.type) >= 0){
