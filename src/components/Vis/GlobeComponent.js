@@ -65,9 +65,11 @@ export default class GlobeComponent extends React.Component {
 
     // dunnow if this should be done here!
     this.geometries = topofeatures;
-    this.geometries.forEach((d) =>{
-      d.properties.fillColor = this.getFillColor(d.properties.iso);
-    });
+    // this.geometries.forEach((d) =>{
+    //   d.properties.fillColor = this.getFillColor(d.properties.iso);
+    // });
+
+    // console.log(this.props.color.domain())
 
     this.zoom = d3.behavior.zoom()
       .center([0,0])
@@ -241,6 +243,12 @@ export default class GlobeComponent extends React.Component {
     // ){
     //   update = true;
     // }
+    if(nextProps.color != this.props.color) {
+      this.geometries.forEach((d) =>{
+        d.properties.fillColor = this.getFillColor(d.properties.iso);
+      });
+      update = true;
+    }
 
     if(nextProps.questions.dataset != this.props.questions.dataset) {
       // console.log("new Dataset!", nextProps.color.domain());
@@ -261,6 +269,7 @@ export default class GlobeComponent extends React.Component {
       this.geometries.forEach((d) =>{
         d.properties.fillColor = this.getFillColor(d.properties.iso);
       });
+
 
       // tweening is not working for now
 

@@ -25,9 +25,7 @@ export default class Globe extends React.Component {
   constructor(props) {
     super(props);
 
-    this.color = d3.scale.quantile()
-      .range(colorbrewer['Oranges'][9])
-      .domain([0,10])
+    this.color = null
   }
 
   componentWillReceiveProps(nextProps){
@@ -36,12 +34,12 @@ export default class Globe extends React.Component {
 
     if(dataset && dataset.key !== 'none'){
       const colors = colorbrewer[dataset.colorSet][dataset.colorNum].filter((d,i) => i!==0);
-      this.color
+      this.color = d3.scale.quantile()
         .range(colors)
         .domain(dataset.domain);
 
     } else {
-      this.color
+      this.color = d3.scale.quantile()
         .range(['#FFF', '#FFF'])
         .domain([0,0]);
     }
