@@ -1,0 +1,76 @@
+{
+  "key": "suesswasser",
+  "title": "suesswasser",
+  "background": {
+    "type": "globe",
+    "source": "limitedcontracts1984"
+  },
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Süsswasser",
+          "",
+          "Nicht alles Wasser auf der Erde ist zum Trinken geeignet: Ein Teil des Süßwassers ist gefroren, Meerwasser würde ohne aufwändige Entsalzung den menschlichen Zellen das Wasser entziehen.",
+          "",
+          "**Was meinen Sie, wie hoch ist der Anteil an flüssigem Süßwasser auf der Welt?**"
+        ],
+        "en": [""]
+      }
+    },{
+      "input": {
+        "key": "gridSuesswasser",
+        "type": "grid",
+        "source": "test.jpg",
+        "options": {
+          "choices": [
+            {
+              "position": "B2",
+              "opacity": 1,
+              "label": "A",
+              "correct": true
+            },
+            {
+              "position": "C5",
+              "label": "B"
+            },
+            {
+              "position": "E4",
+              "opacity": 1,
+              "label": "C",
+              "color": "#FFF"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.gridSuesswasser"
+        ],
+        "answerContext": {},
+        "templates": {
+          "B2": {
+            "de": [
+              "Nein, tatsächlich macht das Salzwasser der Ozane rund 97 Prozent des Wassers auf der Erde aus. Ein Großteil des verbleibenden Süßwassers ist gefroren – an den Polkappen und auf Gletschern. Das flüssige Süßwasser findet sich vor allem im Grundwasser, aber auch in Seen, Flüssen und Mooren."
+            ],
+            "en": [""]
+          },
+          "C5": {
+            "de": [
+              "Nein, tatsächlich macht das Salzwasser der Ozane rund 97 Prozent des Wassers auf der Erde aus. Ein Großteil des verbleibenden Süßwassers ist gefroren – an den Polkappen und auf Gletschern. Das flüssige Süßwasser findet sich vor allem im Grundwasser, aber auch in Seen, Flüssen und Mooren."
+            ],
+            "en": [""]
+          },
+          "E4": {
+            "de": [
+              "Richtig, das Salzwasser der Ozeana macht rund 97 Prozent des Wassers auf der Erde aus. Ein Großteil des verbleibenden Süßwassers ist gefroren – an den Polkappen und auf Gletschern. Das flüssige Süßwasser findet sich vor allem im Grundwasser, aber auch in Seen, Flüssen und Mooren."
+            ],
+            "en": [""]
+          }
+        }
+      }
+    }
+  ]
+}
