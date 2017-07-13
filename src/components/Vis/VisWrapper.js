@@ -85,7 +85,7 @@ export default class Globe extends React.Component {
     return (
       <div className="vis" style={ disableEvents }>
         <div>
-          { dataset &&
+          { dataset && this.color && 
             <Component color={this.color} {...this.props} width={width} height={height} />
           }
           <div className="menu">

@@ -17,6 +17,7 @@ export default class GlobeComponent extends React.Component {
     vis: PropTypes.object.isRequired,
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
+    color: PropTypes.func.isRequired
   };
 
   constructor(props) {
