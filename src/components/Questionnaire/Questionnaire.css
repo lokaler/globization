@@ -161,13 +161,9 @@
 :local(.questions) {
   line-height: 1.4em;
   background: #FFF;
-  color: #333;
-  transition: transform 0.2s, opacity 0.2s; }
-  .inactive :local(.questions) {
-    transform: translate(0, -50px) scale(1.5);
-    opacity: 0;
-    pointer-events: none; }
+  color: #333; }
   .mq-desktop :local(.questions) {
+    transition: transform 0.2s, opacity 0.2s;
     width: 70%;
     margin-left: 15%;
     margin-top: 10%;
@@ -179,6 +175,12 @@
     z-index: 100;
     min-height: 500px;
     height: 100%; }
+  .mq-desktop .inactive :local(.questions) {
+    transform: translate(0, -50px) scale(1.5);
+    opacity: 0;
+    pointer-events: none; }
+  .mq-mobile .inactive :local(.questions) {
+    display: none; }
   .mq-mobile :local(.questions) {
     height: 100vh;
     padding-top: 10px; }
