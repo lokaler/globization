@@ -3,9 +3,19 @@
   margin-bottom: 20px; }
   .mq-mobile :local(.component) {
     margin-left: 2px; }
-  :local(.component) .bar {
-    border-top: 4px solid #cdded3;
-    font-size: 10px;
-    text-align: right;
-    margin-bottom: 5px;
-    margin-left: 19px; }
+  :local(.component) :local(.choice) {
+    position: relative; }
+  :local(.component) :local(.histo) {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 0px; }
+    :local(.component) :local(.histo) :local(.label) {
+      position: absolute;
+      right: 2px;
+      font-size: 10px; }
+    :local(.component) :local(.histo) :local(.bar) {
+      position: absolute;
+      background: #EEE;
+      height: 2px;
+      display: none; }

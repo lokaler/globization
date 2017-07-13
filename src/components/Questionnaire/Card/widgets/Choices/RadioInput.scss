@@ -1,11 +1,10 @@
 :local(.component) {
 
   //border: 1px dotted red;
-
   display: flex;
   flex-direction: row;
-
   margin-bottom: 6px;
+  z-index: 10;
 
 }
 

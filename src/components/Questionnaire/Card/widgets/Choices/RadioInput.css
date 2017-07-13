@@ -1,7 +1,8 @@
 :local(.component) {
   display: flex;
   flex-direction: row;
-  margin-bottom: 6px; }
+  margin-bottom: 6px;
+  z-index: 10; }
 
 :local(.left) {
   flex-grow: 0;
