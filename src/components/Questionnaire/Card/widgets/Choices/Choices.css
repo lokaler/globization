@@ -1,8 +1,6 @@
 :local(.component) {
   margin-top: 20px;
   margin-bottom: 20px; }
-  .mq-mobile :local(.component) {
-    margin-left: 2px; }
   :local(.component) :local(.choice) {
     position: relative; }
   :local(.component) :local(.histo) {

@@ -48,8 +48,10 @@ export default class Choices extends React.Component {
             checked={ value === currentValue }
             disabled={ disabled }
             onClick={ onClick }
+            histoWidth={ histogramData ? histoSize : null}
+            histoLabel={ histogramData ? translate(histoVotes, { isSimpleNumber: true }) : null }
           />
-          { histogramData &&
+          { histogramData && false &&
           <div className={styles.histo} key={ `${ id }_${ value }_answer` }>
             <div className={styles.bar} style={{ width: histoSize }}></div>
             <div className={styles.label}>{ translate(histoVotes, { isSimpleNumber: true }) }</div>

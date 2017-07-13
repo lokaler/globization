@@ -13,24 +13,32 @@ export default class RadioInput extends React.Component {
   }
 
   render() {
-    const { value, checked, label, disabled, onClick } = this.props;
+    const { value, checked, label, disabled, onClick, histoWidth, histoLabel } = this.props;
     const noop = () => {}; // eslint-disable-line arrow-body-style
 
     return (
-      <div className={ styles.component } onClick={ onClick }>
-        <div className={ styles.left }>
-          <input
-            type="radio"
-            value={ value }
-            checked={ checked }
-            onChange={ noop } // so react doesn't complain
-            disabled={ disabled }
-          />
-        </div>
-        <div className={ styles.right }>
+      <div className={ [styles.component, histoWidth ? 'voted' : ''].join(' ') } onClick={ onClick }>
+        <div className={ styles.label }>
           { label }
         </div>
+        { histoWidth &&
+          <div>
+            <div className={ styles.histoBar } style={{ width: histoWidth }}></div>
+            <div className={ styles.histoLabel }>{ histoLabel }</div>
+          </div>
+        }
       </div>
     );
   }
 }
+
+
+// <div className={ styles.left }>
+//   <input
+//     type="radio"
+//     value={ value }
+//     checked={ checked }
+//     onChange={ noop } // so react doesn't complain
+//     disabled={ disabled }
+//   />
+// </div>
