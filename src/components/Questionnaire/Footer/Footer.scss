@@ -29,7 +29,8 @@
   width: 100%;
 
   .mq-mobile & {
-    bottom: 20px;
+    margin-top: 20px; 
+    position: relative;
   }
 
   :local(.btn){

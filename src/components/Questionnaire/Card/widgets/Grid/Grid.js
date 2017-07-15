@@ -23,8 +23,9 @@ export default class Grid extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     const { source, questions, id, options, disabled, grid } = this.props;
+
+    if(disabled) return null
 
     return (
       <div className={style.container}>

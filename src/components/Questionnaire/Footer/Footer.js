@@ -48,9 +48,7 @@ export default class Footer extends React.Component {
     const veryLastCard = activeCard === questions.cards.length - 1;
     let label = 'next';
 
-    if (lastCard) {
-      label = questions.options.lastButtonLabel || 'last';
-    } else if (veryLastCard) {
+    if (veryLastCard) {
       label = 'close';
     } else if (firstCard) {
       label = 'lets go';

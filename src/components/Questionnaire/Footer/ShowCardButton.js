@@ -13,7 +13,8 @@ export default class ShowCardButton extends React.PureComponent {
 
   onClick = () => {
     const { actions, questions } = this.props;
-    const cardIndex = questions.activeCard + 1;
+    let cardIndex = questions.activeCard + 1;
+    if(cardIndex >= questions.cards.length) cardIndex = 0
     actions.setCard(cardIndex);
   }
 
