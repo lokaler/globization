@@ -26,7 +26,7 @@
   color: #333;
 
   .mq-desktop & {
-    transition:transform 0.2s, opacity 0.2s;
+    transition:transform 1s;
     width: 70%;
     margin-left: 15%;
     margin-top: 10%;
@@ -42,8 +42,7 @@
 
   .inactive & {
     .mq-desktop & {
-      transform: translate(0,-50px) scale(1.5);
-      opacity: 0;
+      transform: translate(-600px,-100px) scale(0.7) rotate(20deg);
       pointer-events:none;
     }
     .mq-mobile & {
