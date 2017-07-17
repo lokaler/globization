@@ -12,6 +12,9 @@
   :local(.component).voted {
     border: 1px solid #EEE;
     color: #000; }
+  :local(.component).active {
+    border: 1px solid #666;
+    color: #000; }
 
 :local(.label) {
   flex-grow: 1;

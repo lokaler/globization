@@ -17,7 +17,7 @@ export default class RadioInput extends React.Component {
     const noop = () => {}; // eslint-disable-line arrow-body-style
 
     return (
-      <div className={ [styles.component, histoWidth ? 'voted' : ''].join(' ') } onClick={ onClick }>
+      <div className={ [styles.component, histoWidth ? 'voted' : '', checked ? 'active' : ''].join(' ') } onClick={ onClick }>
         <div className={ styles.label }>
           { label }
         </div>

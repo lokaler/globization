@@ -16,6 +16,11 @@
     border: 1px solid #EEE;
     color: #000;
   }
+
+  &.active {
+    border: 1px solid #666;
+    color: #000;
+  }
 }
 
 :local(.label) {
