@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Vis from '../Vis/VisWrapper';
 import style from './Background.css';
+import NextButton from './NextButton';
 
 export default class Background extends React.PureComponent {
 
@@ -17,14 +18,11 @@ export default class Background extends React.PureComponent {
     const showVis = (['globe', 'map', 'scatterplot'].indexOf(background.type) >= 0)
     // console.log(this.props, showVis, background)
 
-    if(showVis) {
-      return <Vis { ...this.props } />;
-    }
-
-    // Prototype for Background
-
     return (
       <div className={[style.container, hideCard ? 'active' : 'inactive'].join(' ')}>
+        { showVis &&
+          <Vis { ...this.props } />
+        }
         { background.type === 'image' &&
           <img
             src={background.source}
@@ -42,6 +40,7 @@ export default class Background extends React.PureComponent {
             height="100%">
           </iframe>
         }
+        <NextButton { ...this.props }/>
       </div>
     );
   }

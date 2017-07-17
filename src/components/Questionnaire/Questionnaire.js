@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Card from './Card/Card';
 import Error from './Error/Error';
 import styles from './Questionnaire.css';
-import ShowCardButton from './Footer/ShowCardButton';
 
 export default class Questionnaire extends React.Component {
 
@@ -40,9 +39,6 @@ export default class Questionnaire extends React.Component {
         </div>
         { !app.mobile && totalCards > 0 &&
           this.cardDummys(totalCards)
-        }
-        { hideCard && 
-          <ShowCardButton { ...this.props }/>
         }
       </div>
     );

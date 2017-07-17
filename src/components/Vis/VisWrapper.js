@@ -99,7 +99,7 @@ export default class Globe extends React.Component {
           { hideCard && 
             <TooltipComponent tooltip={this.props.vis.tooltip} />
           }
-          { dataset && dataset.key != "none" && hideCard &&
+          { dataset && dataset.key != "none" && hideCard && false &&
             <Legend color={this.color} {...this.props} />
           }
         </div>

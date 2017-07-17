@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import translate from 'logic/translate';
-import styles from './Footer.css';
+import styles from './NextButton.css';
 
-export default class ShowCardButton extends React.PureComponent {
+export default class NextButton extends React.PureComponent {
 
   static propTypes = {
     actions: PropTypes.object.isRequired,
@@ -21,7 +21,7 @@ export default class ShowCardButton extends React.PureComponent {
   render() {
 
     return (
-      <div className={ styles.showcard } onClick={ this.onClick }>
+      <div className={ styles.button } onClick={ this.onClick }>
         <div>{ translate('next') }</div>
       </div>
     );
