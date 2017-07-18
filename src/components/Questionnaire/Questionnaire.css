@@ -195,10 +195,28 @@
       clear: both;
       padding-bottom: 15px; }
   :local(.questions) .header {
-    position: absolute;
-    right: 0;
-    top: -2px;
-    color: #b7b7b7; }
+    position: relative; }
+    :local(.questions) .header .title {
+      font-size: 1em;
+      margin-top: 0px; }
+      .mq-desktop :local(.questions) .header .title {
+        margin-top: -10px;
+        font-weight: bold;
+        line-height: 1.2em;
+        padding-bottom: 6px;
+        margin-bottom: 27px;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #b7b7b7;
+        border-bottom: 1px solid #ececec; }
+      .mq-mobile :local(.questions) .header .title {
+        font-weight: normal;
+        color: #a7a7a7; }
+    :local(.questions) .header .numbers {
+      position: absolute;
+      right: 0;
+      top: -2px;
+      color: #b7b7b7; }
   :local(.questions) a {
     text-decoration: none;
     color: #A74405; }
@@ -227,22 +245,6 @@
       -moz-animation: none;
       -ms-animation: none;
       animation: none; }
-  :local(.questions) h1 {
-    font-size: 1em;
-    margin-top: 0px; }
-    .mq-desktop :local(.questions) h1 {
-      margin-top: -10px;
-      font-weight: bold;
-      line-height: 1.2em;
-      padding-bottom: 6px;
-      margin-bottom: 27px;
-      font-weight: normal;
-      text-transform: uppercase;
-      color: #b7b7b7;
-      border-bottom: 1px solid #ececec; }
-    .mq-mobile :local(.questions) h1 {
-      font-weight: normal;
-      color: #a7a7a7; }
   :local(.questions) button {
     margin-top: 20px;
     width: 100%;

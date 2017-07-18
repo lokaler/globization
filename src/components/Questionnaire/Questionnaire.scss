@@ -61,6 +61,8 @@
     height: 100%;
   }
 
+
+
   .widget {
     &:first-child {
       margin-top: 0;
@@ -75,10 +77,35 @@
   }
 
   .header {
-    position: absolute;
-    right: 0;
-    top: -2px;
-    color: #b7b7b7;
+    position: relative;
+    .title {
+      font-size: 1em;
+      margin-top: 0px;
+
+      .mq-desktop & {
+        margin-top: -10px;
+        font-weight: bold;
+        line-height: 1.2em;
+        padding-bottom: 6px;
+        margin-bottom: 27px;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #b7b7b7;
+        border-bottom: 1px solid #ececec;
+      }
+      .mq-mobile & {
+        font-weight: normal;
+        color: #a7a7a7;
+      }
+    }
+
+    .numbers {
+      position: absolute;
+      right: 0;
+      top: -2px;
+      color: #b7b7b7;
+    }
+    
   }
 
   a {
@@ -110,27 +137,6 @@
       box-shadow: 0px 3px 4px rgba(0,0,0,0.1);
       background: #577562;
       -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
-    }
-  }
-
-  h1 {
-    font-size: 1em;
-    margin-top: 0px;
-
-    .mq-desktop & {
-      margin-top: -10px;
-      font-weight: bold;
-      line-height: 1.2em;
-      padding-bottom: 6px;
-      margin-bottom: 27px;
-      font-weight: normal;
-      text-transform: uppercase;
-      color: #b7b7b7;
-      border-bottom: 1px solid #ececec;
-    }
-    .mq-mobile & {
-      font-weight: normal;
-      color: #a7a7a7;
     }
   }
 

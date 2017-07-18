@@ -11,6 +11,7 @@ export default class Header extends React.PureComponent {
 
   render() {
     const { cards, activeCard } = this.props.questions;
+    const { title } = cards[activeCard];
     const totalCards = cards.length-1;
 
     if(activeCard === 0){
@@ -19,7 +20,8 @@ export default class Header extends React.PureComponent {
 
     return (
       <div className="header">
-        ({ activeCard }/{ totalCards })
+        <div className="title">{ title }</div>
+        <div className="numbers">({ activeCard }/{ totalCards })</div>
       </div>
     );
   }

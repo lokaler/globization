@@ -1,6 +1,6 @@
 {
   "key": "intro",
-  "title": "Intro",
+  "title": "Wasser",
   "background": {
     "type": "globe",
     "source": "trinkwasser"
@@ -9,8 +9,6 @@
     {
       "text": {
         "de": [
-          "# Wasser",
-          "",
           "Jeder Mensch soll Zugang zu sauberem Trinkwasser und Sanitärversorgung haben. Von diesem Ziel ist die Weltgemeinschaft noch weit entfernt. Wie viel muss noch getan werden und wo hakt es?",
           "",
           "Gehen Sie mit dem interaktiven Globus auf Spurensuche!"

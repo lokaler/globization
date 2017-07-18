@@ -7,12 +7,18 @@
   },
   "content": [
     {
+      "intro": {
+        "de": [
+          "Hierzulande hat jeder Zugang zu sauberem Trinkwasser. Das ist nicht überall so."
+        ],
+        "en": [
+          ""
+        ]
+      }
+    },
+    {
       "text": {
         "de": [
-          "# Zugang zu Trinkwasser",
-          "",
-          "Hierzulande hat jeder Zugang zu sauberem Trinkwasser. Das ist nicht überall so.",
-          "",
           "**Was glauben Sie, in welchem Land ist gerade mal jeder dritte Mensch versorgt?**"
         ],
         "en": [

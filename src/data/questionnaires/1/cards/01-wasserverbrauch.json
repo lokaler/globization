@@ -7,19 +7,26 @@
   },
   "content": [
     {
-      "text": {
+      "intro": {
         "de": [
-          "# Wasserverbrauch",
-          "",
-          "Ob zum Trinken, Kochen, Duschen, Putzen oder Toilette Spülen: Der Mensch braucht Wasser – viel Wasser. Versuchen SIe einmal zu überschlagen:",
-          "",
-          "**Wie hoch schätzen Sie Ihren persönlichen Verbrauch am Tag ein?**"
+          "Ob zum Trinken, Kochen, Duschen, Putzen oder Toilette Spülen: Der Mensch braucht Wasser – viel Wasser. Versuchen SIe einmal zu überschlagen:"
         ],
         "en": [
         
         ]
       }
-    },{
+    },
+    {
+      "text": {
+        "de": [
+         "**Wie hoch schätzen Sie Ihren persönlichen Verbrauch am Tag ein?**"
+        ],
+        "en": [
+        
+        ]
+      }
+    },
+    {
       "input": {
         "key": "sliderWasserverbrauch",
         "type": "slider",

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Debug from './Debug/Debug';
 import Text from './widgets/Text';
+import Intro from './widgets/Intro';
 import Answer from './widgets/Answer/Answer';
 import Input from './widgets/Input';
 import Submit from './widgets/Submit';
@@ -14,6 +15,7 @@ import Header from './Header';
 
 const widgets = {
   text: Text,
+  intro: Intro,
   answer: Answer,
   input: Input,
   submit: Submit,

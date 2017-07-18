@@ -1,6 +1,6 @@
 {
   "key": "wasserknapp",
-  "title": "wasserknapp",
+  "title": "Drohende Wasserknappheit",
   "background": {
     "type": "globe",
     "source": "wasserknapp"
@@ -9,11 +9,17 @@
     {
       "text": {
         "de": [
-          "# Drohende Wasserknappheit",
-          "",
-          "Die UN wollen die weltweite Wasser- und Sanitärsituation verbessern. Ein ehrgeiziges Ziel – angesichts der wachsenden Weltbevölkerung, Klimaerwärmung und des steigenden Wasserbedarfs der Industrie.",
-          "",
-          "**Wissenschaftler prognostizieren, dass bis 2040 vielerorts eine Wasserknappheit droht. Welche Länder sind besonders gefährdet?**"
+          "Die UN wollen die weltweite Wasser- und Sanitärsituation verbessern. Ein ehrgeiziges Ziel – angesichts der wachsenden Weltbevölkerung, Klimaerwärmung und des steigenden Wasserbedarfs der Industrie."
+        ],
+        "en": [
+          ""
+        ]
+      }
+    },
+    {
+      "text": {
+        "de": [
+         "**Wissenschaftler prognostizieren, dass bis 2040 vielerorts eine Wasserknappheit droht. Welche Länder sind besonders gefährdet?**"
         ],
         "en": [
           ""

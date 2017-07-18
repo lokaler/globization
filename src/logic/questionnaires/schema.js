@@ -55,6 +55,7 @@ export const questionnaire = array({
         items: object({
           oneOf: [
             contentPart('text'),
+            contentPart('intro'),
             contentPart('input'),
             contentPart('submit'),
             contentPart('grid'),
@@ -71,6 +72,7 @@ export const questionnaire = array({
 export const widgets = {
 
   text: multiLangArrayOfStrings,
+  intro: multiLangArrayOfStrings,
 
   input: object({
     required: ['key', 'type', 'options'],

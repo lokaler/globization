@@ -7,17 +7,22 @@
   },
   "content": [
     {
+      "intro": {
+        "de": [
+          "Nicht alles Wasser auf der Erde ist zum Trinken geeignet: Ein Teil des Süßwassers ist gefroren, Meerwasser würde ohne aufwändige Entsalzung den menschlichen Zellen das Wasser entziehen."
+        ],
+        "en": [""]
+      }
+    },
+    {
       "text": {
         "de": [
-          " # Süsswasser",
-          "",
-          "Nicht alles Wasser auf der Erde ist zum Trinken geeignet: Ein Teil des Süßwassers ist gefroren, Meerwasser würde ohne aufwändige Entsalzung den menschlichen Zellen das Wasser entziehen.",
-          "",
           "**Was meinen Sie, wie hoch ist der Anteil an flüssigem Süßwasser auf der Welt?**"
         ],
         "en": [""]
       }
-    },{
+    },
+    {
       "input": {
         "key": "gridSuesswasser",
         "type": "grid",

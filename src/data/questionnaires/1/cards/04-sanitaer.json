@@ -7,19 +7,26 @@
   },
   "content": [
     {
+      "intro": {
+        "de": [
+          "Nicht weniger verheerend als fehlendes Trinkwasser ist es, wenn Menschen keinen Zugang zu Toiletten haben oder keine Seife zum Händewaschen: mangelnde Hygiene verursacht Krankheiten und Tod."
+          ],
+        "en": [
+        
+        ]
+      }
+    },
+    {
       "text": {
         "de": [
-          "# Sanitärversorgung",
-          "",
-          "Nicht weniger verheerend als fehlendes Trinkwasser ist es, wenn Menschen keinen Zugang zu Toiletten haben oder keine Seife zum Händewaschen: mangelnde Hygiene verursacht Krankheiten und Tod.",
-          "",
           "**Wie hoch ist weltweit der Anteil jener auf der Welt, die über eine ausreichende Sanitärversorgung verfügen?**"
         ],
         "en": [
         
         ]
       }
-    },{
+    },
+    {
       "input": {
         "key": "sliderSanitaer",
         "type": "slider",
