@@ -1,0 +1,66 @@
+{
+  "key": "abwasser",
+  "title": "abwasser",
+  "background": {
+    "type": "globe",
+    "source": "abwasser"
+  },
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Drohende Wasserknappheit",
+          "",
+          "Unser Wasserverbrauch führt auch zu jeder Menge schmutzigem Abwasser. Ungereinigt kann es sauberes Trinkwasser verschmutzen und unbrauchbar machen.",
+          "",
+          "**Wo, glauben Sie, bleibt ein höherer Abwasseranteil ungereinigt?**"
+        ],
+        "en": [
+          ""
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "choicesAbwasser",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["Answer_1", { "de": "Rumänien", "en": "Rumänien" }],
+            ["Answer_2", { "de": "Mexiko", "en": "Mexiko" }],
+            ["Answer_3", { "de": "China", "en": "China" }]
+           ]
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "f.panToCountry('ROU') && i.choicesAbwasser"
+        ],
+        "answerContext": {
+        },
+        "templates": {
+          "Answer_1": {
+            "de": [
+              "Genau, in Rumänien ist der Anteil an ungereinigtem Abwasser mit mehr als 90 Prozent sehr hoch."
+            ],
+            "en": [""]
+          },
+          "Answer_2": {
+            "de": [
+              "In Mexiko wird rund die Hälfte der Abwässer nicht gereinigt. Noch sehr viel höher ist der Anteil aber in Rumänien, mit mehr als 90 Prozent."
+            ],
+            "en": [""]
+          },
+          "Answer_3": {
+            "de": [
+              "Nein, im Gegenteil: In China wird der Großteil der Abwässer gereinigt, nur bei fünf Prozent ist das nicht der Fall. In Rumänien hingegen wird mehr als 90 Prozent des Abwassers nicht gereinigt."
+            ],
+            "en": [""]
+          }
+        }
+      }
+    }
+  ]
+}

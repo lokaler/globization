@@ -1,0 +1,274 @@
+[
+  {
+    "iso": "ARG",
+    "value": 88
+  },
+  {
+    "iso": "ARM",
+    "value": 75
+  },
+  {
+    "iso": "AUS",
+    "value": 15
+  },
+  {
+    "iso": "AUT",
+    "value": 1
+  },
+  {
+    "iso": "AZE",
+    "value": 76
+  },
+  {
+    "iso": "BFA",
+    "value": 97
+  },
+  {
+    "iso": "BHR",
+    "value": 48
+  },
+  {
+    "iso": "BIH",
+    "value": 95
+  },
+  {
+    "iso": "BLR",
+    "value": 38
+  },
+  {
+    "iso": "BRA",
+    "value": 70
+  },
+  {
+    "iso": "CAN",
+    "value": 15
+  },
+  {
+    "iso": "CHE",
+    "value": 23
+  },
+  {
+    "iso": "CHL",
+    "value": 31
+  },
+  {
+    "iso": "CHN",
+    "value": 5
+  },
+  {
+    "iso": "COL",
+    "value": 75
+  },
+  {
+    "iso": "CRI",
+    "value": 85
+  },
+  {
+    "iso": "CUB",
+    "value": 73
+  },
+  {
+    "iso": "CYP",
+    "value": 17
+  },
+  {
+    "iso": "DEU",
+    "value": 2
+  },
+  {
+    "iso": "DOM",
+    "value": 98
+  },
+  {
+    "iso": "DZA",
+    "value": 60
+  },
+  {
+    "iso": "EGY",
+    "value": 43
+  },
+  {
+    "iso": "ESP",
+    "value": 1
+  },
+  {
+    "iso": "EST",
+    "value": 19
+  },
+  {
+    "iso": "FRA",
+    "value": 1
+  },
+  {
+    "iso": "GBR",
+    "value": 1
+  },
+  {
+    "iso": "GHA",
+    "value": 92
+  },
+  {
+    "iso": "GRC",
+    "value": 0
+  },
+  {
+    "iso": "HRV",
+    "value": 26
+  },
+  {
+    "iso": "IND",
+    "value": 71
+  },
+  {
+    "iso": "IRL",
+    "value": 8
+  },
+  {
+    "iso": "IRN",
+    "value": 77
+  },
+  {
+    "iso": "ISR",
+    "value": 10
+  },
+  {
+    "iso": "ITA",
+    "value": 1
+  },
+  {
+    "iso": "JPN",
+    "value": 32
+  },
+  {
+    "iso": "KOR",
+    "value": 16
+  },
+  {
+    "iso": "KWT",
+    "value": 25
+  },
+  {
+    "iso": "LVA",
+    "value": 43
+  },
+  {
+    "iso": "MAR",
+    "value": 75
+  },
+  {
+    "iso": "MCO",
+    "value": 25
+  },
+  {
+    "iso": "MEX",
+    "value": 54
+  },
+  {
+    "iso": "MNE",
+    "value": 69
+  },
+  {
+    "iso": "MNG",
+    "value": 40
+  },
+  {
+    "iso": "MYS",
+    "value": 38
+  },
+  {
+    "iso": "NIC",
+    "value": 63
+  },
+  {
+    "iso": "NLD",
+    "value": 3
+  },
+  {
+    "iso": "PAK",
+    "value": 44
+  },
+  {
+    "iso": "PER",
+    "value": 74
+  },
+  {
+    "iso": "POL",
+    "value": 40
+  },
+  {
+    "iso": "PRT",
+    "value": 53
+  },
+  {
+    "iso": "QAT",
+    "value": 73
+  },
+  {
+    "iso": "ROU",
+    "value": 93
+  },
+  {
+    "iso": "SAU",
+    "value": 31
+  },
+  {
+    "iso": "SEN",
+    "value": 84
+  },
+  {
+    "iso": "SGP",
+    "value": 0
+  },
+  {
+    "iso": "SLV",
+    "value": 99
+  },
+  {
+    "iso": "SVN",
+    "value": 27
+  },
+  {
+    "iso": "SWE",
+    "value": 35
+  },
+  {
+    "iso": "SYR",
+    "value": 60
+  },
+  {
+    "iso": "THA",
+    "value": 77
+  },
+  {
+    "iso": "TJK",
+    "value": 97
+  },
+  {
+    "iso": "TUN",
+    "value": 22
+  },
+  {
+    "iso": "TUR",
+    "value": 19
+  },
+  {
+    "iso": "UKR",
+    "value": 39
+  },
+  {
+    "iso": "USA",
+    "value": 26
+  },
+  {
+    "iso": "VNM",
+    "value": 90
+  },
+  {
+    "iso": "ZAF",
+    "value": 46
+  },
+  {
+    "iso": "ZWE",
+    "value": 51
+  }
+]

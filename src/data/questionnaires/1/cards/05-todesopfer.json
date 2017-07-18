@@ -1,0 +1,66 @@
+{
+  "key": "todesopfer",
+  "title": "todesopfer",
+  "background": {
+    "type": "globe",
+    "source": "sterberate"
+  },
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Todesopfer",
+          "",
+          "Jedes Jahr sterben Hunderttausende an den Folgen einer mangelhaften Trinkwasser- und Sanitärversorung.",
+          "",
+          "**Wo gibt es die meisten Opfer?**"
+        ],
+        "en": [
+          ""
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "choicesTodesopfer",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["Answer_1", { "de": "Angola und Kongo", "en": "Angola und Kongo" }],
+            ["Answer_2", { "de": "Indien und Simbabwe", "en": "Indien und Simbabwe" }],
+            ["Answer_3", { "de": "El Salvador und Fidschi", "en": "El Salvador und Fidschi" }]
+           ]
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "f.panToCountry('AGO') && i.choicesTodesopfer"
+        ],
+        "answerContext": {
+        },
+        "templates": {
+          "Answer_1": {
+            "de": [
+              "Korrekt! Nirgends sterben so viele Menschen an diesen Folgen wie in Angola und dem Kongo: Jedes Jahr sind es mehr als 100 Tote je 100.000 Einwohner. Ein Grund: Neben der Wasser- und Sanitärversorgung gilt auch die medizinische Betreuung als mangelhaft."
+            ],
+            "en": [""]
+          },
+          "Answer_2": {
+            "de": [
+              "Nein, auch dort leiden zwar viele Menschen an den Folgen mangelhafter Wasser- und Sanitärversorgung: Je 100.000 Einwohner sterben jährlich 27 Menschen daran. Doch in Angola und dem Kongo ist die Zahl der Todesopfer noch rund vier Mal höher."
+            ],
+            "en": [""]
+          },
+          "Answer_3": {
+            "de": [
+              "Nein, dort sterben jedes Jahr nur gut zwei Menschen je 100.000 Einwohner an den Folgen mangelhafter Wasser- und Sanitärversorgung. Am dramatischsten ist die Situation in Angola und dem Kongo, wo es mehr als 100 Tote je 100.000 Einwohner sind."
+            ],
+            "en": [""]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "key": "sanitaer",
+  "title": "sanitaer",
+  "background": {
+    "type": "globe",
+    "source": "sanitaer"
+  },
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Sanitärversorgung",
+          "",
+          "Nicht weniger verheerend als fehlendes Trinkwasser ist es, wenn Menschen keinen Zugang zu Toiletten haben oder keine Seife zum Händewaschen: mangelnde Hygiene verursacht Krankheiten und Tod.",
+          "",
+          "**Wie hoch ist weltweit der Anteil jener auf der Welt, die über eine ausreichende Sanitärversorgung verfügen?**"
+        ],
+        "en": [
+        
+        ]
+      }
+    },{
+      "input": {
+        "key": "sliderSanitaer",
+        "type": "slider",
+        "options": {
+          "unit": "%",
+          "min": 0,
+          "value": 50,
+          "max": 100,
+          "step": 1
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "f.panToCountry('SSD')",
+          "(i.sliderSanitaer >= 0 && i.sliderSanitaer <= 63) && 'Antwort_1'",
+          "(i.sliderSanitaer >= 64 && i.sliderSanitaer <= 72) && 'Antwort_2'",
+          "(i.sliderSanitaer >= 73 && i.sliderSanitaer <= 100) && 'Antwort_3'"
+        ],
+        "answerContext": {
+        },
+        "templates": {
+          "Antwort_1": {
+            "de": [
+              "Nein, es sind mehr: zwei Drittel der Weltbevölkerung haben Zugang zur Sanitärversorgung. Besonders dramatisch ist die Situation in mehreren afrikanischen Ländern."
+            ],
+            "en": [
+            ]
+          },
+          "Antwort_2": {
+            "de": [
+              "Gut geschätzt! Rund zwei Drittel der Weltbevölkerung haben Zugang zur Sanitärversorgung. Besonders dramatisch ist die Situation in mehreren afrikanischen Ländern."
+            ],
+            "en": [
+            ]
+          },
+          "Antwort_3": {
+            "de": [
+              "Nein, es sind weniger: zwei Drittel der Weltbevölkerung haben Zugang zur Sanitärversorgung. Besonders dramatisch ist die Situation in mehreren afrikanischen Ländern."
+            ],
+            "en": [
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "key": "wasserknapp",
+  "title": "wasserknapp",
+  "background": {
+    "type": "globe",
+    "source": "wasserknapp"
+  },
+  "content": [
+    {
+      "text": {
+        "de": [
+          "# Drohende Wasserknappheit",
+          "",
+          "Die UN wollen die weltweite Wasser- und Sanitärsituation verbessern. Ein ehrgeiziges Ziel – angesichts der wachsenden Weltbevölkerung, Klimaerwärmung und des steigenden Wasserbedarfs der Industrie.",
+          "",
+          "**Wissenschaftler prognostizieren, dass bis 2040 vielerorts eine Wasserknappheit droht. Welche Länder sind besonders gefährdet?**"
+        ],
+        "en": [
+          ""
+        ]
+      }
+    },
+    {
+      "input": {
+        "key": "choicesWasserknapp",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["Answer_1", { "de": "Kolumbien und Nigeria", "en": "Kolumbien und Nigeria" }],
+            ["Answer_2", { "de": "Israel und Griechenland", "en": "Israel und Griechenland" }],
+            ["Answer_3", { "de": "Äthiopien und Bangladesch", "en": "Äthiopien und Bangladesch" }]
+           ]
+        }
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "f.panToCountry('ISR') && i.choicesWasserknapp"
+        ],
+        "answerContext": {
+        },
+        "templates": {
+          "Answer_1": {
+            "de": [
+              "Nein, laut Weltressourceninstitut hält sich dort das Risiko in Grenzen. Besonders gefährdet seien etwa der Nahe Osten, aber auch Griechenland und Spanien, wo es an Entsalzungsanlagen fehlt, um Meerwasser genießbar zu machen."
+            ],
+            "en": [""]
+          },
+          "Answer_2": {
+            "de": [
+              "Richtig, laut Weltressourceninstitut gilt der Nahe Osten generell als besonders gefährdet. Und die griechischen Inseln sind zwar von Wasser umgeben, doch es fehlt an Entsalzungsanlagen, um es genießbar zu machen."
+            ],
+            "en": [""]
+          },
+          "Answer_3": {
+            "de": [
+              "Nein, laut Weltressourceninstitut hält sich dort das Risiko in Grenzen. Besonders gefährdet seien etwa der Nahe Osten, aber auch Griechenland und Spanien, wo es an Entsalzungsanlagen fehlt, um Meerwasser genießbar zu machen."
+            ],
+            "en": [""]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,690 @@
+[
+  {
+    "iso": "AFG",
+    "value": 35
+  },
+  {
+    "iso": "AGO",
+    "value": 111
+  },
+  {
+    "iso": "ALB",
+    "value": 0
+  },
+  {
+    "iso": "ARE",
+    "value": 0
+  },
+  {
+    "iso": "ARG",
+    "value": 1
+  },
+  {
+    "iso": "ARM",
+    "value": 1
+  },
+  {
+    "iso": "AUS",
+    "value": 0
+  },
+  {
+    "iso": "AUT",
+    "value": 0
+  },
+  {
+    "iso": "AZE",
+    "value": 2
+  },
+  {
+    "iso": "BDI",
+    "value": 68
+  },
+  {
+    "iso": "BEL",
+    "value": 1
+  },
+  {
+    "iso": "BEN",
+    "value": 32
+  },
+  {
+    "iso": "BFA",
+    "value": 41
+  },
+  {
+    "iso": "BGD",
+    "value": 6
+  },
+  {
+    "iso": "BGR",
+    "value": 0
+  },
+  {
+    "iso": "BHR",
+    "value": 0
+  },
+  {
+    "iso": "BHS",
+    "value": 0
+  },
+  {
+    "iso": "BIH",
+    "value": 0
+  },
+  {
+    "iso": "BLR",
+    "value": 0
+  },
+  {
+    "iso": "BLZ",
+    "value": 1
+  },
+  {
+    "iso": "BOL",
+    "value": 7
+  },
+  {
+    "iso": "BRA",
+    "value": 1
+  },
+  {
+    "iso": "BRB",
+    "value": 0
+  },
+  {
+    "iso": "BRN",
+    "value": 0
+  },
+  {
+    "iso": "BTN",
+    "value": 7
+  },
+  {
+    "iso": "BWA",
+    "value": 9
+  },
+  {
+    "iso": "CAF",
+    "value": 102
+  },
+  {
+    "iso": "CAN",
+    "value": 1
+  },
+  {
+    "iso": "CHE",
+    "value": 0
+  },
+  {
+    "iso": "CHL",
+    "value": 0
+  },
+  {
+    "iso": "CHN",
+    "value": 0
+  },
+  {
+    "iso": "CIV",
+    "value": 44
+  },
+  {
+    "iso": "CMR",
+    "value": 41
+  },
+  {
+    "iso": "COD",
+    "value": 108
+  },
+  {
+    "iso": "COG",
+    "value": 48
+  },
+  {
+    "iso": "COL",
+    "value": 1
+  },
+  {
+    "iso": "COM",
+    "value": 29
+  },
+  {
+    "iso": "CPV",
+    "value": 5
+  },
+  {
+    "iso": "CRI",
+    "value": 1
+  },
+  {
+    "iso": "CUB",
+    "value": 1
+  },
+  {
+    "iso": "CYP",
+    "value": 0
+  },
+  {
+    "iso": "CZE",
+    "value": 1
+  },
+  {
+    "iso": "DEU",
+    "value": 1
+  },
+  {
+    "iso": "DJI",
+    "value": 26
+  },
+  {
+    "iso": "DNK",
+    "value": 1
+  },
+  {
+    "iso": "DOM",
+    "value": 2
+  },
+  {
+    "iso": "DZA",
+    "value": 2
+  },
+  {
+    "iso": "ECU",
+    "value": 2
+  },
+  {
+    "iso": "EGY",
+    "value": 2
+  },
+  {
+    "iso": "ERI",
+    "value": 35
+  },
+  {
+    "iso": "ESP",
+    "value": 0
+  },
+  {
+    "iso": "EST",
+    "value": 0
+  },
+  {
+    "iso": "ETH",
+    "value": 30
+  },
+  {
+    "iso": "FIN",
+    "value": 0
+  },
+  {
+    "iso": "FJI",
+    "value": 3
+  },
+  {
+    "iso": "FRA",
+    "value": 1
+  },
+  {
+    "iso": "GAB",
+    "value": 28
+  },
+  {
+    "iso": "GBR",
+    "value": 0
+  },
+  {
+    "iso": "GEO",
+    "value": 0
+  },
+  {
+    "iso": "GHA",
+    "value": 20
+  },
+  {
+    "iso": "GIN",
+    "value": 41
+  },
+  {
+    "iso": "GMB",
+    "value": 21
+  },
+  {
+    "iso": "GNB",
+    "value": 49
+  },
+  {
+    "iso": "GNQ",
+    "value": 57
+  },
+  {
+    "iso": "GRC",
+    "value": 0
+  },
+  {
+    "iso": "GTM",
+    "value": 9
+  },
+  {
+    "iso": "GUY",
+    "value": 4
+  },
+  {
+    "iso": "HND",
+    "value": 8
+  },
+  {
+    "iso": "HRV",
+    "value": 0
+  },
+  {
+    "iso": "HTI",
+    "value": 29
+  },
+  {
+    "iso": "HUN",
+    "value": 0
+  },
+  {
+    "iso": "IDN",
+    "value": 4
+  },
+  {
+    "iso": "IND",
+    "value": 27
+  },
+  {
+    "iso": "IRL",
+    "value": 0
+  },
+  {
+    "iso": "IRN",
+    "value": 1
+  },
+  {
+    "iso": "IRQ",
+    "value": 4
+  },
+  {
+    "iso": "ISL",
+    "value": 0
+  },
+  {
+    "iso": "ISR",
+    "value": 1
+  },
+  {
+    "iso": "ITA",
+    "value": 0
+  },
+  {
+    "iso": "JAM",
+    "value": 2
+  },
+  {
+    "iso": "JOR",
+    "value": 1
+  },
+  {
+    "iso": "JPN",
+    "value": 0
+  },
+  {
+    "iso": "KAZ",
+    "value": 1
+  },
+  {
+    "iso": "KEN",
+    "value": 33
+  },
+  {
+    "iso": "KGZ",
+    "value": 2
+  },
+  {
+    "iso": "KHM",
+    "value": 6
+  },
+  {
+    "iso": "KOR",
+    "value": 0
+  },
+  {
+    "iso": "KWT",
+    "value": 0
+  },
+  {
+    "iso": "LAO",
+    "value": 14
+  },
+  {
+    "iso": "LBN",
+    "value": 0
+  },
+  {
+    "iso": "LBR",
+    "value": 25
+  },
+  {
+    "iso": "LBY",
+    "value": 1
+  },
+  {
+    "iso": "LKA",
+    "value": 3
+  },
+  {
+    "iso": "LSO",
+    "value": 28
+  },
+  {
+    "iso": "LTU",
+    "value": 0
+  },
+  {
+    "iso": "LUX",
+    "value": 0
+  },
+  {
+    "iso": "LVA",
+    "value": 0
+  },
+  {
+    "iso": "MAR",
+    "value": 3
+  },
+  {
+    "iso": "MDA",
+    "value": 0
+  },
+  {
+    "iso": "MDG",
+    "value": 27
+  },
+  {
+    "iso": "MDV",
+    "value": 1
+  },
+  {
+    "iso": "MEX",
+    "value": 1
+  },
+  {
+    "iso": "MKD",
+    "value": 0
+  },
+  {
+    "iso": "MLI",
+    "value": 61
+  },
+  {
+    "iso": "MLT",
+    "value": 0
+  },
+  {
+    "iso": "MMR",
+    "value": 10
+  },
+  {
+    "iso": "MNE",
+    "value": 0
+  },
+  {
+    "iso": "MNG",
+    "value": 3
+  },
+  {
+    "iso": "MOZ",
+    "value": 38
+  },
+  {
+    "iso": "MRT",
+    "value": 29
+  },
+  {
+    "iso": "MUS",
+    "value": 1
+  },
+  {
+    "iso": "MWI",
+    "value": 26
+  },
+  {
+    "iso": "MYS",
+    "value": 0
+  },
+  {
+    "iso": "NAM",
+    "value": 10
+  },
+  {
+    "iso": "NER",
+    "value": 69
+  },
+  {
+    "iso": "NGA",
+    "value": 51
+  },
+  {
+    "iso": "NIC",
+    "value": 4
+  },
+  {
+    "iso": "NLD",
+    "value": 0
+  },
+  {
+    "iso": "NOR",
+    "value": 1
+  },
+  {
+    "iso": "NPL",
+    "value": 13
+  },
+  {
+    "iso": "NZL",
+    "value": 1
+  },
+  {
+    "iso": "OMN",
+    "value": 0
+  },
+  {
+    "iso": "PAK",
+    "value": 21
+  },
+  {
+    "iso": "PAN",
+    "value": 4
+  },
+  {
+    "iso": "PER",
+    "value": 1
+  },
+  {
+    "iso": "PHL",
+    "value": 5
+  },
+  {
+    "iso": "PNG",
+    "value": 12
+  },
+  {
+    "iso": "POL",
+    "value": 0
+  },
+  {
+    "iso": "PRK",
+    "value": 1
+  },
+  {
+    "iso": "PRT",
+    "value": 0
+  },
+  {
+    "iso": "PRY",
+    "value": 2
+  },
+  {
+    "iso": "QAT",
+    "value": 0
+  },
+  {
+    "iso": "ROU",
+    "value": 0
+  },
+  {
+    "iso": "RUS",
+    "value": 0
+  },
+  {
+    "iso": "RWA",
+    "value": 19
+  },
+  {
+    "iso": "SAU",
+    "value": 0
+  },
+  {
+    "iso": "SDN",
+    "value": 35
+  },
+  {
+    "iso": "SEN",
+    "value": 25
+  },
+  {
+    "iso": "SGP",
+    "value": 0
+  },
+  {
+    "iso": "SLB",
+    "value": 10
+  },
+  {
+    "iso": "SLE",
+    "value": 90
+  },
+  {
+    "iso": "SLV",
+    "value": 2
+  },
+  {
+    "iso": "SOM",
+    "value": 99
+  },
+  {
+    "iso": "SRB",
+    "value": 0
+  },
+  {
+    "iso": "SSD",
+    "value": 50
+  },
+  {
+    "iso": "SUR",
+    "value": 1
+  },
+  {
+    "iso": "SVK",
+    "value": 0
+  },
+  {
+    "iso": "SVN",
+    "value": 0
+  },
+  {
+    "iso": "SWE",
+    "value": 1
+  },
+  {
+    "iso": "SWZ",
+    "value": 23
+  },
+  {
+    "iso": "SYR",
+    "value": 2
+  },
+  {
+    "iso": "TCD",
+    "value": 93
+  },
+  {
+    "iso": "TGO",
+    "value": 38
+  },
+  {
+    "iso": "THA",
+    "value": 2
+  },
+  {
+    "iso": "TJK",
+    "value": 8
+  },
+  {
+    "iso": "TKM",
+    "value": 6
+  },
+  {
+    "iso": "TLS",
+    "value": 10
+  },
+  {
+    "iso": "TTO",
+    "value": 0
+  },
+  {
+    "iso": "TUN",
+    "value": 1
+  },
+  {
+    "iso": "TUR",
+    "value": 1
+  },
+  {
+    "iso": "TZA",
+    "value": 28
+  },
+  {
+    "iso": "UGA",
+    "value": 30
+  },
+  {
+    "iso": "UKR",
+    "value": 0
+  },
+  {
+    "iso": "URY",
+    "value": 0
+  },
+  {
+    "iso": "USA",
+    "value": 1
+  },
+  {
+    "iso": "UZB",
+    "value": 2
+  },
+  {
+    "iso": "VEN",
+    "value": 1
+  },
+  {
+    "iso": "VNM",
+    "value": 2
+  },
+  {
+    "iso": "YEM",
+    "value": 13
+  },
+  {
+    "iso": "ZAF",
+    "value": 12
+  },
+  {
+    "iso": "ZMB",
+    "value": 25
+  },
+  {
+    "iso": "ZWE",
+    "value": 27
+  }
+]
