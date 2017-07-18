@@ -13,7 +13,7 @@ export default class Questionnaire extends React.Component {
   }
 
   cardDummys(size) {
-    const cards = Array(size).fill(0).map((c,i) => <div key={i} className={`card${i}`}/>)
+    const cards = Array(size +1).fill(0).map((c,i) => <div key={i} className={`card${i}`}/>)
     return cards;
   }
 
@@ -37,7 +37,7 @@ export default class Questionnaire extends React.Component {
         <div className={ styles.questions } >
           <Card { ...this.props }/>
         </div>
-        { !app.mobile && totalCards > 0 &&
+        { !app.mobile && totalCards > 0 && false && 
           this.cardDummys(totalCards)
         }
       </div>
