@@ -61,7 +61,7 @@ export default class UbermorgenApp extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.app.mobile) {
+    if (nextProps.app.mobile && window.frameElement) {
       window.frameElement.style.height = window.parent.innerHeight + 'px'
     }
   }
