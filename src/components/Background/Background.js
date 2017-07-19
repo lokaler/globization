@@ -13,18 +13,26 @@ export default class Background extends React.PureComponent {
     app: PropTypes.object.isRequired
   };
 
+  onImageClick = () => {
+    const { actions, questions } = this.props;
+    let cardIndex = questions.activeCard + 1;
+    if(cardIndex >= questions.cards.length) cardIndex = 0
+    actions.setCard(cardIndex);
+  }
+
   render() {
-    const { hideCard, background } = this.props.questions;
-    const showVis = (['globe', 'map', 'scatterplot'].indexOf(background.type) >= 0)
-    // console.log(this.props, showVis, background)
+    const { hideCard, background, activeCard } = this.props.questions;
+    const showVis = (['globe', 'map', 'scatterplot'].indexOf(background.type) >= 0);
+    const active = activeCard === 0 || hideCard;
 
     return (
-      <div className={[style.container, hideCard ? 'active' : 'inactive'].join(' ')}>
+      <div className={[style.container, active ? 'active' : 'inactive'].join(' ')}>
         { showVis &&
           <Vis { ...this.props } />
         }
         { background.type === 'image' &&
           <img
+            onClick={this.onImageClick}
             src={background.source}
             alt="background"/>
         }
@@ -40,7 +48,9 @@ export default class Background extends React.PureComponent {
             height="100%">
           </iframe>
         }
-        <NextButton { ...this.props }/>
+        {
+          activeCard !== 0 && <NextButton { ...this.props }/>
+        }
       </div>
     );
   }

@@ -24,7 +24,7 @@ export default class Questionnaire extends React.Component {
 
     console.log(questions, totalCards)
 
-    if (activeCard === null){
+    if (activeCard === null || activeCard === 0){
       return null
     }
 

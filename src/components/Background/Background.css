@@ -5,6 +5,7 @@
     filter: blur(50px);
     opacity: 0.4; }
   :local(.container) img {
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
   :local(.container) iframe {
     padding-top: 20px; }
