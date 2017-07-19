@@ -7,10 +7,18 @@
   },
   "content": [
     {
+      "intro": {
+        "de": [
+          "Jedes Jahr sterben Hunderttausende an den Folgen einer mangelhaften Trinkwasser- und Sanitärversorung."
+        ],
+        "en": [
+          ""
+        ]
+      }
+    },
+    {
       "text": {
         "de": [
-          "Jedes Jahr sterben Hunderttausende an den Folgen einer mangelhaften Trinkwasser- und Sanitärversorung.",
-          "",
           "**Wo gibt es die meisten Opfer?**"
         ],
         "en": [

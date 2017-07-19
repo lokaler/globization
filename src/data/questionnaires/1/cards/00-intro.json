@@ -2,8 +2,8 @@
   "key": "intro",
   "title": "Wasser",
   "background": {
-    "type": "globe",
-    "source": "trinkwasser"
+    "type": "image",
+    "source": "background-sink.jpg"
   },
   "content": [
     {
@@ -14,10 +14,7 @@
           "Gehen Sie mit dem interaktiven Globus auf Spurensuche!"
         ],
         "en": [
-          "# BeyondTomorrow Explorer",
-          "",
-		  "Do jobs today tend to be more temporary than they were 30 years ago? Where is the unemployment rate the highest? Test your knowledge by clicking on \"Let's Get Started.\"",
-          ""
+		      ""
         ]
       }
     }

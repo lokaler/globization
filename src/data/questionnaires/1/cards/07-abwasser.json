@@ -7,10 +7,18 @@
   },
   "content": [
     {
+      "intro": {
+        "de": [
+          "Unser Wasserverbrauch führt auch zu jeder Menge schmutzigem Abwasser. Ungereinigt kann es sauberes Trinkwasser verschmutzen und unbrauchbar machen."
+        ],
+        "en": [
+          ""
+        ]
+      }
+    },
+    {
       "text": {
         "de": [
-          "Unser Wasserverbrauch führt auch zu jeder Menge schmutzigem Abwasser. Ungereinigt kann es sauberes Trinkwasser verschmutzen und unbrauchbar machen.",
-          "",
           "**Wo, glauben Sie, bleibt ein höherer Abwasseranteil ungereinigt?**"
         ],
         "en": [
