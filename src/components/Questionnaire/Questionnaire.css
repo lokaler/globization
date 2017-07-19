@@ -200,15 +200,12 @@
       font-size: 1em;
       margin-top: 0px; }
       .mq-desktop :local(.questions) .header .title {
-        margin-top: -10px;
-        font-weight: bold;
         line-height: 1.2em;
-        padding-bottom: 6px;
-        margin-bottom: 27px;
+        padding-bottom: 0px;
+        margin-bottom: 20px;
         font-weight: normal;
         text-transform: uppercase;
-        color: #b7b7b7;
-        border-bottom: 1px solid #ececec; }
+        color: #b7b7b7; }
       .mq-mobile :local(.questions) .header .title {
         font-weight: normal;
         color: #a7a7a7; }
