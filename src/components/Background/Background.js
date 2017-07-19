@@ -22,6 +22,7 @@ export default class Background extends React.PureComponent {
 
   render() {
     const { hideCard, background, activeCard } = this.props.questions;
+    const { mobile } = this.props.app;
     const showVis = (['globe', 'map', 'scatterplot'].indexOf(background.type) >= 0);
     const active = activeCard === 0 || hideCard;
 
@@ -33,7 +34,7 @@ export default class Background extends React.PureComponent {
         { background.type === 'image' &&
           <img
             onClick={this.onImageClick}
-            src={background.source}
+            src={background.source[mobile ? 1 : 0]}
             alt="background"/>
         }
         { background.type === 'iframe' &&

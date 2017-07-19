@@ -3,7 +3,7 @@
   "title": "Wasser",
   "background": {
     "type": "image",
-    "source": "background-sink.jpg"
+    "source": ["background-sink.jpg", "background-sink-mobile.jpg"]
   },
   "content": [
     {

@@ -3,7 +3,7 @@
   "title": "suesswasser",
   "background": {
     "type": "image",
-    "source": "erde-wasser-background.png"
+    "source": ["erde-wasser-background.png","erde-wasser-background.png"]
   },
   "content": [
     {

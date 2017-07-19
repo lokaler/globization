@@ -22,8 +22,6 @@ export default class Questionnaire extends React.Component {
     const { hideCard, cards, activeCard } = questions;
     const totalCards = cards.length-1-activeCard;
 
-    console.log(questions, totalCards)
-
     if (activeCard === null || activeCard === 0){
       return null
     }
