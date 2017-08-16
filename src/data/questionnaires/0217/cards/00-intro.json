@@ -10,7 +10,7 @@
           "# ÜberMorgen-Explorer",
           "",
 
-          "Es gäbe genug Essen auf der Welt, um alle gut sieben Milliarden Menschen satt zu bekommen. Warum müssen dann noch immer so viele Hunger leiden? Gehen Sie mit dem interaktiven Globus auf Spurensuche - klicken Sie auf \"Los geht's\"!",
+          "Es gibt genug Essen auf der Welt, um alle gut sieben Milliarden Menschen satt zu bekommen. Warum müssen dann noch immer so viele Hunger leiden? Gehen Sie mit dem interaktiven Globus auf Spurensuche - klicken Sie auf \"Los geht's\"!",
           "",
           "<div class='losButton' data-onclick='onStartClick'>Los geht’s</div>"
         ],

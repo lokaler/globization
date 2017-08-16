@@ -8,7 +8,7 @@
         "de": [
           " # Teure Lebensmittel",
           "",
-          "Die Gründe für Hunger sind vielfältig. Dürreperioden können Schuld sein, aber auch Armut und hohe Nahrungspreise – nicht zuletzt wegen bewaffneter Konflikte. Sehen wir uns die Preise für Lebensmittel näher an. Um sie weltweit zu vergleichen, messen wir, wie teuer sie im Vergleich zu anderen Gütern des täglichen Lebens im jeweiligen Land sind.",
+          "Die Gründe für Hunger sind vielfältig. Dürreperioden können Schuld sein, aber auch Armut und hohe Nahrungspreise – zum Beispiel wegen bewaffneter Konflikte. Sehen wir uns die Preise für Lebensmittel genauer an. Um sie weltweit zu vergleichen, messen wir, wie teuer sie im Vergleich zu anderen Gütern des täglichen Lebens im jeweiligen Land sind.",
           "",
           "**Was glauben Sie, wo sind Lebensmittel demnach am teuersten?**"
         ],
@@ -58,7 +58,7 @@
 
           "FoodPriceChoice_1": {
             "de": [
-              "Nein, hier sind Lebensmittel relativ erschwinglich, ähnlich wie in Deutschland. In Tansania, Sambia und Mauretanien hingegen ist Essen, verglichen mit anderen Gütern, am teuersten."
+              "Nein, hier sind Lebensmittel relativ erschwinglich, ähnlich wie in Deutschland. In Tansania, Sambia und Mauretanien hingegen sind Lebensmittel, verglichen mit anderen Gütern, am teuersten."
             ],
             "en": [
               ""
@@ -66,7 +66,7 @@
           },
           "FoodPriceChoice_2": {
             "de": [
-              "Richtig! In Tansania, Sambia und Mauretanien ist Essen, verglichen mit anderen Gütern, am teuersten. Eine hohe Abhängigkeit von Importen und Spekulationen am Weltmarkt können die Preise nach oben treiben."
+              "Richtig! In Tansania, Sambia und Mauretanien sind Lebensmittel, verglichen mit anderen Gütern, am teuersten. Eine hohe Abhängigkeit von Importen und Spekulationen am Weltmarkt können die Preise nach oben treiben."
             ],
             "en": [
               ""
@@ -74,7 +74,7 @@
           },
           "FoodPriceChoice_3": {
             "de": [
-              "In der Tat sind Lebensmittel hier sehr viel weniger erschwinglich als etwa in Deutschland. Doch noch deutlich teurer ist Essen, verglichen mit anderen Gütern, in Tansania, Sambia und Mauretanien."
+              "In der Tat sind Lebensmittel hier sehr viel weniger erschwinglich als etwa in Deutschland. Doch noch deutlich teurer sind Lebensmittel, verglichen mit anderen Gütern, in Tansania, Sambia und Mauretanien."
             ],
             "en": [
               ""
