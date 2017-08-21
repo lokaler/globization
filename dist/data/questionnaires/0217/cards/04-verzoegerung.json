@@ -1,0 +1,87 @@
+{
+  "key": "growth_delay",
+  "title": "4. Karte - Verzögerung",
+  "dataset": "foodprice",
+  "content": [
+    {
+      "text": {
+        "de": [
+          " # Wachstumsverzögerungen",
+          "",
+          "Für Kinder sind die Folgen von Unterernährung besonders verheerend: Die ersten Lebensjahre sind entscheidend für die körperliche und geistige Entwicklung. Hunger verzögert das Wachstum und macht Kinder anfällig für Krankheiten.",
+          "",
+          "**Wo leiden besonders viele Kinder an Wachstumsverzögerungen?**"
+        ],
+        "en": [
+          " # ",
+          "",
+          "",
+          "",
+          "****"
+        ]
+      }
+    },{
+      "input": {
+        "key": "GrowthDelay",
+        "type": "choices",
+        "options": {
+          "choices": [
+            ["GrowthDelayChoice_1", { "de": "Chile und Trinidad und Tobago", "en": "" }],
+            ["GrowthDelayChoice_2", { "de": "Haiti und Namibia", "en": ""}],
+            ["GrowthDelayChoice_3", { "de": "Burundi und Ostimor", "en": "" }]
+          ]
+        }
+      }
+    },
+    {
+      "submit": {
+        "key": "GrowthDelaySubmitted"
+      }
+    },
+    {
+      "answer": {
+        "answerKey": [
+          "i.GrowthDelay && !i.GrowthDelaySubmitted",
+          "!i.GrowthDelaySubmitted && 'notSubmitted'",
+          "f.setDataset('growthdelay')",
+          "f.panToCountry('BDI') && false",
+          "f.isMobile() && f.setView('map')",
+          "!f.isMobile() && f.setView('globe')",
+          "i.GrowthDelay"
+        ],
+        "answerContext": {},
+        "templates": {
+          "notSubmitted": {
+            "de": ["Bitte beantworten und bestätigen. Nach der Bestätigung Ihrer Antwort sehen Sie auch, wie andere Leser geantwortet haben."], "en": ["Please answer and confirm. After submitting your choice, you can also see how other readers answered."]
+          },
+
+
+          "GrowthDelayChoice_1": {
+            "de": [
+              "Nein, hier gibt es glücklicherweise nur wenige Kinder mit verzögertem Wachstum. In Burundi und Osttimor hingegen ist mehr als jedes zweite Kind betroffen."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "GrowthDelayChoice_2": {
+            "de": [
+              "Gut aufgepasst: Hier sind viele Menschen unterernährt. Doch der Anteil an Kindern mit verzögertem Wachstum ist woanders deutlich höher: In Burundi und Osttimor ist mehr als jedes zweite Kind betroffen."
+            ],
+            "en": [
+              ""
+            ]
+          },
+          "GrowthDelayChoice_3": {
+            "de": [
+              "Korrekt, in Burundi und Osttimor leidet mehr als jedes zweite Kind an einem verzögerten Wachstum. Die Lage in Burundi gilt auch mehr als zehn Jahre nach Ende eines langen Bürgerkriegs als brüchig, die Versorgung mit Lebensmitteln ist instabil."
+            ],
+            "en": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
