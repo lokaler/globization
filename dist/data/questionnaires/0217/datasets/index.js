@@ -102,8 +102,8 @@ export default [
    {
     "key": "growthdelay",
     "name": {
-      "de": "Führungskräfte",
-      "en": "Management"
+      "de": "Wachstumsverzögerung",
+      "en": ""
     },
     "description": {
       "de": "Anteil der Kinder unter fünf Jahren mit Wachstumsverzögerung",
