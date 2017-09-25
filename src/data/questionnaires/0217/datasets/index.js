@@ -5,11 +5,11 @@ export default [
     "key": "calories",
     "name": {
       "de": "Kalorien",
-      "en": ""
+      "en": "Caloric Intake"
     },
     "description": {
       "de": "Anteil der verfügbaren an den benötigten Kalorien (2014-16) [in Prozent]",
-      "en": ""
+      "en": "Share of necessary per-capita caloric intake actually available (2014-2016) [as a percentage]"
     },
     "quelle": "FAO",
     "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/",
@@ -39,11 +39,11 @@ export default [
     "key": "malnutrition",
     "name": {
       "de": "Unterernährung",
-      "en": ""
+      "en": "Undernourishmen"
     },
     "description": {
       "de": "Anteil der unterernährten Menschen (2014-16) [in Prozent]",
-      "en": ""
+      "en": "Share of undernourished people (2014-2016) (as a percentage)"
     },
     "quelle": "Welthungerhilfe, FAO, IFPRI",
     "link": "http://www.welthungerhilfe.de/archiv-welthunger-index/mediathek/whi-2016-pdf.html?type=6663&tx_rsmmediathek_fe1%5Baction%5D=singleDownload",
@@ -71,11 +71,11 @@ export default [
     "key": "foodprice",
     "name": {
       "de": "Lebensmittelpreise ",
-      "en": ""
+      "en": "Food Prices"
     },
     "description": {
       "de": "Lebensmittelpreisindex (USA = 1,0), Lebensmittelpreise relativ zu jeweiligen Verbraucherpreisen (i.d.R. 2014)",
-      "en": ""
+      "en": "Food Price Index (USA = 1.0), food prices relative to respective consumer prices (in most cases 2014)"
     },
     "quelle": "FAO, Weltbank, ILO",
     "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/",
@@ -103,11 +103,11 @@ export default [
     "key": "growthdelay",
     "name": {
       "de": "Wachstumsverzögerung",
-      "en": ""
+      "en": "Stunted Growth"
     },
     "description": {
       "de": "Anteil der Kinder unter fünf Jahren mit Wachstumsverzögerung",
-      "en": ""
+      "en": "Share of children under 5 years of age who suffer from stunted growth"
     },
     "quelle": "Welthungerhilfe, Unicef, WHO, IFPRI",
     "link": "http://www.welthungerhilfe.de/archiv-welthunger-index/mediathek/whi-2016-pdf.html?type=6663&tx_rsmmediathek_fe1%5Baction%5D=singleDownload",
@@ -135,11 +135,11 @@ export default [
     "key": "worldfoodpro",
     "name": {
       "de": "Welternährungsprogramm",
-      "en": ""
+      "en": "World Food Program "
     },
     "description": {
       "de": "Anteil der Einzahlung ins Welternährungsprogramm am Bruttoinlandsprodukt (2015) [in Promille]",
-      "en": ""
+      "en": "Share of gross domestic product contributed to the World Food Program as a percentage of GDP"
     },
     "quelle": "WHO",
     "link": "http://apps.who.int/gho/data/node.main.MATMORT?lang=en",

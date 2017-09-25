@@ -16,9 +16,10 @@
         ],
         "en": [
           "# BeyondTomorrow Explorer",
-          "",
-
-		  " Test your knowledge by clicking on “Let’s Get Started.”",
+            "",
+          "There is plenty of food in the world to feed all 7 billion people who inhabit our planet. Why, then, do so many people still suffer from hunger? Use our interactive globe to learn more about the problem.",
+            "",
+		  "Test your knowledge by clicking on “Let’s Get Started.”",
 
           "",
           "<div class='losButton' data-onclick='onStartClick'>Let's get started</div>"

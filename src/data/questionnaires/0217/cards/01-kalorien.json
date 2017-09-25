@@ -13,11 +13,11 @@
           "**Was glauben Sie, wie viel Prozent unseres Bedarfs steht uns in Deutschland pro Kopf tatsächlich zur Verfügung?**"
         ],
         "en": [
-          " # ",
+          " # Sufficient Caloric Intake?",
           "",
+          "Let's start in a prosperous country like Germany. Most people need between 1,300 and 5,000 calories a day, depending on gender, age, weight and activity levels.",
           "",
-          "",
-          "****"
+          "**What do you think? What percent of Germany's per-capita calorie requirement is actually available?**"
         ]
       }
     },{
@@ -65,7 +65,7 @@
               "Nein, in Deutschland stehen uns pro Kopf 139 Prozent des Energiebedarfs zur Verfügung. In den meisten Ländern liegt der Wert bei mehr als 100 Prozent – rechnerisch würden die vorhandenen Lebensmittel also reichen, um den Bedarf zu decken."
             ],
             "en": [
-              ""
+              "No, in Germany, 139 percent of the country's per-capita calorie requirement is available. In most countries of the world, the per-capita value is higher than 100 percent, which means that, from a mathematical perspective, the amount of food currently available in the world is sufficient."
             ]
           },
           "Antwort_Calories2": {
@@ -73,7 +73,7 @@
               "Es ist noch mehr: In Deutschland stehen uns pro Kopf 139 Prozent des Energiebedarfs zur Verfügung. In den meisten Ländern liegt der Wert bei mehr als 100 Prozent – rechnerisch würden die vorhandenen Lebensmittel also reichen, um den Bedarf zu decken."
             ],
             "en": [
-              ""
+              "It's even more than that: In Germany, 139 percent of the country's per-capita calorie requirement is available. In most countries of the world, the per-capita value is higher than 100 percent, which means that, from a mathematical perspective, the amount of food currently available in the world is sufficient."
             ]
           },
           "Antwort_Calories3": {
@@ -81,7 +81,7 @@
               "Richtig, in Deutschland stehen uns pro Kopf 139 Prozent des Energiebedarfs zur Verfügung. In den meisten Ländern liegt der Wert bei mehr als 100 Prozent – rechnerisch würden die vorhandenen Lebensmittel also reichen, um den Bedarf zu decken."
             ],
             "en": [
-              ""
+              "Correct. In Germany, 139 percent of the country's per-capita calorie requirement is available. In most countries of the world, the per-capita value is higher than 100 percent, which means that, from a mathematical perspective, the amount of food currently available in the world is sufficient."
             ]
           },
           "Antwort_Calories4": {
@@ -89,7 +89,7 @@
               "Ganz so viel ist es nicht: In Deutschland stehen uns pro Kopf 139 Prozent des Energiebedarfs zur Verfügung. In den meisten Ländern liegt der Wert bei mehr als 100 Prozent – rechnerisch würden die vorhandenen Lebensmittel also reichen, um den Bedarf zu decken."
             ],
             "en": [
-              ""
+              "It's not quite that much. In Germany, 139 percent of the country's per-capita calorie requirement is available. In most countries of the world, the per-capita value is higher than 100 percent, which means that, from a mathematical perspective, the amount of food currently available in the world is sufficient."
             ]
           }
         }

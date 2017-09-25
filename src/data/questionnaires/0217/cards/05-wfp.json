@@ -13,11 +13,11 @@
           "**Doch welche Länder geben am meisten, gemessen an ihrer Wirtschaftskraft?**"
         ],
         "en": [
-          " # ",
+          " # World Food Program",
           "",
+          "The UN's World Food Program is one of the world's largest initiatives in the fight against hunger. Every year, it provides support for 80 million people. Germany is among the program's largest donors – at least in absolute numbers.",
           "",
-          "",
-          "****"
+          "**But what countries give the most relative to their gross domestic products?**"
         ]
       }
     },{
@@ -26,9 +26,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["WFP_Choice_1", { "de": "USA und Großbritannien", "en": "" }],
-            ["WFP_Choice_2", { "de": "Malawi und Lesotho", "en": ""}],
-            ["WFP_Choice_3", { "de": "Irland und Simbabwe", "en": "" }]
+            ["WFP_Choice_1", { "de": "USA und Großbritannien", "en": "USA and the United Kingdom" }],
+            ["WFP_Choice_2", { "de": "Malawi und Lesotho", "en": "Malawi and Lesotho"}],
+            ["WFP_Choice_3", { "de": "Irland und Simbabwe", "en": "Ireland and Zimbabwe" }]
           ]
         }
       }
@@ -61,7 +61,7 @@
               "Die beiden Länder zahlen absolut zwar noch mehr als Deutschland. Doch gemessen am Bruttoinlandsprodukt geben Malawi und Lesotho am meisten – sie sind auch Empfänger im Welternährungsprogramm. Wie das Programm hundertausende Menschen auf teils riskantem Weg mit Essen versorgt, lesen Sie in unserer [Multimedia-Reportage](http://www.spiegel.de/politik/ausland/a-1162927.html)."
             ],
             "en": [
-              ""
+              "The two countries contribute even more than Germany in absolute terms. But relative to their GDPs, Malawi and Lesotho give the most – and they also receive assistance from the World Food Program. To learn more about how the program provides food to hundreds of thousands of people under sometimes dangerous conditions, read our multimedia feature."
             ]
           },
           "WFP_Choice_2": {
@@ -69,7 +69,7 @@
               "Ganz genau, gemessen an ihrem geringen Bruttoinlandsprodukt zahlen Malawi und Lesotho am meistens ins Welternährungsprogramm ein – sie gehören gleichzeitig zu den Empfängerländern. Wie das Programm hundertausende Menschen auf teils riskantem Weg mit Essen versorgt, lesen Sie in unserer [Multimedia-Reportage](http://www.spiegel.de/politik/ausland/a-1162927.html)."
             ],
             "en": [
-              ""
+              "Exactly. Relative to their low GDPs, Malawi and Lesotho contribute more than any other country to the World Food Program – and also receive assistance at the same time. To learn more about how the program provides food to hundreds of thousands of people under sometimes dangerous conditions, read our multimedia feature."
             ]
           },
           "WFP_Choice_3": {
@@ -77,7 +77,7 @@
               "Nein, die beiden Länder zahlen, wie Deutschland, rund 0,1 Promille ihres Bruttoinlandsprodukts ein. Malawi und Lesotho geben deutlich mehr – sie sind auch Empfänger im Welternährungsprogramm. Wie das Programm hundertausende Menschen auf teils riskantem Weg mit Essen versorgt, lesen Sie in unserer [Multimedia-Reportage](http://www.spiegel.de/politik/ausland/a-1162927.html)."
             ],
             "en": [
-              ""
+              "No, like Germany, the two countries contribute about 0.01 percent of their GDPs. Malawi and Lesotho contribute much more – and also receive assistance from the World Food Program. To learn more about how the program provides food to hundreds of thousands of people under sometimes dangerous conditions, read our multimedia feature."
             ]
           }
         }

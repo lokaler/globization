@@ -10,7 +10,7 @@
           "Hier können Sie alle Datensätze noch einmal in Ruhe erkunden und den Link zum interaktiven Globus teilen:"
         ],
         "en": [
-			"Here you have the opportunity to explore the data sets at your leisure. Share the link to the interactive globe:"
+			"Share the link to the interactive globe:"
         ]
       }
     },
@@ -22,7 +22,7 @@
         "answerContext": {
           "twitterShare": "f.shareButtonTwitter('http://www.spiegel.de/politik/ausland/a-1149904.html', 'Globus-Quiz: Warum leiden immer noch so viele Menschen Hunger? #ÜberMorgen via @SPIEGELONLINE')",
           "facebookShare": "f.shareButtonFacebook('http://www.spiegel.de/politik/ausland/a-1149904.html', 'Globus-Quiz: Warum leiden immer noch so viele Menschen Hunger? #ÜberMorgen')",
-          "twitterShareEn": "f.shareButtonTwitter('http://www.spiegel.de/international/tomorrow/a-1147865.html', 'Quiz Globe: Where do women have things worse then men? And to what extent? #BeyondTomorrow')",
+          "twitterShareEn": "f.shareButtonTwitter('http://www.spiegel.de/international/tomorrow/a-1147865.html', 'Quiz: Why do so many people still suffer from hunger? #BeyondTomorrow via @SPIEGELONLINE')",
           "facebookShareEn": "f.shareButtonFacebook('http://www.spiegel.de/international/tomorrow/a-1147865.html', 'Quiz: How unequal is the world? #BeyondTomorrow')"
         },
 

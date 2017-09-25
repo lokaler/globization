@@ -13,11 +13,9 @@
           "**Was glauben Sie, wo sind Lebensmittel demnach am teuersten?**"
         ],
         "en": [
-          " # ",
+          " # High Food Prices",
           "",
-          "",
-          "",
-          "****"
+          "The causes of hunger are diverse. Periods of drought can be a problem, but so too can poverty and high food prices – due to armed conflict, for example. Let's take a closer look at food prices. To compare them worldwide, food prices are examined relative to the price of other goods used in daily life. **According to that method, where do you think food prices are most expensive?**"
         ]
       }
     },{
@@ -26,9 +24,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["FoodPriceChoice_1", { "de": "Katar, Island und Bermuda", "en": "" }],
-            ["FoodPriceChoice_2", { "de": "Tansania, Sambia und Mauretanien", "en": ""}],
-            ["FoodPriceChoice_3", { "de": "Irak, Pakistan und Fidschi", "en": "" }]
+            ["FoodPriceChoice_1", { "de": "Katar, Island und Bermuda", "en": "Qatar, Iceland and Bermuda" }],
+            ["FoodPriceChoice_2", { "de": "Tansania, Sambia und Mauretanien", "en": "Tanzania, Zambia and Mauritania"}],
+            ["FoodPriceChoice_3", { "de": "Irak, Pakistan und Fidschi", "en": "Iraq, Pakistan and Fiji" }]
           ]
         }
       }
@@ -61,7 +59,7 @@
               "Nein, hier sind Lebensmittel relativ erschwinglich, ähnlich wie in Deutschland. In Tansania, Sambia und Mauretanien hingegen sind Lebensmittel, verglichen mit anderen Gütern, am teuersten."
             ],
             "en": [
-              ""
+              "Nope, food in this trio of countries is relatively affordable, similar to Germany. In Tanzania, Zambia and Mauritania, by contrast, food is most expensive relative to other goods. "
             ]
           },
           "FoodPriceChoice_2": {
@@ -69,7 +67,7 @@
               "Richtig! In Tansania, Sambia und Mauretanien sind Lebensmittel, verglichen mit anderen Gütern, am teuersten. Eine hohe Abhängigkeit von Importen und Spekulationen am Weltmarkt können die Preise nach oben treiben."
             ],
             "en": [
-              ""
+              "Correct! In Tanzania, Zambia and Mauritania, food is most expensive relative to other goods. A high dependence on imports in addition to food speculation on the global market can drive prices higher."
             ]
           },
           "FoodPriceChoice_3": {
@@ -77,7 +75,7 @@
               "In der Tat sind Lebensmittel hier sehr viel weniger erschwinglich als etwa in Deutschland. Doch noch deutlich teurer sind Lebensmittel, verglichen mit anderen Gütern, in Tansania, Sambia und Mauretanien."
             ],
             "en": [
-              ""
+              "It is true that food is much less affordable in these three countries than in Germany. But food is still much more expensive when compared to other goods in Tanzania, Zambia and Mauritania."
             ]
           }
         }

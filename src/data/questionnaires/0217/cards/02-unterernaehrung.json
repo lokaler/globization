@@ -13,11 +13,11 @@
           "**Wo ist der Anteil am höchsten?**"
         ],
         "en": [
-          " # ",
+          " # Undernourishment",
           "",
+          "Average values, though, don't give the whole picture. Often, the food available isn't distributed equitably or doesn't provide the necessary nutrients. One in nine people in the world are considered undernourished. ",
           "",
-          "",
-          "****"
+          "**In which of the following countries is the share the highest?**"
         ]
       }
     },{
@@ -26,9 +26,9 @@
         "type": "choices",
         "options": {
           "choices": [
-            ["MalnutritionChoice_1", { "de": "Haiti", "en": "" }],
-            ["MalnutritionChoice_2", { "de": "Ruanda", "en": ""}],
-            ["MalnutritionChoice_3", { "de": "Dschibuti", "en": "" }]
+            ["MalnutritionChoice_1", { "de": "Haiti", "en": "Haiti" }],
+            ["MalnutritionChoice_2", { "de": "Ruanda", "en": "Rwanda"}],
+            ["MalnutritionChoice_3", { "de": "Dschibuti", "en": "Djibouti" }]
           ]
         }
       }
@@ -61,7 +61,7 @@
               "Richtig, im von Stürmen und Erdbeben gebeutelten Haiti ist jeder zweite Mensch unterernährt. In den meisten Ländern konnte der Anteil hungernder Menschen in den vergangenen 25 Jahren gesenkt werden. Mehr über diese Entwicklung lesen Sie in unserer Serie [Früher war alles schlechter](http://www.spiegel.de/thema/frueher_war_alles_schlechter/)."
             ],
             "en": [
-              ""
+              "Correct. Every second person in Haiti – a country often beset by natural disasters such as storms and earthquakes – is undernourished. In most countries, the share of people going hungry has dropped in the last 25 years. "
             ]
           },
           "MalnutritionChoice_2": {
@@ -69,7 +69,7 @@
               "In der Tat war zur Jahrtausendwende noch weit mehr als die Hälfte der ruandischen Bevölkerung unterernährt. Seither hat sich die Situation aber etwas verbessert, der Anteil sank auf 32 Prozent. In Haiti hingegen hungert heute noch mehr als jeder Zweite."
             ],
             "en": [
-              ""
+              "It is true that far more than half of the Rwandan population was undernourished at the turn of the millennium. Since then, however, the situation has improved, with the share having dropped to 32 percent. In Haiti, by contrast, more than half of the population still suffers from hunger."
             ]
           },
           "MalnutritionChoice_3": {
@@ -77,7 +77,7 @@
               "In der Tat waren vor 25 Jahren noch drei Viertel der dschibutischen Bevölkerung unterernährt. Seither hat sich die Situation aber verbessert, der Anteil sank auf 16 Prozent. In Haiti hingegen hungert heute noch mehr als jeder Zweite."
             ],
             "en": [
-              ""
+              "It is true that three-quarters of the population of Djibouti was undernourished 25 years ago. Since then, however, the situation has improved, with the share having dropped to 16 percent. In Haiti, by contrast, more than half of the population still suffers from hunger. "
             ]
           }
         }
