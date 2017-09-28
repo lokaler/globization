@@ -77,7 +77,7 @@ export default [
       "de": "Lebensmittelpreisindex (USA = 1,0), Lebensmittelpreise relativ zu jeweiligen Verbraucherpreisen (i.d.R. 2014)",
       "en": "Food Price Index (USA = 1.0), food prices relative to respective consumer prices (in most cases 2014)"
     },
-    "quelle": "FAO, Weltbank, ILO",
+    "quelle": "FAO, World Bank, ILO",
     "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/",
     "unit": "",
     "fixed": 1,
@@ -141,8 +141,8 @@ export default [
       "de": "Anteil der Einzahlung ins Welternährungsprogramm am Bruttoinlandsprodukt (2015) [in Promille]",
       "en": "Share of gross domestic product contributed to the World Food Program as a percentage of GDP"
     },
-    "quelle": "WHO",
-    "link": "http://apps.who.int/gho/data/node.main.MATMORT?lang=en",
+    "quelle": "WFP, World Bank",
+    "link": "http://documents.wfp.org/stellent/groups/public/documents/eb/wfp282360.pdf",
     "unit": "‰",
     "fixed": 1,
     "domain": [
